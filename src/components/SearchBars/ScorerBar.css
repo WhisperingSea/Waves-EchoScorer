@@ -1,0 +1,90 @@
+.ScorerBar-Container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px fit-content;
+}
+
+.no-click {
+    cursor: default;
+}
+
+.scorerBar-item-0 {
+    padding: 10px;
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    font-size: 1.2rem;
+}
+
+.scorerBar-item-1 {
+    grid-row: 2 / 3;
+    grid-column:  1/2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 3px;
+}
+
+.scorerBar-item-2 {
+    grid-row: 2 / 3;
+    grid-column:  2 / 3;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 3px;
+}
+
+.scorerBar-item-3 {
+    grid-row: 2 / 3;
+    grid-column:  3 / 4;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 3px;
+}
+
+.download-btn {
+    width: max-content;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 1px solid azure;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.download-btn:hover {
+    background-color: #444;
+}
+
+.scorer-weight-btn {
+    width: max-content;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 1px solid azure;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.scorer-weight-btn:hover {
+    background-color: #444;
+}
+
+.scorerBar-select-img {
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+    border-radius: 50%;
+    border: 1px solid azure;
+    cursor: pointer;
+}
+
+.scorerBar-select-img:hover {
+    box-shadow: 0 0 15px rgba(255, 251, 0, 0.6),
+                0 0 30px rgba(209, 206, 0, 0.4),
+                0 0 45px rgba(141, 139, 0, 0.2);
+}

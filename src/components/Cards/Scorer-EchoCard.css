@@ -1,0 +1,188 @@
+.scorer-echoCard-grid {
+    position: relative;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 110px 1fr;
+    grid-template-rows: repeat(3, max-content);
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #777;
+    border-radius: 8px;
+    background-color: rgb(17, 55, 80);
+    cursor: default;
+}
+
+.Icons {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+}
+
+.scorer-echoCard-img-btn img.Icons-main {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border: 0;
+}
+
+.scorer-text-name {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.scorer-text {
+    margin: 0;
+    margin-left: 23px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    height: 1.3rem;
+    overflow: hidden;
+}
+
+.scorer-text-2 {
+    margin: 0;
+    margin-left: 28px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    height: 1.3rem;
+    overflow: hidden;
+}
+
+.scorer-echoCard-img-btn {
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    font-size: 0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #616161;
+}
+
+.scorer-echoCard-img-btn:hover {
+    border: 1px solid azure;
+}
+
+.white-border {
+    border: 1px solid azure;
+}
+
+.scorer-echoImage-png {
+    background-color: #111111;
+}
+
+.no-echo-div {
+    color: azure;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.scorer-echoCard-img-btn img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.scorer-echoCard-grid-item-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+
+}
+
+.scorer-echoCard-grid-item-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.scorer-echoCard-grid-item-3 {
+    background-color: #11111115;
+    padding: 0 5px;
+    position: absolute;
+    bottom: -3px;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+}
+
+.main-stat-1 {
+    border-top: 1px solid #666;
+    margin-top: 10px;
+}
+
+.main-stat-2 {
+    border-bottom: 1px solid #666
+}
+
+.sub-stat-1 {
+    border-top: 1px solid #666;
+    margin-top: 10px;
+    border-bottom: none;
+}
+
+.sub-stat-2 {
+    border-bottom: 1px solid #666
+}
+
+.scorer-echoCard-grid-item-4 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.scorer-echoCard-grid-item-5 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scorer-echoCard-grid-item-6 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scorer-echoCard-grid-item-7 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scorer-echoCard-grid-item-8 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scorer-echoCard-grid-item-9 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scorer-echoCard-score {
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+}
+
+.scorer-echoCard-score-text {
+    margin: 0;
+    color: azure; /* Base text color */
+    text-shadow: 0 0 5px rgb(255, 0, 0),
+                0 0 10px rgba(255, 230, 0, 0.9),
+                0 0 20px rgba(255, 230, 0, 0.7),
+                0 0 40px rgba(255, 230, 0, 0.5),
+                0 0 80px rgba(255, 230, 0, 0.4);
+    font-size: 1.3rem; /* Adjust to your preference */
+    font-weight: bold;
+}

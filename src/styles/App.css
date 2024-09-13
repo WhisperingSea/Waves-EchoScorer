@@ -1,0 +1,76 @@
+.body {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.heading {
+    margin: 10px 0px;
+    font-family: palanquin dark;
+    font-size: 50px;
+    line-height: normal;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.heading-2 {
+    font-size: 32px;
+}
+
+.paragraph {
+    margin: 5px 0px;
+    font-size: 18px;
+}
+
+.center {
+    text-align: center;
+}
+
+.Glacio, .Ice {
+    color: rgb(115, 194, 226);
+}
+
+.Fusion, .Fire {
+    color: rgb(211, 77, 77);
+}
+
+.Electro, .Thunder {
+    color: rgb(197, 56, 197);
+}
+
+.Aero, .Wind {
+    color: rgb(123, 207, 172);
+}
+
+.Spectro, .Light {
+    color: rgb(206, 180, 31);
+}
+
+.Havoc, .Dark {
+    color: rgb(196, 40, 134);
+}
+
+.Healing {
+    color: rgb(32, 153, 113);
+}
+
+.Energy {
+    color: rgb(24, 62, 112);
+}
+
+.Strength {
+    color: aliceblue;
+}
+
+.Title {
+    margin: 20px 0px;
+    font-size: 24px;
+    display: block;
+    font-weight: 700;
+}
+
+.Highlight {
+    font-weight: 700;
+    color: aliceblue;
+}

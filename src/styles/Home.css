@@ -1,0 +1,195 @@
+.container {
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    padding: 15px 0;
+    min-height: 100vh;
+}
+
+.section {
+    padding: 10px 60px;
+    margin: auto;
+}
+
+.updates-data {
+    margin: 60px 0;
+}
+
+.home-background {
+    width: 100%;
+    height: 100%;
+            background-image: url("https://sohansc13.github.io/wuthering-waves-assets/images/Bg-4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.flexbox-card-guide {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.header {
+    text-align: center;
+}
+
+.sub-header {
+    text-align: center;
+}
+
+.chara-name {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-guide {
+    position: relative;
+    height: 480px;
+    margin-top: 40px;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-right: 420px;
+    padding-bottom: 60px;
+    text-align: center;
+    border: 1px solid azure;
+    border-radius: 12px;
+}
+
+.card-guide img {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 30px;
+    width: auto;
+    height: calc(100% - 80px);
+    object-fit: contain;
+}
+
+.guide-link {
+    margin-top: 100px;
+}
+
+.update-list-item {
+    font-size: 1.3rem;
+}
+
+.updates-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px;
+    text-align: center;
+    gap: 20px;
+    position: relative;
+}
+
+.header-2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.home-feature-paragraph {
+    margin: 0;
+    font-size: 20px;
+}
+
+.home-feature-grid-item-1 {
+    border: 1px solid azure;
+    border-radius: 12px;
+    align-content: center;
+    position: relative;
+}
+
+.home-feature-grid-item-1:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.home-feature-grid-item-1-bg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.274);
+        background-image: url("https://sohansc13.github.io/wuthering-waves-assets/images/Bg-2.png");
+}
+
+.home-feature-grid-item-2 {
+    border: 1px solid azure;
+    border-radius: 12px;
+    align-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.home-feature-grid-item-2-bg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.274);
+    background-image: url("https://sohansc13.github.io/wuthering-waves-assets/images/Bg-3.png");
+}
+
+.home-feature-grid-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1146px) {
+    .guide-link {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 1061px) {
+    .guide-link {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1004px) {
+    .guide-link {
+        margin-top: 30px;
+    }
+}
+
+.guide-link a {
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.guide-link a:hover {
+    color: rgb(82, 82, 192);
+}

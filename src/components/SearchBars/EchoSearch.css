@@ -1,0 +1,136 @@
+.echo-search-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.echo-search {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: azure;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 36px;
+    width: 91%;
+    border-radius: 8px;
+    border: 1px solid azure;
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sonata-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid azure;
+    border-radius: 8px;
+    cursor: pointer;
+    color: azure;
+}
+
+.sonata-btn:hover {
+    background-color: rgba(153, 148, 148, 0.055);
+}
+
+.sonata-effect {
+    grid-column: span 5;
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid azure;
+    border-radius: 8px;
+    cursor: default;
+    color: azure;
+}
+
+.sonata-effect h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 0px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 1px solid azure;
+    border-radius: 8px;
+    cursor: pointer;
+    color: azure;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cost-select {
+    margin-top: 5px;
+    background-color: rgb(0, 0, 0);
+    padding: 8px 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    border: 1px white solid;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    color: azure;
+}
+
+.cost-select:hover {
+    background-color: rgba(71, 71, 71, 0.959);
+}
+
+.echo-rarity {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: auto;
+    border-radius: 8px;
+    border: 1px white solid;
+    text-align: center;
+    color: azure;
+    gap: 20px;
+}
+
+.echo-rarity p {
+    margin: 0;
+}
+
+.echo-rarity-range {
+    width: 85%;
+    cursor: grab;
+}

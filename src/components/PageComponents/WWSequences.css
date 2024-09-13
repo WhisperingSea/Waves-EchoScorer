@@ -1,0 +1,27 @@
+.sequence-box {
+    border: 1px solid azure;
+    margin: 20px 0;
+    padding: 20px 60px;
+}
+
+.center-header {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-thickness: 1px;
+}
+
+.sequence-node {
+    font-size: 20px;
+    margin: 0;
+}
+
+.sequence-name {
+    font-size: 26px;
+    margin: 0;
+}
+
+.sequence-desc {
+    font-size: 20px;
+    margin: 10px 0px;
+}

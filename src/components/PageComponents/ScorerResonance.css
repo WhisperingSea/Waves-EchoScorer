@@ -1,0 +1,68 @@
+.Scorer-Resonance-Container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.Scorer-resonance-box {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.scorer-resonance-box-item-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scorer-resonance-box-item-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scorer-resonance-box-item-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scorer-resonance-box-item-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scorer-resonance-box-item-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scorer-resonance-box-item-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resonance-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid #868686;
+    background-color: #000000;
+    color: rgb(138, 138, 138);
+    cursor: pointer;
+}
+
+.active-R {
+    border: 1px solid azure;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 251, 0, 0.6),
+                0 0 30px rgba(209, 206, 0, 0.4),
+                0 0 45px rgba(141, 139, 0, 0.2);
+}

@@ -1,0 +1,364 @@
+.CalcEcho-Modal-Container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(238, 238, 238, 0.692);
+    z-index: 1001;
+    border-radius: 12px;
+}
+
+.overlay-echo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+}
+
+.calcEcho-modal-box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(min-content, auto);
+    gap: 20px;
+    justify-content: center;
+    width: 80vw;
+    height: 70vh;
+    padding: 20px;
+    overflow: auto;
+    border: 1px solid azure;
+    z-index: 1001;
+}
+
+.calcEcho-modal-box-2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(min-content, auto);
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80vw;
+    height: 70vh;
+    padding: 20px;
+    overflow: auto;
+    border: 1px solid azure;
+    z-index: 1001;
+}
+
+.calcEcho-modal-box-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(min-content, auto);
+    gap: 20px;
+    justify-content: center;
+    width: 80vw;
+    height: 70vh;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid azure;
+    z-index: 1001;
+}
+
+.calcEcho-modal-store-box {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: max-content;
+    gap: 10px;
+}
+
+.calcEcho-modal-store-filter {
+    width: max-content;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0;
+}
+
+.relative-box {
+    position: relative;
+}
+
+.echo-modal-cards {
+    display: flex;
+    padding: 25px 25px;
+    border-radius: 12px;
+    border: 1px solid azure;
+    flex-direction: column;
+}
+
+.echo-modal-cards-store {
+    display: flex;
+    border-radius: 12px;
+    background-color: #222;
+    border-bottom: 2px solid azure;
+    flex-direction: column;
+    font-size: 0;
+}
+
+.echo-modal-cards:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.echo-modal-cards img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border-bottom: 2px solid white;
+}
+
+.echo-modal-cards-store:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.echo-modal-cards-store img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.echo-modal-card-bottom {
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.echo-modal-card-bottom h3 {
+    word-wrap: normal;
+    height: 2rem;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.echo-modal-cards:hover h3 {
+    word-break: normal;
+    overflow: visible;
+}
+
+.echo-modal-cards:hover h3.echo-modal-card-cost {
+    word-break: initial;
+    overflow: hidden;
+}
+
+.echo-modal-stats {
+    grid-column: 4 / 6;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+.echo-modal-stats-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid azure;
+    position: relative;
+}
+
+.echo-modal-stats-box h3 {
+    font-size: 1.2rem;
+    margin: 3px 10px;
+}
+
+h3.margin-box-text {
+    font-size: 1.2rem;
+    margin: 3px 10px;
+    margin-left: 25px;
+}
+
+h3.echo-modal-card-cost {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    background-color: #5e5d15;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.echo-modal-cards-store:hover img.echo-modal-card-stat {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #222;
+    border: 1px solid #b3b3b3;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+img.echo-modal-card-stat {
+    display: none;
+}
+
+img.echo-modal-card-set {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 1px solid #b3b3b3;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.no-margin {
+    margin: 5px 0;
+}
+
+.echo-modal-btn-box {
+    display: flex;
+    gap: 10px;
+}
+
+.echo-modal-select-btn {
+    height: 1.8rem;
+    background-color: transparent;
+    border: 1px solid azure;
+    color: white;
+    padding: 0 20px;
+    width: 100%;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.echo-modal-delete-btn {
+    height: 1.8rem;
+    background-color: transparent;
+    border: 1px solid rgb(255, 11, 11);
+    color: rgb(255, 14, 14);
+    padding: 0 20px;
+    width: 100%;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.echo-modal-select-btn:hover {
+    background-color: rgb(54, 54, 54);
+}
+
+.echo-modal-delete-btn:hover {
+    background-color: rgb(54, 0, 0);
+}
+
+.CalcEcho-modal-btn {
+    background-color: transparent;
+    border: 1px solid azure;
+    margin: 5px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.CalcEcho-modal-btn:hover {
+    background-color: #343434;
+    cursor: pointer;
+}
+
+.calcEcho-modal-add-box {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: auto;
+    gap: 5px;
+    padding: 5px;
+}
+
+.calcEvho-modal-add-box-2 {
+    overflow: auto;
+}
+
+.calcEcho-modal-add-box-select {
+    grid-column: 1 / 2;
+    overflow: auto;
+}
+
+.calcEcho-modal-add-box-2 {
+    grid-column: 1 / 2;
+    overflow: auto;
+}
+.echo-modal-cards-2 {
+    display: flex;
+    padding: 10px 10px;
+    border-radius: 12px;
+    border: 1px solid azure;
+    flex-direction: column;
+}
+
+.echo-modal-cards-2:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.echo-modal-cards-2 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border-bottom: 2px solid white;
+}
+
+.echo-modal-card-bottom-2 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.echo-modal-card-bottom-2 h3 {
+    word-wrap: normal;
+    height: 2rem;
+    overflow: hidden;
+    font-size: 1.1rem;
+}
+
+.echo-modal-cards-2:hover h3 {
+    word-break: normal;
+    overflow: visible;
+}
+
+img.stat-Icons {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    position: absolute;
+}

@@ -1,0 +1,83 @@
+.navbar {
+    max-width: 1440px;
+    padding: 15px 0;
+    margin: 0 60px;
+    max-height: 40px;
+    font-size: 18px;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    margin: 0 10px;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    text-decoration: double;
+    color: rgb(180, 180, 180);
+}
+
+.logo-link:hover {
+    color: white;
+}
+
+.username {
+    color: white;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 8px 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(97, 97, 97);
+}
+
+.btn-login {
+    border-width: 1px;
+    border-color: rgb(212, 221, 230);
+    background-color: transparent;
+    color: white;
+}
+
+.btn-signin {
+    background-color: rgb(231, 231, 231);
+    color: rgb(37, 34, 34);
+}
+
+.btn-logout {
+    border-width: 1px;
+    border-color: rgb(212, 221, 230);
+    background-color: transparent;
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: rgb(128, 66, 66);
+}
+
+.btn-signin:hover {
+    background-color: rgb(153, 148, 148);
+}

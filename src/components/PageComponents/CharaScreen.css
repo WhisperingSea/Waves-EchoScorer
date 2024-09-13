@@ -1,0 +1,22 @@
+.chara-name {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.chara-bio {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+p.ele {
+    font-size: 20px;
+}
+
+p.weap {
+    font-size: 20px;
+}
+
+p.rare {
+    font-size: 20px;
+}
+

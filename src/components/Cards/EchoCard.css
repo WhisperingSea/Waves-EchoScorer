@@ -1,0 +1,39 @@
+.echo-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.echo-card img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border-bottom: 2px solid white;
+}
+
+.echo-card-bottom {
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+.echo-card-bottom p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.echo-name {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.echo-skill {
+    font-size: 18px;
+}
+
+.No-Match {
+    grid-column: span 2;
+    text-align: center;
+}
