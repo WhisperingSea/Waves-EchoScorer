@@ -7,38 +7,65 @@ interface Option {
 
 interface MultiSelectProps {
   options: Option[];
-  selectedValues: Set<string>;
+  selectedValues?: Set<string>; // Make selectedValues optional
+  defaultSelectedValues?: Set<string>; // Make defaultSelectedValues optional
   onChange: (selected: Set<string>) => void;
 }
 
 const MultiSelect: React.FC<MultiSelectProps> = ({
   options,
-  selectedValues,
+  selectedValues = new Set<string>(), // Default to empty Set if not provided
+  defaultSelectedValues = new Set<string>(), // Default to empty Set if not provided
   onChange,
 }) => {
+  const [internalSelectedValues, setInternalSelectedValues] = useState<
+    Set<string>
+  >(new Set<string>());
   const [isOpen, setIsOpen] = useState(false);
+  const [hasDefaultBeenCleared, setHasDefaultBeenCleared] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Initialize internalSelectedValues only once
+  useEffect(() => {
+    if (selectedValues.size > 0) {
+      setInternalSelectedValues(new Set(selectedValues));
+    } else if (!hasDefaultBeenCleared && defaultSelectedValues.size > 0) {
+      setInternalSelectedValues(new Set(defaultSelectedValues));
+    }
+  }, [selectedValues, defaultSelectedValues, hasDefaultBeenCleared]);
 
   // Toggle dropdown visibility
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   // Handle option selection
   const handleOptionToggle = (value: string) => {
-    const newSelected = new Set(selectedValues);
+    const newSelected = new Set(internalSelectedValues);
     if (newSelected.has(value)) {
       newSelected.delete(value);
     } else {
       newSelected.add(value);
     }
+    setInternalSelectedValues(newSelected);
     onChange(newSelected);
+
+    // Check if any default value is removed
+    if (defaultSelectedValues.has(value)) {
+      setHasDefaultBeenCleared(true);
+    }
   };
 
   // Handle removing a selected option
   const handleRemoveOption = (value: string, event: React.MouseEvent) => {
     event.stopPropagation(); // Prevents the click from toggling the dropdown
-    const newSelected = new Set(selectedValues);
+    const newSelected = new Set(internalSelectedValues);
     newSelected.delete(value);
+    setInternalSelectedValues(newSelected);
     onChange(newSelected);
+
+    // Check if any default value is removed
+    if (defaultSelectedValues.has(value)) {
+      setHasDefaultBeenCleared(true);
+    }
   };
 
   // Close dropdown when clicking outside
@@ -58,7 +85,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
 
   // Render selected options with overflow indicator
   const renderSelectedOptions = () => {
-    const selectedArray = Array.from(selectedValues);
+    const selectedArray = Array.from(internalSelectedValues);
     const maxDisplay = 2; // Number of items to show before showing "+n"
 
     if (selectedArray.length === 0) {
@@ -69,6 +96,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
       <div style={{ display: "flex", flexWrap: "wrap", gap: "4px" }}>
         {selectedArray.slice(0, maxDisplay).map((value) => {
           const option = options.find((opt) => opt.value === value);
+
           return option ? (
             <div
               key={value}
@@ -125,7 +153,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
         onClick={toggleDropdown}
         style={{
           border: "1px solid #ccc",
-          padding: " 4px 8px",
+          padding: "4px 8px",
           cursor: "pointer",
           borderRadius: "4px",
           backgroundColor: "#000",
@@ -158,7 +186,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
               style={{
                 padding: "8px",
                 cursor: "pointer",
-                backgroundColor: selectedValues.has(option.value)
+                backgroundColor: internalSelectedValues.has(option.value)
                   ? "#333"
                   : "#000",
               }}

@@ -9,7 +9,7 @@ interface ScoreMisc {
 
 export function EchoScorerFunction(index: number) {
   const { echoStats } = useEchoes();
-  const { ScorerWeight } = useScorerContext();
+  const { ScorerWeight, cost1Main, cost3Main, cost4Main } = useScorerContext();
   const [scoreMisc, setScoreMisc] = useState<ScoreMisc>({
     1: { statVal: 0 },
     2: { statVal: 0 },
@@ -27,9 +27,9 @@ export function EchoScorerFunction(index: number) {
         !echoStat.selectedSubStat4.stat.includes("%") ||
         !echoStat.selectedSubStat5.stat.includes("%")
       ) {
-        return ((stat - minStat) / (maxStat - minStat)) * (10 - 3) + 3;
+        return ((stat - minStat) / (maxStat - minStat)) * (5 - 2) + 2;
       } else {
-        return ((stat - minStat) / (maxStat - minStat)) * (10 - 1) + 1;
+        return ((stat - minStat) / (maxStat - minStat)) * (5 - 1) + 1;
       }
     },
     []
@@ -39,10 +39,7 @@ export function EchoScorerFunction(index: number) {
     () => Object.values(echoStats)[index - 1],
     [echoStats, index]
   );
-  const weights = useMemo(
-    () => Object.values(ScorerWeight.Weight),
-    [ScorerWeight]
-  );
+  const weights = useMemo(() => Object.values(ScorerWeight), [ScorerWeight]);
 
   const calculateScoreMisc = useMemo(() => {
     const updatedScoreMisc: ScoreMisc = { ...scoreMisc };
@@ -66,9 +63,15 @@ export function EchoScorerFunction(index: number) {
             WWSubstats.find((I) => I.name === subStat.stat)?.min || 0;
           const maxStat =
             WWSubstats.find((I) => I.name === subStat.stat)?.max || 0;
+          const mainStat =
+            (echoStat.cost === 4 && cost4Main?.includes(echoStat.mainStat)) ||
+            (echoStat.cost === 3 && cost3Main?.includes(echoStat.mainStat)) ||
+            (echoStat.cost === 1 && cost1Main?.includes(echoStat.mainStat))
+              ? 2
+              : 0;
 
           const val = valCalc(stat, minStat, maxStat);
-          const finalValue = weight * val;
+          const finalValue = weight * val + mainStat;
 
           updatedScoreMisc[subStatIndex] = { statVal: finalValue };
         } else {
@@ -91,19 +94,17 @@ export function EchoScorerFunction(index: number) {
   }, [calculateScoreMisc]);
 
   const Score = useMemo(() => {
-    if (scoreVal >= 60) return "WTF";
-    if (scoreVal >= 50) return "TF";
-    if (scoreVal >= 47) return "SSS";
-    if (scoreVal >= 43.5) return "SS";
-    if (scoreVal >= 40) return "S";
-    if (scoreVal >= 37.5) return "A+";
-    if (scoreVal >= 35) return "A";
-    if (scoreVal >= 32.5) return "B+";
-    if (scoreVal >= 30) return "B";
-    if (scoreVal >= 25) return "C+";
-    if (scoreVal >= 20) return "C";
-    if (scoreVal >= 15) return "D+";
-    if (scoreVal < 15) return "D";
+    if (scoreVal >= 30) return "SSS";
+    if (scoreVal >= 27.5) return "SS";
+    if (scoreVal >= 25) return "S";
+    if (scoreVal >= 22.5) return "A+";
+    if (scoreVal >= 20) return "A";
+    if (scoreVal >= 17.5) return "B+";
+    if (scoreVal >= 15) return "B";
+    if (scoreVal >= 12.5) return "C+";
+    if (scoreVal >= 10) return "C";
+    if (scoreVal >= 7.5) return "D+";
+    if (scoreVal < 5) return "D";
     return "";
   }, [scoreVal]);
 
