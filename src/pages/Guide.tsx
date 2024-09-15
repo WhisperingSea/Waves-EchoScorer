@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Common/Navbar.tsx";
 import "../styles/Guide.css";
 import { useDataContext } from "../contexts/CharacterDataContext";
 import { useParams } from "react-router-dom";
@@ -88,13 +87,10 @@ const Guide: React.FC = () => {
 
   return (
     <>
+      <div className="guide-background" style={styles}></div>
       <div className="guide-container">
-        <div className="guide-background" style={styles}></div>
         <div className="selector-modal"></div>
         <div className="centerize">
-          <header>
-            <Navbar />
-          </header>
           <main>
             <section className="guide-section">
               <div className="guide-grid">

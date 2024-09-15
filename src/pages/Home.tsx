@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Common/Navbar.tsx";
 import "../styles/Home.css";
 import { useDataContext } from "../contexts/CharacterDataContext.tsx";
 import Footer from "../components/Common/Footer.tsx";
@@ -14,7 +13,7 @@ const Home: React.FC = () => {
 
   const openFeatureModal1 = () => {
     setOpen(true);
-    setLink("/damage-calculator/");
+    setLink("/echo-scorer/");
   };
 
   const closeFeatureModal = () => {
@@ -26,7 +25,6 @@ const Home: React.FC = () => {
       <div className="home-background"></div>
       <div className="container">
         <header>
-          <Navbar />
           {open && (
             <FeaturesModal onClose={closeFeatureModal} pageLink={link} />
           )}
@@ -108,20 +106,20 @@ const Home: React.FC = () => {
                 <div className="home-feature-grid">
                   <div
                     className="home-feature-grid-item-1"
-                    onClick={openFeatureModal1}
+                    aria-disabled={true}
                   >
                     <div className="home-feature-grid-item-1-bg"></div>
                     <div className="home-feature-grid-item-overlay"></div>
                     <h2 className="header-2">Damage Calculator</h2>
+                    <p>(Coming Soon)</p>
                   </div>
                   <div
                     className="home-feature-grid-item-2"
-                    aria-disabled={true}
+                    onClick={openFeatureModal1}
                   >
                     <div className="home-feature-grid-item-2-bg"></div>
                     <div className="home-feature-grid-item-overlay"></div>
                     <h2 className="header-2">Echo Scorer</h2>
-                    <p>(Coming Soon)</p>
                   </div>
                 </div>
               </div>

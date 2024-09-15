@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Common/Navbar.tsx";
 import "../styles/Echoes.css";
 import EchoSearchBar from "../components/SearchBars/EchoSearchBar.tsx";
 import EchoCard from "../components/Cards/EchoCards.tsx";
@@ -10,9 +9,6 @@ const Echoes: React.FC = () => {
     <>
       <div className="echoes-page-container">
         <div className="echoes-background"></div>
-        <header>
-          <Navbar />
-        </header>
         <main>
           <section className="echoes-page-section">
             <h2 className="header-2">Wuthering Waves Echoes</h2>

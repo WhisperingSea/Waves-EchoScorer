@@ -73,6 +73,13 @@ export const LocalStorageContextProvider: React.FC<
     localStorage.setItem("Echoes", JSON.stringify(storedEcho));
   }, [storedEcho]);
 
+  useEffect(() => {
+    const storedItems = localStorage.getItem("Echoes");
+    if (storedItems) {
+      setStoredEcho(JSON.parse(storedItems));
+    }
+  }, []);
+
   const addEcho = (echo: Omit<Echo, "storeId">) => {
     setStoredEcho((prevItems) => {
       const newItem = { ...echo, storeId: nextId };
@@ -84,7 +91,9 @@ export const LocalStorageContextProvider: React.FC<
 
   const removeEcho = (storeId: number) => {
     setStoredEcho((prevItems) => {
-      return prevItems.filter((item) => item.storeId !== storeId);
+      const updatedItems = prevItems.filter((item) => item.storeId !== storeId);
+      localStorage.setItem("Echoes", JSON.stringify(updatedItems));
+      return updatedItems;
     });
   };
 

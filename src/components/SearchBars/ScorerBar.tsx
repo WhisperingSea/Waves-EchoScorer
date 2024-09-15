@@ -44,12 +44,6 @@ const ScorerBar: React.FC<ScorerBarTypes> = ({
           <FeaturesModal onClose={handleModalClose} pageLink="/echo-scorer/" />
         )}
         {open2 && <ScorerWeightsModal onClose={handleModal2Close} />}
-        <div className="scorerBar-item-0">
-          <a className="nav-link logo-link" href="/">
-            Waves
-          </a>
-          <span className="no-click"> Echo Scorer</span>
-        </div>
         <div className="scorerBar-item-1">
           <h3>Selected Character : </h3>
           <img

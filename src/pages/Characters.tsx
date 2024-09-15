@@ -1,4 +1,3 @@
-import Navbar from "../components/Common/Navbar.tsx";
 import "../styles/Characters.css";
 import { useDataContext } from "../contexts/CharacterDataContext.tsx";
 import ImageSlider from "../components/PageComponents/ImageSlider.tsx";
@@ -21,9 +20,6 @@ const Characters: React.FC = () => {
     <>
       <div className="container-chara-page">
         <div className="characters-background"></div>
-        <header>
-          <Navbar />
-        </header>
         <main>
           <section className="chara-page-section">
             <div className="flexbox chara-flexbox">

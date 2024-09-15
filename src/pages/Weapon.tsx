@@ -1,5 +1,4 @@
 import "../styles/Weapons.css";
-import Navbar from "../components/Common/Navbar.tsx";
 import WeaponCards from "../components/Cards/WeaponCard.tsx";
 import WeaponSearchBar from "../components/SearchBars/WeaponSearchBar.tsx";
 import Footer from "../components/Common/Footer.tsx";
@@ -9,9 +8,6 @@ const Weapons: React.FC = () => {
     <>
       <div className="weapon-page-container">
         <div className="weapon-page-bg"></div>
-        <header>
-          <Navbar />
-        </header>
         <main>
           <section className="weapon-page-section">
             <h2 className="header-2">Wuthering Waves Weapons</h2>

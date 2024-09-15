@@ -34,8 +34,6 @@ const EchoScorer: React.FC = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
 
   //Page Dependency
-  const menuImg =
-    "https://sohansc13.github.io/wuthering-waves-assets/images/menu.png";
   const chara = Object.values(characters).find(
     (char) => char.charaId === selectedCharacterId
   );
@@ -94,26 +92,6 @@ const EchoScorer: React.FC = () => {
       8: imageUrl || prevImages[8],
     }));
   }, [echoes, echoStats, weaponStats, chara, imageUrl]);
-
-  //Sidebar Menu Animation Delay
-  const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const timeoutRef = useRef<number | null>(null);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    timeoutRef.current = window.setTimeout(() => {
-      setIsVisible(true);
-    }, 400);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    setIsVisible(false);
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  };
 
   //Image Handling
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -284,41 +262,6 @@ const EchoScorer: React.FC = () => {
     <>
       <div className="echo-scorer-page-container">
         <div className="scorer-background"></div>
-        <header>
-          <div
-            className="scorer-sidebar"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            {isVisible && isHovered ? (
-              <div
-                className={`scorer-sidebar-menu ${
-                  isVisible ? "menu-show" : ""
-                }`}
-              >
-                <a className="scorer-sidebar-link" href="/">
-                  Home
-                </a>
-                <a className="scorer-sidebar-link" href="/characters">
-                  Characters
-                </a>
-                <a className="scorer-sidebar-link" href="/weapons">
-                  Weapons
-                </a>
-                <a className="scorer-sidebar-link" href="/echoes">
-                  Echoes
-                </a>
-                <a className="scorer-sidebar-link" href="/features">
-                  Features
-                </a>
-              </div>
-            ) : (
-              <div className="scorer-sidebar-img">
-                <img className="menu-img" src={menuImg} />
-              </div>
-            )}
-          </div>
-        </header>
         <main>
           <section className="echo-scorer-section">
             <div></div>

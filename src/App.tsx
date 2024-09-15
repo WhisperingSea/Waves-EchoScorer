@@ -21,8 +21,15 @@ import { EnemyStatsProvider } from "./contexts/CalcEnemyStatsContext.tsx";
 import { CalcSkillProvider } from "./contexts/CalcSkillValueContext.tsx";
 import { CalcSequenceProvider } from "./contexts/CalcSequenceContext.tsx";
 import { ScorerContextProvider } from "./contexts/ScorerContext.tsx";
+import Navbar from "./components/Common/Navbar.tsx";
 
-function App() {
+const App = () => {
+  // const [activeTab, setActiveTab] = useState<number>(1);
+
+  // const handleTabChange = (tab: number) => {
+  //   setActiveTab(tab);
+  // };
+
   return (
     <DataContextProvider>
       <WeaponContextProvider>
@@ -37,6 +44,7 @@ function App() {
                         <SearchFilterProvider>
                           <ScorerContextProvider>
                             <Router>
+                              <Navbar />
                               <Routes>
                                 <Route path="/" element={<Home />} />
                                 <Route
@@ -80,6 +88,6 @@ function App() {
       </WeaponContextProvider>
     </DataContextProvider>
   );
-}
+};
 
 export default App;

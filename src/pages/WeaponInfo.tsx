@@ -1,5 +1,4 @@
 import "../styles/WeaponInfo.css";
-import Navbar from "../components/Common/Navbar.tsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Common/Footer.tsx";
@@ -115,9 +114,6 @@ const WeaponInfo: React.FC = () => {
     <>
       <div className="weapon-info-page-container">
         <div className="weapon-info-page-bg">
-          <header>
-            <Navbar />
-          </header>
           <main>
             <section className="weapon-info-page-section">
               <div className="weapon-info-grid">

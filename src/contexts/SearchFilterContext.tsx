@@ -240,6 +240,7 @@ export const SearchFilterProvider: React.FC<{ children: ReactNode }> = ({
     selectedEchoCost,
     weaponQuery,
     selectedWeaponRarity,
+    storedEcho,
   ]);
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
