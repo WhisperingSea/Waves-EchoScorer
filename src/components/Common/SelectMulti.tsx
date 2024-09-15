@@ -25,7 +25,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
   const [hasDefaultBeenCleared, setHasDefaultBeenCleared] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Initialize internalSelectedValues only once
+  // Initialize internalSelectedValues on mount
   useEffect(() => {
     if (selectedValues.size > 0) {
       setInternalSelectedValues(new Set(selectedValues));

@@ -35,7 +35,6 @@ export const ScorerContextProvider: React.FC<ScorerContextProviderProps> = ({
   children,
 }) => {
   const [ScorerWeight, setScorerWeight] = useState<ScorerTypes>({
-    MainStat: { stat: "Main Stat Value", value: 2 },
     ATK: { stat: "ATK", value: 1 },
     ATKPerc: { stat: "ATK%", value: 1 },
     HP: { stat: "HP", value: 1 },

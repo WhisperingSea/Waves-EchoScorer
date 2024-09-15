@@ -71,7 +71,11 @@ export function EchoScorerFunction(index: number) {
               : 0;
 
           const val = valCalc(stat, minStat, maxStat);
-          const finalValue = weight * val + mainStat;
+          const finalValue = weight * Math.round(val) + mainStat;
+
+          if (subStat.stat === "Crit. DMG%") {
+            console.log("Final Value Crit", val);
+          }
 
           updatedScoreMisc[subStatIndex] = { statVal: finalValue };
         } else {
@@ -104,8 +108,13 @@ export function EchoScorerFunction(index: number) {
     if (scoreVal >= 12.5) return "C+";
     if (scoreVal >= 10) return "C";
     if (scoreVal >= 7.5) return "D+";
-    if (scoreVal < 5) return "D";
+    if (scoreVal >= 5) return "D";
+    if (scoreVal < 5) return "Trash";
     return "";
+  }, [scoreVal]);
+
+  useEffect(() => {
+    console.log("Score Val", scoreVal);
   }, [scoreVal]);
 
   // Update the state only when necessary

@@ -4,7 +4,7 @@ import { useEchoContext } from "../../contexts/EchoDataContext";
 import "./Scorer-EchoCard.css";
 import EchoModal from "../Modals/EchoModal";
 import { Icons } from "../../data/Icons.ts";
-import { EchoScorerFunction } from "../../hooks/EchoScorer";
+import { EchoScorerFunction } from "../../hooks/EchoScorerHook.tsx";
 
 interface ScorerEchoCardType {
   Index: number;

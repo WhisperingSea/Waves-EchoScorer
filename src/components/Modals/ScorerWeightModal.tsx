@@ -88,6 +88,7 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                 <MultiSelectDropdown
                   options={Option2}
                   selectedValues={selectedValues2}
+                  defaultSelectedValues={new Set<string>(["ATK%"])}
                   onChange={handleSelectionChange2}
                 />
               </div>
@@ -96,6 +97,7 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                 <MultiSelectDropdown
                   options={Option1}
                   selectedValues={selectedValues}
+                  defaultSelectedValues={new Set<string>(["ATK%"])}
                   onChange={handleSelectionChange}
                 />
               </div>

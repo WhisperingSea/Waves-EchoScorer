@@ -3,12 +3,12 @@ import React, { useState, useRef, useEffect } from "react";
 interface SelectInputProps {
   options: (number | string)[];
   selectedValue: number | string;
-  onValueChange: (value: number | string) => void;
+  onValueChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
 }
 
 const SelectInput: React.FC<SelectInputProps> = ({
-  options,
+  options = [],
   selectedValue,
   onValueChange,
   disabled = false,
@@ -24,6 +24,17 @@ const SelectInput: React.FC<SelectInputProps> = ({
       setDropdownWidth(containerRef.current.offsetWidth);
     }
   }, []);
+
+  const createChangeEvent = (
+    value: number | string
+  ): React.ChangeEvent<HTMLInputElement> => {
+    const event = {
+      target: {
+        value: value,
+      },
+    } as unknown as React.ChangeEvent<HTMLInputElement>;
+    return event;
+  };
 
   const handleArrowClick = (direction: "up" | "down") => {
     if (disabled) return;
@@ -41,7 +52,8 @@ const SelectInput: React.FC<SelectInputProps> = ({
     }
 
     if (newIndex !== -1) {
-      onValueChange(options[newIndex]);
+      const event = createChangeEvent(options[newIndex]);
+      onValueChange(event);
     }
   };
 
@@ -52,7 +64,8 @@ const SelectInput: React.FC<SelectInputProps> = ({
   };
 
   const handleOptionClick = (value: number | string) => {
-    onValueChange(value);
+    const event = createChangeEvent(value);
+    onValueChange(event);
     setDropdownOpen(false); // Close dropdown after selection
   };
 

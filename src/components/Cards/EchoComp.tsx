@@ -5,6 +5,8 @@ import { useEchoContext } from "../../contexts/EchoDataContext";
 import EchoModal from "../Modals/EchoModal";
 import { useLocalStorageContext } from "../../contexts/LocalStorageContext";
 import { WWSonataData } from "../../data/WWSonata";
+import SelectInput from "../Common/SelectInput";
+import { WWSubstats } from "../../data/WWEchoStats";
 
 interface EchoStat {
   storeId: number;
@@ -40,6 +42,12 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
   const [set, setSet] = useState<number>(0);
   const [selectedVal, setSelectedVal] = useState<number>(0);
   const [selsectSet, setSelecteSet] = useState(false);
+
+  const subStatRolls = (stat: string) => {
+    const rolls = Object.values(WWSubstats).find((s) => s.name === stat)?.rolls;
+
+    return rolls;
+  };
 
   const selectedEcho = Object.values(echoes).find(
     (i) => i.name === echoStats[index].name
@@ -331,6 +339,10 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
     setSelectedVal(parseInt(e.target.value, 10));
   };
 
+  useEffect(() => {
+    console.log("Updated Sub Stat", echoStats[index].selectedSubStat1.value);
+  }, [echoStats]);
+
   return (
     <>
       <div className="CalcEcho-Container">
@@ -465,22 +477,17 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                 </select>
               )}
               {echoStats[index].id !== 0 && (
-                <input
-                  id="Echo-Stat-Input-2"
-                  className="calcEcho-stat-input"
-                  type="number"
-                  value={echoStats[index].selectedSubStat1.value}
-                  step={
-                    isPercentageStat(echoStats[index].selectedSubStat1.stat)
-                      ? 0.1
-                      : 1
-                  }
-                  disabled={echoStats[index].selectedSubStat1.stat === ""}
-                  min={0}
-                  onChange={(e) =>
-                    handleSubStatValueChange(e, "selectedSubStat1")
-                  }
-                />
+                <>
+                  <SelectInput
+                    options={
+                      subStatRolls(echoStats[index].selectedSubStat1.stat) ?? []
+                    }
+                    onValueChange={(value) =>
+                      handleSubStatValueChange(value, "selectedSubStat1")
+                    }
+                    selectedValue={echoStats[index].selectedSubStat1.value}
+                  />
+                </>
               )}
             </div>
           </div>
@@ -503,22 +510,17 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
               </select>
             )}
             {echoStats[index].id !== 0 && (
-              <input
-                id="Echo-Stat-Input-3"
-                className="calcEcho-stat-input"
-                type="number"
-                value={echoStats[index].selectedSubStat2.value}
-                step={
-                  isPercentageStat(echoStats[index].selectedSubStat2.stat)
-                    ? 0.1
-                    : 1
-                }
-                disabled={echoStats[index].selectedSubStat2.stat === ""}
-                min={0}
-                onChange={(e) =>
-                  handleSubStatValueChange(e, "selectedSubStat2")
-                }
-              />
+              <>
+                <SelectInput
+                  options={
+                    subStatRolls(echoStats[index].selectedSubStat2.stat) ?? []
+                  }
+                  onValueChange={(value) =>
+                    handleSubStatValueChange(value, "selectedSubStat2")
+                  }
+                  selectedValue={echoStats[index].selectedSubStat2.value}
+                />
+              </>
             )}
           </div>
           <div className={index > 5 ? "calcEcho-box-5-add" : "calcEcho-box-5"}>
@@ -540,22 +542,17 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
               </select>
             )}
             {echoStats[index].id !== 0 && (
-              <input
-                id="Echo-Stat-Input-4"
-                className="calcEcho-stat-input"
-                type="number"
-                value={echoStats[index].selectedSubStat3.value}
-                step={
-                  isPercentageStat(echoStats[index].selectedSubStat3.stat)
-                    ? 0.1
-                    : 1
-                }
-                disabled={echoStats[index].selectedSubStat3.stat === ""}
-                min={0}
-                onChange={(e) =>
-                  handleSubStatValueChange(e, "selectedSubStat3")
-                }
-              />
+              <>
+                <SelectInput
+                  options={
+                    subStatRolls(echoStats[index].selectedSubStat3.stat) ?? []
+                  }
+                  onValueChange={(value) =>
+                    handleSubStatValueChange(value, "selectedSubStat3")
+                  }
+                  selectedValue={echoStats[index].selectedSubStat3.value}
+                />
+              </>
             )}
           </div>
           <div className={index > 5 ? "calcEcho-box-6-add" : "calcEcho-box-6"}>
@@ -577,22 +574,17 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
               </select>
             )}
             {echoStats[index].id !== 0 && (
-              <input
-                id="Echo-Stat-Input-5"
-                className="calcEcho-stat-input"
-                type="number"
-                value={echoStats[index].selectedSubStat4.value}
-                step={
-                  isPercentageStat(echoStats[index].selectedSubStat4.stat)
-                    ? 0.1
-                    : 1
-                }
-                disabled={echoStats[index].selectedSubStat4.stat === ""}
-                min={0}
-                onChange={(e) =>
-                  handleSubStatValueChange(e, "selectedSubStat4")
-                }
-              />
+              <>
+                <SelectInput
+                  options={
+                    subStatRolls(echoStats[index].selectedSubStat4.stat) ?? []
+                  }
+                  onValueChange={(value) =>
+                    handleSubStatValueChange(value, "selectedSubStat4")
+                  }
+                  selectedValue={echoStats[index].selectedSubStat4.value}
+                />
+              </>
             )}
           </div>
           <div className={index > 5 ? "calcEcho-box-7-add" : "calcEcho-box-7"}>
@@ -614,22 +606,17 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
               </select>
             )}
             {echoStats[index].id !== 0 && (
-              <input
-                id="Echo-Stat-Input-6"
-                className="calcEcho-stat-input"
-                type="number"
-                value={echoStats[index].selectedSubStat5.value}
-                disabled={echoStats[index].selectedSubStat5.stat === ""}
-                step={
-                  isPercentageStat(echoStats[index].selectedSubStat5.stat)
-                    ? 0.1
-                    : 1
-                }
-                min={0}
-                onChange={(e) =>
-                  handleSubStatValueChange(e, "selectedSubStat5")
-                }
-              />
+              <>
+                <SelectInput
+                  options={
+                    subStatRolls(echoStats[index].selectedSubStat5.stat) ?? []
+                  }
+                  onValueChange={(value) =>
+                    handleSubStatValueChange(value, "selectedSubStat5")
+                  }
+                  selectedValue={echoStats[index].selectedSubStat5.value}
+                />
+              </>
             )}
           </div>
           <div className={index > 5 ? "calcEcho-box-8-add" : "calcEcho-box-8"}>
