@@ -84,6 +84,34 @@
     font-size: 0;
 }
 
+.echo-filter-btn {
+    background-color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border: 3px solid azure;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.echo-filter-btn-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100px;
+    background-color: #4CAF50;
+    transition: left 0.5s ease-in-out;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.echo-filter-btn:hover .echo-filter-btn-text {
+    display: block;
+    left: 40px;
+}
+
 .relative-box {
     position: relative;
 }

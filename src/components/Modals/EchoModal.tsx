@@ -489,11 +489,14 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
               </div>
               <div className="calcEcho-modal-store-filter" onClick={openFilter}>
                 <img
-                  className=""
+                  className="echo-filter-btn"
                   src={
                     "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ui2/Filter.png"
                   }
                 />
+                <div className="echo-filter-btn-text">
+                  <h3>Filter</h3>
+                </div>
               </div>
               {open && (
                 <StoreEchoFilter

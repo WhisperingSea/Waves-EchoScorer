@@ -303,6 +303,7 @@ const StoreEchoFilter: React.FC<StoreEchoFilterTypes> = ({
                     className="stat-select-input-radio"
                     type="checkbox"
                     checked={selectedSubStats.includes(stat)}
+                    onChange={() => handleDivClickSub(stat)}
                   />
                 </div>
               ))}
