@@ -486,6 +486,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                       handleSubStatValueChange(value, "selectedSubStat1")
                     }
                     selectedValue={echoStats[index].selectedSubStat1.value}
+                    disabled={echoStats[index].selectedSubStat1.stat === ""}
                   />
                 </>
               )}
@@ -519,6 +520,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                     handleSubStatValueChange(value, "selectedSubStat2")
                   }
                   selectedValue={echoStats[index].selectedSubStat2.value}
+                  disabled={echoStats[index].selectedSubStat2.stat === ""}
                 />
               </>
             )}
@@ -550,6 +552,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                   onValueChange={(value) =>
                     handleSubStatValueChange(value, "selectedSubStat3")
                   }
+                  disabled={echoStats[index].selectedSubStat3.stat === ""}
                   selectedValue={echoStats[index].selectedSubStat3.value}
                 />
               </>
@@ -582,6 +585,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                   onValueChange={(value) =>
                     handleSubStatValueChange(value, "selectedSubStat4")
                   }
+                  disabled={echoStats[index].selectedSubStat4.stat === ""}
                   selectedValue={echoStats[index].selectedSubStat4.value}
                 />
               </>
@@ -614,6 +618,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                   onValueChange={(value) =>
                     handleSubStatValueChange(value, "selectedSubStat5")
                   }
+                  disabled={echoStats[index].selectedSubStat5.stat === ""}
                   selectedValue={echoStats[index].selectedSubStat5.value}
                 />
               </>

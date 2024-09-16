@@ -74,15 +74,37 @@ const SelectInput: React.FC<SelectInputProps> = ({
       ref={containerRef}
       style={{ position: "relative", display: "inline-block" }}
     >
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <button
           onClick={() => handleArrowClick("up")}
           aria-label="Increase value"
-          style={{ marginRight: "5px" }}
+          style={{
+            height: "30px",
+            width: "30px",
+            marginRight: "5px",
+            backgroundColor: "black",
+            color: "white",
+            border: "1px solid white",
+            fontSize: "14px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            lineHeight: "1",
+            padding: "0",
+            boxSizing: "border-box",
+            opacity: disabled ? 0.5 : 1, // Dimmed when disabled
+            cursor: disabled ? "not-allowed" : "pointer", // Pointer change
+          }}
           disabled={disabled}
         >
           &#9650; {/* Up arrow */}
         </button>
+
         <input
           ref={inputRef}
           type="text"
@@ -90,22 +112,45 @@ const SelectInput: React.FC<SelectInputProps> = ({
           readOnly
           onClick={handleInputClick}
           style={{
+            height: "30px",
             width: "80px",
             textAlign: "center",
-            backgroundColor: "#000",
-            color: "azure",
+            backgroundColor: "black",
+            color: "white",
+            border: "1px solid white",
+            boxSizing: "border-box",
+            opacity: disabled ? 0.5 : 1, // Dimmed when disabled
+            cursor: disabled ? "not-allowed" : "text", // Input should allow text cursor
           }}
           disabled={disabled}
         />
+
         <button
           onClick={() => handleArrowClick("down")}
           aria-label="Decrease value"
-          style={{ marginLeft: "5px" }}
+          style={{
+            height: "30px",
+            width: "30px",
+            marginLeft: "5px",
+            backgroundColor: "black",
+            color: "white",
+            border: "1px solid white",
+            fontSize: "14px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            lineHeight: "1",
+            padding: "0",
+            boxSizing: "border-box",
+            opacity: disabled ? 0.5 : 1, // Dimmed when disabled
+            cursor: disabled ? "not-allowed" : "pointer", // Pointer change
+          }}
           disabled={disabled}
         >
           &#9660; {/* Down arrow */}
         </button>
       </div>
+
       {isDropdownOpen && (
         <div
           style={{

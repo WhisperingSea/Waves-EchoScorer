@@ -1,5 +1,5 @@
 interface MainStatsType {
-    cost: number;
+    [key: string] : {cost: number;
     name: string;
     primary: {
         name: string;
@@ -8,7 +8,7 @@ interface MainStatsType {
     secondary: {
         name: string;
         ranks: number[];
-    }[];
+    }[];}
 }
 
 interface SubStatsType {
@@ -18,22 +18,9 @@ interface SubStatsType {
     rolls?: number[];
 }
 
-interface MainStatsWrapper {
-    mainStats: MainStatsType[];
-    subStats?: never; // Excludes subStats in this structure
-}
-
-interface SubStatsWrapper {
-    subStats: SubStatsType[];
-    mainStats?: never; // Excludes mainStats in this structure
-}
-
-type WWEchoStatsType = MainStatsWrapper | SubStatsWrapper;
-
-export const WWEchoStats: WWEchoStatsType[]  = [
+export const WWEchoStats: MainStatsType[]  = [
     {
-        mainStats: [
-        {
+        Overlord: {
             cost: 4,
             name: "Overload/Calamity",
             primary: [
@@ -47,7 +34,7 @@ export const WWEchoStats: WWEchoStatsType[]  = [
             ],
             secondary: [{ name: "ATK", ranks: [46, 68, 92, 150] }]
         },
-        {
+        Elite: {
             cost: 3,
             name: "Elite",
             primary: [
@@ -59,7 +46,7 @@ export const WWEchoStats: WWEchoStatsType[]  = [
             ],
             secondary: [{ name: "ATK", ranks: [31, 44, 63, 100] }]
         },
-        {
+        common: {
             cost: 1,
             name: "Common",
             primary: [
@@ -69,24 +56,6 @@ export const WWEchoStats: WWEchoStatsType[]  = [
             ],
             secondary: [{ name: "HP", ranks: [296, 516, 957, 2280] }]
         }
-        ]
-    },
-    {
-        subStats: [
-            { name: "HP", min: 260, max: 740 },
-            { name: "DEF", min: 30, max: 90 },
-            { name: "ATK", min: 20, max: 70 },
-            { name: "HP%", min: 5.2, max: 15 },
-            { name: "DEF%", min: 6.6, max: 16.9 },
-            { name: "ATK%", min: 5.2, max: 15 },
-            { name: "Crit. Rate", min: 4.9, max: 10.4 },
-            { name: "Crit. DMG", min: 9.8, max: 20.4 },
-            { name: "Energy Regen", min: 5.6, max: 14.9 },
-            { name: "Basic Attack DMG Bonus", min: 4.2, max: 11.8 },
-            { name: "Heavy Attack DMG Bonus", min: 4.2, max: 11.8 },
-            { name: "Resonance Skill DMG Bonus", min: 4.3, max: 12.0 },
-            { name: "Resonance Liberation DMG Bonus", min: 4.2, max: 12.0 }
-            ]
     }
 ]
 

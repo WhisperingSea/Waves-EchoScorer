@@ -46,10 +46,10 @@ export const ScorerContextProvider: React.FC<ScorerContextProviderProps> = ({
     EnergyRegen: { stat: "Energy Regen%", value: 1 },
     HealingBonus: { stat: "Heaing Bonus%", value: 0 },
     BasicBonus: { stat: "Basic Attack DMG Bonus%", value: 0.75 },
-    HeavyBonus: { stat: "Heavy Attak DMG Bonus%", value: 0.75 },
+    HeavyBonus: { stat: "Heavy Attack DMG Bonus%", value: 0.75 },
     SkillBonus: { stat: "Resonance Skill DMG Bonus%", value: 0.75 },
     LibreationBonus: {
-      stat: "Resonance Liberation DMG Bonus&",
+      stat: "Resonance Liberation DMG Bonus%",
       value: 0.75,
     },
   });

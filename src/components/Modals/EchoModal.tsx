@@ -488,7 +488,12 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                 )}
               </div>
               <div className="calcEcho-modal-store-filter" onClick={openFilter}>
-                <img className="" src={icon.find((i) => i.id === 15)?.icon} />
+                <img
+                  className=""
+                  src={
+                    "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ui2/Filter.png"
+                  }
+                />
               </div>
               {open && (
                 <StoreEchoFilter

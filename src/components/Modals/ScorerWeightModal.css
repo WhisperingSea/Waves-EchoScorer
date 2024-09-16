@@ -57,3 +57,26 @@
     gap: 10px;
     grid-template-rows: repeat(auto, max-content);
 }
+
+.scorer-weight-stats {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+                
+.sort-weight-box-subs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    border-bottom: 1px solid #888;
+}
+
+.score-weight-input-subs {
+    width: 70px;
+    background-color: black;
+    border: 1px solid azure;
+    border-radius: 4px;
+    color: white;
+    padding: 2px 5px;
+}

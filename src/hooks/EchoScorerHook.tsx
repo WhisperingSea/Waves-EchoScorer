@@ -98,18 +98,16 @@ export function EchoScorerFunction(index: number) {
   }, [calculateScoreMisc]);
 
   const Score = useMemo(() => {
-    if (scoreVal >= 30) return "SSS";
-    if (scoreVal >= 27.5) return "SS";
-    if (scoreVal >= 25) return "S";
-    if (scoreVal >= 22.5) return "A+";
-    if (scoreVal >= 20) return "A";
-    if (scoreVal >= 17.5) return "B+";
-    if (scoreVal >= 15) return "B";
-    if (scoreVal >= 12.5) return "C+";
-    if (scoreVal >= 10) return "C";
-    if (scoreVal >= 7.5) return "D+";
-    if (scoreVal >= 5) return "D";
-    if (scoreVal < 5) return "Trash";
+    if (scoreVal >= 22.5) return "OP";
+    if (scoreVal >= 20) return "WTF";
+    if (scoreVal >= 17.5) return "SSS";
+    if (scoreVal >= 15) return "SS";
+    if (scoreVal >= 12.5) return "S";
+    if (scoreVal >= 10) return "A";
+    if (scoreVal >= 7.5) return "B";
+    if (scoreVal >= 5) return "C";
+    if (scoreVal >= 2.5) return "D";
+    if (scoreVal < 2.5) return "Trash";
     return "";
   }, [scoreVal]);
 

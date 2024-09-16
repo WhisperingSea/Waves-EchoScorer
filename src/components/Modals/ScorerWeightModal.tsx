@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MultiSelectDropdown from "../Common/SelectMulti";
 import "./ScorerWeightModal.css";
+import { useScorerContext } from "../../contexts/ScorerContext";
 
 interface WeightsModal {
   onClose: () => void;
 }
 
 const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
+  const { ScorerWeight, setScorerWeight } = useScorerContext();
   const [selectedValues, setSelectedValues] = useState<Set<string>>(new Set());
   const [selectedValues2, setSelectedValues2] = useState<Set<string>>(
     new Set()
@@ -65,6 +67,36 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
     }
   };
 
+  const handleWeightChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    statKey: string
+  ) => {
+    const neweVal = parseFloat(e.target.value);
+    setScorerWeight((prevWeight) => {
+      // Debugging logs
+      console.log("Updating state for key:", statKey);
+      console.log("Previous state:", prevWeight);
+
+      // Ensure that statKey is a valid key
+      if (!(statKey in prevWeight)) {
+        console.error("Invalid key:", statKey);
+        return prevWeight; // or handle the error as needed
+      }
+
+      return {
+        ...prevWeight,
+        [statKey]: {
+          ...prevWeight[statKey],
+          value: neweVal,
+        },
+      };
+    });
+  };
+
+  useEffect(() => {
+    console.log("Weights", ScorerWeight);
+  });
+
   return (
     <>
       <div className="overlay-scorerWeight-modal" onClick={handleOverlayClick}>
@@ -101,6 +133,33 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                   onChange={handleSelectionChange}
                 />
               </div>
+            </div>
+            <h3 className="sort-type-text-weight">Sub Stats</h3>
+            <div className="weight-Box-item-1">
+              {Object.entries(ScorerWeight).map(([key, stat], index) => (
+                <div key={index} className="sort-weight-box-subs">
+                  <h3 className="scorer-weight-stats">
+                    {typeof stat.stat === "string" &&
+                    ["ATK%", "HP%", "DEF%"].some((substr) =>
+                      stat.stat.includes(substr)
+                    )
+                      ? stat.stat.replace(/Attack|Bonus|Resonance/g, "")
+                      : typeof stat.stat === "string"
+                      ? stat.stat.replace(/Attack|Bonus|Resonance|%/g, "")
+                      : ""}
+                  </h3>
+                  <input
+                    id={`${key}-input-${index}`}
+                    className="score-weight-input-subs"
+                    value={stat.value}
+                    step={0.25}
+                    min={0.5}
+                    max={1.5}
+                    onChange={(e) => handleWeightChange(e, key)}
+                    type="number"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
