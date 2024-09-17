@@ -15,7 +15,7 @@ interface SubStatsType {
     name: string;
     min: number;
     max: number;
-    rolls?: number[];
+    rolls: number[];
 }
 
 export const WWEchoStats: MainStatsType[]  = [

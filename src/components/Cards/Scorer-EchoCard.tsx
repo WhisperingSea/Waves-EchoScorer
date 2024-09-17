@@ -74,12 +74,6 @@ const ScorerEchoCard: React.FC<ScorerEchoCardType> = ({ Index }) => {
     setOpen(false);
   }, []);
 
-  useEffect(() => {
-    if (echo?.name) {
-      console.log("Stats", echoStats);
-    }
-  }, [echo]);
-
   return (
     <>
       <div className="scorer-echoCard-container">

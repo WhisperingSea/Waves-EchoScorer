@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import MultiSelectDropdown from "../Common/SelectMulti";
 import "./ScorerWeightModal.css";
 import { useScorerContext } from "../../contexts/ScorerContext";
+import { useDataContext } from "../../contexts/CharacterDataContext";
+import { DefaultBuildWeights } from "../../data/WWCharacterBuild";
 
 interface WeightsModal {
   onClose: () => void;
@@ -15,6 +17,11 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
   );
   const [selectedValues3, setSelectedValues3] = useState<Set<string>>(
     new Set()
+  );
+  const { selectedCharacterId, characters } = useDataContext();
+
+  const chara = Object.values(characters).find(
+    (char) => char.charaId === selectedCharacterId
   );
 
   const Option1 = [
@@ -73,16 +80,6 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
   ) => {
     const neweVal = parseFloat(e.target.value);
     setScorerWeight((prevWeight) => {
-      // Debugging logs
-      console.log("Updating state for key:", statKey);
-      console.log("Previous state:", prevWeight);
-
-      // Ensure that statKey is a valid key
-      if (!(statKey in prevWeight)) {
-        console.error("Invalid key:", statKey);
-        return prevWeight; // or handle the error as needed
-      }
-
       return {
         ...prevWeight,
         [statKey]: {
@@ -93,9 +90,50 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
     });
   };
 
-  useEffect(() => {
-    console.log("Weights", ScorerWeight);
-  });
+  const handleDPSScale = (scaleType: "hpScale" | "atkScale" | "defScale") => {
+    if (
+      chara?.charaId === 1001 ||
+      chara?.charaId === 1002 ||
+      chara?.charaId === 1102 ||
+      chara?.charaId === 1104 ||
+      chara?.charaId === 1201 ||
+      chara?.charaId === 1202 ||
+      chara?.charaId === 1203 ||
+      chara?.charaId === 1204 ||
+      chara?.charaId === 1301 ||
+      chara?.charaId === 1302 ||
+      chara?.charaId === 1401 ||
+      chara?.charaId === 1402 ||
+      chara?.charaId === 1403 ||
+      chara?.charaId === 1404 ||
+      chara?.charaId === 1502 ||
+      chara?.charaId === 1601
+    ) {
+      setScorerWeight((prevWeight) => {
+        const updatedWeights = Object.keys(DefaultBuildWeights.DPSStats).reduce(
+          (acc, key) => {
+            const statKey = key as keyof typeof DefaultBuildWeights.DPSStats; // Ensuring correct typing
+            const selectedScale =
+              DefaultBuildWeights.DPSStats[statKey][scaleType]; // Get the scale for the stat
+
+            return {
+              ...acc,
+              [statKey]: {
+                ...prevWeight[statKey],
+                value: selectedScale, // Update the value to the selected scale
+              },
+            };
+          },
+          {}
+        );
+
+        return {
+          ...prevWeight,
+          ...updatedWeights, // Apply the updated weights for all stats
+        };
+      });
+    }
+  };
 
   return (
     <>
@@ -161,6 +199,16 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="weight-box-item-2">
+            <button
+              className="default-sort-weight"
+              onClick={() => handleDPSScale("atkScale")}
+            >
+              Dps Config
+            </button>
+            <button className="default-sort-weight">Sub-Dps Config</button>
+            <button className="default-sort-weight">Support Config</button>
           </div>
         </div>
       </div>

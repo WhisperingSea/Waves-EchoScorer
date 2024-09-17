@@ -114,7 +114,6 @@ const EchoScorer: React.FC = () => {
   useEffect(() => {
     const loadedImages = Object.values(images).filter((img) => img !== "");
     if (loadedImages.length > 0) {
-      console.log("Loading images:", loadedImages); // Debugging line
       setImageUrls(loadedImages);
     }
   }, [images]);
@@ -218,10 +217,6 @@ const EchoScorer: React.FC = () => {
     setPosition({ x: 0, y: 0 }); // Reset position to center or default position
     setZoom(1);
   };
-
-  useEffect(() => {
-    console.log("Image?", imageUrl ? "True" : "False");
-  }, [imageUrl]);
 
   //Character Elements
   useEffect(() => {

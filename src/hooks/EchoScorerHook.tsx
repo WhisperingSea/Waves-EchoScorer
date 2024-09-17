@@ -2,12 +2,15 @@ import { useCallback, useState, useMemo, useEffect } from "react";
 import { useEchoes } from "../contexts/CalcEchoContext";
 import { WWSubstats } from "../data/WWEchoStats";
 import { useScorerContext } from "../contexts/ScorerContext";
+import { WWCharaBuilds } from "../data/WWCharacterBuild";
+import { useDataContext } from "../contexts/CharacterDataContext";
 
 interface ScoreMisc {
   [key: number]: { statVal: number };
 }
 
 export function EchoScorerFunction(index: number) {
+  const { selectedCharacterId } = useDataContext();
   const { echoStats } = useEchoes();
   const { ScorerWeight, cost1Main, cost3Main, cost4Main } = useScorerContext();
   const [scoreMisc, setScoreMisc] = useState<ScoreMisc>({
@@ -19,20 +22,33 @@ export function EchoScorerFunction(index: number) {
   });
 
   const valCalc = useCallback(
-    (stat: number, minStat: number, maxStat: number) => {
-      if (
-        !echoStat.selectedSubStat1.stat.includes("%") ||
-        !echoStat.selectedSubStat2.stat.includes("%") ||
-        !echoStat.selectedSubStat3.stat.includes("%") ||
-        !echoStat.selectedSubStat4.stat.includes("%") ||
-        !echoStat.selectedSubStat5.stat.includes("%")
-      ) {
-        return ((stat - minStat) / (maxStat - minStat)) * (5 - 2) + 2;
-      } else {
-        return ((stat - minStat) / (maxStat - minStat)) * (5 - 1) + 1;
+    (stat: number, statName: string) => {
+      const st = Object.values(WWSubstats).find((s) => s.name === statName);
+      const prefStat = WWCharaBuilds.find(
+        (pre) => pre.charaId === selectedCharacterId
+      )?.preferedSubStats.includes(statName.replace("%", ""));
+
+      if (!st) {
+        return 0;
       }
+
+      const index = st.rolls.indexOf(stat);
+
+      if (index === -1) {
+        return 0;
+      }
+
+      let score = index + 1 + (prefStat ? 2 : 0);
+
+      if (index === st.rolls.length - 1) {
+        score += 2;
+      }
+
+      console.log(`${statName} value`, score);
+
+      return score;
     },
-    []
+    [WWSubstats, selectedCharacterId]
   );
 
   const echoStat = useMemo(
@@ -56,13 +72,8 @@ export function EchoScorerFunction(index: number) {
       selectedSubStats.forEach((subStat, idx) => {
         const subStatIndex = idx + 1;
         if (echoStat.id !== 0 && subStat) {
-          const weight =
-            weights.find((i) => i.stat === subStat.stat)?.value || 0;
           const stat = subStat.value;
-          const minStat =
-            WWSubstats.find((I) => I.name === subStat.stat)?.min || 0;
-          const maxStat =
-            WWSubstats.find((I) => I.name === subStat.stat)?.max || 0;
+          const statName = subStat.stat;
           const mainStat =
             (echoStat.cost === 4 && cost4Main?.includes(echoStat.mainStat)) ||
             (echoStat.cost === 3 && cost3Main?.includes(echoStat.mainStat)) ||
@@ -70,12 +81,8 @@ export function EchoScorerFunction(index: number) {
               ? 2
               : 0;
 
-          const val = valCalc(stat, minStat, maxStat);
-          const finalValue = weight * Math.round(val) + mainStat;
-
-          if (subStat.stat === "Crit. DMG%") {
-            console.log("Final Value Crit", val);
-          }
+          const val = valCalc(stat, statName);
+          const finalValue = Math.round(val) + mainStat;
 
           updatedScoreMisc[subStatIndex] = { statVal: finalValue };
         } else {
@@ -98,16 +105,16 @@ export function EchoScorerFunction(index: number) {
   }, [calculateScoreMisc]);
 
   const Score = useMemo(() => {
-    if (scoreVal >= 22.5) return "OP";
-    if (scoreVal >= 20) return "WTF";
-    if (scoreVal >= 17.5) return "SSS";
-    if (scoreVal >= 15) return "SS";
-    if (scoreVal >= 12.5) return "S";
-    if (scoreVal >= 10) return "A";
-    if (scoreVal >= 7.5) return "B";
-    if (scoreVal >= 5) return "C";
-    if (scoreVal >= 2.5) return "D";
-    if (scoreVal < 2.5) return "Trash";
+    if (scoreVal >= 42) return "OP";
+    if (scoreVal >= 40) return "WTF";
+    if (scoreVal >= 36) return "SSS";
+    if (scoreVal >= 33) return "SS";
+    if (scoreVal >= 30) return "S";
+    if (scoreVal >= 25) return "A";
+    if (scoreVal >= 20) return "B";
+    if (scoreVal >= 15) return "C";
+    if (scoreVal >= 10) return "D";
+    if (scoreVal < 5) return "Trash";
     return "";
   }, [scoreVal]);
 

@@ -1,36 +1,54 @@
 export interface WWCharaBuildTypes {
     name: string,
     charaId: number
-    buildStats: {
+    buildStats?: {
         [key: string]: {stat: string, value: [number, number?]}
     }
-    
+    preferedSubStats: string[]
 }
 
 export interface DefaultBuildTypes {
     DPSStats: {
-        [key: string]: {stat: string, value: number},
+        [key: string]: {stat: string, hpScale: number, atkScale: number, defScale: number},
     },
     SubDPSStats: {
-        [key: string]: {stat: string, value: number}
+        [key: string]: {stat: string, hpScale: number, atkScale: number, defScale: number}
     },
     SupportStats: {
-        [key: string]: {stat: string, value: number}
+        [key: string]: {stat: string, hpScale: number, atkScale: number, defScale: number}
     },
     DpsMainStats: {
-        Cost1: string[]
-        Cost3: string[]
-        Cost4: string[]
+        Cost1HP: string[]
+        Cost1ATK: string[]
+        Cost1DEF: string[]
+        Cost3HP: string[]
+        Cost3ATK: string[]
+        Cost3DEF: string[]
+        Cost4HP: string[]
+        Cost4ATK: string[]
+        Cost4DEF: string[]
     },
     SubDpsMainStats: {
-        Cost1: string[]
-        Cost3: string[]
-        Cost4: string[]
+        Cost1HP: string[]
+        Cost1ATK: string[]
+        Cost1DEF: string[]
+        Cost3HP: string[]
+        Cost3ATK: string[]
+        Cost3DEF: string[]
+        Cost4HP: string[]
+        Cost4ATK: string[]
+        Cost4DEF: string[]
     }
     SupportMainStats: {
-        Cost1: string[]
-        Cost3: string[]
-        Cost4: string[]
+        Cost1HP: string[]
+        Cost1ATK: string[]
+        Cost1DEF: string[]
+        Cost3HP: string[]
+        Cost3ATK: string[]
+        Cost3DEF: string[]
+        Cost4HP: string[]
+        Cost4ATK: string[]
+        Cost4DEF: string[]
     }
 }
 
@@ -41,70 +59,274 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [1700, 2000]},
             stat2: {stat: "HP", value: [15000]},
-        }
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "ATK",]
+    },
+    {
+        name: "Rover-Havoc",
+        charaId: 1002,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK"]
+    },
+    {
+        name: "Baizhi",
+        charaId: 1101,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["HP%", "Energy Regen", "DEF%", "HP", "DEF"]
+    },
+    {
+        name: "Sanhua",
+        charaId: 1102,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+    },
+    {
+        name: "Lingyang",
+        charaId: 1103,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "ATK",]
+    },
+    {
+        name: "Zhezhi",
+        charaId: 1104,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Liberation DMG Bonus", "ATK",]
+    },
+    {
+        name: "Encore",
+        charaId: 1201,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+    },
+    {
+        name: "Chixia",
+        charaId: 1202,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+    },
+    {
+        name: "Mortefi",
+        charaId: 1203,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+    },
+    {
+        name: "Changli",
+        charaId: 1204,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+    },
+    {
+        name: "Calcharo",
+        charaId: 1301,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+    },
+    {
+        name: "Yinlin",
+        charaId: 1302,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "ATK",]
+    },
+    {
+        name: "Yuanwu",
+        charaId: 1303,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["DEF%", "Crit. Rate", "Crit. DMG", "DEF", "HP"]
+    },
+    {
+        name: "Xiangli Yao",
+        charaId: 1304,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Basic Attack DMG Bonus", "ATK",]
+    },
+    {
+        name: "Jianxin",
+        charaId: 1401,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "ATK",]
+    },
+    {
+        name: "Yangyang",
+        charaId: 1402,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "ATK",]
+    },
+    {
+        name: "Aalto",
+        charaId: 1403,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "ATK",]
+    },
+    {
+        name: "Jiyan",
+        charaId: 1404,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Heavy Attack DMG Bonus", "ATK",]
+    },
+    {
+        name: "Verina",
+        charaId: 1501,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "HP%", "DEF%", "Energy Regen", "ATK", "DEF", "HP"]
+    },
+    {
+        name: "Jinhsi",
+        charaId: 1502,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "ResonanceSkill DMG Bonus", "ATK",]
+    },
+    {
+        name: "Taoqi",
+        charaId: 1601,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "HP%", "DEF%", "Energy Regen", "Crit. Rate", "Crit. DMG" ]
+    },
+    {
+        name: "Danjin",
+        charaId: 1602,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "ResonanceSkill DMG Bonus", "ATK",]
     },
     {
         name: "",
         charaId: 0,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
-        }
+        },
+        preferedSubStats: []
     },
 ]
 
 export const DefaultBuildWeights: DefaultBuildTypes = {
     DPSStats: {
-        ATK: { stat: "ATK", value: 0.75 },
-        ATKPerc: { stat: "ATK%", value: 1 },
-        HP: { stat: "HP", value: 0.5 },
-        HPPerc: { stat: "HP%", value: 0.5 },
-        DEF: { stat: "DEF", value: 0.5 },
-        DEFPerc: { stat: "DEF%", value: 0.5 },
-        CritRate: { stat: "Crit. Rate%", value: 1 },
-        CritDMG: { stat: "Crit. DMG%", value: 1 },
-        EnergyRegen: { stat: "Energy Regen%", value: 0.75 },
-        HealingBonus: { stat: "Heaing Bonus%", value: 0 },
-        BasicBonus: { stat: "Basic Attack DMG Bonus%", value: 0.75 },
-        HeavyBonus: { stat: "Heavy Attack DMG Bonus%", value: 0.75 },
-        SkillBonus: { stat: "Resonance Skill DMG Bonus%", value: 0.75 },
+        ATK: { stat: "ATK", hpScale: 0.5, atkScale: 0.75, defScale: 0.5 },
+        ATKPerc: { stat: "ATK%", hpScale: 0.5, atkScale: 1.25, defScale: 0.5  },
+        HP: { stat: "HP", hpScale: 0.75, atkScale: 0.5, defScale: 0.5  },
+        HPPerc: { stat: "HP%", hpScale: 1, atkScale: 0.5, defScale: 0.5  },
+        DEF: { stat: "DEF", hpScale: 0.5, atkScale: 0.5, defScale: 0.75  },
+        DEFPerc: { stat: "DEF%", hpScale: 0.5, atkScale: 0.5, defScale: 1  },
+        CritRate: { stat: "Crit. Rate%", hpScale: 1.25, atkScale: 1.25, defScale: 1.25  },
+        CritDMG: { stat: "Crit. DMG%", hpScale: 1.25, atkScale: 1.25, defScale: 1.25  },
+        EnergyRegen: { stat: "Energy Regen%", hpScale: 0.75, atkScale: 0.75, defScale: 0.75  },
+        HealingBonus: { stat: "Heaing Bonus%", hpScale: 0, atkScale: 0, defScale: 0  },
+        BasicBonus: { stat: "Basic Attack DMG Bonus%", hpScale: 0.75, atkScale: 0.75, defScale: 0.75  },
+        HeavyBonus: { stat: "Heavy Attack DMG Bonus%", hpScale: 0.75, atkScale: 0.75, defScale: 0.75  },
+        SkillBonus: { stat: "Resonance Skill DMG Bonus%", hpScale: 0.75, atkScale: 0.75, defScale: 0.75  },
         LibreationBonus: {
         stat: "Resonance Liberation DMG Bonus%",
-        value: 0.75,
+        hpScale: 0.75, atkScale: 0.75, defScale: 0.75 
         },
     },
-    SubDPSStats: {},
-    SupportStats: {
-        ATK: { stat: "ATK", value: 0.5 },
-        ATKPerc: { stat: "ATK%", value: 0.75 },
-        HP: { stat: "HP", value: 0.75 },
-        HPPerc: { stat: "HP%", value: 1 },
-        DEF: { stat: "DEF", value: 0.75 },
-        DEFPerc: { stat: "DEF%", value: 1 },
-        CritRate: { stat: "Crit. Rate%", value: 0.75 },
-        CritDMG: { stat: "Crit. DMG%", value: 0.75 },
-        EnergyRegen: { stat: "Energy Regen%", value: 1 },
-        HealingBonus: { stat: "Heaing Bonus%", value: 1 },
-        BasicBonus: { stat: "Basic Attack DMG Bonus%", value: 0.5 },
-        HeavyBonus: { stat: "Heavy Attack DMG Bonus%", value: 0.5 },
-        SkillBonus: { stat: "Resonance Skill DMG Bonus%", value: 0.5 },
+    SubDPSStats: {ATK: { stat: "ATK", hpScale: 0.5, atkScale: 0.75, defScale: 0.5 },
+        ATKPerc: { stat: "ATK%", hpScale: 0.5, atkScale: 1, defScale: 0.5  },
+        HP: { stat: "HP", hpScale: 0.75, atkScale: 0.5, defScale: 0.5  },
+        HPPerc: { stat: "HP%", hpScale: 1, atkScale: 0.5, defScale: 0.5  },
+        DEF: { stat: "DEF", hpScale: 0.5, atkScale: 0.5, defScale: 0.75  },
+        DEFPerc: { stat: "DEF%", hpScale: 0.5, atkScale: 0.5, defScale: 1  },
+        CritRate: { stat: "Crit. Rate%", hpScale: 1, atkScale: 1, defScale: 1  },
+        CritDMG: { stat: "Crit. DMG%", hpScale: 1, atkScale: 1, defScale: 1  },
+        EnergyRegen: { stat: "Energy Regen%", hpScale: 1, atkScale: 1, defScale: 1  },
+        HealingBonus: { stat: "Heaing Bonus%", hpScale: 0, atkScale: 0, defScale: 0  },
+        BasicBonus: { stat: "Basic Attack DMG Bonus%", hpScale: 0.75, atkScale: 0.75, defScale: 0.75  },
+        HeavyBonus: { stat: "Heavy Attack DMG Bonus%", hpScale: 0.75, atkScale: 0.75, defScale: 0.75  },
+        SkillBonus: { stat: "Resonance Skill DMG Bonus%", hpScale: 0.75, atkScale: 0.75, defScale: 0.75  },
         LibreationBonus: {
         stat: "Resonance Liberation DMG Bonus%",
-        value: 0.5,
+        hpScale: 0.75, atkScale: 0.75, defScale: 0.75 
+        },},
+    SupportStats: {
+        ATK: { stat: "ATK", hpScale: 0.5, atkScale: 0.75, defScale: 0.5  },
+        ATKPerc: { stat: "ATK%", hpScale: 0.5, atkScale: 1, defScale: 0.5  },
+        HP: { stat: "HP", hpScale: 0.75, atkScale: 0.5, defScale: 0.5  },
+        HPPerc: { stat: "HP%", hpScale: 1, atkScale: 0.5, defScale: 0.5  },
+        DEF: { stat: "DEF", hpScale: 0.5, atkScale: 0.5, defScale: 0.75  },
+        DEFPerc: { stat: "DEF%", hpScale: 0.5, atkScale: 0.5, defScale: 1  },
+        CritRate: { stat: "Crit. Rate%", hpScale: 0.5, atkScale: 0.5, defScale: 0.5  },
+        CritDMG: { stat: "Crit. DMG%", hpScale: 0.5, atkScale: 0.5, defScale: 0.5  },
+        EnergyRegen: { stat: "Energy Regen%", hpScale: 1, atkScale: 1, defScale: 1  },
+        HealingBonus: { stat: "Heaing Bonus%", hpScale: 1, atkScale: 1, defScale: 1  },
+        BasicBonus: { stat: "Basic Attack DMG Bonus%", hpScale: 0.5, atkScale: 0.5, defScale: 0.5  },
+        HeavyBonus: { stat: "Heavy Attack DMG Bonus%", hpScale: 0.5, atkScale: 0.5, defScale: 0.5 },
+        SkillBonus: { stat: "Resonance Skill DMG Bonus%", hpScale: 0.5, atkScale: 0.5, defScale: 0.5  },
+        LibreationBonus: {
+        stat: "Resonance Liberation DMG Bonus%",
+        hpScale: 0.5, atkScale: 0.5, defScale: 0.5 
         },
     },
     DpsMainStats: {
-        Cost1: ["ATK%", "Crit. Rate%", "Crid. DMG%"],
-        Cost3: ["ATK%", "Element DMG Bonus%"],
-        Cost4: ["ATK%"]
+        Cost1HP: ["HP%"],
+        Cost1ATK: ["ATK%"],
+        Cost1DEF: ["DEF%"],
+        Cost3HP: ["HP%", "Element DMG Bonus%"],
+        Cost3ATK: ["ATK%", "Element DMG Bonus%"],
+        Cost3DEF: ["DEF%", "Element DMG Bonus%"],
+        Cost4HP: ["HP%", "Crit. Rate%", "Crit. DMG%"],
+        Cost4ATK: ["ATK%", "Crit. Rate%", "Crit. DMG%"],
+        Cost4DEF: ["DEF%", "Crit. Rate%", "Crit. DMG%"],
     },
     SubDpsMainStats: {
-        Cost1: ["ATK%", "Crit. Rate%", "Crid. DMG%"],
-        Cost3: ["ATK%", "Element DMG Bonus%", "Energy Regen%"],
-        Cost4: ["ATK%"]
+        Cost1HP: ["HP%"],
+        Cost1ATK: ["ATK%"],
+        Cost1DEF: ["DEF%"],
+        Cost3HP: ["HP%", "Energy Regen%"],
+        Cost3ATK: ["ATK%", "Energy Regen%"],
+        Cost3DEF: ["DEF%", "Energy Regen%"],
+        Cost4HP: ["HP%", "Crit. Rate%", "Crit. DMG%"],
+        Cost4ATK: ["ATK%", "Crit. Rate%", "Crit. DMG%"],
+        Cost4DEF: ["DEF%", "Crit. Rate%", "Crit. DMG%"],
     },
     SupportMainStats: {
-        Cost1: ["HP%", "Healing Bonus%"],
-        Cost3: ["HP%", "Energy Rege%"],
-        Cost4: ["HP%"]
+        Cost1HP: ["HP%"],
+        Cost1ATK: ["ATK%"],
+        Cost1DEF: ["DEF%"],
+        Cost3HP: ["HP%", "Energy Regen%"],
+        Cost3ATK: ["ATK%", "Energy Regen%"],
+        Cost3DEF: ["DEF%", "Energy Regen%"],
+        Cost4HP: ["HP%", "Healing Bonus%"],
+        Cost4ATK: ["ATK%", "Healing Bonus%"],
+        Cost4DEF: ["DEF%", "Healing Bonus%"],
     }
 }

@@ -80,3 +80,27 @@
     color: white;
     padding: 2px 5px;
 }
+
+.weight-box-item-2 {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    right: 20px;
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.default-sort-weight {
+    padding: 4px 12px;
+    background-color: black;
+    border: 1px solid azure;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+}
+
+.default-sort-weight:hover {
+    background-color: #444;
+}
