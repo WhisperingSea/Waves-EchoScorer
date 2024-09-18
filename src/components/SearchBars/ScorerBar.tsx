@@ -25,10 +25,6 @@ const ScorerBar: React.FC<ScorerBarTypes> = ({
     setOpen(false);
   };
 
-  const handleModal2Open = () => {
-    setOpen2(true);
-  };
-
   const handleModal2Close = () => {
     setOpen2(false);
   };
@@ -52,7 +48,8 @@ const ScorerBar: React.FC<ScorerBarTypes> = ({
             onClick={handleModalOpen}
           />
         </div>
-        <div className="scorerBar-item-2">
+        <div className="scorerBar-item-2"></div>
+        <div className="scorerBar-item-3">
           <button
             className="download-btn"
             onClick={downloadDivAsImage}
@@ -61,12 +58,6 @@ const ScorerBar: React.FC<ScorerBarTypes> = ({
             {isLoading ? "Processing..." : "Download Image"}
           </button>
         </div>
-        <div className="scorerBar-item-3">
-          <button className="scorer-weight-btn" onClick={handleModal2Open}>
-            Scorer Weights
-          </button>
-        </div>
-        <div className="scorerBar-item-4"></div>
       </div>
     </>
   );

@@ -109,13 +109,14 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
     stat: string | undefined;
     subStats: string[];
   }) => {
-    setFilters(updatedFilters); // Update the parent component's state with the new filters
+    setFilters(updatedFilters);
   };
 
   const handleEchoStoreSelect = (
     id: number,
     name: string,
     cost: number,
+    set: number,
     mainStat: string,
     mainStatValue: number,
     substat1: string,
@@ -136,6 +137,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
         id,
         name,
         cost,
+        set,
         mainStat,
         mainStatValue,
         selectedSubStat1: {
@@ -456,6 +458,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                             StoreSelectedEcho.storeId,
                             StoreSelectedEcho.name,
                             StoreSelectedEcho.cost,
+                            StoreSelectedEcho.set,
                             StoreSelectedEcho.mainStat,
                             StoreSelectedEcho.mainStatValue,
                             StoreSelectedEcho.selectedSubStat1.stat,
@@ -494,9 +497,6 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ui2/Filter.png"
                   }
                 />
-                <div className="echo-filter-btn-text">
-                  <h3>Filter</h3>
-                </div>
               </div>
               {open && (
                 <StoreEchoFilter

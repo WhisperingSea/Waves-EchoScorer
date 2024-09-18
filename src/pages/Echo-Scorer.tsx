@@ -123,14 +123,13 @@ const EchoScorer: React.FC = () => {
       setIsLoading(true);
 
       try {
-        // Ensure all images are loaded
         await loadImages(imageUrls);
 
         html2canvas(divRef.current, {
-          scale: window.devicePixelRatio * 2, // Increase scale for higher resolution
+          scale: window.devicePixelRatio * 2,
           useCORS: true,
           logging: true,
-          backgroundColor: null, // If you want transparent background
+          backgroundColor: null,
         })
           .then((canvas) => {
             const dataUrl = canvas.toDataURL("image/png");
@@ -214,7 +213,7 @@ const EchoScorer: React.FC = () => {
   const handleImageReset = () => {
     setImageUrl(null);
     setIsEdititng(false);
-    setPosition({ x: 0, y: 0 }); // Reset position to center or default position
+    setPosition({ x: 0, y: 0 });
     setZoom(1);
   };
 

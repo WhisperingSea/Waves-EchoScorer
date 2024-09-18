@@ -33,7 +33,7 @@ type SubStatType =
   | "selectedSubStat5";
 
 const EchoComp: React.FC<EchoCompType> = ({ index }) => {
-  const { echoStats, setEchoStats, sonataGroup, sonataGroup2 } = useEchoes();
+  const { echoStats, setEchoStats } = useEchoes();
   const { echoes } = useEchoContext();
   const [open, setOpen] = useState(false);
   const [MainStatsAttribute, setMainStatsAttribute] = useState<string[]>([]);
@@ -111,36 +111,6 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
         return [];
     }
   };
-
-  useEffect(() => {
-    if (selectedEcho?.sonataGroup.length === 1) {
-      const singleSet = selectedEcho.sonataGroup[0];
-      setSet(singleSet);
-      setEchoStats((prevEchoStats) => ({
-        ...prevEchoStats,
-        [index]: {
-          ...prevEchoStats[index],
-          set: singleSet,
-        },
-      }));
-    } else {
-      setEchoStats((prevEchoStats) => ({
-        ...prevEchoStats,
-        [index]: {
-          ...prevEchoStats[index],
-          set: set,
-        },
-      }));
-    }
-  }, [
-    sonataGroup,
-    sonataGroup2,
-    set,
-    WWSonataData,
-    selectedEcho,
-    index,
-    setEchoStats,
-  ]);
 
   useEffect(() => {
     const newMainStatsAttribute = updateMainStatsAttribute();
@@ -303,11 +273,12 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
         setSelecteSet(true);
       } else {
         addEcho(newItem);
+        handleStatReset();
       }
     } else {
       alert("This item already exists in storage.");
     }
-  }, [echoStats, index, addEcho, fetchAllSavedItems]);
+  }, [echoStats, index, addEcho, fetchAllSavedItems, handleStatReset]);
 
   const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
@@ -331,17 +302,28 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
   });
 
   const handleEchoSet = () => {
-    setSet(selectedVal);
     setSelecteSet(false);
+    setSet(selectedVal);
   };
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedVal(parseInt(e.target.value, 10));
+    const newSet = parseInt(e.target.value);
+    setEchoStats((prevEchoStats) => ({
+      ...prevEchoStats,
+      [index]: {
+        ...prevEchoStats[index],
+        set: newSet,
+      },
+    }));
   };
 
   useEffect(() => {
-    console.log("Updated Sub Stat", echoStats[index].selectedSubStat1.value);
-  }, [echoStats]);
+    if (selectedEcho?.sonataGroup.length === 1) {
+      const newSet = selectedEcho.sonataGroup[0];
+      setSet(newSet);
+    }
+  }, [selectedEcho]);
 
   return (
     <>
@@ -357,7 +339,11 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                   <select
                     id="SonataSelect"
                     onChange={handleSelectChange}
-                    value={selectedVal}
+                    value={
+                      selectedEcho?.sonataGroup.length === 1
+                        ? selectedEcho?.sonataGroup[0]
+                        : selectedVal
+                    }
                   >
                     {Object.values(echoes)
                       .find((echo) => echo.name === echoStats[index].name)

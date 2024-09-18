@@ -91,7 +91,10 @@
     border: 3px solid azure;
     border-radius: 50%;
     cursor: pointer;
-    position: relative;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
 }
 
 .echo-filter-btn-text {

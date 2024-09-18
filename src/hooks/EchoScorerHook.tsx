@@ -12,7 +12,7 @@ interface ScoreMisc {
 export function EchoScorerFunction(index: number) {
   const { selectedCharacterId } = useDataContext();
   const { echoStats } = useEchoes();
-  const { ScorerWeight, cost1Main, cost3Main, cost4Main } = useScorerContext();
+  const { ScorerWeight } = useScorerContext();
   const [scoreMisc, setScoreMisc] = useState<ScoreMisc>({
     1: { statVal: 0 },
     2: { statVal: 0 },
@@ -20,6 +20,11 @@ export function EchoScorerFunction(index: number) {
     4: { statVal: 0 },
     5: { statVal: 0 },
   });
+
+  const echoStat = useMemo(
+    () => Object.values(echoStats)[index - 1],
+    [echoStats, index]
+  );
 
   const valCalc = useCallback(
     (stat: number, statName: string) => {
@@ -38,23 +43,21 @@ export function EchoScorerFunction(index: number) {
         return 0;
       }
 
-      let score = index + 1 + (prefStat ? 2 : 0);
+      let score = index + 1 + (prefStat ? 6 : 0);
 
-      if (index === st.rolls.length - 1) {
+      if (index === st.rolls.length - 1 && prefStat) {
         score += 2;
       }
 
-      console.log(`${statName} value`, score);
-
+      console.log("Score", {
+        statName: statName,
+        score: score,
+      });
       return score;
     },
     [WWSubstats, selectedCharacterId]
   );
 
-  const echoStat = useMemo(
-    () => Object.values(echoStats)[index - 1],
-    [echoStats, index]
-  );
   const weights = useMemo(() => Object.values(ScorerWeight), [ScorerWeight]);
 
   const calculateScoreMisc = useMemo(() => {
@@ -74,15 +77,9 @@ export function EchoScorerFunction(index: number) {
         if (echoStat.id !== 0 && subStat) {
           const stat = subStat.value;
           const statName = subStat.stat;
-          const mainStat =
-            (echoStat.cost === 4 && cost4Main?.includes(echoStat.mainStat)) ||
-            (echoStat.cost === 3 && cost3Main?.includes(echoStat.mainStat)) ||
-            (echoStat.cost === 1 && cost1Main?.includes(echoStat.mainStat))
-              ? 2
-              : 0;
 
           const val = valCalc(stat, statName);
-          const finalValue = Math.round(val) + mainStat;
+          const finalValue = val;
 
           updatedScoreMisc[subStatIndex] = { statVal: finalValue };
         } else {
@@ -105,16 +102,23 @@ export function EchoScorerFunction(index: number) {
   }, [calculateScoreMisc]);
 
   const Score = useMemo(() => {
-    if (scoreVal >= 42) return "OP";
-    if (scoreVal >= 40) return "WTF";
-    if (scoreVal >= 36) return "SSS";
-    if (scoreVal >= 33) return "SS";
-    if (scoreVal >= 30) return "S";
-    if (scoreVal >= 25) return "A";
-    if (scoreVal >= 20) return "B";
-    if (scoreVal >= 15) return "C";
-    if (scoreVal >= 10) return "D";
-    if (scoreVal < 5) return "Trash";
+    if (scoreVal >= 50) return "OP";
+    if (scoreVal >= 47.5) return "SSS+";
+    if (scoreVal >= 45) return "SSS";
+    if (scoreVal >= 40.5) return "SS+";
+    if (scoreVal >= 40) return "SS";
+    if (scoreVal >= 37.5) return "S+";
+    if (scoreVal >= 35) return "S";
+    if (scoreVal >= 32.5) return "A+";
+    if (scoreVal >= 30) return "A";
+    if (scoreVal >= 27.5) return "B+";
+    if (scoreVal >= 25) return "B";
+    if (scoreVal >= 22.5) return "C+";
+    if (scoreVal >= 20) return "C";
+    if (scoreVal >= 17.5) return "D+";
+    if (scoreVal >= 15) return "D";
+    if (scoreVal >= 12.5) return "D";
+    if (scoreVal < 10) return "Trash";
     return "";
   }, [scoreVal]);
 

@@ -15,21 +15,19 @@ export function BasicAttackBonus() {
 
   const echoStatsArray = Object.values(echoStats);
   useEffect(() => {
-    let Damage = 0;
+    let DMG = 0;
     let Damage2 = 0;
-    if (skillLevels.InherantSkill1.Buff === "Basic Attack Damage Bonus") {
-      Damage = skillLevels.InherantSkill1.Value;
-      setAdditionalBasicDamage(Damage);
+    if (skillLevels.InherantSkill1.Buff === "Basic Attack DMG Bonus") {
+      DMG = skillLevels.InherantSkill1.Value;
+      setAdditionalBasicDamage(DMG);
     } else {
       setAdditionalBasicDamage(0);
     }
 
-    if (skillLevels.InherantSkill2.Buff === "Basic Attack Damage Bonus") {
+    if (skillLevels.InherantSkill2.Buff === "Basic Attack DMG Bonus") {
       Damage2 = skillLevels.InherantSkill2.Value;
       setAdditionalBasicDamage2(Damage2);
-    } else if (
-      skillLevels.InherantSkill2.Buff2 === "Basic Attack Damage Bonus"
-    ) {
+    } else if (skillLevels.InherantSkill2.Buff2 === "Basic Attack DMG Bonus") {
       Damage2 = skillLevels.InherantSkill2.Value2 as number;
       setAdditionalBasicDamage2(Damage2);
     } else {
@@ -49,7 +47,7 @@ export function BasicAttackBonus() {
       ];
 
       const targetType = "Character Buff";
-      const targetBuff = "Basic Attack Damage Bonus";
+      const targetBuff = "Basic Attack DMG Bonus";
 
       const totalValue = (sequences ?? [])
         .flat()
@@ -74,7 +72,7 @@ export function BasicAttackBonus() {
     ];
 
     const subStatTotal = subStats.reduce((subTotal, subStat) => {
-      return subStat.stat === "Basic Attack Damage Bonus%"
+      return subStat.stat === "Basic Attack DMG Bonus%"
         ? subTotal + (subStat.value || 0)
         : subTotal;
     }, 0);
@@ -103,21 +101,19 @@ export function HeavyAttackBonus() {
   const echoStatsArray = Object.values(echoStats);
 
   useEffect(() => {
-    let Damage = 0;
+    let DMG = 0;
     let Damage2 = 0;
-    if (skillLevels.InherantSkill1.Buff === "Heavy Attack Damage Bonus") {
-      Damage = skillLevels.InherantSkill1.Value;
-      setAdditionalHeavyDamage(Damage);
+    if (skillLevels.InherantSkill1.Buff === "Heavy Attack DMG Bonus") {
+      DMG = skillLevels.InherantSkill1.Value;
+      setAdditionalHeavyDamage(DMG);
     } else {
       setAdditionalHeavyDamage(0);
     }
 
-    if (skillLevels.InherantSkill2.Buff === "Heavy Attack Damage Bonus") {
+    if (skillLevels.InherantSkill2.Buff === "Heavy Attack DMG Bonus") {
       Damage2 = skillLevels.InherantSkill2.Value;
       setAdditionalHeavyDamage2(Damage2);
-    } else if (
-      skillLevels.InherantSkill2.Buff2 === "Heavy Attack Damage Bonus"
-    ) {
+    } else if (skillLevels.InherantSkill2.Buff2 === "Heavy Attack DMG Bonus") {
       Damage2 = skillLevels.InherantSkill2.Value2 as number;
       setAdditionalHeavyDamage2(Damage2);
     } else {
@@ -137,7 +133,7 @@ export function HeavyAttackBonus() {
       ];
 
       const targetType = "Character Buff";
-      const targetBuff = "Heavy Attack Damage Bonus";
+      const targetBuff = "Heavy Attack DMG Bonus";
 
       const totalValue = (sequences ?? [])
         .flat()
@@ -162,7 +158,7 @@ export function HeavyAttackBonus() {
     ];
 
     const subStatTotal = subStats.reduce((subTotal, subStat) => {
-      return subStat.stat === "Heavy Attack Damage Bonus%"
+      return subStat.stat === "Heavy Attack DMG Bonus%"
         ? subTotal + (subStat.value || 0)
         : subTotal;
     }, 0);
@@ -191,20 +187,20 @@ export function RSkillBonus() {
   const echoStatsArray = Object.values(echoStats);
 
   useEffect(() => {
-    let Damage = 0;
+    let DMG = 0;
     let Damage2 = 0;
-    if (skillLevels.InherantSkill1.Buff === "Resonance Skill Damage Bonus") {
-      Damage = skillLevels.InherantSkill1.Value;
-      setAdditionalRSkillDamage(Damage);
+    if (skillLevels.InherantSkill1.Buff === "Resonance Skill DMG Bonus") {
+      DMG = skillLevels.InherantSkill1.Value;
+      setAdditionalRSkillDamage(DMG);
     } else {
       setAdditionalRSkillDamage(0);
     }
 
-    if (skillLevels.InherantSkill2.Buff === "Resonance Skill Damage Bonus") {
+    if (skillLevels.InherantSkill2.Buff === "Resonance Skill DMG Bonus") {
       Damage2 = skillLevels.InherantSkill2.Value;
       setAdditionalRSkillDamage2(Damage2);
     } else if (
-      skillLevels.InherantSkill2.Buff2 === "Resonance Skill Damage Bonus"
+      skillLevels.InherantSkill2.Buff2 === "Resonance Skill DMG Bonus"
     ) {
       Damage2 = skillLevels.InherantSkill2.Value2 as number;
       setAdditionalRSkillDamage2(Damage2);
@@ -225,7 +221,7 @@ export function RSkillBonus() {
       ];
 
       const targetType = "Character Buff";
-      const targetBuff = "Resonance Skill Damage Bonus";
+      const targetBuff = "Resonance Skill DMG Bonus";
 
       const totalValue = (sequences ?? [])
         .flat()
@@ -251,7 +247,7 @@ export function RSkillBonus() {
     ];
 
     const subStatTotal = subStats.reduce((subTotal, subStat) => {
-      return subStat.stat === "Resonance Skill Damage Bonus%"
+      return subStat.stat === "Resonance Skill DMG Bonus%"
         ? subTotal + (subStat.value || 0)
         : subTotal;
     }, 0);
@@ -281,24 +277,20 @@ export function RLiberationBonus() {
   const echoStatsArray = Object.values(echoStats);
 
   useEffect(() => {
-    let Damage = 0;
+    let DMG = 0;
     let Damage2 = 0;
-    if (
-      skillLevels.InherantSkill1.Buff === "Resonance Liberation Damage Bonus"
-    ) {
-      Damage = skillLevels.InherantSkill1.Value;
-      setAdditionalRLiberationDamage(Damage);
+    if (skillLevels.InherantSkill1.Buff === "Resonance Liberation DMG Bonus") {
+      DMG = skillLevels.InherantSkill1.Value;
+      setAdditionalRLiberationDamage(DMG);
     } else {
       setAdditionalRLiberationDamage(0);
     }
 
-    if (
-      skillLevels.InherantSkill2.Buff === "Resonance Liberation Damage Bonus"
-    ) {
+    if (skillLevels.InherantSkill2.Buff === "Resonance Liberation DMG Bonus") {
       Damage2 = skillLevels.InherantSkill2.Value;
       setAdditionalRLiberationDamage2(Damage2);
     } else if (
-      skillLevels.InherantSkill2.Buff2 === "Resonance Liberation Damage Bonus"
+      skillLevels.InherantSkill2.Buff2 === "Resonance Liberation DMG Bonus"
     ) {
       Damage2 = skillLevels.InherantSkill2.Value2 as number;
       setAdditionalRLiberationDamage2(Damage2);
@@ -319,7 +311,7 @@ export function RLiberationBonus() {
       ];
 
       const targetType = "Character Buff";
-      const targetBuff = "Resonance Liberation Damage Bonus";
+      const targetBuff = "Resonance Liberation DMG Bonus";
 
       const totalValue = (sequences ?? [])
         .flat()
@@ -344,7 +336,7 @@ export function RLiberationBonus() {
     ];
 
     const subStatTotal = subStats.reduce((subTotal, subStat) => {
-      return subStat.stat === "Resonance Liberation Damage Bonus%"
+      return subStat.stat === "Resonance Liberation DMG Bonus%"
         ? subTotal + (subStat.value || 0)
         : subTotal;
     }, 0);
