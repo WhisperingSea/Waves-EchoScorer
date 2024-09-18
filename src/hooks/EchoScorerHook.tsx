@@ -43,11 +43,10 @@ export function EchoScorerFunction(index: number) {
         return 0;
       }
 
-      let score = index + 1 + (prefStat ? 6 : 0);
+      const statScore = index + 1;
+      const prefStatScore = prefStat ? 5 : 0;
 
-      if (index === st.rolls.length - 1 && prefStat) {
-        score += 2;
-      }
+      let score = prefStatScore + statScore;
 
       console.log("Score", {
         statName: statName,
@@ -102,23 +101,23 @@ export function EchoScorerFunction(index: number) {
   }, [calculateScoreMisc]);
 
   const Score = useMemo(() => {
-    if (scoreVal >= 50) return "OP";
-    if (scoreVal >= 47.5) return "SSS+";
-    if (scoreVal >= 45) return "SSS";
-    if (scoreVal >= 40.5) return "SS+";
-    if (scoreVal >= 40) return "SS";
-    if (scoreVal >= 37.5) return "S+";
-    if (scoreVal >= 35) return "S";
-    if (scoreVal >= 32.5) return "A+";
-    if (scoreVal >= 30) return "A";
-    if (scoreVal >= 27.5) return "B+";
-    if (scoreVal >= 25) return "B";
-    if (scoreVal >= 22.5) return "C+";
-    if (scoreVal >= 20) return "C";
-    if (scoreVal >= 17.5) return "D+";
-    if (scoreVal >= 15) return "D";
-    if (scoreVal >= 12.5) return "D";
-    if (scoreVal < 10) return "Trash";
+    if (scoreVal >= 45) return "OP";
+    if (scoreVal >= 42.5) return "SSS+";
+    if (scoreVal >= 40) return "SSS";
+    if (scoreVal >= 37.5) return "SS+";
+    if (scoreVal >= 35) return "SS";
+    if (scoreVal >= 32.5) return "S+";
+    if (scoreVal >= 30) return "S";
+    if (scoreVal >= 27.5) return "A+";
+    if (scoreVal >= 25) return "A";
+    if (scoreVal >= 22.5) return "B+";
+    if (scoreVal >= 20) return "B";
+    if (scoreVal >= 17.5) return "C+";
+    if (scoreVal >= 15) return "C";
+    if (scoreVal >= 12.5) return "D+";
+    if (scoreVal >= 10) return "D";
+    if (scoreVal >= 7.5) return "D";
+    if (scoreVal < 5) return "Trash";
     return "";
   }, [scoreVal]);
 
