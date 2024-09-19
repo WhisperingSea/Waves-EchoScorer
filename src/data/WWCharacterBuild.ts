@@ -1,10 +1,14 @@
 export interface WWCharaBuildTypes {
     name: string,
-    charaId: number
+    charaId: number;
     buildStats?: {
-        [key: string]: {stat: string, value: [number, number?]}
-    }
-    preferedSubStats: string[]
+        [key: string]: {stat: string, value: [number, number?]};
+    };
+    preferedSonata: number[];
+    preferedMainStat1: string[];
+    preferedMainStat2: string[];
+    preferedMainStat3: string[];
+    preferedSubStats: string[];
 }
 
 export interface DefaultBuildTypes {
@@ -60,7 +64,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
             stat1: {stat: "ATK", value: [1700, 2000]},
             stat2: {stat: "HP", value: [15000]},
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "ATK",]
+        preferedSonata: [5, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Spectro DMG Bonus%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Energy Regen%", "Resonance Skill DMG Bonus%", "Resonance Liberation DMG Bonus%"]
     },
     {
         name: "Rover-Havoc",
@@ -68,7 +76,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK"]
+        preferedSonata: [6],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Resonance Skill DMG Bonus%", "Resonance Liberation DMG Bonus%", "ATK"]
     },
     {
         name: "Baizhi",
@@ -76,7 +88,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["HP%", "Energy Regen", "DEF%", "HP", "DEF"]
+        preferedSonata: [7],
+        preferedMainStat1: ["HP%", "Healing Bonus%"],
+        preferedMainStat2: ["Energy Regen%"],
+        preferedMainStat3: ["HP%%"],
+        preferedSubStats: ["HP%", "Enerhy Regen%", "DEF%", "HP", "DEF"]
     },
     {
         name: "Sanhua",
@@ -84,7 +100,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+        preferedSonata: [1, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Glacio DMG Bonus%", "Energy Regen", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Resonance Skill DMG Bonus%", "Resonance Liberation DMG Bonus%", "ATK",]
     },
     {
         name: "Lingyang",
@@ -92,7 +112,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "ATK",]
+        preferedSonata: [1],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Glacio DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Basic Attack DMG Bonus%", "ATK",]
     },
     {
         name: "Zhezhi",
@@ -100,7 +124,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Liberation DMG Bonus", "ATK",]
+        preferedSonata: [1, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Glacio DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Resonance Liberation DMG Bonus%", "ATK",]
     },
     {
         name: "Encore",
@@ -108,7 +136,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+        preferedSonata: [2],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Fusion DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Basic Attack DMG Bonus%", "Resonance Skill DMG Bonus%", "Resonance Liberation DMG Bonus%", "ATK",]
     },
     {
         name: "Chixia",
@@ -116,7 +148,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+        preferedSonata: [2, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Fusion DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Resonance Skill DMG Bonus%", "Resonance Liberation DMG Bonus%", "ATK",]
     },
     {
         name: "Mortefi",
@@ -124,7 +160,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+        preferedSonata: [2, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Fusion DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Resonance Skill DMG Bonus%", "Resonance Liberation DMG Bonus%", "ATK",]
     },
     {
         name: "Changli",
@@ -132,7 +172,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+        preferedSonata: [2],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Fusion DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Resonance Skill DMG Bonus%", "Resonance Liberation DMG Bonus%", "ATK",]
     },
     {
         name: "Calcharo",
@@ -140,7 +184,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "Resonance Liberation DMG Bonus", "ATK",]
+        preferedSonata: [3],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Electro DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Basic Attack DMG Bonus%", "Resonance Liberation DMG Bonus%", "ATK",]
     },
     {
         name: "Yinlin",
@@ -148,7 +196,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "ATK",]
+        preferedSonata: [3, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Electro DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Resonance Skill DMG Bonus%", "ATK",]
     },
     {
         name: "Yuanwu",
@@ -156,7 +208,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["DEF%", "Crit. Rate", "Crit. DMG", "DEF", "HP"]
+        preferedSonata: [3, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Electro DMG Bonus%", "DEF%", "Energy Regen%"],
+        preferedMainStat3: ["DEF%"],
+        preferedSubStats: ["DEF%", "Crit. Rate%", "Crit. DMG%", "DEF", "HP"]
     },
     {
         name: "Xiangli Yao",
@@ -164,7 +220,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "Basic Attack DMG Bonus", "ATK",]
+        preferedSonata: [3],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Electro DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Resonance Skill DMG Bonus%", "Basic Attack DMG Bonus%", "ATK",]
     },
     {
         name: "Jianxin",
@@ -172,7 +232,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Resonance Skill DMG Bonus", "ATK",]
+        preferedSonata: [4, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Heavy Attack DMG Bonus%", "Resonance Skill DMG Bonus%", "ATK",]
     },
     {
         name: "Yangyang",
@@ -180,7 +244,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Basic Attack DMG Bonus", "ATK",]
+        preferedSonata: [4, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Basic Attack DMG Bonus%", "ATK",]
     },
     {
         name: "Aalto",
@@ -188,7 +256,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "ATK",]
+        preferedSonata: [4, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "ATK",]
     },
     {
         name: "Jiyan",
@@ -196,7 +268,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "Energy Regen", "Heavy Attack DMG Bonus", "ATK",]
+        preferedSonata: [4],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "Heavy Attack DMG Bonus%", "ATK",]
     },
     {
         name: "Verina",
@@ -204,7 +280,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "HP%", "DEF%", "Energy Regen", "ATK", "DEF", "HP"]
+        preferedSonata: [7],
+        preferedMainStat1: ["ATK%", "Healing Bonus%"],
+        preferedMainStat2: ["ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "HP%", "DEF%", "Enerhy Regen%", "ATK", "DEF", "HP"]
     },
     {
         name: "Jinhsi",
@@ -212,7 +292,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "ResonanceSkill DMG Bonus", "ATK",]
+        preferedSonata: [5],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Spectro DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "ResonanceSkill DMG Bonus", "ATK",]
     },
     {
         name: "Taoqi",
@@ -220,7 +304,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "HP%", "DEF%", "Energy Regen", "Crit. Rate", "Crit. DMG" ]
+        preferedSonata: [6, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%", "DEF%", "Energy Regen%"],
+        preferedMainStat3: ["DEF%"],
+        preferedSubStats: ["ATK%", "HP%", "DEF%", "Enerhy Regen%", "Crit. Rate%", "Crit. DMG%" ]
     },
     {
         name: "Danjin",
@@ -228,7 +316,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSubStats: ["ATK%", "Crit. Rate", "Crit. DMG", "ResonanceSkill DMG Bonus", "ATK",]
+        preferedSonata: [6, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "ResonanceSkill DMG Bonus", "ATK",]
     },
     {
         name: "",
@@ -236,6 +328,10 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
+        preferedSonata: [],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["AtK%"],
         preferedSubStats: []
     },
 ]

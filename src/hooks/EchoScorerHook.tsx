@@ -26,6 +26,10 @@ export function EchoScorerFunction(index: number) {
     [echoStats, index]
   );
 
+  const set = Object.values(WWCharaBuilds)
+    .find((set) => set.charaId === selectedCharacterId)
+    ?.preferedSonata?.includes(echoStat.set);
+
   const valCalc = useCallback(
     (stat: number, statName: string) => {
       const st = Object.values(WWSubstats).find((s) => s.name === statName);
@@ -38,23 +42,48 @@ export function EchoScorerFunction(index: number) {
       }
 
       const index = st.rolls.indexOf(stat);
-
       if (index === -1) {
         return 0;
       }
 
-      const statScore = index + 1;
-      const prefStatScore = prefStat ? 5 : 0;
+      // Determine if the character is DPS or support
+      const supports = [1101, 1501];
+      const dps = !supports.includes(selectedCharacterId || 0);
 
-      let score = prefStatScore + statScore;
+      // Calculate bonuses
+      let dpsBonus = 0;
+      let dpsSubBonus = 0;
+      let supportBonus = 0;
+      let flatBonus = 0;
 
-      console.log("Score", {
-        statName: statName,
-        score: score,
-      });
+      if (dps) {
+        dpsBonus = ["Crit. Rate%", "Crit. DMG%"].includes(statName) ? 5 : 0;
+        dpsSubBonus = ["ATK%"].includes(statName) ? 3 : 0;
+        flatBonus = "ATK" === statName ? 2 : 0;
+      } else if (supports.includes(selectedCharacterId || 0)) {
+        supportBonus = ["HP%", "Energy Regen%"].includes(statName) ? 5 : 0;
+        flatBonus = ["HP", "DEF"].includes(statName) ? 2 : 0;
+      }
+
+      // Calculate final score
+      const statScore = (index + 1) * 0.5;
+      const prefStatScore = prefStat ? 3 : 0;
+      const score =
+        (prefStatScore +
+          statScore +
+          dpsBonus +
+          dpsSubBonus +
+          supportBonus +
+          flatBonus) *
+        (set ? 1 : 0.5);
+
+      console.log(
+        `${statName} value: ${stat}, Index: ${index}, Stat Score: ${statScore}, Preferred Score: ${prefStatScore}, Total Score: ${score}`
+      );
+
       return score;
     },
-    [WWSubstats, selectedCharacterId]
+    [WWSubstats, selectedCharacterId, set]
   );
 
   const weights = useMemo(() => Object.values(ScorerWeight), [ScorerWeight]);
@@ -100,6 +129,8 @@ export function EchoScorerFunction(index: number) {
     );
   }, [calculateScoreMisc]);
 
+  console.log(`${echoStat.name} Echo`, scoreVal);
+
   const Score = useMemo(() => {
     if (scoreVal >= 45) return "OP";
     if (scoreVal >= 42.5) return "SSS+";
@@ -116,13 +147,9 @@ export function EchoScorerFunction(index: number) {
     if (scoreVal >= 15) return "C";
     if (scoreVal >= 12.5) return "D+";
     if (scoreVal >= 10) return "D";
-    if (scoreVal >= 7.5) return "D";
+    if (scoreVal >= 5) return "D-";
     if (scoreVal < 5) return "Trash";
     return "";
-  }, [scoreVal]);
-
-  useEffect(() => {
-    console.log("Score Val", scoreVal);
   }, [scoreVal]);
 
   // Update the state only when necessary

@@ -111,7 +111,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 cursor: "default",
               }}
             >
-              {option.label}
+              {option.label.replace("DMG", "")}
               <button
                 onClick={(event) => handleRemoveOption(value, event)}
                 style={{

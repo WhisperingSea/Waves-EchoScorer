@@ -9,9 +9,11 @@ interface ScorerContextTypes {
   cost4Main: string[] | null;
   cost3Main: string[] | null;
   cost1Main: string[] | null;
-  handleCost4Main?: (stat: string[] | null) => void;
-  handleCost3Main?: (stat: string[] | null) => void;
-  handleCost1Main?: (stat: string[] | null) => void;
+  subStats: string[] | null;
+  handleSubStats: (stat: string[] | null) => void;
+  handleCost4Main: (stat: string[] | null) => void;
+  handleCost3Main: (stat: string[] | null) => void;
+  handleCost1Main: (stat: string[] | null) => void;
   setScorerWeight: React.Dispatch<React.SetStateAction<ScorerTypes>>;
 }
 
@@ -57,6 +59,11 @@ export const ScorerContextProvider: React.FC<ScorerContextProviderProps> = ({
   const [cost4Main, setCost4Main] = useState<string[] | null>([]);
   const [cost3Main, setCost3Main] = useState<string[] | null>([]);
   const [cost1Main, setCost1Main] = useState<string[] | null>([]);
+  const [subStats, setSubStats] = useState<string[] | null>([]);
+
+  const handleSubStats = (stat: string[] | null) => {
+    setSubStats(stat);
+  };
 
   const handleCost4Main = (stat: string[] | null) => {
     setCost4Main(stat);
@@ -70,14 +77,18 @@ export const ScorerContextProvider: React.FC<ScorerContextProviderProps> = ({
     setCost1Main(stat);
   };
 
+  console.log("Selected Sub Stats", cost1Main);
+
   return (
     <ScorerContext.Provider
       value={{
         ScorerWeight,
         setScorerWeight,
+        subStats,
         cost4Main,
         cost3Main,
         cost1Main,
+        handleSubStats,
         handleCost4Main,
         handleCost3Main,
         handleCost1Main,

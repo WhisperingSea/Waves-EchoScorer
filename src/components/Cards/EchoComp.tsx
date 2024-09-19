@@ -39,7 +39,6 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
   const [MainStatsAttribute, setMainStatsAttribute] = useState<string[]>([]);
   const { addEcho } = useLocalStorageContext();
   const [isDisabled, setIsDisabled] = useState(false);
-  const [set, setSet] = useState<number>(0);
   const [selectedVal, setSelectedVal] = useState<number>(0);
   const [selsectSet, setSelecteSet] = useState(false);
 
@@ -303,27 +302,28 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
 
   const handleEchoSet = () => {
     setSelecteSet(false);
-    setSet(selectedVal);
   };
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedVal(parseInt(e.target.value, 10));
-    const newSet = parseInt(e.target.value);
+  };
+
+  useEffect(() => {
     setEchoStats((prevEchoStats) => ({
       ...prevEchoStats,
       [index]: {
         ...prevEchoStats[index],
-        set: newSet,
+        set: selectedVal,
       },
     }));
-  };
+  }, [selectedVal]);
 
   useEffect(() => {
     if (selectedEcho?.sonataGroup.length === 1) {
       const newSet = selectedEcho.sonataGroup[0];
-      setSet(newSet);
+      setSelectedVal(newSet);
     }
-  }, [selectedEcho]);
+  }, [selectedEcho, setSelectedVal]);
 
   return (
     <>
@@ -398,7 +398,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
               <div className="echo-comp-echo-img">
                 <img
                   className="Sonata-set-icon"
-                  src={WWSonataData.find((S) => S.id === set)?.img}
+                  src={WWSonataData.find((S) => S.id === selectedVal)?.img}
                   onClick={() => setSelecteSet(true)}
                 />
               </div>

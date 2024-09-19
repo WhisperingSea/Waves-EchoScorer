@@ -1,28 +1,45 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MultiSelectDropdown from "../Common/SelectMulti";
 import "./ScorerWeightModal.css";
 import { useScorerContext } from "../../contexts/ScorerContext";
 import { useDataContext } from "../../contexts/CharacterDataContext";
-import { DefaultBuildWeights } from "../../data/WWCharacterBuild";
+import { WWCharaBuilds } from "../../data/WWCharacterBuild";
 
 interface WeightsModal {
   onClose: () => void;
 }
 
+type EchoSubStats =
+  | "HP"
+  | "ATK"
+  | "DEF"
+  | "HP%"
+  | "ATK%"
+  | "DEF%"
+  | "Crit. Rate%"
+  | "Crit. DMG%"
+  | "Energy Regen%"
+  | "Basic Attack DMG Bonus%"
+  | "Heavy Attack DMG Bonus%"
+  | "Resonance Skill DMG Bonus%"
+  | "Resonance Liberation DMG Bonus%";
+
 const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
-  const { ScorerWeight, setScorerWeight } = useScorerContext();
+  const { handleSubStats, handleCost1Main, handleCost3Main, handleCost4Main } =
+    useScorerContext();
   const [selectedValues, setSelectedValues] = useState<Set<string>>(new Set());
   const [selectedValues2, setSelectedValues2] = useState<Set<string>>(
     new Set()
   );
+  const [selectedSubStats, setSelectedSubStats] = useState<string[]>([]);
   const [selectedValues3, setSelectedValues3] = useState<Set<string>>(
     new Set()
   );
-  const { selectedCharacterId, characters } = useDataContext();
+  const { selectedCharacterId } = useDataContext();
 
-  const chara = Object.values(characters).find(
-    (char) => char.charaId === selectedCharacterId
-  );
+  // const chara = Object.values(characters).find(
+  //   (char) => char.charaId === selectedCharacterId
+  // );
 
   const Option1 = [
     { label: "HP", value: "HP%" },
@@ -52,6 +69,22 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
     { label: "Healing Bonus", value: "Healing Bonus%" },
   ];
 
+  const SubStats: EchoSubStats[] = [
+    "HP",
+    "ATK",
+    "DEF",
+    "HP%",
+    "ATK%",
+    "DEF%",
+    "Crit. Rate%",
+    "Crit. DMG%",
+    "Energy Regen%",
+    "Basic Attack DMG Bonus%",
+    "Heavy Attack DMG Bonus%",
+    "Resonance Skill DMG Bonus%",
+    "Resonance Liberation DMG Bonus%",
+  ];
+
   const closeModal = () => {
     onClose();
   };
@@ -74,66 +107,48 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
     }
   };
 
-  const handleWeightChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    statKey: string
-  ) => {
-    const neweVal = parseFloat(e.target.value);
-    setScorerWeight((prevWeight) => {
-      return {
-        ...prevWeight,
-        [statKey]: {
-          ...prevWeight[statKey],
-          value: neweVal,
-        },
-      };
+  const handleDivClickSub = (stat: string) => {
+    setSelectedSubStats((prevSelected) => {
+      const updated = prevSelected.includes(stat)
+        ? prevSelected.filter((s) => s !== stat)
+        : [...prevSelected, stat];
+
+      return updated;
     });
   };
 
-  const handleDPSScale = (scaleType: "hpScale" | "atkScale" | "defScale") => {
-    if (
-      chara?.charaId === 1001 ||
-      chara?.charaId === 1002 ||
-      chara?.charaId === 1102 ||
-      chara?.charaId === 1104 ||
-      chara?.charaId === 1201 ||
-      chara?.charaId === 1202 ||
-      chara?.charaId === 1203 ||
-      chara?.charaId === 1204 ||
-      chara?.charaId === 1301 ||
-      chara?.charaId === 1302 ||
-      chara?.charaId === 1401 ||
-      chara?.charaId === 1402 ||
-      chara?.charaId === 1403 ||
-      chara?.charaId === 1404 ||
-      chara?.charaId === 1502 ||
-      chara?.charaId === 1601
-    ) {
-      setScorerWeight((prevWeight) => {
-        const updatedWeights = Object.keys(DefaultBuildWeights.DPSStats).reduce(
-          (acc, key) => {
-            const statKey = key as keyof typeof DefaultBuildWeights.DPSStats; // Ensuring correct typing
-            const selectedScale =
-              DefaultBuildWeights.DPSStats[statKey][scaleType]; // Get the scale for the stat
-
-            return {
-              ...acc,
-              [statKey]: {
-                ...prevWeight[statKey],
-                value: selectedScale, // Update the value to the selected scale
-              },
-            };
-          },
-          {}
-        );
-
-        return {
-          ...prevWeight,
-          ...updatedWeights, // Apply the updated weights for all stats
-        };
-      });
+  useEffect(() => {
+    if (selectedSubStats.length !== 0) {
+      handleSubStats(selectedSubStats);
     }
-  };
+  }, [selectedSubStats]);
+
+  const stats = WWCharaBuilds.find(
+    (stat) => stat.charaId === selectedCharacterId
+  );
+
+  useEffect(() => {
+    if (selectedCharacterId && stats) {
+      if (!selectedSubStats.length) {
+        setSelectedSubStats(stats.preferedSubStats);
+      }
+    }
+  }, [selectedCharacterId, stats]);
+
+  useEffect(() => {
+    const newVals = Array.from(selectedValues);
+    handleCost1Main(newVals);
+  }, [selectedValues]);
+
+  useEffect(() => {
+    const newVals = Array.from(selectedValues2);
+    handleCost3Main(newVals);
+  }, [selectedValues2]);
+
+  useEffect(() => {
+    const newVals = Array.from(selectedValues3);
+    handleCost4Main(newVals);
+  }, [selectedValues3]);
 
   return (
     <>
@@ -148,7 +163,7 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                   options={Option3}
                   selectedValues={selectedValues3}
                   defaultSelectedValues={
-                    new Set<string>(["ATK%", "Crit. Rate%"])
+                    new Set<string>(stats?.preferedMainStat1)
                   }
                   onChange={handleSelectionChange3}
                 />
@@ -158,7 +173,9 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                 <MultiSelectDropdown
                   options={Option2}
                   selectedValues={selectedValues2}
-                  defaultSelectedValues={new Set<string>(["ATK%"])}
+                  defaultSelectedValues={
+                    new Set<string>(stats?.preferedMainStat2)
+                  }
                   onChange={handleSelectionChange2}
                 />
               </div>
@@ -167,46 +184,39 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                 <MultiSelectDropdown
                   options={Option1}
                   selectedValues={selectedValues}
-                  defaultSelectedValues={new Set<string>(["ATK%"])}
+                  defaultSelectedValues={
+                    new Set<string>(stats?.preferedMainStat3)
+                  }
                   onChange={handleSelectionChange}
                 />
               </div>
             </div>
             <h3 className="sort-type-text-weight">Sub Stats</h3>
             <div className="weight-Box-item-1">
-              {Object.entries(ScorerWeight).map(([key, stat], index) => (
-                <div key={index} className="sort-weight-box-subs">
-                  <h3 className="scorer-weight-stats">
-                    {typeof stat.stat === "string" &&
-                    ["ATK%", "HP%", "DEF%"].some((substr) =>
-                      stat.stat.includes(substr)
-                    )
-                      ? stat.stat.replace(/Attack|Bonus|Resonance/g, "")
-                      : typeof stat.stat === "string"
-                      ? stat.stat.replace(/Attack|Bonus|Resonance|%/g, "")
-                      : ""}
+              {SubStats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="stat-sort-flex"
+                  onClick={() => handleDivClickSub(stat)}
+                >
+                  <h3 className="stat-sort-text">
+                    {["HP%", "ATK%", "DEF%"].includes(stat)
+                      ? stat.replace("%", " %")
+                      : stat.replace("%", "")}
                   </h3>
                   <input
-                    id={`${key}-input-${index}`}
-                    className="score-weight-input-subs"
-                    value={stat.value}
-                    step={0.25}
-                    min={0.5}
-                    max={1.5}
-                    onChange={(e) => handleWeightChange(e, key)}
-                    type="number"
+                    id={`${stat}-Sub-Id`}
+                    className="stat-select-input-radio"
+                    type="checkbox"
+                    checked={selectedSubStats.includes(stat)}
+                    onChange={() => handleDivClickSub(stat)}
                   />
                 </div>
               ))}
             </div>
           </div>
           <div className="weight-box-item-2">
-            <button
-              className="default-sort-weight"
-              onClick={() => handleDPSScale("atkScale")}
-            >
-              Dps Config
-            </button>
+            <button className="default-sort-weight">Dps Config</button>
             <button className="default-sort-weight">Sub-Dps Config</button>
             <button className="default-sort-weight">Support Config</button>
           </div>

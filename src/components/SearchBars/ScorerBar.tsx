@@ -21,6 +21,10 @@ const ScorerBar: React.FC<ScorerBarTypes> = ({
     setOpen(true);
   };
 
+  const handleModal2Open = () => {
+    setOpen2(true);
+  };
+
   const handleModalClose = () => {
     setOpen(false);
   };
@@ -48,7 +52,9 @@ const ScorerBar: React.FC<ScorerBarTypes> = ({
             onClick={handleModalOpen}
           />
         </div>
-        <div className="scorerBar-item-2"></div>
+        <div className="scorerBar-item-2">
+          <button onClick={handleModal2Open}>Scoring Alogrithm</button>
+        </div>
         <div className="scorerBar-item-3">
           <button
             className="download-btn"
