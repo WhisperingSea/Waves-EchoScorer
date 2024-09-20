@@ -61,7 +61,7 @@
     background-color: #444;
 }
 
-.scorer-weight-btn {
+.algorithm-btn {
     width: max-content;
     height: 30px;
     background-color: rgba(0, 0, 0, 0);
@@ -71,7 +71,7 @@
     border-radius: 4px;
 }
 
-.scorer-weight-btn:hover {
+.algorithm-btn:hover {
     background-color: #444;
 }
 

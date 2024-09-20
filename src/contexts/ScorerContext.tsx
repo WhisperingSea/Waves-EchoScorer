@@ -77,8 +77,6 @@ export const ScorerContextProvider: React.FC<ScorerContextProviderProps> = ({
     setCost1Main(stat);
   };
 
-  console.log("Selected Sub Stats", cost1Main);
-
   return (
     <ScorerContext.Provider
       value={{

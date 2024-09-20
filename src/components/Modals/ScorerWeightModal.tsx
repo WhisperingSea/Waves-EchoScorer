@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
 import MultiSelectDropdown from "../Common/SelectMulti";
 import "./ScorerWeightModal.css";
-import { useScorerContext } from "../../contexts/ScorerContext";
-import { useDataContext } from "../../contexts/CharacterDataContext";
-import { WWCharaBuilds } from "../../data/WWCharacterBuild";
 
 interface WeightsModal {
   onClose: () => void;
+  selectedValues: Set<string>;
+  setSelectedValues: React.Dispatch<React.SetStateAction<Set<string>>>;
+  selectedValues2: Set<string>;
+  setSelectedValues2: React.Dispatch<React.SetStateAction<Set<string>>>;
+  selectedValues3: Set<string>;
+  setSelectedValues3: React.Dispatch<React.SetStateAction<Set<string>>>;
+  selectedSubStats: string[];
+  setSelectedSubStats: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 type EchoSubStats =
@@ -24,23 +28,17 @@ type EchoSubStats =
   | "Resonance Skill DMG Bonus%"
   | "Resonance Liberation DMG Bonus%";
 
-const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
-  const { handleSubStats, handleCost1Main, handleCost3Main, handleCost4Main } =
-    useScorerContext();
-  const [selectedValues, setSelectedValues] = useState<Set<string>>(new Set());
-  const [selectedValues2, setSelectedValues2] = useState<Set<string>>(
-    new Set()
-  );
-  const [selectedSubStats, setSelectedSubStats] = useState<string[]>([]);
-  const [selectedValues3, setSelectedValues3] = useState<Set<string>>(
-    new Set()
-  );
-  const { selectedCharacterId } = useDataContext();
-
-  // const chara = Object.values(characters).find(
-  //   (char) => char.charaId === selectedCharacterId
-  // );
-
+const ScorerWeightsModal: React.FC<WeightsModal> = ({
+  onClose,
+  selectedValues,
+  selectedValues2,
+  selectedValues3,
+  selectedSubStats,
+  setSelectedValues,
+  setSelectedValues2,
+  setSelectedValues3,
+  setSelectedSubStats,
+}) => {
   const Option1 = [
     { label: "HP", value: "HP%" },
     { label: "ATK", value: "ATK%" },
@@ -117,39 +115,6 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
     });
   };
 
-  useEffect(() => {
-    if (selectedSubStats.length !== 0) {
-      handleSubStats(selectedSubStats);
-    }
-  }, [selectedSubStats]);
-
-  const stats = WWCharaBuilds.find(
-    (stat) => stat.charaId === selectedCharacterId
-  );
-
-  useEffect(() => {
-    if (selectedCharacterId && stats) {
-      if (!selectedSubStats.length) {
-        setSelectedSubStats(stats.preferedSubStats);
-      }
-    }
-  }, [selectedCharacterId, stats]);
-
-  useEffect(() => {
-    const newVals = Array.from(selectedValues);
-    handleCost1Main(newVals);
-  }, [selectedValues]);
-
-  useEffect(() => {
-    const newVals = Array.from(selectedValues2);
-    handleCost3Main(newVals);
-  }, [selectedValues2]);
-
-  useEffect(() => {
-    const newVals = Array.from(selectedValues3);
-    handleCost4Main(newVals);
-  }, [selectedValues3]);
-
   return (
     <>
       <div className="overlay-scorerWeight-modal" onClick={handleOverlayClick}>
@@ -162,9 +127,6 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                 <MultiSelectDropdown
                   options={Option3}
                   selectedValues={selectedValues3}
-                  defaultSelectedValues={
-                    new Set<string>(stats?.preferedMainStat1)
-                  }
                   onChange={handleSelectionChange3}
                 />
               </div>
@@ -173,9 +135,6 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                 <MultiSelectDropdown
                   options={Option2}
                   selectedValues={selectedValues2}
-                  defaultSelectedValues={
-                    new Set<string>(stats?.preferedMainStat2)
-                  }
                   onChange={handleSelectionChange2}
                 />
               </div>
@@ -184,9 +143,6 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
                 <MultiSelectDropdown
                   options={Option1}
                   selectedValues={selectedValues}
-                  defaultSelectedValues={
-                    new Set<string>(stats?.preferedMainStat3)
-                  }
                   onChange={handleSelectionChange}
                 />
               </div>
@@ -215,11 +171,11 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({ onClose }) => {
               ))}
             </div>
           </div>
-          <div className="weight-box-item-2">
+          {/* <div className="weight-box-item-2">
             <button className="default-sort-weight">Dps Config</button>
             <button className="default-sort-weight">Sub-Dps Config</button>
             <button className="default-sort-weight">Support Config</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

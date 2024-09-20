@@ -12,7 +12,7 @@ interface ScoreMisc {
 export function EchoScorerFunction(index: number) {
   const { selectedCharacterId } = useDataContext();
   const { echoStats } = useEchoes();
-  const { ScorerWeight } = useScorerContext();
+  const { ScorerWeight, subStats } = useScorerContext();
   const [scoreMisc, setScoreMisc] = useState<ScoreMisc>({
     1: { statVal: 0 },
     2: { statVal: 0 },
@@ -33,9 +33,9 @@ export function EchoScorerFunction(index: number) {
   const valCalc = useCallback(
     (stat: number, statName: string) => {
       const st = Object.values(WWSubstats).find((s) => s.name === statName);
-      const prefStat = WWCharaBuilds.find(
-        (pre) => pre.charaId === selectedCharacterId
-      )?.preferedSubStats.includes(statName.replace("%", ""));
+      const prefStat = subStats?.includes(statName);
+
+      console.log("Sub Stats", subStats);
 
       if (!st) {
         return 0;
@@ -46,11 +46,9 @@ export function EchoScorerFunction(index: number) {
         return 0;
       }
 
-      // Determine if the character is DPS or support
       const supports = [1101, 1501];
       const dps = !supports.includes(selectedCharacterId || 0);
 
-      // Calculate bonuses
       let dpsBonus = 0;
       let dpsSubBonus = 0;
       let supportBonus = 0;
@@ -65,7 +63,6 @@ export function EchoScorerFunction(index: number) {
         flatBonus = ["HP", "DEF"].includes(statName) ? 2 : 0;
       }
 
-      // Calculate final score
       const statScore = (index + 1) * 0.5;
       const prefStatScore = prefStat ? 3 : 0;
       const score =
@@ -77,13 +74,9 @@ export function EchoScorerFunction(index: number) {
           flatBonus) *
         (set ? 1 : 0.5);
 
-      console.log(
-        `${statName} value: ${stat}, Index: ${index}, Stat Score: ${statScore}, Preferred Score: ${prefStatScore}, Total Score: ${score}`
-      );
-
       return score;
     },
-    [WWSubstats, selectedCharacterId, set]
+    [WWSubstats, subStats, selectedCharacterId, set]
   );
 
   const weights = useMemo(() => Object.values(ScorerWeight), [ScorerWeight]);
@@ -129,8 +122,6 @@ export function EchoScorerFunction(index: number) {
     );
   }, [calculateScoreMisc]);
 
-  console.log(`${echoStat.name} Echo`, scoreVal);
-
   const Score = useMemo(() => {
     if (scoreVal >= 45) return "OP";
     if (scoreVal >= 42.5) return "SSS+";
@@ -152,7 +143,6 @@ export function EchoScorerFunction(index: number) {
     return "";
   }, [scoreVal]);
 
-  // Update the state only when necessary
   useEffect(() => {
     setScoreMisc(calculateScoreMisc);
   }, [calculateScoreMisc]);
