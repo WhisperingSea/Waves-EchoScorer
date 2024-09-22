@@ -7,8 +7,8 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat( 6, 1fr );
-    gap: 15px;
+    grid-template-columns: repeat( 5, 1fr );
+    gap: 10px;
     justify-content: center;
 }
 
@@ -40,4 +40,46 @@
 .card-link {
     color: white;
     text-decoration: none;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bottom {
+        margin-top: 0px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+        text-align: center;
+    }
+
+    .bottom {
+        margin-top: 0px;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .grid {
+        gap: 5px;
+    }
+
+    .card {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .bottom {
+        font-size: 14px;
+    }
 }

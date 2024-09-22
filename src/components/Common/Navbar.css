@@ -1,25 +1,21 @@
 .navbar-warpper {
     position: fixed;
-    /* Fix the Navbar to the top */
     top: 0;
     left: 0;
     width: 100%;
     transition: transform 0.3s ease-in-out;
-    /* Smooth transition for hiding/showing */
     z-index: 1000;
     background-color: black;
-    /* Ensure it stays on top of other content */
 }
 
 .navbar-hidden {
     transform: translateY(-100%);
-    /* Hide the Navbar by moving it up */
 }
 
 .navbar-visible {
     transform: translateY(0);
-    /* Show the Navbar */
 }
+
 .navbar {
     max-width: 1440px;
     margin: 0 auto;
@@ -91,4 +87,20 @@
     margin-right: 10px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .navbar {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 767px){
+    .navbar-warpper {
+        display: none;
+    }
+    
+    .navbar {
+        display: none;
+    }
 }

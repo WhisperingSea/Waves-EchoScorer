@@ -4,3 +4,18 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media (max-width: 1024px) and (min-width: 481px) {
+    .footer {
+        margin: 0 30px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .footer {
+        font-size: 12px;
+        margin: 0 10px;
+        margin-top: 30px;
+    }
+}

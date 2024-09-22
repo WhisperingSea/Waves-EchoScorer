@@ -37,3 +37,19 @@
     grid-column: span 2;
     text-align: center;
 }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .echo-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .echo-card img {
+        width: 100px;
+    }
+
+    .echo-card-bottom {
+        margin-left: 0;
+    }
+}

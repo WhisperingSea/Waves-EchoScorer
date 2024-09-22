@@ -54,13 +54,32 @@ export function EchoScorerFunction(index: number) {
       let supportBonus = 0;
       let flatBonus = 0;
 
+      // Per stat Roll Bonus = 0.5 per roll / Max = 4
+      // Crit Rate, Crit Damage Bonus = 5 + 3
+      // HP%, Energy Regen, ATK%(Verina) Bonus = 5 + 3
+      // ATK% Bonus = 3 + 3
+      // ATK, HP, DEF Bonus = 2 + 3
+
+      // Max DPS score = 50
+
       if (dps) {
         dpsBonus = ["Crit. Rate%", "Crit. DMG%"].includes(statName) ? 5 : 0;
-        dpsSubBonus = ["ATK%"].includes(statName) ? 3 : 0;
-        flatBonus = "ATK" === statName ? 2 : 0;
+
+        if ([1303, 1601].includes(selectedCharacterId || 0)) {
+          dpsSubBonus = statName === "DEF%" ? 3 : 0;
+          flatBonus = statName === "DEF" ? 2 : 0;
+        } else {
+          dpsSubBonus = statName === "ATK%" ? 3 : 0;
+          flatBonus = statName === "ATK" ? 2 : 0;
+        }
       } else if (supports.includes(selectedCharacterId || 0)) {
-        supportBonus = ["HP%", "Energy Regen%"].includes(statName) ? 5 : 0;
-        flatBonus = ["HP", "DEF"].includes(statName) ? 2 : 0;
+        if (selectedCharacterId === 1501) {
+          supportBonus = ["ATK%", "Energy Regen%"].includes(statName) ? 5 : 0;
+          flatBonus = ["ATK", "DEF"].includes(statName) ? 2 : 0;
+        } else {
+          supportBonus = ["HP%", "Energy Regen%"].includes(statName) ? 5 : 0;
+          flatBonus = ["HP", "DEF"].includes(statName) ? 2 : 0;
+        }
       }
 
       const statScore = (index + 1) * 0.5;

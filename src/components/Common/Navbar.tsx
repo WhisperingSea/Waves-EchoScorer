@@ -26,8 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
       if (scrollTop > lastScrollTop) {
         // Scrolling down

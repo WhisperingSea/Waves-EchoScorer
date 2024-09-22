@@ -22,6 +22,7 @@ import { CalcSkillProvider } from "./contexts/CalcSkillValueContext.tsx";
 import { CalcSequenceProvider } from "./contexts/CalcSequenceContext.tsx";
 import { ScorerContextProvider } from "./contexts/ScorerContext.tsx";
 import Navbar from "./components/Common/Navbar.tsx";
+import Sidebar from "./components/Common/Sidebar.tsx";
 
 const App = () => {
   // const [activeTab, setActiveTab] = useState<number>(1);
@@ -45,6 +46,7 @@ const App = () => {
                           <ScorerContextProvider>
                             <Router>
                               <Navbar />
+                              <Sidebar />
                               <Routes>
                                 <Route path="/" element={<Home />} />
                                 <Route

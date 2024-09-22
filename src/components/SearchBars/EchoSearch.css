@@ -5,17 +5,20 @@
     margin: 30px 0;
 }
 
+.search-input {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
 .echo-search {
-    display: inline-block;
     background-color: rgba(0, 0, 0, 0.5);
     color: azure;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    height: 36px;
-    width: 91%;
     border-radius: 8px;
+    width: 100%;
+    height: 36px;
     border: 1px solid azure;
     font-size: 1rem;
     padding-left: 10px;
@@ -24,14 +27,19 @@
 
 .sonata-btn {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px 12px;
-    font-size: 1.1rem;
-    font-weight: 700;
+    padding: 4px 12px;
     text-align: center;
     border: 1px solid azure;
     border-radius: 8px;
     cursor: pointer;
     color: azure;
+    font-size: 0;
+}
+
+.sonata-btn-img {
+    width: 30px;
+    height: auto;
+    object-fit: contain;
 }
 
 .sonata-btn:hover {

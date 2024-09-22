@@ -93,7 +93,10 @@ export const SearchBar: React.FC = () => {
         </div>
         <div className="filter-2">
           <div className="inline-flex">
-            <button className="wep-btn" onClick={() => handleWeaponFilter("")}>
+            <button
+              className="wep-btn display-none"
+              onClick={() => handleWeaponFilter("")}
+            >
               All
             </button>
             <button

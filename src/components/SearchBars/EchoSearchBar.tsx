@@ -43,31 +43,58 @@ const EchoSearchBar: React.FC = () => {
           />
         </div>
         <button className="sonata-btn" onClick={() => handleEchoGroupFilter(1)}>
-          <span className="Glacio">Freezing Frost</span>
+          <img
+            className="sonata-btn-img"
+            src={WWSonataData.find((img) => img.id === 1)?.img}
+          />
         </button>
         <button className="sonata-btn" onClick={() => handleEchoGroupFilter(2)}>
-          <span className="Fusion">Molten Rift</span>
+          <img
+            className="sonata-btn-img"
+            src={WWSonataData.find((img) => img.id === 2)?.img}
+          />
         </button>
         <button className="sonata-btn" onClick={() => handleEchoGroupFilter(3)}>
-          <span className="Electro">Void Thunder</span>
+          <img
+            className="sonata-btn-img"
+            src={WWSonataData.find((img) => img.id === 3)?.img}
+          />
         </button>
         <button className="sonata-btn" onClick={() => handleEchoGroupFilter(4)}>
-          <span className="Aero">Sierra Gale</span>
+          <img
+            className="sonata-btn-img"
+            src={WWSonataData.find((img) => img.id === 4)?.img}
+          />
         </button>
         <button className="sonata-btn" onClick={() => handleEchoGroupFilter(5)}>
-          <span className="Spectro">Celestial Light</span>
+          <img
+            className="sonata-btn-img"
+            src={WWSonataData.find((img) => img.id === 5)?.img}
+          />
         </button>
         <button className="sonata-btn" onClick={() => handleEchoGroupFilter(6)}>
-          <span className="Havoc">Sun-Sinking Eclipse</span>
+          <img
+            className="sonata-btn-img"
+            src={WWSonataData.find((img) => img.id === 6)?.img}
+          />
         </button>
         <button className="sonata-btn" onClick={() => handleEchoGroupFilter(7)}>
-          <span className="Healing">Rejuvenating Glow</span>
+          <img
+            className="sonata-btn-img"
+            src={WWSonataData.find((img) => img.id === 7)?.img}
+          />
         </button>
         <button className="sonata-btn" onClick={() => handleEchoGroupFilter(8)}>
-          <span className="Energy">Moonlit Clouds</span>
+          <img
+            className="sonata-btn-img"
+            src={WWSonataData.find((img) => img.id === 8)?.img}
+          />
         </button>
         <button className="sonata-btn" onClick={() => handleEchoGroupFilter(9)}>
-          <span className="Strength">Lingering Tunes</span>
+          <img
+            className="sonata-btn-img"
+            src={WWSonataData.find((img) => img.id === 9)?.img}
+          />
         </button>
         <div className="sonata-effect">
           <h3>2-Piece: {sonata2}</h3>

@@ -1,28 +1,30 @@
 .sidebar-container {
+    width: 100%;
     position: relative;
+    z-index: 1000;
 }
 
 .sidebar-icon-box {
     display: flex;
-    border: 1px solid azure;
+    background-color: black;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 8px;
     border-left: none;
-    padding: 0 5px;
-}
-
-.sidebar-icon-box h3 {
-    margin: 0;
+    height: 35px;
     padding: 0 5px;
 }
 
 .sidebar-link {
-    font-size: 1.5rem;
-    padding: 20px;
+    font-size: 1rem;
+    padding: 10px;
     padding-left: 40px;
     color: azure;
     text-decoration: none;
     cursor: pointer;
+}
+
+.active-navTab .sidebar-link {
+    background-color: #666;
 }
 
 .sidebar-link:hover {
@@ -34,19 +36,25 @@
     height: 30px;
     object-fit: contain;
     border-radius: 4px;
+    margin-right: 5px;
     cursor: pointer;
 }
 
 .sidebar-list {
-    height: 100%;
-    width: 40%;
+    height: 100vh;
+    width: 100%;
     background-color: rgba(17, 17, 17, 0.897);
     position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 12px 0 0 12px;
+    z-index: 1000;
+}
+
+@media (min-width: 768px) {
+    .sidebar-container {
+        display: none;
+    }
 }

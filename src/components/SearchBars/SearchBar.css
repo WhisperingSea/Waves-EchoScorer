@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 1fr 1fr;
-    gap: 15px;
+    gap: 5px;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -14,10 +14,8 @@
 .search{
     background-color: transparent;
     color: azure;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column: 1 / 5;
+    grid-row: 1/ 2;
     height: 34px;
     border-radius: 8px;
     border: 1px solid azure;
@@ -31,17 +29,13 @@
 }
 
 .filter-1 {
-    grid-column-start: 5;
-    grid-column-end: 13;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column: 5 / 13;
+    grid-row: 1 / 2
 }
 
 .filter-2 {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
 }
 
 .inline-flex {
@@ -76,11 +70,101 @@
     text-align: center;
     border: 1px solid azure;
     border-radius: 8px;
-    margin: 5px;
+    margin: 2px 5px;
     cursor: pointer;
     color: azure;
 }
 
 .wep-btn:hover {
     background-color: rgba(153, 148, 148, 0.404);
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .search-bar {
+        margin-bottom: 30px;
+    }
+
+    .search-bar-grid {
+        grid-template-rows: 38px 1fr;
+    }
+
+    .ele-btn {
+        margin: auto 2px;
+    }
+
+    .wep-btn {
+        margin: 2px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 481px) {
+    .search-bar {
+        margin-bottom: 20px;
+    }
+
+    .search-bar-grid {
+        grid-template-rows: 38px 1fr;
+    }
+
+    .ele-btn {
+        margin: auto 2px;
+    }
+
+    .ele-btn img {
+        width: 20px;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .wep-btn {
+        padding: 6px 6px;
+        margin: 2px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .search-bar {
+        margin-bottom: 20px;
+    }
+
+    .search-bar-grid {
+        grid-template-rows: 35px 35px max-content;
+    }
+
+    .search {
+        grid-column: 1 / 13;
+    }
+
+    .filter-1 {
+        grid-column: 1 / 13;
+        grid-row: 2 / 3
+    }
+
+    .filter-2 {
+        grid-column: 1 / 13;
+        grid-row: 3 / 4;
+    }
+
+    .inline-flex {
+        flex-wrap: wrap;
+    }
+
+    .ele-btn {
+        margin: auto 2px;
+    }
+
+    .ele-btn img {
+        width: 20px;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .wep-btn {
+        padding: 6px 6px;
+        margin: 2px;
+    }
 }

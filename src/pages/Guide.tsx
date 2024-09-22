@@ -128,7 +128,7 @@ const Guide: React.FC = () => {
                       <span className="slider round"></span>
                     </label>
                   </div>
-                  <div>
+                  <div className="guide-grid-item-0">
                     <WWStats Level={level} isChecked={isSwitched} />
                   </div>
                 </div>

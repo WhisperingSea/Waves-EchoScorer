@@ -83,6 +83,10 @@
     flex-grow: 8;
 }
 
+.guide-grid-item-0 {
+    font-size: 20px;
+}
+
 .guide-grid-item-2 {
     grid-column-start: 1;
     grid-column-end: 9;

@@ -22,7 +22,7 @@
 }
 
 .chara-page-section {
-    height: 600px;
+    height: max-content;
     margin: 10px 60px;
 }
 
@@ -43,11 +43,73 @@
 }
 
 .right-flex {
-    margin:  auto;
+    margin: auto;
     flex: 50%;
     text-align: left;
 }
 
 .chara-cards {
     margin: auto 60;
+}
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .container-chara-page {
+        margin-top: 30px;
+    }
+
+    .chara-flexbox {
+        gap: 20px;
+    }
+
+    .chara-page-section {
+        margin: 10px 30px;
+    }
+
+    .chara-page-section-2 {
+        margin: 10px 30px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .container-chara-page {
+        margin-top: 10px;
+    }
+
+    .chara-flexbox {
+        gap: 10px;
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .chara-page-section {
+        margin: 10px 10px;
+    }
+    
+    .chara-page-section-2 {
+        margin: 10px 10px;
+    }
+
+    .chara-cards {
+        margin: auto 10px;
+    }
+
+    .left-flex {
+        width: 200px;
+    }
+
+    .right-flex {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .chara-flexbox {
+        gap: 0;
+    }
+
+    .left-flex {
+        width: 150px;
+    }
 }

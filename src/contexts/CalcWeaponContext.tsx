@@ -39,7 +39,7 @@ export const CalcWeaponProvider: React.FC<WeaponContextProvideProps> = ({
     id: 0,
     name: "",
     weaponType: "",
-    level: 1,
+    level: 90,
     rank: 1,
     primaryStat: "",
     primaryStatValue: 0,

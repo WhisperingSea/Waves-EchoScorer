@@ -232,7 +232,7 @@ const EchoScorer: React.FC = () => {
         break;
       case "Electro":
         setEleImg(
-          "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ele/Electro.png"
+          "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ele/Electro_3.png"
         );
         break;
       case "Aero":

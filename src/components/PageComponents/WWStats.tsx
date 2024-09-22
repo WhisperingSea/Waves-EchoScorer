@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { WWCharacterLevelsJSON } from "../../data/WWLevels.ts";
 import { useDataContext } from "../../contexts/CharacterDataContext";
+import "./WWStats.css";
 
 interface StatProps {
   Level: string;
@@ -96,7 +97,7 @@ const WWStats: React.FC<StatProps> = ({ Level, isChecked }) => {
   return (
     <>
       <div className="stats-grid">
-        <h2>
+        <h2 className="stat-grid-stats">
           HP:{" "}
           {chara && levels
             ? Math.round(
@@ -104,7 +105,7 @@ const WWStats: React.FC<StatProps> = ({ Level, isChecked }) => {
               )
             : "N/A"}
         </h2>
-        <h2>
+        <h2 className="stat-grid-stats">
           ATK:{" "}
           {chara && levels
             ? Math.round(
@@ -112,7 +113,7 @@ const WWStats: React.FC<StatProps> = ({ Level, isChecked }) => {
               )
             : "N/A"}
         </h2>
-        <h2>
+        <h2 className="stat-grid-stats">
           DEF:{" "}
           {chara && levels
             ? Math.round(
@@ -120,19 +121,21 @@ const WWStats: React.FC<StatProps> = ({ Level, isChecked }) => {
               )
             : "N/A"}
         </h2>
-        <h2>Max Energy: {chara?.stats.max_energy}</h2>
-        <h2>
+        <h2 className="stat-grid-stats">
+          Max Energy: {chara?.stats.max_energy}
+        </h2>
+        <h2 className="stat-grid-stats">
           Crit. Rate: {chara ? `${chara.stats.base_crit + bonusCrit}%` : "N/A"}
         </h2>
-        <h2>
+        <h2 className="stat-grid-stats">
           Crit. Damage:{" "}
           {chara ? `${chara.stats.base_critdmg + bonusCritDmg}%` : "N/A"}
         </h2>
-        <h2>
+        <h2 className="stat-grid-stats">
           Healing Bonus:{" "}
           {chara ? `${chara.stats.base_healing + bonusHeal}%` : "N/A"}
         </h2>
-        <h2>
+        <h2 className="stat-grid-stats">
           {chara?.element} Bonus: {chara ? `${bonusEle}%` : "N/A"}
         </h2>
       </div>

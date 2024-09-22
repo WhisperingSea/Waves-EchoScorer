@@ -114,7 +114,7 @@ const WeaponModal: React.FC<WeaponFeaturesModalProps> = ({
     if (selectedWeapon !== weaponStats.id) {
       setWeaponStats((prev) => ({
         ...prev,
-        level: 1,
+        level: 90,
         rank: 1,
       }));
     }

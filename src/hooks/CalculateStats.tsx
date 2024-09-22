@@ -311,7 +311,7 @@ export function DefenseCalc() {
 
   const weaponDefPercent =
     weaponStats.secondaryStat === "DEF"
-      ? weaponStats.secondaryStatValue || 0
+      ? Math.floor(weaponStats.secondaryStatValue * 10) / 10 / 100 || 0
       : 0;
   const forteDef =
     forteStats.stat1 === "DEF"
