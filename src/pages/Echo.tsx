@@ -26,55 +26,61 @@ const Echoes: React.FC = () => {
               <table>
                 <thead>
                   <tr>
-                    <th>Rarity</th>
-                    <th>ATK(Default)</th>
-                    <th>ATK%</th>
-                    <th>HP%</th>
-                    <th>DEF%</th>
-                    <th>Crit. Rate%</th>
-                    <th>Crit. Damage%</th>
-                    <th>Healing Bonus%</th>
+                    <th>Stat</th>
+                    <th>2 Star</th>
+                    <th>3 Star</th>
+                    <th>4 Star</th>
+                    <th>5 Star</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>2 Star:</td>
+                    <td>ATK (Default)</td>
                     <td>18 - 46</td>
-                    <td>4.1% - 10.6%</td>
-                    <td>4.1% - 10.6%</td>
-                    <td>5.2% - 13.5%</td>
-                    <td>2.7% - 7.1%</td>
-                    <td>?? - 14.3%</td>
-                    <td>?? - 8.5</td>
-                  </tr>
-                  <tr>
-                    <td>3 Star:</td>
                     <td>20 - 68</td>
-                    <td>4.3% - 14.6%</td>
-                    <td>4.3% - 14.6%</td>
-                    <td>5.5% - 18.7%</td>
-                    <td>2.9% - 9.8%</td>
-                    <td> 5.8% - 19.7%</td>
-                    <td> 3.5% - 11.9%</td>
-                  </tr>
-                  <tr>
-                    <td>4 Star:</td>
                     <td>22 - 92</td>
-                    <td>4.9% - 20.5%</td>
-                    <td>4.9% - 20.5%</td>
-                    <td>6.2% - 26.0%</td>
-                    <td>3.3% - 13.8%</td>
-                    <td>6.6% - 27.7%</td>
-                    <td>3.9% - 16.3%</td>
+                    <td>30 - 150</td>
                   </tr>
                   <tr>
-                    <td>5 Star</td>
-                    <td>30 - 150</td>
+                    <td>ATK%</td>
+                    <td>4.1% - 10.6%</td>
+                    <td>4.3% - 14.6%</td>
+                    <td>4.9% - 20.5%</td>
                     <td>6.6% - 33.0%</td>
+                  </tr>
+                  <tr>
+                    <td>HP%</td>
+                    <td>4.1% - 10.6%</td>
+                    <td>4.3% - 14.6%</td>
+                    <td>4.9% - 20.5%</td>
                     <td>6.6% - 33.0%</td>
+                  </tr>
+                  <tr>
+                    <td>DEF%</td>
+                    <td>5.2% - 13.5%</td>
+                    <td>5.5% - 18.7%</td>
+                    <td>6.2% - 26.0%</td>
                     <td>8.3% - 41.5%</td>
+                  </tr>
+                  <tr>
+                    <td>Crit. Rate%</td>
+                    <td>2.7% - 7.1%</td>
+                    <td>2.9% - 9.8%</td>
+                    <td>3.3% - 13.8%</td>
                     <td>4.4% - 22.0%</td>
+                  </tr>
+                  <tr>
+                    <td>Crit. Damage%</td>
+                    <td>?? - 14.3%</td>
+                    <td>5.8% - 19.7%</td>
+                    <td>6.6% - 27.7%</td>
                     <td>8.8% - 44.0%</td>
+                  </tr>
+                  <tr>
+                    <td>Healing Bonus%</td>
+                    <td>?? - 8.5</td>
+                    <td>3.5% - 11.9%</td>
+                    <td>3.9% - 16.3%</td>
                     <td>5.2% - 26.0%</td>
                   </tr>
                 </tbody>
@@ -83,50 +89,54 @@ const Echoes: React.FC = () => {
               <table>
                 <thead>
                   <tr>
-                    <th>Rarity</th>
-                    <th>ATK(Default)</th>
-                    <th>ATK%</th>
-                    <th>HP%</th>
-                    <th>DEF%</th>
-                    <th>Element Damage%</th>
-                    <th>Energt Regen%</th>
+                    <th>Stat</th>
+                    <th>2 Star</th>
+                    <th>3 Star</th>
+                    <th>4 Star</th>
+                    <th>5 Star</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>2 Star:</td>
+                    <td>ATK (Default)</td>
                     <td>12 - 31</td>
-                    <td>3.7% - 9.6%</td>
-                    <td>3.7% - 9.6%</td>
-                    <td>4.7% - 12.3%</td>
-                    <td>3.7% - 9.6%</td>
-                    <td>?? - 10%</td>
-                  </tr>
-                  <tr>
-                    <td>3 Star:</td>
                     <td>13 - 44</td>
-                    <td>4.0% - 14.0%</td>
-                    <td>4.0% - 14.0%</td>
-                    <td>5.0% - 17%</td>
-                    <td>4.0% - 14%</td>
-                    <td>4.2% - 14.2%</td>
-                  </tr>
-                  <tr>
-                    <td>4 Star:</td>
                     <td>15 - 63</td>
-                    <td>4.5% - 18.9%</td>
-                    <td>4.5% - 18.9%</td>
-                    <td>5.7% - 23.9%</td>
-                    <td>4.5% - 18.9%</td>
-                    <td>4.8% - 20.1%</td>
+                    <td>20 - 100</td>
                   </tr>
                   <tr>
-                    <td>5 Star:</td>
-                    <td>20 - 100</td>
+                    <td>ATK%</td>
+                    <td>3.7% - 9.6%</td>
+                    <td>4.0% - 14.0%</td>
+                    <td>4.5% - 18.9%</td>
                     <td>6.0% - 30%</td>
+                  </tr>
+                  <tr>
+                    <td>HP%</td>
+                    <td>3.7% - 9.6%</td>
+                    <td>4.0% - 14.0%</td>
+                    <td>4.5% - 18.9%</td>
                     <td>6.0% - 30%</td>
+                  </tr>
+                  <tr>
+                    <td>DEF%</td>
+                    <td>4.7% - 12.3%</td>
+                    <td>5.0% - 17%</td>
+                    <td>5.7% - 23.9%</td>
                     <td>7.6% - 38%</td>
+                  </tr>
+                  <tr>
+                    <td>Element Damage%</td>
+                    <td>3.7% - 9.6%</td>
+                    <td>4.0% - 14%</td>
+                    <td>4.5% - 18.9%</td>
                     <td>6.0% - 30%</td>
+                  </tr>
+                  <tr>
+                    <td>Energy Regen%</td>
+                    <td>?? - 10%</td>
+                    <td>4.2% - 14.2%</td>
+                    <td>4.8% - 20.1%</td>
                     <td>6.4% - 32.0%</td>
                   </tr>
                 </tbody>
@@ -135,40 +145,40 @@ const Echoes: React.FC = () => {
               <table>
                 <thead>
                   <tr>
-                    <th>Rarity</th>
-                    <th>HP(Default)</th>
-                    <th>ATK%</th>
-                    <th>HP%</th>
-                    <th>DEF%</th>
+                    <th>Stat</th>
+                    <th>2 Star</th>
+                    <th>3 Star</th>
+                    <th>4 Star</th>
+                    <th>5 Star</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>2 Star:</td>
+                    <td>HP (Default)</td>
                     <td>114 - 296</td>
-                    <td>2.2% - 5.7%</td>
-                    <td>2.8% - 7.2%</td>
-                    <td>2.2% - 5.7%</td>
-                  </tr>
-                  <tr>
-                    <td>3 Star:</td>
                     <td>152 - 516</td>
-                    <td>2.4% - 8.1%</td>
-                    <td>3.0% - 10.20%</td>
-                    <td>2.4% - 8.1%</td>
-                  </tr>
-                  <tr>
-                    <td>4 Star:</td>
                     <td>228 - 957</td>
-                    <td>2.7% - 11.3%</td>
-                    <td>3.4% - 14.2%</td>
-                    <td>2.7% - 11.3%</td>
+                    <td>456 - 2280</td>
                   </tr>
                   <tr>
-                    <td>5 Star:</td>
-                    <td>456 - 2280</td>
+                    <td>ATK%</td>
+                    <td>2.2% - 5.7%</td>
+                    <td>2.4% - 8.1%</td>
+                    <td>2.7% - 11.3%</td>
                     <td>3.6% - 18.0%</td>
+                  </tr>
+                  <tr>
+                    <td>HP%</td>
+                    <td>2.8% - 7.2%</td>
+                    <td>3.0% - 10.2%</td>
+                    <td>3.4% - 14.2%</td>
                     <td>4.5% - 22.8%</td>
+                  </tr>
+                  <tr>
+                    <td>DEF%</td>
+                    <td>2.2% - 5.7%</td>
+                    <td>2.4% - 8.1%</td>
+                    <td>2.7% - 11.3%</td>
                     <td>3.6% - 18.0%</td>
                   </tr>
                 </tbody>

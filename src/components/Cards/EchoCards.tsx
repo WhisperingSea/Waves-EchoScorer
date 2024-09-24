@@ -6,7 +6,6 @@ const EchoCard: React.FC = () => {
   const { filteredEchoes, selectedEchoRarity } = useSearchFilter();
   const [style, setStyle] = useState<React.CSSProperties>({
     display: "flex",
-    padding: "25px 25px",
     borderRadius: "12px",
     border: "1px solid azure",
     gap: "10px",

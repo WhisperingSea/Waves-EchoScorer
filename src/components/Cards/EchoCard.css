@@ -5,6 +5,10 @@
     gap: 10px;
 }
 
+.echo-card {
+    padding: 25px 25px
+}
+
 .echo-card img {
     width: 120px;
     height: auto;
@@ -19,7 +23,7 @@
     margin-left: 20px;
 }
 
-.echo-card-bottom p {
+.echo-cost {
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -27,6 +31,7 @@
 .echo-name {
     font-size: 24px;
     text-decoration: underline;
+    margin: 5px 0;
 }
 
 .echo-skill {
@@ -38,11 +43,12 @@
     text-align: center;
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1024px) and (min-width: 320px) {
     .echo-card {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 5px;
     }
 
     .echo-card img {
@@ -51,5 +57,47 @@
 
     .echo-card-bottom {
         margin-left: 0;
+    }
+
+    .echo-name {
+        font-size: 22px;
+    }
+
+    .echo-cost {
+        font-size: 20px;
+    }
+
+    .echo-skill {
+        font-size: 18px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .echo-skill {
+        font-size: 16px;
+    }
+
+    td, th {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .echo-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .echo-card {
+        padding: 10px;
+    }
+
+    .echo-name {
+        font-size: 20px;
+    }
+
+    .echo-cost {
+        font-size: 18px;
+        margin: 0;
     }
 }

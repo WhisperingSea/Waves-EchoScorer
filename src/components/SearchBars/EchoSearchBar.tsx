@@ -97,8 +97,8 @@ const EchoSearchBar: React.FC = () => {
           />
         </button>
         <div className="sonata-effect">
-          <h3>2-Piece: {sonata2}</h3>
-          <h3>5-Piece: {sonata5}</h3>
+          <h3 className="sonata-effect-text">2-Piece: {sonata2}</h3>
+          <h3 className="sonata-effect-text">5-Piece: {sonata5}</h3>
         </div>
         <div className="dropdown">
           <span>Cost: {selectedEchoCost}</span>
