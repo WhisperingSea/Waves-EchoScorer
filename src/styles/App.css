@@ -94,9 +94,25 @@
     }
 }
 
+@media (max-width: 7670px) and (min-width: 320px) {
+    .Title {
+        margin: 10px 0;
+        font-size: 22px;
+    }
+}
+
 @media (max-width: 480px) and (min-width: 320px) {
     .heading-2 {
         font-size: 22px;
         margin: 5px 10px;
+    }
+
+    .paragraph {
+        font-size: 16px;
+    }
+
+    .Title {
+        margin: 10px 0;
+        font-size: 20px;
     }
 }

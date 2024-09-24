@@ -95,7 +95,7 @@ const Guide: React.FC = () => {
             <section className="guide-section">
               <div className="guide-grid">
                 <div className="guide-grid-item-1 grid-item-1-flex">
-                  <h1>{chara?.name}</h1>
+                  <h1 className="guide-chara-name">{chara?.name}</h1>
                   <p className={`paragraph guide-paragraph ${chara?.element}`}>
                     {chara?.element}
                   </p>
@@ -165,13 +165,13 @@ const Guide: React.FC = () => {
                 <h2 className="center-header">Ascension Materials</h2>
                 <div className="mat-flexbox">
                   <div className="chara-mat-box">
-                    <h2>Character Ascension Mats</h2>
+                    <h2 className="chara-mat-type">Character Ascension Mats</h2>
                     {chara &&
                       chara.asension &&
                       chara.asension.charaAsension &&
                       chara.asension.charaAsension.map((item, index) => (
                         <div key={index}>
-                          <ul>
+                          <ul className="chara-ascension-list">
                             <li className="mat-item">
                               {item.item} x<b>{item.value}</b>
                             </li>
@@ -180,13 +180,13 @@ const Guide: React.FC = () => {
                       ))}
                   </div>
                   <div className="forte-mat-box">
-                    <h2>Forte Ascension Mats</h2>
+                    <h2 className="chara-mat-type">Forte Ascension Mats</h2>
                     {chara &&
                       chara.asension &&
                       chara.asension.forteAsension &&
                       chara.asension.forteAsension.map((item, index) => (
                         <div key={index}>
-                          <ul>
+                          <ul className="chara-ascension-list">
                             <li className="mat-item">
                               {item.item} x<b>{item.value}</b>
                             </li>
