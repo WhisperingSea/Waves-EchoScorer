@@ -321,7 +321,7 @@ const EchoScorer: React.FC = () => {
                     }
                   />
                 </div>
-                {imageUrl && !isEditing && (
+                {!isEditing && (
                   <div className="scorer-item-resonance">
                     <ScorerResonance />
                   </div>

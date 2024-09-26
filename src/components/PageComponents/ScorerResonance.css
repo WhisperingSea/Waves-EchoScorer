@@ -54,15 +54,15 @@
     height: 2rem;
     border-radius: 50%;
     border: 1px solid #868686;
-    background-color: #000000;
-    color: rgb(138, 138, 138);
+    background-color: #1c76ca;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
 .active-R {
     border: 1px solid azure;
     color: #ffffff;
-    box-shadow: 0 0 15px rgba(255, 251, 0, 0.6),
-                0 0 30px rgba(209, 206, 0, 0.4),
-                0 0 45px rgba(141, 139, 0, 0.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+                0 0 30px rgba(255, 255, 255, 0.4),
+                0 0 45px rgba(0, 141, 134, 0.2);
 }

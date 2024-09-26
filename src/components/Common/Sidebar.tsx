@@ -41,12 +41,9 @@ const Sidebar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      console.log("Scroll Top:", scrollTop);
       if (scrollTop > lastScrollTop.current) {
-        // Scrolling down
         setIsNavbarVisible(false);
       } else {
-        // Scrolling up
         setIsNavbarVisible(true);
       }
       lastScrollTop.current = scrollTop <= 0 ? 0 : scrollTop;
@@ -54,17 +51,13 @@ const Sidebar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
 
     const handleTouchStart = (event: TouchEvent) => {
       touchStartY.current = event.touches[0].clientY;
-      console.log("Touch Start Y:", touchStartY.current);
     };
 
     const handleTouchEnd = (event: TouchEvent) => {
       const touchEndY = event.changedTouches[0].clientY;
-      console.log("Touch End Y:", touchEndY);
       if (touchEndY < touchStartY.current) {
-        // Swiping up
         setIsNavbarVisible(true);
       } else {
-        // Swiping down
         setIsNavbarVisible(false);
       }
     };
