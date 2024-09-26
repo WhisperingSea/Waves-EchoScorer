@@ -13,6 +13,7 @@ type RarityType = {
 
 type RarityTypeB = {
   [key: number]: {
+    padding: string;
     border: string;
   };
 };
@@ -68,18 +69,23 @@ const WeaponInfo: React.FC = () => {
 
   const rarityB: RarityTypeB = {
     1: {
+      padding: "5px",
       border: "2px solid rgba(138,138,138,1)",
     },
     2: {
+      padding: "5px",
       border: "2px solid rgba(48,231,78,1)",
     },
     3: {
+      padding: "5px",
       border: "2px solid rgba(33,190,222,1)",
     },
     4: {
+      padding: "5px",
       border: "2px solid rgba(201,48,231,1)",
     },
     5: {
+      padding: "5px",
       border: "2px solid rgba(231,198,48,1)",
     },
   };
@@ -113,95 +119,93 @@ const WeaponInfo: React.FC = () => {
   return (
     <>
       <div className="weapon-info-page-container">
-        <div className="weapon-info-page-bg">
-          <main>
-            <section className="weapon-info-page-section">
-              <div className="weapon-info-grid">
-                <div className="weapon-info-grid-item-1">
-                  <div
-                    className="weapon-info-img-box"
+        <div className="weapon-info-page-bg"></div>
+        <main>
+          <section className="weapon-info-page-section">
+            <div className="weapon-info-flex">
+              <div className="weapon-info-grid-item-1">
+                <div className="weapon-info-img-box">
+                  <img
+                    src={weapon?.img}
+                    alt={`${weapon?.name} icon`}
                     style={{
                       ...(rarityB[weapon?.rarity ?? 0] || {}),
                     }}
-                  >
-                    <img src={weapon?.img} alt={`${weapon?.name} icon`} />
-                  </div>
-                </div>
-                <div
-                  className="weapon-info-grid-item-2"
-                  style={{
-                    ...(rarityC[weapon?.rarity ?? 0] || {}),
-                  }}
-                >
-                  <h2>{weapon?.name}</h2>
-                </div>
-                <div className="weapon-info-grid-item-3 weapon-info-flex">
-                  <div className="weapon-info-flex-2">
-                    <h3>Level:</h3>
-                    <input
-                      className="weapon-input"
-                      id="weapon-level"
-                      type="range"
-                      min={1}
-                      max={90}
-                      defaultValue={1}
-                      onChange={handleLevelInput}
-                    />
-                    <h3>{level}</h3>
-                  </div>
-                  <div className="divider">|</div>
-                  <div className="weapon-info-flex-2">
-                    <h3>Rank</h3>
-                    <input
-                      className="weapon-input"
-                      id="weapon-reine"
-                      type="range"
-                      min={1}
-                      max={5}
-                      defaultValue={1}
-                      onChange={handleRankInput}
-                    />
-                    <h3>{rank}</h3>
-                  </div>
-                </div>
-                <div className="weapon-info-grid-item-4">
-                  <div className="weapon-info-flex">
-                    <div className="weapon-info-flex-2">
-                      <h3>{weapon?.statPrimary}:</h3>
-                      <h3>
-                        {weapon && levels
-                          ? Math.floor(
-                              weapon?.statPrimaryValue *
-                                (levels?.weapon_multi / 10000)
-                            )
-                          : "N/A"}
-                      </h3>
-                    </div>
-                    <div className="divider">|</div>
-                    <div className="weapon-info-flex-2">
-                      <h3>{weapon?.statSecondary}:</h3>
-                      <h3>
-                        {weapon && levels
-                          ? (
-                              weapon.statSecondaryValue *
-                              (levels.weapon_multi2 / 10000)
-                            ).toFixed(2)
-                          : "N/A"}
-                        %
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-                <div className="weapon-info-grid-item-5">
-                  <p dangerouslySetInnerHTML={{ __html: formattedDesc }}></p>
+                  />
                 </div>
               </div>
-            </section>
-          </main>
-          <footer>
-            <Footer />
-          </footer>
-        </div>
+              <div
+                className="weapon-info-grid-item-2"
+                style={{
+                  ...(rarityC[weapon?.rarity ?? 0] || {}),
+                }}
+              >
+                <h2>{weapon?.name}</h2>
+              </div>
+              <div className="weapon-info-flex-item-3">
+                <div className="weapon-info-flex-2">
+                  <h3>Level:</h3>
+                  <input
+                    className="weapon-input"
+                    id="weapon-level"
+                    type="range"
+                    min={1}
+                    max={90}
+                    defaultValue={1}
+                    onChange={handleLevelInput}
+                  />
+                  <h3>{level}</h3>
+                </div>
+                <div className="divider">|</div>
+                <div className="weapon-info-flex-2">
+                  <h3>Rank</h3>
+                  <input
+                    className="weapon-input"
+                    id="weapon-reine"
+                    type="range"
+                    min={1}
+                    max={5}
+                    defaultValue={1}
+                    onChange={handleRankInput}
+                  />
+                  <h3>{rank}</h3>
+                </div>
+              </div>
+              <div className="weapon-info-flex-item-4">
+                <div className="weapon-info-flex-2">
+                  <h3>{weapon?.statPrimary}:</h3>
+                  <h3>
+                    {weapon && levels
+                      ? Math.floor(
+                          weapon?.statPrimaryValue *
+                            (levels?.weapon_multi / 10000)
+                        )
+                      : "N/A"}
+                  </h3>
+                </div>
+                <div className="divider">|</div>
+                <div className="weapon-info-flex-2">
+                  <h3>{weapon?.statSecondary}:</h3>
+                  <h3>
+                    {weapon && levels
+                      ? (
+                          weapon.statSecondaryValue *
+                          (levels.weapon_multi2 / 10000)
+                        ).toFixed(2)
+                      : "N/A"}
+                    %
+                  </h3>
+                </div>
+              </div>
+              <div className="weapon-info-grid-item-5">
+                <p dangerouslySetInnerHTML={{ __html: formattedDesc }}></p>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   );

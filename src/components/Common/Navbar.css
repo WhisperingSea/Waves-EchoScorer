@@ -1,4 +1,25 @@
-.navbar-warpper {
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    background-color: black;
+}
+
+.navbar-wrapper-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1356px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    background-color: black;
+}
+
+.echo-scorer-nav {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -96,11 +117,7 @@
 }
 
 @media (max-width: 767px){
-    .navbar-warpper {
-        display: none;
-    }
-    
-    .navbar {
+    .navbar-wrapper {
         display: none;
     }
 }

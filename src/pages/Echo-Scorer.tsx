@@ -258,7 +258,6 @@ const EchoScorer: React.FC = () => {
         <div className="scorer-background"></div>
         <main>
           <section className="echo-scorer-section">
-            <div></div>
             <div className="scorer-item-1">
               <ScorerBar
                 isLoading={isLoading}

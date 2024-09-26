@@ -1,19 +1,18 @@
 .weapon-info-page-container {
     max-width: 1440px;
     margin: auto;
-    position: relative;
     z-index: 1;
-    min-height: 100vh;
+    overflow: auto;
 }
 
 .weapon-info-page-bg {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url("https://sohansc13.github.io/wuthering-waves-assets/images/Bg-1.jpg");
     background-size: cover;
     background-position: bottom left;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     position: fixed;
     top: 0;
     left: 0;
@@ -22,22 +21,15 @@
 
 .weapon-info-page-section {
     margin: 60px;
-    margin-top: 90px;
-}
-
-.weapon-info-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 15px;
-
 }
 
 .weapon-info-flex {
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid azure;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+
 }
 
 .weapon-info-flex-2 {
@@ -64,7 +56,7 @@
 }
 
 .weapon-info-grid-item-1 img {
-    width: 100%;
+    width: 150px;
     object-fit: contain;
     border-radius: 12px;
 }
@@ -84,25 +76,69 @@
     font-size: 1.7rem;
 }
 
-.weapon-info-grid-item-3 {
-    grid-column: 5 / 13;
-    grid-row: 2 / 3;
+.weapon-info-flex-item-3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weapon-info-flex-item-4 {
+    display: flex;
+    justify-content: space-between;
 }
 
 .weapon-input {
     width: 55%;
 }
 
-.weapon-info-grid-item-4 {
-    grid-column: 5 / 13;
-    grid-row: 3 / 4;
-}
-
 .weapon-info-grid-item-5 {
     grid-column: 5 / 13;
-    grid-row: 4 / 6;
+    grid-row: 4 / 5;
 }
 
 .weapon-info-grid-item-5 p {
     font-size: 1.3rem;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .weapon-info-page-section {
+        margin: 30px;
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .weapon-info-flex-2 h3 {
+        font-size: 18px;
+    }
+    
+    .weapon-info-grid-item-5 p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .weapon-info-page-section {
+        margin: 30px 10px;
+        margin-top: 60px;
+    }
+
+    .weapon-info-flex-item-3 {
+        flex-direction: column;
+    }
+
+    .weapon-info-flex-item-4 {
+        flex-direction: column;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .weapon-info-flex-2 h3 {
+        font-size: 16px;
+    }
+    
+    .weapon-info-grid-item-5 p {
+        font-size: 16px;
+    }
 }

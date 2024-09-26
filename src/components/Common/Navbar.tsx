@@ -12,6 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
   const [active, setActive] = useState<number>(activeTab);
   const [isNavbarVisible, setIsNavbarVisible] = useState<boolean>(true);
   let lastScrollTop = 0;
+  const [scorerPath, setScorerPath] = useState<boolean>(false);
 
   const handleActiveNav = (tab: number) => {
     setActive(tab);
@@ -29,13 +30,11 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
       if (scrollTop > lastScrollTop) {
-        // Scrolling down
         setIsNavbarVisible(false);
       } else {
-        // Scrolling up
         setIsNavbarVisible(true);
       }
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -49,11 +48,13 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
     else if (path.startsWith("/echoes")) setActive(3);
     else if (path.startsWith("/weapons")) setActive(4);
     else if (path.startsWith("/echo-scorer")) setActive(5);
+
+    if (path.startsWith("/echo-scorer")) setScorerPath(true);
   }, [location.pathname]);
 
   return (
     <div
-      className={`navbar-warpper ${
+      className={`${scorerPath ? "navbar-wrapper-2" : "navbar-wrapper"} ${
         isNavbarVisible ? "navbar-visible" : "navbar-hidden"
       }`}
     >

@@ -3,6 +3,7 @@ import "../styles/Home.css";
 import { useDataContext } from "../contexts/CharacterDataContext.tsx";
 import Footer from "../components/Common/Footer.tsx";
 import FeaturesModal from "../components/Modals/FeaturesModal.tsx";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   const { characters } = useDataContext();
@@ -39,38 +40,45 @@ const Home: React.FC = () => {
             </div>
             <div className="sub-header">
               <h2 className="heading-2">What's new?</h2>
-              <article className="card-guide">
-                <img
-                  className="card-guide-image"
-                  src={chara?.images.portrait}
-                  alt={`${chara?.name} image`}
-                />
-                <h2 className={`heading-2 ${chara?.element}`}>
-                  <a className="chara-name">{chara?.name}</a>
-                </h2>
-                <p className="paragraph">{chara?.bio}</p>
-                <div className="flexbox-card-guide">
-                  <p className="paragraph">Element: </p>
+              <div className="card-guide-grid">
+                <div className="card-guide-info">
+                  <h2 className={`heading-2 ${chara?.element}`}>
+                    <a className="chara-name">{chara?.name}</a>
+                  </h2>
+                  <p className="paragraph">{chara?.bio}</p>
+                  <div className="flexbox-card-guide">
+                    <p className="paragraph">Element: </p>
+                    <p className={`paragraph ${chara?.element}`}>
+                      {" "}
+                      {chara?.element}
+                    </p>
+                  </div>
+                  <div className="flexbox-card-guide">
+                    <p className="paragraph">Weapon:</p>
+                    <p className={`paragraph ${chara?.element}`}>
+                      {chara?.weapon}
+                    </p>
+                  </div>
                   <p className={`paragraph ${chara?.element}`}>
-                    {" "}
-                    {chara?.element}
+                    {chara?.rarity.alt} Resonator
                   </p>
+                  <div className="guide-link">
+                    <Link
+                      className="guide-link-text"
+                      to={`/echo-scorer/${chara?.name}`}
+                    >
+                      Click here to go to Scorer
+                    </Link>
+                  </div>
                 </div>
-                <div className="flexbox-card-guide">
-                  <p className="paragraph">Weapon:</p>
-                  <p className={`paragraph ${chara?.element}`}>
-                    {chara?.weapon}
-                  </p>
+                <div className="card-guide-image-box">
+                  <img
+                    className="card-guide-image"
+                    src={chara?.images.portrait}
+                    alt={`${chara?.name} image`}
+                  />
                 </div>
-                <p className={`paragraph ${chara?.element}`}>
-                  {chara?.rarity.alt} Resonator
-                </p>
-                <div className="guide-link">
-                  <a href={`/characters/${chara?.name}`}>
-                    Click here to see the guide
-                  </a>
-                </div>
-              </article>
+              </div>
             </div>
           </section>
           <section className="section">
@@ -105,6 +113,14 @@ const Home: React.FC = () => {
               <div className="damage-calc-home">
                 <div className="home-feature-grid">
                   <div
+                    className="home-feature-grid-item-2"
+                    onClick={openFeatureModal1}
+                  >
+                    <div className="home-feature-grid-item-2-bg"></div>
+                    <div className="home-feature-grid-item-overlay"></div>
+                    <h2 className="header-2">Echo Scorer</h2>
+                  </div>
+                  <div
                     className="home-feature-grid-item-1"
                     aria-disabled={true}
                   >
@@ -112,14 +128,6 @@ const Home: React.FC = () => {
                     <div className="home-feature-grid-item-overlay"></div>
                     <h2 className="header-2">Damage Calculator</h2>
                     <p>(Coming Soon)</p>
-                  </div>
-                  <div
-                    className="home-feature-grid-item-2"
-                    onClick={openFeatureModal1}
-                  >
-                    <div className="home-feature-grid-item-2-bg"></div>
-                    <div className="home-feature-grid-item-overlay"></div>
-                    <h2 className="header-2">Echo Scorer</h2>
                   </div>
                 </div>
               </div>

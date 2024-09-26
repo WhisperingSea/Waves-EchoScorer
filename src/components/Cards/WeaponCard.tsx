@@ -59,7 +59,7 @@ const WeaponCards: React.FC = () => {
                     className="weapon-cards"
                     onClick={() => setSelectedWeapon(item.id)}
                     style={{
-                      ...(rarityBG[item.rarity] || {}), // Use 10 as the radix for parseInt and add default empty object
+                      ...(rarityBG[item.rarity] || {}),
                     }}
                   >
                     <div className="weapon-card-top">
@@ -67,7 +67,7 @@ const WeaponCards: React.FC = () => {
                     </div>
                     <div className="weapon-card-bottom">
                       <div className="weapon-name">
-                        <h3 className="">{item.name}</h3>
+                        <h3 className="weapon-name-text">{item.name}</h3>
                       </div>
                     </div>
                   </div>

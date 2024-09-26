@@ -42,16 +42,16 @@
 .weapon-card-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    gap: 15px;
+    gap: 10px;
 }
 
 .weapon-cards {
     display: flex;
-    padding: 25px 25px;
+    flex-direction: column;
+    padding: 15px;
+    height: 100%;
     border-radius: 12px;
     border: 1px solid azure;
-    flex-direction: column;
 }
 
 .weapon-cards:hover {
@@ -59,8 +59,13 @@
     cursor: pointer;
 }
 
+.weapon-card-top {
+    text-align: center;
+    font-size: 0;
+}
+
 .weapon-cards img {
-    width: 100%;
+    width: 100px;
     height: auto;
     object-fit: contain;
     border-radius: 50%;
@@ -68,17 +73,100 @@
 }
 
 .weapon-card-bottom {
-    font-size: 20px;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    height: 60px;
+}
+
+.weapon-name-text {
+    font-size: 18px;
+    margin: 10px 0;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-align: center;
 }
 
-.weapon-card-bottom h3 {
-    max-width: 220px;
-    height: 2.5rem;
+.card-link {
+    display: block;
+    text-decoration: none;
 }
 
 .No-Match {
     grid-column: span 5;
     text-align: center;
+}
+
+@media (max-width: 1024px) and (min-width: 320px) {
+    .weapon-card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .weapon-name-text {
+        min-width: 110px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .weapon-page-section {
+        margin: 0 30px;
+    }
+
+    .weapon-card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .weapon-cards {
+        padding: 10px;
+    }
+
+    .weapon-name-text {
+        min-width: 100px;
+        font-size: 15px;
+    }
+
+    .weapon-search-bar-holder {
+        margin: 30px 0;
+    }
+
+    .weapon-card-holder {
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .weapon-page-section {
+        margin: 0 10px;
+    }
+
+    .weapon-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .weapon-cards {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .weapon-name-text {
+        min-width: 100px;
+        font-size: 15px;
+    }
+
+    .weapon-search-bar-holder {
+        margin: 10px 0;
+    }
+
+    .weapon-card-holder {
+        margin: 10px 0;
+    }
 }

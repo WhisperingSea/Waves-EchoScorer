@@ -8,17 +8,13 @@
 .weapon-search {
     background-color: rgba(0, 0, 0, 0.5);
     color: azure;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    height: 38px;
+    height: 42px;
     border-radius: 8px;
-    width: 85%;
     border: 1px solid azure;
     font-size: 1rem;
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
 }
 
 .search:focus {
@@ -58,4 +54,53 @@ select>option {
     border: none;
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 1024px) and (min-width: 320px) {
+    .weapon-search-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .weapon-btn {
+        padding: 4px 6px;
+    }
+
+    .weapon-rarity select {
+        padding: 4px 6px;
+    }
+    
+    .weapon-search {
+        height: 34px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .weapon-search-grid {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .weapon-search-grid {
+        gap: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .weapon-search-input, .weapon-rarity {
+        grid-column: 1 / 3;
+    }
+
+    .weapon-search {
+        height: 28px;
+    }
+
+    .weapon-btn {
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .weapon-rarity select {
+        font-size: 16px;
+        height: 28px;
+    }
 }
