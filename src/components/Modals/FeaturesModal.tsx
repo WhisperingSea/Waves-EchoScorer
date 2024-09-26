@@ -2,7 +2,6 @@ import { useSearchFilter } from "../../contexts/SearchFilterContext";
 import { useDataContext } from "../../contexts/CharacterDataContext";
 import "./FeatureModal.css";
 import { Link } from "react-router-dom";
-import Sidebar from "../Common/Sidebar";
 
 interface FeaturesModalProps {
   onClose: () => void;
@@ -14,7 +13,7 @@ const FeaturesModal: React.FC<FeaturesModalProps> = ({ onClose, pageLink }) => {
   const { setSelectedCharacterId } = useDataContext();
 
   const img =
-    "https://sohansc13.github.io/wuthering-waves-assets/images/ClosrButton.png";
+    "https://sohansc13.github.io/wuthering-waves-assets/images/CloseButton.png";
 
   const closeModal = () => {
     onClose();
@@ -34,7 +33,6 @@ const FeaturesModal: React.FC<FeaturesModalProps> = ({ onClose, pageLink }) => {
     <>
       <div className="overlay" onClick={handleOverlayClick}>
         <div className="feature-modal">
-          <header></header>
           <img
             className="close-img"
             src={img}
@@ -42,9 +40,6 @@ const FeaturesModal: React.FC<FeaturesModalProps> = ({ onClose, pageLink }) => {
             alt="close-window"
           />
           <div className="feature-flexbox">
-            <div>
-              <Sidebar />
-            </div>
             <div>
               <h2 className="feature-header-2">-Select Your Charcter-</h2>
             </div>
