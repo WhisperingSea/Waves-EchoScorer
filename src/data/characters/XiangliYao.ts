@@ -460,6 +460,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             name: "Traces of Predecessors",
             description: `When Resonance Skill or Resonance Liberation <span className="Highlight">Cogitation Model</span> is cast, Crit. DMG is increased by {0} for {1}s.`,
             detailNum: ["30%", "8"],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"
@@ -469,6 +470,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             name: "The Choice to Flourish",
             description: `After Resonance Liberation <span className="Highlight">Cogitation Model</span> is cast, the subsequent {0} Resonance Skills cast within {2}s are empowered to deal {1} extra DMG.`,
             detailNum: ["5", "63%", "24"],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"
@@ -478,6 +480,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             name: "Vessel of Rebirth",
             description: `When casting Resonance Liberation <span className="Highlight">Cogitation Model</span>, all team members' Resonance Liberation gains {0} DMG Bonus for {1}s.`,
             detailNum: ["25%", "30"],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: ["Spectro Damage Bonus"],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"
@@ -487,6 +490,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             name: "End of Stars",
             description: `The DMG Multiplier of Outro Skill <span className="Highlight">Chain Rule</span> is increased by {0}. The DMG Multiplier of Resonance Liberation <span className="Highlight">Cogitation Model</span> is increased by {1}.`,
             detailNum: ["222.09%", "120%"],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"
@@ -496,6 +500,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             name: "Solace of the Ordinary",
             description: `The Hypercubes obtained from Resonance Liberation <span className="Highlight">Cogitation Model</span> are enhanced, increasing the DMG Multiplier of Resonance Skill <span className="Highlight">Law of Reigns</span> by {0}.`,
             detailNum: ["76%",],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"

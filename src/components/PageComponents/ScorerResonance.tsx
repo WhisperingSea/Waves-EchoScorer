@@ -78,16 +78,27 @@ const ScorerResonance: React.FC = () => {
   );
 
   const updateNodeSequence = (nodeIndex: number, resonanceId: number) => {
+    if (!chara || !chara.sequences || !chara.sequences[nodeIndex]) {
+      console.warn("Character or sequence data is not available.");
+      return {
+        id: resonanceId,
+        type: "",
+        buff: "",
+        value: 0,
+        stacks: 0,
+      };
+    }
+
+    const sequence = chara.sequences[nodeIndex];
+    const buffAttribute = sequence.sequenceBuffAtrribute || [];
+    const buffValues = sequence.sequenceBuff || [];
+
     return {
       id: resonanceId,
-      type: chara?.sequences[nodeIndex].sequenceBuffType || "",
-      buff: chara?.sequences[nodeIndex].sequenceBuffAtrribute
-        ? chara?.sequences[nodeIndex].sequenceBuffAtrribute[resonanceId - 1]
-        : "",
-      value: chara?.sequences[nodeIndex].sequenceBuff
-        ? chara?.sequences[nodeIndex].sequenceBuff[resonanceId - 1]
-        : 0,
-      stacks: chara?.sequences[nodeIndex].stacks || 0,
+      type: sequence.sequenceBuffType || "",
+      buff: buffAttribute.length > 0 ? buffAttribute[resonanceId - 1] : "",
+      value: buffValues.length > 0 ? buffValues[resonanceId - 1] : 0,
+      stacks: sequence.stacks || 0,
     };
   };
 

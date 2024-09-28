@@ -399,6 +399,9 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             name: "Complex Simplicity",
             description: 'Resonance Skill <color=Highlight>Emergency Plan</color> additionally restores {1} Resonance Energy for every {0} "Concentration" consumed.',
             detailNum: ["1", "2.5"],
+            sequenceBuffType: "No Buff",
+            sequenceBuffAtrribute: [""],
+            sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
         },
         {
@@ -406,6 +409,9 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             name: "Silent Tundra",
             description: `Resonance Skill <color=Highlight>Emergency Plan</color> increases Baizhi's Glacio DMG Bonus by {1} and her Healing by {2} if she has {0} "Concentration". These effects last for {3}s.`,
             detailNum: ["4", "15%", "15%", "12"],
+            sequenceBuffType: "No Buff",
+            sequenceBuffAtrribute: [""],
+            sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
         },
         {
@@ -413,6 +419,9 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             name: "Veritas Lux Mea",
             description: `Intro Skill <color=Highlight>Overflowing Frost</color> increases Baizhi's Max HP by {0} for {1}s.`,
             detailNum: ["12%", "10"],
+            sequenceBuffType: "No Buff",
+            sequenceBuffAtrribute: [""],
+            sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
         },
         {
@@ -423,6 +432,9 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
 -Healing multiplier of <color=Highlight>Remnant Entities</color> is increased by {1};
 -<color=Highlight>Remnant Entities</color> deals additional Glacio DMG equal to {2} of Baizhi's Max HP.`,
             detailNum: ["2", "20%", "1.20%"],
+            sequenceBuffType: "No Buff",
+            sequenceBuffAtrribute: [""],
+            sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
         },
         {
@@ -430,6 +442,9 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             name: "A Wish Answered",
             description: `If a team member is downed when Baizhi is alive on the team, immediately revive them and restore their HP to {0} of their Max HP. This effect can be triggered once every {1} minute(s).`,
             detailNum: ["100%", "10"],
+            sequenceBuffType: "No Buff",
+            sequenceBuffAtrribute: [""],
+            sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
         },
         {
@@ -437,6 +452,9 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             name: "Seeker's Devotion",
             description: `When <color=Highlight>Euphonia</color> is picked up, increase the Glacio DMG Bonus of all characters nearby by {0} for {1}s.`,
             detailNum: ["12%", "20"],
+            sequenceBuffType: "No Buff",
+            sequenceBuffAtrribute: [""],
+            sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
         }
     ]

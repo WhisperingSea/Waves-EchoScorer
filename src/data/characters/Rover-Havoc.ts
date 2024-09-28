@@ -461,6 +461,8 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             description: `Reset Resonance Skill's Cooldown when Rover enters the <color=Highlight>Dark Surge</color> state by casting Heavy Attack <color=Highlight>Devastation</color>.`,
             detailNum: [],
             sequenceBuffType: "No Buff",
+            sequenceBuff: [],
+            sequenceBuffAtrribute: [""],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/icons/T_IconDevice_ZhujueDarkM2_UI.png"
         },
         {
@@ -469,6 +471,8 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             description: `In the <color=Highlight>Dark Surge</color> state, Basic Attack V restores HP equal to {0} of total HP lost on hit.`,
             detailNum: ["10%"],
             sequenceBuffType: "No Buff",
+            sequenceBuff: [],
+            sequenceBuffAtrribute: [""],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/icons/T_IconDevice_ZhujueDarkM3_UI.png"
         },
         {

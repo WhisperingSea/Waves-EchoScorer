@@ -433,6 +433,8 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             description: `During Resonance Liberation <color=Highlight>Lion's Vigor</color>, Lingyang's Anti-Interruption is enhanced.`,
             detailNum: [],
             sequenceBuffType: "No Buff",
+            sequenceBuff: [],
+            sequenceBuffAtrribute: [""],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
         },
         {
@@ -441,6 +443,8 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             description: `Intro Skill <color=Highlight>Lion Awakens</color> additionally recovers {0} Resonance Energy for Lingyang, triggered once every {1}s.`,
             detailNum: ["10", "20"],
             sequenceBuffType: "No Buff",
+            sequenceBuff: [],
+            sequenceBuffAtrribute: [""],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
         },
         {

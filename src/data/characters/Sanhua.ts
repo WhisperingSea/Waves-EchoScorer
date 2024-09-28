@@ -434,6 +434,8 @@ This allows her to master her Forte with graceful ease and alleviates the burden
             description: `Stamina cost of Heavy Attack <color=Highlight>Detonate</color> is reduced by {0}. When Sanhua casts Resonance Skill <color=Highlight>Eternal Frost</color>, her Anti-interruption is enhanced for {0}s.`,
             detailNum: ["10", "5"],
             sequenceBuffType: "No Buff",
+            sequenceBuff: [],
+            sequenceBuffAtrribute: [""],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1102_UI.png"
         },
         {

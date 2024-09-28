@@ -452,6 +452,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             name: "Sprouting Reflections",
             description: `Resonance Skill <span class="Highlight">Botany Experiment</span> additionally grants {0} [Photosynthetic Energy] and {1} Con. Energy.`,
             detailNum: ["1", "10"],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"
@@ -461,6 +462,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             name: "The Choice to Flourish",
             description: `Healing of Resonance Liberation's <span class="Highlight">Photosynthesis Mark</span> is increased by {0}.`,
             detailNum: ["12%"],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"
@@ -470,6 +472,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             name: "Blossoming Embrace",
             description: `Heavy Attack <span class="Highlight">Starflower Blooms</span>, Mid-Air Attack <span class="Highlight">Starflower Blooms</span>, Resonance Liberation <span class="Highlight">Arboreal Flourish</span> and Outro Skill <span class="Highlight">Blossom</span> increases the Spectro DMG Bonus of all team members by {0} for {1}s.`,
             detailNum: ["15%", "24"],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: ["Spectro Damage Bonus"],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"
@@ -479,6 +482,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             name: "Miraculous Blooms",
             description: `When Verina heals a team member with HP less than {0}, her Healing is increased by {1}.`,
             detailNum: ["50%", "20%"],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"
@@ -488,6 +492,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             name: "Joyous Harvest",
             description: `Heavy Attack <span class="Highlight">Starflower Blooms</span> and Mid-Air Attack <span class="Highlight">Starflower Blooms</span> deal {0} more damage. They will trigger Coordinated Attack {1} time and heal all characters nearby. The DMG of this Coordinated Attack and the Healing are equal to those of the Resonance Liberation's <span class="Highlight">Photosynthesis Mark</span>.`,
             detailNum: ["20%", "1"],
+            sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1503_UI.png"

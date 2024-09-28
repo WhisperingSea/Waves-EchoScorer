@@ -449,6 +449,8 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
         detailNum: ["20%", "5"],
         itemImg: "https://cdn.wanderer.moe/wuthering-waves/icons/T_IconDevice_nannvzhuM4_UI.png",
         sequenceBuffType: "No Buff",
+        sequenceBuffAtrribute: [""],
+        sequenceBuff: []
         },
         {
         node: "Sequence Node 5",

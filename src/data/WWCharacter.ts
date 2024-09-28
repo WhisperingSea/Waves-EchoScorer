@@ -88,9 +88,9 @@ export interface WWCharacter {
         description: string;
         detailNum: string[];
         itemImg: string;
-        sequenceBuffType?: string;
-        sequenceBuffAtrribute?: string[];
-        sequenceBuff?: number[];
+        sequenceBuffType: string;
+        sequenceBuffAtrribute: string[];
+        sequenceBuff: number[];
         stacks?: number
     }[];
 }
