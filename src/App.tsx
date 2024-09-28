@@ -9,7 +9,6 @@ import Echoes from "./pages/Echo.tsx";
 import { SearchFilterProvider } from "./contexts/SearchFilterContext.tsx";
 import EchoScorer from "./pages/Echo-Scorer.tsx";
 import Features from "./pages/Features.tsx";
-import DamageCalculator from "./pages/Damage-Calculator.tsx";
 import { WeaponContextProvider } from "./contexts/WeaponDataContext.tsx";
 import Weapons from "./pages/Weapon.tsx";
 import WeaponInfo from "./pages/WeaponInfo.tsx";
@@ -66,10 +65,6 @@ const App = () => {
                                 <Route
                                   path="/echo-scorer/:charaName"
                                   element={<EchoScorer />}
-                                />
-                                <Route
-                                  path="/damage-calculator/:charaName"
-                                  element={<DamageCalculator />}
                                 />
                                 <Route
                                   path="/features"
