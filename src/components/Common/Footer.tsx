@@ -3,7 +3,6 @@ import "./Footer.css";
 import { useEffect, useState } from "react";
 
 const Footer: React.FC = () => {
-  const date = new Date().getFullYear();
   const [scorerPath, setScorerPath] = useState<boolean>(false);
   const location = useLocation();
 
@@ -15,7 +14,23 @@ const Footer: React.FC = () => {
   return (
     <>
       <div className={`${scorerPath ? "footer-2" : "footer"}`}>
-        <p>Copyright Ⓒ {date} Waves</p>
+        <h3>
+          <b>Copyright</b>
+        </h3>
+        <p>
+          <b>
+            We are not affiliated with Wuthering Waves, all assets, game
+            content, and materials are trademarks and copyrights of Kuro Game
+          </b>
+        </p>
+        <p>
+          <b>
+            All media displayed on this site is the property of their respective
+            owners. We do not claim ownership of any content, and any rights
+            belong to the original creators.
+          </b>
+        </p>
+        <h4>Waves.com</h4>
       </div>
     </>
   );
