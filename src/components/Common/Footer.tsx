@@ -30,6 +30,15 @@ const Footer: React.FC = () => {
             belong to the original creators.
           </b>
         </p>
+        <h3>
+          <b>Privacy Policy</b>
+        </h3>
+        <p>
+          <b>
+            No personal or identifiable information is stored or collected about
+            you and we don't use cookies.
+          </b>
+        </p>
         <h4>Waves.com</h4>
       </div>
     </>
