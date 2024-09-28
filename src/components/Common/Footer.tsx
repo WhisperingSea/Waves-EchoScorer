@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             you and we don't use cookies.
           </b>
         </p>
-        <h4>Waves.com</h4>
+        <h4>Waves.github.io</h4>
       </div>
     </>
   );
