@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [link, setLink] = useState<string>("");
 
-  const chara = Object.values(characters).find((i) => i.charaId === 1104);
+  const chara = Object.values(characters).find((i) => i.charaId === 1304);
 
   const openFeatureModal1 = () => {
     setOpen(true);
@@ -86,12 +86,11 @@ const Home: React.FC = () => {
               <div>
                 <h2 className="heading-2">Updates :</h2>
                 <ul className="update-list">
-                  <li className="update-list-item">Added Resonator Zhezhi</li>
                   <li className="update-list-item">
-                    Added Rectifier Rime-Draped Sprouts
+                    Added Resonator Xiangli Yao
                   </li>
                   <li className="update-list-item">
-                    Added Echo Save/Delete Function
+                    Added Guantlets Verity's Handle
                   </li>
                 </ul>
               </div>
@@ -100,7 +99,7 @@ const Home: React.FC = () => {
                 <ul className="update-list">
                   <li className="update-list-item">Echo Scorer</li>
                   <li className="update-list-item">
-                    1.2 Resonator and Weapons
+                    1.3 Resonator and Weapons
                   </li>
                   <li className="update-list-item">Minor QoL Changes</li>
                 </ul>

@@ -215,7 +215,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedSubStats: ["DEF%", "Crit. Rate%", "Crit. DMG%", "DEF", "HP%"]
     },
     {
-        name: "Xiangli Yao",
+        name: "Xiangli-Yao",
         charaId: 1304,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}

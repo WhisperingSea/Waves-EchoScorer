@@ -15,6 +15,7 @@ import { RoverSpectro } from "./characters/Rover-Spectro";
 import { Sanhua } from "./characters/Sanhua";
 import { Taoqi } from "./characters/Taoqi";
 import { Verina } from "./characters/Verina";
+import { XiangliYao } from "./characters/XiangliYao";
 import { Yangyang } from "./characters/Yangyang";
 import { Yinlin } from "./characters/Yinlin";
 import { Yuanwu } from "./characters/Yuanwu";
@@ -109,6 +110,7 @@ export const WWCharacterData: WWCharacter[] = [
     Calcharo,
     Yinlin,
     Yuanwu,
+    XiangliYao,
     Jianxin,
     Yangyang,
     Aalto,
