@@ -120,14 +120,18 @@ const Home: React.FC = () => {
                     <div className="home-feature-grid-item-overlay"></div>
                     <h2 className="header-2">Echo Scorer</h2>
                   </div>
-                  <div
-                    className="home-feature-grid-item-1"
-                    aria-disabled={true}
-                  >
-                    <div className="home-feature-grid-item-1-bg"></div>
-                    <div className="home-feature-grid-item-overlay"></div>
-                    <h2 className="header-2">Damage Calculator</h2>
-                    <p>(Coming Soon)</p>
+                  <div className="home-feature-grid-item-1">
+                    <a
+                      className="tools-Site-Link"
+                      href="https://www.wutheringtools.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="home-feature-grid-item-1-bg"></div>
+                      <div className="home-feature-grid-item-overlay"></div>
+                      <h2 className="header-2">Damage Calculator</h2>
+                      <p>(Built By @LavaSnake)</p>
+                    </a>
                   </div>
                 </div>
               </div>

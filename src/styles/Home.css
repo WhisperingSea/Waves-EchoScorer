@@ -155,6 +155,12 @@
     cursor: pointer;
 }
 
+.home-feature-grid-item-1:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
 .home-feature-grid-item-2-bg {
     width: 100%;
     height: 100%;
@@ -188,6 +194,11 @@
 
 .guide-link a:hover {
     color: rgb(82, 82, 192);
+}
+
+.tools-Site-Link {
+    color: white;
+    text-decoration: none;
 }
 
 @media (max-width: 1024px) and (min-width: 320px) {

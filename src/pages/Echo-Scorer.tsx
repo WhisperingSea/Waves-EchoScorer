@@ -329,39 +329,53 @@ const EchoScorer: React.FC = () => {
                 {imageUrl && isEditing && (
                   <div className="controls">
                     <button
+                      className="image-manipulation-btn"
                       onClick={() => shiftImage("left")}
                       onMouseDown={() => handleMouseDown("left")}
                       onMouseUp={handleMouseUp}
                       onMouseLeave={handleMouseLeaveButton}
                     >
-                      Shift Left
+                      <b>←</b>
                     </button>
                     <button
+                      className="image-manipulation-btn"
                       onClick={() => shiftImage("right")}
                       onMouseDown={() => handleMouseDown("right")}
                       onMouseUp={handleMouseUp}
                       onMouseLeave={handleMouseLeaveButton}
                     >
-                      Shift Right
+                      <b>→</b>
                     </button>
                     <button
+                      className="image-manipulation-btn"
                       onClick={() => shiftImage("up")}
                       onMouseDown={() => handleMouseDown("up")}
                       onMouseUp={handleMouseUp}
                       onMouseLeave={handleMouseLeaveButton}
                     >
-                      Shift Up
+                      <b>↑</b>
                     </button>
                     <button
+                      className="image-manipulation-btn"
                       onClick={() => shiftImage("down")}
                       onMouseDown={() => handleMouseDown("down")}
                       onMouseUp={handleMouseUp}
                       onMouseLeave={handleMouseLeaveButton}
                     >
-                      Shift Down
+                      <b>↓</b>
                     </button>
-                    <button onClick={() => zoomImage("in")}>Zoom In</button>
-                    <button onClick={() => zoomImage("out")}>Zoom Out</button>
+                    <button
+                      onClick={() => zoomImage("in")}
+                      className="image-manipulation-btn"
+                    >
+                      <b>+</b>
+                    </button>
+                    <button
+                      onClick={() => zoomImage("out")}
+                      className="image-manipulation-btn"
+                    >
+                      <b>-</b>
+                    </button>
                   </div>
                 )}
               </div>

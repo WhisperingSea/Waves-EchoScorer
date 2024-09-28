@@ -51,6 +51,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
     stat: undefined,
     subStats: [],
   });
+  const [imgReset, setImgReset] = useState<boolean>(false);
 
   const openFilter = () => {
     setOpen(true);
@@ -205,6 +206,12 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
 
   const handleImageProcess = () => {
     processImages(fileSelected);
+    setImgReset(true);
+  };
+
+  const handleImageReset = () => {
+    setFileSelected([]);
+    setImgReset(false);
   };
 
   const icon = Object.values(Icons);
@@ -356,7 +363,9 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
               <div className="echo-modal-stats">
                 {StoreSelectedEcho ? (
                   <>
-                    <h3 className="no-margin">{StoreSelectedEcho.name}</h3>
+                    <h3 className="no-margin echo-stat-box-name">
+                      <b>{StoreSelectedEcho.name}</b>
+                    </h3>
                     <h3 className="no-margin">Main Stat -</h3>
                     <div className="echo-modal-stats-box">
                       <img className="stat-Icons" src={Icon} />
@@ -487,7 +496,9 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                 ) : storedEcho.length === 0 ? (
                   <h3>No Echoes in storage</h3>
                 ) : (
-                  <h3>Select Echoes to view it's stats</h3>
+                  <h3 className="echo-select-text">
+                    Select Echoes to view it's stats
+                  </h3>
                 )}
               </div>
               <div className="calcEcho-modal-store-filter" onClick={openFilter}>
@@ -544,24 +555,110 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                   </>
                 )}
               </div>
-              <div className="calcEvho-modal-add-box-2">
-                <input
-                  className="Image-addEcho-input"
-                  id="Echo-Image-Select"
-                  type="file"
-                  onChange={handleFileChange}
-                />
-                <button onClick={handleImageProcess}>Process</button>
+              <div className="calcEcho-modal-add-box-2">
+                <div className="calcEcho-modal-add-flex-box">
+                  <label
+                    htmlFor="Echo-Image-Select"
+                    className="custom-file-upload"
+                  >
+                    Choose File
+                  </label>
+                  <input
+                    className="Image-addEcho-input"
+                    id="Echo-Image-Select"
+                    type="file"
+                    onChange={handleFileChange}
+                  />
+                  {fileSelected.map((imageSrc, index) => (
+                    <div key={index}>
+                      <p style={{ margin: 0 }}>{imageSrc.name}</p>
+                    </div>
+                  ))}
+                  {imgReset ? (
+                    <button
+                      className="image-process-btn"
+                      onClick={handleImageReset}
+                    >
+                      Reset
+                    </button>
+                  ) : (
+                    <button
+                      className="image-process-btn"
+                      onClick={handleImageProcess}
+                    >
+                      Process
+                    </button>
+                  )}
+                </div>
                 <div>
                   {processedImages.map((imageSrc, index) => (
                     <div key={index}>
                       <img
                         src={imageSrc}
                         alt={`Processed ${index}`}
-                        height="300"
+                        width="300"
+                        height="400"
+                        style={
+                          imgReset ? { display: "block" } : { display: "none" }
+                        }
                       />
                     </div>
                   ))}
+                </div>
+                <div>
+                  <p className="process-img-intsruction">
+                    How to use Image Processor
+                  </p>
+                  <p>
+                    <b style={{ color: "red" }}>
+                      Important: Please use the same kind of image as shown
+                      below. No editing or cropping is needed. Only one image
+                      can be processed at a time
+                    </b>
+                  </p>
+                  <img
+                    className="example-echo-img"
+                    src="https://sohansc13.github.io/wuthering-waves-assets/images/DreamlessEcho.png"
+                  />
+                  <p>
+                    <b>
+                      • It may take up to 5-10 seconds to process the image.
+                    </b>
+                    <br />
+                  </p>
+                  <p>
+                    <b>
+                      • After the processing is done, the stats will be shown on
+                      left box and an cropped up image on right box for
+                      comparision. The Image processingg may not be 100% correct
+                      all the time so please make changes manually if required.
+                    </b>
+                  </p>
+                  <p>
+                    <b>
+                      • Make sure to wait until the screen looks like below
+                      image.
+                    </b>
+                  </p>
+                  <img
+                    className="example-echo-img"
+                    src="https://sohansc13.github.io/wuthering-waves-assets/images/ImageProcessor2.png"
+                  />
+                  <p>
+                    <b>
+                      • Please make sure to change the Sonata Set manually as
+                      the image processor does not support it.
+                    </b>
+                  </p>
+                  <div>
+                    <img src="https://sohansc13.github.io/wuthering-waves-assets/images/ImageProcessor.png" />
+                  </div>
+                  <p>
+                    <b>
+                      • Once done, scroll down on left box and hit the Save Echo
+                      button and it'll be added into My Echoes tab.
+                    </b>
+                  </p>
                 </div>
               </div>
             </div>

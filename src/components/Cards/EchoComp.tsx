@@ -319,7 +319,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
   }, [selectedVal]);
 
   useEffect(() => {
-    if (selectedEcho?.sonataGroup.length === 1) {
+    if (selectedEcho) {
       const newSet = selectedEcho.sonataGroup[0];
       setSelectedVal(newSet);
     }
@@ -337,6 +337,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                 <div className="set-selector-box">
                   <h3>Set:</h3>
                   <select
+                    className="Sonata-select"
                     id="SonataSelect"
                     onChange={handleSelectChange}
                     value={
@@ -358,7 +359,12 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                         ) : null;
                       })}
                   </select>
-                  <button onClick={handleEchoSet}>Confirm</button>
+                  <button
+                    className="Sonata-select-confirm-btn"
+                    onClick={handleEchoSet}
+                  >
+                    Confirm
+                  </button>
                 </div>
               </div>
             </div>
@@ -396,6 +402,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
             </div>
             {echoStats[index].id !== 0 && (
               <div className="echo-comp-echo-img">
+                <p>Set</p>
                 <img
                   className="Sonata-set-icon"
                   src={WWSonataData.find((S) => S.id === selectedVal)?.img}

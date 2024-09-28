@@ -170,12 +170,95 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({
                 </div>
               ))}
             </div>
+            <div className="scorer-how-to-box">
+              <h3 className="sort-type-text">How It Works</h3>
+              <p className="sort-type-text-para">Substat Score</p>
+              <div className="scorer-how-to-box-1">
+                <p>
+                  <b>
+                    The substats are scored in a fairly simple way using the
+                    roll value of stat and the characters preferred stats.
+                  </b>
+                </p>
+                <h3>What's a Roll value?</h3>
+                <p>
+                  <b>
+                    Each Substat has a maximum 8 values it can roll into except
+                    for flat stats which only has 4 rolls.
+                  </b>
+                  <br />
+                  Example: Flat Atk can roll into either 30, 40, 50, 60. In
+                  accrodance to how high the roll index is, it is given 0.5
+                  points.
+                  <br />
+                  <b>
+                    If Flat Atk rolls into 50 then it's roll index would be 3
+                    and it's roll value would be 3 x 0.5 = 1.5.
+                  </b>
+                  <br />
+                  <b>
+                    All stats except for flat stats have a maximum roll value of
+                    4 whereas Flat stats has a maximum roll value of 2.
+                  </b>
+                </p>
+              </div>
+              <p className="sort-type-text-para">Preferred Stat Score</p>
+              <div className="scorer-how-to-box-1">
+                <p>
+                  <b>
+                    The preferred stats of a character plays the most critical
+                    role in calculating overall score of an Echo.
+                  </b>
+                </p>
+                <p>
+                  <b>• Preferred Main stat adds a bonus of 2 points.</b>
+                  <br />
+                  <b>• Preferred Sub stat adds a bonus of 2 points.</b>
+                  <br />
+                  <b>
+                    • For a DPS character, If the substat is Crit. Rate or Crit.
+                    DMG, it additionally gives 5 bonus points and for Atk% (Def%
+                    for Def scaling characters) 3 bonus points.
+                  </b>
+                  <br />
+                  <b>
+                    • For a Support character, If the substat is HP%, Atk% (For
+                    Verina) or Energy Regen, it additionally gives 5 bonus
+                    points.
+                  </b>
+                  <br />
+                  <b>
+                    • Flat bonuses for preffered substats give additional 2
+                    points
+                  </b>
+                  <br />
+                </p>
+                <p>
+                  <b>
+                    For Rover Havoc, a Crit. Rate roll of 9.3 which has an index
+                    of 6 will have stat score of: <br />3 (Roll Value) + 3
+                    (Preferred Stat) + 5 (Critical Bonus) = 11
+                  </b>
+                </p>
+              </div>
+              <p className="sort-type-text-para">
+                Why do preferred stats carry more weight in scoring?
+              </p>
+              <div className="scorer-how-to-box-1">
+                <p>
+                  <b>
+                    In Wuthering Waves an Echo has a total of 13 substats it can
+                    roll into, but the value for each substat is only rolled
+                    once and cannot be upgraded afterwards.
+                    <br />
+                    This makes the preferred stat roll valuable even if the stat
+                    value is lowz which is why the prferred stat rolls are given
+                    more importance than stat value.
+                  </b>
+                </p>
+              </div>
+            </div>
           </div>
-          {/* <div className="weight-box-item-2">
-            <button className="default-sort-weight">Dps Config</button>
-            <button className="default-sort-weight">Sub-Dps Config</button>
-            <button className="default-sort-weight">Support Config</button>
-          </div> */}
         </div>
       </div>
     </>

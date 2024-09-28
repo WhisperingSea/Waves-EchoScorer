@@ -15,7 +15,6 @@ const Footer: React.FC = () => {
   return (
     <>
       <div className={`${scorerPath ? "footer-2" : "footer"}`}>
-        <a>Privacy Policy</a>
         <p>Copyright Ⓒ {date} Waves</p>
       </div>
     </>

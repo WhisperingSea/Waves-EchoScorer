@@ -12,7 +12,8 @@ interface ScoreMisc {
 export function EchoScorerFunction(index: number) {
   const { selectedCharacterId } = useDataContext();
   const { echoStats } = useEchoes();
-  const { ScorerWeight, subStats } = useScorerContext();
+  const { ScorerWeight, subStats, cost1Main, cost3Main, cost4Main } =
+    useScorerContext();
   const [scoreMisc, setScoreMisc] = useState<ScoreMisc>({
     1: { statVal: 0 },
     2: { statVal: 0 },
@@ -33,9 +34,19 @@ export function EchoScorerFunction(index: number) {
   const valCalc = useCallback(
     (stat: number, statName: string) => {
       const st = Object.values(WWSubstats).find((s) => s.name === statName);
+      const mainStat = echoStat.mainStat;
       const prefStat = subStats?.includes(statName);
+      const prefStatName = subStats?.includes(statName) ? statName : "";
+      const prefMainCost1 =
+        echoStat.cost === 1 && cost1Main?.includes(mainStat) ? 0.4 : 0;
+      const prefMainCost3 =
+        echoStat.cost === 3 && cost3Main?.includes(mainStat) ? 0.4 : 0;
+      const prefMainCost4 =
+        echoStat.cost === 4 && cost4Main?.includes(mainStat) ? 0.4 : 0;
 
-      console.log("Sub Stats", subStats);
+      console.log("pref main stat cost 1 :", prefMainCost1);
+      console.log("pref main stat cost 3 :", prefMainCost3);
+      console.log("pref main stat cost 4 :", prefMainCost4);
 
       if (!st) {
         return 0;
@@ -55,38 +66,46 @@ export function EchoScorerFunction(index: number) {
       let flatBonus = 0;
 
       // Per stat Roll Bonus = 0.5 per roll / Max = 4
+      // Main Stat bonus = 0.4 * 5 = 2
       // Crit Rate, Crit Damage Bonus = 5 + 3
       // HP%, Energy Regen, ATK%(Verina) Bonus = 5 + 3
       // ATK% Bonus = 3 + 3
       // ATK, HP, DEF Bonus = 2 + 3
 
-      // Max DPS score = 50
+      // Max DPS score = 52
 
       if (dps) {
-        dpsBonus = ["Crit. Rate%", "Crit. DMG%"].includes(statName) ? 5 : 0;
+        dpsBonus = ["Crit. Rate%", "Crit. DMG%"].includes(prefStatName) ? 5 : 0;
 
         if ([1303, 1601].includes(selectedCharacterId || 0)) {
-          dpsSubBonus = statName === "DEF%" ? 3 : 0;
-          flatBonus = statName === "DEF" ? 2 : 0;
+          dpsSubBonus = prefStatName === "DEF%" ? 3 : 0;
+          flatBonus = prefStatName === "DEF" ? 2 : 0;
         } else {
-          dpsSubBonus = statName === "ATK%" ? 3 : 0;
-          flatBonus = statName === "ATK" ? 2 : 0;
+          dpsSubBonus = prefStatName === "ATK%" ? 3 : 0;
+          flatBonus = prefStatName === "ATK" ? 2 : 0;
         }
       } else if (supports.includes(selectedCharacterId || 0)) {
         if (selectedCharacterId === 1501) {
-          supportBonus = ["ATK%", "Energy Regen%"].includes(statName) ? 5 : 0;
-          flatBonus = ["ATK", "DEF"].includes(statName) ? 2 : 0;
+          supportBonus = ["ATK%", "Energy Regen%"].includes(prefStatName)
+            ? 5
+            : 0;
+          flatBonus = ["ATK", "DEF"].includes(prefStatName) ? 2 : 0;
         } else {
-          supportBonus = ["HP%", "Energy Regen%"].includes(statName) ? 5 : 0;
-          flatBonus = ["HP", "DEF"].includes(statName) ? 2 : 0;
+          supportBonus = ["HP%", "Energy Regen%"].includes(prefStatName)
+            ? 5
+            : 0;
+          flatBonus = ["HP", "DEF"].includes(prefStatName) ? 2 : 0;
         }
       }
 
       const statScore = (index + 1) * 0.5;
-      const prefStatScore = prefStat ? 3 : 0;
+      const prefStatScore = prefStat ? 2 : 0;
       const score =
         (prefStatScore +
           statScore +
+          prefMainCost1 +
+          prefMainCost3 +
+          prefMainCost4 +
           dpsBonus +
           dpsSubBonus +
           supportBonus +
@@ -143,7 +162,7 @@ export function EchoScorerFunction(index: number) {
 
   const Score = useMemo(() => {
     if (scoreVal >= 45) return "OP";
-    if (scoreVal >= 42.5) return "SSS+";
+    if (scoreVal >= 43.5) return "SSS+";
     if (scoreVal >= 40) return "SSS";
     if (scoreVal >= 37.5) return "SS+";
     if (scoreVal >= 35) return "SS";

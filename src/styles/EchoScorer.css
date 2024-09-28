@@ -212,3 +212,18 @@
     grid-column: 6 / 11;
     grid-row: 6 / 7;
 }
+
+.image-manipulation-btn {
+    border: 1px solid azure;
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.image-manipulation-btn:hover {
+    background-color: #666;
+}

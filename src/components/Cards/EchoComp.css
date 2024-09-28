@@ -67,6 +67,36 @@
     border-radius: 12px;
 }
 
+.set-selector-box h3 {
+    margin: 0;
+}
+
+.Sonata-select {
+    background-color: black;
+    color: white;
+    border: 1px solid azure;
+    border-radius: 8px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.Sonata-select:hover {
+    background-color: #444;
+}
+
+.Sonata-select-confirm-btn {
+    background-color: black;
+    color: white;
+    border: 1px solid azure;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.Sonata-select-confirm-btn:hover {
+    background-color: #444;
+}
+
 .set-selector-box {
     position: relative;
     display: grid;
@@ -75,6 +105,7 @@
     grid-auto-rows: minmax(min-content, auto);
     gap: 20px;
     justify-content: center;
+    align-items: center;
     padding: 20px;
     overflow: auto;
     border: 1px solid azure;
