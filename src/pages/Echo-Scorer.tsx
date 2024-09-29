@@ -222,32 +222,32 @@ const EchoScorer: React.FC = () => {
     switch (chara?.element) {
       case "Glacio":
         setEleImg(
-          "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ele/Glacio_3.png"
+          "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ele/Glacio_3.png"
         );
         break;
       case "Fusion":
         setEleImg(
-          "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ele/Fusion_3.png"
+          "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ele/Fusion_3.png"
         );
         break;
       case "Electro":
         setEleImg(
-          "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ele/Electro_3.png"
+          "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ele/Electro_3.png"
         );
         break;
       case "Aero":
         setEleImg(
-          "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ele/Aero_3.png"
+          "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ele/Aero_3.png"
         );
         break;
       case "Spectro":
         setEleImg(
-          "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ele/Spectro_3.png"
+          "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ele/Spectro_3.png"
         );
         break;
       case "Havoc":
         setEleImg(
-          "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ele/Havoc_3.png"
+          "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ele/Havoc_3.png"
         );
     }
   }, [chara, setEleImg]);

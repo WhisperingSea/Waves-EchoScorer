@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const XiangliYao: WWCharacter = {
     name: "Xiangli-Yao",
@@ -14,9 +14,9 @@ export const XiangliYao: WWCharacter = {
     bio: `Huaxu Academy's Principal Investigator, Xiangli Yao, displays exceptional expertise in various research fields despite his young age.
 He is a gentle yet rational soul, embracing unique insights and commitment to the research of Automata Mechanics.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/XiangliyaoPortrait.webp",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/XiangliYao.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Xiangli_Yao_Full_Sprite.webp"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/XiangliyaoPortrait.webp",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/XiangliYao.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Xiangli_Yao_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [

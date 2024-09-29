@@ -12,7 +12,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Freezing Frost",
     id: 1,
-    img: "https://sohansc13.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Freezing_Frost.webp",
+    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Freezing_Frost.webp",
     twoPiece: "Glacio damage increased by 10%",
     fivePiece: "When releasing Basic Attack or Heavy Attack, Glacio damage is increased by 10%, stacking up to three times, lasting for 15 seconds",
     twoPieceEffect: {
@@ -29,7 +29,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Molten Rift",
     id: 2,
-    img: "https://sohansc13.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Molten_Rift.webp",
+    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Molten_Rift.webp",
     twoPiece: "Fusion damage is increased by 10%",
     fivePiece: "When releasing Resonance Skill, Fusion damage is increased by 30% for 15s",
     twoPieceEffect: {
@@ -46,7 +46,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Void Thunder",
     id: 3,
-    img: "https://sohansc13.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Void_Thunder.webp",
+    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Void_Thunder.webp",
     twoPiece: "Electro damage is increased by 10%",
     fivePiece: "When releasing Heavy Attack or Resonance Skill, Electro damage dealt is increased by 15%, stacking up to two times, each lasting for 15 seconds",
     twoPieceEffect: {
@@ -63,7 +63,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Sierra Gale",
     id: 4,
-    img: "https://sohansc13.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Sierra_Gale.webp",
+    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Sierra_Gale.webp",
     twoPiece: "Aero DMG increased by 10%",
     fivePiece: "Aero DMG is increased by 30% for 15 seconds when Intro Skill is used",
     twoPieceEffect: {
@@ -80,7 +80,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Celestial Light",
     id: 5,
-    img: "https://sohansc13.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Celestial_Light.webp",
+    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Celestial_Light.webp",
     twoPiece: "Spectro DMG is increased by 10%",
     fivePiece: "Increases Spectro damage by 30% over 15s when releasing Intro Skill",
     twoPieceEffect: {
@@ -97,7 +97,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Sun-sinking Eclipse",
     id: 6,
-    img: "https://sohansc13.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Sun-sinking_Eclipse.webp",
+    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Sun-sinking_Eclipse.webp",
     twoPiece: "Havoc DMG is increased by 10%",
     fivePiece: "When releasing Basic Attack or Heavy Attack, Havoc DMG is increased by 7.5%, stacking up to four times for 15 seconds",
     twoPieceEffect: {
@@ -114,7 +114,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Rejuvenating Glow",
     id: 7,
-    img: "https://sohansc13.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Rejuvenating_Glow.webp",
+    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Rejuvenating_Glow.webp",
     twoPiece: "Healing is increased by 10%",
     fivePiece: " When healing allies, ATK for the entire team is increased by 15%, lasting 30s",
     twoPieceEffect: {
@@ -131,7 +131,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Moonlit Clouds",
     id: 8,
-    img: "https://sohansc13.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Moonlit_Clouds.webp",
+    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Moonlit_Clouds.webp",
     twoPiece: "Energy Regen increased by 10%",
     fivePiece: "After using Outro Skill, the ATK of the next Resonator is increased by 22.5% for 15 seconds",
     twoPieceEffect: {
@@ -148,7 +148,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Lingering Tunes",
     id: 9,
-    img: "https://sohansc13.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Lingering_Tunes.webp",
+    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Lingering_Tunes.webp",
     twoPiece: "ATK increases by 10%",
     fivePiece: "When in effect, your ATK increases by 5% every 1.5 seconds, stacking up to four times. Outro Skill DMG is increased by 60%",
     twoPieceEffect: {

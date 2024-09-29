@@ -54,23 +54,23 @@ const ScorerWeaponCard: React.FC = () => {
   useEffect(() => {
     if (weapon?.rarity === 1) {
       setWeaponRarityIcon(
-        "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_1_Star.webp"
+        "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_1_Star.webp"
       );
     } else if (weapon?.rarity === 2) {
       setWeaponRarityIcon(
-        "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_2_Stars.webp"
+        "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_2_Stars.webp"
       );
     } else if (weapon?.rarity === 3) {
       setWeaponRarityIcon(
-        "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_3_Stars.webp"
+        "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_3_Stars.webp"
       );
     } else if (weapon?.rarity === 4) {
       setWeaponRarityIcon(
-        "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp"
+        "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp"
       );
     } else if (weapon?.rarity === 5) {
       setWeaponRarityIcon(
-        "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp"
+        "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp"
       );
     } else {
       setWeaponRarityIcon("");
@@ -95,7 +95,7 @@ const ScorerWeaponCard: React.FC = () => {
             src={
               weapon
                 ? weapon?.img
-                : "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ui2/weapons.png"
+                : "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ui2/weapons.png"
             }
             alt={weapon?.name}
             onClick={openWeaponModal}

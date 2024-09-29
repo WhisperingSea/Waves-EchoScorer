@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
 
 export const Mortefi: WWCharacter = {
     name: "Mortefi",
@@ -16,9 +16,9 @@ Renowned for his exceptional talent in scientific research, Mortefi was once fam
 Driven by a thirst for knowledge, Mortefi later abandoned his privileged life to work as an International Research Fellow at the Huaxu Academy.
 It's not hard to win Mortefi's favor: Just remember to talk nicely, and always shower him with ample praise.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_baer_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Mortefi.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Mortefi_Illutration.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_baer_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Mortefi.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Mortefi_Illutration.png"
     },
     asension: {
         charaAsension: [

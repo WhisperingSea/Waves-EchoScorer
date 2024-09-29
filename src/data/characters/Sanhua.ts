@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
 
 export const Sanhua: WWCharacter = {
     name: "Sanhua",
@@ -16,9 +16,9 @@ Her Forte allows her to cool the surrounding air and conjure snow.
 To maintain emotional stability and prevent Overclocking, Sanhua finds solace in the art of swordplay.
 This allows her to master her Forte with graceful ease and alleviates the burden on her body.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_shanhua_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Sanhua.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Sanhua_Model.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_shanhua_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Sanhua.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Sanhua_Model.png"
     },
     asension: {
         charaAsension: [

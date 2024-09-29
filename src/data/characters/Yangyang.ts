@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
 
 export const Yangyang: WWCharacter = {
     name: "Yangyang",
@@ -15,9 +15,9 @@ export const Yangyang: WWCharacter = {
 Instead of seeking the spotlight, Yangyang chooses to provide comfort through quiet companionship for others.
 After enduring hardships and anguish, she has found a clear purpose: to be a beacon of guidance and an aiding presence in a world still in need of healing.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_yangyang_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Yangyang.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Oldyangyang2.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_yangyang_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Yangyang.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Oldyangyang2.png"
     },
     asension: {
         charaAsension: [

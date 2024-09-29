@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Jinhsi: WWCharacter = {
     name: "Jinhsi",
@@ -15,9 +15,9 @@ export const Jinhsi: WWCharacter = {
 Through repeated ages, the Lament has preyed upon mankind's vulnerable hope.
 Yet, grasping the nettle, she strives with all her might to forge a path toward tomorrow.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/jinhsi-image.webp",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Jinhsi.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/jinhsi-Full-image.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/jinhsi-image.webp",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Jinhsi.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/jinhsi-Full-image.png"
     },
     asension: {
         charaAsension: [

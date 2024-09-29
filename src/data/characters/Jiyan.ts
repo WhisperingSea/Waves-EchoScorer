@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Jiyan: WWCharacter = {
     name: "Jiyan",
@@ -13,9 +13,9 @@ export const Jiyan: WWCharacter = {
     weapon: "Broadblade",
     bio: `Jiyan is the General of Midnight Rangers stationed in Jinzhou, embracing strong sense of justice and resolution. Born in a family devoted to medicine, Jiyan is both skilled and attentive. Later, in a bid to fend off the encroaching Tacet Discords, he relinquished his role in medicine and took up arms as a soldier.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_jiyan_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Jiyan.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Jiyan_Full_Sprite.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_jiyan_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Jiyan.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Jiyan_Full_Sprite.png"
     },
     asension: {
         charaAsension: [

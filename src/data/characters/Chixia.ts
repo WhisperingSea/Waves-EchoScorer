@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
 
 export const Chixia: WWCharacter = {
     name: "Chixia",
@@ -15,9 +15,9 @@ export const Chixia: WWCharacter = {
 She roams Jinzhou City, leaving her fiery mark on every alley she stamps through.
 As the starring hero among her community, Chixia is always ready for anyone in need.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_maxiaofang_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Chixia.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Chixia_Full_Sprite.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_maxiaofang_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Chixia.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Chixia_Full_Sprite.png"
 },
     asension: {
         charaAsension: [

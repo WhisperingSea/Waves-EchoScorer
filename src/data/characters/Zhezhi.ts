@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Zhezhi: WWCharacter = {
     name: "Zhezhi",
@@ -14,9 +14,9 @@ export const Zhezhi: WWCharacter = {
     bio: `Zhezhi is a commissioned painter, quiet and shy with a dedication to her craft.
 She's not very eloquent, but her persistence and love for painting speak volumes.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/Zhezhi_Portrait.webp",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Zhezhi.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Zhezhi_Full_Sprite.webp"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/Zhezhi_Portrait.webp",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Zhezhi.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Zhezhi_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [

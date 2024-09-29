@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Yinlin: WWCharacter = {
     name: "Yinlin",
@@ -13,9 +13,9 @@ export const Yinlin: WWCharacter = {
     weapon: "Rectifier",
     bio: `Previously known as an outstanding Jinzhou Patroller, Yinlin is steady and reliable, yet harbors hidden depths of secrets. She excels at exploiting resources at her disposal to uncover lurking crimes. Beneath her aloof and flamboyant exterior, Yinlin possesses a heart of gold, reserved only for those she deems trustworthy.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_yinlin_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Yinlin.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Yinlin_Full_Sprite.webp"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_yinlin_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Yinlin.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Yinlin_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [

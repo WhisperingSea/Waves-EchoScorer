@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Changli: WWCharacter = {
     name: "Changli",
@@ -15,9 +15,9 @@ export const Changli: WWCharacter = {
 Being the mentor to Jinhsi, she is persuasive and patient.
 She entertains an unwavering aspiration, holding her ground in the endless game against time and chaos.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/rolecard_1205.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Changli.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/ChangliCharacter_Sprite.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/rolecard_1205.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Changli.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/ChangliCharacter_Sprite.png"
     },
     asension: {
         charaAsension: [

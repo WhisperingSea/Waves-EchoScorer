@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Lingyang: WWCharacter = {
     name: "Lingyang",
@@ -14,9 +14,9 @@ export const Lingyang: WWCharacter = {
     bio: `Lingyang is a sincere, compassionate foreign visitor of the human community.
 He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and dread for others through his electrifying "Liondance".`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_lingyang_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Lingyang.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Lingyang_Full_Sprite.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_lingyang_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Lingyang.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Lingyang_Full_Sprite.png"
     },
     asension: {
         charaAsension: [

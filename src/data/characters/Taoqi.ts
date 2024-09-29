@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
 
 export const Taoqi: WWCharacter = {
     name: "Taoqi",
@@ -15,9 +15,9 @@ export const Taoqi: WWCharacter = {
 Despite her unhurried demeanor, she is an exceptionally dependable individual who works tirelessly to protect others and provide a peaceful haven.
 With effortless efficiency, she balances her work and personal life, steadily moving towards her ultimate goal: creating a future of true safety for all.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_taohua_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Taoqi.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Taoqi_Model.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_taohua_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Taoqi.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Taoqi_Model.png"
     },
     asension: {
         charaAsension: [

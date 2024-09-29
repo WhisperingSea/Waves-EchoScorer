@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Verina: WWCharacter = {
     name: "Verina",
@@ -14,9 +14,9 @@ export const Verina: WWCharacter = {
     bio: `Formerly a member of a Pioneer Association expedition team from the New Federation, Verina is a humble and determined plant breeder.
 Somehow she always ends up taking on caretaker duties in any expedition, showing remarkable tenacity for her age.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_jueyuan_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Verina.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Verina_Full_Sprite.webp"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_jueyuan_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Verina.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Verina_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [

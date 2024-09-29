@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Calcharo: WWCharacter = {
     name: "Calcharo",
@@ -14,9 +14,9 @@ export const Calcharo: WWCharacter = {
     bio: `Leader of the "Ghost Hounds", an international mercenary group.
 Ruthless, vengeful, unforgiving. A potential client must be mindful of the price to pay before making him an offer.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_kakaluo_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Calcharo.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Calcharo_Model.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_kakaluo_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Calcharo.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Calcharo_Model.png"
     },
     asension: {
         charaAsension: [

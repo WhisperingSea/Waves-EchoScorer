@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const RoverSpectro: WWCharacter = {
     name: "Rover-Spectro",
@@ -14,9 +14,9 @@ export const RoverSpectro: WWCharacter = {
     bio: `Awakened with an unknown past, Rover embarks on a journey to uncover the truths.
 As secrets are unveiled, Rover establishes deeper connections with the world.`,
     images: {
-            portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_zhujuenan_UI.png",
-            icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/RoverSpectroMale.png",
-            model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Male_Rover_Model.png?raw=true"
+            portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_zhujuenan_UI.png",
+            icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/RoverSpectroMale.png",
+            model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Male_Rover_Model.png?raw=true"
         },
     asension: {
         charaAsension: [

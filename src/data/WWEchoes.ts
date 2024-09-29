@@ -20,7 +20,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: "Bell-Borne Geochelone",
       id: 900000401,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/BellBorneGeochelone.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/BellBorneGeochelone.png",
       echoSkill:
         `Activate the protection of Bell-Borne Geochelone. Deal Glacio DMG based on {0} of the current character's DEF to nearby enemies, and obtain a Bell-Borne Shield that lasts for <b>15s</b> The Bell-Borne Shield provides <b>50.00%</b> DMG Reduction and <b>10.00%</b> DMG Boost for the current team members, and disappears after the current character is hit for <b>3</b> times.<br><br>
         CD: <b>20s</b>`,
@@ -41,7 +41,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Tempest Mephis`,
       id: 900000402,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/TempestMephis.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/TempestMephis.png",
       echoSkill:
         `Transform into Tempest Mephis to perform tail swing attacks followed by a claw attack. The lightning strike summoned by the tail swing deals {0} Electro DMG each time, while the claw attack deals {1} Electro DMG. After the claw hit, increase the current character's Electro DMG by <b>12.00%</b> and Heavy Attack DMG by <b>12.00%</b> for <b>15s</b>.<br><br>
         CD: <b>20s</b>`,
@@ -60,7 +60,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Inferno Rider`,
       id: 900000403,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/InfernoRider.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/InfernoRider.png",
       echoSkill:
         `Transform into Inferno Rider to launch up to 3 consecutive slashes in a row, each slash dealing  {0}, {1}, and {2} Fusion DMG respectively. After the final hit, increase the current character's Fusion DMG by <b>12.00%</b> and Basic Attack DMG by <b>12.00%</b> for <b>15s</b>. Long press the Echo Skill to transform into Inferno Rider and enter the Riding Mode. When exiting the Riding Mode, deal <b>12.00%</b> Fusion DMG to enemies in front.<br><br>
         CD: <b>20s</b>`,
@@ -80,7 +80,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Impermanenance Heron`,
       id: 900000404,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/ImpermanenceHeron.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/ImpermanenceHeron.png",
       echoSkill:
         `Transform into Impermanence Heron to fly up and smack down, dealing {0} Havoc DMG. Long press to stay as Impermanence Heron and continuously spit flames, each attack dealing {1} Havoc DMG. Once the initial attack lands on any enemy, the current character regains <b>10</b> Resonance Energy. If the current character uses their Outro Skill within the next <b>15s</b>, the next character's damage dealt will be boosted by <b>12%</b> for <b>15s</b>.<br><br>
         CD: <b>20s</b>.`,
@@ -99,7 +99,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Lampylumen Myriad`,
       id: 900000405,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/LampylumenMyriad.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/LampylumenMyriad.png",
       echoSkill:
         `Transform into Lampylumen Myriad. Perform up to 3 consecutive attacks. Unleash a freezing shock by performing consecutive forward strikes, with the initial two strikes inflicting {0} and {1} Glacio DMG respectively, and the final strike dealing {2} Glacio DMG. Enemies will be frozen on hit. Each shock increases the current character's Glacio DMG by <b>4.00%</b> and Resonance Skill DMG dealt by <b>4.00%</b> for <b>15s</b>, stacking up to <b>3</b> times.<br><br>
         CD: <b>20s</b>.`,
@@ -118,7 +118,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Feilian Beringal`,
       id: 900000406,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/FeilianBeringal.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/FeilianBeringal.png",
       echoSkill:
         `Transform into Feilian Beringal to perform a powerful kick. If the kick lands on an enemy, immediately perform a follow-up strike. The kick deals {0} Aero DMG, and the follow-up strike deals {1} Aero DMG. After the follow-up strike hits, the current character's Aero DMG increases by <b>12.00%</b>, and the Heavy Attack DMG increases by <b>12.00%</b> for <b>15s</b>.<br><br>
         CD: <b>20s</b>.`,
@@ -137,7 +137,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Mourning Aix`,
       id: 900000407,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/MourningAix.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/MourningAix.png",
       echoSkill:
         `Transform into Mourning Aix and perform 2 consecutive claw attacks, each attack dealing {0} and {1} Spectro DMG respectively. After the transformation, increase current character's Spectro DMG by <b>12.00%</b> and Resonance Liberation DMG by <b>12.00%</b> for <b>15s</b>.<br><br>
         CD: <b>20s</b>.`,
@@ -156,7 +156,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Crownless`,
       id: 900000408,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Crownless.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Crownless.png",
       echoSkill:
         `Transform into Crownless and perform up to <b>4</b> consecutive attacks. The first <b>2</b> attacks deal {0} Havoc DMG each, the 3rd attack deals {1} Havoc DMG <b>2</b> times, and the 4th attack deals {2} Havoc DMG <b>3</b> times. After the transformation, increase current character's Havoc DMG by <b>12.00%</b> and Resonance Skill DMG by <b>12.00%</b> for <b>15s</b>.<br><br>
         CD: <b>20s</b>.`,
@@ -175,7 +175,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Dreamless`,
       id: 900000409,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Dreamless.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Dreamless.png",
       echoSkill:
         `Transform into Dreamless and perform <b>6</b> consecutive attacks. The first <b>5</b> attacks deal {0} Havoc DMG each, and the last attack deal {1} Havoc DMG. The DMG of this Echo Skill is increased by <b>50%</b> during the first <b>5s</b> after character casts Resonance Liberation.<br><br>
         CD: <b>20s</b>.`,
@@ -194,7 +194,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Mech Abomination`,
       id: 900000410,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/MechAbomination.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/MechAbomination.png",
       echoSkill:
         `Strike the enemies in front, dealing {0} Electro DMG. Summon Mech Waste to attack enemies. Mech Waste deals {1} Electro DMG on-hit and explode after a while to deal {2} Electro DMG. After casting this Echo Skill, increase current character's ATK by <b>12.00%</b> for <b>15s</b>. Damage dealt by Mech Waste is considered Outro Skill DMG.<br><br>
         CD: <b>20s</b>.`,
@@ -213,7 +213,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Thundering Mephis`,
       id: 900000411,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/ThunderingMephis.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/ThunderingMephis.png",
       echoSkill:
         `Transform into Thundering Mephis, engaging in a rapid assault of up to <b>6</b> strikes. The first 5 strikes deal {0} Electro DMG each, while the final strike inflicts {1} Electro DMG, with an additional {2} Electro DMG from the thunder. After the final hit, increase the current character's Electro DMG by <b>12.00%</b> and Resonance Liberation DMG by <b>12.00%</b> for <b>15s</b>.<br><br>
         CD: <b>20s</b>.`,
@@ -232,7 +232,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Stonewall Bracer`,
       id: 900000301,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/StonewallBracer.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/StonewallBracer.png",
       echoSkill:
         `Transform into Stonewall Bracer and charge forward, dealing {0} Physical DMG on-hit, then smash to deal {1} Physical DMG, and gain a shield of <b>10.00%</b> of current character's Max HP. Use the Echo skill again to exit the transformation state.<br><br>
         CD: <b>15s</b>.`,
@@ -251,7 +251,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Violet-Feathered Heron`,
       id: 900000302,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/VioletFeatheredHeron.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/VioletFeatheredHeron.png",
       echoSkill:
         `Transform into Violet-Feathered Heron and enter a Parry Stance. Counterattack when the Parry stance is over, dealing {0} Electro DMG. If attacked during Parry Stance, you can counterattack in advance and additionally recover <b>5</b> Concerto Energy.<br><br>
         CD: <b>15s</b>.`,
@@ -270,7 +270,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Cyan-Feathered Heron`,
       id: 900000303,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/CyanFeatheredHeron.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/CyanFeatheredHeron.png",
       echoSkill:
         `Transform into Cyan-Feathered Heron and charge at the enemies, dealing {0} Aero DMG; This Echo Skill interrupts enemy Special Skills upon dealing damage.<br><br>
         CD: <b>15s</b>.`,
@@ -289,7 +289,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Flautist`,
       id: 900000304,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Flautist.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Flautist.png",
       echoSkill:
         `Transform into Flautist, continuously emitting Electro lasers, dealing {0} Electro DMG for a total of <b>10</b> times. Gain <b>1</b> Concerto Energy every time a hit lands.<br><br>
         CD: <b>15s</b>.`,
@@ -308,7 +308,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Tambourinist`,
       id: 900000305,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Tambourinist.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Tambourinist.png",
       echoSkill:
         `Summon a Tambourinist that periodically emits Melodies of Annihilation. Friendly units hit with Melodies of Annihilation deal an extra Havoc DMG of {0} with their attacks, up to <b>10</b> times. <br><br>
         CD: <b>15s</b>.`,
@@ -327,7 +327,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Rocksteady Guardian`,
       id: 900000306,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/RocksteadyGuardian.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/RocksteadyGuardian.png",
       echoSkill:
         `Transform into Rocksteady Guardian and enter a Parry State. Upon being attacked, deal Spectro DMG equal to {0} of the current character's Max HP, and perform a follow-up attack that deals Spectro DMG equal to {1} of the current character's Max HP. Use the Echo skill again to exit the transformation.<br><br>
         If the attack received is a Special Skill attack, interrupt the enemy's Special Skill and perform a two-stage follow-up attack, each inflicting Spectro DMG equal to {2} of the current character's max HP. These follow-up attacks simultaneously launch three ground-breaking waves, each inflicting Spectro DMG equal to {3} of the current character's Max HP.<br>
@@ -347,7 +347,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Chasm Guardian`,
       id: 900000307,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/ChasmGuardian.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/ChasmGuardian.png",
       echoSkill:
         `Transform into Chasm Guardian to perform a Leap Strike that deals {0} Havoc DMG on hit. Current character loses <b>10.00%</b> HP after the hit lands. Periodically restore current character's HP after 5s for up to <b>10.00%</b> of their Max HP.<br><br>
         CD: <b>15s</b>.`,
@@ -366,7 +366,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Geohide Saurian`,
       id: 900000308,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/GeohideSaurian.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/GeohideSaurian.png",
       echoSkill:
         `Summon a Viridblaze Saurian to continuously spit fire, dealing {0} Fusion DMG <b>10</b> times.<br><br>
         CD: <b>15s</b>.`,
@@ -385,7 +385,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Roseshroom`,
       id: 900000309,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Roseshroom.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Roseshroom.png",
       echoSkill:
         `Summon a Roseshroom that fires a laser, dealing {1} Havoc DMG up to <b>3</b> times.<br><br>
         CD: <b>15s</b>.`,
@@ -404,7 +404,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Havoc Dreadmane`,
       id: 900000310,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/HavocDreadmane.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/HavocDreadmane.png",
       echoSkill:
         `Transform into Havoc Dreadmane to perform tail strikes up to <b>2</b> times. Each strike deals {0} Havoc DMG. An additional strike will be performed on hit, dealing {1} Havoc DMG.<br><br>
         CD: <b>15s</b>.`,
@@ -423,7 +423,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Hoochief`,
       id: 900000311,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Hoochief.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Hoochief.png",
       echoSkill:
         `Use the Echo skill, transform into Hoochief Cyclone and attack with a palm, causing {0} Aero DMG.<br><br>
         CD: <b>15s</b>.`,
@@ -442,7 +442,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Spearback`,
       id: 900000312,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Spearback.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Spearback.png",
       echoSkill:
         `Summon a Spearback to perform 5 consecutive attacks. The first <b>4</b> attacks deal {0} Physical DMG, and the last deals {1} Physical DMG.<br><br>
         CD: <b>15s</b>.`,
@@ -461,7 +461,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Chaserazor`,
       id: 900000313,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Chaserazor.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Chaserazor.png",
       echoSkill:
         `Transform into Carapace to perform a spinning attack that deals {0} Aero DMG, followed by a slash that deals {1} Aero DMG.<br><br>
         CD: <b>15s</b>.`,
@@ -480,7 +480,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Autopuppet Scout`,
       id: 900000314,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/AutopuppetScout.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/AutopuppetScout.png",
       echoSkill:
         `Transform into Autopuppet Scout, dealing {0} Glacio DMG to the surroundings, and generate up to <b>3</b> Ice Walls to block off the enemies.<br><br>
         CD: <b>15s</b>.`,
@@ -499,7 +499,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Vanguard Junrock`,
       id: 900000101,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/VanguardJunrock.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/VanguardJunrock.png",
       echoSkill:
         `Summon a Vanguard Junrock that charges forward, dealing {0} Physical DMG to enemies in its path.<br><br>
         CD: <b>8s</b>.`,
@@ -516,7 +516,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Fission Junrock`,
       id: 900000102,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/FissionJunrock.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/FissionJunrock.png",
       echoSkill:
         `Summon a Fission Junrock. Generate a Resonance Effect that restores <b>2%</b> HP for friendly units each time. If not in combat, you can pick up minerals or plants nearby.<br><br>
         CD: <b>15s</b>.`,
@@ -533,7 +533,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Electro Predator`,
       id: 900000103,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/ElectroPredator.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/ElectroPredator.png",
       echoSkill:
         `Summon an Electro Predator to shoot the enemy <b>5</b>times. The first <b>4</b> shots deals {0} Electro DMG, and the last deals {1} Electro DMG.<br><br>
         CD: <b>8s</b>`,
@@ -550,7 +550,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Glacio Predator`,
       id: 900000104,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/GlacioPredator.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/GlacioPredator.png",
       echoSkill:
         `Summon a Glacio Predator that throws an ice spear, dealing {0} Glacio DMG on hit. Deal {1} Glacio DMG up to <b>10</b> times during the charging time, and {2} Glacio DMG when the spear explodes.<br><br>
         CD: <b>8s</b>.`,
@@ -567,7 +567,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Aero Predator`,
       id: 900000105,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/AeroPredator.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/AeroPredator.png",
       echoSkill:
         `Summon an Aero Predator that throws a dart forward. The dart will bounce between enemies up to three times, dealing {0} Aero DMG each time it hits.<br><br>
         CD: <b>8s</b>.`,
@@ -584,7 +584,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Fusion Warrior`,
       id: 900000106,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/FusionWarrior.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/FusionWarrior.png",
       echoSkill:
         `Transform into Fusion Warrior to perform a Counterattack. If the Counterattack is successful, the cooldown time of this skill will be reduced by <b>70.00%</b>, and {1} Fusion DMG will be dealt.<br><br>
         CD: <b>15s</b>`,
@@ -601,7 +601,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Havoc Warrior`,
       id: 900000107,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/HavocWarrior.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/HavocWarrior.png",
       echoSkill:
         `Transform into Havoc Warrior to attack up to <b>3</b> times, dealing {0} Havoc DMG each time.<br><br>
         CD: <b>15s</b>`,
@@ -618,7 +618,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Snip Snap`,
       id: 900000108,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/SnipSnap.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/SnipSnap.png",
       echoSkill:
         `Summon a Snip Snap that throws fireballs at the enemy, dealing {0} Fusion DMG on-hit.<br><br>
         CD: <b>8s</b>`,
@@ -635,7 +635,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Zig Zag`,
       id: 900000109,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/ZigZag.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/ZigZag.png",
       echoSkill:
         `Summon a Zig Zag that denotates Spectro energy, dealing {0} Spectro DMG and creating a Stagnation Zone that lasts <b>1.8s</b>.<br><br>
         CD: <b>15s</b>.`,
@@ -652,7 +652,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Whiff Whaff`,
       id: 900000110,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/WhiffWhaff.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/WhiffWhaff.png",
       echoSkill:
         `Summon a Whiff Whaff that triggers an air explosion, dealing {0} Aero DMG and produce a Low-pressure Zone. The Low-pressure Zone continuously pulls enemies nearby towards the center for <b>2s</b>, dealing {2} Aero DMG up to <b>6</b> times.<br><br>
         CD: <b>15s</b>.`,
@@ -669,7 +669,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Tick Tack`,
       id: 900000111,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/TickTack.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/TickTack.png",
       echoSkill:
         `Summon a Tick Tack that charges and bites the enemy. The charge from Tick Tack will deal {0} Havoc DMG to the enemy, and the bite will deal {1} Havoc DMG to the enemy. Reduces enemy Vibration Strength by up to <b>5.00%</b> during <b>5s</b>.<br><br>
         CD: <b>15s</b>.`,
@@ -686,7 +686,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Gulpuff`,
       id: 900000112,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Gulpuff.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Gulpuff.png",
       echoSkill:
         `Summon a Gulpuff that blows bubbles <b>5</b> times, each time dealing {0} Glacio DMG.<br><br>
         CD: <b>8s</b>.`,
@@ -703,7 +703,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Chirpuff`,
       id: 900000113,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Chirpuff.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Chirpuff.png",
       echoSkill:
         `Summon a Chirpuff that self-inflates and blasts a powerful gust of wind forward <b>3</b> times. Each blast inflicts {0} Aero DMG and pushes enemies backwards.<br><br>
         CD: <b>8s</b>.`,
@@ -720,7 +720,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Glacio Prism`,
       id: 900000114,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/GlacioPrism.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/GlacioPrism.png",
       echoSkill:
         `Summon a Glacio Prism that continuously fires three crystal shards, each dealing {0} Glacio DMG.<br><br>
         D: <b>8s</b>.`,
@@ -737,7 +737,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Fusion Prism`,
       id: 900000115,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/FusionPrism.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/FusionPrism.png",
       echoSkill:
         `Summon a Fusion Prism to fire a crystal shard, dealing {0} Fusion DMG.<br><br>
         CD: <b>8s</b>.`,
@@ -754,7 +754,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Spectro Prism`,
       id: 900000116,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/SpectroPrism.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/SpectroPrism.png",
       echoSkill:
         `Summon a Spectro Prism to emit a laser that hits the enemy up to <b>8</b> times, dealing {1} Spectro DMG each time.<br><br>
         CD: <b>8s</b>.`,
@@ -771,7 +771,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Havoc Prism`,
       id: 900000117,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/HavocPrism.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/HavocPrism.png",
       echoSkill:
         `Summon a Havoc Prism to fire five crystal shards, each dealing {0} Havoc DMG.<br><br>
         CD: <b>8s</b>.`,
@@ -788,7 +788,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Cruisewing`,
       id: 900000118,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Cruisewing.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Cruisewing.png",
       echoSkill:
         `Summon a Cruisewing that restores HP for all current team characters by {0} of their Max HPs plus an additional <b>80</b> points of HP, up to <b>4</b> times.<br><br>
         CD: <b>8s</b>.`,
@@ -805,7 +805,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Sabyr Boar`,
       id: 900000119,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/SabyrBoar.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/SabyrBoar.png",
       echoSkill:
         `Summon a Sabyr Boar to headbutt the enemy into the air, dealing {0} Physical DMG.<br><br>
         CD: <b>8s</b>.`,
@@ -822,7 +822,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Excarat`,
       id: 900000120,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Excarat.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Excarat.png",
       echoSkill:
         `Transform into an Excarat and tunnel underground to advance. In this state, you have the ability to change your direction and are immune to damage.<br><br>
         CD: <b>2s</b>.`,
@@ -839,7 +839,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Young Geohide Saurian`,
       id: 900000121,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/YoungGeohideSaurian.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/YoungGeohideSaurian.png",
       echoSkill:
         `Transform into Baby Viridblaze Saurian to rest in place, and slowly restore HP.<br><br>
         CD: <b>2s</b>.`,
@@ -856,7 +856,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Young Roseshroom`,
       id: 900000122,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/YoungRoseshroom.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/YoungRoseshroom.png",
       echoSkill:
         `Summon a Baby Roseshroom that fires a laser, dealing {0} Havoc DMG.<br><br>
         CD: <b>8s</b>.`,
@@ -873,7 +873,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Hooscamp`,
       id: 900000123,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Hooscamp.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Hooscamp.png",
       echoSkill:
         `Transform into Hooscamp Flinger and pounce at the enemies, dealing {0} Aero DMG.<br><br>
         CD: <b>8s</b>.`,
@@ -890,7 +890,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Diamondclaw`,
       id: 900000124,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Diamondclaw.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Diamondclaw.png",
       echoSkill:
         `Transform into Crystal Scorpion and enter a Parry State. Counterattack when the Parry State is over, dealing {0} Physical DMG.<br><br>
         CD: <b>8s</b>.`,
@@ -907,7 +907,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Hoartoise`,
       id: 900000125,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Hoartoise.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Hoartoise.png",
       echoSkill:
         `Transform into Hoartoise and slowly restore HP. Use the Echo skill again to exit the transformation state.<br><br>
         CD: <b>2s</b>.`,
@@ -924,7 +924,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Fusion Dreamane Minor`,
       id: 900000126,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/FusionDreadmane.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/FusionDreadmane.png",
       echoSkill:
         `Summon a Fusion Dreadmane that fiercely strikes the enemy, dealing {0} Fusion DMG.<br><br>
         CD: <b>8s</b>.`,
@@ -941,7 +941,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: `Traffic Illuminator`,
       id: 900000127,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/TrafficIlluminator.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/TrafficIlluminator.png",
       echoSkill:
         `Summon a Traffic Illuminator, immobilizing enemies for up to <b>1s</b>. The immobilization will be lifted once the enemy is hit.<br><br>
         CD: <b>15s</b>.`,
@@ -958,7 +958,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     {
       name: "Dwarf Cassowary",
       id: 900000128,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/DwarfCassowary.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/DwarfCassowary.png",
       echoSkill: `Summon a Dwarf Cassowary that tracks and attacks the enemy, dealing {0} Physical DMG 3 time(s).<br><br>
       CD: <b>8s</b>.`,
       bio: "Summon a Dwarf Cassowary that tracks and attacks the enemy, dealing {0} Physical DMG 3 time(s). \\n\\nCD: <b>8s</b>.",
@@ -973,7 +973,7 @@ export const WWEchoesJSON: WWEchoes[] = [
   }, {
       name: "Clang Bang",
       id: 900000129,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/ClangBang.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/ClangBang.png",
       echoSkill: `Summon a Clang Bang that follows the enemy and eventually self-combusts, dealing {0} Glacio DMG.<br><br>
       CD: <b>8s</b>.`,
       bio: "Summon a Clang Bang that follows the enemy and eventually self-combusts, dealing {0} Glacio DMG. \\n\\nCD: <b>8s</b>.",
@@ -988,7 +988,7 @@ export const WWEchoesJSON: WWEchoes[] = [
   }, {
       name: "Lava Larva",
       id: 900000130,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/LavaLarva.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/LavaLarva.png",
       echoSkill: `Summon a Lava Larva that continuously attacks enemies, dealing {0} Fusion DMG with each hit. The Lava Larva disappears when the summoner is switched out or moves too far away.<br><br>
       CD: <b>8s</b>.`,
       bio: "Test",
@@ -1003,7 +1003,7 @@ export const WWEchoesJSON: WWEchoes[] = [
   }, {
       name: "Lightcrusher",
       id: 900000315,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Lightcrusher.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Lightcrusher.png",
       echoSkill: `Lunge forward as a Lightcrusher, dealing {0} Spectro DMG. Generate 6 Ablucence on hit. Each Ablucence explosion deals {1} Spectro DMG. Hold the Echo Skill to stay in the Lightcrusher form, which allows you to leap up and pounce forward in the air for a short distance.<br><br>
       CD: <b>15s</b>.`,
       bio: "Test",
@@ -1020,7 +1020,7 @@ export const WWEchoesJSON: WWEchoes[] = [
   }, {
       name: "Glacio Dreadmane",
       id: 900000316,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/GlacioDreadmane.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/GlacioDreadmane.png",
       echoSkill: `Lacerate enemies as a Glacio Dreadmane, dealing {0} Glacio DMG on each hit. Equipped with 2 charges and can be cast mid-air. Glacio Dreadmane deals 20% more DMG while in mid-air and generates 6 Icicles upon landing, each dealing {1} Glacio DMG.<br><br>
       CD: <b>20s</b>.`,
       bio: "Test",
@@ -1037,7 +1037,7 @@ export const WWEchoesJSON: WWEchoes[] = [
   }, {
       name: "Lumiscale Construct",
       id: 900000317,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/LumiscaleConstruct.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/LumiscaleConstruct.png",
       echoSkill: `Transform into a Lumiscale Construct and enter a Parry Stance. If you are not attacked during the Parry Stance, slash to deal {0} Glacio DMG when the stance finishes. If attacked, counterattack instantly, dealing {1} Glacio DMG. When hit with a Special Skill attack while in the Parry Stance, break the Special Skill and counterattack, dealing {1} Glacio DMG.<br><br>
       CD: <b>15s</b>.`,
       bio: "Test",
@@ -1054,7 +1054,7 @@ export const WWEchoesJSON: WWEchoes[] = [
   }, {
       name: "Jué",
       id: 900000412,
-      img: "https://sohansc13.github.io/wuthering-waves-assets/images/echoes/Jue.png",
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Jue.png",
       echoSkill: `Summon Jué to the aid. Jué soars through the air, dealing {0} Spectro DMG, and summons thunderbolts that strike nearby enemies up to <b>5</b> times, each hit dealing {1} Spectro DMG. Jué then spirals downward, attacking surrounding enemies twice, each hit dealing {0} Spectro DMG. Casting this Echo Skill grants the Resonator a Blessing of Time effect that lasts <b>15s</b>, during when: -The Resonator gains <b>16%</b> Resonance Skill DMG Bonus. -When the Resonator's Resonance Skill hits the target, inflict {3} Spectro DMG 1 time per second for 15s, considered as the Resonator's Resonance Skill DMG.<br><br>
       CD: <b>20s</b>.`,
       bio: "Test",

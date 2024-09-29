@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
 
 export const Baizhi: WWCharacter = {
     name: "Baizhi",
@@ -16,9 +16,9 @@ Despite appearing aloof, she is approachable to those who seek knowledge.
 Her insatiable thirst for understanding drives her to tirelessly study Remnant Energy.
 She will stop at nothing until its mysteries are unraveled, even if it means dedicating her entire life to the pursuit.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_bailian_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Baizhi.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Baizhi_Full_Sprite.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_bailian_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Baizhi.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Baizhi_Full_Sprite.png"
     },
     asension: {
         charaAsension: [

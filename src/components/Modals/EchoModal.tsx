@@ -505,7 +505,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                 <img
                   className="echo-filter-btn"
                   src={
-                    "https://sohansc13.github.io/wuthering-waves-assets/images/icons_ui2/Filter.png"
+                    "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ui2/Filter.png"
                   }
                 />
               </div>
@@ -618,7 +618,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                   </p>
                   <img
                     className="example-echo-img"
-                    src="https://sohansc13.github.io/wuthering-waves-assets/images/DreamlessEcho.png"
+                    src="https://whisperingsea.github.io/wuthering-waves-assets/images/DreamlessEcho.png"
                   />
                   <p>
                     <b>
@@ -642,7 +642,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                   </p>
                   <img
                     className="example-echo-img"
-                    src="https://sohansc13.github.io/wuthering-waves-assets/images/ImageProcessor2.png"
+                    src="https://whisperingsea.github.io/wuthering-waves-assets/images/ImageProcessor2.png"
                   />
                   <p>
                     <b>
@@ -651,7 +651,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     </b>
                   </p>
                   <div>
-                    <img src="https://sohansc13.github.io/wuthering-waves-assets/images/ImageProcessor.png" />
+                    <img src="https://whisperingsea.github.io/wuthering-waves-assets/images/ImageProcessor.png" />
                   </div>
                   <p>
                     <b>

@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Jianxin: WWCharacter = {
     name: "Jianxin",
@@ -15,9 +15,9 @@ export const Jianxin: WWCharacter = {
 Her upbringing instilled in her a pure and persistent dedication to perfecting her martial arts skills.
 Now, she journeys into the secular world, eager to experience the bittersweetness of everyday life and gain a deeper understanding of the world around her.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_jiexin_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Jianxin.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Jianxin_Full_Sprite.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_jiexin_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Jianxin.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Jianxin_Full_Sprite.png"
     },
     asension: {
         charaAsension: [

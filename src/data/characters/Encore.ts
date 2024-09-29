@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
 
 export const Encore: WWCharacter = {
     name: "Encore",
@@ -15,9 +15,9 @@ export const Encore: WWCharacter = {
 She always has two Woolies with her, who are Encore's best friends and protectors.
 With Cosmos and Cloudy, Encore travels all over the world!`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_anke_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Encore.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/EncoreModel.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_anke_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Encore.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/EncoreModel.png"
     },
     asension: {
         charaAsension: [

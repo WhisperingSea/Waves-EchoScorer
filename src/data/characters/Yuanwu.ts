@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
 
 export const Yuanwu: WWCharacter = {
     name: "Yuanwu",
@@ -14,9 +14,9 @@ export const Yuanwu: WWCharacter = {
     bio: `As the proprietor of a boxing gym, Yuanwu is a polite and modest gentleman, displaying composure and confidence in his actions.
 Having honed his skills in the Leihuang martial arts style, Yuanwu also earned mastery in health management.A perfect synergy of strength and elegance.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_yuanwu_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Yuanwu.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Yuanwu_Illustration.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_yuanwu_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Yuanwu.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Yuanwu_Illustration.png"
     },
     asension: {
         charaAsension: [

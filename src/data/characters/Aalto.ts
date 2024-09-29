@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
 
 export const Aalto: WWCharacter = {
     name: "Aalto",
@@ -17,9 +17,9 @@ He was invited to join the Black Shores, a mysterious organization based on an i
 Both working for the Black Shores as Consultants, Aalto and Encore have become an inseparable and lively duo during missions.
 Despite his skittish demeanor, Aalto's true character shines through as a reliable and attentive individual`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_qiushui_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Aalto.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Aalto_Full_body_illustration.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_qiushui_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Aalto.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Aalto_Full_body_illustration.png"
     },
     asension: {
         charaAsension: [

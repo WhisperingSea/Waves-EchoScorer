@@ -13,7 +13,7 @@ const FeaturesModal: React.FC<FeaturesModalProps> = ({ onClose, pageLink }) => {
   const { setSelectedCharacterId } = useDataContext();
 
   const img =
-    "https://sohansc13.github.io/wuthering-waves-assets/images/CloseButton.png";
+    "https://whisperingsea.github.io/wuthering-waves-assets/images/CloseButton.png";
 
   const closeModal = () => {
     onClose();

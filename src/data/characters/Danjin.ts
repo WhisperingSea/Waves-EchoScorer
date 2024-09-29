@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://sohansc13.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
 
 export const Danjin: WWCharacter = {
     name: "Danjin",
@@ -15,9 +15,9 @@ export const Danjin: WWCharacter = {
 She travels the lands refining her knowledge in an endeavour to seek the true meaning of good and evil.
 Though perils lurk in every corner of her journey, she vowes to cleanse the world of villainy.`,
     images: {
-        portrait: "https://sohansc13.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_micai_UI.png",
-        icon_sq: "https://sohansc13.github.io/wuthering-waves-assets/images/icons_character/Danjin.png",
-        model: "https://sohansc13.github.io/wuthering-waves-assets/images/models/Danjin_Full_Sprite.png"
+        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_micai_UI.png",
+        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Danjin.png",
+        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Danjin_Full_Sprite.png"
     },
     asension: {
         charaAsension: [
