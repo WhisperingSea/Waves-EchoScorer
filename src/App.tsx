@@ -38,7 +38,7 @@ const App = () => {
                       <LocalStorageContextProvider>
                         <SearchFilterProvider>
                           <ScorerContextProvider>
-                            <Router basename="/Waves-EchoScorer">
+                            <Router>
                               <Navbar />
                               <Sidebar />
                               <Routes>
