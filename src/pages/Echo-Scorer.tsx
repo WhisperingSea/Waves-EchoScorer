@@ -264,6 +264,13 @@ const EchoScorer: React.FC = () => {
                 downloadDivAsImage={downloadDivAsImage}
               />
             </div>
+            <p className="Scorer-Note">
+              <b>
+                Important Note: Please check the Scoring Algorithm and makes
+                sure all preferred stats are correct. The default stats may not
+                align with you build.
+              </b>
+            </p>
             <div className="echo-scorer-grid" ref={divRef}>
               <div className="scorer-item-2">
                 {imageUrl === null ? (
