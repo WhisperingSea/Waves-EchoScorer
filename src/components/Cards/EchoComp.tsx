@@ -103,7 +103,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
           "ATK%",
           "DEF%",
           "Crit. Rate%",
-          "Crit. Damage%",
+          "Crit. DMG%",
           "Healing Bonus%",
         ];
       default:
