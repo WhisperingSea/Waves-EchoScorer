@@ -26,45 +26,6 @@ export const WWForteBonus: WWForteBonusType[] = [
     {
         name: "Rover-Spectro",
         Id: 1001,
-        skillBonuses: [
-            {
-                id: 1, 
-                type: "Inherant Skill",
-                name: "Reticence",
-                effect: `Basic Attack Resonating Echoes`, 
-                values: [0.60]
-            },
-            {
-                id: 2, 
-                type: "Inherant Skill",
-                name: "Silent Listener",
-                effect: `Rover gains <strong>15%</strong> ATK increase for 5s upon casting Heavy Attack <span class="Highlight">Resonance</span>`, 
-                values: [0.15]
-            }
-        ],
-        sequenceBonuese: [
-            {
-                id: 1,
-                node: "Sequence Node 2",
-                name: "Microcosmic Murmurs",
-                effect: `Rover's Spectro DMG Bonus is increased by <strong>20%</strong>`,
-                values: [0.20]
-            },
-            {
-                id: 2,
-                node: "Sequence Node 5",
-                name: "Temporal Virtuoso",
-                effect: `Rover's Resonance Liberation DMG Bonus is increased by <strong>40%</strong>`,
-                values: [0.40]
-            },
-            {
-                id: 3,
-                node: "Sequence Node 6",
-                name: "Echoes of Wanderlust",
-                effect: `Resonance Skill Resonating Slashes and Resonance Skill Resonating Spin reduces the target's Spectro DMG RES by <strong>10%</strong> on hit for 20s.`,
-                values: [0.10]
-            },
-        ],
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -79,45 +40,6 @@ export const WWForteBonus: WWForteBonusType[] = [
     {
         name: "Rover-Havoc",
         Id: 1002,
-        skillBonuses: [
-            {
-                id: 1,
-                type: "Inherant Skill",
-                name: "Metamorph",
-                effect: `In the <span class="Highlight">Dark Surge</span> state, Havoc DMG Bonus is increased by <strong>20%</strong>.`,
-                values: [0.20]
-            },
-        ],
-        sequenceBonuese: [
-            {
-                id: 1,
-                node: "Sequence Node 1",
-                name: "Cryptic Insight",
-                effect: `Resonance Skill DMG Bonus is increased by <strong>30%</strong>.`,
-                values: [0.30]
-            },
-            {
-                id: 2,
-                node: "Sequence Node 4",
-                name: "Annihilated Silence",
-                effect: `Heavy Attack Devastation and Resonance Liberation Deadening Abyss reduces enemy Havoc RES by <strong>10%</strong> for 20s on hit.`,
-                values: [0.10]
-            },
-            {
-                id: 3,
-                node: "Sequence Node 5",
-                name: "Aeon Symphony",
-                effect: `In the Dark Surge state, Basic Attack V deals an additional Havoc damage equal to <strong>50%</strong> of Basic Attack V damage.`,
-                values: [0.50]
-            },
-            {
-                id: 4,
-                node: "Sequence Node 6",
-                name: "Ebbing Undercurrent",
-                effect: `In the <color=Highlight>Dark Surge</color> state, Rover's Crit. Rate is increased by <strong>25%</strong>.`,
-                values: [25]
-            },
-        ],
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -132,58 +54,6 @@ export const WWForteBonus: WWForteBonusType[] = [
     {
         name: "Baizhi",
         Id: 1101,
-        skillBonuses: [
-            {
-                id: 1,
-                type: "Outro Skill",
-                name: "Rejuvinating Flow",
-                effect: `Baizhi restores HP equal to 1.54% of her max HP to the next character (or other characters on a nearby team that activates an Outro Skill) every 3s for 30s. Resonators gaining this healing also gain <strong>15%</strong> all-Type DMG Deepen for 6s.`,
-                values: [0.15]
-            },
-            {
-                id: 2,
-                type: "Inherant Skill",
-                name: "Harmonic Range",
-                effect: `When Baizhi casts Resonance Skill <span class="Highlight">Emergency Plan</span>, You'tan generates a field of <span class="Highlight">Euphonia</span> that lasts for 15s.\n
-                <div class="gap"></div>
-                <span class="Title">Euphonia</span>\n
-                ATK of the Resonators who picks up Euphonia is increased by <strong>15%</strong> for 20s.`,
-                values: [0.15]
-            },
-        ],
-        sequenceBonuese: [
-            {
-                id: 1,
-                node: "Sequence Node 2",
-                name: "Silent Tundra",
-                effect: `Resonance Skill <color=Highlight>Emergency Plan</color> increases Baizhi's Glacio DMG Bonus by <strong>15%</strong> and her Healing by 15% if she has 4 "Concentration". These effects last for 12s.`,
-                values: [0.15]
-            },
-            {
-                id: 2,
-                node: "Sequence Node 3",
-                name: "Veritas Lux Mea",
-                effect: `Intro Skill <color=Highlight>Overflowing Frost</color> increases Baizhi's Max HP by <strong>12%</strong> for 10s.`,
-                values: [0.12]
-            },
-            {
-                id: 3,
-                node: "Sequence Node 4",
-                name: "Eternal Verity",
-                effect: `Upon casting Resonance Liberation <color=Highlight>Momentary Union</color>, Resonance Liberation <color=Highlight>Remnant Entities</color> gains the following enhancements:
--<color=Highlight>Remnant Entities</color> can be performed 2 more time(s);
--Healing multiplier of <color=Highlight>Remnant Entities</color> is increased by 20%;
--<color=Highlight>Remnant Entities</color> deals additional Glacio DMG equal to 1.20% of Baizhi's Max HP.`,
-                values: [0.20, 0.012]
-            },
-            {
-                id: 4,
-                node: "Sequence Node 6",
-                name: "Seeker's Devotion",
-                effect: `When <color=Highlight>Euphonia</color> is picked up, increase the Glacio DMG Bonus of all characters nearby by 12% for 20s.`,
-                values: [0.12]
-            },
-        ],
         minorForte: [
             { id: 1, type: "HP", value: 1.8 },
             { id: 2, type: "HP", value: 1.8 },
@@ -333,6 +203,20 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 6, type: `Electro Damage Bonus`, value: 1.8 },
             { id: 7, type: `Electro Damage Bonus`, value: 4.2 },
             { id: 8, type: `Electro Damage Bonus`, value: 4.2 }
+        ]
+    },
+    {
+        name: "Xiangli-Yao",
+        Id: 1304,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Damage", value: 2.4 },
+            { id: 6, type: "Crit. Damage", value: 2.4 },
+            { id: 7, type: "Crit. Damage", value: 5.6 },
+            { id: 8, type: "Crit. Damage", value: 5.6 }
         ]
     },
         {

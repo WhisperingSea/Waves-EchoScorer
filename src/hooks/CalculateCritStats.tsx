@@ -5,6 +5,7 @@ import { useEchoes } from "../contexts/CalcEchoContext";
 import { useForte } from "../contexts/CalcForteContext";
 import { useEffect, useState } from "react";
 import { useSequence } from "../contexts/CalcSequenceContext";
+import { WWForteBonus } from "../data/WWForteBonus";
 
 export function CritcalCalc() {
   const { charaName } = useParams<{ charaName: string }>();
@@ -12,7 +13,7 @@ export function CritcalCalc() {
     useDataContext();
   const { weaponStats } = useWeapons();
   const { echoStats } = useEchoes();
-  const { forteStats, skillLevels } = useForte();
+  const { skillLevels } = useForte();
   const { sequence } = useSequence();
   const [AdditionalPercent, setAdditionalPercent] = useState<number>(0);
   const [sequenceBuff, setSequenceBuff] = useState<number>(0);
@@ -24,6 +25,10 @@ export function CritcalCalc() {
   const cName = Object.values(characters).find(
     (character) => character.name.toLowerCase() === charaName?.toLowerCase()
   );
+
+  const forteStat = Object.values(WWForteBonus).find(
+    (F) => F.Id === selectedCharacterId
+  )?.minorForte;
 
   useEffect(() => {
     if (cName) {
@@ -73,13 +78,11 @@ export function CritcalCalc() {
     weaponStats.secondaryStat === "Crit. Rate"
       ? weaponStats.secondaryStatValue || 0
       : 0;
-  const forteCrit =
-    forteStats.stat2 === "Crit. Rate"
-      ? (forteStats.stat2Value1 || 0) +
-        (forteStats.stat2Value2 || 0) +
-        (forteStats.stat2Value3 || 0) +
-        (forteStats.stat2Value4 || 0)
-      : 0;
+  const forteBonus = Array.isArray(forteStat)
+    ? forteStat?.reduce((total, stat) => {
+        return stat.type === "Crit. Rate" ? total + (stat.value || 0) : total;
+      }, 0)
+    : 0;
   const echoMainCrit = echoStatsArray.reduce((total, echo) => {
     return echo.mainStat === "Crit. Rate%"
       ? total + (echo.mainStatValue || 0)
@@ -108,7 +111,7 @@ export function CritcalCalc() {
     weaponCritPercent +
     echoMainCrit +
     echoCritSubStats +
-    forteCrit +
+    forteBonus +
     sequenceBuff +
     AdditionalPercent;
 
@@ -121,7 +124,7 @@ export function CritcalDamageCalc() {
     useDataContext();
   const { weaponStats } = useWeapons();
   const { echoStats } = useEchoes();
-  const { forteStats, skillLevels } = useForte();
+  const { skillLevels } = useForte();
   const [AdditionalPercent, setAdditionalPercent] = useState<number>(0);
   const { sequence } = useSequence();
   const [sequenceBuff, setSequenceBuff] = useState<number>(0);
@@ -134,6 +137,10 @@ export function CritcalDamageCalc() {
   const cName = Object.values(characters).find(
     (character) => character.name.toLowerCase() === charaName?.toLowerCase()
   );
+
+  const forteStat = Object.values(WWForteBonus).find(
+    (F) => F.Id === selectedCharacterId
+  )?.minorForte;
 
   useEffect(() => {
     if (cName) {
@@ -191,13 +198,11 @@ export function CritcalDamageCalc() {
     weaponStats.secondaryStat === "Crit. Dmg"
       ? weaponStats.secondaryStatValue || 0
       : 0;
-  const forteCritDmg =
-    forteStats.stat2 === "Crit. Damage"
-      ? (forteStats.stat2Value1 || 0) +
-        (forteStats.stat2Value2 || 0) +
-        (forteStats.stat2Value3 || 0) +
-        (forteStats.stat2Value4 || 0)
-      : 0;
+  const forteBonus = Array.isArray(forteStat)
+    ? forteStat?.reduce((total, stat) => {
+        return stat.type === "Crit. Damage" ? total + (stat.value || 0) : total;
+      }, 0)
+    : 0;
   const echoMainCritDmg = echoStatsArray.reduce((total, echo) => {
     return echo.mainStat === "Crit. DMG%"
       ? total + (echo.mainStatValue || 0)
@@ -226,7 +231,7 @@ export function CritcalDamageCalc() {
     weaponCritDmgPercent +
     echoMainCritDmg +
     echoCritDmgSubStats +
-    forteCritDmg +
+    forteBonus +
     sequenceBuff +
     AdditionalPercent +
     AdditionalPercent2;

@@ -5,13 +5,14 @@ import { useEchoes } from "../contexts/CalcEchoContext";
 import { useForte } from "../contexts/CalcForteContext";
 import { useEffect, useState } from "react";
 import { WWCharacterLevelsJSON } from "../data/WWLevels";
+import { WWForteBonus } from "../data/WWForteBonus";
 
 export function AttackCalc() {
   const { characters, selectedCharacterId, level } = useDataContext();
   const { weaponStats } = useWeapons();
   const { echoStats, sonataGroup, sonataGroup2, sonataEffectStacks } =
     useEchoes();
-  const { forteStats, skillLevels } = useForte();
+  const { skillLevels } = useForte();
   const [Sonata2PieceBonus, setSonata2PieceBonus] = useState<number>(0);
   const [Sonata5PieceBonus, setSonata5PieceBonus] = useState<number>(0);
   const [echoPassive, setEchoPassive] = useState(0);
@@ -24,12 +25,14 @@ export function AttackCalc() {
 
   const levels = WWCharacterLevelsJSON.find((i) => i.level === level);
 
+  const forteStat = Object.values(WWForteBonus).find(
+    (F) => F.Id === selectedCharacterId
+  )?.minorForte;
+
   useEffect(() => {
-    // Initialize bonuses
     let newSonata5PieceBonus = 0;
     let newSonata2PieceBonus = 0;
 
-    // Calculate the 5-piece bonus for "Rejuvenating Glow"
     if (
       sonataGroup === "Rejuvenating Glow" &&
       sonataGroup2 === "Rejuvenating Glow"
@@ -37,7 +40,6 @@ export function AttackCalc() {
       newSonata5PieceBonus = 0.15 * sonataEffectStacks;
     }
 
-    // Calculate the 2-piece bonus for "Lingering Tunes"
     if (
       sonataGroup === "Lingering Tunes" ||
       sonataGroup2 === "Lingering Tunes"
@@ -45,7 +47,6 @@ export function AttackCalc() {
       newSonata2PieceBonus = 0.1;
     }
 
-    // Calculate the 5-piece bonus for "Lingering Tunes"
     if (
       sonataGroup === "Lingering Tunes" &&
       sonataGroup2 === "Lingering Tunes"
@@ -64,14 +65,18 @@ export function AttackCalc() {
   const calculatedAtk = Math.floor(baseAtk * (atkMulti / 10000) || 0);
 
   useEffect(() => {
-    if (echoStatsArray.some((i) => i.cost === 3)) {
-      setEchoPassive(100);
-    } else if (echoStatsArray.some((i) => i.cost === 4)) {
-      setEchoPassive(150);
-    } else {
-      setEchoPassive(0);
-    }
-  });
+    let totalEchoPassive = 0;
+
+    echoStatsArray.forEach((echo) => {
+      if (echo.cost === 4) {
+        totalEchoPassive += 150;
+      } else if (echo.cost === 3) {
+        totalEchoPassive += 100;
+      }
+    });
+
+    setEchoPassive(totalEchoPassive);
+  }, [echoStatsArray]);
 
   useEffect(() => {
     if (skillLevels.InherantSkill1.Buff === "ATK") {
@@ -96,13 +101,11 @@ export function AttackCalc() {
     weaponStats.secondaryStat === "ATK"
       ? Math.floor(weaponStats.secondaryStatValue * 10) / 10 / 100 || 0
       : 0;
-  const forteAtk =
-    forteStats.stat1 === "ATK"
-      ? (forteStats.stat1Value1 / 100 || 0) +
-        (forteStats.stat1Value2 / 100 || 0) +
-        (forteStats.stat1Value3 / 100 || 0) +
-        (forteStats.stat1Value4 / 100 || 0)
-      : 0;
+  const forteBonus = Array.isArray(forteStat)
+    ? forteStat?.reduce((total, stat) => {
+        return stat.type === "ATK" ? total + (stat.value || 0) / 100 : total;
+      }, 0)
+    : 0;
   const echoMainAtk = echoStatsArray.reduce((total, echo) => {
     return echo.mainStat === "ATK" ? total + (echo.mainStatValue || 0) : total;
   }, 0);
@@ -151,7 +154,7 @@ export function AttackCalc() {
     weaponAtkPercent +
     echoMainAtkPercent +
     echoATKPercentSubStats +
-    forteAtk +
+    forteBonus +
     Sonata2PieceBonus +
     Sonata5PieceBonus +
     AdditionalPercent +
@@ -173,7 +176,6 @@ export function HealthCalc() {
     useDataContext();
   const { weaponStats } = useWeapons();
   const { echoStats } = useEchoes();
-  const { forteStats } = useForte();
   const [echoPassive, setEchoPassive] = useState(0);
 
   const charaStats = Object.values(characters).find(
@@ -186,6 +188,10 @@ export function HealthCalc() {
 
   const levels = WWCharacterLevelsJSON.find((i) => i.level === level);
 
+  const forteStat = Object.values(WWForteBonus).find(
+    (F) => F.Id === selectedCharacterId
+  )?.minorForte;
+
   useEffect(() => {
     if (cName) {
       setSelectedCharacterId(cName.charaId);
@@ -197,12 +203,16 @@ export function HealthCalc() {
   const hpMulti = levels?.hp_multi as number;
 
   useEffect(() => {
-    if (echoStatsArray.some((i) => i.cost === 1)) {
-      setEchoPassive(2280);
-    } else {
-      setEchoPassive(0);
-    }
-  });
+    let totalEchoPassive = 0;
+
+    echoStatsArray.forEach((echo) => {
+      if (echo.cost === 1) {
+        totalEchoPassive += 2280;
+      }
+    });
+
+    setEchoPassive(totalEchoPassive);
+  }, [echoStatsArray]);
 
   const calculatedHp = Math.floor(baseHp * (hpMulti / 10000) || 0);
 
@@ -210,13 +220,11 @@ export function HealthCalc() {
     weaponStats.secondaryStat === "HP"
       ? Math.floor(weaponStats.secondaryStatValue * 10) / 10 / 100 || 0
       : 0;
-  const forteHp =
-    forteStats.stat1 === "HP"
-      ? (forteStats.stat1Value1 / 100 || 0) +
-        (forteStats.stat1Value2 / 100 || 0) +
-        (forteStats.stat1Value3 / 100 || 0) +
-        (forteStats.stat1Value4 / 100 || 0)
-      : 0;
+  const forteBonus = Array.isArray(forteStat)
+    ? forteStat?.reduce((total, stat) => {
+        return stat.type === "HP" ? total + (stat.value || 0) / 100 : total;
+      }, 0)
+    : 0;
   const echoMainHp = echoStatsArray.reduce((total, echo) => {
     return echo.mainStat === "HP" ? total + (echo.mainStatValue || 0) : total;
   }, 0);
@@ -260,7 +268,7 @@ export function HealthCalc() {
   const TotalHp = calculatedHp;
 
   const TotalHpPercent =
-    weaponHpPercent + echoMainHpPercent + echoHpPercentSubStats + forteHp;
+    weaponHpPercent + echoMainHpPercent + echoHpPercentSubStats + forteBonus;
 
   const finalValue =
     TotalHp * (1 + TotalHpPercent) + echoMainHp + echoPassive + echoHpSubStats;
@@ -276,7 +284,7 @@ export function DefenseCalc() {
     useDataContext();
   const { weaponStats } = useWeapons();
   const { echoStats } = useEchoes();
-  const { forteStats, skillLevels } = useForte();
+  const { skillLevels } = useForte();
   const [AdditionalPercent, setAdditionalPercent] = useState<number>(0);
 
   const charaStats = Object.values(characters).find(
@@ -288,6 +296,10 @@ export function DefenseCalc() {
   );
 
   const levels = WWCharacterLevelsJSON.find((i) => i.level === level);
+
+  const forteStat = Object.values(WWForteBonus).find(
+    (F) => F.Id === selectedCharacterId
+  )?.minorForte;
 
   useEffect(() => {
     if (cName) {
@@ -313,13 +325,11 @@ export function DefenseCalc() {
     weaponStats.secondaryStat === "DEF"
       ? Math.floor(weaponStats.secondaryStatValue * 10) / 10 / 100 || 0
       : 0;
-  const forteDef =
-    forteStats.stat1 === "DEF"
-      ? (forteStats.stat1Value1 / 100 || 0) +
-        (forteStats.stat1Value2 / 100 || 0) +
-        (forteStats.stat1Value3 / 100 || 0) +
-        (forteStats.stat1Value4 / 100 || 0)
-      : 0;
+  const forteBonus = Array.isArray(forteStat)
+    ? forteStat?.reduce((total, stat) => {
+        return stat.type === "DEF" ? total + (stat.value || 0) / 100 : total;
+      }, 0)
+    : 0;
   const echoMainDef = echoStatsArray.reduce((total, echo) => {
     return echo.mainStat === "DEF" ? total + (echo.mainStatValue || 0) : total;
   }, 0);
@@ -368,7 +378,7 @@ export function DefenseCalc() {
     weaponDefPercent +
     echoMainDefPercent +
     echoDefPercentSubStats +
-    forteDef +
+    forteBonus +
     AdditionalPercent;
 
   const finalValue =
