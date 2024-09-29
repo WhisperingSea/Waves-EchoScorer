@@ -238,7 +238,7 @@ export const WWEchoesJSON: WWEchoes[] = [
         CD: <b>20s</b>.`,
       bio: "Test",
       element: 0,
-      cost: 2,
+      cost: 4,
       sonataGroup: [7],
       skill1: ["0", "0", "0", "0"],
       skill2: ["11.4%", "1.14%", "14.25%"],
