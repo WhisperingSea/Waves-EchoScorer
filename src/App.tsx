@@ -22,14 +22,9 @@ import { CalcSequenceProvider } from "./contexts/CalcSequenceContext.tsx";
 import { ScorerContextProvider } from "./contexts/ScorerContext.tsx";
 import Navbar from "./components/Common/Navbar.tsx";
 import Sidebar from "./components/Common/Sidebar.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 const App = () => {
-  // const [activeTab, setActiveTab] = useState<number>(1);
-
-  // const handleTabChange = (tab: number) => {
-  //   setActiveTab(tab);
-  // };
-
   return (
     <DataContextProvider>
       <WeaponContextProvider>
@@ -70,6 +65,7 @@ const App = () => {
                                   path="/features"
                                   element={<Features />}
                                 />
+                                <Route path="*" element={<NotFound />} />
                               </Routes>
                             </Router>
                           </ScorerContextProvider>
