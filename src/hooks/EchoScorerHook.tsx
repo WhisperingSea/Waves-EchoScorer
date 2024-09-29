@@ -44,10 +44,6 @@ export function EchoScorerFunction(index: number) {
       const prefMainCost4 =
         echoStat.cost === 4 && cost4Main?.includes(mainStat) ? 0.4 : 0;
 
-      console.log("pref main stat cost 1 :", prefMainCost1);
-      console.log("pref main stat cost 3 :", prefMainCost3);
-      console.log("pref main stat cost 4 :", prefMainCost4);
-
       if (!st) {
         return 0;
       }

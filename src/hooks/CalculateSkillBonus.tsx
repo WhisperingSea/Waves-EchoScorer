@@ -233,7 +233,6 @@ export function RSkillBonus() {
         .reduce((sum, node) => sum + node.value, 0);
 
       setSequenceBuff(totalValue);
-      console.log(sequenceBuff);
     }
   }, [sequence, selectedCharacterId, setSequenceBuff]);
 
