@@ -230,6 +230,23 @@ export const WWEchoesJSON: WWEchoes[] = [
       recommendedChara: []
     },
     {
+      name: "Fallacy of No Return",
+      id: 900000412,
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/FallacyOfNoReturn.png",
+      echoSkill: "Activate the Echo Skill to summon a fraction of the Fallacy of No Return's power and deal a blast to the surrounding area, inflicting Spectro DMG equal to {0} of max HP, after which the Resonator gains 10% bonus Energy Regen and all team members 10% bonus ATK for 20s.\\n\\nHold Echo Skill to unleash a series of flurry assaults at the cost of STA, each dealing Spectro DMG equal to {1} of max HP; Release to end the assail in a powerful blow, dealing Spectro DMG equal to {2} of max HP.\\n\\nCD: <b>20s</b>.",
+      bio: "Test",
+      element: 0,
+      cost: 2,
+      sonataGroup: [7],
+      skill1: ["0", "0", "0", "0"],
+      skill2: ["11.4%", "1.14%", "14.25%"],
+      skill3: ["12.88%", "1.29%", "16.11%"],
+      skill4: ["14.37%", "1.44%", "17.97%"],
+      skill5: ["15.86%", "1.58%", "19.82%"],
+      advantage: "",
+      recommendedChara: []
+    },
+    {
       name: `Stonewall Bracer`,
       id: 900000301,
       img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/StonewallBracer.png",
