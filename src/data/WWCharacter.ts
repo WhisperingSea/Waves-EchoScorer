@@ -13,6 +13,7 @@ import { Mortefi } from "./characters/Mortefi";
 import { RoverHavoc } from "./characters/Rover-Havoc";
 import { RoverSpectro } from "./characters/Rover-Spectro";
 import { Sanhua } from "./characters/Sanhua";
+import { Shorekeeper } from "./characters/Shorekeeper";
 import { Taoqi } from "./characters/Taoqi";
 import { Verina } from "./characters/Verina";
 import { XiangliYao } from "./characters/XiangliYao";
@@ -117,6 +118,7 @@ export const WWCharacterData: WWCharacter[] = [
     Jiyan,
     Verina,
     Jinhsi,
+    Shorekeeper,
     Taoqi,
     Danjin
 ]

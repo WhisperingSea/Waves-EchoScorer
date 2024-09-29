@@ -296,7 +296,19 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Spectro DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
-        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "ResonanceSkill DMG Bonus", "ATK",]
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Resonance Skill DMG Bonus%", "ATK",]
+    },
+    {
+        name: "Shorekeeper",
+        charaId: 1503,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [5],
+        preferedMainStat1: ["HP%", "Healing Bonus%"],
+        preferedMainStat2: ["HP%", "Energy Regen"],
+        preferedMainStat3: ["HP%"],
+        preferedSubStats: ["HP%", "Energy Regen%", "Crit. DMG%", "Resonance Liberation DMG Bonus%", "HP",]
     },
     {
         name: "Taoqi",
@@ -320,7 +332,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
-        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "ResonanceSkill DMG Bonus", "ATK",]
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Resonance Skill DMG Bonus", "ATK",]
     },
     {
         name: "",

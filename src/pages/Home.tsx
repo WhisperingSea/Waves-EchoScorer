@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [link, setLink] = useState<string>("");
 
-  const chara = Object.values(characters).find((i) => i.charaId === 1304);
+  const chara = Object.values(characters).find((i) => i.charaId === 1503);
 
   const openFeatureModal1 = () => {
     setOpen(true);
@@ -87,10 +87,13 @@ const Home: React.FC = () => {
                 <h2 className="heading-2">Updates :</h2>
                 <ul className="update-list">
                   <li className="update-list-item">
-                    Added Resonator Xiangli Yao
+                    Added Resonator Shorekeeper
                   </li>
                   <li className="update-list-item">
-                    Added Guantlets Verity's Handle
+                    Added Rectifier Stellar Symphony
+                  </li>
+                  <li className="update-list-item">
+                    Added Sword Endless Collapse
                   </li>
                 </ul>
               </div>

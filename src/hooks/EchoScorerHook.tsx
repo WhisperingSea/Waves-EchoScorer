@@ -53,7 +53,7 @@ export function EchoScorerFunction(index: number) {
         return 0;
       }
 
-      const supports = [1101, 1501];
+      const supports = [1101, 1501, 1503];
       const dps = !supports.includes(selectedCharacterId || 0);
 
       let dpsBonus = 0;
