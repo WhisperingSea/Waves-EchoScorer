@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main # Only deploy from the main branch
+      - main
 
 jobs:
   build:
@@ -23,6 +23,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: List files in dist directory
+        run: ls -la ./dist
 
       - name: Deploy to GitHub Pages
         if: success()
