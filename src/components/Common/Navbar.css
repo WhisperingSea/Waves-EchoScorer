@@ -69,6 +69,20 @@
     height: 100%;
 }
 
+.discord-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.discord-link-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    background-color: black;
+}
+
 .nav-link {
     display: flex;
     align-items: center;
@@ -113,6 +127,10 @@
 @media (max-width: 1024px) and (min-width: 768px) {
     .navbar {
         padding: 0 30px;
+    }
+
+    .nav-link {
+        font-size: 16px;
     }
 }
 

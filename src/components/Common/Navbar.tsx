@@ -14,6 +14,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
   let lastScrollTop = 0;
   const [scorerPath, setScorerPath] = useState<boolean>(false);
 
+  const DiscordImg =
+    "https://whisperingsea.github.io/wuthering-waves-assets/images/discord.png";
+
   const handleActiveNav = (tab: number) => {
     setActive(tab);
     if (onTabChange) {
@@ -108,6 +111,18 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
               >
                 Echo-Scorer
               </Link>
+            </li>
+            <li className="list-item">
+              <a
+                className="discord-link"
+                href="https://discord.com/invite/fSkdH75T9U"
+              >
+                <img
+                  className="discord-link-img"
+                  src={DiscordImg}
+                  alt="Discord link image"
+                />
+              </a>
             </li>
           </ul>
         </div>

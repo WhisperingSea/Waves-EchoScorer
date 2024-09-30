@@ -16,7 +16,7 @@ const Sidebar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
   const touchStartY = useRef(0);
 
   const SidebarImg =
-    "https://sohansc13.github.io/wuthering-waves-assets/images/menu.png";
+    "https://whisperingsea.github.io/wuthering-waves-assets/images/menu.png";
 
   const handleSidebarOpen = () => {
     setSidebarOpen(!sidebarOpen);
@@ -151,6 +151,12 @@ const Sidebar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
               onClick={() => handleActiveNav(5)}
             >
               Echo-Scorer
+            </Link>
+            <Link
+              className={`sidebar-link ${active === 5 ? "active-navTab" : ""}`}
+              to="https://discord.com/invite/fSkdH75T9U"
+            >
+              Discord Link
             </Link>
           </div>
         )}
