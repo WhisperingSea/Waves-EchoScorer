@@ -228,16 +228,34 @@ export const WWEchoesJSON: WWEchoes[] = [
       skill5: [`132.61%`, `189.44%`, `31.57%`, `12%`, `12%`, `15`, `25`],
       advantage: ``,
       recommendedChara: []
+    }, 
+    {
+      name: "Jué",
+      id: 900000412,
+      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Jue.png",
+      echoSkill: `Summon Jué to the aid. Jué soars through the air, dealing {0} Spectro DMG, and summons thunderbolts that strike nearby enemies up to <b>5</b> times, each hit dealing {1} Spectro DMG. Jué then spirals downward, attacking surrounding enemies twice, each hit dealing {0} Spectro DMG. Casting this Echo Skill grants the Resonator a Blessing of Time effect that lasts <b>15s</b>, during when: -The Resonator gains <b>16%</b> Resonance Skill DMG Bonus. -When the Resonator's Resonance Skill hits the target, inflict {3} Spectro DMG 1 time per second for 15s, considered as the Resonator's Resonance Skill DMG.<br><br>
+      CD: <b>20s</b>.`,
+      bio: "Test",
+      element: 0,
+      cost: 4,
+      sonataGroup: [5],
+      skill1: ["0", "0", "0", "0"],
+      skill2: ["34.96%", "13.98%", "46%", "11.5%"],
+      skill3: ["39.52%", "15.81%", "52%", "13%"],
+      skill4: ["44.08%", "17.63%", "58%", "14.5%"],
+      skill5: ["48.64%", "19.46%", "64%", "16%"],
+      advantage: ``,
+      recommendedChara: []
     },
     {
       name: "Fallacy of No Return",
-      id: 900000412,
+      id: 900000413,
       img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/FallacyOfNoReturn.png",
       echoSkill: `Activate the Echo Skill to summon a fraction of the Fallacy of No Return's power and deal a blast to the surrounding area, inflicting Spectro DMG equal to {0} of max HP, after which the Resonator gains 10% bonus Energy Regen and all team members 10% bonus ATK for 20s.<br>
         Hold Echo Skill to unleash a series of flurry assaults at the cost of STA, each dealing Spectro DMG equal to {1} of max HP; Release to end the assail in a powerful blow, dealing Spectro DMG equal to {2} of max HP. <br><br>
         CD: <b>20s</b>.`,
       bio: "Test",
-      element: 0,
+      element: 5,
       cost: 4,
       sonataGroup: [7],
       skill1: ["0", "0", "0", "0"],
@@ -1068,23 +1086,6 @@ export const WWEchoesJSON: WWEchoes[] = [
       skill3: ["449.8%", "674.7%"],
       skill4: ["501.7%", "752.55%"],
       skill5: ["553.6% ", "830.4%"],
-      advantage: ``,
-      recommendedChara: []
-  }, {
-      name: "Jué",
-      id: 900000412,
-      img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/Jue.png",
-      echoSkill: `Summon Jué to the aid. Jué soars through the air, dealing {0} Spectro DMG, and summons thunderbolts that strike nearby enemies up to <b>5</b> times, each hit dealing {1} Spectro DMG. Jué then spirals downward, attacking surrounding enemies twice, each hit dealing {0} Spectro DMG. Casting this Echo Skill grants the Resonator a Blessing of Time effect that lasts <b>15s</b>, during when: -The Resonator gains <b>16%</b> Resonance Skill DMG Bonus. -When the Resonator's Resonance Skill hits the target, inflict {3} Spectro DMG 1 time per second for 15s, considered as the Resonator's Resonance Skill DMG.<br><br>
-      CD: <b>20s</b>.`,
-      bio: "Test",
-      element: 0,
-      cost: 4,
-      sonataGroup: [5],
-      skill1: ["0", "0", "0", "0"],
-      skill2: ["34.96%", "13.98%", "46%", "11.5%"],
-      skill3: ["39.52%", "15.81%", "52%", "13%"],
-      skill4: ["44.08%", "17.63%", "58%", "14.5%"],
-      skill5: ["48.64%", "19.46%", "64%", "16%"],
       advantage: ``,
       recommendedChara: []
   }
