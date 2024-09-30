@@ -6,15 +6,29 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://whisperingsea.github.io/Waves-EchoScorer</loc>
-  <loc>https://whisperingsea.github.io/Waves-EchoScorer/chracters</loc>
-  <loc>https://whisperingsea.github.io/Waves-EchoScorer/echoes</loc>
-  <loc>https://whisperingsea.github.io/Waves-EchoScorer/weapons</loc>
-  <loc>https://whisperingsea.github.io/Waves-EchoScorer/echo-scorer/Rover-Spectro</loc>
   <lastmod>2024-09-29T14:23:17+00:00</lastmod>
 </url>
 
+<url>
+  <loc>https://whisperingsea.github.io/Waves-EchoScorer/characters</loc>
+  <lastmod>2024-09-29T14:23:17+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://whisperingsea.github.io/Waves-EchoScorer/echoes</loc>
+  <lastmod>2024-09-29T14:23:17+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://whisperingsea.github.io/Waves-EchoScorer/weapons</loc>
+  <lastmod>2024-09-29T14:23:17+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://whisperingsea.github.io/Waves-EchoScorer/echo-scorer/Rover-Spectro</loc>
+  <lastmod>2024-09-29T14:23:17+00:00</lastmod>
+</url>
 
 </urlset>
