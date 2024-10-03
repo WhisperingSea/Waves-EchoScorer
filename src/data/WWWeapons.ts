@@ -966,9 +966,9 @@ export const WWWeaponsJSON: WWWeapons[] = [
         level: 90,
         weaponType: "Sword",
         statPrimary: "ATK",
-        statPrimaryValue: 462,
+        statPrimaryValue: 37,
         statSecondary: "ATK",
-        statSecondaryValue: 18.2,
+        statSecondaryValue: 4.05,
         source: "Gacha",
       },
       {
@@ -1583,9 +1583,9 @@ export const WWWeaponsJSON: WWWeapons[] = [
         level: 90,
         weaponType: "Rectifier",
         statPrimary: "ATK",
-        statPrimaryValue: 412,
+        statPrimaryValue: 33,
         statSecondary: "Energy Regen",
-        statSecondaryValue: 77,
+        statSecondaryValue: 17.12,
         source: "Gacha",
       }
 ]

@@ -13,6 +13,12 @@ export function EnergyCalc() {
   const [Sonata2PieceBonus, setSonata2PieceBonus] = useState<number>(0);
   const { echoStats, sonataGroup, sonataGroup2 } = useEchoes();
 
+  const countOfOnes = Object.values(echoStats).filter(
+    (i) => i.set === 8
+  ).length;
+
+  const set = countOfOnes >= 2 ? 10 : 0;
+
   //@ts-ignore Ignoring charaStat not called
   const charaStats = Object.values(characters).find(
     (i) => i.charaId === selectedCharacterId
@@ -72,7 +78,8 @@ export function EnergyCalc() {
     weaponCritPercent +
     echoMainEnergy +
     echoEnergySubStats +
-    Sonata2PieceBonus;
+    Sonata2PieceBonus +
+    set;
 
   return finalValue.toFixed(2);
 }
@@ -84,6 +91,12 @@ export function HealCalc() {
   const [Sonata2PieceBonus, setSonata2PieceBonus] = useState<number>(0);
   const { echoStats, sonataGroup, sonataGroup2 } = useEchoes();
   const { forteStats } = useForte();
+
+  const countOfOnes = Object.values(echoStats).filter(
+    (i) => i.set === 7
+  ).length;
+
+  const set = countOfOnes >= 2 ? 10 : 0;
 
   const charaStats = Object.values(characters).find(
     (i) => i.charaId === selectedCharacterId
@@ -126,7 +139,8 @@ export function HealCalc() {
       : total;
   }, 0);
 
-  const finalValue = baseHeal + echoMainHeal + forteHeal + Sonata2PieceBonus;
+  const finalValue =
+    baseHeal + echoMainHeal + forteHeal + Sonata2PieceBonus + set;
 
   return finalValue.toFixed(2);
 }

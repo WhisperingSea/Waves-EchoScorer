@@ -25,6 +25,12 @@ export function AttackCalc() {
 
   const levels = WWCharacterLevelsJSON.find((i) => i.level === level);
 
+  const countOfOnes = Object.values(echoStats).filter(
+    (i) => i.set === 9
+  ).length;
+
+  const set = countOfOnes >= 2 ? 10 : 0;
+
   const forteStat = Object.values(WWForteBonus).find(
     (F) => F.Id === selectedCharacterId
   )?.minorForte;
@@ -158,7 +164,8 @@ export function AttackCalc() {
     Sonata2PieceBonus +
     Sonata5PieceBonus +
     AdditionalPercent +
-    AdditionalPercent2;
+    AdditionalPercent2 +
+    set;
 
   const finalValue =
     TotalAtk * (1 + TotalAtkpercent) +
