@@ -59,6 +59,7 @@ export function EchoScorerFunction(index: number) {
       let dpsBonus = 0;
       let dpsSubBonus = 0;
       let supportBonus = 0;
+      let supportSubBonus = 0;
       let flatBonus = 0;
 
       // Per stat Roll Bonus = 0.5 per roll / Max = 4
@@ -86,10 +87,16 @@ export function EchoScorerFunction(index: number) {
             ? 5
             : 0;
           flatBonus = ["ATK", "DEF"].includes(prefStatName) ? 2 : 0;
-        } else {
+        } else if (selectedCharacterId === 1101) {
           supportBonus = ["HP%", "Energy Regen%"].includes(prefStatName)
             ? 5
             : 0;
+          flatBonus = ["HP", "DEF"].includes(prefStatName) ? 2 : 0;
+        } else if (selectedCharacterId === 1503) {
+          supportBonus = ["HP%", "Energy Regen%"].includes(prefStatName)
+            ? 5
+            : 0;
+          supportSubBonus = prefStatName.includes("Crit. DMG%") ? 3 : 0;
           flatBonus = ["HP", "DEF"].includes(prefStatName) ? 2 : 0;
         }
       }
@@ -105,6 +112,7 @@ export function EchoScorerFunction(index: number) {
           dpsBonus +
           dpsSubBonus +
           supportBonus +
+          supportSubBonus +
           flatBonus) *
         (set ? 1 : 0.5);
 
