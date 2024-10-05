@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Lingyang: WWCharacter = {
     name: "Lingyang",
@@ -14,9 +14,9 @@ export const Lingyang: WWCharacter = {
     bio: `Lingyang is a sincere, compassionate foreign visitor of the human community.
 He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and dread for others through his electrifying "Liondance".`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_lingyang_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Lingyang.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Lingyang_Full_Sprite.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_lingyang_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Lingyang.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Lingyang_Full_Sprite.png"
     },
     asension: {
         charaAsension: [
@@ -129,6 +129,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Majestic Fists',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Lingyang performs up to 5 consecutive attacks, dealing <span class="Ice">Glacio DMG</span>.\n
@@ -218,6 +219,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang2.webp",
                 skillName: 'Ancient Arts',
                 skillDescription: `<span class="Title">Ancient Arts</span>\n
                 Attack the target, dealing <span class="Ice">Glacio DMG</span>.\n
@@ -253,6 +255,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang3.webp",
                 skillName: `Strive: Lion's Vigor`,
                 skillDescription: `Attack the target, dealing <span class="Ice">Glacio DMG</span>, and receive the blessing of <span class="Highlight">Lion's Vigor</span>, which lasts for {0}s.
                 <div class="gap"></div>
@@ -296,6 +299,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang5.webp",
                 skillName: 'Lion Awakens',
                 skillDescription: `Lingyang enters the battlefield, dealing <span class="Ice">Glacio DMG</span>.`,
                 skillDetailNum: [],
@@ -326,6 +330,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang4.webp",
                 skillName: 'Unification of Spirits',
                 skillDescription: `<span class="Title">Heavy Attack: Glorious Plunge</span>\n
                 When Lion's Spirit is full, use <span class="Highlight">Heavy Attack</span> to perform <span class="Highlight">Glorious Plunge</span>, dealing <span class="Ice">Glacio DMG</span>.\n

@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
 export const Yangyang: WWCharacter = {
     name: "Yangyang",
@@ -15,9 +15,9 @@ export const Yangyang: WWCharacter = {
 Instead of seeking the spotlight, Yangyang chooses to provide comfort through quiet companionship for others.
 After enduring hardships and anguish, she has found a clear purpose: to be a beacon of guidance and an aiding presence in a world still in need of healing.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_yangyang_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Yangyang.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Oldyangyang2.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_yangyang_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Yangyang.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Oldyangyang2.png"
     },
     asension: {
         charaAsension: [
@@ -130,6 +130,7 @@ After enduring hardships and anguish, she has found a clear purpose: to be a bea
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Feather as Blade',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Yangayang performs up to 4 consecutive attacks, dealing <span class="Wind">Aero DMG</span>.\n
@@ -213,6 +214,7 @@ After enduring hardships and anguish, she has found a clear purpose: to be a bea
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYangyang2.webp",
                 skillName: 'Zephyr Domain',
                 skillDescription: `Yangyang wields her sword to create a whirling vortex of winds that gathers nearby enemies to the center, dealing <span class="Wind">Aero DMG</span>.`,
                 skillDetailNum: [],
@@ -241,6 +243,7 @@ After enduring hardships and anguish, she has found a clear purpose: to be a bea
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYangyang3.webp",
                 skillName: 'Wind Spirals',
                 skillDescription: `Yangyang conjures a mighty Cyclone that gathers nearby enemies, dealing <span class="Wind">Aero DMG</span>.`,
                 skillDetailNum: [],
@@ -275,6 +278,7 @@ After enduring hardships and anguish, she has found a clear purpose: to be a bea
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYangyang5.webp",
                 skillName: 'Cerulean Song',
                 skillDescription: `Yangyang sends the target into the air, dealing <span class="Wind">Aero DMG</span>.`,
                 skillDetailNum: [],
@@ -305,6 +309,7 @@ After enduring hardships and anguish, she has found a clear purpose: to be a bea
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYangyang4.webp",
                 skillName: 'Echoing Feathers',
                 skillDescription: `<span class="Title">Heavy Attack: Stormy Strike</span>\n
                 When Yangyang has {0} Melodies, she can cast <span class="Highlight">Stormy Strike</span> after <span class="Highlight">Heavy Attack</span>, dealing <span class="Wind">Aero DMG</span>.\n

@@ -69,6 +69,7 @@ export interface WWCharacter {
     };
     skills: {
         skillId: number;
+        skillImg?: string;
         typeName: string;
         skillName: string;
         skillDescription: string;

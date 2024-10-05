@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev//icon_stars/Icon_5_Stars.webp";
 
 export const RoverHavoc: WWCharacter = {
     name: "Rover-Havoc",
@@ -14,9 +14,9 @@ export const RoverHavoc: WWCharacter = {
     bio: `Awakened with an unknown past, Rover embarks on a journey to uncover the truths.
 As secrets are unveiled, Rover establishes deeper connections with the world.`,
     images: {
-            portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_zhujue_UI.png",
-            icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/RoverHavocFemale.png",
-            model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Female_Rover_Model.png"
+            portrait: "https://wuthering-waves-assets.pages.dev//portraits/T_IconRole_Pile_zhujue_UI.png",
+            icon_sq: "https://wuthering-waves-assets.pages.dev//icons_character/RoverHavocFemale.png",
+            model: "https://wuthering-waves-assets.pages.dev//models/Female_Rover_Model.png"
         },
     asension: {
         charaAsension: [
@@ -129,6 +129,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
         {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Tuneslayer',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Rover-Havoc performs up to 5 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>.\n
@@ -210,6 +211,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoverHavoc2.webp",
                 skillName: 'Wingblade',
                 skillDescription: `Transforms sound into feathers, dealing <span class="Dark">Havoc DMG</span>.`,
                 skillDetailNum: [],
@@ -238,6 +240,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             {
                 skillId: 3,
                 typeName: 'Resonance Liberation',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoverHavoc3.webp",
                 skillName: 'Deadening Abyss',
                 skillDescription: `Gather the echoes between Rover's palms to attack a target, dealing <span class="Dark">Havoc DMG</span>.`,
                 skillDetailNum: [],
@@ -272,6 +275,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoverHavoc5.webp",
                 skillName: 'Instant of Annihilation',
                 skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.`,
                 skillDetailNum: [],
@@ -304,6 +308,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoverHavoc4.webp",
                 skillName: 'Umbra Eclipse',
                 skillDescription: `<span class="Title">Devastation</span>\n
                 When "Umbra" is full, hold <span class="Highlight">Basic Attack</span> to cast <span class="Highlight">Devastation</span> to attack the target, dealing <span class="Dark">Havoc DMG</span>, considered as Heavy Attack damage.\n

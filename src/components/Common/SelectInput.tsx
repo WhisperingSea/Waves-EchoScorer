@@ -19,7 +19,6 @@ const SelectInput: React.FC<SelectInputProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Calculate the width of the dropdown based on the input and arrows
     if (containerRef.current) {
       setDropdownWidth(containerRef.current.offsetWidth);
     }
@@ -98,7 +97,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
             padding: "0",
             boxSizing: "border-box",
             opacity: disabled ? 0.5 : 1, // Dimmed when disabled
-            cursor: disabled ? "not-allowed" : "pointer", // Pointer change
+            cursor: disabled ? "not-allowed" : "pointer",
           }}
           disabled={disabled}
         >
@@ -119,7 +118,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
             color: "white",
             border: "1px solid white",
             boxSizing: "border-box",
-            opacity: disabled ? 0.5 : 1, // Dimmed when disabled
+            opacity: disabled ? 0.5 : 1,
             cursor: disabled ? "not-allowed" : "text", // Input should allow text cursor
           }}
           disabled={disabled}
@@ -142,8 +141,8 @@ const SelectInput: React.FC<SelectInputProps> = ({
             lineHeight: "1",
             padding: "0",
             boxSizing: "border-box",
-            opacity: disabled ? 0.5 : 1, // Dimmed when disabled
-            cursor: disabled ? "not-allowed" : "pointer", // Pointer change
+            opacity: disabled ? 0.5 : 1,
+            cursor: disabled ? "not-allowed" : "pointer",
           }}
           disabled={disabled}
         >
@@ -157,7 +156,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
             position: "absolute",
             top: "100%",
             left: 0,
-            width: `${dropdownWidth}px`, // Set width of dropdown to match input + arrows
+            width: `${dropdownWidth}px`,
             border: "1px solid #ccc",
             backgroundColor: "#fff",
             zIndex: 1000,

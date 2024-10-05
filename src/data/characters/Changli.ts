@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Changli: WWCharacter = {
     name: "Changli",
@@ -15,9 +15,9 @@ export const Changli: WWCharacter = {
 Being the mentor to Jinhsi, she is persuasive and patient.
 She entertains an unwavering aspiration, holding her ground in the endless game against time and chaos.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/rolecard_1205.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Changli.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/ChangliCharacter_Sprite.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/rolecard_1205.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Changli.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/ChangliCharacter_Sprite.png"
     },
     asension: {
         charaAsension: [
@@ -130,6 +130,7 @@ She entertains an unwavering aspiration, holding her ground in the endless game 
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Blazing Enlightment',
                 skillDescription: `<span class="Title">Basic Attack</span>
                 Perform up to 4 consecutive attacks, dealing <span class="Fire">Fusion DMG</span>.
@@ -234,6 +235,7 @@ She entertains an unwavering aspiration, holding her ground in the endless game 
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChangli2.webp",
                 skillName: 'Tripartite Flames',
                 skillDescription: `<span class="Title">True Sight: Capture</span>
 After releasing <span class="Highlight">Resonance Skill</span>, Changli rapidly attacks the enemy and enters <span class="Highlight">True Sight</span>, lasting for 12s. In the end, Changli releases a Plunging Attack, dealing <span class="Fire">Fusion DMG</span>.
@@ -288,6 +290,7 @@ When in <span class="Highlight">True Sight</span>, if Changli <span class="Highl
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChangli3.webp",
                 skillName: 'Radiance of Fealty',
                 skillDescription: `Deal <span class="Fire">Fusion DMG</span> to nearby targets, obtaining 4 stacks of [Enflamement], and entering <span class="Highlight">Fiery Feather</span>.
 <span class="Title">Fiery Feather</span>
@@ -324,6 +327,7 @@ When Changli releases Heavy Attack <span class="Highlight">Flaming Sacrifice</sp
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChangli5.webp",
                 skillName: 'Obedience of Rules',
                 skillDescription: `Changli appears in mid-air, attacks the target, and enters <span class="Highlight">True Sight</span>, lasting for 12s.`,
                 skillDetailNum: [],
@@ -354,6 +358,7 @@ When Changli releases Heavy Attack <span class="Highlight">Flaming Sacrifice</sp
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChangli4.webp",
                 skillName: 'Flaming Sacrifice',
                 skillDescription: `<span class="Title">Heavy Attack: Flaming Sacrifice</span>
 When releasing <span class="Highlight">Heavy Attack</span>, if Changli carries 4 stacks of [Enflamement], she consumes all stacks of [Enflamement] to release <span class="Highlight">Flaming Sacrifice</span>, dealing <span class="Fire">Fusion DMG</span>, considered as Resonance Skill DMG.

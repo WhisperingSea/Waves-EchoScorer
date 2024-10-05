@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const RoverSpectro: WWCharacter = {
     name: "Rover-Spectro",
@@ -14,9 +14,9 @@ export const RoverSpectro: WWCharacter = {
     bio: `Awakened with an unknown past, Rover embarks on a journey to uncover the truths.
 As secrets are unveiled, Rover establishes deeper connections with the world.`,
     images: {
-            portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_zhujuenan_UI.png",
-            icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/RoverSpectroMale.png",
-            model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Male_Rover_Model.png?raw=true"
+            portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_zhujuenan_UI.png",
+            icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/RoverSpectroMale.png",
+            model: "https://wuthering-waves-assets.pages.dev/models/Male_Rover_Model.png?raw=true"
         },
     asension: {
         charaAsension: [
@@ -129,6 +129,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
         {
                 skillId: 1,
                 typeName: "Basic Attack",
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: "Vibration Manifestation",
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Rover performs up to 4 consecutive attacks, dealing <span class="Light">Spectro DMG</span>.\n
@@ -231,6 +232,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoverSpectro2.webp",
                 skillName: 'Resonating Slashes',
                 skillDescription: `Rover launches an attack forward, dealing <span class="Light">Spectro DMG</span>.`,
                 skillDetailNum: [],
@@ -261,6 +263,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             {
                 skillId: 3,
                 typeName: 'Resonance Liberation',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoverSpectro3.webp",
                 skillName: 'Echoing Orchestra',
                 skillDescription: `Rover converges Spectro energy to assail the target area, detonating it after a short interval and dealing <span class="Light">Spectro DMG</span>.`,
                 skillDetailNum: [],
@@ -298,6 +301,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoverSpectro5.webp",
                 skillName: 'Waveshock',
                 skillDescription: `Rover attacks the target, dealing <span class="Light">Spectro DMG</span>.`,
                 skillDetailNum: [],
@@ -328,6 +332,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoverSpectro4.webp",
                 skillName: "World in a Grain of Sand",
                 skillDescription: `<span class="Title">Resonance Skill: Resonating Spin</span>\n
                 If "Diminutive Sound" exceeds {0} when <span class="Highlight">Resonance Skill</span> is used, Rover consumes {1} "Diminutive Sound" to cast <span class="Highlight">Resonating Spin</span>, dealing <span class="Light">Spectro DMG</span>, considered as Resonance Skill damage.\n

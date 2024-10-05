@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Zhezhi: WWCharacter = {
     name: "Zhezhi",
@@ -14,9 +14,9 @@ export const Zhezhi: WWCharacter = {
     bio: `Zhezhi is a commissioned painter, quiet and shy with a dedication to her craft.
 She's not very eloquent, but her persistence and love for painting speak volumes.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/Zhezhi_Portrait.webp",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Zhezhi.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Zhezhi_Full_Sprite.webp"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/Zhezhi_Portrait.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Zhezhi.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Zhezhi_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [
@@ -129,6 +129,7 @@ She's not very eloquent, but her persistence and love for painting speak volumes
         {
         skillName: "Dimming Brush",
         skillId: 1,
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillZhezhi2.webp",
         skillDescription: `<span className="Title">Basic Attack</span>
 Perform up to 3 consecutive attacks, dealing <span className="Ice">Glacio DMG</span>.
 <span className="Title">Heavy Attack</span>
@@ -138,7 +139,7 @@ Heavy Attack does not reset the Basic Attack cycle.
 Consume STA to perform up to 2 consecutive attacks while in mid-air, dealing <span className="Ice">Glacio DMG</span>.
 <span className="Title">Dodge Counter</span>
 Use <span className="Highlight">Basic Attack</span> after a successful <span className="Highlight">Dodge</span> to attack the target, dealing <span className="Ice">Glacio DMG</span>.`,
-        typeName: "Normal Attack",
+        typeName: "Basic Attack",
         skillDetailNum: [],
         multipliers: [{
             attributeName: "Stage 1 DMG",
@@ -193,6 +194,7 @@ Use <span className="Highlight">Basic Attack</span> after a successful <span cla
         {
         skillName: "Manifestation",
         skillId: 2,
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillZhezhi2.webp",
         skillDescription: `<span className="Title">Press</span>
 Deal <span className="Ice">Glacio DMG</span>. If "Afflatus" is no less than 60, consume 60 "Afflatus" to summon <span className="Highlight">Phatasmic Imprint - Left</span> and <span className="Highlight">Phatasmic Imprint - Right</span> on the ground.
 <span className="Title">Hold</span>
@@ -248,6 +250,7 @@ Deal <span className="Ice">Glacio DMG</span>. If "Afflatus" is no less than 60, 
         {
         skillName: "Living Canvas",
         skillId: 3,
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillZhezhi.webp",
         skillDescription: `Summon <span className="Highlight">Inklit Spirits</span> for assistance.
 <span className="Title">Inklit Spirit</span>
 When the active Resonator deals DMG, an <span className="Highlight">Inklit Spirit</span> will be summoned to perform a Coordinated Attack, dealing <span className="Ice">Glacio DMG</span>, considered as Basic Attack DMG.
@@ -285,6 +288,7 @@ When the active Resonator deals DMG, an <span className="Highlight">Inklit Spiri
         {
         skillName: "Radiant Ruin",
         skillId: 4,
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillZhezhi5.webp",
         skillDescription: `Attack the target, dealing <span className="Ice">Glacio DMG</span>.`,
         typeName: "Intro Skill",
         skillDetailNum: [],
@@ -313,6 +317,7 @@ When the active Resonator deals DMG, an <span className="Highlight">Inklit Spiri
         {
         skillName: "Ink and Wash",
         skillId: 6,
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillZhezhi4.webp",
         skillDescription: `<span className="Title">Phantasmic Imprint</span>
 Up to 1 of each of <span className="Highlight">Phantasmic Imprint - Left</span>, <span className="Highlight">Phantasmic Imprint - Middle</span>, and <span className="Highlight">Phantasmic Imprint - Right</span> can exist at the same time, each lasting for {0}s.
 <span className="Title">Heavy Attack - Conjuration</span>

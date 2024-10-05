@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
 export const Yuanwu: WWCharacter = {
     name: "Yuanwu",
@@ -14,9 +14,9 @@ export const Yuanwu: WWCharacter = {
     bio: `As the proprietor of a boxing gym, Yuanwu is a polite and modest gentleman, displaying composure and confidence in his actions.
 Having honed his skills in the Leihuang martial arts style, Yuanwu also earned mastery in health management.A perfect synergy of strength and elegance.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_yuanwu_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Yuanwu.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Yuanwu_Illustration.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_yuanwu_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Yuanwu.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Yuanwu_Illustration.png"
     },
     asension: {
         charaAsension: [
@@ -129,6 +129,7 @@ Having honed his skills in the Leihuang martial arts style, Yuanwu also earned m
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Leihuangquan',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Yuanwu performs up to 5 consecutive attacks, dealing <span class="Thunder">Electro DMG</span>.\n
@@ -209,6 +210,7 @@ Having honed his skills in the Leihuang martial arts style, Yuanwu also earned m
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYuanwu2.webp",
                 skillName: 'Leihuang Master',
                 skillDescription: `<span class="Title">Thunder Wedge</span>\n
                 Yuanwu summons <span class="Highlight">Thunder Wedge</span>, dealing <span class="Thunder">Electro DMG</span>, and forms a <span class="Highlight">Thunder Field</span> centered on the <span class="Highlight">Thunder Wedge</span>. <span class="Highlight">Thunder Wedge</span> lasts for {0}s.\n
@@ -272,6 +274,7 @@ Having honed his skills in the Leihuang martial arts style, Yuanwu also earned m
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYuanwu3.webp",
                 skillName: 'Blazing Might',
                 skillDescription: `Awaken the power of thunder and provide Forte Circuit <span class="Highlight">Lightning Infused</span> status for all nearby characters for {0}s, granting them increased Anti-interruption, then perform a powerful blow that deals <span class="Thunder">Electro DMG</span>`,
                 skillDetailNum: ["10"],
@@ -306,6 +309,7 @@ Having honed his skills in the Leihuang martial arts style, Yuanwu also earned m
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYuanwu5.webp",
                 skillName: 'Thunder Bombardment',
                 skillDescription: `Attack the target, dealing <span class="Thunder">Electro DMG</span>.`,
                 skillDetailNum: [],
@@ -336,6 +340,7 @@ Having honed his skills in the Leihuang martial arts style, Yuanwu also earned m
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYuanwu4.webp",
                 skillName: 'Unassuming Blade',
                 skillDescription: `<span class="Title">Rumbling Spark</span>\n
                 When "Readiness" is full, long press Resonance Skill to consume all "Readiness" and cast Rumbling Spark, dealing <span class="Thunder">Electro DMG</span> and entering the <span class="Highlight">Lightning Infused</span> state.\n

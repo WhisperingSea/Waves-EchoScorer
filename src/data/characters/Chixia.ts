@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
 export const Chixia: WWCharacter = {
     name: "Chixia",
@@ -15,9 +15,9 @@ export const Chixia: WWCharacter = {
 She roams Jinzhou City, leaving her fiery mark on every alley she stamps through.
 As the starring hero among her community, Chixia is always ready for anyone in need.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_maxiaofang_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Chixia.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Chixia_Full_Sprite.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_maxiaofang_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Chixia.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Chixia_Full_Sprite.png"
 },
     asension: {
         charaAsension: [
@@ -130,6 +130,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
                 skillName: 'POW POW',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Chixia fires up to 4 consecutive shots, dealing <span class="Fire">Fusion DMG</span>.\n
@@ -205,6 +206,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChixia2.webp",
                 skillName: 'Whizzing Fight Spirit',
                 skillDescription: `Chixia unleashes a flurry of shots, dealing <span class="Fire">Fusion DMG</span>.\n
                 <div class="gap"></div>
@@ -235,6 +237,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChixia3.webp",
                 skillName: 'Blazing Flames',
                 skillDescription: `Chixia fires up fast shots at nearby enemies, dealing <span class="Fire">Fusion DMG</span>.`,
                 skillDetailNum: [],
@@ -269,6 +272,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChixia5.webp",
                 skillName: 'Grand Entrance',
                 skillDescription: `Chixia makes a heroic entrance and fires rapidly with her dual Pistolss at the target, dealing <span class="Fire">Fusion DMG</span>.`,
                 skillDetailNum: [],
@@ -299,6 +303,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChixia4.webp",
                 skillName: 'Heroic Bullets',
                 skillDescription: `<span class="Title">Resonance Skill: DAKA DAKA!</span>\n
                 Hold Resonance Skill <span class="Highlight">Whizzing Fight Spirit</span> to enter <span class="Highlight">DAKA DAKA!</span>. In this state:\n

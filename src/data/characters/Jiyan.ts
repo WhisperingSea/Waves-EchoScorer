@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Jiyan: WWCharacter = {
     name: "Jiyan",
@@ -13,9 +13,9 @@ export const Jiyan: WWCharacter = {
     weapon: "Broadblade",
     bio: `Jiyan is the General of Midnight Rangers stationed in Jinzhou, embracing strong sense of justice and resolution. Born in a family devoted to medicine, Jiyan is both skilled and attentive. Later, in a bid to fend off the encroaching Tacet Discords, he relinquished his role in medicine and took up arms as a soldier.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_jiyan_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Jiyan.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Jiyan_Full_Sprite.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_jiyan_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Jiyan.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Jiyan_Full_Sprite.png"
     },
     asension: {
         charaAsension: [
@@ -128,6 +128,7 @@ export const Jiyan: WWCharacter = {
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
                 skillName: 'Lone Lance',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Jiyan performs up to 5 consecutive attacks, dealing <span class="Wind">Aero DMG</span>.\n
@@ -242,6 +243,7 @@ export const Jiyan: WWCharacter = {
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJiyan2.webp",
                 skillName: 'Windqueller',
                 skillDescription: `Dash forward a certain distance, dealing <span class="Wind">Aero DMG</span>.\n
                 <div class="gap"></div>
@@ -272,6 +274,7 @@ export const Jiyan: WWCharacter = {
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJiyan3.webp",
                 skillName: 'Emerald Storm: Prelude',
                 skillDescription: `After releasing Emerald Storm: Prelude, Jiyan enters <span class="Highlight">Qingloong Mode</span>.\n
                 <div class="gap"></div>
@@ -331,6 +334,7 @@ export const Jiyan: WWCharacter = {
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJiyan5.webp",
                 skillName: 'Tactical Strike',
                 skillDescription: `Jiyan pierces the target in mid-air, dealing <span class="Wind">Aero DMG</span>.`,
                 skillDetailNum: [],
@@ -361,6 +365,7 @@ export const Jiyan: WWCharacter = {
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJiyan4.webp",
                 skillName: 'Qingloong at War',
                 skillDescription: `When casting Resonance Skill <span class="Highlight">Windqueller</span>, if Jiyan has {0} or more "Resolve", he consumes {1} "Resolve" to increase the damage of this Resonance Skill <span class="Highlight">Windqueller</span> by {2}.
                 When Jiyan is in <span class="Highlight">Qingloong Mode</span>, DMG of Resonance Skill <span class="Highlight">Windqueller</span> is increased by {3} and no longer consumes "Resolve".

@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Shorekeeper: WWCharacter = {
     name: "Shorekeeper",
@@ -16,9 +16,9 @@ Despite appearing aloof, she is approachable to those who seek knowledge.
 Her insatiable thirst for understanding drives her to tirelessly study Remnant Energy.
 She will stop at nothing until its mysteries are unraveled, even if it means dedicating her entire life to the pursuit.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/The_Shorekeeper_Full_Sprite.webp",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Shorekeeper.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/The_Shorekeeper_Full_Sprite.webp"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/The_Shorekeeper_Full_Sprite.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Shorekeeper.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/The_Shorekeeper_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [
@@ -131,6 +131,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: 'Origin Calculus',
                 skillDescription: `<span className="Title">Basic Attack</span>
                 Perform up to 4 consecutive attacks, dealing <span className="Light">Spectro DMG</span>. Each hit generates 1 <span className="Highlight">Collapsed Core</span>.
@@ -205,6 +206,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillShorekeeper2.webp",
                 skillName: 'Chaos Theory',
                 skillDescription: `Restore HP for all nearby party members and summon 5 <span className="Highlight">Dim Star Butterflies</span>, which automatically track and attack a target, dealing <span className="Light">Spectro DMG</span>. Follow up with <span className="Highlight">Basic Attack</span> in time to start the Basic Attack cycle from <span className="Highlight">Stage 2</span>.
                 Can be performed in mid-air.`,
@@ -240,6 +242,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillShorekeeper3.webp",
                 skillName: 'End Loop',
                 skillDescription: `<span className="Title">Outer Stellarealm</span>
                 Generate the <span className="Highlight">Outer Stellarealm</span> to restore HP for all party members within its effective range continuously. This effect can be triggered once every 3s.
@@ -288,6 +291,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillShorekeeper5.webp",
                 skillName: 'Proof of Existence',
                 skillDescription: `<span className="Title">Enlightenment</span>
                 Shorekeeper appears to restore HP for all nearby party members and summon 5 <span className="Highlight">Dim Star Butterflies</span>, which automatically track and attack a target, dealing <span className="Light">Spectro DMG</span>. This is considered Resonance Skill DMG.
@@ -348,6 +352,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillShorekeeper4.webp",
                 skillName: 'Astral Chord',
                 skillDescription: `<span className="Title">Flare Star Butterfly</span>
                 Hitting a target with a Normal Attack generates a <span className="Highlight">Collapsed Core</span>, which transforms into a <span className="Highlight">Flare Star Butterfly</span> after {0}s. <span className="Highlight">Flare Star Butterflies</span> automatically track and attack a target, dealing <span className="Light">Spectro DMG</span>. If there are already {1} <span className="Highlight">Collapsed Cores</span>, Shorekeeper's next <span className="Highlight">Normal Attack</span> hit will instantly convert a <span className="Highlight">Collapsed Core</span> into a <span className="Highlight">Flare Star Butterfly</span>.

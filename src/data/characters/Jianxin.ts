@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Jianxin: WWCharacter = {
     name: "Jianxin",
@@ -15,9 +15,9 @@ export const Jianxin: WWCharacter = {
 Her upbringing instilled in her a pure and persistent dedication to perfecting her martial arts skills.
 Now, she journeys into the secular world, eager to experience the bittersweetness of everyday life and gain a deeper understanding of the world around her.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_jiexin_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Jianxin.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Jianxin_Full_Sprite.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_jiexin_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Jianxin.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Jianxin_Full_Sprite.png"
     },
     asension: {
         charaAsension: [
@@ -130,6 +130,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Fengyiquan',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Jianxin performs up to 4 consecutive attacks, dealing <span class="Wind">Aero DMG</span>.\n
@@ -204,6 +205,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJianxin2.webp",
                 skillName: 'Calming Air',
                 skillDescription: `Hold <span class="Highlight">Resonance Skill</span> to enter <span class="Highlight">Parry Stance</span>.
                 <div class="gap"></div>
@@ -256,6 +258,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJianxin3.webp",
                 skillName: 'Purification Force Field',
                 skillDescription: `Creates a strong wind field, continuously pulling targets within the wind field to the center and causing <span class="Wind">Aero DMG</span>. When the wind field disappears, it will cause <span class="Wind">Aero DMG</span> to all targets within the range again.`,
                 skillDetailNum: [],
@@ -302,6 +305,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJianxin5.webp",
                 skillName: 'Essence of Tao',
                 skillDescription: `Pull in targets within the range, dealing <span class="Wind">Aero DMG</span>.`,
                 skillDetailNum: [],
@@ -332,6 +336,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJianxin4.webp",
                 skillName: 'Primordial Chi Spiral',
                 skillDescription: `<span class="Title">Heavy Attack: Primordial Chi Spiral</span>\n
                 When "Chi" reaches max stacks, hold <span class="Highlight">Heavy Attack</span> to cast <span class="Highlight">Primordial Chi Spiral</span> and start <span class="Highlight">Zhoutian Progress</span>.\n

@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
 export const Danjin: WWCharacter = {
     name: "Danjin",
@@ -15,9 +15,9 @@ export const Danjin: WWCharacter = {
 She travels the lands refining her knowledge in an endeavour to seek the true meaning of good and evil.
 Though perils lurk in every corner of her journey, she vowes to cleanse the world of villainy.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_micai_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Danjin.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Danjin_Full_Sprite.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_micai_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Danjin.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Danjin_Full_Sprite.png"
     },
     asension: {
         charaAsension: [
@@ -130,6 +130,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Execution',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Danjin performs up to 3 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>.\n
@@ -201,6 +202,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillDanjin2.webp",
                 skillName: 'Crimson Fragment',
                 skillDescription: `When casting <span class="Highlight">Incinerating Will</span>, each attack consumes {0} of Danjin's max HP. When Danjin's HP is less than {1}, this no longer consumes HP.\n
                 <div class="gap"></div>
@@ -272,6 +274,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillDanjin3.webp",
                 skillName: 'Crimson Bloom',
                 skillDescription: `Danjin's anger intensifies as she frantically swings her dual blades, performing multiple rapid consecutive attacks, and {0} Scarlet Burst attack(s), dealing <span class="Dark">Havoc DMG</span>.`,
                 skillDetailNum: ["1"],
@@ -312,6 +315,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillDanjin5.webp",
                 skillName: 'Vindiction',
                 skillDescription: `With unwavering determination, Danjin unleashes a strike, dealing <span class="Dark">Havoc DMG</span>.`,
                 skillDetailNum: [],
@@ -342,6 +346,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillDanjin4.webp",
                 skillName: 'Serene Vigil',
                 skillDescription: `<span class="Title">Heavy Attack: Chaoscleave</span>\n
                 After accumulating {0} "Ruby Blossom", long press <span class="Highlight">Basic Attack</span> to consume all "Ruby Blossom" to cast <span class="Highlight">Chaoscleave</span>, dealing <span class="Dark">Havoc DMG</span> considered as Heavy Attack damage, and restore HP for Danjin.\n

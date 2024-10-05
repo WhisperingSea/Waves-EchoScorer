@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
 export const Sanhua: WWCharacter = {
     name: "Sanhua",
@@ -16,9 +16,9 @@ Her Forte allows her to cool the surrounding air and conjure snow.
 To maintain emotional stability and prevent Overclocking, Sanhua finds solace in the art of swordplay.
 This allows her to master her Forte with graceful ease and alleviates the burden on her body.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_shanhua_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Sanhua.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Sanhua_Model.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_shanhua_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Sanhua.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Sanhua_Model.png"
     },
     asension: {
         charaAsension: [
@@ -131,6 +131,7 @@ This allows her to master her Forte with graceful ease and alleviates the burden
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Frigid Light',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Sanhua performs up to 5 consecutive attacks, dealing <span class="Ice">Glacio DMG</span>.\n
@@ -211,6 +212,7 @@ This allows her to master her Forte with graceful ease and alleviates the burden
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillSanhua2.webp",
                 skillName: 'Eternal Frost',
                 skillDescription: `Sanhua sends an air blade to create {0} "Ice Prism" cross the ground, dealing <span class="Ice">Glacio DMG</span>.`,
                 skillDetailNum: ["1"],
@@ -239,6 +241,7 @@ This allows her to master her Forte with graceful ease and alleviates the burden
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillSanhua3.webp",
                 skillName: 'Glacial Gaze',
                 skillDescription: `Sanhua deals <span class="Ice">Glacio DMG</span> and creates {0} "Glacier".`,
                 skillDetailNum: ["1", "5"],
@@ -273,6 +276,7 @@ This allows her to master her Forte with graceful ease and alleviates the burden
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillSanhua5.webp",
                 skillName: 'Freezing Thorns',
                 skillDescription: `Sanhua swings her blade downward and creates 1 "Ice Thorn", dealing <span class="Ice">Glacio DMG</span>.`,
                 skillDetailNum: [],
@@ -303,6 +307,7 @@ This allows her to master her Forte with graceful ease and alleviates the burden
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillSanhua4.webp",
                 skillName: 'Clarity of Mind',
                 skillDescription: `<span class="Title">Heavy Attack: Detonate</span>
                 When holding <span class="Highlight">Basic Attack</span>, a cursor moves back and forth on the Forte Gauge. Release <span class="Highlight">Basic Attack</span> while cursor falls in the "Frostbite" area, to perform Heavy Attack <span class="Highlight">Detonate</span>, dealing <span class="Ice">Glacio DMG</span> considered as Heavy Attack damage.

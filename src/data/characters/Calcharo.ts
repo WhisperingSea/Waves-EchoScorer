@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Calcharo: WWCharacter = {
     name: "Calcharo",
@@ -14,9 +14,9 @@ export const Calcharo: WWCharacter = {
     bio: `Leader of the "Ghost Hounds", an international mercenary group.
 Ruthless, vengeful, unforgiving. A potential client must be mindful of the price to pay before making him an offer.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_kakaluo_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Calcharo.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Calcharo_Model.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_kakaluo_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Calcharo.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Calcharo_Model.png"
     },
     asension: {
         charaAsension: [
@@ -129,6 +129,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
                 skillName: 'Gnawing Fang',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Calcharo performs up to 4 consecutive attacks, dealing <span class="Thunder">Electro DMG</span>.\n
@@ -203,6 +204,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCalcharo2.webp",
                 skillName: 'Extermination index',
                 skillDescription: `Calcharo performs up to 3 consecutive attacks, dealing <span class="Thunder">Electro DMG</span>.
                 If Calcharo is switched off field, or if Resonance Skill <span class="Highlight">Extermination index</span> is not performed again in a while, this skill will enter Cooldown.
@@ -245,6 +247,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             {
                 skillId: 3,
                 typeName: 'Resonance Liberation',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCalcharo3.webp",
                 skillName: 'Phantom Etching',
                 skillDescription: `Calcharo attacks the target, dealing <span class="Thunder">Electro DMG</span> and enters <span class="Highlight">Deathblade Gear</span> state. After Resonance Liberation <span class="Highlight">Deathblade Gear</span> state ends, Calcharo's next Intro Skill is replaced with Intro Skill <span class="Highlight">"Necessary Means"</span>, which deals <span class="Thunder">Electro DMG</span>, considered as Intro Skill damage.\n
                 <div class="gap"></div>
@@ -346,6 +349,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCalcharo5.webp",
                 skillName: 'Wanted Outlaw',
                 skillDescription: `Attack the target, dealing <span class="Thunder">Electro DMG</span>.`,
                 skillDetailNum: [],
@@ -376,6 +380,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCalcharo4.webp",
                 skillName: 'Hunting Mission',
                 skillDescription: `<span class="Title">Heavy Attack: "Mercy"</span>\n
                 When Calcharo has {0} "Cruelty", his <span class="Highlight">Heavy Attack</span> is replaced with Heavy Attack <span class="Highlight">"Mercy"</span>.\n

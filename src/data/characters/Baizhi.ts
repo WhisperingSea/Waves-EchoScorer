@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https:/wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
 export const Baizhi: WWCharacter = {
     name: "Baizhi",
@@ -16,9 +16,9 @@ Despite appearing aloof, she is approachable to those who seek knowledge.
 Her insatiable thirst for understanding drives her to tirelessly study Remnant Energy.
 She will stop at nothing until its mysteries are unraveled, even if it means dedicating her entire life to the pursuit.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_bailian_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Baizhi.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Baizhi_Full_Sprite.png"
+        portrait: "https:/wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_bailian_UI.png",
+        icon_sq: "https:/wuthering-waves-assets.pages.dev/icons_character/Baizhi.png",
+        model: "https:/wuthering-waves-assets.pages.dev/models/Baizhi_Full_Sprite.png"
     },
     asension: {
         charaAsension: [
@@ -131,6 +131,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: 'Destined Promise',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Baizhi instructs You'tan to perform up to 4 consecutive attacks, dealing <span class="Ice">Glacio DMG</span>.\n
@@ -205,6 +206,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillBaizhi2.webp",
                 skillName: 'Emergency Plan',
                 skillDescription: `Baizhi calls You'tan to attack the target, dealing <span class="Ice">Glacio DMG</span> while restoring HP for the entire team.`,
                 skillDetailNum: [],
@@ -239,6 +241,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillBaizhi3.webp",
                 skillName: 'Momentary Union',
                 skillDescription: `Baizhi summons You'tan to restore HP for the entire team, generating {0} stacks of <span class="Highlight">Remnant Entities</span>.\n
                 <div class="gap"></div>
@@ -288,6 +291,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillBaizhi5.webp",
                 skillName: 'Overflowing Frost',
                 skillDescription: `Baizhi calls You'tan to perform 1 plunging attack, dealing <span class="Ice">Glacio DMG</span> while restoring HP to all team members nearby.`,
                 skillDetailNum: [],
@@ -324,6 +328,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillBaizhi4.webp",
                 skillName: 'Cycle of Life',
                 skillDescription: `<span class="Title">You'tan</span>\n
                 A Remnant Creature that answers to Baizhi’s mind and desires while sharing all her attributes. You’tan goes back to Baizhi when Baizhi dodges.\n

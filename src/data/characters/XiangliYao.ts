@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const XiangliYao: WWCharacter = {
     name: "Xiangli-Yao",
@@ -14,9 +14,9 @@ export const XiangliYao: WWCharacter = {
     bio: `Huaxu Academy's Principal Investigator, Xiangli Yao, displays exceptional expertise in various research fields despite his young age.
 He is a gentle yet rational soul, embracing unique insights and commitment to the research of Automata Mechanics.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/XiangliyaoPortrait.webp",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/XiangliYao.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Xiangli_Yao_Full_Sprite.webp"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/XiangliyaoPortrait.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/XiangliYao.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Xiangli_Yao_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [
@@ -129,6 +129,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Probe',
                 skillDescription: `<span class="Title">Basic Attack</span>
                 Perform up to 5 consecutive attacks, dealing <span className="Thunder">Electro DMG</span>.
@@ -206,6 +207,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillXiangliYao2.webp",
                 skillName: 'Deduction',
                 skillDescription: `Attack the target, dealing <span className="Thunder">Electro DMG</span>.`,
                 skillDetailNum: [],
@@ -234,6 +236,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillXiangliYao3.webp",
                 skillName: 'Cogitation Model',
                 skillDescription: `Attack the target, dealing <span className="Thunder">Electro DMG</span>. Enter <span className="Highlight">Intuition</span>.
                 When in <span className="Highlight">Intuition</span>:
@@ -321,6 +324,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillXiangliYao5.webp",
                 skillName: 'Principle',
                 skillDescription: `Attack the target, dealing <span className="Thunder">Electro DMG</span>.`,
                 skillDetailNum: [],
@@ -351,6 +355,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillXiangliYao4.webp",
                 skillName: 'Forever Seeking',
                 skillDescription: `<span class="Title">Resonance Skill - Decipher</span>
                 When Capacity reaches {0}, Resonance Skill <span className="Highlight">Deduction</span> is replaced with Resonance Skill <span className="Highlight">Decipher</span>.

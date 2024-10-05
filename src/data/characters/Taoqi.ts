@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
 export const Taoqi: WWCharacter = {
     name: "Taoqi",
@@ -15,9 +15,9 @@ export const Taoqi: WWCharacter = {
 Despite her unhurried demeanor, she is an exceptionally dependable individual who works tirelessly to protect others and provide a peaceful haven.
 With effortless efficiency, she balances her work and personal life, steadily moving towards her ultimate goal: creating a future of true safety for all.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_taohua_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Taoqi.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Taoqi_Model.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_taohua_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Taoqi.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Taoqi_Model.png"
     },
     asension: {
         charaAsension: [
@@ -130,6 +130,7 @@ With effortless efficiency, she balances her work and personal life, steadily mo
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
                 skillName: 'Concealed Edge',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Taoqi performs up to 4 continuous attacks, dealing <span class="Dark">Havoc DMG</span>.\n
@@ -225,6 +226,7 @@ With effortless efficiency, she balances her work and personal life, steadily mo
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillTaoqi2.webp",
                 skillName: 'Fortified Defense',
                 skillDescription: `Taoqi deals <span class="Dark">Havoc DMG</span> to surrounding targets, generating {0} Rocksteady Shield and restoring HP to Taoqi.
                 If attacked when casting <span class="Highlight">Fortified Defense</span>, <span class="Highlight">Strategic Parry</span> will be automatically cast.
@@ -269,6 +271,7 @@ With effortless efficiency, she balances her work and personal life, steadily mo
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillTaoqi3.webp",
                 skillName: 'Unmovable',
                 skillDescription: `Launch an attack based on Taoqi's DEF on the target, dealing <span class="Dark">Havoc DMG</span>.`,
                 skillDetailNum: ["2"],
@@ -303,6 +306,7 @@ With effortless efficiency, she balances her work and personal life, steadily mo
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillTaoqi5.webp",
                 skillName: 'Defense Formation',
                 skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.`,
                 skillDetailNum: [],
@@ -333,6 +337,7 @@ With effortless efficiency, she balances her work and personal life, steadily mo
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillTaoqi4.webp",
                 skillName: 'Power Shift',
                 skillDescription: `<span class="Title">Timed Counters</span>\n
                 When carrying "Resolving Caliber", use <span class="Highlight">Basic Attack</span> after <span class="Highlight">Heavy Attack: Strategic Parry</span> or <span class="Highlight">Intro Skill: Defense Formation</span> to cast <span class="Highlight">Timed Counters</span>, performing up to 3 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>, considered as Basic Attack damage.\n

@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Yinlin: WWCharacter = {
     name: "Yinlin",
@@ -13,9 +13,9 @@ export const Yinlin: WWCharacter = {
     weapon: "Rectifier",
     bio: `Previously known as an outstanding Jinzhou Patroller, Yinlin is steady and reliable, yet harbors hidden depths of secrets. She excels at exploiting resources at her disposal to uncover lurking crimes. Beneath her aloof and flamboyant exterior, Yinlin possesses a heart of gold, reserved only for those she deems trustworthy.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_yinlin_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Yinlin.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Yinlin_Full_Sprite.webp"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_yinlin_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Yinlin.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Yinlin_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [
@@ -128,6 +128,7 @@ export const Yinlin: WWCharacter = {
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: `Zapstring's Dance`,
                 skillDescription: `<span class="Title">Basic Attack</span>\n
 Yinlin controls the puppet "Zapstring" to perform up to 4 attacks, dealing <span class="Thunder">Electro DMG</span>.
@@ -202,6 +203,7 @@ Use <span class="Highlight">Basic Attack</span> after a successful <span class="
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYinlin2.webp",
                 skillName: 'Magnetic Roar',
                 skillDescription: `<span class="Title">Magnetic Roar</span>\n
 The puppet "Zapstring" deals <span class="Thunder">Electro DMG</span> to the target, and puts Yinlin into the <span class="Highlight">Execution Mode</span>.
@@ -272,6 +274,7 @@ If Resonance Skill <span class="Highlight">Lightning Execution</span> is not act
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYinlin3.webp",
                 skillName: 'Thundering Wrath',
                 skillDescription: `Command "Zapstring" to call for thunder to fall upon a large range, dealing <span class="Thunder">Electro DMG</span>.`,
                 skillDetailNum: [],
@@ -306,6 +309,7 @@ If Resonance Skill <span class="Highlight">Lightning Execution</span> is not act
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYinlin5.webp",
                 skillName: 'Raging Storm',
                 skillDescription: `Command puppet "Zapstring" to attack, dealing <span class="Thunder">Electro DMG</span> in a large range.`,
                 skillDetailNum: [],
@@ -336,6 +340,7 @@ If Resonance Skill <span class="Highlight">Lightning Execution</span> is not act
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYinlin4.webp",
                 skillName: 'Chameleon Cipher',
                 skillDescription: `<span class="Title">Chameleon Cipher</span>\n
 When Yinlin's "Judgment Points" is full, her <span class="Highlight">Heavy Attack</span> is replaced with <span class="Highlight">Chameleon Cipher</span>, which consumes all "Judgment Points" to attack the target, dealing <span class="Thunder">Electro DMG</span>. When it hits a target marked with <span class="Highlight">Sinner's Mark</span>, the <span class="Highlight">Sinner's Mark</span> is replaced with <span class="Highlight">Punishment Mark</span>, lasting for {0}s.

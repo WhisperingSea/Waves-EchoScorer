@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
 export const Mortefi: WWCharacter = {
     name: "Mortefi",
@@ -16,9 +16,9 @@ Renowned for his exceptional talent in scientific research, Mortefi was once fam
 Driven by a thirst for knowledge, Mortefi later abandoned his privileged life to work as an International Research Fellow at the Huaxu Academy.
 It's not hard to win Mortefi's favor: Just remember to talk nicely, and always shower him with ample praise.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_baer_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Mortefi.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Mortefi_Illutration.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_baer_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Mortefi.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Mortefi_Illutration.png"
     },
     asension: {
         charaAsension: [
@@ -131,6 +131,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
                 skillName: 'Impromptu Show',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Mortefi uses his dual Pistolss and flames to perform up to 4 consecutive shots, dealing <span class="Fire">Fusion DMG</span>.\n
@@ -212,6 +213,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi2.webp",
                 skillName: 'Passionate Variation',
                 skillDescription: `Launch a flashing lightning of flames forward, dealing <span class="Fire">Fusion DMG</span>.`,
                 skillDetailNum: [],
@@ -240,6 +242,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi3.webp",
                 skillName: 'Violent Finale',
                 skillDescription: `Deal <span class="Fire">Fusion DMG</span>, and apply <span class="Highlight">Burning Rhapsody</span> to all characters in the team.\n
                 <div class="gap"></div>
@@ -294,6 +297,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi5.webp",
                 skillName: 'Dissonance',
                 skillDescription: `Attack the target, dealing <span class="Fire">Fusion DMG</span>.`,
                 skillDetailNum: [],
@@ -324,6 +328,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi4.webp",
                 skillName: 'Fury Fugue',
                 skillDescription: `<span class="Title">Resonance Skill: Fury Fugue</span>
                 When Mortefi's "Annoyance" reaches {0}, his <span class="Highlight">Resonance Skill</span> is replaced with <span class="Highlight">Fury Fudge</span>.

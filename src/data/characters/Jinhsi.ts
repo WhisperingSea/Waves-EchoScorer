@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Jinhsi: WWCharacter = {
     name: "Jinhsi",
@@ -15,9 +15,9 @@ export const Jinhsi: WWCharacter = {
 Through repeated ages, the Lament has preyed upon mankind's vulnerable hope.
 Yet, grasping the nettle, she strives with all her might to forge a path toward tomorrow.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/jinhsi-image.webp",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Jinhsi.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/jinhsi-Full-image.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/jinhsi-image.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Jinhsi.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/jinhsi-Full-image.png"
     },
     asension: {
         charaAsension: [
@@ -130,6 +130,7 @@ Yet, grasping the nettle, she strives with all her might to forge a path toward 
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
                 skillName: 'Slash of Breaking Dawn',
                 skillDescription: `<span class="Title">Basic Attack</span>
 Perform up to 4 consecutive strikes, dealing <span class="Light">Spectro DMG</span>.
@@ -203,9 +204,9 @@ Use <span class="Highlight">Basic Attack</span> after a successful <span class="
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJinhsi2.webp",
                 skillName: 'Trailing Lights of Eons',
                 skillDescription: `Dash forward and perform consecutive strikes that inflict <span class="Light">Spectro DMG</span>.
-
 <span class="Title">Overflowing Radiance</span>
 After Jinhsi uses <span class="Light">Basic Attack 4</span> or, while not in <span class="Highlight">Incarnation</span>, Intro Skill <span class="Highlight">Loong's Halo</span>, an alternative Resonance Skill <span class="Highlight">Overflowing Radiance</span> becomes available within {0}s.
 Resonance Skill <span class="Highlight">Overflowing Radiance</span> inflicts <span class="Highlight">Spectro DMG</span> and sends Jinhsi into <span class="Highlight"> Incarnation</span>`,
@@ -253,6 +254,7 @@ Resonance Skill <span class="Highlight">Overflowing Radiance</span> inflicts <sp
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJinhsi3.webp",
                 skillName: 'Purge of Light',
                 skillDescription: `Unleash the power of a heart's wish to deal <span class="Highlight">Spectro DMG</span>.
 Can be cast in mid-air.`,
@@ -288,6 +290,7 @@ Can be cast in mid-air.`,
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJinhsi5.webp",
                 skillName: `Loong's Halo`,
                 skillDescription: `Attack the target, dealing <span class="Highlight">Spectro DMG</span>.`,
                 skillDetailNum: [],
@@ -318,6 +321,7 @@ Can be cast in mid-air.`,
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJinhsi4.webp",
                 skillName: 'Luminal Synthesis',
                 skillDescription: `<span class="Title">Incarnation</span>
 While in <span class="Highlight">Incarnation</span>:

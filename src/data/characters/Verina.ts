@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Verina: WWCharacter = {
     name: "Verina",
@@ -14,9 +14,9 @@ export const Verina: WWCharacter = {
     bio: `Formerly a member of a Pioneer Association expedition team from the New Federation, Verina is a humble and determined plant breeder.
 Somehow she always ends up taking on caretaker duties in any expedition, showing remarkable tenacity for her age.`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_jueyuan_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Verina.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Verina_Full_Sprite.webp"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_jueyuan_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Verina.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Verina_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [
@@ -129,6 +129,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: 'Cultivation',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Verina performs up to 5 consecutive attacks with vines, dealing <span class="Light">Spectro DMG</span>.\n
@@ -236,6 +237,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillVerina2.webp",
                 skillName: 'Botany Experiment',
                 skillDescription: `Verina converges an energy field in front to grow foliage, dealing <span class="Light">Spectro DMG</span> within the range.`,
                 skillDetailNum: [],
@@ -264,6 +266,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillVerina3.webp",
                 skillName: 'Arboreal Flourish',
                 skillDescription: `Verina nourishes nearby foliage at rapid speed, dealing <span class="Light">Spectro DMG</span> while restoring HP to all Characters on teams nearby. A <span class="Highlight">Photosynthesis Mark</span> is applied to the target on hit.
                 <div class="gap"></div>
@@ -325,6 +328,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillVerina5.webp",
                 skillName: 'Verdant Growth',
                 skillDescription: `Verina attacks the target, dealing <span class="Light">Spectro DMG</span>.`,
                 skillDetailNum: [],
@@ -355,6 +359,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillVerina4.webp",
                 skillName: 'Starflower Blooms',
                 skillDescription: `<span class="Title">Heavy Attack: Starflower Blooms</span>\n
                 When casting <span class="Highlight">Heavy Attack</span>, if Verina carries "Photosynthesis Energy", Verina consumes {0} stack of "Photosynthesis Energy" to recover Concerto Energy and restore HP for all party members nearby;\n

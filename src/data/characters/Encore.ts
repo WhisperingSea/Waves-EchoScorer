@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_5_Stars.webp";
+const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
 export const Encore: WWCharacter = {
     name: "Encore",
@@ -15,9 +15,9 @@ export const Encore: WWCharacter = {
 She always has two Woolies with her, who are Encore's best friends and protectors.
 With Cosmos and Cloudy, Encore travels all over the world!`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_anke_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Encore.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/EncoreModel.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_anke_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Encore.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/EncoreModel.png"
     },
     asension: {
         charaAsension: [
@@ -130,6 +130,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: 'Wooly Attack',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
                 Encore performs up to 4 consecutive attacks, dealing <span class="Fire">Fusion DMG</span>.\n
@@ -213,6 +214,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillEncore2.webp",
                 skillName: 'Flaming Woolies',
                 skillDescription: `<span class="Title">Flaming Woolies</span>\n
                 Encore summons Cloudy and Cosmos to attack with burning rays, dealing <span class="Fire">Fusion DMG</span>.\n
@@ -257,6 +259,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillEncore3.webp",
                 skillName: 'Cosmos Rave',
                 skillDescription: `As Encore loses control, Cosmos breaks free and wreaks havoc on its surroundings.\n
                 <div class="gap"></div>
@@ -357,6 +360,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillEncore5.webp",
                 skillName: 'Woolies Can Help!',
                 skillDescription: `Encore pounces at the enemies with Cosmos, dealing <span class="Fire">Fusion DMG</span>.`,
                 skillDetailNum: [],
@@ -387,6 +391,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillEncore4.webp",
                 skillName: 'Black & White Woolies',
                 skillDescription: `<span class="Title">Resonance Liberation: Cloudy Frenzy</span>\n
                 When Encore's "Dissonance" is full, after casting a <span class="Highlight">Heavy Attack</span>, Encore will consume all "Dissonance" to enter the Dissonance state, reducing damage taken by {0}. Switching Characters does not interrupt "Dissonance".\n

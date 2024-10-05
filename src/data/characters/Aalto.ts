@@ -1,6 +1,6 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity4Star = "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_stars/Icon_4_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
 export const Aalto: WWCharacter = {
     name: "Aalto",
@@ -17,9 +17,9 @@ He was invited to join the Black Shores, a mysterious organization based on an i
 Both working for the Black Shores as Consultants, Aalto and Encore have become an inseparable and lively duo during missions.
 Despite his skittish demeanor, Aalto's true character shines through as a reliable and attentive individual`,
     images: {
-        portrait: "https://whisperingsea.github.io/wuthering-waves-assets/images/portraits/T_IconRole_Pile_qiushui_UI.png",
-        icon_sq: "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_character/Aalto.png",
-        model: "https://whisperingsea.github.io/wuthering-waves-assets/images/models/Aalto_Full_body_illustration.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_qiushui_UI.png",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Aalto.png",
+        model: "https://wuthering-waves-assets.pages.dev/models/Aalto_Full_body_illustration.png"
     },
     asension: {
         charaAsension: [
@@ -132,6 +132,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             {
                 skillId: 1,
                 typeName: 'Basic Attack',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
                 skillName: 'Half Truths',
                 skillDescription: `<span class="Title">Basic Attack</span>
                 Aalto fires up to 5 consecutive shots, dealing <span class="Wind">Aero DMG</span>. Basic Attack 4 will spread the "Mist" forward, which lasts for {0}s.
@@ -213,6 +214,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillAalto2.webp",
                 skillName: 'Shift Trick',
                 skillDescription: `<span class="Title">Mist Avatar</span>\n
                 Casts "Mist" and {0} "Mist Avatar(s)" to taunt the surrounding targets. The avatars inherit a portion of Aalto's HP and generate {1} <span class="Highlight">Mist Bullets</span> around them, dealing <span class="Wind">Aero DMG</span>.\n
@@ -257,6 +259,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             {
                 skillId: 3,
                 typeName: 'Resonance Liveration',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillAalto3.webp",
                 skillName: 'Flower in the Mist',
                 skillDescription: `Generate a "Gate of Quandary" in front, dealing <span class="Wind">Aero DMG</span>. When bullets pass through the "Gate of Quandary", ATK is increased. "Gate of Quandary" lasts for {0}s.`,
                 skillDetailNum: ["10"],
@@ -297,6 +300,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillAalto5.webp",
                 skillName: 'Feint Shot',
                 skillDescription: `Aalto shows up out of thin air to performs rapid continuous shooting, dealing <span class="Wind">Aero damage</span>.`,
                 skillDetailNum: [],
@@ -327,6 +331,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
+                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillAalto4.webp",
                 skillName: 'Misty Cover',
                 skillDescription: `When Aalto passes through "Mist" or "Gate of Quandary", he enters "Mistcloak Dash".\n
                 <div class="gap"></div>
