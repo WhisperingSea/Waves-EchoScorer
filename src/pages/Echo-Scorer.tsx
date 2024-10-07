@@ -13,6 +13,7 @@ import { useWeapons } from "../contexts/CalcWeaponContext";
 import { useWeaponContext } from "../contexts/WeaponDataContext";
 import html2canvas from "html2canvas";
 import Footer from "../components/Common/Footer";
+import ScorerSkills from "../components/PageComponents/ScorerSkills";
 
 const EchoScorer: React.FC = () => {
   const { characters, selectedCharacterId, setSelectedCharacterId, level } =
@@ -422,7 +423,9 @@ const EchoScorer: React.FC = () => {
               <div className="scorer-item-9">
                 <ScorerWeaponCard />
               </div>
-              <div className="scorer-item-10"></div>
+              <div className="scorer-item-10">
+                <ScorerSkills />
+              </div>
             </div>
           </section>
         </main>

@@ -1,0 +1,74 @@
+.scorer-skill-box {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.scorer-skill-box-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.scorer-skill-img-box {
+    position: relative;
+}
+
+.skill-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.skill-level {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(23, 73, 167);
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-dropdown {
+    position: absolute;
+    bottom: 25px;
+    right: -8px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background-color: rgba(24, 164, 245, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.skill-level-option {
+    padding: 5px;
+    color: white;
+    background-color: rgba(19, 86, 131, 0.9);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-level-option:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}

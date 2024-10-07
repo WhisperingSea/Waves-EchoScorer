@@ -241,7 +241,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillShorekeeper3.webp",
                 skillName: 'End Loop',
                 skillDescription: `<span className="Title">Outer Stellarealm</span>
