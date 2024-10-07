@@ -37,6 +37,7 @@
     margin: 0;
     width: 25px;
     height: 25px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +46,7 @@
 .skill-dropdown {
     position: absolute;
     bottom: 25px;
-    right: -8px;
+    right: -5px;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -60,11 +61,11 @@
     color: white;
     background-color: rgba(19, 86, 131, 0.9);
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
     display: flex;
-    font-size: 15px;
+    font-size: 16px;
     align-items: center;
     justify-content: center;
 }
