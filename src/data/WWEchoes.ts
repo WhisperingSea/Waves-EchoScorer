@@ -401,7 +401,7 @@ export const WWEchoesJSON: WWEchoes[] = [
       recommendedChara: []
     },
     {
-      name: `Geohide Saurian`,
+      name: `Viridblazr Saurian`,
       id: 900000308,
       img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/GeohideSaurian.png",
       echoSkill:
@@ -874,7 +874,7 @@ export const WWEchoesJSON: WWEchoes[] = [
       skill5: [`8`]
     },
     {
-      name: `Young Geohide Saurian`,
+      name: `Baby Viridblaze Saurian`,
       id: 900000121,
       img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/YoungGeohideSaurian.png",
       echoSkill:
