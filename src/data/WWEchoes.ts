@@ -401,7 +401,7 @@ export const WWEchoesJSON: WWEchoes[] = [
       recommendedChara: []
     },
     {
-      name: `Viridblazr Saurian`,
+      name: `Viridblaze Saurian`,
       id: 900000308,
       img: "https://whisperingsea.github.io/wuthering-waves-assets/images/echoes/GeohideSaurian.png",
       echoSkill:
