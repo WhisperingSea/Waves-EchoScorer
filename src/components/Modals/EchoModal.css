@@ -573,6 +573,7 @@ img.stat-Icons {
         grid-column: 3 / 7;
         display: block;
         position: fixed;
+        top: 49px;
         right: 0;
         background-color: #000000d2;
         z-index: 2;
@@ -630,6 +631,26 @@ img.stat-Icons {
         grid-template-columns: repeat(3, 1fr) ;
     }
 
+    .calcEcho-modal-box-2 {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .calcEcho-modal-box-3 {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .calcEcho-modal-add-box-2-sidebar {
+        height: 97vh;
+        width: 98vw;
+    }
+
+    .echo-modal-stats-sidebar {
+        height: 100vh;
+        width: 80vw;
+    }
+
     .calcEcho-modal-add-box {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -642,6 +663,6 @@ img.stat-Icons {
     }
 
     .example-echo-img {
-        width: 200px;
+        width: 250px;
     }
 }

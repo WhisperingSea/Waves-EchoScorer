@@ -289,8 +289,8 @@
     }
 
     .Scorer-Image-Section {
-        width: calc(1000px * 0.8);
-        height: calc(450px * 0.8)
+        width: calc(1000px * 0.7);
+        height: calc(450px * 0.7)
     }
 
     .echo-scorer-grid {

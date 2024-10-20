@@ -134,7 +134,11 @@
 }
 
 @media (max-width: 480px) and (min-width: 320px) {
+    .calcWeapon-modal-box {
+    }
+    
     .calcWeapon-modal-box-2 {
+        transform: scale(1.5);
         padding: 10px;
     }
 }

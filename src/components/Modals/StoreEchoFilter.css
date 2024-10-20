@@ -222,3 +222,10 @@
         grid-template-columns: repeat(1, 1fr);
     }    
 }
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .echo-filter-box {
+        width: 90vw;
+        height: 90vh;
+    }
+}
