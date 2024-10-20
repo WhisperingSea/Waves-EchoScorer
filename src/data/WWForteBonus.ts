@@ -157,10 +157,10 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 2, type: "ATK", value: 1.8 },
             { id: 3, type: "ATK", value: 4.2 },
             { id: 4, type: "ATK", value: 4.2 },
-            { id: 5, type: `Fusion Damage Bonus`, value: 1.8 },
-            { id: 6, type: `Fusion Damage Bonus`, value: 1.8 },
-            { id: 7, type: `Fusion Damage Bonus`, value: 4.2 },
-            { id: 8, type: `Fusion Damage Bonus`, value: 4.2 }
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
         ]
     },
     {

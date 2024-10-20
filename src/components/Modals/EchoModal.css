@@ -8,6 +8,7 @@
     box-shadow: 0px 4px 8px rgba(238, 238, 238, 0.692);
     z-index: 1001;
     border-radius: 12px;
+    justify-content: center;
 }
 
 .overlay-echo-modal {
@@ -19,6 +20,16 @@
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     z-index: 1000;
+}
+
+.echo-modal-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    font-size: 0;
+    z-index: 20000;
 }
 
 .calcEcho-modal-box {
@@ -191,7 +202,8 @@
     display: flex;
     flex-direction: column;
     position: sticky;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     top: 0;
 }
 
@@ -217,7 +229,7 @@
 h3.margin-box-text {
     font-size: 18px;
     margin: 3px 10px;
-    margin-left: 25px;
+    flex-grow: 2;
 }
 
 h3.echo-modal-card-cost {
@@ -358,7 +370,7 @@ img.echo-modal-card-set {
 .calcEcho-modal-add-box {
     grid-column: 1 / 4;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     overflow: auto;
     gap: 5px;
     padding: 5px;
@@ -370,19 +382,22 @@ img.echo-modal-card-set {
 
 .calcEcho-modal-add-box-select {
     grid-column: 1 / 4;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid azure;
 }
 
 .calcEcho-modal-add-box-2 {
     grid-column: 4 / 6;
     overflow: auto;
 }
+
 .echo-modal-cards-2 {
     display: flex;
-    padding: 10px 10px;
-    border-radius: 12px;
-    border: 1px solid azure;
+    padding: 2px;
+    border-radius: 8px;
     flex-direction: column;
+    font-size: 0;
 }
 
 .echo-modal-cards-2:hover {
@@ -394,8 +409,9 @@ img.echo-modal-card-set {
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 50%;
+    border-radius: 8px;
     border-bottom: 2px solid white;
+    border-right: 2px solid white;
 }
 
 .echo-modal-card-bottom-2 {
@@ -419,7 +435,6 @@ img.stat-Icons {
     width: 22px;
     height: 22px;
     object-fit: contain;
-    position: absolute;
 }
 
 .Image-addEcho-input {
@@ -459,4 +474,174 @@ img.stat-Icons {
 
 .example-echo-img {
     width: 350px;
+}
+
+@media (max-width: 1100px) and (min-width: 1024px) {
+    .calcEcho-modal-box-2 {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 320px) {
+    .calcEcho-modal-box-2 {
+        width: 85vw;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+
+    .CalcEcho-modal-btn {
+        padding: 4px 8px;
+        font-size: 1.1rem;
+    }
+
+    .calcEcho-modal-store-box {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .echo-modal-stats {
+        grid-column: 4 / 7;
+    }
+
+    .echo-stat-box-name {
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    .echo-modal-stats-box h3 {
+        font-size: 16px;
+        margin: 3px 10px;
+    }
+
+    h3.margin-box-text {
+        font-size: 16px;
+        margin: 3px 10px;
+    }
+
+    .echo-modal-btn-box {
+        flex-direction: column;
+    }
+
+    .echo-modal-delete-btn {
+        margin-top: 0;
+    }
+
+    .calcEcho-modal-box-3 {
+        width: 85vw;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+
+    .calcEcho-modal-add-box-2 {
+        grid-column: 4 / 7;
+    }
+
+    .example-echo-img {
+        width: 280px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .CalcEcho-Modal-Container {
+        padding: 10px;
+    }
+    
+    .calcEcho-modal-store-box {
+        grid-column: 1 / 7;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .calcEcho-modal-add-box-select {
+        border: none;
+    }
+
+    .echo-modal-stats-box {
+        justify-items: normal;
+    }
+
+    .calcEcho-modal-box-2 {
+        padding: 10px;
+    }
+
+    .echo-modal-stats {
+        display: none;
+        transform: translateY(-100%);
+    }
+
+    .echo-modal-stats-sidebar {
+        grid-column: 3 / 7;
+        display: block;
+        position: fixed;
+        right: 0;
+        background-color: #000000d2;
+        z-index: 2;
+        height: 70vh;
+        padding: 0 10px ;
+        overflow-y: auto;
+        transform: translateY(0);
+    }
+
+    .echo-modal-menu {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .calcEcho-modal-box-3 {
+        padding: 10px;
+    }
+
+    .calcEcho-modal-add-box-2 {
+        display: none;
+        transform: translateY(-100%);
+    }
+
+    .calcEcho-modal-add-box {
+        grid-column: 1 / 7;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .calcEcho-modal-add-box-select {
+        grid-column: 1 / 7;
+    }
+
+    .calcEcho-modal-add-box-2-sidebar {
+        grid-column: 3 / 7;
+        display: block;
+        position: fixed;
+        right: 0;
+        background-color: #000000;
+        z-index: 2;
+        height: 67vh;
+        width: 84vw;
+        margin: 0 11px;
+        padding: 0 10px;
+        overflow-y: auto;
+        transform: translateY(0)
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .calcEcho-modal-store-box {
+        grid-template-columns: repeat(3, 1fr) ;
+    }
+
+    .calcEcho-modal-add-box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .CalcEcho-modal-btn {
+        padding: 4px 8px;
+        font-size: 1rem;
+        margin: 5px 0;
+        margin-right: 5px;
+    }
+
+    .example-echo-img {
+        width: 200px;
+    }
 }

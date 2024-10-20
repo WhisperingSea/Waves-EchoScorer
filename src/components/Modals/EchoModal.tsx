@@ -52,6 +52,9 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
     subStats: [],
   });
   const [imgReset, setImgReset] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible2, setIsVisible2] = useState(false);
+  const W = window.innerWidth;
 
   const openFilter = () => {
     setOpen(true);
@@ -183,6 +186,12 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
     (i) => i.storeId === selectedStoreEcho
   );
 
+  useEffect(() => {
+    if (StoreSelectedEcho && W < 768) {
+      setIsVisible(true);
+    }
+  }, [StoreSelectedEcho, W]);
+
   const handleStoreAddEcho = (name: string, cost: number, id: number) => {
     setEchoStats((prev) => ({
       ...prev,
@@ -206,6 +215,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
 
   const handleImageProcess = () => {
     processImages(fileSelected);
+    setIsVisible2(false);
     setImgReset(true);
   };
 
@@ -264,6 +274,11 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
   return (
     <>
       <div className="overlay-echo-modal" onClick={handleOverlayClick}>
+        <img
+          className="echo-modal-close"
+          src="https://whisperingsea.github.io/wuthering-waves-assets/images/CloseButton.png"
+          onClick={closeModal}
+        />
         <div className="CalcEcho-Modal-Container">
           {!noSelect && (
             <button
@@ -275,16 +290,32 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
           )}
           <button
             className="CalcEcho-modal-btn"
-            onClick={() => setActiveTab(2)}
+            onClick={() => {
+              setActiveTab(2), setIsVisible2(false);
+            }}
           >
             My Echoes
           </button>
           <button
             className="CalcEcho-modal-btn"
-            onClick={() => setActiveTab(3)}
+            onClick={() => {
+              setActiveTab(3), setIsVisible2(false);
+            }}
           >
             Add Echoes
           </button>
+          {W < 768 && activeTab === 3 ? (
+            <>
+              <button
+                className="CalcEcho-modal-btn"
+                onClick={() => setIsVisible2(true)}
+              >
+                Image Proc
+              </button>
+            </>
+          ) : (
+            ""
+          )}
           {activeTab === 1 && !noSelect && (
             <div className="calcEcho-modal-box">
               {activeTab === 1 &&
@@ -360,9 +391,20 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                       </div>
                     ))}
               </div>
-              <div className="echo-modal-stats">
+              <div
+                className={`${
+                  isVisible ? "echo-modal-stats-sidebar" : "echo-modal-stats"
+                }`}
+              >
                 {StoreSelectedEcho ? (
                   <>
+                    {W < 768 && isVisible && (
+                      <img
+                        className="echo-modal-menu"
+                        src="https://whisperingsea.github.io/wuthering-waves-assets/images/CloseButton.png"
+                        onClick={() => setIsVisible(false)}
+                      />
+                    )}
                     <h3 className="no-margin echo-stat-box-name">
                       <b>{StoreSelectedEcho.name}</b>
                     </h3>
@@ -370,7 +412,9 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     <div className="echo-modal-stats-box">
                       <img className="stat-Icons" src={Icon} />
                       <h3 className="margin-box-text">
-                        {StoreSelectedEcho.mainStat.replace("%", "")}
+                        {StoreSelectedEcho.mainStat
+                          .replace("%", "")
+                          .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
                         {StoreSelectedEcho.mainStat.includes("%")
@@ -382,10 +426,9 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     <div className="echo-modal-stats-box">
                       <img className="stat-Icons" src={Icon3} />
                       <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat1.stat.replace(
-                          "%",
-                          ""
-                        )}
+                        {StoreSelectedEcho.selectedSubStat1.stat
+                          .replace("%", "")
+                          .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
                         {StoreSelectedEcho.selectedSubStat1.stat.includes("%")
@@ -398,10 +441,9 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     <div className="echo-modal-stats-box">
                       <img className="stat-Icons" src={Icon4} />
                       <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat2.stat.replace(
-                          "%",
-                          ""
-                        )}
+                        {StoreSelectedEcho.selectedSubStat2.stat
+                          .replace("%", "")
+                          .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
                         {StoreSelectedEcho.selectedSubStat2.stat.includes("%")
@@ -414,10 +456,9 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     <div className="echo-modal-stats-box">
                       <img className="stat-Icons" src={Icon5} />
                       <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat3.stat.replace(
-                          "%",
-                          ""
-                        )}
+                        {StoreSelectedEcho.selectedSubStat3.stat
+                          .replace("%", "")
+                          .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
                         {StoreSelectedEcho.selectedSubStat3.stat.includes("%")
@@ -430,10 +471,9 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     <div className="echo-modal-stats-box">
                       <img className="stat-Icons" src={Icon6} />
                       <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat4.stat.replace(
-                          "%",
-                          ""
-                        )}
+                        {StoreSelectedEcho.selectedSubStat4.stat
+                          .replace("%", "")
+                          .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
                         {StoreSelectedEcho.selectedSubStat4.stat.includes("%")
@@ -446,10 +486,9 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     <div className="echo-modal-stats-box">
                       <img className="stat-Icons" src={Icon7} />
                       <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat5.stat.replace(
-                          "%",
-                          ""
-                        )}
+                        {StoreSelectedEcho.selectedSubStat5.stat
+                          .replace("%", "")
+                          .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
                         {StoreSelectedEcho.selectedSubStat5.stat.includes("%")
@@ -542,11 +581,6 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                       <div className="echo-modal-card-top-2">
                         <img src={item.img} alt={`${item.name} Icon`} />
                       </div>
-                      <div className="echo-modal-card-bottom-2">
-                        <div className="echo-name-2">
-                          <h3>{item.name}</h3>
-                        </div>
-                      </div>
                     </div>
                   ))
                 ) : (
@@ -555,7 +589,14 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                   </>
                 )}
               </div>
-              <div className="calcEcho-modal-add-box-2">
+
+              <div
+                className={
+                  isVisible2
+                    ? "calcEcho-modal-add-box-2-sidebar"
+                    : "calcEcho-modal-add-box-2"
+                }
+              >
                 <div className="calcEcho-modal-add-flex-box">
                   <label
                     htmlFor="Echo-Image-Select"
@@ -569,11 +610,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     type="file"
                     onChange={handleFileChange}
                   />
-                  {fileSelected.map((imageSrc, index) => (
-                    <div key={index}>
-                      <p style={{ margin: 0 }}>{imageSrc.name}</p>
-                    </div>
-                  ))}
+
                   {imgReset ? (
                     <button
                       className="image-process-btn"
@@ -590,16 +627,25 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                     </button>
                   )}
                 </div>
+                {fileSelected.map((imageSrc, index) => (
+                  <div key={index}>
+                    <p style={{ margin: 0 }}>{imageSrc.name}</p>
+                  </div>
+                ))}
                 <div>
                   {processedImages.map((imageSrc, index) => (
                     <div key={index}>
                       <img
                         src={imageSrc}
                         alt={`Processed ${index}`}
-                        width="300"
-                        height="400"
                         style={
-                          imgReset ? { display: "block" } : { display: "none" }
+                          imgReset
+                            ? {
+                                display: "block",
+                                height: "auto",
+                                width: W < 481 ? "200px" : "300px",
+                              }
+                            : { display: "none" }
                         }
                       />
                     </div>

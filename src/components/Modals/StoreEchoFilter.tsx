@@ -228,7 +228,7 @@ const StoreEchoFilter: React.FC<StoreEchoFilterTypes> = ({
             <h3 className="sort-type-text">Basic Sort</h3>
             <div className="echo-filter-box-item-1">
               <div className="echo-sort-box">
-                <h3>Sort By Cost : </h3>
+                <h3>Sort By Cost</h3>
                 <select
                   id="Echo-Sort-Cost"
                   className="sort-select"
@@ -246,7 +246,7 @@ const StoreEchoFilter: React.FC<StoreEchoFilterTypes> = ({
                 </select>
               </div>
               <div className="echo-sort-box">
-                <h3>Sort By set : </h3>
+                <h3>Sort By set</h3>
                 <select
                   id="Echo-Sort-Set"
                   className="sort-select"
@@ -273,7 +273,9 @@ const StoreEchoFilter: React.FC<StoreEchoFilterTypes> = ({
                   className="stat-sort-flex"
                   onClick={() => handleDivClick(stat)}
                 >
-                  <h3 className="stat-sort-text">{stat.replace("%", "")}</h3>
+                  <h3 className="stat-sort-text">
+                    {stat.replace("%", "").replace("DMG Bonus", "Bonus")}
+                  </h3>
                   <input
                     id={`${stat}-Main-Id`}
                     className="stat-select-input-radio"
@@ -296,7 +298,10 @@ const StoreEchoFilter: React.FC<StoreEchoFilterTypes> = ({
                   <h3 className="stat-sort-text">
                     {["HP%", "ATK%", "DEF%"].includes(stat)
                       ? stat.replace("%", " %")
-                      : stat.replace("%", "")}
+                      : stat
+                          .replace("%", "")
+                          .replace("DMG Bonus", "")
+                          .replace("Resonance", "Res.")}
                   </h3>
                   <input
                     id={`${stat}-Sub-Id`}

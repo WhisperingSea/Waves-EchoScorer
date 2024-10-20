@@ -12,43 +12,63 @@ const ScorerSkills: React.FC = () => {
   const [RL, setRL] = useState<number>(1);
   const [IS, setIS] = useState<number>(1);
   const [skill, setSkill] = useState<string>("");
+  const [skillDesc, setSkillDesc] = useState<string>(``);
 
   const chara = Object.values(characters).find(
     (char) => char.charaId === selectedCharacterId
   );
 
+  const getDescription = (skill: any) => {
+    const desc = skill?.skillDescription?.replace(
+      /{(\d+)}/g,
+      (match: string, number: string) =>
+        skill?.skillDetailNum?.[parseInt(number)] ?? match
+    );
+    return desc || "";
+  };
+
+  const BasicSkill = chara?.skills.find((i) => i.skillId === 1);
+  const BADesc = getDescription(BasicSkill);
+
+  const ResSkill = chara?.skills.find((i) => i.skillId === 2);
+  const RSDesc = getDescription(ResSkill);
+
+  const ResLib = chara?.skills.find((i) => i.skillId === 3);
+  const RLDesc = getDescription(ResLib);
+
+  const IntroSkill = chara?.skills.find((i) => i.skillId === 4);
+  const ISDesc = getDescription(IntroSkill);
+
+  const Forte = chara?.skills.find((i) => i.skillId === 6);
+  const FCDesc = getDescription(Forte);
+
   const handleSkillLevels = (level: number, skill: Skills) => {
     switch (skill) {
       case "BA": {
         setBA(level);
-        setSkill("");
         break;
       }
       case "RS": {
         setRS(level);
-        setSkill("");
         break;
       }
       case "RL": {
         setRL(level);
-        setSkill("");
         break;
       }
       case "IS": {
         setIS(level);
-        setSkill("");
         break;
       }
       case "FC": {
         setFC(level);
-        setSkill("");
         break;
       }
       default: {
-        setSkill("");
         break;
       }
     }
+    setSkill("");
   };
 
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -72,30 +92,47 @@ const ScorerSkills: React.FC = () => {
   const renderSkillDropdown = (skills: Skills) => {
     return skill === skills ? (
       <div className="skill-dropdown" ref={dropdownRef}>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((Num, index) => (
-          <div
-            key={index}
-            className="skill-level-option"
-            onClick={() => handleSkillLevels(Num, skill)}
-          >
-            {Num}
-          </div>
-        ))}
+        <div className="dropdown-arrow"></div>
+        <div className="skill-level-row">
+          {[1, 2, 3, 4, 5].map((Num) => (
+            <div
+              key={Num}
+              className="skill-level-option"
+              onClick={() => handleSkillLevels(Num, skill)}
+            >
+              {Num}
+            </div>
+          ))}
+        </div>
+        <div className="skill-level-row">
+          {[6, 7, 8, 9, 10].map((Num) => (
+            <div
+              key={Num}
+              className="skill-level-option"
+              onClick={() => handleSkillLevels(Num, skill)}
+            >
+              {Num}
+            </div>
+          ))}
+        </div>
+        <div
+          dangerouslySetInnerHTML={{ __html: skillDesc }}
+          className="scorer-skill-desc"
+        />
       </div>
     ) : null;
   };
 
-  const BasicSkill = chara?.skills.find((i) => i.skillId === 1);
-  const ResSkill = chara?.skills.find((i) => i.skillId === 2);
-  const ResLib = chara?.skills.find((i) => i.skillId === 3);
-  const IntroSkill = chara?.skills.find((i) => i.skillId === 4);
-  const Forte = chara?.skills.find((i) => i.skillId === 6);
+  console.log(skillDesc);
 
   return (
     <>
       <div className="scorer-skill-box">
         <div className="scorer-skill-box-item">
-          <div className="scorer-skill-img-box">
+          <div
+            className="scorer-skill-img-box"
+            onClick={() => setSkillDesc(BADesc)}
+          >
             {renderSkillDropdown("BA")}
             <img
               className="skill-img"
@@ -104,10 +141,12 @@ const ScorerSkills: React.FC = () => {
             />
             <span className="skill-level">{BA}</span>
           </div>
-          <span>BA</span>
         </div>
         <div className="scorer-skill-box-item">
-          <div className="scorer-skill-img-box">
+          <div
+            className="scorer-skill-img-box"
+            onClick={() => setSkillDesc(RSDesc)}
+          >
             {renderSkillDropdown("RS")}
             <img
               className="skill-img"
@@ -116,10 +155,12 @@ const ScorerSkills: React.FC = () => {
             />
             <span className="skill-level">{RS}</span>
           </div>
-          <span>RS</span>
         </div>
         <div className="scorer-skill-box-item">
-          <div className="scorer-skill-img-box">
+          <div
+            className="scorer-skill-img-box"
+            onClick={() => setSkillDesc(FCDesc)}
+          >
             {renderSkillDropdown("FC")}
             <img
               className="skill-img"
@@ -128,10 +169,12 @@ const ScorerSkills: React.FC = () => {
             />
             <span className="skill-level">{FC}</span>
           </div>
-          <span>FC</span>
         </div>
         <div className="scorer-skill-box-item">
-          <div className="scorer-skill-img-box">
+          <div
+            className="scorer-skill-img-box"
+            onClick={() => setSkillDesc(RLDesc)}
+          >
             {renderSkillDropdown("RL")}
             <img
               className="skill-img"
@@ -140,10 +183,12 @@ const ScorerSkills: React.FC = () => {
             />
             <span className="skill-level">{RL}</span>
           </div>
-          <span>RL</span>
         </div>
         <div className="scorer-skill-box-item">
-          <div className="scorer-skill-img-box">
+          <div
+            className="scorer-skill-img-box"
+            onClick={() => setSkillDesc(ISDesc)}
+          >
             {renderSkillDropdown("IS")}
             <img
               className="skill-img"
@@ -152,7 +197,6 @@ const ScorerSkills: React.FC = () => {
             />
             <span className="skill-level">{IS}</span>
           </div>
-          <span>IS</span>
         </div>
       </div>
     </>

@@ -18,6 +18,7 @@ const MultiSelectDropdown: React.FC<MultiSelectDropdownProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  var w = window.innerWidth;
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
@@ -54,10 +55,14 @@ const MultiSelectDropdown: React.FC<MultiSelectDropdownProps> = ({
 
   const renderSelectedOptions = () => {
     const selectedArray = Array.from(selectedValues);
-    const maxDisplay = 2;
+    let maxDisplay = 2;
 
     if (selectedArray.length === 0) {
       return "Select options";
+    }
+
+    if (w < 480) {
+      maxDisplay = 1;
     }
 
     return (

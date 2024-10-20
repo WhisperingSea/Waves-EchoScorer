@@ -27,6 +27,7 @@ const WeaponModal: React.FC<WeaponFeaturesModalProps> = ({
   const { weapons, setSelectedWeapon, selectedWeapon } = useWeaponContext();
 
   const { setWeaponStats, weaponStats } = useWeapons();
+  const W = window.innerWidth;
 
   const chara = Object.values(characters).find(
     (id) => id.charaId === selectedCharacterId
@@ -176,7 +177,7 @@ const WeaponModal: React.FC<WeaponFeaturesModalProps> = ({
                   ))}
                 </select>
               </div>
-              <div>|</div>
+              {W > 767 ? <div>|</div> : <></>}
               <div className="modal-box-2-item-2">
                 <h3>Level</h3>
                 <input
@@ -189,7 +190,7 @@ const WeaponModal: React.FC<WeaponFeaturesModalProps> = ({
                   onChange={handleLevelInput}
                 />
               </div>
-              <div>|</div>
+              {W > 767 ? <div>|</div> : <></>}
               <div className="modal-box-2-item-3">
                 <h3>Rank</h3>
                 <input

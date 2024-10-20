@@ -21,6 +21,7 @@
     grid-column:  1/2;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     padding: 3px;
 }
@@ -88,4 +89,26 @@
     box-shadow: 0 0 15px rgba(255, 251, 0, 0.6),
                 0 0 30px rgba(209, 206, 0, 0.4),
                 0 0 45px rgba(141, 139, 0, 0.2);
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .ScorerBar-Container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0px repeat(3, max-content);
+    }
+
+    .scorerBar-item-1 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    .scorerBar-item-2 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    
+    .scorerBar-item-3 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
 }

@@ -1,8 +1,7 @@
 .scorer-skill-box {
-    width: 100%;
-    height: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 35px);
+    column-gap: 20px;
 }
 
 .scorer-skill-box-item {
@@ -18,26 +17,39 @@
 }
 
 .skill-img {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
     cursor: pointer;
     font-size: 0;
+    border: 1px solid azure;
+    border-radius: 8px;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(18, 114, 138, 0.815);
 }
 
 .skill-level {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -8px;
     background-color: rgb(23, 73, 167);
     border-radius: 50%;
     font-size: 16px;
     line-height: 0;
     padding: 0;
     margin: 0;
-    width: 25px;
-    height: 25px;
-    font-size: 16px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,23 +57,40 @@
 
 .skill-dropdown {
     position: absolute;
-    bottom: 25px;
-    right: -5px;
+    top: 45px;
+    right: 0px;
+    left: -283px;
     display: flex;
+    width: 600px;
     flex-direction: column;
     gap: 3px;
-    background-color: rgba(24, 164, 245, 0.8);
+    background-color: rgba(18, 114, 138, 0.815);
     padding: 5px;
     border-radius: 5px;
     z-index: 10;
+    backdrop-filter: blur(2px);
+}
+
+.scorer-skill-desc {
+    max-height: 250px;
+    overflow-y: auto;
+    color: azure;
+}
+
+.skill-level-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 3px 0;
+    background-color: rgba(28, 140, 214, 0.9);
+    border-radius: 8px;
+    padding: 5px 0;
 }
 
 .skill-level-option {
-    padding: 5px;
     color: white;
-    background-color: rgba(19, 86, 131, 0.9);
-    border-radius: 50%;
-    width: 25px;
+    padding: 5px;
+    border-radius: 8px;
+    width: 100%;
     height: 25px;
     cursor: pointer;
     display: flex;
@@ -72,4 +101,26 @@
 
 .skill-level-option:hover {
     background-color: rgba(255, 255, 255, 0.3);
+    /* Hover effect */
+}
+
+@media (max-width: 1024px) and (min-width: 767px) {
+    .skill-dropdown {
+        max-width: 500px;
+        left: -232px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 481px) {
+    .skill-dropdown {
+        max-width: 350px;
+        left: -157px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .skill-dropdown {
+        max-width: 250px;
+        left: -108px;
+    }
 }

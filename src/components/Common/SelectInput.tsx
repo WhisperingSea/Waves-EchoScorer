@@ -17,6 +17,8 @@ const SelectInput: React.FC<SelectInputProps> = ({
   const [dropdownWidth, setDropdownWidth] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const width = window.innerWidth;
+  const W = width < 481 ? true : false;
 
   useEffect(() => {
     if (containerRef.current) {
@@ -83,8 +85,8 @@ const SelectInput: React.FC<SelectInputProps> = ({
           onClick={() => handleArrowClick("up")}
           aria-label="Increase value"
           style={{
-            height: "30px",
-            width: "30px",
+            height: W ? "25px" : "30px",
+            width: W ? "25px" : "30px",
             marginRight: "5px",
             backgroundColor: "black",
             color: "white",
@@ -111,8 +113,8 @@ const SelectInput: React.FC<SelectInputProps> = ({
           readOnly
           onClick={handleInputClick}
           style={{
-            height: "30px",
-            width: "80px",
+            height: W ? "25px" : "30px",
+            width: W ? "50px" : "70px",
             textAlign: "center",
             backgroundColor: "black",
             color: "white",
@@ -128,8 +130,8 @@ const SelectInput: React.FC<SelectInputProps> = ({
           onClick={() => handleArrowClick("down")}
           aria-label="Decrease value"
           style={{
-            height: "30px",
-            width: "30px",
+            height: W ? "25px" : "30px",
+            width: W ? "25px" : "30px",
             marginLeft: "5px",
             backgroundColor: "black",
             color: "white",
@@ -170,7 +172,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
               key={option}
               onClick={() => handleOptionClick(option)}
               style={{
-                padding: "8px",
+                padding: W ? "2px" : "8px",
                 cursor: "pointer",
                 borderBottom: "1px solid #ccc",
                 backgroundColor: option === selectedValue ? "#222" : "#000",

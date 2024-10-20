@@ -619,7 +619,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
           </div>
           <div className={index > 5 ? "calcEcho-box-8-add" : "calcEcho-box-8"}>
             {echoStats[index].id !== 0 && (
-              <div>
+              <>
                 <button
                   className="calcEcho-stat-reset"
                   onClick={handleStatReset}
@@ -633,7 +633,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
                 >
                   Save Echo
                 </button>
-              </div>
+              </>
             )}
           </div>
         </div>

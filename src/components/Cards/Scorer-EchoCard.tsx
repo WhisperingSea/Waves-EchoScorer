@@ -63,7 +63,7 @@ const ScorerEchoCard: React.FC<ScorerEchoCardType> = ({ Index }) => {
     if (sub5) {
       setIcon7(sub5.icon);
     }
-  }, [icon, Icon, stats]);
+  }, [icon, stats]);
 
   //Modal
   const openEchoModal = useCallback(() => {
@@ -84,104 +84,104 @@ const ScorerEchoCard: React.FC<ScorerEchoCardType> = ({ Index }) => {
           className="scorer-echoCard-grid"
           style={Index === 1 ? { border: "1px solid #dac400" } : undefined}
         >
-          <div className="scorer-echoCard-grid-item-1">
-            {echo ? (
-              <div className="scorer-echoCard-img-btn white-border">
-                <img
-                  className="scorer-echoImage-png"
-                  src={echo?.img}
-                  alt={`${echo?.name} Image`}
-                  onClick={openEchoModal}
-                />
-                <div className="scorer-echoCard-grid-item-3">
-                  <img className="Icons-main" src={Icon} />
-                  <h3 className="scorer-text-2">
-                    {stats.mainStat.includes("%")
-                      ? `${stats.mainStatValue.toFixed(1)}%`
-                      : stats.mainStatValue}
-                  </h3>
+          <div className="scorer-echoCard-item-1">
+            <div className="echo-img-box">
+              {echo ? (
+                <>
+                  <img
+                    className="scorer-echo-image"
+                    src={echo.img}
+                    style={
+                      Index === 1 ? { border: "1px solid #dac400" } : undefined
+                    }
+                    onClick={openEchoModal}
+                  />
+                  <h3 className="scorer-echo-name">{stats.name}</h3>
+                </>
+              ) : (
+                <div className="add-echo-btn" onClick={openEchoModal}>
+                  +
                 </div>
-              </div>
-            ) : (
-              <div className="scorer-echoCard-img-btn" onClick={openEchoModal}>
-                <h1 className="no-echo-div">+</h1>
-              </div>
-            )}
+              )}
+            </div>
           </div>
           {echo ? (
             <>
-              <div className="scorer-echoCard-grid-item-4">
-                {stats.cost === 1 ? (
-                  <>
-                    <img
-                      className="Icons"
-                      src={icon.find((i) => i.name === "HP")?.icon}
-                    />
-                  </>
-                ) : (
-                  <>
-                    <img
-                      className="Icons"
-                      src={icon.find((i) => i.name === "ATK")?.icon}
-                    />
-                  </>
-                )}
-                <h3 className="scorer-text">
-                  {stats.cost === 1 ? 2280 : stats.cost === 3 ? 100 : 150}
-                </h3>
+              <div className="scorer-echoCard-item-2">
+                <div className="scorer-echo-stat-box">
+                  <div className="scorer-echo-stat-mini-box">
+                    <img className="scorer-echo-stat-icon" src={Icon} />
+                    <h3 className="scorer-echo-stat Main-stat">
+                      {stats.mainStatValue}%
+                    </h3>
+                  </div>
+                  <h3 className="echo-score-text">{Score}</h3>
+                </div>
               </div>
-              <div className="scorer-echoCard-grid-item-5">
-                <img className="Icons" src={Icon3} />
-                <h3 className="scorer-text">
-                  {stats.selectedSubStat1.stat.includes("%")
-                    ? `${stats.selectedSubStat1.value.toFixed(1)}%`
-                    : stats.selectedSubStat1.value}
-                </h3>
+              <div className="scorer-echoCard-item-divider"></div>
+              <div className="scorer-echoCard-item-3">
+                <div className="scorer-echo-stat-mini-box">
+                  <img
+                    className="scorer-echo-stat-icon"
+                    src={
+                      stats.cost === 1
+                        ? icon.find((i) => i.name === "HP")?.icon
+                        : icon.find((i) => i.name === "ATK")?.icon
+                    }
+                  />
+                  <h3 className="scorer-echo-stat Main-stat">
+                    {stats.cost === 1 ? 2280 : stats.cost === 3 ? 100 : 150}
+                  </h3>
+                </div>
+                <div className="scorer-echo-stat-box">
+                  <div className="scorer-echo-stat-mini-box">
+                    <img className="scorer-echo-stat-icon" src={Icon3} />
+                    <h3 className="scorer-echo-stat">
+                      {stats.selectedSubStat1.stat.includes("%")
+                        ? `${stats.selectedSubStat1.value}%`
+                        : stats.selectedSubStat1.value}
+                    </h3>
+                  </div>
+                  <div className="scorer-echo-stat-mini-box">
+                    <img className="scorer-echo-stat-icon" src={Icon4} />
+                    <h3 className="scorer-echo-stat">
+                      {stats.selectedSubStat2.stat.includes("%")
+                        ? `${stats.selectedSubStat2.value}%`
+                        : stats.selectedSubStat2.value}
+                    </h3>
+                  </div>
+                </div>
               </div>
-              <div className="scorer-echoCard-grid-item-6">
-                <img className="Icons" src={Icon4} />
-
-                <h3 className="scorer-text">
-                  {stats.selectedSubStat2.stat.includes("%")
-                    ? `${stats.selectedSubStat2.value.toFixed(1)}%`
-                    : stats.selectedSubStat2.value}
-                </h3>
-              </div>
-              <div className="scorer-echoCard-grid-item-7">
-                <img className="Icons" src={Icon5} />
-
-                <h3 className="scorer-text">
-                  {stats.selectedSubStat3.stat.includes("%")
-                    ? `${stats.selectedSubStat3.value.toFixed(1)}%`
-                    : stats.selectedSubStat3.value}
-                </h3>
-              </div>
-              <div className="scorer-echoCard-grid-item-8">
-                <img className="Icons" src={Icon6} />
-
-                <h3 className="scorer-text">
-                  {stats.selectedSubStat4.stat.includes("%")
-                    ? `${stats.selectedSubStat4.value.toFixed(1)}%`
-                    : stats.selectedSubStat4.value}
-                </h3>
-              </div>
-              <div className="scorer-echoCard-grid-item-9">
-                <img className="Icons" src={Icon7} />
-
-                <h3 className="scorer-text">
-                  {stats.selectedSubStat5.stat.includes("%")
-                    ? `${stats.selectedSubStat5.value.toFixed(1)}%`
-                    : stats.selectedSubStat5.value}
-                </h3>
+              <div className="scorer-echoCard-item-divider"></div>
+              <div className="scorer-echoCard-item-4">
+                <div className="scorer-echo-stat-mini-box">
+                  <img className="scorer-echo-stat-icon" src={Icon5} />
+                  <h3 className="scorer-echo-stat">
+                    {stats.selectedSubStat3.stat.includes("%")
+                      ? `${stats.selectedSubStat3.value}%`
+                      : stats.selectedSubStat3.value}
+                  </h3>
+                </div>
+                <div className="scorer-echo-stat-mini-box">
+                  <img className="scorer-echo-stat-icon" src={Icon6} />
+                  <h3 className="scorer-echo-stat">
+                    {stats.selectedSubStat4.stat.includes("%")
+                      ? `${stats.selectedSubStat4.value}%`
+                      : stats.selectedSubStat4.value}
+                  </h3>
+                </div>
+                <div className="scorer-echo-stat-mini-box">
+                  <img className="scorer-echo-stat-icon" src={Icon7} />
+                  <h3 className="scorer-echo-stat">
+                    {stats.selectedSubStat5.stat.includes("%")
+                      ? `${stats.selectedSubStat5.value}%`
+                      : stats.selectedSubStat5.value}
+                  </h3>
+                </div>
               </div>
             </>
           ) : (
-            ""
-          )}
-          {echo && (
-            <div className="scorer-echoCard-score">
-              <h2 className="scorer-echoCard-score-text">{Score}</h2>
-            </div>
+            <h3 className="no-echo">No Echo Selected</h3>
           )}
         </div>
       </div>

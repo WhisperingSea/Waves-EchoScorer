@@ -4,38 +4,30 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    border: 1px solid #666666;
     cursor: default;
-    border-radius: 8px;
-    background-color: rgb(17, 55, 80);
+    width: max-content;
 }
 
 .scorer-weaponCard-btn {
     position: relative;
-    height: 100px;
+    height: 105px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    border-bottom: 1px solid azure;
+    border-right: 1px solid azure;
+    border-radius: 10px;
 }
 
 .scorer-weaponCard-info {
     width: 100%;
-    margin-right: 5px;
-}
-
-.border-background {
-    margin-left: 20px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    z-index: -1;
 }
 
 .scorer-weaponCard-rarity {
     width: max-content;
     height: 25px;
     position: absolute;
-    top: 5px;
+    bottom: 0px;
+    left: 0px;
     right: 0px;
     margin: 0;
 }
@@ -51,23 +43,17 @@
 
 .scorer-weaponCard-flex-2 {
     display: flex;
-    gap: 10px;
-    align-items: center;
+    gap: 20px;
 }
 
 .scorer-weaponCard-img {
-    margin-left: 20px;
     width: 100px;
     height: 100px;
     object-fit: contain;
     border-radius: 8px;
-    border: 1px solid #585858;
+    border: 1px solid #ffe5e5;
     cursor: pointer;
     font-size: 0;
-}
-
-.scorer-weaponCard-img:hover {
-    border: 1px solid azure;
 }
 
 .white-border {
@@ -77,7 +63,6 @@
 h3.scorer-weaponCard-text-name {
     font-size: 1.2rem;
     margin: 0;
-    text-decoration: underline;
 }
 
 h3.scorer-weaponCard-text {
@@ -85,10 +70,13 @@ h3.scorer-weaponCard-text {
     margin: 0;
 }
 
+.weapon-card-flexbox {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
 h3.scorer-weaponCard-rank {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -98,32 +86,7 @@ h3.scorer-weaponCard-rank {
     height: 1.3rem;
     border-radius: 50%;
     border: 1px solid #ffffff;
-    background-color: #c2b618;
-    color: black;
+    background-color: #176396;
+    color: rgb(255, 255, 255);
     z-index: 1;
-}
-
-h3.scorer-weaponCard-desc {
-    font-size: 0.8rem;
-}
-
-.box-shadow-weapon {
-    position: relative;
-    box-shadow: 0 0 15px rgba(110, 110, 110, 0.6),
-        0 0 30px rgba(50, 50, 50, 0.4),
-        0 0 45px rgba(20, 20, 20, 0.2);
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-.box-shadow-weapon:hover {
-    box-shadow: 0 0 15px rgba(200, 200, 200, 0.6),
-        0 0 30px rgba(150, 150, 150, 0.4),
-        0 0 45px rgba(75, 75, 75, 0.2);
-}
-
-.box-shadow-2 {
-    box-shadow: 0 0 15px rgba(255, 230, 0, 0.6),
-        0 0 30px rgba(209, 197, 27, 0.3),
-        0 0 45px rgba(239, 243, 26, 0.3);
-    transition: box-shadow 0.2s ease-in-out;
 }

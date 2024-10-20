@@ -55,7 +55,7 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({
     { label: "Aero DMG Bonus", value: "Aero DMG Bonus%" },
     { label: "Spectro DMG Bonus", value: "Spectro DMG Bonus%" },
     { label: "Havoc DMG Bonus", value: "Havoc DMG Bonus%" },
-    { label: "Energy Regen", value: "Energy Regen%" },
+    { label: "Energy Reg.", value: "Energy Regen%" },
   ];
 
   const Option3 = [
@@ -152,13 +152,13 @@ const ScorerWeightsModal: React.FC<WeightsModal> = ({
               {SubStats.map((stat, index) => (
                 <div
                   key={index}
-                  className="stat-sort-flex"
+                  className="sub-stat-sort-flex"
                   onClick={() => handleDivClickSub(stat)}
                 >
                   <h3 className="stat-sort-text">
                     {["HP%", "ATK%", "DEF%"].includes(stat)
                       ? stat.replace("%", " %")
-                      : stat.replace("%", "")}
+                      : stat.replace("%", "").replace("DMG Bonus", "Bonus")}
                   </h3>
                   <input
                     id={`${stat}-Sub-Id`}

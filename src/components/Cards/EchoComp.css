@@ -5,11 +5,9 @@
 .calcEcho-box {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: max-content max-content max-content repeat(5, 1fr);
+    grid-template-rows: repeat(8, max-content);
     gap: 10px;
     column-gap: 20px;
-    border-bottom: 0.5px solid azure;
-    border-right: 0.5px solid azure;
     padding: 20px 0;
 }
 
@@ -100,7 +98,7 @@
 .set-selector-box {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-auto-rows: minmax(min-content, auto);
     gap: 20px;
@@ -212,6 +210,7 @@
     grid-column: 1 / 9;
     grid-row: 3 / 4;
     text-align: center;
+    align-items: center;
 }
 
 .calcEcho-box-3 h3 {
@@ -230,6 +229,7 @@
     grid-column: 1 / 9;
     grid-row: 4 / 5;
     gap: 10px;
+    align-items: center;
 }
 
 .calcEcho-box-5 {
@@ -244,6 +244,7 @@
     grid-column: 1 / 9;
     grid-row: 5 / 6;
     gap: 10px;
+    align-items: center;
 }
 
 .calcEcho-box-6 {
@@ -258,6 +259,7 @@
     grid-column: 1 / 9;
     grid-row: 6 / 7;
     gap: 10px;
+    align-items: center;
 }
 
 .calcEcho-box-7 {
@@ -272,6 +274,7 @@
     grid-column: 1 / 9;
     grid-row: 7 / 8;
     gap: 10px;
+    align-items: center;
 }
 
 .calcEcho-box-8 {
@@ -283,5 +286,66 @@
 .calcEcho-box-8-add {
     display: flex;
     grid-column: 1 / 9;
+    align-items: center;
     grid-row: 8 / 9;
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .calcEcho-box {
+        padding: 0;
+    }
+
+    .calcEcho-box-1-add img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .calcEcho-box {
+        padding: 0;
+    }
+
+    .set-selector {
+        padding: 10px;
+    }
+
+    .set-selector-box {
+        padding: 10px;
+        grid-template-columns: 1fr max-content;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .set-selector-box h3 {
+        font-size: 1rem;
+    }
+
+    .Sonata-select {
+        grid-column: 2 / 4;
+    }
+
+    .Sonata-select-confirm-btn {
+        grid-column: 1 / 4;
+    }
+
+    .calcEcho-stat-select {
+        padding: 0 5px;
+        height: 1.7rem;
+        font-size: 16px;
+    }
+
+    .calcEcho-box-1-add img {
+        width: 100px;
+        padding: 0;
+    }
+
+    .calcEcho-box-8-add {
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .calcEcho-stat-reset {
+        font-size: 1rem;
+        margin: 0;
+    }
 }

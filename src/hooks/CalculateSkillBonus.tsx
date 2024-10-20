@@ -236,7 +236,7 @@ export function RSkillBonus() {
     }
   }, [sequence, selectedCharacterId, setSequenceBuff]);
 
-  const echoBasicDmgSubStats = echoStatsArray.reduce((total, echo) => {
+  const echoResSkillDmgSubStats = echoStatsArray.reduce((total, echo) => {
     const subStats = [
       echo.selectedSubStat1,
       echo.selectedSubStat2,
@@ -255,10 +255,13 @@ export function RSkillBonus() {
   }, 0);
 
   const TotalRSkillDamage =
-    echoBasicDmgSubStats +
-    AdditionalRSkillDamage +
-    AdditionalRSkillDamage2 +
-    sequenceBuff;
+    Math.round(
+      (echoResSkillDmgSubStats +
+        AdditionalRSkillDamage +
+        AdditionalRSkillDamage2 +
+        sequenceBuff) *
+        100
+    ) / 100;
 
   return TotalRSkillDamage;
 }
@@ -325,7 +328,7 @@ export function RLiberationBonus() {
     }
   }, [sequence, selectedCharacterId, setSequenceBuff]);
 
-  const echoBasicDmgSubStats = echoStatsArray.reduce((total, echo) => {
+  const echoResLibDmgSubStats = echoStatsArray.reduce((total, echo) => {
     const subStats = [
       echo.selectedSubStat1,
       echo.selectedSubStat2,
@@ -344,10 +347,13 @@ export function RLiberationBonus() {
   }, 0);
 
   const TotalRSkillDamage =
-    echoBasicDmgSubStats +
-    AdditionalRLiberationDamage +
-    AdditionalRLiberationDamage2 +
-    sequenceBuff;
+    Math.round(
+      (echoResLibDmgSubStats +
+        AdditionalRLiberationDamage +
+        AdditionalRLiberationDamage2 +
+        sequenceBuff) *
+        100
+    ) / 100;
 
   return TotalRSkillDamage;
 }
