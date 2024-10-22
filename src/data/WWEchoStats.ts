@@ -1,15 +1,15 @@
 interface MainStatsType {
-    [key: string] : {cost: number;
+    cost: number;
     name: string;
     primary: {
         name: string;
-        ranks: number[];
+        maxVal: number;
     }[];
     secondary: {
         name: string;
-        ranks: number[];
-    }[];}
-}
+        maxVal: number
+    };
+}[]
 
 interface SubStatsType {
     name: string;
@@ -19,44 +19,46 @@ interface SubStatsType {
 }
 
 export const WWEchoStats: MainStatsType[]  = [
-    {
-        Overlord: {
+        {
             cost: 4,
             name: "Overload/Calamity",
             primary: [
-            { name: "HP%", ranks: [10.6, 14.6, 20.5, 33.0] },
-            { name: "ATK%", ranks: [10.6, 14.6, 20.5, 33.0] },
-            { name: "DEF%", ranks: [13.5, 18.7, 26.0, 41.5] },
-            { name: "CRIT Rate", ranks: [7.1, 9.8, 13.8, 22.0] },
-            { name: "CRIT Dmg", ranks: [14.3, 19.7, 27.7, 44.0] },
-            { name: "Healing Bonus", ranks: [8.5, 11.9, 16.3, 26.0] },
-            { name: "Energy Regen", ranks: [11, 15.6, 22.11, 35.2] }
+            { name: "HP%", maxVal: 33.0 },
+            { name: "ATK%", maxVal: 33.0 },
+            { name: "DEF%", maxVal: 41.5 },
+            { name: "Crit. Rate%", maxVal: 22.0 },
+            { name: "Crit. DMG%", maxVal: 44.0 },
+            { name: "Healing Bonus%", maxVal: 26.0 },
             ],
-            secondary: [{ name: "ATK", ranks: [46, 68, 92, 150] }]
+            secondary: { name: "ATK", maxVal: 150 }
         },
-        Elite: {
+        {
             cost: 3,
             name: "Elite",
             primary: [
-            { name: "HP%", ranks: [9.6, 14.0, 18.9, 30.0] },
-            { name: "ATK%", ranks: [9.6, 14.0, 18.9, 30.0] },
-            { name: "DEF%", ranks: [12.3, 17.0, 23.9, 38.0] },
-            { name: "Energy Regen", ranks: [10.0, 14.2, 20.1, 32.0] },
-            { name: "[Element] DMG", ranks: [9.6, 14.0, 18.9, 30.0] }
+            { name: "HP%", maxVal: 30.0 },
+            { name: "ATK%", maxVal: 30.0 },
+            { name: "DEF%", maxVal: 38.0 },
+            { name: "Energy Regen%", maxVal: 32.0 },
+            { name: "Glacio DMG Bonus%", maxVal: 30.0 },
+            { name: "Fusion DMG Bonus%", maxVal: 30.0 },
+            { name: "Electro DMG Bonus%", maxVal: 30.0 },
+            { name: "Aero DMG Bonus%", maxVal: 30.0 },
+            { name: "Spectro DMG Bonus%", maxVal: 30.0 },
+            { name: "Havoc DMG Bonus%", maxVal: 30.0 }
             ],
-            secondary: [{ name: "ATK", ranks: [31, 44, 63, 100] }]
+            secondary: { name: "ATK", maxVal: 100 }
         },
-        common: {
+        {
             cost: 1,
             name: "Common",
             primary: [
-            { name: "HP%", ranks: [7.2, 10.2, 14.2, 22.5] },
-            { name: "ATK%", ranks: [5.7, 8.1, 11.3, 18.0] },
-            { name: "DEF%", ranks: [5.7, 8.1, 11.3, 18.0] }
+            { name: "HP%", maxVal: 22.5 },
+            { name: "ATK%", maxVal: 18.0 },
+            { name: "DEF%", maxVal: 18.0 }
             ],
-            secondary: [{ name: "HP", ranks: [296, 516, 957, 2280] }]
+            secondary: { name: "HP", maxVal: 2280 }
         }
-    }
 ]
 
 export const WWSubstats: SubStatsType[] = [

@@ -6,7 +6,7 @@ import EchoModal from "../Modals/EchoModal";
 import { useLocalStorageContext } from "../../contexts/LocalStorageContext";
 import { WWSonataData } from "../../data/WWSonata";
 import SelectInput from "../Common/SelectInput";
-import { WWSubstats } from "../../data/WWEchoStats";
+import { WWEchoStats, WWSubstats } from "../../data/WWEchoStats";
 
 interface EchoStat {
   storeId: number;
@@ -41,6 +41,7 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
   const [isDisabled, setIsDisabled] = useState(false);
   const [selectedVal, setSelectedVal] = useState<number>(0);
   const [selsectSet, setSelecteSet] = useState(false);
+  const MainStats = Object.values(WWEchoStats);
 
   const subStatRolls = (stat: string) => {
     const rolls = Object.values(WWSubstats).find((s) => s.name === stat)?.rolls;
@@ -129,18 +130,22 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
   const handleMainStatChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
       const newStat = e.target.value;
+      const newVal = MainStats.find(
+        (m) => m.cost === echoStats[index].cost
+      )?.primary.find((s) => s.name === newStat)?.maxVal;
       setEchoStats((prevEchoStats) => {
         const updatedStats = {
           ...prevEchoStats,
           [index]: {
             ...prevEchoStats[index],
             mainStat: newStat,
+            mainStatValue: newVal || 0,
           },
         };
         return updatedStats;
       });
     },
-    [setEchoStats, index]
+    [setEchoStats, MainStats, index]
   );
 
   const handleMainStatValueChange = useCallback(
