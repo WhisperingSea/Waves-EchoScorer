@@ -53,7 +53,7 @@ export function EchoScorerFunction(index: number) {
         return 0;
       }
 
-      const supports = [1101, 1501, 1503];
+      const supports = [1101, 1105, 1501, 1503];
       const dps = !supports.includes(selectedCharacterId || 0);
 
       let dpsBonus = 0;
@@ -87,6 +87,16 @@ export function EchoScorerFunction(index: number) {
             ? 5
             : 0;
           flatBonus = ["ATK", "DEF"].includes(prefStatName) ? 2 : 0;
+        } else if (selectedCharacterId === 1105) {
+          supportBonus = ["Energy Regen%", "ATK%"].includes(prefStatName)
+            ? 5
+            : 0;
+          supportSubBonus = ["Crit. Rate%", "Crit. DMG%", "ATK"].includes(
+            prefStatName
+          )
+            ? 3
+            : 0;
+          flatBonus = ["HP", "DEF"].includes(prefStatName) ? 2 : 0;
         } else if (selectedCharacterId === 1101) {
           supportBonus = ["HP%", "Energy Regen%"].includes(prefStatName)
             ? 5

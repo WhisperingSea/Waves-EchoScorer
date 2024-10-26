@@ -133,17 +133,17 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 typeName: 'Basic Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: 'Origin Calculus',
-                skillDescription: `<span className="Title">Basic Attack</span>
-                Perform up to 4 consecutive attacks, dealing <span className="Light">Spectro DMG</span>. Each hit generates 1 <span className="Highlight">Collapsed Core</span>.
-                <span className="Title">Heavy Attack</span>
-                Hold the <span className="Highlight">Normal Attack Button</span> to enter <span className="Highlight">Unbound Form</span>, which consumes STA continuously. While in this form, Shorekeeper will:
-                - Generate a segment of <span className="Highlight">Deductive Data</span> every second;
+                skillDescription: `<span class="Title">Basic Attack</span>
+                Perform up to 4 consecutive attacks, dealing <span class="Light">Spectro DMG</span>. Each hit generates 1 <span class="Highlight">Collapsed Core</span>.
+                <span class="Title">Heavy Attack</span>
+                Hold the <span class="Highlight">Normal Attack Button</span> to enter <span class="Highlight">Unbound Form</span>, which consumes STA continuously. While in this form, Shorekeeper will:
+                - Generate a segment of <span class="Highlight">Deductive Data</span> every second;
                 - Automatically collect nearby plant collectibles.
-                Using up all STA or actions such as casting <span className="Highlight">Basic Attack</span> will end the <span className="Highlight">Unbound Form</span> and deal <span className="Light">Spectro DMG</span> to the target. Each accumulated segment of <span className="Highlight">Deductive Data</span> will convert into a segment of Empirical Data and generate a <span className="Highlight">Collapsed Core</span>.
-                <span className="Title">Mid-air Attack</span>
-                Consume STA to perform a Plunging Attack. Each hit generates 1 <span className="Highlight">Collapsed Core</span>. Quickly Press the <span className="Highlight">Normal Attack Button</span> after the Plunging Attack to perform <span className="Highlight">Basic Attack Stage 2</span>.
-                <span className="Title">Dodge Counter</span>
-                Press the <span className="Highlight">Normal Attack Button</span> after a successful Dodge to attack a target, dealing <span className="Light">Spectro DMG</span>.`,
+                Using up all STA or actions such as casting <span class="Highlight">Basic Attack</span> will end the <span class="Highlight">Unbound Form</span> and deal <span class="Light">Spectro DMG</span> to the target. Each accumulated segment of <span class="Highlight">Deductive Data</span> will convert into a segment of Empirical Data and generate a <span class="Highlight">Collapsed Core</span>.
+                <span class="Title">Mid-air Attack</span>
+                Consume STA to perform a Plunging Attack. Each hit generates 1 <span class="Highlight">Collapsed Core</span>. Quickly Press the <span class="Highlight">Normal Attack Button</span> after the Plunging Attack to perform <span class="Highlight">Basic Attack Stage 2</span>.
+                <span class="Title">Dodge Counter</span>
+                Press the <span class="Highlight">Normal Attack Button</span> after a successful Dodge to attack a target, dealing <span class="Light">Spectro DMG</span>.`,
                 skillDetailNum: [],
                 multipliers: [
                     {
@@ -208,7 +208,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 typeName: 'Resonance Skill',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillShorekeeper2.webp",
                 skillName: 'Chaos Theory',
-                skillDescription: `Restore HP for all nearby party members and summon 5 <span className="Highlight">Dim Star Butterflies</span>, which automatically track and attack a target, dealing <span className="Light">Spectro DMG</span>. Follow up with <span className="Highlight">Basic Attack</span> in time to start the Basic Attack cycle from <span className="Highlight">Stage 2</span>.
+                skillDescription: `Restore HP for all nearby party members and summon 5 <span class="Highlight">Dim Star Butterflies</span>, which automatically track and attack a target, dealing <span class="Light">Spectro DMG</span>. Follow up with <span class="Highlight">Basic Attack</span> in time to start the Basic Attack cycle from <span class="Highlight">Stage 2</span>.
                 Can be performed in mid-air.`,
                 skillDetailNum: [],
                 multipliers: [
@@ -244,15 +244,15 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillShorekeeper3.webp",
                 skillName: 'End Loop',
-                skillDescription: `<span className="Title">Outer Stellarealm</span>
-                Generate the <span className="Highlight">Outer Stellarealm</span> to restore HP for all party members within its effective range continuously. This effect can be triggered once every 3s.
-                <span className="Title">Inner Stellarealm</span>
-                When a party member uses <span className="Highlight">Intro Skill</span> within the <span className="Highlight">Outer Stellarealm</span>, it evolves into the <span className="Highlight">Inner Stellarealm</span>. Within the effective range of the <span className="Highlight">Inner Stellarealm</span>, for every {0} of Shorekeeper's Energy Regen, all party members gain {1} bonus Crit. Rate, up to {2}. 
-                <span className="Highlight">Inner Stellarealm</span> has all the effects of the <span className="Highlight">Outer Stellarealm</span>.
-                <span className="Title">Supernal Stellarealm</span>
-                When a party member uses <span className="Highlight">Intro Skill</span> within the <span className="Highlight">Inner Stellarealm</span>, it evolves into the <span className="Highlight">Supernal Stellarealm</span>. Within the effective range of the <span className="Highlight">Supernal Stellarealm</span>, for every {3} of Shorekeeper's Energy Regen, all party members gain a {4} increase of Crit. DMG, up to {5}. 
-                <span className="Highlight">Supernal Stellarealm</span> has all the effects of the <span className="Highlight">Inner Stellarealm</span>.
-                When a <span className="Highlight">Supernal Stellarealm</span> is generated, Shorekeeper's first Intro Skill triggered in its duration will be replaced with Intro Skill <span className="Highlight">Discernment</span>. This effect takes place once each time a <span className="Highlight">Supernal Stellarealm</span> is generated.`,
+                skillDescription: `<span class="Title">Outer Stellarealm</span>
+                Generate the <span class="Highlight">Outer Stellarealm</span> to restore HP for all party members within its effective range continuously. This effect can be triggered once every 3s.
+                <span class="Title">Inner Stellarealm</span>
+                When a party member uses <span class="Highlight">Intro Skill</span> within the <span class="Highlight">Outer Stellarealm</span>, it evolves into the <span class="Highlight">Inner Stellarealm</span>. Within the effective range of the <span class="Highlight">Inner Stellarealm</span>, for every {0} of Shorekeeper's Energy Regen, all party members gain {1} bonus Crit. Rate, up to {2}. 
+                <span class="Highlight">Inner Stellarealm</span> has all the effects of the <span class="Highlight">Outer Stellarealm</span>.
+                <span class="Title">Supernal Stellarealm</span>
+                When a party member uses <span class="Highlight">Intro Skill</span> within the <span class="Highlight">Inner Stellarealm</span>, it evolves into the <span class="Highlight">Supernal Stellarealm</span>. Within the effective range of the <span class="Highlight">Supernal Stellarealm</span>, for every {3} of Shorekeeper's Energy Regen, all party members gain a {4} increase of Crit. DMG, up to {5}. 
+                <span class="Highlight">Supernal Stellarealm</span> has all the effects of the <span class="Highlight">Inner Stellarealm</span>.
+                When a <span class="Highlight">Supernal Stellarealm</span> is generated, Shorekeeper's first Intro Skill triggered in its duration will be replaced with Intro Skill <span class="Highlight">Discernment</span>. This effect takes place once each time a <span class="Highlight">Supernal Stellarealm</span> is generated.`,
                 skillDetailNum: ["0.2%", "0.01%", "12.5%", "0.1%", "0.01%", "25%"],
                 multipliers: [
                     {
@@ -293,11 +293,11 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 typeName: 'Intro Skill',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillShorekeeper5.webp",
                 skillName: 'Proof of Existence',
-                skillDescription: `<span className="Title">Enlightenment</span>
-                Shorekeeper appears to restore HP for all nearby party members and summon 5 <span className="Highlight">Dim Star Butterflies</span>, which automatically track and attack a target, dealing <span className="Light">Spectro DMG</span>. This is considered Resonance Skill DMG.
-                <span className="Title">Discernment</span>
-                When a <span className="Highlight">Supernal Stellarealm</span> is generated, Shorekeeper's first Intro Skill triggered in its duration will be replaced with Intro Skill <span className="Highlight">Discernment</span>.  
-                Casting Discernment ends the current Stellarealm, restores HP for all nearby party members, and deals <span className="Light">Spectro DMG</span> to the targets. This attack is guaranteed to be a Critical Hit dealing Resonance Liberation DMG. The Intro Skill <span className="Highlight">Discernment</span> can only be triggered once each time a <span className="Highlight">Supernal Stellarealm</span> is generated.`,
+                skillDescription: `<span class="Title">Enlightenment</span>
+                Shorekeeper appears to restore HP for all nearby party members and summon 5 <span class="Highlight">Dim Star Butterflies</span>, which automatically track and attack a target, dealing <span class="Light">Spectro DMG</span>. This is considered Resonance Skill DMG.
+                <span class="Title">Discernment</span>
+                When a <span class="Highlight">Supernal Stellarealm</span> is generated, Shorekeeper's first Intro Skill triggered in its duration will be replaced with Intro Skill <span class="Highlight">Discernment</span>.  
+                Casting Discernment ends the current Stellarealm, restores HP for all nearby party members, and deals <span class="Light">Spectro DMG</span> to the targets. This attack is guaranteed to be a Critical Hit dealing Resonance Liberation DMG. The Intro Skill <span class="Highlight">Discernment</span> can only be triggered once each time a <span class="Highlight">Supernal Stellarealm</span> is generated.`,
                 skillDetailNum: [],
                 multipliers: [
                     {
@@ -343,8 +343,8 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Binary Butterfly',
-                skillDescription: `Shorekeeper summons 1 <span className="Highlight">Flare Star Butterfly</span> and 1 <span className="Highlight">Dim Star Butterfly</span> to circle the Resonator on the field for up to {0}s, granting the following effects:  
-                - If the Resonator on the field is hit or launched, tapping the <span className="Highlight">Dodge Button</span> allows the Resonator to immediately recover from the interruption, triggering a successful Dodge. The Resonator launched in the air can land on the ground standing if they are close to the ground. This effect can be triggered up to {1} time(s).
+                skillDescription: `Shorekeeper summons 1 <span class="Highlight">Flare Star Butterfly</span> and 1 <span class="Highlight">Dim Star Butterfly</span> to circle the Resonator on the field for up to {0}s, granting the following effects:  
+                - If the Resonator on the field is hit or launched, tapping the <span class="Highlight">Dodge Button</span> allows the Resonator to immediately recover from the interruption, triggering a successful Dodge. The Resonator launched in the air can land on the ground standing if they are close to the ground. This effect can be triggered up to {1} time(s).
                 - All nearby party members' DMG is Amplified by {2}.`,
                 skillDetailNum: ["30", "5", "15%"],
                 multipliers: []
@@ -354,18 +354,18 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 typeName: 'Forte Circuit',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillShorekeeper4.webp",
                 skillName: 'Astral Chord',
-                skillDescription: `<span className="Title">Flare Star Butterfly</span>
-                Hitting a target with a Normal Attack generates a <span className="Highlight">Collapsed Core</span>, which transforms into a <span className="Highlight">Flare Star Butterfly</span> after {0}s. <span className="Highlight">Flare Star Butterflies</span> automatically track and attack a target, dealing <span className="Light">Spectro DMG</span>. If there are already {1} <span className="Highlight">Collapsed Cores</span>, Shorekeeper's next <span className="Highlight">Normal Attack</span> hit will instantly convert a <span className="Highlight">Collapsed Core</span> into a <span className="Highlight">Flare Star Butterfly</span>.
-                <span className="Title">Illation</span>
-                When Shorekeeper has 5 segments of Empirical Data, casting <span className="Highlight">Heavy Attack</span> will consume all segments to pull in nearby targets, dealing <span className="Light">Spectro DMG</span>. Meanwhile, all generated <span className="Highlight">Collapsed Cores</span> will instantly transform into <span className="Highlight">Flare Star Butterflies</span>.
-                <span className="Title">Transmutation</span>
-                When Shorekeeper has 5 segments of Empirical Data, casting <span className="Highlight">Mid-air Attack</span> will consume all segments to deal <span className="Light">Spectro DMG</span>. Meanwhile, all generated <span className="Highlight">Collapsed Cores</span> will instantly transform into <span className="Highlight">Flare Star Butterflies</span>. Quickly press the <span className="Highlight">Normal Attack Button</span> afterward to perform <span className="Highlight">Basic Attack Stage 2</span>.
-                <span className="Title">Empirical Data</span>
+                skillDescription: `<span class="Title">Flare Star Butterfly</span>
+                Hitting a target with a Normal Attack generates a <span class="Highlight">Collapsed Core</span>, which transforms into a <span class="Highlight">Flare Star Butterfly</span> after {0}s. <span class="Highlight">Flare Star Butterflies</span> automatically track and attack a target, dealing <span class="Light">Spectro DMG</span>. If there are already {1} <span class="Highlight">Collapsed Cores</span>, Shorekeeper's next <span class="Highlight">Normal Attack</span> hit will instantly convert a <span class="Highlight">Collapsed Core</span> into a <span class="Highlight">Flare Star Butterfly</span>.
+                <span class="Title">Illation</span>
+                When Shorekeeper has 5 segments of Empirical Data, casting <span class="Highlight">Heavy Attack</span> will consume all segments to pull in nearby targets, dealing <span class="Light">Spectro DMG</span>. Meanwhile, all generated <span class="Highlight">Collapsed Cores</span> will instantly transform into <span class="Highlight">Flare Star Butterflies</span>.
+                <span class="Title">Transmutation</span>
+                When Shorekeeper has 5 segments of Empirical Data, casting <span class="Highlight">Mid-air Attack</span> will consume all segments to deal <span class="Light">Spectro DMG</span>. Meanwhile, all generated <span class="Highlight">Collapsed Cores</span> will instantly transform into <span class="Highlight">Flare Star Butterflies</span>. Quickly press the <span class="Highlight">Normal Attack Button</span> afterward to perform <span class="Highlight">Basic Attack Stage 2</span>.
+                <span class="Title">Empirical Data</span>
                 Shorekeeper can hold up to 5 segments of Empirical Data.
-                - Obtain 1 segment of Empirical Data when <span className="Highlight">Basic Attack Stage 1, 2, or 4</span> hits a target.
-                - Obtain 2 segments of Empirical Data when <span className="Highlight">Basic Attack Stage 3</span> hits a target.
-                - Obtain 1 segment of Empirical Data when <span className="Highlight">Mid-air Attack</span> hits a target.
-                - Obtain 1 segment of Empirical Data when <span className="Highlight">Dodge Counter</span> hits a target.`,
+                - Obtain 1 segment of Empirical Data when <span class="Highlight">Basic Attack Stage 1, 2, or 4</span> hits a target.
+                - Obtain 2 segments of Empirical Data when <span class="Highlight">Basic Attack Stage 3</span> hits a target.
+                - Obtain 1 segment of Empirical Data when <span class="Highlight">Mid-air Attack</span> hits a target.
+                - Obtain 1 segment of Empirical Data when <span class="Highlight">Dodge Counter</span> hits a target.`,
                 skillDetailNum: ["6", "5"],
                 multipliers: [
                     {
@@ -425,7 +425,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Self Gravitation',
-                skillDescription: `When the Resonator on the field is within the effective range of a <span className="Highlight">Stellarealm</span>, Shorekeeper's Energy Regen increases by {0}. If Rover is on the same team, Rover's Energy Regen also increases by {1}.`,
+                skillDescription: `When the Resonator on the field is within the effective range of a <span class="Highlight">Stellarealm</span>, Shorekeeper's Energy Regen increases by {0}. If Rover is on the same team, Rover's Energy Regen also increases by {1}.`,
                 skillDetailNum: ["10%", "10%"],
                 multipliers: []
             },
@@ -442,10 +442,10 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
         {
             node: "Sequence Node 1",
             name: "Unspoken Conjecture",
-            description: `The <span className="Highlight">Stellarealms</span> generated by Resonance Liberation <span className="Highlight">End Loop</span> gain the following enhancements:
+            description: `The <span class="Highlight">Stellarealms</span> generated by Resonance Liberation <span class="Highlight">End Loop</span> gain the following enhancements:
             - The effective range of the healing and buffs is extended by {0}
             - The duration is extended by {1}s.
-            - Casting Intro Skill <span className="Highlight">Discernment</span> no longer ends the existing <span className="Highlight">Stellarealm</span>.`,
+            - Casting Intro Skill <span class="Highlight">Discernment</span> no longer ends the existing <span class="Highlight">Stellarealm</span>.`,
             detailNum: ["150%", "10"],
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
@@ -455,7 +455,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
         {
             node: "Sequence Node 2",
             name: "Night's Gift and Refusal",
-            description: `The <span className="Highlight">Outer Stellarealm</span> now increases the ATK of all team members by {0}.`,
+            description: `The <span class="Highlight">Outer Stellarealm</span> now increases the ATK of all team members by {0}.`,
             detailNum: ["40%"],
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
@@ -465,7 +465,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
         {
             node: "Sequence Node 3",
             name: "Infinity Awaits Me",
-            description: `Casting Resonance Liberation <span className="Highlight">End Loop</span> grants Shorekeeper {0} Concerto Energy. This effect can be triggered once every {1}s.`,
+            description: `Casting Resonance Liberation <span class="Highlight">End Loop</span> grants Shorekeeper {0} Concerto Energy. This effect can be triggered once every {1}s.`,
             detailNum: ["20", "25"],
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
@@ -475,7 +475,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
         {
             node: "Sequence Node 4",
             name: "Overflowing Quietude",
-            description: `Gain {0} additional Healing Bonus when casting Resonance Skill <span className="Highlight">Chaos Theory</span>.`,
+            description: `Gain {0} additional Healing Bonus when casting Resonance Skill <span class="Highlight">Chaos Theory</span>.`,
             detailNum: ["70%"],
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
@@ -485,7 +485,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
         {
             node: "Sequence Node 5",
             name: "Echoes in Silence",
-            description: `Extend the ranges of the pulling effect of <span className="Highlight">Basic Attack Stage 3</span> by {0} and <span className="Highlight">Illation</span> by {1}.`,
+            description: `Extend the ranges of the pulling effect of <span class="Highlight">Basic Attack Stage 3</span> by {0} and <span class="Highlight">Illation</span> by {1}.`,
             detailNum: ["50%", "30%"],
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
@@ -495,7 +495,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
         {
             node: "Sequence Node 6",
             name: "To the New World",
-            description: `Increase the DMG Multiplier of Intro Skill <span className="Highlight">Discernment</span> by {0}. Casting Intro Skill <span className="Highlight">Discernment</span> increases Shorekeeper's Crit. DMG by {1}.`,
+            description: `Increase the DMG Multiplier of Intro Skill <span class="Highlight">Discernment</span> by {0}. Casting Intro Skill <span class="Highlight">Discernment</span> increases Shorekeeper's Crit. DMG by {1}.`,
             detailNum: ["42%", "500%"],
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],

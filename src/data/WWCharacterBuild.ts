@@ -124,6 +124,18 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
+        preferedSonata: [1, 7, 8],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%", "Healing Bonus%"],
+        preferedMainStat2: ["ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Enerhy Regen%", "ATK",]
+    },
+    {
+        name: "Youhu",
+        charaId: 1105,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
         preferedSonata: [1, 8],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Glacio DMG Bonus%", "ATK%", "Energy Regen%"],
@@ -306,7 +318,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         },
         preferedSonata: [7],
         preferedMainStat1: ["HP%", "Healing Bonus%"],
-        preferedMainStat2: ["HP%", "Energy Regen"],
+        preferedMainStat2: ["HP%", "Energy Regen%"],
         preferedMainStat3: ["HP%"],
         preferedSubStats: ["HP%", "Energy Regen%", "Crit. DMG%", "Resonance Liberation DMG Bonus%", "HP",]
     },

@@ -108,6 +108,20 @@ export const WWForteBonus: WWForteBonusType[] = [
         ]
     },
     {
+        name: "Youhu",
+        Id: 1105,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
         name: "Encore",
         Id: 1201,
         minorForte: [

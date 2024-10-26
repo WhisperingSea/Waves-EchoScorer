@@ -19,6 +19,7 @@ import { Verina } from "./characters/Verina";
 import { XiangliYao } from "./characters/XiangliYao";
 import { Yangyang } from "./characters/Yangyang";
 import { Yinlin } from "./characters/Yinlin";
+import { Youhu } from "./characters/Youhu";
 import { Yuanwu } from "./characters/Yuanwu";
 import { Zhezhi } from "./characters/Zhezhi";
 
@@ -105,6 +106,7 @@ export const WWCharacterData: WWCharacter[] = [
     Sanhua,
     Lingyang,
     Zhezhi,
+    Youhu,
     Encore,
     Chixia,
     Mortefi,
