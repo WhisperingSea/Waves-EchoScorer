@@ -93,10 +93,11 @@ export function EchoScorerFunction(index: number) {
             : 0;
           flatBonus = ["HP", "DEF"].includes(prefStatName) ? 2 : 0;
         } else if (selectedCharacterId === 1503) {
-          supportBonus = ["HP%", "Energy Regen%"].includes(prefStatName)
+          supportBonus = ["HP%", "Energy Regen%", "Crit. DMG%"].includes(
+            prefStatName
+          )
             ? 5
             : 0;
-          supportSubBonus = prefStatName.includes("Crit. DMG%") ? 3 : 0;
           flatBonus = ["HP", "DEF"].includes(prefStatName) ? 2 : 0;
         }
       }
