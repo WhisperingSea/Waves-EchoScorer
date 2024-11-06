@@ -80,6 +80,7 @@ export interface WWCharacter {
         multipliers: {
             attributeName: string;
             index: number;
+            type: string
             skillDetailNum?: {
                 values: string[];
             }[];

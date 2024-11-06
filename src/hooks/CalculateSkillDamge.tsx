@@ -1,9 +1,9 @@
 import { useCalcSkillValue } from "../contexts/CalcSkillValueContext";
 
 export function SkillDamageCalc(SkillMulti: number) {
-  const { Attack, ElementDamageBonus, EnemyRes } = useCalcSkillValue();
+  const { Attack, ElementDamageBonus, EnemyRes, BonusSkillDamage } =
+    useCalcSkillValue();
   const SkillScalingBonus = 0;
-  const BonusSkillDamage = 0;
   const TotalDeepen = 0;
   const SkillDamage =
     Attack *
