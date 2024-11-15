@@ -274,6 +274,7 @@ Having honed his skills in the Leihuang martial arts style, Yuanwu also earned m
                         index: 7
                     }, {
                         attributeName: "Leihuang Master Con. Energy Regen",
+                        type: "",
                         skillDetailNum: [{
                             values: ["3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3"]
                         }],
