@@ -33,7 +33,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
   const { storedEcho, selectedStoreEcho, setSelectedStoreEcho, removeEcho } =
     useLocalStorageContext();
   const { filteredStoreEchoes } = useSearchFilter();
-  const { processImages, processedImages } = useEchoScanner();
+  const { processImages, processedImages, isProcessing } = useEchoScanner();
   const [FilteredEchoes, setFilteredEchoes] = useState<any[]>([]);
   const [activeTab, setActiveTab] = useState<number>(!noSelect ? 1 : 2);
   const [newEcho, setNewEcho] = useState(true);
@@ -270,6 +270,8 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
       setIcon7(sub5.icon);
     }
   }, [icon, Icons, StoreSelectedEcho]);
+
+  console.log("is processing", isProcessing);
 
   return (
     <>
@@ -570,26 +572,39 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                 }
               >
                 {newEcho ? (
-                  Object.values(echoes).map((item) => (
-                    <div
-                      key={item.name}
-                      className="echo-modal-cards-2"
-                      onClick={() =>
-                        handleStoreAddEcho(item.name, item.cost, item.id)
-                      }
-                    >
-                      <div className="echo-modal-card-top-2">
-                        <img src={item.img} alt={`${item.name} Icon`} />
-                      </div>
+                  isProcessing ? (
+                    <div className="processing-screen">
+                      <div className="spinner"></div>
+                      <h3 className="process-text">Image is Processing</h3>
                     </div>
-                  ))
+                  ) : (
+                    Object.values(echoes).map((item) => (
+                      <div
+                        key={item.name}
+                        className="echo-modal-cards-2"
+                        onClick={() =>
+                          handleStoreAddEcho(item.name, item.cost, item.id)
+                        }
+                      >
+                        <div className="echo-modal-card-top-2">
+                          <img src={item.img} alt={`${item.name} Icon`} />
+                        </div>
+                      </div>
+                    ))
+                  )
                 ) : (
                   <>
-                    <EchoComp index={6} />
+                    {isProcessing ? (
+                      <div className="processing-screen">
+                        <div className="spinner"></div>
+                        <h3 className="process-text">Image is Processing</h3>
+                      </div>
+                    ) : (
+                      <EchoComp index={6} />
+                    )}
                   </>
                 )}
               </div>
-
               <div
                 className={
                   isVisible2

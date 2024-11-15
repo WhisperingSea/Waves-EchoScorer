@@ -14,6 +14,7 @@ interface UseEchoScannerReturn {
   processedImages: string[];
   textResults: Record<string, LineResult[]>;
   processImages: (images: File[]) => void;
+  isProcessing: boolean;
 }
 
 export function useEchoScanner(): UseEchoScannerReturn {
@@ -23,8 +24,10 @@ export function useEchoScanner(): UseEchoScannerReturn {
   const [textResults, setTextResults] = useState<Record<string, LineResult[]>>(
     {}
   );
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const processImages = async (images: File[]) => {
+    setIsProcessing(true);
     try {
       const imagesToProcess = images.slice(0, 5);
       const resizedImages = await Promise.all(
@@ -64,6 +67,8 @@ export function useEchoScanner(): UseEchoScannerReturn {
       setTextResults(combinedResults);
     } catch (error) {
       console.error("Error processing images:", error);
+    } finally {
+      setIsProcessing(false);
     }
   };
 
@@ -360,5 +365,6 @@ export function useEchoScanner(): UseEchoScannerReturn {
     processedImages,
     textResults,
     processImages,
+    isProcessing,
   };
 }
