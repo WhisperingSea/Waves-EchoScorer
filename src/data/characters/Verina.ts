@@ -441,6 +441,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
                         index: 5
                     }, {
                         attributeName: '"Photosynthesis Energy" Con. Energy Regen',
+                        type: "",
                         skillDetailNum: [{
                             values: ["12", "12", "12", "12", "12", "12", "12", "12", "12", "12", "12", "12", "12", "12", "12", "12", "12", "12"]
                         }],

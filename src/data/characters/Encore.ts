@@ -395,12 +395,14 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
                 multipliers: [
                     {
                         attributeName: "Skill Damage",
+                        type: "",
                         skillDetailNum: [{
                             values: ["100.00%", "108.20%", "116.40%", "127.88%", "136.08%", "145.51%", "158.63%", "171.75%", "184.87%", "198.81%", "215.21%", "231.61%", "248.01%", "264.41%", "280.81%", "297.21%", "313.61%", "330.01%", "346.41%"]
                         }],
                         index: 1
                     }, {
                         attributeName: "Con. Energy Regen",
+                        type: "",
                         skillDetailNum: [{
                             values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
                         }],

@@ -13,12 +13,6 @@ import {
   SpectroDamageCalc,
   HavocDamageCalc,
 } from "../hooks/CalculateElementBonusStats";
-import {
-  BasicAttackBonus,
-  RLiberationBonus,
-  RSkillBonus,
-  HeavyAttackBonus,
-} from "../hooks/CalculateSkillBonus";
 import { useDataContext } from "./CharacterDataContext";
 import { useParams } from "react-router-dom";
 import { AttackCalc } from "../hooks/CalculateStats";

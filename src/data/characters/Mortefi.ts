@@ -163,6 +163,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
                         index: 2
                     }, {
                         attributeName: "Part 3 Damage",
+                        type: "Basic",
                         skillDetailNum: [{
                             values: ["53.97%", "58.40%", "62.83%", "69.02%", "73.45%", "78.54%", "85.62%", "92.70%", "99.78%", "107.30%", "116.15%", "125.00%", "133.86%", "142.71%", "151.56%", "160.41%", "169.26%", "178.11%", "186.96%", "195.81%"]
                         }],
@@ -297,6 +298,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
                         index: 4
                     }, {
                         attributeName: "Res. Energy Cost",
+                        type: "",
                         skillDetailNum: [{
                             values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
                         }],

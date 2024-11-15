@@ -270,6 +270,7 @@ After enduring hardships and anguish, she has found a clear purpose: to be a bea
                         index: 1
                     }, {
                         attributeName: "Cooldown",
+                        type: "",
                         skillDetailNum: [{
                             values: ["16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16"]
                         }],

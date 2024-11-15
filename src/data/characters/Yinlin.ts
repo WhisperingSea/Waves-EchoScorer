@@ -337,12 +337,14 @@ If Resonance Skill <span class="Highlight">Lightning Execution</span> is not act
                 multipliers: [
                     {
                         attributeName: "Skill Damage",
+                        type: "",
                         skillDetailNum: [{
                             values: ["7.2%*10", "7.8%*10", "8.39%*10", "9.21%*10", "9.8%*10", "10.48%*10", "11.43%*10", "12.37%*10", "13.32%*10", "14.32%*10", "15.5%*10", "16.68%*10", "17.86%*10", "19.04%*10", "20.22%*10", "21.4%*10", "22.58%*10", "23.77%*10", "24.95%*10", "26.13%*10"]
                         }],
                         index: 1
                     }, {
                         attributeName: "Con. Energy Regen",
+                        type: "",
                         skillDetailNum: [{
                             values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
                         }],
