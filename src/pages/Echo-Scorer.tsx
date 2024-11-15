@@ -13,6 +13,7 @@ import { useWeaponContext } from "../contexts/WeaponDataContext";
 import html2canvas from "html2canvas";
 import Footer from "../components/Common/Footer";
 import ScorerSkills from "../components/PageComponents/ScorerSkills";
+import ScorerResonance from "../components/PageComponents/ScorerResonance";
 
 const EchoScorer: React.FC = () => {
   const { characters, selectedCharacterId, setSelectedCharacterId, level } =
@@ -326,6 +327,11 @@ const EchoScorer: React.FC = () => {
             <div className="Scorer-Image-Section">
               <div className="echo-scorer-grid" ref={divRef}>
                 <div className="scorer-item-1">
+                  {!isEditing && (
+                    <div className="scorer-res-box">
+                      <ScorerResonance />
+                    </div>
+                  )}
                   {imageUrl === null ? (
                     <>
                       <label

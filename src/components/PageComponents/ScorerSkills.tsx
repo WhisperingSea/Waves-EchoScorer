@@ -123,8 +123,6 @@ const ScorerSkills: React.FC = () => {
     ) : null;
   };
 
-  console.log(skillDesc);
-
   return (
     <>
       <div className="scorer-skill-box">

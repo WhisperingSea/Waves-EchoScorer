@@ -5,64 +5,42 @@
 }
 
 .Scorer-resonance-box {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.scorer-resonance-box-item-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.scorer-resonance-box-item-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.scorer-resonance-box-item-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.scorer-resonance-box-item-4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.scorer-resonance-box-item-5 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.scorer-resonance-box-item-6 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.resonance-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4rem;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    border: 1px solid #868686;
-    background-color: #1c76ca;
-    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: rgb(17, 55, 80);
+    border-radius: 4px;
+    border: 1px solid azure;
+    border-left: 0;
+    border-top: 0;
     cursor: pointer;
 }
 
-.active-R {
-    border: 1px solid azure;
-    color: #ffffff;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
-                0 0 30px rgba(255, 255, 255, 0.4),
-                0 0 45px rgba(0, 141, 134, 0.2);
+.res-num {
+    margin: 0;
+}
+
+.res-list-drop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    text-align: center;
+    background-color: #1565a7;
+    cursor: pointer;
+}
+
+.res-list-drop:hover {
+    background-color: #1d8ce7;
+    border-radius: 4px;
+    transform: scale(1.05);
+}
+
+.scorer-res-dropdown {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
 }
