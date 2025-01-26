@@ -1,6 +1,7 @@
 import { Aalto } from "./characters/Aalto";
 import { Baizhi } from "./characters/Baizhi";
 import { Calcharo } from "./characters/Calcharo";
+import { Camellya } from "./characters/Camellya";
 import { Changli } from "./characters/Changli";
 import { Chixia } from "./characters/Chixia";
 import { Danjin } from "./characters/Danjin";
@@ -124,5 +125,10 @@ export const WWCharacterData: WWCharacter[] = [
     Jinhsi,
     Shorekeeper,
     Taoqi,
-    Danjin
+    Danjin,
+    Camellya
+    //TODO Carlotta
+    //TODO Roccia
+    //TODO Phoebe
+    //TODO Brant
 ]

@@ -346,6 +346,11 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat3: ["ATK%"],
         preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Resonance Skill DMG Bonus", "ATK",]
     },
+    //TODO Camellya build
+    //TODO Carlotta build
+    //TODO Roccia build
+    //TODO Phoebe build
+    //TODO Brant build
     {
         name: "",
         charaId: 0,

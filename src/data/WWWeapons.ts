@@ -1588,4 +1588,6 @@ export const WWWeaponsJSON: WWWeapons[] = [
         statSecondaryValue: 17.12,
         source: "Gacha",
       }
+      //TODO weapons from 1.4
+      //TODO weapons from 2.0
 ]

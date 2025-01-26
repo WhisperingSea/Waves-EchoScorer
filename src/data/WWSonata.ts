@@ -162,4 +162,9 @@ export const WWSonataData: WWSonata[] = [
       stackable: 4
     },
   }
+  //TODO Frosty Resolve
+  //TODO Eternal Radiance
+  //TODO Midnight Veil
+  //TODO Empyrean Anthem
+  //TODO Tidebreaking Courage
 ]
