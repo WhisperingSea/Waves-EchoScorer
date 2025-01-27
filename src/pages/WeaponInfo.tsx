@@ -176,7 +176,7 @@ const WeaponInfo: React.FC = () => {
                   <h3>{weapon?.statPrimary}:</h3>
                   <h3>
                     {weapon && levels
-                      ? Math.floor(
+                      ? Math.ceil(
                           weapon?.statPrimaryValue *
                             (levels?.weapon_multi / 10000)
                         )

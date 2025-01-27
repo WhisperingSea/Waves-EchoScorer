@@ -517,7 +517,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             description: `After Calcharo casts Intro Skill <span class="Highlight">Wanted Criminal</span> or Intro Skill <span class="Highlight">"Necessary Means"</span>, his Resonance Skill DMG Bonus is increased by {0} for {1}s.`,
             detailNum: ["30%", "15"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Resonane Skill Damage Bonus"],
+            sequenceBuffAtrribute: ["Resonance Skill Damage Bonus"],
             sequenceBuff: [30   ],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
         },

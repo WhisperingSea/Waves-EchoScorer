@@ -346,7 +346,18 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat3: ["ATK%"],
         preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Resonance Skill DMG Bonus", "ATK",]
     },
-    //TODO Camellya build
+    {
+        name: "Camellya",
+        charaId: 1603,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [6],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Basic Attack DMG Bonus%", "ATK", "Resonance Skill DMG Bonus"]
+    },
     //TODO Carlotta build
     //TODO Roccia build
     //TODO Phoebe build

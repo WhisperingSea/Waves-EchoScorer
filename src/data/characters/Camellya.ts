@@ -130,10 +130,10 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
             skillId: 1,
             typeName: 'Basic Attack',
             skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Basic-Attack.webp",
-            skillName: 'Dimming Brush',
+            skillName: 'Burgeoning',
             skillDescription: `<span class="Title">Basic Attack</span>
                 Perform up to 5 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>.<br>
-                After performing <span class="Highlight">Basic Attack Stage 3</span or Heavy Attack <span class="Highlight">Pruning</span>, hold Normal Attack Button to continuously strike the target, dealing <span class="Dark">Havoc DMG</span>.<br>
+                After performing <span class="Highlight">Basic Attack Stage 3</span> or Heavy Attack <span class="Highlight">Pruning</span>, hold Normal Attack Button to continuously strike the target, dealing <span class="Dark">Havoc DMG</span>.<br>
                 <span class="Highlight">Basic Attack Stage 4</span> is automatically followed by <span class="Highlight">Basic Attack Stage 5</span>.
                 <div class="gap"></div>
                 <span class="Title">Heavy Attack - Pruning</span>\n
@@ -192,7 +192,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
                     attributeName: "Mid-Air Attack Damage",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["33.00%*2", "35.71%*2","38.42%*2", "42.21%*2", "44.91%*2", "48.02%*2", "52.35%*2", "56.68%*2", "61.01%*2", "65.61%*2"]
+                        values: ["33.00%*2", "35.71%*2", "38.42%*2", "42.21%*2", "44.91%*2", "48.02%*2", "52.35%*2", "56.68%*2", "61.01%*2", "65.61%*2"]
                     }],
                     index: 7
                 }, {
@@ -219,52 +219,181 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
                 }
             ]
         },
-        //TODO add rest of Camellya's skills and sequences
+        //TODO add rest of Camellya's skills and seque
         {
             skillId: 2,
             typeName: 'Resonance Skill',
             skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Resonance-Skill.webp",
-            skillName: 'Extermination index',
-            skillDescription: `Calcharo performs up to 3 consecutive attacks, dealing <span class="Thunder">Electro DMG</span>.
-                If Calcharo is switched off field, or if Resonance Skill <span class="Highlight">Extermination index</span> is not performed again in a while, this skill will enter Cooldown.
-                Resonance Skill <span class="Highlight">Extermination index</span> does not interrupt Calcharo's Basic Attack combo.`,
+            skillName: 'Valse of Bloom and Blight',
+            skillDescription: `<span class="Title">Crimson Blossom</span>
+            Attack the target, dealing <span class="Dark">Havoc DMG</span> (considered Basic Attack DMG), then enter <span class="Highlight">Blossom Mode</span>.<br>
+            This attack can be performed in mid-air.
+            <span class="Title">Blossom Mode</span>
+            - Unable to move while suspended on vines.<br>
+            - <span class="Highlight">Basic Attack</span> and Heavy Attack <span class="Highlight">Pruning</span> are replaced by <span class="Highlight">Basic Attack Vining Waltz</span>: chain together 4 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>, considered Basic Attack DMG.<br>
+            - When performing <span class="Highlight">Vining Waltz Stage 3</span>, hold <span class="Highlight">Normal Attack Button</span> to cast <span class="Highlight">Blazing Waltz</span> that deals <span class="Dark">Havoc DMG</span> before automatically performing <span class="Highlight">Vining Waltz Stage 4</span>.</br>
+            - <span class="Highlight">Dodge Counter</span> is replaced by Dodge Counter <span class="Highlight">Atonement</span>. Press <span class="Highlight">Normal Attack</span> Button right after a successful <span class="Highlight">Dodge</span> to attack the target, dealing <span class="Dark">Havoc DMG</span>, considered Basic Attack DMG.<br>
+            - Resonance Skill is replaced by Resonance Skill <span class="Highlight">Floral Ravage</span>. Casting <span class="Highlight">Floral Ravage</span> deals <span class="Dark">Havoc DMG</span>, considered Basic Attack DMG.<br>
+            - Resonance Skill <span class="Highlight">Floral Ravage</span> can be cast in mid-air.<br>
+            - <span class="Highlight">Blossom Mode</span> ends after casting Resonance Skill <span class="Highlight">Floral Ravage</span>.<br>
+            - <span class="Highlight">Blossom Mode</span> ends after using the <span class="Highlight">Levitator</span>.<br>
+            - Jump is replaced with Basic Attack <span class="Highlight">Vining Ronde</span>. Press Jump to deal <span class="Dark">Havoc DMG</span> (considered Basic Attack DMG) and ends the <span class="Highlight">Blossom Mode</span>.<br>
+            - Using Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Blazing Waltz</span>, and Basic Attack <span class="Highlight">Vining Ronde</span> in mid-air consumes STA.<br>
+            - Casting Resonance Skill <span class="Highlight">Floral Ravage</span> in mid-air doesn't restore STA.<br>
+            - Consume STA continuously to stay suspended on the vines.`,
             skillDetailNum: [],
             multipliers: [
                 {
-                    attributeName: "Extermination index Part 1 Damage",
+                    attributeName: "Crimson Blossom DMG",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: ["25.94%*2+34.59%", "28.07%*2+37.42%", "30.20%*2+40.26%", "33.17%*2+44.23%", "35.30%*2+47.07%", "37.75%*2+50.33%", "41.15%*2+54.87%", "44.55%*2+59.40%", "47.96%*2+63.94%", "51.57%*2+68.76%", "55.83%*2+74.43%", "60.08%*2+80.11%", "64.33%*2+85.78%", "68.59%*2+91.45%", "72.84%*2+97.12%", "77.10%*2+102.79%", "81.35%*2+108.46%", "85.60%*2+114.14%", "89.86%*2+119.81%", "94.11%*2+125.48%"]
+                        values: ["57.15%*2", "61.84%*2", "66.53%*2", "73.09%*2", "77.77%*2", "83.16%*2", "90.66%*2", "98.16%*2", "105.66%*2", "105.66%*2"]
                     }],
                     index: 1
-                }, {
-                    attributeName: "Extermination index Part 2 Damage",
+                },
+                {
+                    attributeName: "Vining Waltz 1 DMG",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: ["38.91%*2+51.88%", "42.10%*2+56.13%", "45.29%*2+60.39%", "49.76%*2+66.34%", "52.95%*2+70.60%", "56.62%*2+75.49%", "61.72%*2+82.30%", "66.83%*2+89.10%", "71.93%*2+95.91%", "77.36%*2+103.14%", "83.74%*2+111.65%", "90.12%*2+120.16%", "96.50%*2+128.66%", "102.88%*2+137.17%", "109.26%*2+145.68%", "115.64%*2+154.19%", "122.02%*2+162.69%", "128.40%*2+171.20%", "134.78%*2+179.71%", "141.16%*2+188.22%"]
+                        values: ["48.45%", "52.43%", "56.40%", "61.96%", "65.94%", "70.50%", "76.86%", "83.22%", "89.57%", "96.33%"]
                     }],
                     index: 2
-                }, {
-                    attributeName: "Extermination index Part 3 Damage",
+                },
+                {
+                    attributeName: "Vining Waltz 2 DMG",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: ["108.08%*2", "116.94%*2", "125.80%*2", "138.21%*2", "147.07%*2", "157.26%*2", "171.44%*2", "185.62%*2", "199.80%*2", "214.87%*2", "232.59%*2", "250.32%*2", "268.04%*2", "285.77%*2", "303.49%*2", "321.21%*2", "338.94%*2", "356.66%*2", "374.39%*2", "392.11%*2"]
+                        values: ["22.95%*2", "24.84%*2", "26.72%*2", "29.35%*2", "31.24%*2", "33.40%*2", "36.41%*2", "39.42%*2", "42.43%*2", "45.63%*2"]
                     }],
                     index: 3
-                }, {
+                },
+                {
+                    attributeName: "Vining Waltz 3 DMG",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["11.04%*6", "11.95%*6", "12.86%*6", "14.12%*6", "15.03%*6", "16.07%*6", "17.52%*6", "18.97%*6", "20.41%*6", "21.95%*6"]
+                    }],
+                    index: 4
+                },
+                {
+                    attributeName: "Vining Waltz 4 DMG",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["34.00%*3", "36.79%*3", "39.58%*3", "43.48%*3", "46.27%*3", "49.47%*3", "53.93%*3", "58.39%*3", "62.85%*3", "67.59%*3"]
+                    }],
+                    index: 5
+                },
+                {
+                    attributeName: "Blazing Waltz DMG",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["11.04%*19", "11.95%*19", "12.86%*19", "14.12%*19", "15.03%*19", "16.07%*19", "17.52%*19", "18.97%*19", "20.41%*19", "21.95%*19"]
+                    }],
+                    index: 6
+                },
+                {
+                    attributeName: "Floral Ravage DMG",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["26.46%*5", "28.63%*5", "30.80%*5", "33.84%*5", "36.01%*5", "38.51%*5", "41.98%*5", "45.45%*5", "48.92%*5", "52.61%*5"]
+                    }],
+                    index: 7
+                },
+                {
+                    attributeName: "Vining Ronde DMG",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["26.64%*3", "28.82%*3", "31.00%*3", "34.06%*3", "36.24%*3", "38.76%*3", "42.25%*3", "45.74%*3", "49.24%*3", "52.95%*3"]
+                    }],
+                    index: 8
+                },
+                {
+                    attributeName: "Atonement DMG",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["57.00%*2", "61.68%*2", "66.35%*2", "72.90%*2", "77.57%*2", "82.95%*2", "90.42%*2", "97.90%*2", "105.38%*2", "113.33%*2"]
+                    }],
+                    index: 9
+                },
+                {
                     attributeName: "Cooldown",
                     type: "",
                     skillDetailNum: [{
-                        values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
+                        values: ["4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]
                     }],
-                    index: 4
-                }, {
-                    attributeName: "Extermination index Con. Energy Regen",
+                    index: 10
+                },
+                {
+                    attributeName: "Crimson Blossom Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: ["4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]
+                        values: ["7", "7", "7", "7", "7", "7", "7", "7", "7", "7"]
                     }],
-                    index: 5
+                    index: 11
+                },
+                {
+                    attributeName: "Floral Ravage Concerto Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["7", "7", "7", "7", "7", "7", "7", "7", "7", "7"]
+                    }],
+                    index: 12
+                },
+                {
+                    attributeName: "Wiring Waltz 1 STA Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                    }],
+                    index: 13
+                },
+                {
+                    attributeName: "Wiring Waltz 2 STA Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                    }],
+                    index: 14
+                },
+                {
+                    attributeName: "Wiring Waltz 3 STA Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                    }],
+                    index: 15
+                },
+                {
+                    attributeName: "Wiring Waltz 4 STA Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                    }],
+                    index: 16
+                },
+                {
+                    attributeName: "Blazing Waltz STA Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                    }],
+                    index: 17
+                },
+                {
+                    attributeName: "Floral Ravage STA Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                    }],
+                    index: 18
+                },
+                {
+                    attributeName: "STA Cost Per Second When Suspended",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                    }],
+                    index: 19
                 }
             ]
         },
@@ -272,115 +401,39 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
             skillId: 3,
             typeName: 'Resonance Liberation',
             skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Resonance-Liberation.webp",
-            skillName: 'Phantom Etching',
-            skillDescription: `Calcharo attacks the target, dealing <span class="Thunder">Electro DMG</span> and enters <span class="Highlight">Deathblade Gear</span> state. After Resonance Liberation <span class="Highlight">Deathblade Gear</span> state ends, Calcharo's next Intro Skill is replaced with Intro Skill <span class="Highlight">"Necessary Means"</span>, which deals <span class="Thunder">Electro DMG</span>, considered as Intro Skill damage.\n
-                <div class="gap"></div>
-                <span class="Title">Deathblade Gear</span>\n
-                -<span class="Highlight">Basic Attack</span> is replaced with Basic Attack <span class="Highlight">Hounds Roar</span>.\n
-                -<span class="Highlight">Dodge Counter</span> deals increased damage, considered as Resonance Liberation damage.\n
-                <div class="gap"></div>
-                <span class="Title">Hounds Roar</span>\n
-                Calcharo performs up to 5 consecutive attacks, dealing <span class="Thunder">Electro DMG</span>, considered as Basic Attack Damage.`,
+            skillName: 'Fervor Efflorescent',
+            skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.<br>
+            This attack can be performed in mid-air.`,
             skillDetailNum: [],
             multipliers: [
                 {
                     attributeName: "Skill Damage",
                     type: "Liberation",
                     skillDetailNum: [{
-                        values: ["300.00%", "324.60%", "349.20%", "383.64%", "408.24%", "436.53%", "475.89%", "515.25%", "554.61%", "596.43%", "645.63%", "694.83%", "744.03%", "793.23%", "842.43%", "891.63%", "940.83%", "990.03%", "1039.23%", "1088.43%"]
+                        values: ["605.00%", "654.61%", "704.22%", "773.68%", "823.29%", "880.34%", "959.72%", "1039.09%", "1118.47%", "1202.81%"]
                     }],
                     index: 1
-                }, {
-                    attributeName: '"Necessary Means" Damage',
-                    type: "Basic",
-                    skillDetailNum: [{
-                        values: ["100.00%*2", "108.20%*2", "116.40%*2", "127.88%*2", "136.08%*2", "145.51%*2", "158.63%*2", "171.75%*2", "184.87%*2", "198.81%*2", "215.21%*2", "231.61%*2", "248.01%*2", "264.41%*2", "280.81%*2", "297.21%*2", "313.61%*2", "330.01%*2", "346.41%*2", "362.81%*2"]
-                    }],
-                    index: 2
-                }, {
-                    attributeName: "Hounds Roar Part 1",
-                    type: "Basic",
-                    skillDetailNum: [{
-                        values: ["44.30%", "47.93%", "51.56%", "56.65%", "60.28%", "64.46%", "70.27%", "76.08%", "81.89%", "88.07%", "95.33%", "102.59%", "109.86%", "117.12%", "124.39%", "131.65%", "138.91%", "146.18%", "153.44%", "160.71%"]
-                    }],
-                    index: 3
-                }, {
-                    attributeName: "Hounds Roar Part 2",
-                    type: "Basic",
-                    skillDetailNum: [{
-                        values: ["17.72%*2+26.58%*2", "19.18%*2+28.76%*2", "20.63%*2+30.94%*2", "22.66%*2+33.99%*2", "24.11%*2+36.17%*2", "25.79%*2+38.68%*2", "28.11%*2+42.16%*2", "30.43%*2+45.65%*2", "32.76%*2+49.14%*2", "35.23%*2+52.84%*2", "38.13%*2+57.20%*2", "41.04%*2+61.56%*2", "43.95%*2+65.92%*2", "46.85%*2+70.28%*2", "49.76%*2+74.63%*2", "52.66%*2+78.99%*2", "55.57%*2+83.35%*2", "58.47%*2+87.71%*2", "61.38%*2+92.07%*2", "64.29%*2+96.43%*2"]
-                    }],
-                    index: 4
-                }, {
-                    attributeName: "Hounds Roar Part 3",
-                    type: "Basic",
-                    skillDetailNum: [{
-                        values: ["82.41%", "89.17%", "95.93%", "105.39%", "112.14%", "119.92%", "130.73%", "141.54%", "152.35%", "163.84%", "177.35%", "190.87%", "204.38%", "217.90%", "231.41%", "244.93%", "258.44%", "271.96%", "285.47%", "298.99%"]
-                    }],
-                    index: 5
-                }, {
-                    attributeName: "Hounds Roar Part 4",
-                    type: "Basic",
-                    skillDetailNum: [{
-                        values: ["17.52%*6", "18.95%*6", "20.39%*6", "22.40%*6", "23.83%*6", "25.49%*6", "27.78%*6", "30.08%*6", "32.38%*6", "34.82%*6", "37.69%*6", "40.56%*6", "43.44%*6", "46.31%*6", "49.18%*6", "52.05%*6", "54.92%*6", "57.79%*6", "60.67%*6", "63.54%*6"]
-                    }],
-                    index: 6
-                }, {
-                    attributeName: "Hounds Roar Part 5",
-                    type: "Basic",
-                    skillDetailNum: [{
-                        values: ["75.54%*2", "81.74%*2", "87.93%*2", "96.61%*2", "102.80%*2", "109.92%*2", "119.83%*2", "129.74%*2", "139.66%*2", "150.19%*2", "162.57%*2", "174.96%*2", "187.35%*2", "199.74%*2", "212.13%*2", "224.52%*2", "236.90%*2", "249.29%*2", "261.68%*2", "274.07%*2"]
-                    }],
-                    index: 7
-                }, {
-                    attributeName: "Phantom Etching Heavy Attack Damage",
-                    type: "Heavy",
-                    skillDetailNum: [{
-                        values: ["31.20%*5", "33.76%*5", "36.32%*5", "39.90%*5", "42.46%*5", "45.40%*5", "49.50%*5", "53.59%*5", "57.68%*5", "62.03%*5", "67.15%*5", "72.27%*5", "77.38%*5", "82.50%*5", "87.62%*5", "92.73%*5", "97.85%*5", "102.97%*5", "108.08%*5", "113.20%*5"]
-                    }],
-                    index: 8
-                }, {
-                    attributeName: "Phantom Etching Dodge Counter Damage",
-                    type: "Liberation",
-                    skillDetailNum: [{
-                        values: ["28.67%*6", "31.02%*6", "33.37%*6", "36.66%*6", "39.01%*6", "41.72%*6", "45.48%*6", "49.24%*6", "53.00%*6", "56.99%*6", "61.69%*6", "66.40%*6", "71.10%*6", "75.80%*6", "80.50%*6", "85.20%*6", "89.90%*6", "94.60%*6", "99.30%*6", "104.00%*6"]
-                    }],
-                    index: 9
-                }, {
-                    attributeName: "Heavy Attack Stamina Consumption",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
-                    }],
-                    index: 10
-                }, {
-                    attributeName: "Deathblade Gear Duration",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["11", "11", "11", "11", "11", "11", "11", "11", "11", "11", "11", "11", "11", "11", "11", "11", "11", "11"]
-                    }],
-                    index: 11
                 }, {
                     attributeName: "Cooldown",
                     type: "",
                     skillDetailNum: [{
-                        values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
+                        values: ["25", "25", "25", "25", "25", "25", "25", "25", "25", "25"]
                     }],
-                    index: 12
+                    index: 2
                 }, {
-                    attributeName: "Res. Energy Cost",
+                    attributeName: "Resonance Energy Cost",
                     type: "",
                     skillDetailNum: [{
-                        values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
+                        values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
                     }],
-                    index: 13
+                    index: 3
                 }, {
-                    attributeName: "Con. Energy Regen",
+                    attributeName: "Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
+                        values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
                     }],
-                    index: 14
+                    index: 4
                 }
             ]
         },
@@ -388,22 +441,22 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
             skillId: 4,
             typeName: 'Intro Skill',
             skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Intro-Skill.webp",
-            skillName: 'Wanted Outlaw',
-            skillDescription: `Attack the target, dealing <span class="Thunder">Electro DMG</span>.`,
+            skillName: 'Everblooming',
+            skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.`,
             skillDetailNum: [],
             multipliers: [
                 {
                     attributeName: "Skill Damage",
                     type: "",
                     skillDetailNum: [{
-                        values: ["20.00%*2+30.00%*2", "21.64%*2+32.46%*2", "23.28%*2+34.92%*2", "25.58%*2+38.37%*2", "27.22%*2+40.83%*2", "29.11%*2+43.66%*2", "31.73%*2+47.59%*2", "34.35%*2+51.53%*2", "36.98%*2+55.47%*2", "39.77%*2+59.65%*2", "43.05%*2+64.57%*2", "46.33%*2+69.49%*2", "49.61%*2+74.41%*2", "52.89%*2+79.33%*2", "56.17%*2+84.25%*2", "59.45%*2+89.17%*2", "62.73%*2+94.09%*2", "66.01%*2+99.01%*2", "69.29%*2+103.93%*2", "72.57%*2+108.85%*2"]
+                        values: ["100.00%", "108.20%", "116.40%", "127.88%", "136.08%", "145.51%", "158.63%", "171.75%", "184.87%", "198.81%"]
                     }],
                     index: 1
                 }, {
-                    attributeName: "Con. Energy Regen",
+                    attributeName: "Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
+                        values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
                     }],
                     index: 2
                 }
@@ -412,164 +465,143 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
         {
             skillId: 5,
             typeName: 'Outro Skill',
-            skillName: 'Shadowy Raid',
-            skillDescription: `Calcharo summons <span class="Highlight">Phantom</span> to support the on-field Resonator, clearing the targets in front with a slash. The <span class="Highlight">Phantom's</span> attack deals <span class="Thunder">Electro DMG</span> equal to {0} of Calcharo's ATK.`,
-            skillDetailNum: ["195.98%+391.96%"],
+            skillName: 'Twining',
+            skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span> equal to {0} of Camellya's ATK.<br>
+            After activating Forte Circuit's Ephemeral, the next Outro Skill Twining deals additional <span class="Dark">Havoc DMG</span> equal to {1} of Camellya's ATK.`,
+            skillDetailNum: ["329%", "459%"],
             multipliers: []
         },
         {
             skillId: 6,
             typeName: 'Forte Circuit',
             skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Forte-Circuit.webp",
-            skillName: 'Hunting Mission',
-            skillDescription: `<span class="Title">Heavy Attack: "Mercy"</span>\n
-                When Calcharo has {0} "Cruelty", his <span class="Highlight">Heavy Attack</span> is replaced with Heavy Attack <span class="Highlight">"Mercy"</span>.\n
-                When casting Heavy Attack <span class="Highlight">"Mercy"</span>, Calcharo consumes {1} "Cruelty" to deal <span class="Thunder">Electro DMG</span>, considered as Heavy Attack damage, and recovers Resonance Energy and Concerto Energy.\n
-                <div class="gap"></div>
-                <span class="Title">"Cruelty"</span>\n
-                Calcharo can hold up to {2} "Cruelty".\n
-                Under Resonance Liberation <span class="Highlight">Deathblade Gear</span> state, "Cruelty" cannot be acquired.\n
-                When Resonance Skill <span class="Highlight">Extermination index</span> hits the target, gain {3} "Cruelty".\n
-                <div class="gap"></div>
-                <span class="Title">Heavy Attack: "Death Messenger"</span>\n
-                When Calcharo has {4} "Killing Intent", his <span class="Highlight">Basic Attack</span> is replaced with Heavy Attack <span class="Highlight">"Death Messenger"</span>.\n
-                When casting Heavy Attack <span class="Highlight">"Death Messenger"</span>, Calcharo consumes {5} "Killing Intent" to deal <span class="Thunder">Electro DMG</span>, considered as Resonance Liberation damage, and recovers Resonance Energy and Concerto Energy.\n
-                <div class="gap"></div>
-                <span class="Title">"Killing Intent"</span>\n
-                Under Resonance Liberation <span class="Highlight">Deathblade Gear</span> state, Calcharo's Forte Gauge is replaced with "Killing Intent", stacking up to {6}.\n
-                When Basic Attack <span class="Highlight">Hounds Roar</span> hits the target, Calcharo gains 1 "Killing Intent".`,
-            skillDetailNum: [],
+            skillName: 'Vegative Universe',
+            skillDescription: `
+                Hitting a target with <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> consumes <span class="Highlight">Crimson Pistils</span>. The Energy Regen Multiplier of this attack is increased by {0}.<br>
+                Consuming <span class="Highlight">{1} Crimson Pistils</span> recovers <span class="Highlight">{2} Concerto Energy</span> and obtains <span class="Highlight">{3} Crimson Bud(s)</span>. Each bud lasts for <span class="Highlight">{4}s</span>, stacking up to <span class="Highlight">{5}</span> times.<br>
+                <span class="Title">Forte Circuit: Ephemeral</span>
+                When Concerto Energy is fully recovered, and <span class="Highlight">Ephemeral</span> is not on Cooldown, Resonance Skill is replaced with <span class="Highlight">Ephemeral</span>.<br>
+                Casting <span class="Highlight">Ephemeral</span> consumes {6} Concerto Energy and deals <span class="Dark">Havoc DMG</span> to the targets. This damage is considered Basic Attack DMG.<br>
+                Camellya enters <span class="Highlight">Budding Mode</span> after casting <span class="Highlight">Ephemeral</span>.
+                <span class="Title">Budding Mode</span>
+                - <span class="Highlight">Sweet Dream</span>: Increase the DMG Multiplier of <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> by {7}.<br>
+                - Casting <span class="Highlight">Ephemeral</span> consumes all <span class="Highlight">Crimson Buds</span>. Each <span class="Highlight">Crimson Bud</span> consumed additionally increases the DMG Multiplier of <span class="Highlight">Sweet Dream</span> by {8}, up to {9}.<br>
+                - When in <span class="Highlight">Budding Mode</span>, Camellya cannot gain <span class="Highlight">Crimson Buds</span>.<br>
+                - When in <span class="Highlight">Budding Mode</span>, the Energy Regen Multiplier of <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> is reduced to {10}.<br>
+                - <span class="Highlight">Budding Mode</span> ends when Camellya is switched off the field.<br>
+                - <span class="Highlight">Budding Mode</span> ends when all <span class="Highlight">Crimson Pistils</span> are consumed.<br>
+                <span class="Title">Crimson Pistil</span>
+                Camellya can hold up to {11} Crimson Pistils.<br>
+                - Casting Intro Skill <span class="Highlight">Everblooming</span> recovers {11} <span class="Highlight">Crimson Pistils</span>.<br>
+                - Activating Forte Circuit's <span class="Highlight">Ephemeral</span> recovers {11} <span class="Highlight">Crimson Pistils</span>.`,
+                skillDetailNum: ["150%", "10", "4", "1", "15", "10", "70", "50%", "5%", "50%", "0%", "100"],
             multipliers: [
                 {
-                    attributeName: '"Mercy" Damage',
-                    type: "Heavy",
+                    attributeName: 'Ephemeral DMG',
+                    type: "",
                     skillDetailNum: [{
-                        values: ["19.67%*8+39.34%", "21.29%*8+42.57%", "22.90%*8+45.80%", "25.16%*8+50.31%", "26.77%*8+53.54%", "28.63%*8+57.25%", "31.21%*8+62.41%", "33.79%*8+67.57%", "36.37%*8+72.73%", "39.11%*8+78.22%", "42.34%*8+84.67%", "45.56%*8+91.12%", "48.79%*8+97.57%", "52.01%*8+104.02%", "55.24%*8+110.48%", "58.47%*8+116.93%", "61.69%*8+123.38%", "64.92%*8+129.83%", "68.14%*8+136.28%", "71.37%*8+142.73%"]
+                        values: ["635.00%", "687.07%", "739.14%", "812.04%", "864.11%", "923.99%", "1007.31%", "1090.62%", "1173.93%", "1262.45%"]
                     }],
                     index: 1
                 }, {
-                    attributeName: '"Death Messenger" Damage',
-                    type: "Liberation",
+                    attributeName: 'Budding Mode Duration',
+                    type: "",
                     skillDetailNum: [{
-                        values: ["49.18%*8+98.35%", "53.21%*8+106.42%", "57.24%*8+114.48%", "62.89%*8+125.77%", "66.92%*8+133.84%", "71.56%*8+143.11%", "78.01%*8+156.02%", "84.46%*8+168.92%", "90.91%*8+181.82%", "97.77%*8+195.53%", "105.83%*8+211.66%", "113.90%*8+227.79%", "121.96%*8+243.92%", "130.03%*8+260.05%", "138.09%*8+276.18%", "146.16%*8+292.31%", "154.22%*8+308.44%", "162.29%*8+324.57%", "170.35%*8+340.70%", "178.42%*8+356.83%"]
+                        values: ["15", "15", "15", "15", "15", "15", "15", "15", "15", "15"]
                     }],
                     index: 2
-                }, {
-                    attributeName: '"Mercy" Con. Energy Regen',
+                },{
+                    attributeName: 'Ephemeral Cooldown',
                     type: "",
                     skillDetailNum: [{
-                        values: ["6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6"]
+                        values: ["25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s"]
                     }],
                     index: 3
-                }, {
-                    attributeName: '"Death Messenger" Con. Energy Regen',
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
-                    }],
-                    index: 4
-                }, {
-                    attributeName: '"Mercy" Con. Energy Regen',
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6", "6"]
-                    }],
-                    index: 5
-                }, {
-                    attributeName: '"Death Messenger" Con. Energy Regen',
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5", "12.5"]
-                    }],
-                    index: 6
                 }
             ]
         },
         {
             skillId: 7,
             typeName: 'Inherent Skill',
-            skillName: 'Bloodshed Awaken',
-            skillDescription: `When casting Heavy Attack <span class="Highlight">"Mercy"</span>, Calcharo's Resonance Liberation DMG Bonus is increased by {0} for {1}s.`,
-            skillDetailNum: ["10%", "15"],
+            skillName: 'Seedbed',
+            skillDescription: `Gain {0} <span class="Dark">Havoc DMG</span> Bonus. Heavy Attack Pruning now deals Basic Attack DMG.`,
+            skillDetailNum: ["15%"],
             multipliers: []
         },
         {
             skillId: 8,
             typeName: 'Inherent Skill',
-            skillName: 'Revenant Rush',
-            skillDescription: `When Heavy Attack <span class="Highlight">"Death Messenger"</span> hits the target, the damage taken by Calcharo is reduced by {0} for {1}s.`,
-            skillDetailNum: ["15%", "5"],
-            multipliers: []
-        },
-        {
-            skillId: 9,
-            typeName: 'Inherent Skill',
-            skillName: 'Skillful Cooking',
-            skillDescription: `Has a chance to produce special dishes when cooking`,
-            skillDetailNum: [],
+            skillName: 'Epiphyte',
+            skillDescription: `Gain {0} <span class="Dark">Havoc DMG</span> Bonus. Basic Attack and Basic Attack Vining Waltz gain increased resistance to interruption.`,
+            skillDetailNum: ["15%"],
             multipliers: []
         }
     ],
     sequences: [
         {
             node: "Sequence Node 1",
-            name: "Covert Negotiation",
-            description: `When Resonance Skill <span class="Highlight">Extermination index</span> hits a target, it additionally recovers {0} Resonance Energy. This can be triggered once every {1}s.`,
-            detailNum: ["10", "20"],
-            sequenceBuffType: "No Buff",
-            sequenceBuffAtrribute: [""],
-            sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            name: "Somewhere No One Traveled",
+            description: `Casting Intro Skill <span class="Highlight">Everblooming</span> increases Camellya's Crit. DMG by {0} for {1}s. This effect can be triggered every {2}s.<br>
+            Immune to interruptions while casting Ephemeral.`,
+            detailNum: ["28%", "18", "25"],
+            sequenceBuffType: "Character Skill Buff",
+            sequenceBuffAtrribute: ["Crit. Damage"],
+            sequenceBuff: [28],
+            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/c/c8/Sequence_Node_Somewhere_No_One_Travelled.png"
         },
         {
             node: "Sequence Node 2",
-            name: "Zero-Sum Game",
-            description: `After Calcharo casts Intro Skill <span class="Highlight">Wanted Criminal</span> or Intro Skill <span class="Highlight">"Necessary Means"</span>, his Resonance Skill DMG Bonus is increased by {0} for {1}s.`,
-            detailNum: ["30%", "15"],
+            name: "Calling Upon the Silent Rose",
+            description: `The DMG Multiplier of Resonance Skill <span class="Highlight">Ephemeral</span> is increased by {0}.`,
+            detailNum: ["120%"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Resonane Skill Damage Bonus"],
-            sequenceBuff: [30],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            sequenceBuffAtrribute: ["Resonance Skill Damage Bonus"],
+            sequenceBuff: [120],
+            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/d/dd/Sequence_Node_Calling_Upon_the_Silent_Rose.png"
         },
         {
             node: "Sequence Node 3",
-            name: "Iron Fist Diplomacy",
-            description: `During the Resonance Liberation <span class="Highlight">Deathblade Gear</span> state, Calcharo's Electro DMG Bonus is increased by {0}.`,
-            detailNum: ["25%"],
+            name: "A Bud Adorned by Thorns",
+            description: `The DMG Multiplier of Resonance Liberation <span class="Highlight">Fervor Efflorescent</span> is increased by {0}. When in Budding Mode, Camellya's ATK is increased by {1}.`,
+            detailNum: ["50%", "58%"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Electro Damage Bonus"],
-            sequenceBuff: [25],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            sequenceBuffAtrribute: ["Resonance Liberation Damage Bonus", "Attack"],
+            sequenceBuff: [50, 58],
+            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/8/88/Sequence_Node_A_Bud_Adorned_by_Thorns.png"
         },
         {
             node: "Sequence Node 4",
-            name: "Dark Alliance",
-            description: `After casting Outro Skill <span class="Highlight">Shadowy Raid</span>, Electro DMG Bonus of all team members is increased by {0} for {1}s.`,
-            detailNum: ["20%", "30"],
+            name: "Roots Set Deep in Eternity",
+            description: `Casting <span class="Highlight">Everblooming</span> gives all team members {0} Basic Attack DMG Bonus for {1}s.`,
+            detailNum: ["25%", "30"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Electro Damage Bonus"],
+            sequenceBuffAtrribute: ["Basic Attack Damage Bonus"],
             sequenceBuff: [20],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/f/f7/Sequence_Node_Roots_Set_Deep_In_Eternity.png"
         },
         {
             node: "Sequence Node 5",
-            name: "Unconventional Compact",
-            description: `Intro Skill <span class="Highlight">Wanted Criminal</span> and Intro Skill <span class="Highlight">"Necessary Means:</span> deal {0} more damage`,
-            detailNum: ["50%"],
+            name: "Infinity Held in Your Palm",
+            description: `The DMG Multipliers of Intro Skill <span class="Highlight">Everblooming</span> is increased by {0} and Outro Skill <span class="Highlight">Twining</span> is increased by {1}.`,
+            detailNum: ["303%", "68%"],
             sequenceBuffType: "Skill Buff",
-            sequenceBuffAtrribute: ["Necessary Means"],
-            sequenceBuff: [50],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            sequenceBuffAtrribute: ["Everblooming", "Twining"],
+            sequenceBuff: [303, 68],
+            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/7/7d/Sequence_Node_Infinity_Held_in_Your_Palm.png"
         },
         {
             node: "Sequence Node 6",
-            name: "The Ultimatum",
-            description: `When casting Resonance Liberation <span class="Highlight">"Death Messenger"</span>, Calcharo will summon {0} <span class="Highlight">Phantoms</span> to perform Coordinated Attacks. Each <span class="Highlight">Phantom</span> deals <span className="Thunder">Electro DMG</span> equal to {1} of Calcharo's ATK, which is considered Resonance Liberation damage.`,
-            detailNum: ["2", "100.00%"],
-            sequenceBuffType: "No Buff",
+            name: "Bloom For You Thousand Times Over",
+            description: `The DMG Multiplier of Forte Circuit's <span class="Highlight">Sweet Dream</span> is additionally increased by {0}.
+            Forte Circuit <span class="Highlight">Perennial</span>: Within {1}s after casting <span class="Highlight">Ephemeral</span>, if Concerto Energy is full and <span class="Highlight">Perennial</span> is not on cooldown, Resonance Skill is replaced with <span class="Highlight">Perennial</span>.
+            Casting <span class="Highlight">Perennial</span> consumes {2} Concerto Energy and recovers {3} Crimson Pistils, dealing <span class="Dark">Havoc DMG</span> equal to {4} of Ephemeral, considered Basic Attack DMG. This skill can be cast once every {5}s.
+            Camellya enters <span class="Highlight">Budding Mode</span> after casting <span class="Highlight">Perennial</span> and removes all Crimson Buds. The bonus DMG Multiplier granted by Forte Circuit's <span class="Highlight">Sweet Dream</span> is increased to {6}.
+            Immune to interruptions when casting <span class="Highlight">Perennial</span>.`,
+            detailNum: ["150%", "15", "50", "50", "100%", "25", "250%"],
+            sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/9/9e/Sequence_Node_Bloom_For_You_Thousand_Times_Over.png"
         }
     ]
 }

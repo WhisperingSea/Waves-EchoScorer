@@ -1583,11 +1583,33 @@ export const WWWeaponsJSON: WWWeapons[] = [
         level: 90,
         weaponType: "Rectifier",
         statPrimary: "ATK",
-        statPrimaryValue: 33,
+        statPrimaryValue: 47,
         statSecondary: "Energy Regen",
         statSecondaryValue: 17.12,
         source: "Gacha",
+      },
+      {
+        name: "Red Spring",
+        id: 30087054, //TODO get real one somehow
+        rarity: 5,
+        img: "https://wutheringlab.com/wp-content/uploads/Red-Spring.webp",
+        effect: `Increase ATK by {0}. When dealing Basic Attack DMG, the wielder gains {1} Basic Attack DMG Bonus for 14s. This effect can be triggered once per second, stacking up to <span class="Highlight">3</span> times.\n
+        When the wielder's Concerto Energy is consumed, gain {2} Basic DMG Bonus for <span class="Highlight">10</span>s. This effect can be triggered once per second and ends when the wielder is switched off the field.`,
+        array0: ["12%", "15%", "18%", "21%", "24%"],
+        array1: ["12%", "15%", "18%", "21%", "24%"],
+        array2: ["40%", "50%", "60%", "70%", "80%"],
+        array3: [""],
+        array4: [""],
+        array5: [""],
+        array6: [""],
+        array7: [""],
+        level: 90,
+        weaponType: "Sword",
+        statPrimary: "ATK",
+        statPrimaryValue: 47,
+        statSecondary: "Crit. Rate",
+        statSecondaryValue: 5.40,
+        source: "Gacha",
       }
-      //TODO weapons from 1.4
       //TODO weapons from 2.0
 ]
