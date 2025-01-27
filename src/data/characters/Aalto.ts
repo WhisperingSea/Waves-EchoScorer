@@ -6,7 +6,7 @@ export const Aalto: WWCharacter = {
     name: "Aalto",
     charaId: 1403,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Aero",

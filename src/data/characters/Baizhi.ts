@@ -4,7 +4,7 @@ const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_
 
 export const Baizhi: WWCharacter = {
     name: "Baizhi",
-    charaId: 1101,
+    charaId: 1103,
     rarity: {
         alt: "4 Star",
         img: rarity4Star

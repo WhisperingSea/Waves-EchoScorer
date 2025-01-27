@@ -2,21 +2,21 @@ import { WWCharacter } from "../WWCharacter";
 
 const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
-export const Camellya: WWCharacter = {
-    name: "Camellya",
-    charaId: 1603,
+export const Carlotta: WWCharacter = {
+    name: "Carlotta",
+    charaId: 1107,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
     },
-    element: "Havoc",
-    weapon: "Sword",
-    bio: `Bloom Bearer from the Black Shores, Camellya is a laid-back character free from shackles, with her personal aroma of "danger."
-Intrigued by the belief in fate, she wanders the lands of her own accord, following such a chain of scenarios and its vague guidance.`,
+    element: "Glacio",
+    weapon: "Pistols",
+    bio: `Carlotta, the second daughter of the esteemed Montelli family, embodies innate nobility and a refined appreciation for art. Her elegance is matched by her unconventional spirit, unshackled by tradition.
+To ensure her family's future, she alternates between dual roles, addressing delicate "troubles" behind the scenes.`,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_chun_UI.webp",
-        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/b/bc/Camellya_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/d/d4/Camellya_Full_Sprite.png"
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_kelaita_UI.webp",
+        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/0/06/Carlotta_Icon.png",
+        model: "https://static.wikia.nocookie.net/wutheringwaves/images/d/da/Carlotta_Full_Sprite.png"
     },
     asension: {
         charaAsension: [
@@ -219,6 +219,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
                 }
             ]
         },
+        //TODO add rest of Camellya's skills and seque
         {
             skillId: 2,
             typeName: 'Resonance Skill',

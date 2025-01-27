@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const XiangliYao: WWCharacter = {
     name: "Xiangli-Yao",
-    charaId: 1304,
+    charaId: 1305,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
@@ -14,7 +14,7 @@ export const XiangliYao: WWCharacter = {
     bio: `Huaxu Academy's Principal Investigator, Xiangli Yao, displays exceptional expertise in various research fields despite his young age.
 He is a gentle yet rational soul, embracing unique insights and commitment to the research of Automata Mechanics.`,
     images: {
-        portrait: "https://wuthering-waves-assets.pages.dev/portraits/XiangliyaoPortrait.webp",
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_xiangliyao_UI.webp",
         icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/XiangliYao.png",
         model: "https://wuthering-waves-assets.pages.dev/models/Xiangli_Yao_Full_Sprite.webp"
     },

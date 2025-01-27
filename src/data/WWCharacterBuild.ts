@@ -64,7 +64,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
             stat1: {stat: "ATK", value: [1700, 2000]},
             stat2: {stat: "HP", value: [15000]},
         },
-        preferedSonata: [5, 8],
+        preferedSonata: [5, 8, 11],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Spectro DMG Bonus%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -358,8 +358,42 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat3: ["ATK%"],
         preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Basic Attack DMG Bonus%", "ATK", "Resonance Skill DMG Bonus"]
     },
-    //TODO Carlotta build
-    //TODO Roccia build
+    {
+        name: "Lumi",
+        charaId: 1504,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [8],
+        preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
+        preferedMainStat2: ["Electro DMG Bonus%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "Basic Attack DMG Bonus%", "Energy Regen%", "ATK%", "ATK"]
+    },
+    {
+        name: "Carlotta",
+        charaId: 1107,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [10],
+        preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
+        preferedMainStat2: ["Glacio DMG Bonus%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Resonance Skill DMG Bonus%", "ATK"]
+    },
+    {
+        name: "Roccia",
+        charaId: 1606,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [8, 12],
+        preferedMainStat1: ["Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Energy Regen%", "Crit. Rate%", "Crit. DMG%", "ATK%", "Heavy Attack DMG Bonus%", "ATK"]
+    },
     //TODO Phoebe build
     //TODO Brant build
     {

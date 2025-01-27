@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const Zhezhi: WWCharacter = {
     name: "Zhezhi",
-    charaId: 1104,
+    charaId: 1105,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
@@ -14,7 +14,7 @@ export const Zhezhi: WWCharacter = {
     bio: `Zhezhi is a commissioned painter, quiet and shy with a dedication to her craft.
 She's not very eloquent, but her persistence and love for painting speak volumes.`,
     images: {
-        portrait: "https://wuthering-waves-assets.pages.dev/portraits/Zhezhi_Portrait.webp",
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_zhezhi_UI.webp",
         icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Zhezhi.png",
         model: "https://wuthering-waves-assets.pages.dev/models/Zhezhi_Full_Sprite.webp"
     },

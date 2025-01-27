@@ -2,21 +2,21 @@ import { WWCharacter } from "../WWCharacter";
 
 const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
-export const Camellya: WWCharacter = {
-    name: "Camellya",
-    charaId: 1603,
+export const Roccia: WWCharacter = {
+    name: "Roccia",
+    charaId: 1606,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
     },
     element: "Havoc",
-    weapon: "Sword",
-    bio: `Bloom Bearer from the Black Shores, Camellya is a laid-back character free from shackles, with her personal aroma of "danger."
-Intrigued by the belief in fate, she wanders the lands of her own accord, following such a chain of scenarios and its vague guidance.`,
+    weapon: "Gauntlets",
+    bio: `Roccia is a gifted improvisational comedian and the First Mate of the Fool's Troupe, known for her mastery of stage props.
+    With a tranquil, composed disposition, she navigates the ship's quarters, perched atop her giant box, meticulously ensuring the Troupe remains orderly and tidy.`,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_chun_UI.webp",
-        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/b/bc/Camellya_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/d/d4/Camellya_Full_Sprite.png"
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_luokeke_UI.webp",
+        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/5/5f/Roccia_Icon.png",
+        model: "https://static.wikia.nocookie.net/wutheringwaves/images/c/c6/Roccia_Full_Sprite.png"
     },
     asension: {
         charaAsension: [
@@ -219,6 +219,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
                 }
             ]
         },
+        //TODO add rest of Camellya's skills and seque
         {
             skillId: 2,
             typeName: 'Resonance Skill',

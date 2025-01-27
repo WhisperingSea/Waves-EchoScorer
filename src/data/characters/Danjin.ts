@@ -6,7 +6,7 @@ export const Danjin: WWCharacter = {
     name: "Danjin",
     charaId: 1602,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Havoc",

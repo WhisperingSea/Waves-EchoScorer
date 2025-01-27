@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const Jianxin: WWCharacter = {
     name: "Jianxin",
-    charaId: 1401,
+    charaId: 1405,
     rarity: {
         alt: "5 Star",
         img: rarity5Star

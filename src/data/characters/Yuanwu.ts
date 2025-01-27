@@ -6,7 +6,7 @@ export const Yuanwu: WWCharacter = {
     name: "Yuanwu",
     charaId: 1303,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Electro",

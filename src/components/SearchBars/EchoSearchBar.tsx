@@ -42,60 +42,15 @@ const EchoSearchBar: React.FC = () => {
             placeholder="Search by name..."
           />
         </div>
-        <button className="sonata-btn" onClick={() => handleEchoGroupFilter(1)}>
-          <img
-            className="sonata-btn-img"
-            src={WWSonataData.find((img) => img.id === 1)?.img}
-          />
-        </button>
-        <button className="sonata-btn" onClick={() => handleEchoGroupFilter(2)}>
-          <img
-            className="sonata-btn-img"
-            src={WWSonataData.find((img) => img.id === 2)?.img}
-          />
-        </button>
-        <button className="sonata-btn" onClick={() => handleEchoGroupFilter(3)}>
-          <img
-            className="sonata-btn-img"
-            src={WWSonataData.find((img) => img.id === 3)?.img}
-          />
-        </button>
-        <button className="sonata-btn" onClick={() => handleEchoGroupFilter(4)}>
-          <img
-            className="sonata-btn-img"
-            src={WWSonataData.find((img) => img.id === 4)?.img}
-          />
-        </button>
-        <button className="sonata-btn" onClick={() => handleEchoGroupFilter(5)}>
-          <img
-            className="sonata-btn-img"
-            src={WWSonataData.find((img) => img.id === 5)?.img}
-          />
-        </button>
-        <button className="sonata-btn" onClick={() => handleEchoGroupFilter(6)}>
-          <img
-            className="sonata-btn-img"
-            src={WWSonataData.find((img) => img.id === 6)?.img}
-          />
-        </button>
-        <button className="sonata-btn" onClick={() => handleEchoGroupFilter(7)}>
-          <img
-            className="sonata-btn-img"
-            src={WWSonataData.find((img) => img.id === 7)?.img}
-          />
-        </button>
-        <button className="sonata-btn" onClick={() => handleEchoGroupFilter(8)}>
-          <img
-            className="sonata-btn-img"
-            src={WWSonataData.find((img) => img.id === 8)?.img}
-          />
-        </button>
-        <button className="sonata-btn" onClick={() => handleEchoGroupFilter(9)}>
-          <img
-            className="sonata-btn-img"
-            src={WWSonataData.find((img) => img.id === 9)?.img}
-          />
-        </button>
+        {WWSonataData.map((sonata) => (
+          <button
+            key={sonata.id}
+            className="sonata-btn"
+            onClick={() => handleEchoGroupFilter(sonata.id)}
+          >
+            <img className="sonata-btn-img" src={sonata.img} alt={`Sonata ${sonata.id}`} />
+          </button>
+        ))}
         <div className="sonata-effect">
           <h3 className="sonata-effect-text">2-Piece: {sonata2}</h3>
           <h3 className="sonata-effect-text">5-Piece: {sonata5}</h3>

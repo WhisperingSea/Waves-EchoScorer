@@ -6,7 +6,7 @@ export const Chixia: WWCharacter = {
     name: "Chixia",
     charaId: 1202,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Fusion",

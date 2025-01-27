@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const Verina: WWCharacter = {
     name: "Verina",
-    charaId: 1501,
+    charaId: 1503,
     rarity: {
         alt: "5 Star",
         img: rarity5Star

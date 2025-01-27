@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const Shorekeeper: WWCharacter = {
     name: "Shorekeeper",
-    charaId: 1503,
+    charaId: 1505,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
@@ -16,7 +16,7 @@ Despite appearing aloof, she is approachable to those who seek knowledge.
 Her insatiable thirst for understanding drives her to tirelessly study Remnant Energy.
 She will stop at nothing until its mysteries are unraveled, even if it means dedicating her entire life to the pursuit.`,
     images: {
-        portrait: "https://wuthering-waves-assets.pages.dev/portraits/The_Shorekeeper_Full_Sprite.webp",
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_shouanren_UI.webp",
         icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Shorekeeper.png",
         model: "https://wuthering-waves-assets.pages.dev/models/The_Shorekeeper_Full_Sprite.webp"
     },

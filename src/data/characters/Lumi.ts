@@ -1,22 +1,22 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
-export const Camellya: WWCharacter = {
-    name: "Camellya",
-    charaId: 1603,
+export const Lumi: WWCharacter = {
+    name: "Lumi",
+    charaId: 1504,
     rarity: {
-        alt: "5 Star",
-        img: rarity5Star
+        alt: "4 Star",
+        img: rarity4Star
     },
-    element: "Havoc",
-    weapon: "Sword",
-    bio: `Bloom Bearer from the Black Shores, Camellya is a laid-back character free from shackles, with her personal aroma of "danger."
-Intrigued by the belief in fate, she wanders the lands of her own accord, following such a chain of scenarios and its vague guidance.`,
+    element: "Electro",
+    weapon: "Broadblade",
+    bio: `From dense forests to vast wilderness, places where navigator of Lollo Logistics Lumi has traveled bear witness to her charming personality, like a shaft of sunlight.<br>
+    Born disciplined, she is now enjoying her daily tasks as a diligent courier, honoring her duty of punctual delivery.`,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_chun_UI.webp",
-        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/b/bc/Camellya_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/d/d4/Camellya_Full_Sprite.png"
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_dengdeng_UI.webp",
+        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/5/5e/Lumi_Icon.png",
+        model: "https://static.wikia.nocookie.net/wutheringwaves/images/4/4f/Lumi_Full_Sprite.png"
     },
     asension: {
         charaAsension: [
@@ -219,6 +219,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
                 }
             ]
         },
+        //TODO add rest of Camellya's skills and seque
         {
             skillId: 2,
             typeName: 'Resonance Skill',

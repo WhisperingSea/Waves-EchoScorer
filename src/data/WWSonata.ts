@@ -161,10 +161,90 @@ export const WWSonataData: WWSonata[] = [
       value: 5,
       stackable: 4
     },
+  },
+  {
+    name: "Frosty Resolve",
+    id: 10,
+    img: "https://wutheringlab.com/wp-content/uploads/Frosty-Resolve.webp",
+    twoPiece: "Resonance Skill DMG increases by 12%",
+    fivePiece: "Casting Resonance Skill grants 22.5% Glacio DMG Bonus for 15s and casting Resonance Liberation increases Resonance Skill DMG by 18%, lasting for 5s. This effect stacks up to 2 times.",
+    twoPieceEffect: {
+      stat: "Resonance Skill DMG Bonus", //??
+      value: 12,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "Glacio DMG Bonus", //?
+      value: 22.5,
+      stackable: 2
+    },
+  },
+  {
+    name: "Eternal Radiance",
+    id: 11,
+    img: "https://wutheringlab.com/wp-content/uploads/Eternal-Radiance.webp",
+    twoPiece: "Spectro DMG Bonus increases by 10%",
+    fivePiece: "Inflicting enemies with Spectro Frazzle increases Crit. Rate by 20% for 15s. Attacking enemies with 10 stacks of Spectro Frazzle grants 15% Spectro DMG Bonus for 15s.",
+    twoPieceEffect: {
+      stat: "Spectro DMG Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "Crit Rate%", //?
+      value: 20,
+      stackable: 0
+    },
+  },
+  {
+    name: "Midnight Veil",
+    id: 12,
+    img: "https://wutheringlab.com/wp-content/uploads/Midnight-Veil.webp",
+    twoPiece: "Havoc DMG Bonus increases by 10%",
+    fivePiece: "When Outro Skill is triggered, deal additional 480% Havoc DMG to surrounding enemies, and grants the incoming Resonator 15% Havoc DMG Bonus for 15s.",
+    twoPieceEffect: {
+      stat: "Havoc DMG Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "Havoc DMG Bonus",
+      value: 15,
+      stackable: 0
+    },
+  },
+  {
+    name: "Empyrean Anthem",
+    id: 13,
+    img: "https://wutheringlab.com/wp-content/uploads/Empyrean-Anthem.webp",
+    twoPiece: "Energy Regen increases by 10%",
+    fivePiece: "Increase the Resonator's Coordinated Attack DMG by 80%. Upon a critical hit of Coordinated Attack, increase the active Resonator's ATK by 20% for 4s.",
+    twoPieceEffect: {
+      stat: "Energy Regen",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "ATK",
+      value: 20,
+      stackable: 0
+    },
+  },
+  {
+    name: "Tidebreaking Courage",
+    id: 14,
+    img: "https://wutheringlab.com/wp-content/uploads/Tidebreaking-Courage.webp",
+    twoPiece: "Energy Regen increases by 10%",
+    fivePiece: "Increase the Resonator's ATK by 15%. Reaching 250% Energy Regen increases all Attribute DMG by 30% for the Resonator.",
+    twoPieceEffect: {
+      stat: "Energy Regen",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "ATK",
+      value: 15,
+      stackable: 0
+    },
   }
-  //TODO Frosty Resolve
-  //TODO Eternal Radiance
-  //TODO Midnight Veil
-  //TODO Empyrean Anthem
-  //TODO Tidebreaking Courage
 ]

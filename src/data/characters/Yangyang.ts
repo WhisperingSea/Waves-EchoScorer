@@ -6,7 +6,7 @@ export const Yangyang: WWCharacter = {
     name: "Yangyang",
     charaId: 1402,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Aero",
@@ -15,7 +15,7 @@ export const Yangyang: WWCharacter = {
 Instead of seeking the spotlight, Yangyang chooses to provide comfort through quiet companionship for others.
 After enduring hardships and anguish, she has found a clear purpose: to be a beacon of guidance and an aiding presence in a world still in need of healing.`,
     images: {
-        portrait: "https://wuthering-waves-assets.pages.dev/portraits/T_IconRole_Pile_yangyang_UI.png",
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_yangyang_UI.webp",
         icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Yangyang.png",
         model: "https://wuthering-waves-assets.pages.dev/models/Oldyangyang2.png"
     },
