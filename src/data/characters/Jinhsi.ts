@@ -268,7 +268,7 @@ Resonance Skill <span class="Highlight">Overflowing Radiance</span> inflicts <sp
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJinhsi3.webp",
                 skillName: 'Purge of Light',
                 skillDescription: `Unleash the power of a heart's wish to deal <span class="Highlight">Spectro DMG</span>.

@@ -16,7 +16,7 @@ export interface WWForteBonusType {
         values: number[];
     }[],
     minorForte: {
-        id: number, 
+        id: number,
         type: string;
         value: number;
     }[];
@@ -25,7 +25,7 @@ export interface WWForteBonusType {
 export const WWForteBonus: WWForteBonusType[] = [
     {
         name: "Rover-Spectro",
-        Id: 1001,
+        Id: 1501,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -39,7 +39,7 @@ export const WWForteBonus: WWForteBonusType[] = [
     },
     {
         name: "Rover-Havoc",
-        Id: 1002,
+        Id: 1604,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -53,7 +53,7 @@ export const WWForteBonus: WWForteBonusType[] = [
     },
     {
         name: "Baizhi",
-        Id: 1101,
+        Id: 1103,
         minorForte: [
             { id: 1, type: "HP", value: 1.8 },
             { id: 2, type: "HP", value: 1.8 },
@@ -81,7 +81,7 @@ export const WWForteBonus: WWForteBonusType[] = [
     },
     {
         name: "Lingyang",
-        Id: 1103,
+        Id: 1104,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -95,20 +95,6 @@ export const WWForteBonus: WWForteBonusType[] = [
     },
     {
         name: "Zhezhi",
-        Id: 1104,
-        minorForte: [
-            { id: 1, type: "ATK", value: 1.8 },
-            { id: 2, type: "ATK", value: 1.8 },
-            { id: 3, type: "ATK", value: 4.2 },
-            { id: 4, type: "ATK", value: 4.2 },
-            { id: 5, type: "Crit. Rate", value: 1.2 },
-            { id: 6, type: "Crit. Rate", value: 1.2 },
-            { id: 7, type: "Crit. Rate", value: 2.8 },
-            { id: 8, type: "Crit. Rate", value: 2.8 }
-        ]
-    },
-    {
-        name: "Youhu",
         Id: 1105,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
@@ -122,8 +108,22 @@ export const WWForteBonus: WWForteBonusType[] = [
         ]
     },
     {
+        name: "Youhu",
+        Id: 1106,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
         name: "Encore",
-        Id: 1201,
+        Id: 1203,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -151,7 +151,7 @@ export const WWForteBonus: WWForteBonusType[] = [
     },
     {
         name: "Mortefi",
-        Id: 1203,
+        Id: 1204,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -165,7 +165,7 @@ export const WWForteBonus: WWForteBonusType[] = [
     },
     {
         name: "Changli",
-        Id: 1204,
+        Id: 1205,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -221,7 +221,7 @@ export const WWForteBonus: WWForteBonusType[] = [
     },
     {
         name: "Xiangli-Yao",
-        Id: 1304,
+        Id: 1305,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -233,9 +233,9 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: "Crit. Damage", value: 5.6 }
         ]
     },
-        {
+    {
         name: "Jianxin",
-        Id: 1401,
+        Id: 1405,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -247,8 +247,8 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: "Crit. Rate", value: 2.8 }
         ]
     },
-        {
-        name: "YangYang",
+    {
+        name: "Yangyang",
         Id: 1402,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
@@ -261,7 +261,7 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: `Aero Damage Bonus`, value: 4.2 }
         ]
     },
-        {
+    {
         name: "Aalto",
         Id: 1403,
         minorForte: [
@@ -275,7 +275,7 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: `Aero Damage Bonus`, value: 4.2 }
         ]
     },
-        {
+    {
         name: "Jiyan",
         Id: 1404,
         minorForte: [
@@ -289,9 +289,9 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: "Crit. Rate", value: 2.8 }
         ]
     },
-        {
+    {
         name: "Verina",
-        Id: 1501,
+        Id: 1503,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -303,9 +303,9 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: "Bonus Healing", value: 4.2 }
         ]
     },
-        {
+    {
         name: "Jinhsi",
-        Id: 1502,
+        Id: 1304,
         minorForte: [
             { id: 1, type: "ATK", value: 1.8 },
             { id: 2, type: "ATK", value: 1.8 },
@@ -317,7 +317,7 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: "Crit. Rate", value: 2.8 }
         ]
     },
-        {
+    {
         name: "Taoqi",
         Id: 1601,
         minorForte: [
@@ -331,7 +331,7 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: `Havoc Damage Bonus`, value: 4.2 }
         ]
     },
-            {
+    {
         name: "Danjin",
         Id: 1602,
         minorForte: [
@@ -343,6 +343,76 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 6, type: `Havoc Damage Bonus`, value: 1.8 },
             { id: 7, type: `Havoc Damage Bonus`, value: 4.2 },
             { id: 8, type: `Havoc Damage Bonus`, value: 4.2 }
+        ]
+    },
+    {
+        name: "Shorekeeper",
+        Id: 1505,
+        minorForte: [
+            { id: 1, type: "HP", value: 1.8 },
+            { id: 2, type: "HP", value: 1.8 },
+            { id: 3, type: "HP", value: 4.2 },
+            { id: 4, type: "HP", value: 4.2 },
+            { id: 5, type: "Bonus Healing", value: 1.8 },
+            { id: 6, type: "Bonus Healing", value: 1.8 },
+            { id: 7, type: "Bonus Healing", value: 4.2 },
+            { id: 8, type: "Bonus Healing", value: 4.2 }
+        ]
+    },
+    {
+        name: "Camellya",
+        Id: 1603,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Damage", value: 2.4 },
+            { id: 6, type: "Crit. Damage", value: 2.4 },
+            { id: 7, type: "Crit. Damage", value: 5.6 },
+            { id: 8, type: "Crit. Damage", value: 5.6 }
+        ]
+    },
+    {
+        name: "Lumi",
+        Id: 1504,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
+        name: "Carlotta",
+        Id: 1107,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
+        name: "Roccia",
+        Id: 1606,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Damage", value: 2.4 },
+            { id: 6, type: "Crit. Damage", value: 2.4 },
+            { id: 7, type: "Crit. Damage", value: 5.6 },
+            { id: 8, type: "Crit. Damage", value: 5.6 }
         ]
     },
 ]
