@@ -128,7 +128,7 @@ export const Lumi: WWCharacter = {
     skills: [
         {
             skillId: 1,
-            typeName: 'Basic Attack',
+            typeName: 'Normal Attack',
             skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Basic-Attack.webp",
             skillName: 'Burgeoning',
             skillDescription: `<span class="Title">Basic Attack</span>

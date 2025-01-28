@@ -129,7 +129,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Execution',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

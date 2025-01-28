@@ -21,32 +21,32 @@ To ensure her family's future, she alternates between dual roles, addressing del
     asension: {
         charaAsension: [
             {
-                item: "LF Whisperin Core",
+                item: "LF Polygon Core",
                 id: 1,
                 value: "4"
             },
             {
-                item: "MF Whisperin Core",
+                item: "MF Polygon Core",
                 id: 2,
                 value: "12"
             },
             {
-                item: "HF Whisperin Core",
+                item: "HF Polygon Core",
                 id: 3,
                 value: "12"
             },
             {
-                item: "FF Whisperin Core",
+                item: "FF Polygon Core",
                 id: 4,
                 value: "4"
             },
             {
-                item: "Topological Confinement",
+                item: "Platinum Core",
                 id: 5,
                 value: "46"
             },
             {
-                item: "Nova",
+                item: "Sword Acorus",
                 id: 6,
                 value: "60"
             },
@@ -58,47 +58,47 @@ To ensure her family's future, she alternates between dual roles, addressing del
         ],
         forteAsension: [
             {
-                item: "LF Whisperin Core",
+                item: "LF Polygon Core",
                 id: 1,
                 value: "25"
             },
             {
-                item: "MF Whisperin Core",
+                item: "MF Polygon Core",
                 id: 2,
                 value: "28"
             },
             {
-                item: "HF Whisperin Core",
+                item: "HF Polygon Core",
                 id: 3,
                 value: "40"
             },
             {
-                item: "Tailered Ring",
+                item: "FF Polygon Core",
                 id: 4,
                 value: "57"
             },
             {
-                item: "Inert Metallic Drip",
+                item: "Impure Phlogiston",
                 id: 5,
                 value: "25"
             },
             {
-                item: "Reactive Metallic Drip",
+                item: "Extracted Phlogiston",
                 id: 6,
                 value: "28"
             },
             {
-                item: "Polarized Metallic Drip",
+                item: "Refined Phlogiston",
                 id: 7,
                 value: "55"
             },
             {
-                item: "Heterized Metallic Drip",
+                item: "Flawless Phlogiston",
                 id: 8,
                 value: "67"
             },
             {
-                item: "Dreamless Feather",
+                item: "The Netherworld's Stare",
                 id: 9,
                 value: "26"
             },
@@ -110,9 +110,9 @@ To ensure her family's future, she alternates between dual roles, addressing del
         ]
     },
     stats: {
-        base_hp: 826,
-        base_atk: 36,
-        base_def: 95,
+        base_hp: 996,
+        base_atk: 37,
+        base_def: 98,
         base_crit: 5,
         base_critdmg: 150,
         base_healing: 0,
@@ -128,328 +128,300 @@ To ensure her family's future, she alternates between dual roles, addressing del
     skills: [
         {
             skillId: 1,
-            typeName: 'Basic Attack',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Basic-Attack.webp",
-            skillName: 'Burgeoning',
+            typeName: 'Normal Attack',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconNorGun.webp",
+            skillName: 'Silent Execution',
             skillDescription: `<span class="Title">Basic Attack</span>
-                Perform up to 5 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>.<br>
-                After performing <span class="Highlight">Basic Attack Stage 3</span> or Heavy Attack <span class="Highlight">Pruning</span>, hold Normal Attack Button to continuously strike the target, dealing <span class="Dark">Havoc DMG</span>.<br>
-                <span class="Highlight">Basic Attack Stage 4</span> is automatically followed by <span class="Highlight">Basic Attack Stage 5</span>.
+                Perform up to 2 consecutive strikes, dealing <span class="Ice">Glacio DMG</span>.<br>
                 <div class="gap"></div>
-                <span class="Title">Heavy Attack - Pruning</span>\n
-                Consume STA to attack the target, dealing <span class="Dark">Havoc DMG</span>.
+                <span class="Title">Basic Attack - <span class="Highlight">Necessary Measures</span></span>\n
+                With Moldable Crystals, Carlotta's <span class="Highlight">Basic Attack</span> is replaced with <span class="Highlight">Necessary Measures</span>.<br>
+                Chain up to 3 strikes, dealing <span class="Ice">Glacio DMG</span>. Each strike of <span class="Highlight">Necessary Measures</span> consumes 1 Moldable Crystal.
                 <div class="gap"></div>
-                <span class="Title">Mid-air Attack</span>\n
-                Consume STA to perform Plunging Attack, dealing <span class="Dark">Havoc DMG</span>.\n
+                <span class="Title">Heavy Attack</span>\n
+                Deliver a charged attack at the target at the cost of STA, dealing <span class="Ice">Glacio DMG</span>.<br>
+                <div class="gap"></div>
+                <span class="Title">Heavy Attack - <span class="Highlight">Containment Tactics</span></span>\n
+                When Carlotta's Substance is full, her <span class="Highlight">Heavy Attack</span> will be replaced with <span class="Highlight">Containment Tactics</span>: consume all Substance to deal <span class="Ice">Glacio DMG</span> and reduce the cooldown of Resonance Skill <span class="Highlight">Art of Violence</span> by 6s.<br>
+                <div class="gap"></div>
+                <span class="Title">Mid-air Attacks</span>\n
+                Perform a Plunging Attack at the cost of STA, dealing <span class="Ice">Glacio DMG</span>. Using <span class="Highlight">Basic Attack</span> shortly after the landing will cast <span class="Highlight">Customary Greetings</span>.<br>
+                <div class="gap"></div>
+                <span class="Title">Mid-air Attacks - <span class="Highlight">Customary Greetings</span></span>\n
+                Flip over the target and deliver a surprise shot, dealing <span class="Ice">Glacio DMG</span>.<br>
                 <div class="gap"></div>
                 <span class="Title">Dodge Counter</span>\n
-                Use <span class="Highlight">Basic Attack</span> right after a successful <span class="Highlight">Dodge</span> to attack the target, dealing <span class="Dark">Havoc DMG</span>.`,
+                Press <span class="Highlight">Normal Attack</span> shortly after a successful <span class="Highlight">Dodge </span>to deliver a riposte shot, dealing <span class="Ice">Glacio DMG</span>. This consumes 1 Moldable Crystal.
+                <div class="gap"></div>
+                `,
             skillDetailNum: [],
             multipliers: [
                 {
-                    attributeName: "Basic Attack 1 DMG",
+                    attributeName: "Basic Attack Stage 1",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["31.45%", "34.03%", "36.61%", "40.27%", "42.80%", "45.77%", "49.89%", "54.02%", "58.15%", "62.53%"]
+                        values: [""]
                     }],
                     index: 1
                 }, {
-                    attributeName: "Basic Attack 2 Damage",
+                    attributeName: "Basic Attack Stage 2",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["23.38%*2", "25.30%*2", "27.21%*2", "29.90%*2", "31.81%*2", "34.02%*2", "37.08%*2", "40.15%*2", "43.22%*2", "46.48%*2"]
+                        values: [""]
                     }],
                     index: 2
                 }, {
-                    attributeName: "Basic Attack 3 Damage",
+                    attributeName: "Necessary Measures Stage 1 DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["25.50%*3", "27.59%*3", "29.68%*3", "32.61%*3", "34.70%*3", "37.11%*3", "40.45%*3", "43.80%*3", "43.80%*3", "50.70%*3"]
+                        values: [""]
                     }],
                     index: 3
                 }, {
-                    attributeName: "Basic Attack 4 Damage",
+                    attributeName: "Necessary Measures Stage 2 DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["12.42%*20", "13.44%*20", "14.46%*20", "15.89%*20", "16.91%*20", "18.08%*20", "19.71%*20", "21.34%*20", "22.97%*20", "24.70%*20"]
+                        values: [""]
                     }],
                     index: 4
                 }, {
-                    attributeName: "Basic Attack 5 Damage",
+                    attributeName: "Necessary Measures Stage 3 DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["24.23%*4", "26.22%*4", "28.20%*4", "30.98%*4", "32.97%*4", "35.25%*4", "38.43%*4", "41.61%*4", "44.79%*4", "48.17%*4"]
+                        values: [""]
                     }],
                     index: 5
                 }, {
-                    attributeName: "Heavy Attack Damage",
+                    attributeName: "Heavy Attack DMG",
                     type: "Heavy",
                     skillDetailNum: [{
-                        values: ["44.33%*3", "47.97%*3", "51.60%*3", "56.69%*3", "60.33%*3", "64.51%*3", "70.32%*3", "76.14%*3", "81.96%*3", "88.14%*3"]
+                        values: [""]
                     }],
                     index: 6
                 }, {
-                    attributeName: "Mid-Air Attack Damage",
-                    type: "Basic",
+                    attributeName: "Containment Tactics DMG",
+                    type: "Heavy",
                     skillDetailNum: [{
-                        values: ["33.00%*2", "35.71%*2", "38.42%*2", "42.21%*2", "44.91%*2", "48.02%*2", "52.35%*2", "56.68%*2", "61.01%*2", "65.61%*2"]
+                        values: [""]
                     }],
                     index: 7
                 }, {
-                    attributeName: "Dodge Counter DMG",
+                    attributeName: "Mid-air Attack DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["33.44%*3+42.99%", "36.18%*3+46.52%", "38.93%*3+50.05%", "42.76%*3+54.98%", "45.51%*3+58.51%", "48.66%*3+62.56%", "53.05%*3+68.20%", "57.43%*3+73.84%", "61.82%*3+79.48%", "66.48%*3+85.47%", "71.96%*3+92.52%", "77.45%*3+99.57%", "82.93%*3+106.62%", "88.41%*3+113.67%", "93.90%*3+120.73%", "99.38%*3+127.78%", "104.87%*3+134.83%", "110.35%*3+141.88%", "115.83%*3+148.93%", "121.32%*3+155.98%"]
+                        values: [""]
                     }],
                     index: 8
+                }, {
+                    attributeName: "Customary Greetings DMG",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: [""]
+                    }],
+                    index: 9
+                }, {
+                    attributeName: "Dodge Counter DMG",
+                    type: "",
+                    skillDetailNum: [{
+                        values: [""]
+                    }],
+                    index: 10
                 }, {
                     attributeName: "Heavy Attack STA Cost",
                     type: "",
                     skillDetailNum: [{
-                        values: ["25", "25", "25", "25", "25", "25", "25", "25", "25", "25"]
-                    }],
-                    index: 9
-                }, {
-                    attributeName: "Plunging Attack STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
-                    }],
-                    index: 10
-                }
-            ]
-        },
-        //TODO add rest of Camellya's skills and seque
-        {
-            skillId: 2,
-            typeName: 'Resonance Skill',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Resonance-Skill.webp",
-            skillName: 'Valse of Bloom and Blight',
-            skillDescription: `<span class="Title">Crimson Blossom</span>
-            Attack the target, dealing <span class="Dark">Havoc DMG</span> (considered Basic Attack DMG), then enter <span class="Highlight">Blossom Mode</span>.<br>
-            This attack can be performed in mid-air.
-            <span class="Title">Blossom Mode</span>
-            - Unable to move while suspended on vines.<br>
-            - <span class="Highlight">Basic Attack</span> and Heavy Attack <span class="Highlight">Pruning</span> are replaced by <span class="Highlight">Basic Attack Vining Waltz</span>: chain together 4 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>, considered Basic Attack DMG.<br>
-            - When performing <span class="Highlight">Vining Waltz Stage 3</span>, hold <span class="Highlight">Normal Attack Button</span> to cast <span class="Highlight">Blazing Waltz</span> that deals <span class="Dark">Havoc DMG</span> before automatically performing <span class="Highlight">Vining Waltz Stage 4</span>.</br>
-            - <span class="Highlight">Dodge Counter</span> is replaced by Dodge Counter <span class="Highlight">Atonement</span>. Press <span class="Highlight">Normal Attack</span> Button right after a successful <span class="Highlight">Dodge</span> to attack the target, dealing <span class="Dark">Havoc DMG</span>, considered Basic Attack DMG.<br>
-            - Resonance Skill is replaced by Resonance Skill <span class="Highlight">Floral Ravage</span>. Casting <span class="Highlight">Floral Ravage</span> deals <span class="Dark">Havoc DMG</span>, considered Basic Attack DMG.<br>
-            - Resonance Skill <span class="Highlight">Floral Ravage</span> can be cast in mid-air.<br>
-            - <span class="Highlight">Blossom Mode</span> ends after casting Resonance Skill <span class="Highlight">Floral Ravage</span>.<br>
-            - <span class="Highlight">Blossom Mode</span> ends after using the <span class="Highlight">Levitator</span>.<br>
-            - Jump is replaced with Basic Attack <span class="Highlight">Vining Ronde</span>. Press Jump to deal <span class="Dark">Havoc DMG</span> (considered Basic Attack DMG) and ends the <span class="Highlight">Blossom Mode</span>.<br>
-            - Using Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Blazing Waltz</span>, and Basic Attack <span class="Highlight">Vining Ronde</span> in mid-air consumes STA.<br>
-            - Casting Resonance Skill <span class="Highlight">Floral Ravage</span> in mid-air doesn't restore STA.<br>
-            - Consume STA continuously to stay suspended on the vines.`,
-            skillDetailNum: [],
-            multipliers: [
-                {
-                    attributeName: "Crimson Blossom DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["57.15%*2", "61.84%*2", "66.53%*2", "73.09%*2", "77.77%*2", "83.16%*2", "90.66%*2", "98.16%*2", "105.66%*2", "105.66%*2"]
-                    }],
-                    index: 1
-                },
-                {
-                    attributeName: "Vining Waltz 1 DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["48.45%", "52.43%", "56.40%", "61.96%", "65.94%", "70.50%", "76.86%", "83.22%", "89.57%", "96.33%"]
-                    }],
-                    index: 2
-                },
-                {
-                    attributeName: "Vining Waltz 2 DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["22.95%*2", "24.84%*2", "26.72%*2", "29.35%*2", "31.24%*2", "33.40%*2", "36.41%*2", "39.42%*2", "42.43%*2", "45.63%*2"]
-                    }],
-                    index: 3
-                },
-                {
-                    attributeName: "Vining Waltz 3 DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["11.04%*6", "11.95%*6", "12.86%*6", "14.12%*6", "15.03%*6", "16.07%*6", "17.52%*6", "18.97%*6", "20.41%*6", "21.95%*6"]
-                    }],
-                    index: 4
-                },
-                {
-                    attributeName: "Vining Waltz 4 DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["34.00%*3", "36.79%*3", "39.58%*3", "43.48%*3", "46.27%*3", "49.47%*3", "53.93%*3", "58.39%*3", "62.85%*3", "67.59%*3"]
-                    }],
-                    index: 5
-                },
-                {
-                    attributeName: "Blazing Waltz DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["11.04%*19", "11.95%*19", "12.86%*19", "14.12%*19", "15.03%*19", "16.07%*19", "17.52%*19", "18.97%*19", "20.41%*19", "21.95%*19"]
-                    }],
-                    index: 6
-                },
-                {
-                    attributeName: "Floral Ravage DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["26.46%*5", "28.63%*5", "30.80%*5", "33.84%*5", "36.01%*5", "38.51%*5", "41.98%*5", "45.45%*5", "48.92%*5", "52.61%*5"]
-                    }],
-                    index: 7
-                },
-                {
-                    attributeName: "Vining Ronde DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["26.64%*3", "28.82%*3", "31.00%*3", "34.06%*3", "36.24%*3", "38.76%*3", "42.25%*3", "45.74%*3", "49.24%*3", "52.95%*3"]
-                    }],
-                    index: 8
-                },
-                {
-                    attributeName: "Atonement DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["57.00%*2", "61.68%*2", "66.35%*2", "72.90%*2", "77.57%*2", "82.95%*2", "90.42%*2", "97.90%*2", "105.38%*2", "113.33%*2"]
-                    }],
-                    index: 9
-                },
-                {
-                    attributeName: "Cooldown",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]
-                    }],
-                    index: 10
-                },
-                {
-                    attributeName: "Crimson Blossom Concerto Regen",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["7", "7", "7", "7", "7", "7", "7", "7", "7", "7"]
+                        values: [""]
                     }],
                     index: 11
-                },
-                {
-                    attributeName: "Floral Ravage Concerto Regen",
+                }, {
+                    attributeName: "Mid-air Attack STA Cost",
                     type: "",
                     skillDetailNum: [{
-                        values: ["7", "7", "7", "7", "7", "7", "7", "7", "7", "7"]
+                        values: [""]
                     }],
                     index: 12
-                },
-                {
-                    attributeName: "Wiring Waltz 1 STA Cost",
+                }, {
+                    attributeName: "Containment Tactics Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                        values: [""]
                     }],
                     index: 13
                 },
+            ]
+        },
+        {
+            skillId: 2,
+            typeName: 'Resonance Skill',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaB1.webp",
+            skillName: 'Art of Violence',
+            skillDescription: `
+                Deal <span class="Ice">Glacio DMG</span> and inflict  <span class="Highlight">Dispersion</span> on the target. Press <span class="Highlight">Resonance Skill</span> again shortly after to cast <span class="Highlight">Chromatic Splendor</span>.
+                <div class="gap"></div>
+                <span class="Title"> <span class="Highlight">Dispersion</span></span>\n
+                Targets with Dispersion are immobilized for 1.5s.
+                <div class="gap"></div>
+                <span class="Title">Chromatic Splendor</span>\n
+                Consume all Moldable Crystals and deal <span class="Ice">Glacio DMG</span>.<br>
+                The Resonance Skill enters cooldown after a while if <span class="Highlight">Chromatic Splendor</span> is not cast or Carlotta is switched off the field.
+                <div class="gap"></div>`,
+            skillDetailNum: [],
+            multipliers: [
                 {
-                    attributeName: "Wiring Waltz 2 STA Cost",
-                    type: "",
+                    attributeName: "Skill DMG",
+                    type: "Skill",
                     skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                        values: []
                     }],
-                    index: 14
+                    index: 1
+                }, {
+                    attributeName: "Chromatic Splendro DMG",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 2
+                }, {
+                    attributeName: "Cooldown",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 3
+                }, {
+                    attributeName: "Concerto Regen",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 4
+                }, {
+                    attributeName: "Chromatic Splendor Concerto Regen",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 5
                 },
-                {
-                    attributeName: "Wiring Waltz 3 STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 15
-                },
-                {
-                    attributeName: "Wiring Waltz 4 STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 16
-                },
-                {
-                    attributeName: "Blazing Waltz STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 17
-                },
-                {
-                    attributeName: "Floral Ravage STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 18
-                },
-                {
-                    attributeName: "STA Cost Per Second When Suspended",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 19
-                }
+
             ]
         },
         {
             skillId: 3,
             typeName: 'Resonance Liberation',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Resonance-Liberation.webp",
-            skillName: 'Fervor Efflorescent',
-            skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.<br>
-            This attack can be performed in mid-air.`,
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaC1.webp",
+            skillName: 'Era of New Wave',
+            skillDescription: `
+            Deal <span class="Ice">Glacio DMG</span> to all targets in an area (considered Resonance Skill DMG) and inflict <span class="Highlight">Deconstruction</span> on targets hit, then activate <span class="Highlight">Twilight Tango</span>.<br>
+            Can be cast in mid-air close to the ground.
+            <div class="gap"></div>
+            <span class="Title">Deconstruction</span>\n
+            Dealing DMG to targets inflicted with <span class="Highlight">Deconstruction</span> ignores 18% of their DEF.
+            <div class="gap"></div>
+            <span class="Title">Twilight Tango</span>\n
+            While in <span class="Highlight">Twilight Tango</span>, press <span class="Highlight">Normal Attack</span> or <span class="Highlight">Resonance Liberation</span> to cast <span class="Highlight">Death Knell</span>.<br>
+            Each <span class="Highlight">Death Knell</span> grants 1 Meta Vector.<br>
+            With 4 Meta Vectors, press <span class="Highlight">Normal Attack</span> or <span class="Highlight">Resonance Liberation</span> to cast <span class="Highlight">Fatal Finale</span>.<br>
+            - All Substance is removed when activating and ending <span class="Highlight">Twilight Tango</span>. Cannot perform Basic Attack <span class="Highlight">Necessary Measures</span>, Heavy Attack <span class="Highlight">Containment Tactics</span>, and Heavy Attack <span class="Highlight">Imminent Oblivion</span> while in <span class="Highlight">Twilight Tango</span>.
+            <div class="gap"></div>
+            <span class="Title">Death Knell</span>\n
+            Carlotta fires powerful shots with her musket and summons 4 crystal shards to attack the target, dealing <span class="Ice">Glacio DMG</span>, considered Resonance Skill DMG.<br>
+            - Carlotta moves in the direction of the movement input with each shot of <span class="Highlight">Death Knell</span>.
+            <div class="gap">Moldbale Crystal</div>
+            <span class="Title">Fatal Finale</span>\n
+            Deal <span class="Ice">Glacio DMG</span> to an area, considered <span class="Highlight">Resonance Skill</span> DMG.<br>
+            - <span class="Highlight">Twilight Tango</span> ends after casting <span class="Highlight">Fatal Finale</span>.
+            <div class="gap"></div>
+            `,
             skillDetailNum: [],
             multipliers: [
                 {
-                    attributeName: "Skill Damage",
+                    attributeName: "Skill DMG",
                     type: "Liberation",
                     skillDetailNum: [{
-                        values: ["605.00%", "654.61%", "704.22%", "773.68%", "823.29%", "880.34%", "959.72%", "1039.09%", "1118.47%", "1202.81%"]
+                        values: []
                     }],
                     index: 1
-                }, {
-                    attributeName: "Cooldown",
-                    type: "",
+                },{
+                    attributeName: "Death Knell DMG",
+                    type: "Liberation",
                     skillDetailNum: [{
-                        values: ["25", "25", "25", "25", "25", "25", "25", "25", "25", "25"]
+                        values: []
                     }],
                     index: 2
-                }, {
-                    attributeName: "Resonance Energy Cost",
-                    type: "",
+                },{
+                    attributeName: "Fatal Finale DMG",
+                    type: "Liberaion",
                     skillDetailNum: [{
-                        values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
+                        values: []
                     }],
                     index: 3
-                }, {
+                },{
+                    attributeName: "Skill Cooldown",
+                    type: "",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 4
+                },{
+                    attributeName: "Resonance Cooldown",
+                    type: "",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 5
+                },{
                     attributeName: "Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
+                        values: []
                     }],
-                    index: 4
-                }
+                    index: 6
+                },{
+                    attributeName: "Death Knell Concerto Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 7
+                },{
+                    attributeName: "Fatal Finale Concerto Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 8
+                },{
+                    attributeName: "Deconstruction Duration",
+                    type: "",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 9
+                },
+                {
+                    attributeName: "Twilight Tango Duration",
+                    type: "",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 10
+                },
             ]
         },
         {
             skillId: 4,
             typeName: 'Intro Skill',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Intro-Skill.webp",
-            skillName: 'Everblooming',
-            skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.`,
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaQTE.webp",
+            skillName: 'Wintertime Aria',
+            skillDescription: `Attack the target, dealing <span class="Ice">Glacio DMG</span>.`,
             skillDetailNum: [],
             multipliers: [
                 {
                     attributeName: "Skill Damage",
                     type: "",
                     skillDetailNum: [{
-                        values: ["100.00%", "108.20%", "116.40%", "127.88%", "136.08%", "145.51%", "158.63%", "171.75%", "184.87%", "198.81%"]
+                        values: []
                     }],
                     index: 1
                 }, {
@@ -465,143 +437,156 @@ To ensure her family's future, she alternates between dual roles, addressing del
         {
             skillId: 5,
             typeName: 'Outro Skill',
-            skillName: 'Twining',
-            skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span> equal to {0} of Camellya's ATK.<br>
-            After activating Forte Circuit's Ephemeral, the next Outro Skill Twining deals additional <span class="Dark">Havoc DMG</span> equal to {1} of Camellya's ATK.`,
-            skillDetailNum: ["329%", "459%"],
+            skillName: 'Closing Remark',
+            skillDescription: `Attack the target, dealing <span class="Ice">Glacio DMG</span> equal to {0} of Carlotta's ATK.`,
+            skillDetailNum: ["794.2%"],
             multipliers: []
         },
         {
             skillId: 6,
             typeName: 'Forte Circuit',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Forte-Circuit.webp",
-            skillName: 'Vegative Universe',
-            skillDescription: `
-                Hitting a target with <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> consumes <span class="Highlight">Crimson Pistils</span>. The Energy Regen Multiplier of this attack is increased by {0}.<br>
-                Consuming <span class="Highlight">{1} Crimson Pistils</span> recovers <span class="Highlight">{2} Concerto Energy</span> and obtains <span class="Highlight">{3} Crimson Bud(s)</span>. Each bud lasts for <span class="Highlight">{4}s</span>, stacking up to <span class="Highlight">{5}</span> times.<br>
-                <span class="Title">Forte Circuit: Ephemeral</span>
-                When Concerto Energy is fully recovered, and <span class="Highlight">Ephemeral</span> is not on Cooldown, Resonance Skill is replaced with <span class="Highlight">Ephemeral</span>.<br>
-                Casting <span class="Highlight">Ephemeral</span> consumes {6} Concerto Energy and deals <span class="Dark">Havoc DMG</span> to the targets. This damage is considered Basic Attack DMG.<br>
-                Camellya enters <span class="Highlight">Budding Mode</span> after casting <span class="Highlight">Ephemeral</span>.
-                <span class="Title">Budding Mode</span>
-                - <span class="Highlight">Sweet Dream</span>: Increase the DMG Multiplier of <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> by {7}.<br>
-                - Casting <span class="Highlight">Ephemeral</span> consumes all <span class="Highlight">Crimson Buds</span>. Each <span class="Highlight">Crimson Bud</span> consumed additionally increases the DMG Multiplier of <span class="Highlight">Sweet Dream</span> by {8}, up to {9}.<br>
-                - When in <span class="Highlight">Budding Mode</span>, Camellya cannot gain <span class="Highlight">Crimson Buds</span>.<br>
-                - When in <span class="Highlight">Budding Mode</span>, the Energy Regen Multiplier of <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> is reduced to {10}.<br>
-                - <span class="Highlight">Budding Mode</span> ends when Camellya is switched off the field.<br>
-                - <span class="Highlight">Budding Mode</span> ends when all <span class="Highlight">Crimson Pistils</span> are consumed.<br>
-                <span class="Title">Crimson Pistil</span>
-                Camellya can hold up to {11} Crimson Pistils.<br>
-                - Casting Intro Skill <span class="Highlight">Everblooming</span> recovers {11} <span class="Highlight">Crimson Pistils</span>.<br>
-                - Activating Forte Circuit's <span class="Highlight">Ephemeral</span> recovers {11} <span class="Highlight">Crimson Pistils</span>.`,
-                skillDetailNum: ["150%", "10", "4", "1", "15", "10", "70", "50%", "5%", "50%", "0%", "100"],
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaY.webp",
+            skillName: 'Lethal Repertoire',
+            skillDescription: `<span class="Title">Heavy Attack - <span class="Highlight">Imminent Oblivion</span></span>\n
+            Carlotta activates <span class="Highlight">Tinted Crystal</span> every 22s.<br>
+            When Substance is full and <span class="Highlight">Tinted Crystal</span> is activated, hold <span class="Highlight">Normal Attack</span> to consume all Substance and cast Heavy Attack <span class="Highlight">Imminent Oblivion</span>, after which <span class="Highlight">Tinted Crystal</span> enters cooldown.<br>
+            Deal <span class="Ice">Glacio DMG</span> (considered Resonance Skill DMG), and reduce the cooldown of Resonance Skill <span class="Highlight">Art of Violence</span> by 6s.
+            <div class="gap"></div>
+            <span class="Title">Final Blow</span>\n
+            When Substance is full, enter the <span class="Highlight">Final Bow</span> state.<br>
+            Increase the DMG Multiplier of Resonance Liberation <span class="Highlight">Era of New Wave</span>, Resonance Liberation <span class="Highlight">Death Knell</span>, and Resonance Liberation <span class="Highlight">Fatal Finale</span> by 80%. This effect ends when Carlotta is switched off the field during <span class="Highlight">Twilight Tango</span> or when <span class="Highlight">Twilight Tango</span> ends.
+            <div class="gap"></div>
+            <span class="Title">Substance</span>\n
+            Carlotta can hold up to 120 points of Substance.<br>
+            Cannot gain Substance while in <span class="Highlight">Twilight Tango</span> triggered by <span class="Highlight">Resonance Liberation</span>.<br>
+            Restore 30 points of Substance upon casting Intro Skill <span class="Highlight">Wintertime Aria</span>.<br>
+            Restore 10 points of Substance for every 1 Moldable Crystal consumed upon casting Resonance Skill <span class="Highlight">Chromatic Splendor</span>.<br>
+            Restore 10 points of Substance for every 1 Moldable Crystal consumed upon casting Basic Attack <span class="Highlight">Necessary Measures</span>.<br>
+            Consume 1 Moldable Crystal and restore 10 points of Substance upon casting <span class="Highlight">Dodge Counter</span>.
+            <div class="gap"></div>
+            <span class="Title">Moldable Crystal</span>\n
+            Carlotta can hold up to 6 Moldable Crystals.<br>
+            Cannot gain Moldable Crystal while in <span class="Highlight">Twilight Tango</span> triggered by <span class="Highlight">Resonance Liberation</span>.<br>
+            Restore 3 Moldable Crystals upon casting <span class="Highlight">Basic Attack Stage 2</span>.<br>
+            Restore 3 Moldable Crystals upon casting <span class="Highlight">Heavy Attack</span>.<br>
+            Restore 3 Moldable Crystals upon casting Mid-air Attack <span class="Highlight">Customary Greetings</span>.<br>
+            Restore 3 Moldable Crystals upon casting Intro Skill <span class="Highlight">Wintertime Aria</span>.<br>
+            Restore 3 Moldable Crystals upon casting Resonance Skill <span class="Highlight">Art of Violence</span>.<br>
+            Restore 3 Moldable Crystals upon a successful Dodge.
+            <div class="gap"></div>
+            `,
+            skillDetailNum: [],
             multipliers: [
                 {
-                    attributeName: 'Ephemeral DMG',
-                    type: "",
+                    attributeName: "Imminent Oblivion DMG",
+                    type: "Liberation",
                     skillDetailNum: [{
-                        values: ["635.00%", "687.07%", "739.14%", "812.04%", "864.11%", "923.99%", "1007.31%", "1090.62%", "1173.93%", "1262.45%"]
+                        values: []
                     }],
                     index: 1
                 }, {
-                    attributeName: 'Budding Mode Duration',
+                    attributeName: "Tinted Crystal Cooldown",
                     type: "",
                     skillDetailNum: [{
-                        values: ["15", "15", "15", "15", "15", "15", "15", "15", "15", "15"]
+                        values: []
                     }],
                     index: 2
-                },{
-                    attributeName: 'Ephemeral Cooldown',
+                }, {
+                    attributeName: "Imminent Oblivion Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: ["25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s"]
+                        values: []
                     }],
                     index: 3
-                }
+                }, {
+                    attributeName: "Moldable Crystal Duration",
+                    type: "",
+                    skillDetailNum: [{
+                        values: []
+                    }],
+                    index: 4
+                },
             ]
         },
         {
             skillId: 7,
             typeName: 'Inherent Skill',
-            skillName: 'Seedbed',
-            skillDescription: `Gain {0} <span class="Dark">Havoc DMG</span> Bonus. Heavy Attack Pruning now deals Basic Attack DMG.`,
-            skillDetailNum: ["15%"],
+            skillName: 'Flawless Purity',
+            skillDescription: `After casting Resonance Skill <span class="Highlight">Chromatic Splendor</span>, Carlotta can perform <span class="Highlight">Mid-air Attacks</span> while being immune to any DMG or interruptions before the Mid-air Attack deals DMG.<br>
+            When Carlotta is on the team, the active Resonator's Flight STA cost is reduced by {0}.`,
+            skillDetailNum: ["20%"],
             multipliers: []
         },
         {
             skillId: 8,
             typeName: 'Inherent Skill',
-            skillName: 'Epiphyte',
-            skillDescription: `Gain {0} <span class="Dark">Havoc DMG</span> Bonus. Basic Attack and Basic Attack Vining Waltz gain increased resistance to interruption.`,
-            skillDetailNum: ["15%"],
+            skillName: 'Ars Gratia Artis',
+            skillDescription: `Intro Skill <span class="Highlight">Wintertime Aria</span>, Resonance Skill <span class="Highlight">Chromatic Splendor</span>, Resonance Liberation <span class="Highlight">Death Knell</span>, and Heavy Attack <span class="Highlight">Imminent Oblivion</span> can inflict <span class="Highlight">Deconstruction</span>.`,
+            skillDetailNum: [],
             multipliers: []
         }
     ],
     sequences: [
         {
             node: "Sequence Node 1",
-            name: "Somewhere No One Traveled",
-            description: `Casting Intro Skill <span class="Highlight">Everblooming</span> increases Camellya's Crit. DMG by {0} for {1}s. This effect can be triggered every {2}s.<br>
-            Immune to interruptions while casting Ephemeral.`,
-            detailNum: ["28%", "18", "25"],
+            name: "Beauty Blazes Brightest Before It Fades",
+            description: `When Carlotta deals DMG to a target inflicted with <span class="Highlight">Deconstruction</span>, the Crit. Rate of this instance of DMG is increased by {0}. When Resonance Skill <span class="Highlight">Chromatic Splendor</span> hits a target inflicted with <span class="Highlight">Dispersion</span>, Carlotta additionally restores {1} points of Substance.`,
+            detailNum: ["12.5%", "30"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Crit. Damage"],
-            sequenceBuff: [28],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/c/c8/Sequence_Node_Somewhere_No_One_Travelled.png"
+            sequenceBuffAtrribute: ["Crit. Rate"],
+            sequenceBuff: [12.5],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KelaitaM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
-            name: "Calling Upon the Silent Rose",
-            description: `The DMG Multiplier of Resonance Skill <span class="Highlight">Ephemeral</span> is increased by {0}.`,
-            detailNum: ["120%"],
+            name: "Fallen Petals Give Life to New Blooms",
+            description: `The DMG Multiplier of Resonance Liberation <span class="Highlight">Fatal Finale</span> is increased by {0}.`,
+            detailNum: ["126%"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Resonance Skill Damage Bonus"],
-            sequenceBuff: [120],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/d/dd/Sequence_Node_Calling_Upon_the_Silent_Rose.png"
+            sequenceBuffAtrribute: ["Resonance Liberation Damage Bonus"],
+            sequenceBuff: [126],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KelaitaM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
-            name: "A Bud Adorned by Thorns",
-            description: `The DMG Multiplier of Resonance Liberation <span class="Highlight">Fervor Efflorescent</span> is increased by {0}. When in Budding Mode, Camellya's ATK is increased by {1}.`,
-            detailNum: ["50%", "58%"],
+            name: "Adelante, Cortado, Spinning in Grace",
+            description: `Enable Outro Skill <span class="Highlight">Kaleidoscope Sparks</span>: Deal 1 additional strike at the end of Outro Skill <span class="Highlight">Closing Remark</span>, dealing <span class="Ice">Glacio DMG</span> equal to {0} of Carlotta's ATK. The DMG Multiplier of Resonance Skill <span class="Highlight">Art of Violence</span> and Resonance Skill <span class="Highlight">Chromatic Splendor</span> is increased by {1}.`,
+            detailNum: ["1032.18%", "93%"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Resonance Liberation Damage Bonus", "Attack"],
-            sequenceBuff: [50, 58],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/8/88/Sequence_Node_A_Bud_Adorned_by_Thorns.png"
+            sequenceBuffAtrribute: ["Closing Remark", "Resonance Skill Damage Bonus"],
+            sequenceBuff: [1032.18, 93],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KelaitaM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
-            name: "Roots Set Deep in Eternity",
-            description: `Casting <span class="Highlight">Everblooming</span> gives all team members {0} Basic Attack DMG Bonus for {1}s.`,
-            detailNum: ["25%", "30"],
+            name: "Yesterday's Raindrops Make Finest Wine",
+            description: `Casting Heavy Attack, Heavy Attack <span class="Highlight">Containment Tactics</span>, and Heavy Attack <span class="Highlight">Imminent Oblivion</span> grants all Resonators in the team {0} Resonance Skill DMG Bonus for 30s.`,
+            detailNum: ["25%"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Basic Attack Damage Bonus"],
-            sequenceBuff: [20],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/f/f7/Sequence_Node_Roots_Set_Deep_In_Eternity.png"
+            sequenceBuffAtrribute: ["Resonance Skill Damage Bonus"],
+            sequenceBuff: [25],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KelaitaM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
-            name: "Infinity Held in Your Palm",
-            description: `The DMG Multipliers of Intro Skill <span class="Highlight">Everblooming</span> is increased by {0} and Outro Skill <span class="Highlight">Twining</span> is increased by {1}.`,
-            detailNum: ["303%", "68%"],
+            name: "Toast to Past, Today, and Every Day to Come",
+            description: `The DMG Multiplier of Heavy Attack <span class="Highlight">Imminent Oblivion</span> is increased by {0}.`,
+            detailNum: ["47%"],
             sequenceBuffType: "Skill Buff",
-            sequenceBuffAtrribute: ["Everblooming", "Twining"],
-            sequenceBuff: [303, 68],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/7/7d/Sequence_Node_Infinity_Held_in_Your_Palm.png"
+            sequenceBuffAtrribute: ["Heavy Attack Damage Bonus"],
+            sequenceBuff: [47],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KelaitaM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
             name: "Bloom For You Thousand Times Over",
-            description: `The DMG Multiplier of Forte Circuit's <span class="Highlight">Sweet Dream</span> is additionally increased by {0}.
-            Forte Circuit <span class="Highlight">Perennial</span>: Within {1}s after casting <span class="Highlight">Ephemeral</span>, if Concerto Energy is full and <span class="Highlight">Perennial</span> is not on cooldown, Resonance Skill is replaced with <span class="Highlight">Perennial</span>.
-            Casting <span class="Highlight">Perennial</span> consumes {2} Concerto Energy and recovers {3} Crimson Pistils, dealing <span class="Dark">Havoc DMG</span> equal to {4} of Ephemeral, considered Basic Attack DMG. This skill can be cast once every {5}s.
-            Camellya enters <span class="Highlight">Budding Mode</span> after casting <span class="Highlight">Perennial</span> and removes all Crimson Buds. The bonus DMG Multiplier granted by Forte Circuit's <span class="Highlight">Sweet Dream</span> is increased to {6}.
-            Immune to interruptions when casting <span class="Highlight">Perennial</span>.`,
-            detailNum: ["150%", "15", "50", "50", "100%", "25", "250%"],
+            description: `Shots of Resonance Liberation <span class="Highlight">Death Knell</span> deal higher DMG and shoot out double the number of crystal shards, representing a total increase of {0} in the DMG Multiplier of Resonance Liberation <span class="Highlight">Death Knell</span>.<br>
+            Shots of Resonance Liberation <span class="Highlight">Death Knell</span> inflict <span class="Highlight">Scattering</span> on targets when hit, during which the target is immobilized. This effect is removed after 1.5s or when the target receives DMG.`,
+            detailNum: ["186.6%"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: [""],
-            sequenceBuff: [],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/9/9e/Sequence_Node_Bloom_For_You_Thousand_Times_Over.png"
+            sequenceBuffAtrribute: ["Resonation Liberation Damage Bonus"],
+            sequenceBuff: [186.6],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KelaitaM6_UI.webp"
         }
     ]
 }

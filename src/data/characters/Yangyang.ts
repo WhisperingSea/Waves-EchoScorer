@@ -129,7 +129,7 @@ After enduring hardships and anguish, she has found a clear purpose: to be a bea
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Feather as Blade',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

@@ -128,7 +128,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: 'Cultivation',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

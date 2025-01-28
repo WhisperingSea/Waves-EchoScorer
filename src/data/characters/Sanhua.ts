@@ -130,7 +130,7 @@ This allows her to master her Forte with graceful ease and alleviates the burden
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Frigid Light',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

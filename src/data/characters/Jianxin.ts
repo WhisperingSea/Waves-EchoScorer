@@ -129,7 +129,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Fengyiquan',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

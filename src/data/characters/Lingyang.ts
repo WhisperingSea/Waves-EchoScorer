@@ -128,7 +128,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Majestic Fists',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

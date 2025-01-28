@@ -130,7 +130,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
                 skillName: 'Impromptu Show',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

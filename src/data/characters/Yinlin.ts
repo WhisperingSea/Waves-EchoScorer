@@ -127,7 +127,7 @@ export const Yinlin: WWCharacter = {
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: `Zapstring's Dance`,
                 skillDescription: `<span class="Title">Basic Attack</span>\n

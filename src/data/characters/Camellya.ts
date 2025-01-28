@@ -73,7 +73,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
                 value: "40"
             },
             {
-                item: "Tailered Ring",
+                item: "FF Whisperin Core",
                 id: 4,
                 value: "57"
             },
@@ -128,7 +128,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
     skills: [
         {
             skillId: 1,
-            typeName: 'Basic Attack',
+            typeName: 'Normal Attack',
             skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Basic-Attack.webp",
             skillName: 'Burgeoning',
             skillDescription: `<span class="Title">Basic Attack</span>

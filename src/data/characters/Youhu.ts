@@ -128,7 +128,7 @@ When dealing with treasures and antiques, this jubilant dynamo settles into calm
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Frosty Punches',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

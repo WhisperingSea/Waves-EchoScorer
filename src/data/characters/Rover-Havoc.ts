@@ -128,7 +128,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
     skills: [
         {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Tuneslayer',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

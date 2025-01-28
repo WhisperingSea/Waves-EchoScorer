@@ -129,7 +129,7 @@ Yet, grasping the nettle, she strives with all her might to forge a path toward 
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
                 skillName: 'Slash of Breaking Dawn',
                 skillDescription: `<span class="Title">Basic Attack</span>

@@ -129,7 +129,7 @@ She entertains an unwavering aspiration, holding her ground in the endless game 
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Blazing Enlightment',
                 skillDescription: `<span class="Title">Basic Attack</span>

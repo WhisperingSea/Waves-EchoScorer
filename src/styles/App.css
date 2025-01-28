@@ -78,7 +78,7 @@
 
 .Highlight {
     font-weight: 700;
-    color: aliceblue;
+    color: rgb(251, 251, 40);
 }
 
 @media (max-width: 1024px) and (min-width: 481px) {

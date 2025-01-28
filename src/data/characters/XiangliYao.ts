@@ -128,7 +128,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Probe',
                 skillDescription: `<span class="Title">Basic Attack</span>

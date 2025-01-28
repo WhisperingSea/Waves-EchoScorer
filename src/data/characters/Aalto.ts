@@ -131,7 +131,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
                 skillName: 'Half Truths',
                 skillDescription: `<span class="Title">Basic Attack</span>

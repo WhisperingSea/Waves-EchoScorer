@@ -128,7 +128,7 @@ Having honed his skills in the Leihuang martial arts style, Yuanwu also earned m
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Leihuangquan',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
