@@ -160,91 +160,91 @@ To ensure her family's future, she alternates between dual roles, addressing del
                     attributeName: "Basic Attack Stage 1",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["27.20%", "29.44%", "31.67%", "34.49%", "37.02%", "39.58%", "43.15%", "46.72%", "50.29%", "54.08%"]
                     }],
                     index: 1
                 }, {
                     attributeName: "Basic Attack Stage 2",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["19.89%+19.89%+26.52%", "21.53%+21.53%+28.70%", "23.16%+23.16%+30.87%", "25.44%+25.44%+33.92%", "27.07%+27.07%+36.09%", "28.95%+28.95%+38.59%", "31.56%+31.56%+42.07%", "34.17%+34.17%+45.55%", "36.78%+36.78%+49.03%", "39.55%+39.55%+52.73%"]
                     }],
                     index: 2
                 }, {
                     attributeName: "Necessary Measures Stage 1 DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["33.15%", "35.87%", "38.59%", "42.40%", "45.12%", "48.24%", "52.59%", "56.94%", "61.29%", "65.91%"]
                     }],
                     index: 3
                 }, {
                     attributeName: "Necessary Measures Stage 2 DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["30.22%+36.94%", "32.70%+39.97%", "35.18%+42.99%", "38.65%+47.23%", "41.12%+50.26%", "43.97%+53.75%", "47.94%+58.59%", "51.90%+63.44%", "55.87%+68.28%", "60.08%+73.43%"]
                     }],
                     index: 4
                 }, {
                     attributeName: "Necessary Measures Stage 3 DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["70.38%+11.73%*4", "76.16%+12.70%*4", "81.93%+13.66%*4", "90.01%+15.01%*4", "95.78%+15.97%*4", "102.41%+17.07%*4", "111.65%+18.61%*4", "120.88%+20.15%*4", "130.12%+21.69%*4", "139.93%+23.33%*4"]
                     }],
                     index: 5
                 }, {
                     attributeName: "Heavy Attack DMG",
                     type: "Heavy",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["11.48%*2+11.48%*2+30.60%", "12.42%*2+12.42%*2+33.11%", "13.36%*2+13.36%*2+35.62%", "14.68%*2+14.68%*2+39.14%", "15.62%*2+15.62%*2+41.65%", "16.70%*2+16.70%*2+44.53%", "18.21%*2+18.21%*2+48.55%", "19.71%*2+19.71%*2+52.56%", "21.22%*2+21.22%*2+56.58%", "22.82%*2+22.82%*2+60.84%"]
                     }],
                     index: 6
                 }, {
                     attributeName: "Containment Tactics DMG",
                     type: "Heavy",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["17.22%*2+17.22%*2+45.90%", "18.63%*2+18.63%*2+49.67%", "20.04%*2+20.04%*2+53.43%", "22.02%*2+22.02%*2+58.70%", "23.43%*2+23.43%*2+62.47%", "25.05%*2+25.05%*2+66.79%", "27.31%*2+27.31%*2+72.82%", "29.57%*2+29.57%*2+78.84%", "31.83%*2+31.83%*2+84.86%", "34.23%*2+34.23%*2+91.26%"]
                     }],
                     index: 7
                 }, {
                     attributeName: "Mid-air Attack DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["52.70%", "57.03%", "61.35%", "67.40%", "71.72%", "76.69%", "83.60%", "90.52%", "97.43%", "104.78%"]
                     }],
                     index: 8
                 }, {
                     attributeName: "Customary Greetings DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["54.32%+66.39%", "58.77%+71.83%", "63.23%+77.28%", "69.46%+84.90%", "73.92%+90.34%", "79.04%+96.60%", "86.16%+105.31%", "93.29%+114.02%", "100.42%+122.73%", "107.99%+131.99%"]
                     }],
                     index: 9
                 }, {
                     attributeName: "Dodge Counter DMG",
                     type: "",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["52.20%+69.19%", "56.48%+74.86%", "60.76%+80.54%", "66.75%+88.48%", "71.03%+94.15%", "75.95%+100.68%", "82.80%+109.76%", "89.65%+118.83%", "96.49%+127.91%", "103.77%+137.55%"]
                     }],
                     index: 10
                 }, {
                     attributeName: "Heavy Attack STA Cost",
                     type: "",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["25", "25", "25", "25", "25", "25", "25", "25", "25", "25"]
                     }],
                     index: 11
                 }, {
                     attributeName: "Mid-air Attack STA Cost",
                     type: "",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
                     }],
                     index: 12
                 }, {
                     attributeName: "Containment Tactics Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: [""]
+                        values: ["15", "15", "15", "15", "15", "15", "15", "15", "15", "15"]
                     }],
                     index: 13
                 },
@@ -271,35 +271,35 @@ To ensure her family's future, she alternates between dual roles, addressing del
                     attributeName: "Skill DMG",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: []
+                        values: ["72.49%+72.49%", "78.43%+78.43%", "84.37%+84.37%", "92.69%+92.69%", "98.64%+98.64%", "105.47%+105.47%", "114.98%+114.98%", "124.49%+124.49%", "134.00%+134.00%", "144.11%+144.11%"]
                     }],
                     index: 1
                 }, {
                     attributeName: "Chromatic Splendro DMG",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: []
+                        values: ["56.70%+56.70%+170.10%", "61.35%+61.35%+184.05%", "66.00%+66.00%+198.00%", "72.51%+72.51%+217.53%", "77.16%+77.16%+231.48%", "82.51%+82.51%+247.52%", "89.95%+89.95%+269.83%", "97.39%+97.39%+292.15%", "104.83%+104.83%+314.47%", "112.73%+112.73%+338.18%"]
                     }],
                     index: 2
                 }, {
                     attributeName: "Cooldown",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: []
+                        values: ["14s", "14s", "14s", "14s", "14s", "14s", "14s", "14s", "14s", "14s"]
                     }],
                     index: 3
                 }, {
                     attributeName: "Concerto Regen",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: []
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
                     }],
                     index: 4
                 }, {
                     attributeName: "Chromatic Splendor Concerto Regen",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: []
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
                     }],
                     index: 5
                 },
@@ -339,63 +339,63 @@ To ensure her family's future, she alternates between dual roles, addressing del
                     attributeName: "Skill DMG",
                     type: "Liberation",
                     skillDetailNum: [{
-                        values: []
+                        values: ["202.56%", "219.17%", "235.78%", "259.03%", "275.64%", "294.74%", "321.32%", "347.89%", "374.47%", "402.71%"]
                     }],
                     index: 1
-                },{
+                }, {
                     attributeName: "Death Knell DMG",
                     type: "Liberation",
                     skillDetailNum: [{
-                        values: []
+                        values: ["92.37%+7.30%*4", "99.94%+7.89%*4", "107.52%+8.49%*4", "118.12%+9.33%*4", "125.70%+9.93%*4", "134.41%+10.62%*4", "146.52%+11.57%*4", "158.64%+12.53%*4", "170.76%+13.49%*4", "183.64%+14.50%*4"]
                     }],
                     index: 2
-                },{
+                }, {
                     attributeName: "Fatal Finale DMG",
                     type: "Liberaion",
                     skillDetailNum: [{
-                        values: []
+                        values: ["324.09%", "350.67%", "377.24%", "414.45%", "441.03%", "471.59%", "514.11%", "556.63%", "599.15%", "644.33%"]
                     }],
                     index: 3
-                },{
+                }, {
                     attributeName: "Skill Cooldown",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s"]
                     }],
                     index: 4
-                },{
-                    attributeName: "Resonance Cooldown",
+                }, {
+                    attributeName: "Resonance Cost",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
                     }],
                     index: 5
-                },{
+                }, {
                     attributeName: "Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
                     }],
                     index: 6
-                },{
+                }, {
                     attributeName: "Death Knell Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["7", "7", "7", "7", "7", "7", "7", "7", "7", "7"]
                     }],
                     index: 7
-                },{
+                }, {
                     attributeName: "Fatal Finale Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
                     }],
                     index: 8
-                },{
+                }, {
                     attributeName: "Deconstruction Duration",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["4s", "4s", "4s", "4s", "4s", "4s", "4s", "4s", "4s", "4s"]
                     }],
                     index: 9
                 },
@@ -403,7 +403,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
                     attributeName: "Twilight Tango Duration",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s"]
                     }],
                     index: 10
                 },
@@ -421,7 +421,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
                     attributeName: "Skill Damage",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["90.00%+30.00%*2", "97.38%+32.46%*2", "104.76%+34.92%*2", "115.10%+38.37%*2", "122.48%+40.83%*2", "130.96%+43.66%*2", "142.77%+47.59%*2", "154.58%+51.53%*2", "166.39%+55.47%*2", "178.93%+59.65%*2"]
                     }],
                     index: 1
                 }, {
@@ -479,30 +479,30 @@ To ensure her family's future, she alternates between dual roles, addressing del
             multipliers: [
                 {
                     attributeName: "Imminent Oblivion DMG",
-                    type: "Liberation",
+                    type: "Heavy",
                     skillDetailNum: [{
-                        values: []
+                        values: ["33.62%*5+252.11%", "36.38%*5+272.78%", "39.13%*5+293.45%", "42.99%*5+322.39%", "45.75%*5+343.07%", "48.92%*5+366.84%", "53.33%*5+399.92%", "57.74%*5+432.99%", "62.15%*5+466.07%", "66.83%*5+501.21%"]
                     }],
                     index: 1
                 }, {
                     attributeName: "Tinted Crystal Cooldown",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["22s", "22s", "22s", "22s", "22s", "22s", "22s", "22s", "22s", "22s"]
                     }],
                     index: 2
                 }, {
                     attributeName: "Imminent Oblivion Concerto Regen",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["15", "15", "15", "15", "15", "15", "15", "15", "15", "15"]
                     }],
                     index: 3
                 }, {
                     attributeName: "Moldable Crystal Duration",
                     type: "",
                     skillDetailNum: [{
-                        values: []
+                        values: ["10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s"]
                     }],
                     index: 4
                 },
