@@ -493,7 +493,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
                 Camellya can hold up to {11} Crimson Pistils.<br>
                 - Casting Intro Skill <span class="Highlight">Everblooming</span> recovers {11} <span class="Highlight">Crimson Pistils</span>.<br>
                 - Activating Forte Circuit's <span class="Highlight">Ephemeral</span> recovers {11} <span class="Highlight">Crimson Pistils</span>.`,
-                skillDetailNum: ["150%", "10", "4", "1", "15", "10", "70", "50%", "5%", "50%", "0%", "100"],
+            skillDetailNum: ["150%", "10", "4", "1", "15", "10", "70", "50%", "5%", "50%", "0%", "100"],
             multipliers: [
                 {
                     attributeName: 'Ephemeral DMG',
@@ -509,7 +509,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
                         values: ["15", "15", "15", "15", "15", "15", "15", "15", "15", "15"]
                     }],
                     index: 2
-                },{
+                }, {
                     attributeName: 'Ephemeral Cooldown',
                     type: "",
                     skillDetailNum: [{

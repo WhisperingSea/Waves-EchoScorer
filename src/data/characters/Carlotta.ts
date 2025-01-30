@@ -151,9 +151,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
                 Flip over the target and deliver a surprise shot, dealing <span class="Ice">Glacio DMG</span>.<br>
                 <div class="gap"></div>
                 <span class="Title">Dodge Counter</span>\n
-                Press <span class="Highlight">Normal Attack</span> shortly after a successful <span class="Highlight">Dodge </span>to deliver a riposte shot, dealing <span class="Ice">Glacio DMG</span>. This consumes 1 Moldable Crystal.
-                <div class="gap"></div>
-                `,
+                Press <span class="Highlight">Normal Attack</span> shortly after a successful <span class="Highlight">Dodge </span>to deliver a riposte shot, dealing <span class="Ice">Glacio DMG</span>. This consumes 1 Moldable Crystal.`,
             skillDetailNum: [],
             multipliers: [
                 {
@@ -263,8 +261,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
                 <div class="gap"></div>
                 <span class="Title">Chromatic Splendor</span>\n
                 Consume all Moldable Crystals and deal <span class="Ice">Glacio DMG</span>.<br>
-                The Resonance Skill enters cooldown after a while if <span class="Highlight">Chromatic Splendor</span> is not cast or Carlotta is switched off the field.
-                <div class="gap"></div>`,
+                The Resonance Skill enters cooldown after a while if <span class="Highlight">Chromatic Splendor</span> is not cast or Carlotta is switched off the field.`,
             skillDetailNum: [],
             multipliers: [
                 {
@@ -330,9 +327,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
             <div class="gap">Moldbale Crystal</div>
             <span class="Title">Fatal Finale</span>\n
             Deal <span class="Ice">Glacio DMG</span> to an area, considered <span class="Highlight">Resonance Skill</span> DMG.<br>
-            - <span class="Highlight">Twilight Tango</span> ends after casting <span class="Highlight">Fatal Finale</span>.
-            <div class="gap"></div>
-            `,
+            - <span class="Highlight">Twilight Tango</span> ends after casting <span class="Highlight">Fatal Finale</span>.`,
             skillDetailNum: [],
             multipliers: [
                 {
@@ -472,9 +467,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
             Restore 3 Moldable Crystals upon casting Mid-air Attack <span class="Highlight">Customary Greetings</span>.<br>
             Restore 3 Moldable Crystals upon casting Intro Skill <span class="Highlight">Wintertime Aria</span>.<br>
             Restore 3 Moldable Crystals upon casting Resonance Skill <span class="Highlight">Art of Violence</span>.<br>
-            Restore 3 Moldable Crystals upon a successful Dodge.
-            <div class="gap"></div>
-            `,
+            Restore 3 Moldable Crystals upon a successful Dodge.`,
             skillDetailNum: [],
             multipliers: [
                 {

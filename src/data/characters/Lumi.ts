@@ -21,22 +21,22 @@ export const Lumi: WWCharacter = {
     asension: {
         charaAsension: [
             {
-                item: "LF Whisperin Core",
+                item: "LF Howler Core",
                 id: 1,
                 value: "4"
             },
             {
-                item: "MF Whisperin Core",
+                item: "MF Howler Core",
                 id: 2,
                 value: "12"
             },
             {
-                item: "HF Whisperin Core",
+                item: "HF Howler Core",
                 id: 3,
                 value: "12"
             },
             {
-                item: "FF Whisperin Core",
+                item: "FF Howler Core",
                 id: 4,
                 value: "4"
             },
@@ -58,47 +58,47 @@ export const Lumi: WWCharacter = {
         ],
         forteAsension: [
             {
-                item: "LF Whisperin Core",
+                item: "LF Howler Core",
                 id: 1,
                 value: "25"
             },
             {
-                item: "MF Whisperin Core",
+                item: "MF Howler Core",
                 id: 2,
                 value: "28"
             },
             {
-                item: "HF Whisperin Core",
+                item: "HF Howler Core",
                 id: 3,
                 value: "40"
             },
             {
-                item: "Tailered Ring",
+                item: "FF Howler Core",
                 id: 4,
                 value: "57"
             },
             {
-                item: "Inert Metallic Drip",
+                item: "Waveworn Residue 210",
                 id: 5,
                 value: "25"
             },
             {
-                item: "Reactive Metallic Drip",
+                item: "Waveworn Residue 226",
                 id: 6,
                 value: "28"
             },
             {
-                item: "Polarized Metallic Drip",
+                item: "Waveworn Residue 235",
                 id: 7,
                 value: "55"
             },
             {
-                item: "Heterized Metallic Drip",
+                item: "Waveworn Residue 239",
                 id: 8,
                 value: "67"
             },
             {
-                item: "Dreamless Feather",
+                item: "Sentinel's Dagger",
                 id: 9,
                 value: "26"
             },
@@ -110,9 +110,9 @@ export const Lumi: WWCharacter = {
         ]
     },
     stats: {
-        base_hp: 826,
-        base_atk: 36,
-        base_def: 95,
+        base_hp: 680,
+        base_atk: 27,
+        base_def: 72,
         base_crit: 5,
         base_critdmg: 150,
         base_healing: 0,
@@ -129,299 +129,194 @@ export const Lumi: WWCharacter = {
         {
             skillId: 1,
             typeName: 'Normal Attack',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Basic-Attack.webp",
-            skillName: 'Burgeoning',
-            skillDescription: `<span class="Title">Basic Attack</span>
-                Perform up to 5 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>.<br>
-                After performing <span class="Highlight">Basic Attack Stage 3</span> or Heavy Attack <span class="Highlight">Pruning</span>, hold Normal Attack Button to continuously strike the target, dealing <span class="Dark">Havoc DMG</span>.<br>
-                <span class="Highlight">Basic Attack Stage 4</span> is automatically followed by <span class="Highlight">Basic Attack Stage 5</span>.
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconNorSword.webp",
+            skillName: 'Navigation Support',
+            skillDescription: `<span class="Title">Yellow Light: Basic Attack</span>
+                Summon Squeakie to shoot three shots in a row, dealing <span class="Electro">Electro DMG</span>.
                 <div class="gap"></div>
-                <span class="Title">Heavy Attack - Pruning</span>\n
-                Consume STA to attack the target, dealing <span class="Dark">Havoc DMG</span>.
+                <span class="Title">Yellow Light: Sprint</span>
+                Dodge to perform <span class="Highlight">Sprint</span> and enter <span class="Highlight">Zoom Mode</span>. Lumi is unable to Dodge when performing <span class="Highlight">Sprint</span>.
                 <div class="gap"></div>
-                <span class="Title">Mid-air Attack</span>\n
-                Consume STA to perform Plunging Attack, dealing <span class="Dark">Havoc DMG</span>.\n
+                <span class="Title">Yellow Light: Zoom</span>
+                When in this state, automatically shoot <span class="Highlight">Glitters</span> at a locked-on target and deal <span class="Thunder">Electro DMG</span>, considered Basic Attack DMG.
                 <div class="gap"></div>
-                <span class="Title">Dodge Counter</span>\n
-                Use <span class="Highlight">Basic Attack</span> right after a successful <span class="Highlight">Dodge</span> to attack the target, dealing <span class="Dark">Havoc DMG</span>.`,
+                <span class="Title">Yellow Light: Plunging Attack</span>
+                Consume STA to perform a Plunging Attack, dealing <span class="Thunder">Electro DMG</span>.
+                <div class="gap"></div>
+                <span class="Title">Red Light: Basic Attack</span>
+                Perform up to 3 consecutive attacks, dealing <span class="Thunder">Electro DMG</span>.
+                <div class="gap"></div>
+                <span class="Title">Red Light: Heavy Attack</span>
+                Consume STA to strike the ground with Squeakie, causing an impact dealing <span class="Thunder">Electro DMG</span>, considered Basic Attack DMG.
+                <div class="gap"></div>
+                <span class="Title">Red Light: Plunging Attack</span>
+                Consume STA to perform a Plunging Attack, dealing <span class="Thunder">Electro DMG</span>.
+                <div class="gap"></div>
+                <span class="Title">Red Light: Dodge Counter</span>
+                Use Basic Attack right after a successful Dodge to attack the target, dealing <span class="Thunder">Electro DMG</span>.`,
             skillDetailNum: [],
             multipliers: [
                 {
-                    attributeName: "Basic Attack 1 DMG",
+                    attributeName: "Yellow Light: Basic Attack",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["31.45%", "34.03%", "36.61%", "40.27%", "42.80%", "45.77%", "49.89%", "54.02%", "58.15%", "62.53%"]
+                        values: ["16.00%*3", "17.32%*3", "18.63%*3", "20.47%*3", "21.78%*3", "23.29%*3", "25.39%*3", "27.48%*3", "29.58%*3", "31.81%*3"]
                     }],
                     index: 1
                 }, {
-                    attributeName: "Basic Attack 2 Damage",
+                    attributeName: "Glitter",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["23.38%*2", "25.30%*2", "27.21%*2", "29.90%*2", "31.81%*2", "34.02%*2", "37.08%*2", "40.15%*2", "43.22%*2", "46.48%*2"]
+                        values: ["32.00%", "34.63%", "37.25%", "40.93%", "43.55%", "46.57%", "50.77%", "54.96%", "59.16%", "63.62%"]
                     }],
                     index: 2
                 }, {
-                    attributeName: "Basic Attack 3 Damage",
+                    attributeName: "Yellow Light: Plunging Attack",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["25.50%*3", "27.59%*3", "29.68%*3", "32.61%*3", "34.70%*3", "37.11%*3", "40.45%*3", "43.80%*3", "43.80%*3", "50.70%*3"]
+                        values: ["48.00%", "51.94%", "55.88%", "61.39%", "65.32%", "69.85%", "76.15%", "82.44%", "88.74%", "95.43%"]
                     }],
                     index: 3
                 }, {
-                    attributeName: "Basic Attack 4 Damage",
+                    attributeName: "Red Light: Basic Attack 1 DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["12.42%*20", "13.44%*20", "14.46%*20", "15.89%*20", "16.91%*20", "18.08%*20", "19.71%*20", "21.34%*20", "22.97%*20", "24.70%*20"]
+                        values: ["45.60%", "49.34%", "53.08%", "58.32%", "62.06%", "66.36%", "72.34%", "78.32%", "84.31%", "90.66%"]
                     }],
                     index: 4
                 }, {
-                    attributeName: "Basic Attack 5 Damage",
+                    attributeName: "Red Light: Basic Attack 2 DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["24.23%*4", "26.22%*4", "28.20%*4", "30.98%*4", "32.97%*4", "35.25%*4", "38.43%*4", "41.61%*4", "44.79%*4", "48.17%*4"]
+                        values: ["54.15%+10.83%*5", "58.60%+11.72%*5", "63.04%+12.61%*5", "69.25%+13.85%*5", "73.69%+14.74%*5", "78.80%+15.76%*5", "85.90%+17.18%*5", "93.01%+18.61%*5", "100.11%+20.03%*5", "107.66%+21.54%*5"]
                     }],
                     index: 5
                 }, {
-                    attributeName: "Heavy Attack Damage",
-                    type: "Heavy",
+                    attributeName: "Red Light: Basic Attack 3 DMG",
+                    type: "Basic",
                     skillDetailNum: [{
-                        values: ["44.33%*3", "47.97%*3", "51.60%*3", "56.69%*3", "60.33%*3", "64.51%*3", "70.32%*3", "76.14%*3", "81.96%*3", "88.14%*3"]
+                        values: ["32.49%+75.81%", "35.16%+82.03%", "37.82%+88.25%", "41.55%+96.95%", "44.22%+103.17%", "47.28%+110.32%", "51.54%+120.26%", "55.81%+130.21%", "60.07%+140.15%", "64.60%+150.72%"]
                     }],
                     index: 6
                 }, {
-                    attributeName: "Mid-Air Attack Damage",
+                    attributeName: "Red Light: Heavy Attack DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["33.00%*2", "35.71%*2", "38.42%*2", "42.21%*2", "44.91%*2", "48.02%*2", "52.35%*2", "56.68%*2", "61.01%*2", "65.61%*2"]
+                        values: ["33.25%*2", "35.98%*2", "38.71%*2", "42.53%*2", "45.25%*2", "48.39%*2", "52.75%*2", "57.11%*2", "61.47%*2", "66.11%*2"]
                     }],
                     index: 7
                 }, {
-                    attributeName: "Dodge Counter DMG",
+                    attributeName: "Red Light: Plunging Attack DMG",
                     type: "Basic",
                     skillDetailNum: [{
-                        values: ["33.44%*3+42.99%", "36.18%*3+46.52%", "38.93%*3+50.05%", "42.76%*3+54.98%", "45.51%*3+58.51%", "48.66%*3+62.56%", "53.05%*3+68.20%", "57.43%*3+73.84%", "61.82%*3+79.48%", "66.48%*3+85.47%", "71.96%*3+92.52%", "77.45%*3+99.57%", "82.93%*3+106.62%", "88.41%*3+113.67%", "93.90%*3+120.73%", "99.38%*3+127.78%", "104.87%*3+134.83%", "110.35%*3+141.88%", "115.83%*3+148.93%", "121.32%*3+155.98%"]
+                        values: ["57.00%", "61.68%", "66.35%", "72.90%", "77.57%", "82.95%", "90.42%", "97.90%", "105.38%", "113.33%"]
                     }],
                     index: 8
                 }, {
-                    attributeName: "Heavy Attack STA Cost",
-                    type: "",
+                    attributeName: "Red Light: Dodge Counter DMG",
+                    type: "Basic",
                     skillDetailNum: [{
-                        values: ["25", "25", "25", "25", "25", "25", "25", "25", "25", "25"]
+                        values: ["84.15%+16.83%*5", "91.06%+18.22%*5", "97.96%+19.60%*5", "107.62%+21.53%*5", "114.52%+22.91%*5", "122.45%+24.49%*5", "133.49%+26.70%*5", "144.53%+28.91%*5", "155.57%+31.12%*5", "167.30%+33.46%*5"]
                     }],
                     index: 9
                 }, {
-                    attributeName: "Plunging Attack STA Cost",
+                    attributeName: "Yellow Light: Plunging Attack STA Cost",
                     type: "",
                     skillDetailNum: [{
                         values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
                     }],
                     index: 10
+                }, {
+                    attributeName: "Red Light: Heavy Attack STA Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["25", "25", "25", "25", "25", "25", "25", "25", "25", "25"]
+                    }],
+                    index: 11
+                }, {
+                    attributeName: "Red Light: Plunging Attack STA Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
+                    }],
+                    index: 12
                 }
             ]
         },
-        //TODO add rest of Camellya's skills and seque
         {
             skillId: 2,
             typeName: 'Resonance Skill',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Resonance-Skill.webp",
-            skillName: 'Valse of Bloom and Blight',
-            skillDescription: `<span class="Title">Crimson Blossom</span>
-            Attack the target, dealing <span class="Dark">Havoc DMG</span> (considered Basic Attack DMG), then enter <span class="Highlight">Blossom Mode</span>.<br>
-            This attack can be performed in mid-air.
-            <span class="Title">Blossom Mode</span>
-            - Unable to move while suspended on vines.<br>
-            - <span class="Highlight">Basic Attack</span> and Heavy Attack <span class="Highlight">Pruning</span> are replaced by <span class="Highlight">Basic Attack Vining Waltz</span>: chain together 4 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>, considered Basic Attack DMG.<br>
-            - When performing <span class="Highlight">Vining Waltz Stage 3</span>, hold <span class="Highlight">Normal Attack Button</span> to cast <span class="Highlight">Blazing Waltz</span> that deals <span class="Dark">Havoc DMG</span> before automatically performing <span class="Highlight">Vining Waltz Stage 4</span>.</br>
-            - <span class="Highlight">Dodge Counter</span> is replaced by Dodge Counter <span class="Highlight">Atonement</span>. Press <span class="Highlight">Normal Attack</span> Button right after a successful <span class="Highlight">Dodge</span> to attack the target, dealing <span class="Dark">Havoc DMG</span>, considered Basic Attack DMG.<br>
-            - Resonance Skill is replaced by Resonance Skill <span class="Highlight">Floral Ravage</span>. Casting <span class="Highlight">Floral Ravage</span> deals <span class="Dark">Havoc DMG</span>, considered Basic Attack DMG.<br>
-            - Resonance Skill <span class="Highlight">Floral Ravage</span> can be cast in mid-air.<br>
-            - <span class="Highlight">Blossom Mode</span> ends after casting Resonance Skill <span class="Highlight">Floral Ravage</span>.<br>
-            - <span class="Highlight">Blossom Mode</span> ends after using the <span class="Highlight">Levitator</span>.<br>
-            - Jump is replaced with Basic Attack <span class="Highlight">Vining Ronde</span>. Press Jump to deal <span class="Dark">Havoc DMG</span> (considered Basic Attack DMG) and ends the <span class="Highlight">Blossom Mode</span>.<br>
-            - Using Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Blazing Waltz</span>, and Basic Attack <span class="Highlight">Vining Ronde</span> in mid-air consumes STA.<br>
-            - Casting Resonance Skill <span class="Highlight">Floral Ravage</span> in mid-air doesn't restore STA.<br>
-            - Consume STA continuously to stay suspended on the vines.`,
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengB1.webp",
+            skillName: 'Searchlight Service',
+            skillDescription: `<span class="Title">Pounce</span>
+                When in <span class="Highlight">Yellow Light Mode</span>, use Resonance Skill to perform Pounce, which consumes STA to pounce on the target before switching to <span class="Highlight">Red Light Mode</span>.<br>
+                Lumi will perform a <span class="Highlight">Pounce</span> without STA cost when switched onto the field.
+                <div class="gap"></div>
+                <span class="Title">Rebound</span>
+                When in <span class="Highlight">Red Light Mode</span>, use Resonance Skill to perform Rebound, which consumes STA to leap backward and attack the target before switching to <span class="Highlight">Yellow Light Mode</span>.
+                <div class="gap"></div>
+                <span class="Title">Yellow Light Mode</span>
+                Perform ranged attacks when in Yellow Light Mode.
+                <div class="gap"></div>
+                <span class="Title">Red Light Mode</span>
+                Perform melee attacks when in Red Light Mode.`,
             skillDetailNum: [],
             multipliers: [
                 {
-                    attributeName: "Crimson Blossom DMG",
+                    attributeName: "Pounce DMG",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: ["57.15%*2", "61.84%*2", "66.53%*2", "73.09%*2", "77.77%*2", "83.16%*2", "90.66%*2", "98.16%*2", "105.66%*2", "105.66%*2"]
+                        values: ["91.20%", "98.68%", "106.16%", "116.63%", "124.11%", "132.71%", "144.68%", "156.64%", "168.61%", "181.32%"]
                     }],
                     index: 1
-                },
-                {
-                    attributeName: "Vining Waltz 1 DMG",
+                }, {
+                    attributeName: "Rebound DMG",
                     type: "Skill",
                     skillDetailNum: [{
-                        values: ["48.45%", "52.43%", "56.40%", "61.96%", "65.94%", "70.50%", "76.86%", "83.22%", "89.57%", "96.33%"]
+                        values: ["87.40%", "94.57%", "101.74%", "111.77%", "118.94%", "127.18%", "138.65%", "150.11%", "161.58%", "173.76%"]
                     }],
                     index: 2
-                },
-                {
-                    attributeName: "Vining Waltz 2 DMG",
-                    type: "Skill",
+                }, {
+                    attributeName: "Pounce STA Cost",
+                    type: "",
                     skillDetailNum: [{
-                        values: ["22.95%*2", "24.84%*2", "26.72%*2", "29.35%*2", "31.24%*2", "33.40%*2", "36.41%*2", "39.42%*2", "42.43%*2", "45.63%*2"]
+                        values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
                     }],
                     index: 3
-                },
-                {
-                    attributeName: "Vining Waltz 3 DMG",
-                    type: "Skill",
+                }, {
+                    attributeName: "Rebound STA Cost",
+                    type: "",
                     skillDetailNum: [{
-                        values: ["11.04%*6", "11.95%*6", "12.86%*6", "14.12%*6", "15.03%*6", "16.07%*6", "17.52%*6", "18.97%*6", "20.41%*6", "21.95%*6"]
+                        values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
                     }],
                     index: 4
-                },
-                {
-                    attributeName: "Vining Waltz 4 DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["34.00%*3", "36.79%*3", "39.58%*3", "43.48%*3", "46.27%*3", "49.47%*3", "53.93%*3", "58.39%*3", "62.85%*3", "67.59%*3"]
-                    }],
-                    index: 5
-                },
-                {
-                    attributeName: "Blazing Waltz DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["11.04%*19", "11.95%*19", "12.86%*19", "14.12%*19", "15.03%*19", "16.07%*19", "17.52%*19", "18.97%*19", "20.41%*19", "21.95%*19"]
-                    }],
-                    index: 6
-                },
-                {
-                    attributeName: "Floral Ravage DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["26.46%*5", "28.63%*5", "30.80%*5", "33.84%*5", "36.01%*5", "38.51%*5", "41.98%*5", "45.45%*5", "48.92%*5", "52.61%*5"]
-                    }],
-                    index: 7
-                },
-                {
-                    attributeName: "Vining Ronde DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["26.64%*3", "28.82%*3", "31.00%*3", "34.06%*3", "36.24%*3", "38.76%*3", "42.25%*3", "45.74%*3", "49.24%*3", "52.95%*3"]
-                    }],
-                    index: 8
-                },
-                {
-                    attributeName: "Atonement DMG",
-                    type: "Skill",
-                    skillDetailNum: [{
-                        values: ["57.00%*2", "61.68%*2", "66.35%*2", "72.90%*2", "77.57%*2", "82.95%*2", "90.42%*2", "97.90%*2", "105.38%*2", "113.33%*2"]
-                    }],
-                    index: 9
-                },
-                {
-                    attributeName: "Cooldown",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]
-                    }],
-                    index: 10
-                },
-                {
-                    attributeName: "Crimson Blossom Concerto Regen",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["7", "7", "7", "7", "7", "7", "7", "7", "7", "7"]
-                    }],
-                    index: 11
-                },
-                {
-                    attributeName: "Floral Ravage Concerto Regen",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["7", "7", "7", "7", "7", "7", "7", "7", "7", "7"]
-                    }],
-                    index: 12
-                },
-                {
-                    attributeName: "Wiring Waltz 1 STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 13
-                },
-                {
-                    attributeName: "Wiring Waltz 2 STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 14
-                },
-                {
-                    attributeName: "Wiring Waltz 3 STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 15
-                },
-                {
-                    attributeName: "Wiring Waltz 4 STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 16
-                },
-                {
-                    attributeName: "Blazing Waltz STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 17
-                },
-                {
-                    attributeName: "Floral Ravage STA Cost",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 18
-                },
-                {
-                    attributeName: "STA Cost Per Second When Suspended",
-                    type: "",
-                    skillDetailNum: [{
-                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                    }],
-                    index: 19
                 }
             ]
         },
         {
             skillId: 3,
             typeName: 'Resonance Liberation',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Resonance-Liberation.webp",
-            skillName: 'Fervor Efflorescent',
-            skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.<br>
-            This attack can be performed in mid-air.`,
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengC1.webp",
+            skillName: 'Squeakie Express',
+            skillDescription: `Throw the giant Squeakie at the target, dealing <span class="Thunder">Electro DMG</span>.`,
             skillDetailNum: [],
             multipliers: [
                 {
-                    attributeName: "Skill Damage",
+                    attributeName: "",
                     type: "Liberation",
                     skillDetailNum: [{
-                        values: ["605.00%", "654.61%", "704.22%", "773.68%", "823.29%", "880.34%", "959.72%", "1039.09%", "1118.47%", "1202.81%"]
+                        values: ["480.00%", "519.36%", "558.72%", "613.83%", "653.19%", "698.45%", "761.43%", "824.40%", "887.38%", "954.29%"]
                     }],
                     index: 1
                 }, {
                     attributeName: "Cooldown",
                     type: "",
                     skillDetailNum: [{
-                        values: ["25", "25", "25", "25", "25", "25", "25", "25", "25", "25"]
+                        values: ["20s", "20s", "20s", "20s", "20s", "20s", "20s", "20s", "20s", "20s"]
                     }],
                     index: 2
                 }, {
-                    attributeName: "Resonance Energy Cost",
+                    attributeName: "Resonance Cost",
                     type: "",
                     skillDetailNum: [{
                         values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
@@ -434,22 +329,22 @@ export const Lumi: WWCharacter = {
                         values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
                     }],
                     index: 4
-                }
+                },
             ]
         },
         {
             skillId: 4,
             typeName: 'Intro Skill',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Intro-Skill.webp",
-            skillName: 'Everblooming',
-            skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.`,
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengQTE.webp",
+            skillName: 'Special Delivery',
+            skillDescription: `Enter <span class="Highlight">Yellow Light Mode</span> and attack the target, dealing <span class="Thunder">Electro DMG</span>.`,
             skillDetailNum: [],
             multipliers: [
                 {
-                    attributeName: "Skill Damage",
+                    attributeName: "Skill DMG",
                     type: "",
                     skillDetailNum: [{
-                        values: ["100.00%", "108.20%", "116.40%", "127.88%", "136.08%", "145.51%", "158.63%", "171.75%", "184.87%", "198.81%"]
+                        values: ["28.34%*3", "30.66%*3", "32.98%*3", "36.24%*3", "38.56%*3", "41.23%*3", "44.95%*3", "48.67%*3", "52.38%*3", "56.33%*3"]
                     }],
                     index: 1
                 }, {
@@ -465,143 +360,196 @@ export const Lumi: WWCharacter = {
         {
             skillId: 5,
             typeName: 'Outro Skill',
-            skillName: 'Twining',
-            skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span> equal to {0} of Camellya's ATK.<br>
-            After activating Forte Circuit's Ephemeral, the next Outro Skill Twining deals additional <span class="Dark">Havoc DMG</span> equal to {1} of Camellya's ATK.`,
-            skillDetailNum: ["329%", "459%"],
+            skillName: 'Escorting',
+            skillDescription: `The incoming Resonator has their Resonance Skill DMG Amplified by {0} for 10s or until they are switched out.`,
+            skillDetailNum: ["38%"],
             multipliers: []
         },
         {
             skillId: 6,
             typeName: 'Forte Circuit',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Forte-Circuit.webp",
-            skillName: 'Vegative Universe',
-            skillDescription: `
-                Hitting a target with <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> consumes <span class="Highlight">Crimson Pistils</span>. The Energy Regen Multiplier of this attack is increased by {0}.<br>
-                Consuming <span class="Highlight">{1} Crimson Pistils</span> recovers <span class="Highlight">{2} Concerto Energy</span> and obtains <span class="Highlight">{3} Crimson Bud(s)</span>. Each bud lasts for <span class="Highlight">{4}s</span>, stacking up to <span class="Highlight">{5}</span> times.<br>
-                <span class="Title">Forte Circuit: Ephemeral</span>
-                When Concerto Energy is fully recovered, and <span class="Highlight">Ephemeral</span> is not on Cooldown, Resonance Skill is replaced with <span class="Highlight">Ephemeral</span>.<br>
-                Casting <span class="Highlight">Ephemeral</span> consumes {6} Concerto Energy and deals <span class="Dark">Havoc DMG</span> to the targets. This damage is considered Basic Attack DMG.<br>
-                Camellya enters <span class="Highlight">Budding Mode</span> after casting <span class="Highlight">Ephemeral</span>.
-                <span class="Title">Budding Mode</span>
-                - <span class="Highlight">Sweet Dream</span>: Increase the DMG Multiplier of <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> by {7}.<br>
-                - Casting <span class="Highlight">Ephemeral</span> consumes all <span class="Highlight">Crimson Buds</span>. Each <span class="Highlight">Crimson Bud</span> consumed additionally increases the DMG Multiplier of <span class="Highlight">Sweet Dream</span> by {8}, up to {9}.<br>
-                - When in <span class="Highlight">Budding Mode</span>, Camellya cannot gain <span class="Highlight">Crimson Buds</span>.<br>
-                - When in <span class="Highlight">Budding Mode</span>, the Energy Regen Multiplier of <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> is reduced to {10}.<br>
-                - <span class="Highlight">Budding Mode</span> ends when Camellya is switched off the field.<br>
-                - <span class="Highlight">Budding Mode</span> ends when all <span class="Highlight">Crimson Pistils</span> are consumed.<br>
-                <span class="Title">Crimson Pistil</span>
-                Camellya can hold up to {11} Crimson Pistils.<br>
-                - Casting Intro Skill <span class="Highlight">Everblooming</span> recovers {11} <span class="Highlight">Crimson Pistils</span>.<br>
-                - Activating Forte Circuit's <span class="Highlight">Ephemeral</span> recovers {11} <span class="Highlight">Crimson Pistils</span>.`,
-                skillDetailNum: ["150%", "10", "4", "1", "15", "10", "70", "50%", "5%", "50%", "0%", "100"],
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengY.webp",
+            skillName: 'Signal Light',
+            skillDescription: `<span class="Title">Energized Pounce</span>
+                When Yellow Light Spark is fully recovered, replace Resonance Skill with Resonance Skill <span class="Highlight">Energized Pounce</span> that deals <span class="Thunder">Electro DMG</span> and enter <span class="Highlight">Red Spotlight</span> Mode. The DMG dealt is considered Basic Attack DMG.<br>
+                When in <span class="Highlight">Red Spotlight</span> Mode, the DMG Multiplier of <span class="Highlight">Red Light: Basic Attack</span> and <span class="Highlight">Red Light: Heavy Attack</span> is increased, with an extra amount of Sparks recovered.<br>
+                <span class="Highlight">Red Spotlight Mode</span> ends after performing altogether 4 Basic Attacks and/or Heavy Attacks.
+                <div class="gap"></div>
+                <span class="Title">Energized Rebound</span>
+                When Red Light Spark is fully recovered, replace Resonance Skill with Resonance Skill <span class="Highlight">Energized Rebound</span> that deals <span class="Thunder">Electro DMG</span> and enter <span class="Highlight">Yellow Spotlight Mode</span>. The DMG dealt is considered Basic Attack DMG.<br>
+                When in <span class="Highlight">Yellow Spotlight Mode</span>, <span class="Highlight">Glitter</span> is replaced by <span class="Highlight">Glare</span>, with an increased DMG Multiplier and an extra amount of Sparks recovered.<br>
+                <span class="Highlight">Yellow Spotlight Mode</span> ends after shooting 6 <span class="Highlight">Glares</span>.
+                <div class="gap"></div>
+                <span class="Title">Laser</span>
+                Casting Outro Skill consumes all Sparks obtained in the current mode.<br>
+                Laser can be cast when the amount of consumed Sparks is greater than or equal to 25, dealing <span class="Thunder">Electro DMG</span>. The DMG dealt is considered Basic Attack DMG.<br>
+                Every 25 Sparks consumed generates 1 extra Laser beam, up to 4 Laser beams.
+                <div class="gap"></div>
+                <span class="Title">Yellow Light Spark</span>
+                Lumi can hold up to 100 Yellow Light Sparks.<br>
+                Lumi obtains Yellow Light Spark under the following conditions:<br>
+                When <span class="Highlight">Yellow Light: Basic Attack</span> hits the target;<br>
+                When <span class="Highlight">Glitter</span> hits the target;<br>
+                When <span class="Highlight">Glare</span> hits the target;<br>
+                When Resonance Skill <span class="Highlight">Energized Rebound</span> hits the target;<br>
+                When casting Intro Skill <span class="Highlight">Special Delivery</span>.
+                <div class="gap"></div>
+                <span class="Title">Red Light Spark</span>
+                Lumi can hold up to 100 Red Light Sparks.<br>
+                Lumi obtains Red Light Spark under the following conditions:<br>
+                When Normal Attack <span class="Highlight">Navigation Support</span> hits the target in <span class="Highlight">Red Light Mode</span> or <span class="Highlight">Red Spotlight Mode</span>.`,
+            skillDetailNum: [],
             multipliers: [
                 {
-                    attributeName: 'Ephemeral DMG',
-                    type: "",
+                    attributeName: "Glare DMG",
+                    type: "Basic",
                     skillDetailNum: [{
-                        values: ["635.00%", "687.07%", "739.14%", "812.04%", "864.11%", "923.99%", "1007.31%", "1090.62%", "1173.93%", "1262.45%"]
+                        values: ["41.00%", "44.37%", "47.73%", "52.44%", "55.80%", "59.66%", "65.04%", "70.42%", "75.80%", "81.52%"]
                     }],
                     index: 1
                 }, {
-                    attributeName: 'Budding Mode Duration',
-                    type: "",
+                    attributeName: "Red Spotlight: Basic Attack 1 DMG",
+                    type: "Basic",
                     skillDetailNum: [{
-                        values: ["15", "15", "15", "15", "15", "15", "15", "15", "15", "15"]
+                        values: ["60.48%", "65.44%", "70.40%", "77.35%", "82.31%", "88.01%", "95.94%", "103.88%", "111.81%", "120.25%"]
                     }],
                     index: 2
-                },{
-                    attributeName: 'Ephemeral Cooldown',
-                    type: "",
+                }, {
+                    attributeName: "Red Spotlight: Basic Attack 2 DMG",
+                    type: "Basic",
                     skillDetailNum: [{
-                        values: ["25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s", "25s"]
+                        values: ["69.57%+13.92%*5", "75.28%+15.06%*5", "80.98%+16.20%*5", "88.97%+17.80%*5", "94.68%+18.94%*5", "101.24%+20.25%*5", "110.36%+22.08%*5", "119.49%+23.90%*5", "128.62%+25.73%*5", "138.32%+27.67%*5"]
                     }],
                     index: 3
-                }
+                }, {
+                    attributeName: "Red Spotlight: Basic Attack 3 DMG",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["47.15%+110.00%", "51.01%+119.02%", "54.88%+128.04%", "60.29%+140.67%", "64.16%+149.69%", "68.60%+160.06%", "74.79%+174.49%", "80.97%+188.93%", "87.16%+203.36%", "93.73%+218.69%"]
+                    }],
+                    index: 4
+                }, {
+                    attributeName: "Red Spotlight: Heavy Attack DMG",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["44.35%*2", "47.99%*2", "51.63%*2", "56.72%*2", "60.36%*2", "64.54%*2", "70.36%*2", "76.18%*2", "81.99%*2", "88.18%*2"]
+                    }],
+                    index: 5
+                }, {
+                    attributeName: "Energized Pounce DMG",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["92.20%*2", "99.77%*2", "107.33%*2", "117.91%*2", "125.47%*2", "134.17%*2", "146.26%*2", "158.36%*2", "170.46%*2", "183.31%*2"]
+                    }],
+                    index: 6
+                }, {
+                    attributeName: "Energized Rebound DMG",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["126.60%", "136.99%", "147.37%", "161.90%", "172.28%", "184.22%", "200.83%", "217.44%", "234.05%", "234.05%"]
+                    }],
+                    index: 7
+                }, {
+                    attributeName: "Single Laser Beam DMG",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["37.50%", "40.58%", "43.65%", "47.96%", "51.03%", "54.57%", "59.49%", "64.41%", "69.33%", "74.56%"]
+                    }],
+                    index: 8
+                }, {
+                    attributeName: "Energized Pounce Concerto Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["12", "12", "12", "12", "12", "12", "12", "12", "12", "12"]
+                    }],
+                    index: 9
+                }, {
+                    attributeName: "Energized Rebound Concerto Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["12", "12", "12", "12", "12", "12", "12", "12", "12", "12"]
+                    }],
+                    index: 10
+                },
             ]
         },
         {
             skillId: 7,
             typeName: 'Inherent Skill',
-            skillName: 'Seedbed',
-            skillDescription: `Gain {0} <span class="Dark">Havoc DMG</span> Bonus. Heavy Attack Pruning now deals Basic Attack DMG.`,
-            skillDetailNum: ["15%"],
+            skillName: 'Pathfinding',
+            skillDescription: `Gain {0} Electro DMG Bonus when in Red Light Mode.`,
+            skillDetailNum: ["10%"],
             multipliers: []
         },
         {
             skillId: 8,
             typeName: 'Inherent Skill',
-            skillName: 'Epiphyte',
-            skillDescription: `Gain {0} <span class="Dark">Havoc DMG</span> Bonus. Basic Attack and Basic Attack Vining Waltz gain increased resistance to interruption.`,
-            skillDetailNum: ["15%"],
+            skillName: 'Expediting',
+            skillDescription: `Casting <span class="Highlight">Energized Pounce</span> or <span class="Highlight">Energized Rebound</span> increases ATK by {0} for 5s.`,
+            skillDetailNum: ["10%"],
             multipliers: []
         }
     ],
     sequences: [
         {
             node: "Sequence Node 1",
-            name: "Somewhere No One Traveled",
-            description: `Casting Intro Skill <span class="Highlight">Everblooming</span> increases Camellya's Crit. DMG by {0} for {1}s. This effect can be triggered every {2}s.<br>
-            Immune to interruptions while casting Ephemeral.`,
-            detailNum: ["28%", "18", "25"],
-            sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Crit. Damage"],
-            sequenceBuff: [28],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/c/c8/Sequence_Node_Somewhere_No_One_Travelled.png"
+            name: "Parcel To Be Delivered",
+            description: `After casting <span class="Highlight">Energized Rebound</span>, additionally recovers 60 STA within 3s.`,
+            detailNum: [""],
+            sequenceBuffType: "Buff",
+            sequenceBuffAtrribute: [""],
+            sequenceBuff: [],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_DengdengM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
-            name: "Calling Upon the Silent Rose",
-            description: `The DMG Multiplier of Resonance Skill <span class="Highlight">Ephemeral</span> is increased by {0}.`,
-            detailNum: ["120%"],
-            sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Resonance Skill Damage Bonus"],
-            sequenceBuff: [120],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/d/dd/Sequence_Node_Calling_Upon_the_Silent_Rose.png"
-        },
-        {
-            node: "Sequence Node 3",
-            name: "A Bud Adorned by Thorns",
-            description: `The DMG Multiplier of Resonance Liberation <span class="Highlight">Fervor Efflorescent</span> is increased by {0}. When in Budding Mode, Camellya's ATK is increased by {1}.`,
-            detailNum: ["50%", "58%"],
-            sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Resonance Liberation Damage Bonus", "Attack"],
-            sequenceBuff: [50, 58],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/8/88/Sequence_Node_A_Bud_Adorned_by_Thorns.png"
-        },
-        {
-            node: "Sequence Node 4",
-            name: "Roots Set Deep in Eternity",
-            description: `Casting <span class="Highlight">Everblooming</span> gives all team members {0} Basic Attack DMG Bonus for {1}s.`,
-            detailNum: ["25%", "30"],
-            sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Basic Attack Damage Bonus"],
-            sequenceBuff: [20],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/f/f7/Sequence_Node_Roots_Set_Deep_In_Eternity.png"
-        },
-        {
-            node: "Sequence Node 5",
-            name: "Infinity Held in Your Palm",
-            description: `The DMG Multipliers of Intro Skill <span class="Highlight">Everblooming</span> is increased by {0} and Outro Skill <span class="Highlight">Twining</span> is increased by {1}.`,
-            detailNum: ["303%", "68%"],
-            sequenceBuffType: "Skill Buff",
-            sequenceBuffAtrribute: ["Everblooming", "Twining"],
-            sequenceBuff: [303, 68],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/7/7d/Sequence_Node_Infinity_Held_in_Your_Palm.png"
-        },
-        {
-            node: "Sequence Node 6",
-            name: "Bloom For You Thousand Times Over",
-            description: `The DMG Multiplier of Forte Circuit's <span class="Highlight">Sweet Dream</span> is additionally increased by {0}.
-            Forte Circuit <span class="Highlight">Perennial</span>: Within {1}s after casting <span class="Highlight">Ephemeral</span>, if Concerto Energy is full and <span class="Highlight">Perennial</span> is not on cooldown, Resonance Skill is replaced with <span class="Highlight">Perennial</span>.
-            Casting <span class="Highlight">Perennial</span> consumes {2} Concerto Energy and recovers {3} Crimson Pistils, dealing <span class="Dark">Havoc DMG</span> equal to {4} of Ephemeral, considered Basic Attack DMG. This skill can be cast once every {5}s.
-            Camellya enters <span class="Highlight">Budding Mode</span> after casting <span class="Highlight">Perennial</span> and removes all Crimson Buds. The bonus DMG Multiplier granted by Forte Circuit's <span class="Highlight">Sweet Dream</span> is increased to {6}.
-            Immune to interruptions when casting <span class="Highlight">Perennial</span>.`,
-            detailNum: ["150%", "15", "50", "50", "100%", "25", "250%"],
+            name: "Lollo Logistics, Ready to Help",
+            description: `<span class="Highlight">Energized Pounce</span> and <span class="Highlight">Energized Rebound</span> ignore 20% of the target's DEF.`,
+            detailNum: [""],
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://static.wikia.nocookie.net/wutheringwaves/images/9/9e/Sequence_Node_Bloom_For_You_Thousand_Times_Over.png"
-        }
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_DengdengM2_UI.webp"
+        },
+        {
+            node: "Sequence Node 3",
+            name: "Priority Parcel In Transit",
+            description: `The DMG of Resonance Liberation <span class="Highlight">Squeakie Express</span> is increased by {0}.`,
+            detailNum: ["30%"],
+            sequenceBuffType: "Character Skill Buff",
+            sequenceBuffAtrribute: ["Liberation DMG Bonus"],
+            sequenceBuff: [30],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_DengdengM3_UI.webp"
+        },
+        {
+            node: "Sequence Node 4",
+            name: "Captain Lumi, At Your Service",
+            description: `Gain {0} Basic Attack DMG Bonus.`,
+            detailNum: ["30%"],
+            sequenceBuffType: "Character Skill Buff",
+            sequenceBuffAtrribute: ["Basic Attack DMG Bonus"],
+            sequenceBuff: [30],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_DengdengM4_UI.webp"
+        },
+        {
+            node: "Sequence Node 5",
+            name: "Parcel Collected On Time",
+            description: `When Spark is fully recovered, <span class="Highlight">Laser</span> DMG Multiplier is increased by {0}.`,
+            detailNum: ["100%"],
+            sequenceBuffType: "Character Skill Buff",
+            sequenceBuffAtrribute: [""],
+            sequenceBuff: [],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_DengdengM5_UI.webp"
+        },
+        {
+            node: "Sequence Node 6",
+            name: "Give Me A Five-star Rating",
+            description: `Casting Resonance Liberation <span class="Highlight">Squeakie Express</span> increases all team members' ATK by {0} for 20s.`,
+            detailNum: ["20%"],
+            sequenceBuffType: "Buff",
+            sequenceBuffAtrribute: ["ATK"],
+            sequenceBuff: [20],
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_DengdengM6_UI.webp"
+        },
     ]
 }
