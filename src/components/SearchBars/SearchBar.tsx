@@ -109,7 +109,7 @@ export const SearchBar: React.FC = () => {
               className="wep-btn"
               onClick={() => handleWeaponFilter("Broadblade")}
             >
-              BroadBlade
+              Broadblade
             </button>
             <button
               className="wep-btn"

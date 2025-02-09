@@ -1,5 +1,5 @@
 .search-bar {
-    margin-bottom: 60px;
+    margin-bottom: 15px;
 }
 
 .search-bar-grid {
@@ -15,8 +15,8 @@
     background-color: transparent;
     color: azure;
     grid-column: 1 / 5;
-    grid-row: 1/ 2;
-    height: 34px;
+    grid-row: 1 / 2;
+    height: 38px;
     border-radius: 8px;
     border: 1px solid azure;
     font-size: 1rem;
@@ -65,7 +65,7 @@
 .wep-btn {
     background-color: transparent;
     flex: 1;
-    padding: 8px 12px;
+    padding: 9px 12px;
     font-size: 1rem;
     text-align: center;
     border: 1px solid azure;
@@ -75,13 +75,17 @@
     color: azure;
 }
 
+.wep-btn.display-none {
+    margin-left: 0;
+}
+
 .wep-btn:hover {
     background-color: rgba(153, 148, 148, 0.404);
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
     .search-bar {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     .search-bar-grid {
@@ -99,7 +103,7 @@
 
 @media (max-width: 767px) and (min-width: 481px) {
     .search-bar {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .search-bar-grid {
@@ -126,7 +130,7 @@
 
 @media (max-width: 480px) and (min-width: 320px) {
     .search-bar {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .search-bar-grid {

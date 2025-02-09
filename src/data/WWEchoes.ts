@@ -1370,7 +1370,7 @@ The Resonator with this Echo equipped in the main slot gains 12.00% Glacio DMG B
     id: 6000077,
     img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32026_UI.webp",
     echoSkill: `Transform into Abyssal Gladius and attack enemies in front of you with the sword, dealing {0} Glacio DMG.<br>
-Hold the Echo Skill to maintain the Echo form for a while to slash enemies and cast a ranged attack forward, dealing {1} and {2} Glacio DMG respectively.
+Hold the Echo Skill to maintain the Echo form for a while to slash enemies and cast a ranged attack forward, dealing {1} and {2} Glacio DMG respectively.<br><br>
     CD: <b>15s</b>.`,
     bio: "Test",
     element: 0,

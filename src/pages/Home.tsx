@@ -87,13 +87,10 @@ const Home: React.FC = () => {
                 <h2 className="heading-2">Updates :</h2>
                 <ul className="update-list">
                   <li className="update-list-item">
-                    Added Resonator Shorekeeper
+                    Added Resonators from 1.4 and 2.0
                   </li>
                   <li className="update-list-item">
-                    Added Rectifier Stellar Symphony
-                  </li>
-                  <li className="update-list-item">
-                    Added Sword Endless Collapse
+                    Added Weapons from 1.4 and 2.0
                   </li>
                 </ul>
               </div>
@@ -102,7 +99,7 @@ const Home: React.FC = () => {
                 <ul className="update-list">
                   <li className="update-list-item">Echo Scorer</li>
                   <li className="update-list-item">
-                    1.3 Resonator and Weapons
+                    2.1 Resonators (Phoebe & Brant) and Weapons
                   </li>
                   <li className="update-list-item">Minor QoL Changes</li>
                 </ul>

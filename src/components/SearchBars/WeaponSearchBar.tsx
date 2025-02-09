@@ -35,7 +35,7 @@ const WeaponSearchBar: React.FC = () => {
           className="weapon-btn"
           onClick={() => handleWeaponFilter("Broadblade")}
         >
-          BroadBlade
+          Broadblade
         </button>
         <button
           className="weapon-btn"
