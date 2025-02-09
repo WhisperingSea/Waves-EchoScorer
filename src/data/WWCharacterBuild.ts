@@ -59,12 +59,12 @@ export interface DefaultBuildTypes {
 export const WWCharaBuilds: WWCharaBuildTypes[] = [
     {
         name: "Rover-Spectro",
-        charaId: 1001,
+        charaId: 1501,
         buildStats: {
             stat1: {stat: "ATK", value: [1700, 2000]},
             stat2: {stat: "HP", value: [15000]},
         },
-        preferedSonata: [5, 8],
+        preferedSonata: [5, 8, 11],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Spectro DMG Bonus%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -72,7 +72,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Rover-Havoc",
-        charaId: 1002,
+        charaId: 1604,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -84,7 +84,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Baizhi",
-        charaId: 1101,
+        charaId: 1103,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -108,7 +108,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Lingyang",
-        charaId: 1103,
+        charaId: 1104,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -120,7 +120,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Zhezhi",
-        charaId: 1104,
+        charaId: 1105,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -132,7 +132,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Youhu",
-        charaId: 1105,
+        charaId: 1106,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -144,7 +144,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Encore",
-        charaId: 1201,
+        charaId: 1203,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -168,7 +168,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Mortefi",
-        charaId: 1203,
+        charaId: 1204,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -180,7 +180,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Changli",
-        charaId: 1204,
+        charaId: 1205,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -228,7 +228,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Xiangli-Yao",
-        charaId: 1304,
+        charaId: 1305,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -240,7 +240,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Jianxin",
-        charaId: 1401,
+        charaId: 1405,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -288,7 +288,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Verina",
-        charaId: 1501,
+        charaId: 1503,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -300,7 +300,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Jinhsi",
-        charaId: 1502,
+        charaId: 1304,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -312,7 +312,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Shorekeeper",
-        charaId: 1503,
+        charaId: 1505,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
@@ -346,6 +346,56 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat3: ["ATK%"],
         preferedSubStats: ["ATK%", "Crit. Rate%", "Crit. DMG%", "Resonance Skill DMG Bonus", "ATK",]
     },
+    {
+        name: "Camellya",
+        charaId: 1603,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [6],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Basic Attack DMG Bonus%", "ATK", "Resonance Skill DMG Bonus"]
+    },
+    {
+        name: "Lumi",
+        charaId: 1504,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [8],
+        preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
+        preferedMainStat2: ["Electro DMG Bonus%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "Basic Attack DMG Bonus%", "Energy Regen%", "ATK%", "ATK"]
+    },
+    {
+        name: "Carlotta",
+        charaId: 1107,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [10],
+        preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
+        preferedMainStat2: ["Glacio DMG Bonus%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Resonance Skill DMG Bonus%", "ATK"]
+    },
+    {
+        name: "Roccia",
+        charaId: 1606,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [8, 12],
+        preferedMainStat1: ["Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Energy Regen%", "Crit. Rate%", "Crit. DMG%", "ATK%", "Heavy Attack DMG Bonus%", "ATK"]
+    },
+    //TODO Phoebe build
+    //TODO Brant build
     {
         name: "",
         charaId: 0,

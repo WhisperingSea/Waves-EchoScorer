@@ -6,7 +6,7 @@ export const Taoqi: WWCharacter = {
     name: "Taoqi",
     charaId: 1601,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Havoc",
@@ -129,7 +129,7 @@ With effortless efficiency, she balances her work and personal life, steadily mo
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
                 skillName: 'Concealed Edge',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

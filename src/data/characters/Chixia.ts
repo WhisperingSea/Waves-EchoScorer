@@ -6,7 +6,7 @@ export const Chixia: WWCharacter = {
     name: "Chixia",
     charaId: 1202,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Fusion",
@@ -129,7 +129,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
                 skillName: 'POW POW',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

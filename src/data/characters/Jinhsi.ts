@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const Jinhsi: WWCharacter = {
     name: "Jinhsi",
-    charaId: 1502,
+    charaId: 1304,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
@@ -129,7 +129,7 @@ Yet, grasping the nettle, she strives with all her might to forge a path toward 
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
                 skillName: 'Slash of Breaking Dawn',
                 skillDescription: `<span class="Title">Basic Attack</span>
@@ -268,7 +268,7 @@ Resonance Skill <span class="Highlight">Overflowing Radiance</span> inflicts <sp
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJinhsi3.webp",
                 skillName: 'Purge of Light',
                 skillDescription: `Unleash the power of a heart's wish to deal <span class="Highlight">Spectro DMG</span>.

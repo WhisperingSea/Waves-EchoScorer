@@ -4,7 +4,7 @@ const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_
 
 export const Baizhi: WWCharacter = {
     name: "Baizhi",
-    charaId: 1101,
+    charaId: 1103,
     rarity: {
         alt: "4 Star",
         img: rarity4Star
@@ -130,7 +130,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: 'Destined Promise',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

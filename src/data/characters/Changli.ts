@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const Changli: WWCharacter = {
     name: "Changli",
-    charaId: 1204,
+    charaId: 1205,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
@@ -15,7 +15,7 @@ export const Changli: WWCharacter = {
 Being the mentor to Jinhsi, she is persuasive and patient.
 She entertains an unwavering aspiration, holding her ground in the endless game against time and chaos.`,
     images: {
-        portrait: "https://wuthering-waves-assets.pages.dev/portraits/rolecard_1205.png",
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_changli_UI.webp",
         icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Changli.png",
         model: "https://wuthering-waves-assets.pages.dev/models/ChangliCharacter_Sprite.png"
     },
@@ -129,7 +129,7 @@ She entertains an unwavering aspiration, holding her ground in the endless game 
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Blazing Enlightment',
                 skillDescription: `<span class="Title">Basic Attack</span>

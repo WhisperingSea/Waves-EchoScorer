@@ -10,9 +10,8 @@
 
 .scorer-weaponCard-btn {
     position: relative;
-    height: 105px;
+    height: 100px;
     padding-bottom: 5px;
-    padding-right: 5px;
     border-bottom: 1px solid azure;
     border-right: 1px solid azure;
     border-radius: 10px;
@@ -24,10 +23,10 @@
 
 .scorer-weaponCard-rarity {
     width: max-content;
-    height: 25px;
+    height: 23px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
+    left: -1px;
     right: 0px;
     margin: 0;
 }

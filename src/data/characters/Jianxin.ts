@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const Jianxin: WWCharacter = {
     name: "Jianxin",
-    charaId: 1401,
+    charaId: 1405,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
@@ -129,7 +129,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Fengyiquan',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

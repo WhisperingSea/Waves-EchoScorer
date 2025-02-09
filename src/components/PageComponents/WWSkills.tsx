@@ -42,7 +42,7 @@ const WWSkills: React.FC = () => {
         <div className="tab-flexbox">
           <div className="sticky-tabs sticky-flexbox ">
             <button className="tab-link" value={1} onClick={handleSkillId}>
-              Basic Attack
+              Normal Attack
             </button>
             <button className="tab-link" value={2} onClick={handleSkillId}>
               Resonance Skill
@@ -76,7 +76,8 @@ const WWSkills: React.FC = () => {
                 ></div>
               )}
             </div>
-            <div className="multiplyer">
+            { skill != null && skill?.multipliers.length > 0 &&
+            (<div className="multiplyer">
               <button className="multi multi-link" onClick={handleMulti}>
                 Multiplier
               </button>
@@ -110,7 +111,7 @@ const WWSkills: React.FC = () => {
                     </div>
                   ))}
               </div>
-            </div>
+            </div>)}
           </div>
         </div>
       </div>

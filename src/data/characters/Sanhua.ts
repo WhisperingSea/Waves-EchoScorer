@@ -6,7 +6,7 @@ export const Sanhua: WWCharacter = {
     name: "Sanhua",
     charaId: 1102,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Glacio",
@@ -130,7 +130,7 @@ This allows her to master her Forte with graceful ease and alleviates the burden
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Frigid Light',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

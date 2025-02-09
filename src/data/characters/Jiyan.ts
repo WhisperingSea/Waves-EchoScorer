@@ -127,7 +127,7 @@ export const Jiyan: WWCharacter = {
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
                 skillName: 'Lone Lance',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

@@ -1,6 +1,8 @@
 import { Aalto } from "./characters/Aalto";
 import { Baizhi } from "./characters/Baizhi";
 import { Calcharo } from "./characters/Calcharo";
+import { Camellya } from "./characters/Camellya";
+import { Carlotta } from "./characters/Carlotta";
 import { Changli } from "./characters/Changli";
 import { Chixia } from "./characters/Chixia";
 import { Danjin } from "./characters/Danjin";
@@ -9,7 +11,9 @@ import { Jianxin } from "./characters/Jianxin";
 import { Jinhsi } from "./characters/Jinhsi";
 import { Jiyan } from "./characters/Jiyan";
 import { Lingyang } from "./characters/Lingyang";
+import { Lumi } from "./characters/Lumi";
 import { Mortefi } from "./characters/Mortefi";
+import { Roccia } from "./characters/Roccia";
 import { RoverHavoc } from "./characters/Rover-Havoc";
 import { RoverSpectro } from "./characters/Rover-Spectro";
 import { Sanhua } from "./characters/Sanhua";
@@ -124,5 +128,11 @@ export const WWCharacterData: WWCharacter[] = [
     Jinhsi,
     Shorekeeper,
     Taoqi,
-    Danjin
+    Danjin,
+    Camellya,
+    Lumi,
+    Carlotta,
+    Roccia
+    //TODO Phoebe
+    //TODO Brant
 ]

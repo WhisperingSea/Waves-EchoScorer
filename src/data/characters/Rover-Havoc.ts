@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev//icon_stars/Icon_5
 
 export const RoverHavoc: WWCharacter = {
     name: "Rover-Havoc",
-    charaId: 1002,
+    charaId: 1605,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
@@ -128,7 +128,7 @@ As secrets are unveiled, Rover establishes deeper connections with the world.`,
     skills: [
         {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
                 skillName: 'Tuneslayer',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

@@ -4,9 +4,9 @@ const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_
 
 export const Mortefi: WWCharacter = {
     name: "Mortefi",
-    charaId: 1203,
+    charaId: 1204,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Fusion",
@@ -130,7 +130,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
                 skillName: 'Impromptu Show',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

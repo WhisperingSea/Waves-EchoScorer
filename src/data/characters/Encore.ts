@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const Encore: WWCharacter = {
     name: "Encore",
-    charaId: 1201,
+    charaId: 1203,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
@@ -129,7 +129,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: 'Wooly Attack',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

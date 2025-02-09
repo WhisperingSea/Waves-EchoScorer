@@ -4,9 +4,9 @@ const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_
 
 export const Youhu: WWCharacter = {
     name: "Youhu",
-    charaId: 1105,
+    charaId: 1106,
     rarity: {
-        alt: "5 Star",
+        alt: "4 Star",
         img: rarity4Star
     },
     element: "Glacio",
@@ -128,7 +128,7 @@ When dealing with treasures and antiques, this jubilant dynamo settles into calm
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
                 skillName: 'Frosty Punches',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

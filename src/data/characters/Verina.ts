@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const Verina: WWCharacter = {
     name: "Verina",
-    charaId: 1501,
+    charaId: 1503,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
@@ -128,7 +128,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill5.webp",
                 skillName: 'Cultivation',
                 skillDescription: `<span class="Title">Basic Attack</span>\n

@@ -121,20 +121,20 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
         bonus_atk: 1.12,
         bonus_def: 0,
         bonus_heal: 0,
-        bonus_crit: 0,
-        bonus_critdmg: 16,
+        bonus_crit: 8,
+        bonus_critdmg: 0,
         bonus_hp: 0
     },
     skills: [
             {
                 skillId: 1,
-                typeName: 'Basic Attack',
+                typeName: 'Normal Attack',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
-                skillName: 'Gnawing Fang',
+                skillName: 'Silent Execution',
                 skillDescription: `<span class="Title">Basic Attack</span>\n
-                Calcharo performs up to 4 consecutive attacks, dealing <span class="Thunder">Electro DMG</span>.\n
+                Perform up to 2 consecutive strikes, dealing Glacio DMG.
                 <div class="gap"></div>
-                <span class="Title">Heavy Attack</span>\n
+                <span class="Title">Basic Attack - Necessary Measures</span>\n
                 Consumes Stamina to attack the target, dealing <span class="Thunder">Electro DMG</span>.\n
                 <div class="gap"></div>
                 <span class="Title">Mid-air Attack</span>\n
@@ -517,7 +517,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             description: `After Calcharo casts Intro Skill <span class="Highlight">Wanted Criminal</span> or Intro Skill <span class="Highlight">"Necessary Means"</span>, his Resonance Skill DMG Bonus is increased by {0} for {1}s.`,
             detailNum: ["30%", "15"],
             sequenceBuffType: "Character Skill Buff",
-            sequenceBuffAtrribute: ["Resonane Skill Damage Bonus"],
+            sequenceBuffAtrribute: ["Resonance Skill Damage Bonus"],
             sequenceBuff: [30   ],
             itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
         },
