@@ -1351,7 +1351,7 @@ export const WWEchoesJSON: WWEchoes[] = [
     name: "Abyssal Patricius",
     id: 6000076,
     img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32025_UI.webp",
-    echoSkill: `ransform into Abyssal Patricius and charge forward to attack enemies, dealing {0} Glacio DMG.<br>
+    echoSkill: `Transform into Abyssal Patricius and charge forward to attack enemies, dealing {0} Glacio DMG.<br>
 The Resonator with this Echo equipped in the main slot gains 12.00% Glacio DMG Bonus.<br><br>
     CD: <b>15s</b>.`,
     bio: "Test",

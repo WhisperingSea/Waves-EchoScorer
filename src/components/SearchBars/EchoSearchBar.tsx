@@ -51,10 +51,12 @@ const EchoSearchBar: React.FC = () => {
             <img className="sonata-btn-img" src={sonata.img} alt={`Sonata ${sonata.id}`} />
           </button>
         ))}
-        <div className="sonata-effect">
-          <h3 className="sonata-effect-text">2-Piece: {sonata2}</h3>
-          <h3 className="sonata-effect-text">5-Piece: {sonata5}</h3>
-        </div>
+        {selectedEchoGroup !== 0 && (
+          <div className="sonata-effect">
+            <h3 className="sonata-effect-text">2-Piece: {sonata2}</h3>
+            <h3 className="sonata-effect-text">5-Piece: {sonata5}</h3>
+          </div>
+        )}
         <div className="dropdown">
           <span>Cost: {selectedEchoCost}</span>
           <div className="dropdown-content">

@@ -5,6 +5,7 @@ import React, {
   ReactNode,
   useEffect,
 } from "react";
+import { useLocation } from "react-router-dom";
 import { WWCharacter, WWCharacterData } from "../data/WWCharacter.ts";
 import { WWEchoes, WWEchoesJSON } from "../data/WWEchoes.ts";
 import { WWWeapons, WWWeaponsJSON } from "../data/WWWeapons.ts";
@@ -110,6 +111,7 @@ export const SearchFilterProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const { storedEcho } = useLocalStorageContext();
+  const location = useLocation();
   const [query, setQuery] = useState<string>("");
   const [selectedWeaponType, setSelectedWeaponType] = useState<WeaponType>("");
   const [selectedElement, setSelectedElement] = useState<ElementType>("");
@@ -243,6 +245,10 @@ export const SearchFilterProvider: React.FC<{ children: ReactNode }> = ({
     storedEcho,
   ]);
 
+  useEffect(() => {
+    resetFilters();
+  }, [location.pathname]);
+
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
   };
@@ -298,6 +304,18 @@ export const SearchFilterProvider: React.FC<{ children: ReactNode }> = ({
 
   const handleEchoSubStats = (echoSub: EchoSubStats[]) => {
     setSelectedSubStats((preSubs) => (preSubs === echoSub ? [] : echoSub));
+  };
+
+  const resetFilters = () => {
+    setFilteredCharacters(WWCharacterData);
+    setFilteredEchoes(WWEchoesJSON);
+    setFilteredWeapons(WWWeaponsJSON);
+    setFilteredStoreEchoes(Object.values(storedEcho));
+    setSelectedEchoGroup(0);
+    setSelectedEchoRarity(5);
+    setQuery("");
+    setEchoQuery("");
+    setWeaponQuery("");
   };
 
   return (

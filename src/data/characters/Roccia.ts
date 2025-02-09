@@ -12,7 +12,7 @@ export const Roccia: WWCharacter = {
     element: "Havoc",
     weapon: "Gauntlets",
     bio: `Roccia is a gifted improvisational comedian and the First Mate of the Fool's Troupe, known for her mastery of stage props.
-    With a tranquil, composed disposition, she navigates the ship's quarters, perched atop her giant box, meticulously ensuring the Troupe remains orderly and tidy.`,
+With a tranquil, composed disposition, she navigates the ship's quarters, perched atop her giant box, meticulously ensuring the Troupe remains orderly and tidy.`,
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_luokeke_UI.webp",
         icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/5/5f/Roccia_Icon.png",

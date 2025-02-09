@@ -7,10 +7,19 @@ interface NavbarProps {
   onTabChange?: (tab: number) => void;
 }
 
+const getPathId = (path: string) => {
+  if (path.endsWith("/")) return 1;
+  else if (path.includes("/characters")) return 2;
+  else if (path.includes("/echoes")) return 3;
+  else if (path.includes("/weapons")) return 4;
+  else if (path.includes("/echo-scorer")) return 5
+  return 1;
+};
+
 const Sidebar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [active, setActive] = useState<number>(activeTab);
+  const [active, setActive] = useState<number>();
   const [isNavbarVisible, setIsNavbarVisible] = useState<boolean>(true);
   const lastScrollTop = useRef(0);
   const touchStartY = useRef(0);
@@ -35,7 +44,7 @@ const Sidebar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
   };
 
   useEffect(() => {
-    setActive(activeTab);
+    setActive(getPathId(location.pathname));
   }, [activeTab]);
 
   useEffect(() => {
@@ -86,25 +95,18 @@ const Sidebar: React.FC<NavbarProps> = ({ activeTab = 1, onTabChange }) => {
   }, [sidebarOpen]);
 
   useEffect(() => {
-    const path = location.pathname;
-    if (path === "/") setActive(1);
-    else if (path.startsWith("/characters")) setActive(2);
-    else if (path.startsWith("/echoes")) setActive(3);
-    else if (path.startsWith("/weapons")) setActive(4);
-    else if (path.startsWith("/echo-scorer")) setActive(5);
+    handleActiveNav(getPathId(location.pathname));
   }, [location.pathname]);
 
   return (
     <>
       <div
-        className={`sidebar-wrapper ${
-          isNavbarVisible ? "sidebar-visible" : "sidebar-hidden"
-        }`}
+        className={`sidebar-wrapper ${isNavbarVisible ? "sidebar-visible" : "sidebar-hidden"
+          }`}
       >
         <div
-          className={`sidebar-icon-box ${
-            isNavbarVisible ? "sidebar-visible" : "sidebar-hidden"
-          }`}
+          className={`sidebar-icon-box ${isNavbarVisible ? "sidebar-visible" : "sidebar-hidden"
+            }`}
         >
           <Link className="nav-link logo-link" to="/">
             <span>W</span>aves

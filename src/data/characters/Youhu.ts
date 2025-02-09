@@ -14,7 +14,7 @@ export const Youhu: WWCharacter = {
     bio: `Youhu, a natural expert in identifying antiques, is a capable speaker with distinctive tastes.
 When dealing with treasures and antiques, this jubilant dynamo settles into calm perception, tracing their distant past through their wrinkles and textures.`,
     images: {
-        portrait: "https://wuthering-waves-assets.pages.dev/portraits/Youhu_Full_Sprite.webp",
+        portrait: "https://i.imgur.com/j2jicLq.png",
         icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Youhu.png",
         model: "https://wuthering-waves-assets.pages.dev/models/Youhu.webp"
     },
