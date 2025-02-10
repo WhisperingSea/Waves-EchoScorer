@@ -28,9 +28,9 @@ export type ElementType =
   | "Spectro"
   | "Havoc";
 
-type EchoGroupType = WWEchoes["id"];
+export type EchoGroupType = WWEchoes["id"];
 
-type EchoCostType = 0 | 1 | 3 | 4;
+export type EchoCostType = 0 | 1 | 3 | 4;
 
 type EchoMainStats =
   | "HP%"

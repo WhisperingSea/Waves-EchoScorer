@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import { ElementType, useSearchFilter, WeaponType } from "../../contexts/SearchFilterContext";
 import "./SearchBar.css";
 
+const WeaponTypes: WeaponType[] = ["Sword", "Broadblade", "Pistols", "Gauntlets", "Rectifier"];
+
+//TODO: change the names of files on server to match the names of the elements
+const ElementTypes: { name: ElementType, displayName: string }[] = [
+  { name: "Glacio", displayName: "Ice" },
+  { name: "Fusion", displayName: "Fire" },
+  { name: "Electro", displayName: "Thunder" },
+  { name: "Aero", displayName: "Wind" },
+  { name: "Spectro", displayName: "Light" },
+  { name: "Havoc", displayName: "Dark" }
+];
 export const SearchBar: React.FC = () => {
   const { query, handleSearch, handleWeaponFilter, handleElementFilter } =
     useSearchFilter();
@@ -32,6 +43,7 @@ export const SearchBar: React.FC = () => {
         <div className="filter-1">
           <div className="inline-flex">
             <button
+              key="All"
               title="All Elements"
               className={`ele-btn start`}
               onClick={() => handleSelectElement("")}
@@ -41,106 +53,39 @@ export const SearchBar: React.FC = () => {
                 alt="All Element Icon"
               />
             </button>
-            <button
-              title="Glacio"
-              className={`ele-btn ${activeElement === "Glacio" ? "active" : ""}`}
-              onClick={() => handleSelectElement("Glacio")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementIce3.png"
-                alt="Glacio Element Icon"
-              />
-            </button>
-            <button
-              title="Fusion"
-              className={`ele-btn ${activeElement === "Fusion" ? "active" : ""}`}
-              onClick={() => handleSelectElement("Fusion")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementFire3.png"
-                alt="Fusion Element Icon"
-              />
-            </button>
-            <button
-              title="Electro"
-              className={`ele-btn ${activeElement === "Electro" ? "active" : ""}`}
-              onClick={() => handleSelectElement("Electro")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementThunder3.png"
-                alt="Electro Element Icon"
-              />
-            </button>
-            <button
-              title="Aero"
-              className={`ele-btn ${activeElement === "Aero" ? "active" : ""}`}
-              onClick={() => handleSelectElement("Aero")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementWind3.png"
-                alt="Aero Element Icon"
-              />
-            </button>
-            <button
-              title="Spectro"
-              className={`ele-btn ${activeElement === "Spectro" ? "active" : ""}`}
-              onClick={() => handleSelectElement("Spectro")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementLight3.png"
-                alt="Spectro Element Icon"
-              />
-            </button>
-            <button
-              title="Havoc"
-              className={`ele-btn end ${activeElement === "Havoc" ? "active" : ""}`}
-              onClick={() => handleSelectElement("Havoc")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementDark3.png"
-                alt="Havoc Element Icon"
-              />
-            </button>
+            {ElementTypes.map((element, index) => (
+              <button
+                key={element.name}
+                title={element.name}
+                className={`ele-btn ${index === ElementTypes.length - 1 ? "end" : ""} ${activeElement === element.name ? "active" : ""}`}
+                onClick={() => handleSelectElement(element.name)}
+              >
+                <img
+                  src={`https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElement${element.displayName}3.png`}
+                  alt={`${element.name} Element Icon`}
+                />
+              </button>
+            ))}
           </div>
         </div>
         <div className="filter-2">
           <div className="inline-flex">
             <button
+              key={"All"}
               className={`wep-btn start`}
               onClick={() => handleSelectWeapon("")}
             >
               All
             </button>
-            <button
-              className={`wep-btn ${activeWeapon === "Sword" ? "active" : ""}`}
-              onClick={() => handleSelectWeapon("Sword")}
-            >
-              Sword
-            </button>
-            <button
-              className={`wep-btn ${activeWeapon === "Broadblade" ? "active" : ""}`}
-              onClick={() => handleSelectWeapon("Broadblade")}
-            >
-              Broadblade
-            </button>
-            <button
-              className={`wep-btn ${activeWeapon === "Pistols" ? "active" : ""}`}
-              onClick={() => handleSelectWeapon("Pistols")}
-            >
-              Pistols
-            </button>
-            <button
-              className={`wep-btn ${activeWeapon === "Gauntlets" ? "active" : ""}`}
-              onClick={() => handleSelectWeapon("Gauntlets")}
-            >
-              Gauntlets
-            </button>
-            <button
-              className={`wep-btn end ${activeWeapon === "Rectifier" ? "active" : ""}`}
-              onClick={() => handleSelectWeapon("Rectifier")}
-            >
-              Rectifier
-            </button>
+            {WeaponTypes.map((weapon, index) => (
+              <button
+                key={weapon}
+                className={`wep-btn ${index === WeaponTypes.length - 1 ? "end" : ""} ${activeWeapon === weapon ? "active" : ""}`}
+                onClick={() => handleSelectWeapon(weapon)}
+              >
+                {weapon}
+              </button>
+            ))}
           </div>
         </div>
       </div>

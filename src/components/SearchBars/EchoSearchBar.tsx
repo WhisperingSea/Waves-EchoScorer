@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useSearchFilter } from "../../contexts/SearchFilterContext.tsx";
+import { useSearchFilter, EchoCostType} from "../../contexts/SearchFilterContext.tsx";
 import "./EchoSearch.css";
 import { WWSonataData } from "../../data/WWSonata.ts";
+
+const echoCosts: EchoCostType[] = [1, 3, 4];
 
 const EchoSearchBar: React.FC = () => {
   const {
@@ -62,33 +64,19 @@ const EchoSearchBar: React.FC = () => {
           </div>
         )}
         <div className="dropdown">
-          <span>Cost: {selectedEchoCost}</span>
+          <span>{`Cost: ${selectedEchoCost > 0 ? selectedEchoCost : "Any"}`}</span>
           <div className="dropdown-content">
             <ul>
-              <li>
-                <button
-                  className="cost-select"
-                  onClick={() => handleEchoCostFilter(1)}
-                >
-                  1 Cost
-                </button>
-              </li>
-              <li>
-                <button
-                  className="cost-select"
-                  onClick={() => handleEchoCostFilter(3)}
-                >
-                  3 Cost
-                </button>
-              </li>
-              <li>
-                <button
-                  className="cost-select"
-                  onClick={() => handleEchoCostFilter(4)}
-                >
-                  4 Cost
-                </button>
-              </li>
+              {echoCosts.map((cost) => (
+                <li>
+                  <button
+                    className="cost-select"
+                    onClick={() => handleEchoCostFilter(cost)}
+                  >
+                    {cost} Cost
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

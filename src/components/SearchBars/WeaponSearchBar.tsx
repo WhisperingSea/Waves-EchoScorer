@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { WeaponType } from "../../contexts/SearchFilterContext";
 import { useSearchFilter } from "../../contexts/SearchFilterContext";
 
+const WeaponTypes: WeaponType[] = ["Sword", "Broadblade", "Pistols", "Gauntlets", "Rectifier"];
+
 const WeaponSearchBar: React.FC = () => {
   const {
     handleWeaponFilter,
@@ -34,44 +36,21 @@ const WeaponSearchBar: React.FC = () => {
         <button className="weapon-btn" onClick={() => handleSelectWeapon("")}>
           All
         </button>
-        <button
-          className={`weapon-btn ${activeWeapon === "Sword" ? "active" : ""}`}
-          onClick={() => handleSelectWeapon("Sword")}
-        >
-          Sword
-        </button>
-        <button
-          className={`weapon-btn ${activeWeapon === "Broadblade" ? "active" : ""}`}
-          onClick={() => handleSelectWeapon("Broadblade")}
-        >
-          Broadblade
-        </button>
-        <button
-          className={`weapon-btn ${activeWeapon === "Pistols" ? "active" : ""}`}
-          onClick={() => handleSelectWeapon("Pistols")}
-        >
-          Pistols
-        </button>
-        <button
-          className={`weapon-btn ${activeWeapon === "Gauntlets" ? "active" : ""}`}
-          onClick={() => handleSelectWeapon("Gauntlets")}
-        >
-          Gauntlets
-        </button>
-        <button
-          className={`weapon-btn ${activeWeapon === "Rectifier" ? "active" : ""}`}
-          onClick={() => handleSelectWeapon("Rectifier")}
-        >
-          Rectifier
-        </button>
+        {WeaponTypes.map((weapon) => (
+          <button
+            key={weapon}
+            className={`weapon-btn ${activeWeapon === weapon ? "active" : ""}`}
+            onClick={() => handleSelectWeapon(weapon)}
+          >
+            {weapon}
+          </button>
+        ))}
         <div className="weapon-rarity">
           <select value={selectedWeaponRarity} onChange={handleWeaponRarity}>
-            <option value={0}>Select Rarity</option>
-            <option value={1}>1 Star</option>
-            <option value={2}>2 Star</option>
-            <option value={3}>3 Star</option>
-            <option value={4}>4 Star</option>
-            <option value={5}>5 Star</option>
+            <option value="0">Select Rarity</option>
+            {[...Array(5)].map((_, i) => (
+              <option key={i + 1} value={i + 1}>{i + 1} Star</option>
+            ))}
           </select>
         </div>
       </div>
