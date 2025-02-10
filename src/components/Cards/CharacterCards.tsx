@@ -11,7 +11,8 @@ const Card: React.FC = () => {
     <>
       <div className="card-group">
         <div className="grid">
-          {filteredCharacters
+          {filteredCharacters && filteredCharacters.length > 0 ? (
+          filteredCharacters
             ?.sort((a, b) => a.name.localeCompare(b.name))
             .map((item) => (
               <Link
@@ -35,7 +36,9 @@ const Card: React.FC = () => {
                   <p className="bottom">{item.name}</p>
                 </div>
               </Link>
-            ))}
+            ))) : (
+              <h2 className="No-Match">No Match Found</h2>
+            )}
         </div>
       </div>
     </>

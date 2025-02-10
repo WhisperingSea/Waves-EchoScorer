@@ -41,6 +41,10 @@
     background-color: #666;
 }
 
+.sonata-btn.active:hover {
+    background-color: #615e5e;
+}
+
 .sonata-btn-img {
     width: 30px;
     height: auto;

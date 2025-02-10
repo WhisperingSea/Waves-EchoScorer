@@ -40,6 +40,10 @@
     background-color: #666;
 }
 
+.weapon-btn.active:hover {
+    background-color: #615e5e;
+}
+
 .weapon-rarity select {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 8px 12px;

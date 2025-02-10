@@ -66,6 +66,10 @@
     background-color: rgba(153, 148, 148, 0.404);
 }
 
+.ele-btn.active:hover {
+    background-color: #615e5e;
+}
+
 .ele-btn.active {
     background-color: #666;
 }
@@ -97,6 +101,10 @@
 
 .wep-btn.active {
     background-color: #666;
+}
+
+.wep-btn.active:hover {
+    background-color: #615e5e;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {

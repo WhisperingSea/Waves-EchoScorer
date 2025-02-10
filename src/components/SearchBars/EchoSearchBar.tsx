@@ -19,7 +19,7 @@ const EchoSearchBar: React.FC = () => {
   const [activeEchoGroup, setActiveEchoGroup] = useState<number>(0);
 
   const sonataGroup = WWSonataData.find((s) => s.id === selectedEchoGroup);
-  
+
   const handleSelectEchoGroup = (id: number) => {
     id === activeEchoGroup ? setActiveEchoGroup(0) : setActiveEchoGroup(id);
     handleEchoGroupFilter(id);
@@ -50,6 +50,7 @@ const EchoSearchBar: React.FC = () => {
             key={sonata.id}
             className={`sonata-btn ${selectedEchoGroup === sonata.id ? "active" : ""}`}
             onClick={() => handleSelectEchoGroup(sonata.id)}
+            title={sonata.name}
           >
             <img className="sonata-btn-img" src={sonata.img} alt={`Sonata ${sonata.id}`} />
           </button>
