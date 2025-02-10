@@ -85,6 +85,13 @@ const Guide: React.FC = () => {
     }
   }, [chara]);
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <>
       <div className="guide-background" style={styles}></div>
@@ -139,18 +146,19 @@ const Guide: React.FC = () => {
             </section>
             <section className="page-link-grid">
               <a className="page-link-ref">Jump to: </a>
-              <a className="page-link" href="#Skills">
+              <a className="page-link" onClick={() => scrollToSection("Skills")}>
                 Skills
               </a>
-              <a className="page-link" href="#Sequences">
+              <a className="page-link" onClick={() => scrollToSection("Sequences")}>
                 Sequences
               </a>
-              <a className="page-link" href="#Ascension">
+              <a className="page-link" onClick={() => scrollToSection("Ascension")}>
                 Ascension
               </a>
-              <a className="page-link" href="#Build">
+              {/*hidden as the section is not prepared yet
+              <a className="page-link" onClick={() => scrollToSection("Build")}>
                 Build
-              </a>
+              </a>*/}
             </section>
             <section className="guide-section ">
               <div id="Skills">
@@ -197,9 +205,10 @@ const Guide: React.FC = () => {
                 </div>
               </div>
             </section>
+            {/*hidden as the section is not prepared yet
             <section className="guide-section">
               <div id="Build"></div>
-            </section>
+            </section>*/}
             <Footer />
           </main>
         </div>
