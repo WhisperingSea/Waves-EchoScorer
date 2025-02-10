@@ -1729,7 +1729,7 @@ The Resonator with this Echo equipped in their main slot gains 12.00%<span class
   },
   {
     name: "Hurriclaw",
-    id: 0,
+    id: 6000097,
     img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32032_UI.webp",
     echoSkill: `Transform into Hurriclaw and charge forward, dealing {0} <span class="Wind">Aero DMG</span> upon hit plus {1} <span class="Wind">Aero DMG</span> with a sweep attack. Hold the Echo Skill to continue charging forward. Use Echo Skill again while charging to perform a sweep attack.<br><br>
     CD: <b>20s</b>.`,

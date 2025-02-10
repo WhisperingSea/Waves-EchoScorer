@@ -33,7 +33,7 @@ export const SearchBar: React.FC = () => {
           <div className="inline-flex">
             <button
               title="All Elements"
-              className={`ele-btn`}
+              className={`ele-btn start`}
               onClick={() => handleSelectElement("")}
             >
               <img
@@ -93,7 +93,7 @@ export const SearchBar: React.FC = () => {
             </button>
             <button
               title="Havoc"
-              className={`ele-btn ${activeElement === "Havoc" ? "active" : ""}`}
+              className={`ele-btn end ${activeElement === "Havoc" ? "active" : ""}`}
               onClick={() => handleSelectElement("Havoc")}
             >
               <img
@@ -106,7 +106,7 @@ export const SearchBar: React.FC = () => {
         <div className="filter-2">
           <div className="inline-flex">
             <button
-              className={`wep-btn`}
+              className={`wep-btn start`}
               onClick={() => handleSelectWeapon("")}
             >
               All
