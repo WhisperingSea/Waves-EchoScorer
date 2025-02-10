@@ -26,19 +26,19 @@ import NotFound from "./pages/NotFound.tsx";
 
 const App = () => {
   return (
-    <DataContextProvider>
-      <WeaponContextProvider>
-        <EchoContextProvider>
-          <CalcEchoProvider>
-            <CalcWeaponProvider>
-              <CalcForteProvider>
-                <EnemyStatsProvider>
-                  <CalcSequenceProvider>
-                    <CalcSkillProvider>
-                      <LocalStorageContextProvider>
-                        <SearchFilterProvider>
-                          <ScorerContextProvider>
-                            <Router>
+    <Router>
+      <DataContextProvider>
+        <WeaponContextProvider>
+          <EchoContextProvider>
+            <CalcEchoProvider>
+              <CalcWeaponProvider>
+                <CalcForteProvider>
+                  <EnemyStatsProvider>
+                    <CalcSequenceProvider>
+                      <CalcSkillProvider>
+                        <LocalStorageContextProvider>
+                          <SearchFilterProvider>
+                            <ScorerContextProvider>
                               <Navbar />
                               <Sidebar />
                               <Routes>
@@ -67,19 +67,19 @@ const App = () => {
                                 />
                                 <Route path="*" element={<NotFound />} />
                               </Routes>
-                            </Router>
-                          </ScorerContextProvider>
-                        </SearchFilterProvider>
-                      </LocalStorageContextProvider>
-                    </CalcSkillProvider>
-                  </CalcSequenceProvider>
-                </EnemyStatsProvider>
-              </CalcForteProvider>
-            </CalcWeaponProvider>
-          </CalcEchoProvider>
-        </EchoContextProvider>
-      </WeaponContextProvider>
-    </DataContextProvider>
+                            </ScorerContextProvider>
+                          </SearchFilterProvider>
+                        </LocalStorageContextProvider>
+                      </CalcSkillProvider>
+                    </CalcSequenceProvider>
+                  </EnemyStatsProvider>
+                </CalcForteProvider>
+              </CalcWeaponProvider>
+            </CalcEchoProvider>
+          </EchoContextProvider>
+        </WeaponContextProvider>
+      </DataContextProvider>
+    </Router>
   );
 };
 

@@ -2,6 +2,7 @@ import { useSearchFilter } from "../../contexts/SearchFilterContext";
 import { useDataContext } from "../../contexts/CharacterDataContext";
 import "./FeatureModal.css";
 import { Link } from "react-router-dom";
+import { SearchBar } from "../SearchBars/SearchBar";
 
 interface FeaturesModalProps {
   onClose: () => void;
@@ -44,6 +45,7 @@ const FeaturesModal: React.FC<FeaturesModalProps> = ({ onClose, pageLink }) => {
               <h2 className="feature-header-2">-Select Your Charcter-</h2>
             </div>
           </div>
+          <SearchBar />
           <div className="feature-cards">
             <div className="feature-card-grid">
               {filteredCharacters

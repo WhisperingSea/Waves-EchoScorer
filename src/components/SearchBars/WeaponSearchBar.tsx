@@ -1,4 +1,6 @@
 import "./WeaponSearchBar.css";
+import React, { useState } from "react";
+import { WeaponType } from "../../contexts/SearchFilterContext";
 import { useSearchFilter } from "../../contexts/SearchFilterContext";
 
 const WeaponSearchBar: React.FC = () => {
@@ -9,6 +11,13 @@ const WeaponSearchBar: React.FC = () => {
     handleWeaponRarity,
     selectedWeaponRarity,
   } = useSearchFilter();
+  const [activeWeapon, setActiveWeapon] = useState<string>("");
+
+  const handleSelectWeapon = (weapon: WeaponType) => {
+    weapon === activeWeapon ? setActiveWeapon("") : setActiveWeapon(weapon);
+    handleWeaponFilter(weapon);
+  };
+
   return (
     <>
       <div className="weapon-searchbar weapon-search-grid">
@@ -22,36 +31,36 @@ const WeaponSearchBar: React.FC = () => {
             onChange={handleWeaponQuery}
           />
         </div>
-        <button className="weapon-btn" onClick={() => handleWeaponFilter("")}>
+        <button className="weapon-btn" onClick={() => handleSelectWeapon("")}>
           All
         </button>
         <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Sword")}
+          className={`weapon-btn ${activeWeapon === "Sword" ? "active" : ""}`}
+          onClick={() => handleSelectWeapon("Sword")}
         >
           Sword
         </button>
         <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Broadblade")}
+          className={`weapon-btn ${activeWeapon === "Broadblade" ? "active" : ""}`}
+          onClick={() => handleSelectWeapon("Broadblade")}
         >
-          BroadBlade
+          Broadblade
         </button>
         <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Pistols")}
+          className={`weapon-btn ${activeWeapon === "Pistols" ? "active" : ""}`}
+          onClick={() => handleSelectWeapon("Pistols")}
         >
           Pistols
         </button>
         <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Gauntlets")}
+          className={`weapon-btn ${activeWeapon === "Gauntlets" ? "active" : ""}`}
+          onClick={() => handleSelectWeapon("Gauntlets")}
         >
           Gauntlets
         </button>
         <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Rectifier")}
+          className={`weapon-btn ${activeWeapon === "Rectifier" ? "active" : ""}`}
+          onClick={() => handleSelectWeapon("Rectifier")}
         >
           Rectifier
         </button>

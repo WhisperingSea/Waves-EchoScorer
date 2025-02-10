@@ -12,11 +12,11 @@ export const Roccia: WWCharacter = {
     element: "Havoc",
     weapon: "Gauntlets",
     bio: `Roccia is a gifted improvisational comedian and the First Mate of the Fool's Troupe, known for her mastery of stage props.
-    With a tranquil, composed disposition, she navigates the ship's quarters, perched atop her giant box, meticulously ensuring the Troupe remains orderly and tidy.`,
+With a tranquil, composed disposition, she navigates the ship's quarters, perched atop her giant box, meticulously ensuring the Troupe remains orderly and tidy.`,
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_luokeke_UI.webp",
         icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/5/5f/Roccia_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/c/c6/Roccia_Full_Sprite.png"
+        model: "https://i.imgur.com/xjdjCrr.png"
     },
     asension: {
         charaAsension: [
@@ -317,7 +317,7 @@ export const Roccia: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Applause, Please!',
-            skillDescription: `The incoming Resonator has their Havoc DMG Amplified by {0}and Basic Attack DMG Amplified by {1} for 14s or until the Resonator is switched out.`,
+            skillDescription: `The incoming Resonator has their Havoc DMG Amplified by {0} and Basic Attack DMG Amplified by {1} for 14s or until the Resonator is switched out.`,
             skillDetailNum: ["20%", "25%"],
             multipliers: []
         },

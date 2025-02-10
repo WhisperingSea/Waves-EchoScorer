@@ -16,7 +16,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_kelaita_UI.webp",
         icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/0/06/Carlotta_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/d/da/Carlotta_Full_Sprite.png"
+        model: "https://i.imgur.com/y3aRNTg.png"
     },
     asension: {
         charaAsension: [

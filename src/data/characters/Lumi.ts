@@ -16,7 +16,7 @@ export const Lumi: WWCharacter = {
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_dengdeng_UI.webp",
         icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/5/5e/Lumi_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/4/4f/Lumi_Full_Sprite.png"
+        model: "https://i.imgur.com/34KUupN.png"
     },
     asension: {
         charaAsension: [
