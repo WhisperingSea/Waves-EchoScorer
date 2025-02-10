@@ -394,7 +394,18 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat3: ["ATK%"],
         preferedSubStats: ["Energy Regen%", "Crit. Rate%", "Crit. DMG%", "ATK%", "Heavy Attack DMG Bonus%", "ATK"]
     },
-    //TODO Phoebe build
+    {
+        name: "Phoebe",
+        charaId: 1506,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [11],
+        preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
+        preferedMainStat2: ["Spectro DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Basic Attack DMG Bonus%", "Resonance Liberation DMG Bonus%", "Resonance Skill DMG Bonus"]
+    },
     //TODO Brant build
     {
         name: "",

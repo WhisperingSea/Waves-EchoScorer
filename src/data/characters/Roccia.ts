@@ -317,7 +317,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Applause, Please!',
-            skillDescription: `The incoming Resonator has their Havoc DMG Amplified by {0}and Basic Attack DMG Amplified by {1} for 14s or until the Resonator is switched out.`,
+            skillDescription: `The incoming Resonator has their Havoc DMG Amplified by {0} and Basic Attack DMG Amplified by {1} for 14s or until the Resonator is switched out.`,
             skillDetailNum: ["20%", "25%"],
             multipliers: []
         },
