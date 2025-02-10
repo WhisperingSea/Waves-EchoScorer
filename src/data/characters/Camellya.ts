@@ -16,7 +16,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_chun_UI.webp",
         icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/b/bc/Camellya_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/d/d4/Camellya_Full_Sprite.png"
+        model: "https://i.imgur.com/0VQfkim.png"
     },
     asension: {
         charaAsension: [

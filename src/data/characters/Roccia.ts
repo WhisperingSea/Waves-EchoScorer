@@ -16,7 +16,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_luokeke_UI.webp",
         icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/5/5f/Roccia_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/c/c6/Roccia_Full_Sprite.png"
+        model: "https://i.imgur.com/xjdjCrr.png"
     },
     asension: {
         charaAsension: [

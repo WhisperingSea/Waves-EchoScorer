@@ -11,11 +11,11 @@ export const Brant: WWCharacter = {
     },
     element: "Fusion",
     weapon: "Sword",
-    bio: ``,//TODO
+    bio: ``, //TODO
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_Bulante_UI.webp",
+        portrait: "https://i.imgur.com/bjFyqtT.png",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_44_UI.webp",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/1/1c/Brant_Full_Sprite.png"
+        model: "https://i.imgur.com/to4pmnE.png"
     },
     asension: {
         charaAsension: [
