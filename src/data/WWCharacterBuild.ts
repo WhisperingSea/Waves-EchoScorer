@@ -406,7 +406,18 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat3: ["ATK%"],
         preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Basic Attack DMG Bonus%", "Resonance Liberation DMG Bonus%", "Resonance Skill DMG Bonus"]
     },
-    //TODO Brant build
+    {
+        name: "Brant",
+        charaId: 1206,
+        buildStats: {
+            stat1: {stat: "Energy Regen%", value: [2500, 2800]}
+        },
+        preferedSonata: [14, 8],
+        preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
+        preferedMainStat2: ["Energy Regen%", "Fusion DMG Bonus%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Energy Regen%", "Crit. Rate%", "Crit. DMG%", "Basic Attack DMG Bonus", "ATK%", "Resonance Liberation DMG Bonus"]
+    },
     {
         name: "",
         charaId: 0,
@@ -416,7 +427,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedSonata: [],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
-        preferedMainStat3: ["AtK%"],
+        preferedMainStat3: ["ATK%"],
         preferedSubStats: []
     },
 ]
