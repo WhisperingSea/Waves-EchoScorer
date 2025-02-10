@@ -54,12 +54,20 @@
     cursor: pointer;
 }
 
+.ele-btn.end {
+    margin-right: 0;
+}
+
 .ele-btn img {
     width: 25px;
 }
 
 .ele-btn:hover {
     background-color: rgba(153, 148, 148, 0.404);
+}
+
+.ele-btn.active {
+    background-color: #666;
 }
 
 .wep-btn {
@@ -75,12 +83,20 @@
     color: azure;
 }
 
-.wep-btn.display-none {
+.wep-btn.start {
     margin-left: 0;
+}
+
+.wep-btn.end {
+    margin-right: 0;
 }
 
 .wep-btn:hover {
     background-color: rgba(153, 148, 148, 0.404);
+}
+
+.wep-btn.active {
+    background-color: #666;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {

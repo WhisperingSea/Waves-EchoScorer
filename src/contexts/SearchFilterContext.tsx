@@ -11,7 +11,7 @@ import { WWEchoes, WWEchoesJSON } from "../data/WWEchoes.ts";
 import { WWWeapons, WWWeaponsJSON } from "../data/WWWeapons.ts";
 import { useLocalStorageContext } from "./LocalStorageContext.tsx";
 
-type WeaponType =
+export type WeaponType =
   | ""
   | "Sword"
   | "Broadblade"
@@ -19,7 +19,7 @@ type WeaponType =
   | "Gauntlets"
   | "Rectifier";
 
-type ElementType =
+export type ElementType =
   | ""
   | "Glacio"
   | "Fusion"

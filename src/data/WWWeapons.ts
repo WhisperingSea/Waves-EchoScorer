@@ -1876,7 +1876,7 @@ export const WWWeaponsJSON: WWWeapons[] = [
         statSecondaryValue: 4,
         source: "Gacha",
       },
-      /*{
+      {
         name: "Unflickering Valor",
         id: 21020036, 
         rarity: 5,
@@ -1941,5 +1941,5 @@ export const WWWeaponsJSON: WWWeapons[] = [
         statSecondary: "ATK%",
         statSecondaryValue: 4.1,
         source: "Gacha",
-      }*/
+      }
 ]

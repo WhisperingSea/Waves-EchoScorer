@@ -16,16 +16,19 @@ const EchoSearchBar: React.FC = () => {
   } = useSearchFilter();
   const [sonata2, setSonata2] = useState<string | undefined>("");
   const [sonata5, setSonata5] = useState<string | undefined>("");
+  const [activeEchoGroup, setActiveEchoGroup] = useState<number>(0);
 
   const sonataGroup = WWSonataData.find((s) => s.id === selectedEchoGroup);
+  
+  const handleSelectEchoGroup = (id: number) => {
+    id === activeEchoGroup ? setActiveEchoGroup(0) : setActiveEchoGroup(id);
+    handleEchoGroupFilter(id);
+  }
 
   useEffect(() => {
     if (selectedEchoGroup) {
       setSonata2(sonataGroup?.twoPiece);
       setSonata5(sonataGroup?.fivePiece);
-    } else if (selectedEchoGroup === 0) {
-      setSonata2("Sonata Group Not Selected");
-      setSonata5("Sonata Group Not Selected");
     }
   });
 
@@ -45,8 +48,8 @@ const EchoSearchBar: React.FC = () => {
         {WWSonataData.map((sonata) => (
           <button
             key={sonata.id}
-            className="sonata-btn"
-            onClick={() => handleEchoGroupFilter(sonata.id)}
+            className={`sonata-btn ${selectedEchoGroup === sonata.id ? "active" : ""}`}
+            onClick={() => handleSelectEchoGroup(sonata.id)}
           >
             <img className="sonata-btn-img" src={sonata.img} alt={`Sonata ${sonata.id}`} />
           </button>

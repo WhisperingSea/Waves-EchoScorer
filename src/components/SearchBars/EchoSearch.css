@@ -37,6 +37,10 @@
     font-size: 0;
 }
 
+.sonata-btn.active {
+    background-color: #666;
+}
+
 .sonata-btn-img {
     width: 30px;
     height: auto;
