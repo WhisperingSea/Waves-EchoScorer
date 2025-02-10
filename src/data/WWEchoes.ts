@@ -1655,6 +1655,96 @@ The Resonator with this Echo equipped in their main slot gains 12.00%<span class
     advantage: ``,
     recommendedChara: []
   },
+  {
+    name: "Golden Junrock",
+    id: 6000093,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31049_UI.webp",
+    echoSkill: `Summon a Golden Junrock that charges forward, dealing {0} <span class="Light">Spectro DMG</span> to enemies in its path.<br><br>
+    CD: <b>8s</b>.`,
+    bio: "Test",
+    element: 0,
+    cost: 1,
+    sonataGroup: [10, 11],
+    skill1: ["0"],
+    skill2: ["86.40%"],
+    skill3: ["100.80%"],
+    skill4: ["115.20%"],
+    skill5: ["129.60%"],    
+    advantage: ``,
+    recommendedChara: []
+  },
+  {
+    name: "Calcified Junrock",
+    id: 6000094,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31050_UI.webp",
+    echoSkill: `Summon a Calcified Junrock that restores HP for nearby Resonators in the team by {0} of their Max HP, up to 5 times.<br><br>
+    CD: <b>15s</b>.`,
+    bio: "Test",
+    element: 0,
+    cost: 1,
+    sonataGroup: [13, 14],
+    skill1: ["0"],
+    skill2: ["1.68%"],
+    skill3: ["1.96%"],
+    skill4: ["2.24%"],
+    skill5: ["2.52%"],
+    advantage: ``,
+    recommendedChara: []
+  },
+  {
+    name: "Aero Prism",
+    id: 6000095,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31051_UI.webp",
+    echoSkill: `Summon an Aero Prism to attack enemies, dealing {0} <span class="Wind">Aero DMG</span>.<br><br>
+    CD: <b>15s</b>.`,
+    bio: "Test",
+    element: 0,
+    cost: 1,
+    sonataGroup: [11, 14],
+    skill1: ["0"],
+    skill2: ["12.84%"],
+    skill3: ["14.98%"],
+    skill4: ["17.12%"],
+    skill5: ["19.26%"],
+    advantage: ``,
+    recommendedChara: []
+  },
+  {
+    name: "Rage Against the Statue",
+    id: 6000096,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32031_UI.webp",
+    echoSkill: `Transform into Rage Against the Statue to attack enemies, dealing {0} <span class="Light">Spectro DMG</span>. Hold the Echo Skill to maintain the Echo form and charge towards enemies, dealing {1} <span class="Light">Spectro DMG</span>.<br><br>
+    CD: <b>20s</b>.`,
+    bio: "Test",
+    element: 0,
+    cost: 3,
+    sonataGroup: [11],
+    skill1: ["0", "0"],
+    skill2: ["208.80%", "313.20%"],
+    skill3: ["243.60%", "365.40%"],
+    skill4: ["278.40%", "417.60%"],
+    skill5: ["313.20%", "469.80%"],
+    advantage: ``,
+    recommendedChara: []
+  },
+  {
+    name: "Hurriclaw",
+    id: 0,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32032_UI.webp",
+    echoSkill: `Transform into Hurriclaw and charge forward, dealing {0} <span class="Wind">Aero DMG</span> upon hit plus {1} <span class="Wind">Aero DMG</span> with a sweep attack. Hold the Echo Skill to continue charging forward. Use Echo Skill again while charging to perform a sweep attack.<br><br>
+    CD: <b>20s</b>.`,
+    bio: "Test",
+    element: 0,
+    cost: 3,
+    sonataGroup: [14],
+    skill1: ["0", "0"],
+    skill2: ["104.40%", "104.40%"],
+    skill3: ["121.80%", "121.80%"],
+    skill4: ["139.20%", "139.20%"],
+    skill5: ["156.60%", "156.60%"],
+    advantage: ``,
+    recommendedChara: []
+  }
   /* {
     name: "",
     id: 0,
