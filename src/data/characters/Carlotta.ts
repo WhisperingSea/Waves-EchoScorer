@@ -251,7 +251,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
         {
             skillId: 2,
             typeName: 'Resonance Skill',
-            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCarlotta2.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SKillCarlotta2.webp",
             skillName: 'Art of Violence',
             skillDescription: `
                 Deal <span class="Ice">Glacio DMG</span> and inflict  <span class="Highlight">Dispersion</span> on the target. Press <span class="Highlight">Resonance Skill</span> again shortly after to cast <span class="Highlight">Chromatic Splendor</span>.
