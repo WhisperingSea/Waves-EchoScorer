@@ -15,7 +15,7 @@ export const Changli: WWCharacter = {
 Being the mentor to Jinhsi, she is persuasive and patient.
 She entertains an unwavering aspiration, holding her ground in the endless game against time and chaos.`,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_changli_UI.webp",
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/ChangliPortrait.webp",
         icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Changli.png",
         model: "https://wuthering-waves-assets.pages.dev/models/ChangliCharacter_Sprite.png"
     },

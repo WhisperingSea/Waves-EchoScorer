@@ -14,9 +14,9 @@ export const Camellya: WWCharacter = {
     bio: `Bloom Bearer from the Black Shores, Camellya is a laid-back character free from shackles, with her personal aroma of "danger."
 Intrigued by the belief in fate, she wanders the lands of her own accord, following such a chain of scenarios and its vague guidance.`,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_chun_UI.webp",
-        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/b/bc/Camellya_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/d/d4/Camellya_Full_Sprite.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/Camellya_Portrait.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Camellya.webp",
+        model: "https://wuthering-waves-assets.pages.dev/models/Camellya_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [

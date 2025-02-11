@@ -14,9 +14,9 @@ export const Lumi: WWCharacter = {
     bio: `From dense forests to vast wilderness, places where navigator of Lollo Logistics Lumi has traveled bear witness to her charming personality, like a shaft of sunlight.<br>
     Born disciplined, she is now enjoying her daily tasks as a diligent courier, honoring her duty of punctual delivery.`,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_dengdeng_UI.webp",
-        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/5/5e/Lumi_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/4/4f/Lumi_Full_Sprite.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/LumiPortrait.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Lumi.webp",
+        model: "https://wuthering-waves-assets.pages.dev/models/Lumi_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [
@@ -129,7 +129,7 @@ export const Lumi: WWCharacter = {
         {
             skillId: 1,
             typeName: 'Normal Attack',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconNorSword.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill2.webp",
             skillName: 'Navigation Support',
             skillDescription: `<span class="Title">Yellow Light: Basic Attack</span>
                 Summon Squeakie to shoot three shots in a row, dealing <span class="Electro">Electro DMG</span>.
@@ -246,7 +246,7 @@ export const Lumi: WWCharacter = {
         {
             skillId: 2,
             typeName: 'Resonance Skill',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengB1.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLumi2.webp",
             skillName: 'Searchlight Service',
             skillDescription: `<span class="Title">Pounce</span>
                 When in <span class="Highlight">Yellow Light Mode</span>, use Resonance Skill to perform Pounce, which consumes STA to pounce on the target before switching to <span class="Highlight">Red Light Mode</span>.<br>
@@ -296,7 +296,7 @@ export const Lumi: WWCharacter = {
         {
             skillId: 3,
             typeName: 'Resonance Liberation',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengC1.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLumi3.webp",
             skillName: 'Squeakie Express',
             skillDescription: `Throw the giant Squeakie at the target, dealing <span class="Thunder">Electro DMG</span>.`,
             skillDetailNum: [],
@@ -335,7 +335,7 @@ export const Lumi: WWCharacter = {
         {
             skillId: 4,
             typeName: 'Intro Skill',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengQTE.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLumi5.webp",
             skillName: 'Special Delivery',
             skillDescription: `Enter <span class="Highlight">Yellow Light Mode</span> and attack the target, dealing <span class="Thunder">Electro DMG</span>.`,
             skillDetailNum: [],
@@ -368,7 +368,7 @@ export const Lumi: WWCharacter = {
         {
             skillId: 6,
             typeName: 'Forte Circuit',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengY.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLumi4.webp",
             skillName: 'Signal Light',
             skillDescription: `<span class="Title">Energized Pounce</span>
                 When Yellow Light Spark is fully recovered, replace Resonance Skill with Resonance Skill <span class="Highlight">Energized Pounce</span> that deals <span class="Thunder">Electro DMG</span> and enter <span class="Highlight">Red Spotlight</span> Mode. The DMG dealt is considered Basic Attack DMG.<br>

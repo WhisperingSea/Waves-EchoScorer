@@ -14,9 +14,9 @@ export const Carlotta: WWCharacter = {
     bio: `Carlotta, the second daughter of the esteemed Montelli family, embodies innate nobility and a refined appreciation for art. Her elegance is matched by her unconventional spirit, unshackled by tradition.
 To ensure her family's future, she alternates between dual roles, addressing delicate "troubles" behind the scenes.`,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_kelaita_UI.webp",
-        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/0/06/Carlotta_Icon.png",
-        model: "https://static.wikia.nocookie.net/wutheringwaves/images/d/da/Carlotta_Full_Sprite.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/CarlottaPortrait.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icon_character/Carlotta.webp",
+        model: "https://wuthering-waves-assets.pages.dev/models/Carlotta_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [
@@ -129,7 +129,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
         {
             skillId: 1,
             typeName: 'Normal Attack',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconNorGun.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
             skillName: 'Silent Execution',
             skillDescription: `<span class="Title">Basic Attack</span>
                 Perform up to 2 consecutive strikes, dealing <span class="Ice">Glacio DMG</span>.<br>
@@ -251,7 +251,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
         {
             skillId: 2,
             typeName: 'Resonance Skill',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaB1.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCarlotta2.webp",
             skillName: 'Art of Violence',
             skillDescription: `
                 Deal <span class="Ice">Glacio DMG</span> and inflict  <span class="Highlight">Dispersion</span> on the target. Press <span class="Highlight">Resonance Skill</span> again shortly after to cast <span class="Highlight">Chromatic Splendor</span>.
@@ -306,7 +306,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
         {
             skillId: 3,
             typeName: 'Resonance Liberation',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaC1.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCarlotta3.webp",
             skillName: 'Era of New Wave',
             skillDescription: `
             Deal <span class="Ice">Glacio DMG</span> to all targets in an area (considered Resonance Skill DMG) and inflict <span class="Highlight">Deconstruction</span> on targets hit, then activate <span class="Highlight">Twilight Tango</span>.<br>
@@ -407,7 +407,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
         {
             skillId: 4,
             typeName: 'Intro Skill',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaQTE.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCarlotta5.webp",
             skillName: 'Wintertime Aria',
             skillDescription: `Attack the target, dealing <span class="Ice">Glacio DMG</span>.`,
             skillDetailNum: [],
@@ -440,7 +440,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
         {
             skillId: 6,
             typeName: 'Forte Circuit',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaY.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCarlotta4.webp",
             skillName: 'Lethal Repertoire',
             skillDescription: `<span class="Title">Heavy Attack - <span class="Highlight">Imminent Oblivion</span></span>\n
             Carlotta activates <span class="Highlight">Tinted Crystal</span> every 22s.<br>
