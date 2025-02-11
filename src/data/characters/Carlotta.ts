@@ -15,7 +15,7 @@ export const Carlotta: WWCharacter = {
 To ensure her family's future, she alternates between dual roles, addressing delicate "troubles" behind the scenes.`,
     images: {
         portrait: "https://wuthering-waves-assets.pages.dev/portraits/CarlottaPortrait.webp",
-        icon_sq: "https://wuthering-waves-assets.pages.dev/icon_character/Carlotta.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Carlotta.webp",
         model: "https://wuthering-waves-assets.pages.dev/models/Carlotta_Full_Sprite.webp"
     },
     asension: {
