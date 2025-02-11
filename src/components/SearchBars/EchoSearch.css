@@ -74,6 +74,10 @@
     padding: 0;
 }
 
+.sonata-effect-name {
+    text-decoration: underline;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
