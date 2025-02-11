@@ -14,9 +14,9 @@ export const Roccia: WWCharacter = {
     bio: `Roccia is a gifted improvisational comedian and the First Mate of the Fool's Troupe, known for her mastery of stage props.
 With a tranquil, composed disposition, she navigates the ship's quarters, perched atop her giant box, meticulously ensuring the Troupe remains orderly and tidy.`,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_luokeke_UI.webp",
-        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/5/5f/Roccia_Icon.png",
-        model: "https://i.imgur.com/xjdjCrr.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/RocciaPortrait.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Roccia.webp",
+        model: "https://wuthering-waves-assets.pages.dev/models/Roccia_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [
@@ -129,7 +129,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
         {
             skillId: 1,
             typeName: 'Normal Attack',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconNorFist.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
             skillName: 'Pero, Easy',
             skillDescription: `<span class="Title">Basic Attack</span>
                 Perform up to 4 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>.
@@ -220,7 +220,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
         {
             skillId: 2,
             typeName: 'Resonance Skill',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLuokeke/SP_IconLuokekeB1.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoccia2.webp",
             skillName: 'Acrobatic Trick',
             skillDescription: `Roccia projects her creativity into reality, pulling in nearby targets and dealing <span class="Dark">Havoc DMG</span>. She then launches into mid-air and activates the <span class="Highlight">Beyond Imagination</span> state.`,
             skillDetailNum: [],
@@ -252,7 +252,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
         {
             skillId: 3,
             typeName: 'Resonance Liberation',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLuokeke/SP_IconLuokekeC1.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoccia3.webp",
             skillName: 'Commedia Improvviso!',
             skillDescription: `Roccia's improvised comedy begins! Deal <span class="Dark">Havoc DMG</span> to the target, considered Heavy Attack DMG. For every 0.1% of Roccia's Crit. Rate over 50%, this skill increases the ATK of all Resonators in the team by 1 point for 30s, up to 200 points.`,
             skillDetailNum: [],
@@ -291,7 +291,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
         {
             skillId: 4,
             typeName: 'Intro Skill',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLuokeke/SP_IconLuokekeQTE.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoccia5.webp",
             skillName: 'Pero, Help',
             skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>. Use <span class="Highlight">Basic Attack</span> right after casting this skill to cast <span class="Highlight">Basic Attack Stage 4</span>.`,
             skillDetailNum: [],
@@ -324,7 +324,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
         {
             skillId: 6,
             typeName: 'Forte Circuit',
-            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLuokeke/SP_IconLuokekeY.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillRoccia4.webp",
             skillName: 'A Prop Master Prepares',
             skillDescription: `<span class="Title">Beyond Imagination</span>
             - When Roccia is in <span class="Highlight">Beyond Imagination</span> with at least 100 Imagination, press the <span class="Highlight">Basic Attack</span> button to consume 100 Imagination to cast Basic Attack <span class="Highlight">Real Fantasy</span>.<br>
