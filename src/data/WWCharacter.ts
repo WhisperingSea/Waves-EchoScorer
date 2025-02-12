@@ -1,5 +1,6 @@
 import { Aalto } from "./characters/Aalto";
 import { Baizhi } from "./characters/Baizhi";
+import { Brant } from "./characters/Brant";
 import { Calcharo } from "./characters/Calcharo";
 import { Camellya } from "./characters/Camellya";
 import { Carlotta } from "./characters/Carlotta";
@@ -13,6 +14,7 @@ import { Jiyan } from "./characters/Jiyan";
 import { Lingyang } from "./characters/Lingyang";
 import { Lumi } from "./characters/Lumi";
 import { Mortefi } from "./characters/Mortefi";
+import { Phoebe } from "./characters/Phoebe";
 import { Roccia } from "./characters/Roccia";
 import { RoverHavoc } from "./characters/Rover-Havoc";
 import { RoverSpectro } from "./characters/Rover-Spectro";
@@ -132,7 +134,7 @@ export const WWCharacterData: WWCharacter[] = [
     Camellya,
     Lumi,
     Carlotta,
-    Roccia
-    //TODO Phoebe
-    //TODO Brant
+    Roccia,
+    Phoebe,
+    Brant
 ]

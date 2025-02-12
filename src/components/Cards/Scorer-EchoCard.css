@@ -25,7 +25,7 @@
     align-items: center;
     height: 100%;
     border: 1px solid rgb(118, 161, 161);
-    border-radius: 8px;
+    border-radius: 7px;
     cursor: pointer;
 }
 
@@ -33,7 +33,7 @@
     width: 100%;
     height: auto;
     border: 1px solid rgb(118, 161, 161);
-    border-radius: 8px;
+    border-radius: 7px;
     object-fit: contain;
     cursor: pointer;
 }

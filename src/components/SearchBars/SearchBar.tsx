@@ -1,10 +1,33 @@
-import React from "react";
-import { useSearchFilter } from "../../contexts/SearchFilterContext";
+import React, { useState } from "react";
+import { ElementType, useSearchFilter, WeaponType } from "../../contexts/SearchFilterContext";
 import "./SearchBar.css";
 
+const WeaponTypes: WeaponType[] = ["Sword", "Broadblade", "Pistols", "Gauntlets", "Rectifier"];
+
+//TODO: change the names of files on server to match the names of the elements
+const ElementTypes: { name: ElementType, displayName: string }[] = [
+  { name: "Glacio", displayName: "Ice" },
+  { name: "Fusion", displayName: "Fire" },
+  { name: "Electro", displayName: "Thunder" },
+  { name: "Aero", displayName: "Wind" },
+  { name: "Spectro", displayName: "Light" },
+  { name: "Havoc", displayName: "Dark" }
+];
 export const SearchBar: React.FC = () => {
-  const { query, handleSearch, handleWeaponFilter, handleElementFilter } =
+  const { query, handleSearch, handleWeaponFilter, handleElementFilter, selectedElement, selectedWeaponType } =
     useSearchFilter();
+  const [activeElement, setActiveElement] = useState<string>(selectedElement);
+  const [activeWeapon, setActiveWeapon] = useState<string>(selectedWeaponType);
+
+  const handleSelectElement = (element: ElementType) => {
+    element == activeElement ? setActiveElement("") : setActiveElement(element);
+    handleElementFilter(element);
+  };
+
+  const handleSelectWeapon = (weapon: WeaponType) => {
+    weapon === activeWeapon ? setActiveWeapon("") : setActiveWeapon(weapon);
+    handleWeaponFilter(weapon);
+  };
 
   return (
     <>
@@ -20,115 +43,90 @@ export const SearchBar: React.FC = () => {
         <div className="filter-1">
           <div className="inline-flex">
             <button
+              key="All"
               title="All Elements"
-              className="ele-btn"
-              onClick={() => handleElementFilter("")}
+              className={`ele-btn start`}
+              onClick={() => handleSelectElement("")}
             >
               <img
                 src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementZero3.png"
                 alt="All Element Icon"
               />
             </button>
-            <button
-              title="Glacio"
-              className="ele-btn"
-              onClick={() => handleElementFilter("Glacio")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementIce3.png"
-                alt="Glacio Element Icon"
-              />
-            </button>
-            <button
-              title="Fusion"
-              className="ele-btn"
-              onClick={() => handleElementFilter("Fusion")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementFire3.png"
-                alt="Fusion Element Icon"
-              />
-            </button>
-            <button
-              title="Electro"
-              className="ele-btn"
-              onClick={() => handleElementFilter("Electro")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementThunder3.png"
-                alt="Electro Element Icon"
-              />
-            </button>
-            <button
-              title="Aero"
-              className="ele-btn"
-              onClick={() => handleElementFilter("Aero")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementWind3.png"
-                alt="Aero Element Icon"
-              />
-            </button>
-            <button
-              title="Spectro"
-              className="ele-btn"
-              onClick={() => handleElementFilter("Spectro")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementLight3.png"
-                alt="Spectro Element Icon"
-              />
-            </button>
-            <button
-              title="Havoc"
-              className="ele-btn"
-              onClick={() => handleElementFilter("Havoc")}
-            >
-              <img
-                src="https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElementDark3.png"
-                alt="Havoc Element Icon"
-              />
-            </button>
+            {ElementTypes.map((element, index) => (
+              <button
+                key={element.name}
+                title={element.name}
+                className={`ele-btn ${index === ElementTypes.length - 1 ? "end" : ""} ${activeElement === element.name ? "active" : ""}`}
+                onClick={() => handleSelectElement(element.name)}
+              >
+                <img
+                  src={`https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElement${element.displayName}3.png`}
+                  alt={`${element.name} Element Icon`}
+                />
+              </button>
+            ))}
           </div>
         </div>
         <div className="filter-2">
           <div className="inline-flex">
             <button
-              className="wep-btn display-none"
-              onClick={() => handleWeaponFilter("")}
+              key={"All"}
+              className={`wep-btn start`}
+              onClick={() => handleSelectWeapon("")}
             >
               All
             </button>
-            <button
-              className="wep-btn"
-              onClick={() => handleWeaponFilter("Sword")}
-            >
-              Sword
-            </button>
-            <button
-              className="wep-btn"
-              onClick={() => handleWeaponFilter("Broadblade")}
-            >
-              BroadBlade
-            </button>
-            <button
-              className="wep-btn"
-              onClick={() => handleWeaponFilter("Pistols")}
-            >
-              Pistols
-            </button>
-            <button
-              className="wep-btn"
-              onClick={() => handleWeaponFilter("Gauntlets")}
-            >
-              Gauntlets
-            </button>
-            <button
-              className="wep-btn"
-              onClick={() => handleWeaponFilter("Rectifier")}
-            >
-              Rectifier
-            </button>
+            {WeaponTypes.map((weapon, index) => (
+              <button
+                key={weapon}
+                className={`wep-btn ${index === WeaponTypes.length - 1 ? "end" : ""} ${activeWeapon === weapon ? "active" : ""}`}
+                onClick={() => handleSelectWeapon(weapon)}
+              >
+                {weapon}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="dropdown-filter-1">
+          <span>{activeElement ? activeElement : "Element"}</span>
+          <div className="dropdown-content-filter">
+            <ul>
+              {ElementTypes.map((element) => (
+                <li>
+                  <button
+                    key={element.name}
+                    className="ele-select"
+                    onClick={() => handleSelectElement(element.name)}
+                  >
+                    {/*<img
+                      src={`https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElement${element.displayName}3.png`}
+                      alt={`${element.name} Element Icon`}
+                      className="icon"
+                    />*/}
+                    {element.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="dropdown-filter-2">
+          <span>{activeWeapon ? activeWeapon : "Weapon"}</span>
+          <div className="dropdown-content-filter">
+            <ul>
+              {WeaponTypes.map((weapon) => (
+                <li>
+                  <button
+                    key={weapon}
+                    className="wep-select"
+                    onClick={() => handleSelectWeapon(weapon)}
+                  >
+                    {weapon}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

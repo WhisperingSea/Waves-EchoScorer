@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useSearchFilter } from "../../contexts/SearchFilterContext.tsx";
+import { useSearchFilter, EchoCostType} from "../../contexts/SearchFilterContext.tsx";
 import "./EchoSearch.css";
 import { WWSonataData } from "../../data/WWSonata.ts";
+
+const echoCosts: EchoCostType[] = [1, 3, 4];
 
 const EchoSearchBar: React.FC = () => {
   const {
@@ -16,16 +18,21 @@ const EchoSearchBar: React.FC = () => {
   } = useSearchFilter();
   const [sonata2, setSonata2] = useState<string | undefined>("");
   const [sonata5, setSonata5] = useState<string | undefined>("");
+  const [sonataName, setSonataName] = useState<string | undefined>("");
+  const [activeEchoGroup, setActiveEchoGroup] = useState<number>(0);
 
   const sonataGroup = WWSonataData.find((s) => s.id === selectedEchoGroup);
+
+  const handleSelectEchoGroup = (id: number) => {
+    id === activeEchoGroup ? setActiveEchoGroup(0) : setActiveEchoGroup(id);
+    handleEchoGroupFilter(id);
+  }
 
   useEffect(() => {
     if (selectedEchoGroup) {
       setSonata2(sonataGroup?.twoPiece);
       setSonata5(sonataGroup?.fivePiece);
-    } else if (selectedEchoGroup === 0) {
-      setSonata2("Sonata Group Not Selected");
-      setSonata5("Sonata Group Not Selected");
+      setSonataName(sonataGroup?.name);
     }
   });
 
@@ -45,44 +52,35 @@ const EchoSearchBar: React.FC = () => {
         {WWSonataData.map((sonata) => (
           <button
             key={sonata.id}
-            className="sonata-btn"
-            onClick={() => handleEchoGroupFilter(sonata.id)}
+            className={`sonata-btn ${selectedEchoGroup === sonata.id ? "active" : ""}`}
+            onClick={() => handleSelectEchoGroup(sonata.id)}
+            title={sonata.name}
           >
             <img className="sonata-btn-img" src={sonata.img} alt={`Sonata ${sonata.id}`} />
           </button>
         ))}
-        <div className="sonata-effect">
-          <h3 className="sonata-effect-text">2-Piece: {sonata2}</h3>
-          <h3 className="sonata-effect-text">5-Piece: {sonata5}</h3>
-        </div>
+        {selectedEchoGroup !== 0 && (
+          <div className="sonata-effect">
+            <h3 className="sonata-effect-name">{sonataName}</h3>
+            <h3 className="sonata-effect-text">2-Piece: {sonata2}</h3>
+            <h3 className="sonata-effect-text">5-Piece: {sonata5}</h3>
+          </div>
+        )}
         <div className="dropdown">
-          <span>Cost: {selectedEchoCost}</span>
+          <span>{`Cost: ${selectedEchoCost > 0 ? selectedEchoCost : "Any"}`}</span>
           <div className="dropdown-content">
             <ul>
-              <li>
-                <button
-                  className="cost-select"
-                  onClick={() => handleEchoCostFilter(1)}
-                >
-                  1 Cost
-                </button>
-              </li>
-              <li>
-                <button
-                  className="cost-select"
-                  onClick={() => handleEchoCostFilter(3)}
-                >
-                  3 Cost
-                </button>
-              </li>
-              <li>
-                <button
-                  className="cost-select"
-                  onClick={() => handleEchoCostFilter(4)}
-                >
-                  4 Cost
-                </button>
-              </li>
+              {echoCosts.map((cost) => (
+                <li>
+                  <button
+                    key={cost}
+                    className="cost-select"
+                    onClick={() => handleEchoCostFilter(cost)}
+                  >
+                    {cost} Cost
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -37,6 +37,10 @@
     font-size: 0;
 }
 
+.sonata-btn.active {
+    background-color: #666;
+}
+
 .sonata-btn-img {
     width: 30px;
     height: auto;
@@ -71,7 +75,7 @@
     display: inline-block;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px 0px;
+    align-content: center;
     font-size: 1.1rem;
     font-weight: 700;
     border: 1px solid azure;
@@ -83,7 +87,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(96, 222, 12, 0);
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -207,5 +211,8 @@
         gap: 5px;
     }
 
+    .dropdown {
+        height: auto;
+    }
     
 }

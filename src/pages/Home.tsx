@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [link, setLink] = useState<string>("");
 
-  const chara = Object.values(characters).find((i) => i.charaId === 1606);
+  const chara = Object.values(characters).find((i) => i.charaId === 1506);
 
   const openFeatureModal1 = () => {
     setOpen(true);
@@ -87,22 +87,22 @@ const Home: React.FC = () => {
                 <h2 className="heading-2">Updates :</h2>
                 <ul className="update-list">
                   <li className="update-list-item">
-                    Added Resonator Shorekeeper
+                    Added Phoebe and Brant!
                   </li>
                   <li className="update-list-item">
-                    Added Rectifier Stellar Symphony
+                    Added Luminous Hymn, Unflickering Valor and Ocean's Gift!
                   </li>
                   <li className="update-list-item">
-                    Added Sword Endless Collapse
+                    Added new Echoes from 2.1!
                   </li>
                 </ul>
               </div>
               <div>
                 <h2 className="heading-2">Upcoming Updates :</h2>
                 <ul className="update-list">
-                  <li className="update-list-item">Echo Scorer</li>
+                  <li className="update-list-item">Echo Scorer improvements</li>
                   <li className="update-list-item">
-                    1.3 Resonator and Weapons
+                    2.2 Resonators, Weapons & Echoes
                   </li>
                   <li className="update-list-item">Minor QoL Changes</li>
                 </ul>

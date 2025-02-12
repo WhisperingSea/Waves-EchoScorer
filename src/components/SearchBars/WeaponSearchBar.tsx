@@ -1,5 +1,9 @@
 import "./WeaponSearchBar.css";
+import React, { useState } from "react";
+import { WeaponType } from "../../contexts/SearchFilterContext";
 import { useSearchFilter } from "../../contexts/SearchFilterContext";
+
+const WeaponTypes: WeaponType[] = ["Sword", "Broadblade", "Pistols", "Gauntlets", "Rectifier"];
 
 const WeaponSearchBar: React.FC = () => {
   const {
@@ -9,6 +13,13 @@ const WeaponSearchBar: React.FC = () => {
     handleWeaponRarity,
     selectedWeaponRarity,
   } = useSearchFilter();
+  const [activeWeapon, setActiveWeapon] = useState<string>("");
+
+  const handleSelectWeapon = (weapon: WeaponType) => {
+    weapon === activeWeapon ? setActiveWeapon("") : setActiveWeapon(weapon);
+    handleWeaponFilter(weapon);
+  };
+
   return (
     <>
       <div className="weapon-searchbar weapon-search-grid">
@@ -22,47 +33,24 @@ const WeaponSearchBar: React.FC = () => {
             onChange={handleWeaponQuery}
           />
         </div>
-        <button className="weapon-btn" onClick={() => handleWeaponFilter("")}>
+        <button className="weapon-btn" onClick={() => handleSelectWeapon("")}>
           All
         </button>
-        <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Sword")}
-        >
-          Sword
-        </button>
-        <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Broadblade")}
-        >
-          BroadBlade
-        </button>
-        <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Pistols")}
-        >
-          Pistols
-        </button>
-        <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Gauntlets")}
-        >
-          Gauntlets
-        </button>
-        <button
-          className="weapon-btn"
-          onClick={() => handleWeaponFilter("Rectifier")}
-        >
-          Rectifier
-        </button>
+        {WeaponTypes.map((weapon) => (
+          <button
+            key={weapon}
+            className={`weapon-btn ${activeWeapon === weapon ? "active" : ""}`}
+            onClick={() => handleSelectWeapon(weapon)}
+          >
+            {weapon}
+          </button>
+        ))}
         <div className="weapon-rarity">
           <select value={selectedWeaponRarity} onChange={handleWeaponRarity}>
-            <option value={0}>Select Rarity</option>
-            <option value={1}>1 Star</option>
-            <option value={2}>2 Star</option>
-            <option value={3}>3 Star</option>
-            <option value={4}>4 Star</option>
-            <option value={5}>5 Star</option>
+            <option value="0">Select Rarity</option>
+            {[...Array(5)].map((_, i) => (
+              <option key={i + 1} value={i + 1}>{i + 1} Star</option>
+            ))}
           </select>
         </div>
       </div>
