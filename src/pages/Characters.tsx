@@ -33,10 +33,12 @@ const Characters: React.FC = () => {
           </section>
           <section className="chara-page-section-2">
             <h2 className="heading-2 center">Character List</h2>
-            <div className="chara-cards">
+          </section>
+          <section className="chara-page-section-2">
+            <div className="search-bar-container">
               <SearchBar />
-              <Card />
             </div>
+            <Card />
           </section>
           <footer>
             <Footer />

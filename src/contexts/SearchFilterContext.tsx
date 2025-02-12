@@ -260,7 +260,9 @@ export const SearchFilterProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   const handleElementFilter = (elementType: ElementType) => {
-    setSelectedElement(elementType);
+    setSelectedElement((preType) =>
+      preType === elementType ? "" : elementType
+    );
   };
 
   const handleEchoSearch = (event: React.ChangeEvent<HTMLInputElement>) => {

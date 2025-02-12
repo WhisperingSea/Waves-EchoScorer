@@ -73,6 +73,7 @@ const EchoSearchBar: React.FC = () => {
               {echoCosts.map((cost) => (
                 <li>
                   <button
+                    key={cost}
                     className="cost-select"
                     onClick={() => handleEchoCostFilter(cost)}
                   >

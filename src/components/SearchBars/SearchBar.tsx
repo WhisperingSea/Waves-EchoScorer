@@ -14,13 +14,13 @@ const ElementTypes: { name: ElementType, displayName: string }[] = [
   { name: "Havoc", displayName: "Dark" }
 ];
 export const SearchBar: React.FC = () => {
-  const { query, handleSearch, handleWeaponFilter, handleElementFilter } =
+  const { query, handleSearch, handleWeaponFilter, handleElementFilter, selectedElement, selectedWeaponType } =
     useSearchFilter();
-  const [activeElement, setActiveElement] = useState<string>("");
-  const [activeWeapon, setActiveWeapon] = useState<string>("");
+  const [activeElement, setActiveElement] = useState<string>(selectedElement);
+  const [activeWeapon, setActiveWeapon] = useState<string>(selectedWeaponType);
 
   const handleSelectElement = (element: ElementType) => {
-    setActiveElement(element);
+    element == activeElement ? setActiveElement("") : setActiveElement(element);
     handleElementFilter(element);
   };
 
@@ -86,6 +86,47 @@ export const SearchBar: React.FC = () => {
                 {weapon}
               </button>
             ))}
+          </div>
+        </div>
+        <div className="dropdown-filter-1">
+          <span>{activeElement ? activeElement : "Element"}</span>
+          <div className="dropdown-content-filter">
+            <ul>
+              {ElementTypes.map((element) => (
+                <li>
+                  <button
+                    key={element.name}
+                    className="ele-select"
+                    onClick={() => handleSelectElement(element.name)}
+                  >
+                    {/*<img
+                      src={`https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElement${element.displayName}3.png`}
+                      alt={`${element.name} Element Icon`}
+                      className="icon"
+                    />*/}
+                    {element.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="dropdown-filter-2">
+          <span>{activeWeapon ? activeWeapon : "Weapon"}</span>
+          <div className="dropdown-content-filter">
+            <ul>
+              {WeaponTypes.map((weapon) => (
+                <li>
+                  <button
+                    key={weapon}
+                    className="wep-select"
+                    onClick={() => handleSelectWeapon(weapon)}
+                  >
+                    {weapon}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
