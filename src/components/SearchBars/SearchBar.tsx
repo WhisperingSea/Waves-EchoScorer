@@ -43,7 +43,7 @@ export const SearchBar: React.FC = () => {
         <div className="filter-1">
           <div className="inline-flex">
             <button
-              key="All"
+              key={"All"}
               title="All Elements"
               className={`ele-btn start`}
               onClick={() => handleSelectElement("")}
@@ -71,7 +71,7 @@ export const SearchBar: React.FC = () => {
         <div className="filter-2">
           <div className="inline-flex">
             <button
-              key={"All"}
+            key={"All"}
               className={`wep-btn start`}
               onClick={() => handleSelectWeapon("")}
             >
@@ -79,7 +79,7 @@ export const SearchBar: React.FC = () => {
             </button>
             {WeaponTypes.map((weapon, index) => (
               <button
-                key={weapon}
+              key={weapon}
                 className={`wep-btn ${index === WeaponTypes.length - 1 ? "end" : ""} ${activeWeapon === weapon ? "active" : ""}`}
                 onClick={() => handleSelectWeapon(weapon)}
               >
@@ -92,9 +92,8 @@ export const SearchBar: React.FC = () => {
           <span>{activeElement ? activeElement : "Select Element"}</span>
           <div className="dropdown-content-filter">
             <ul>
-              <li>
+              <li key="All">
                 <button
-                  key="All"
                   className="ele-select"
                   onClick={() => handleSelectElement("")}
                 >
@@ -102,9 +101,8 @@ export const SearchBar: React.FC = () => {
                 </button>
               </li>
               {ElementTypes.map((element) => (
-                <li>
+                <li key={element.name}>
                   <button
-                    key={element.name}
                     className="ele-select"
                     onClick={() => handleSelectElement(element.name)}
                   >
@@ -119,9 +117,8 @@ export const SearchBar: React.FC = () => {
           <span>{activeWeapon ? activeWeapon : "Select Weapon"}</span>
           <div className="dropdown-content-filter">
             <ul>
-              <li>
+              <li key="All">
                 <button
-                  key="All"
                   className="wep-select"
                   onClick={() => handleSelectWeapon("")}
                 >
@@ -129,9 +126,8 @@ export const SearchBar: React.FC = () => {
                 </button>
               </li>
               {WeaponTypes.map((weapon) => (
-                <li>
+                <li key={weapon}>
                   <button
-                    key={weapon}
                     className="wep-select"
                     onClick={() => handleSelectWeapon(weapon)}
                   >
