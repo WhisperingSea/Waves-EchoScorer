@@ -14,9 +14,9 @@ export const Camellya: WWCharacter = {
     bio: `Bloom Bearer from the Black Shores, Camellya is a laid-back character free from shackles, with her personal aroma of "danger."
 Intrigued by the belief in fate, she wanders the lands of her own accord, following such a chain of scenarios and its vague guidance.`,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_chun_UI.webp",
-        icon_sq: "https://static.wikia.nocookie.net/wutheringwaves/images/b/bc/Camellya_Icon.png",
-        model: "https://i.imgur.com/0VQfkim.png"
+        portrait: "https://wuthering-waves-assets.pages.dev/portraits/Camellya_Portrait.webp",
+        icon_sq: "https://wuthering-waves-assets.pages.dev/icons_character/Camellya.webp",
+        model: "https://wuthering-waves-assets.pages.dev/models/Camellya_Full_Sprite.webp"
     },
     asension: {
         charaAsension: [
@@ -129,7 +129,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
         {
             skillId: 1,
             typeName: 'Normal Attack',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Basic-Attack.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill1.webp",
             skillName: 'Burgeoning',
             skillDescription: `<span class="Title">Basic Attack</span>
                 Perform up to 5 consecutive attacks, dealing <span class="Dark">Havoc DMG</span>.<br>
@@ -222,7 +222,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
         {
             skillId: 2,
             typeName: 'Resonance Skill',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Resonance-Skill.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCamellya2.webp",
             skillName: 'Valse of Bloom and Blight',
             skillDescription: `<span class="Title">Crimson Blossom</span>
             Attack the target, dealing <span class="Dark">Havoc DMG</span> (considered Basic Attack DMG), then enter <span class="Highlight">Blossom Mode</span>.<br>
@@ -399,7 +399,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
         {
             skillId: 3,
             typeName: 'Resonance Liberation',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Resonance-Liberation.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCamellya3.webp",
             skillName: 'Fervor Efflorescent',
             skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.<br>
             This attack can be performed in mid-air.`,
@@ -439,7 +439,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
         {
             skillId: 4,
             typeName: 'Intro Skill',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Intro-Skill.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCamellya5.webp",
             skillName: 'Everblooming',
             skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span>.`,
             skillDetailNum: [],
@@ -473,7 +473,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
         {
             skillId: 6,
             typeName: 'Forte Circuit',
-            skillImg: "https://wutheringlab.com/wp-content/uploads/Camellya-Forte-Circuit.webp",
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillCamellya4.webp",
             skillName: 'Vegative Universe',
             skillDescription: `
                 Hitting a target with <span class="Highlight">Normal Attack</span>, Basic Attack <span class="Highlight">Vining Waltz</span>, Basic Attack <span class="Highlight">Vining Ronde</span>, Dodge Counter <span class="Highlight">Atonement</span>, Resonance Skill <span class="Highlight">Crimson Blossom</span>, and Resonance Skill <span class="Highlight">Floral Ravage</span> consumes <span class="Highlight">Crimson Pistils</span>. The Energy Regen Multiplier of this attack is increased by {0}.<br>
