@@ -89,9 +89,18 @@ export const SearchBar: React.FC = () => {
           </div>
         </div>
         <div className="dropdown-filter-1">
-          <span>{activeElement ? activeElement : "Element"}</span>
+          <span>{activeElement ? activeElement : "Select Element"}</span>
           <div className="dropdown-content-filter">
             <ul>
+              <li>
+                <button
+                  key="All"
+                  className="ele-select"
+                  onClick={() => handleSelectElement("")}
+                >
+                  All
+                </button>
+              </li>
               {ElementTypes.map((element) => (
                 <li>
                   <button
@@ -99,11 +108,6 @@ export const SearchBar: React.FC = () => {
                     className="ele-select"
                     onClick={() => handleSelectElement(element.name)}
                   >
-                    {/*<img
-                      src={`https://cdn.wanderer.moe/wuthering-waves/elements/T_IconElement${element.displayName}3.png`}
-                      alt={`${element.name} Element Icon`}
-                      className="icon"
-                    />*/}
                     {element.name}
                   </button>
                 </li>
@@ -112,9 +116,18 @@ export const SearchBar: React.FC = () => {
           </div>
         </div>
         <div className="dropdown-filter-2">
-          <span>{activeWeapon ? activeWeapon : "Weapon"}</span>
+          <span>{activeWeapon ? activeWeapon : "Select Weapon"}</span>
           <div className="dropdown-content-filter">
             <ul>
+              <li>
+                <button
+                  key="All"
+                  className="wep-select"
+                  onClick={() => handleSelectWeapon("")}
+                >
+                  All
+                </button>
+              </li>
               {WeaponTypes.map((weapon) => (
                 <li>
                   <button
