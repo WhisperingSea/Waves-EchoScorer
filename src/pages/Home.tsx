@@ -86,11 +86,9 @@ const Home: React.FC = () => {
               <div>
                 <h2 className="heading-2">Updates :</h2>
                 <ul className="update-list">
+                  <li className="update-list-item">Added Phoebe!</li>
                   <li className="update-list-item">
-                    Added Phoebe and Brant!
-                  </li>
-                  <li className="update-list-item">
-                    Added Luminous Hymn, Unflickering Valor and Ocean's Gift!
+                    Added Luminous Hymnand Ocean's Gift!
                   </li>
                   <li className="update-list-item">
                     Added new Echoes from 2.1!
