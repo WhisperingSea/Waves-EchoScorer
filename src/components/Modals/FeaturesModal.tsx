@@ -48,7 +48,8 @@ const FeaturesModal: React.FC<FeaturesModalProps> = ({ onClose, pageLink }) => {
           <SearchBar />
           <div className="feature-cards">
             <div className="feature-card-grid">
-              {filteredCharacters
+              {filteredCharacters && filteredCharacters.length > 0 ? (
+              filteredCharacters
                 ?.sort((a, b) => a.name.localeCompare(b.name))
                 .map((item) => (
                   <Link
@@ -71,7 +72,9 @@ const FeaturesModal: React.FC<FeaturesModalProps> = ({ onClose, pageLink }) => {
                       </div>
                     </div>
                   </Link>
-                ))}
+                ))) : (
+                  <h2 className="No-Match">No Match Found</h2>
+                ) }
             </div>
           </div>
         </div>
