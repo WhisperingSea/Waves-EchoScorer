@@ -11,7 +11,7 @@ export const Brant: WWCharacter = {
     },
     element: "Fusion",
     weapon: "Sword",
-    bio: ``, //TODO
+    bio: `Brant, the captain of Rinascita's Troupe of Fools, is a free spirit and romantic. Unpredictable and full of life, he is the beating heart of the troupe. On stage, he slips into countless roles, donning new masks to breathe life into every story. Yet beyond the spotlight, he is unwaveringly genuine, offering nothing but true sincerity to those around him.`,
     images: {
         portrait: "https://i.imgur.com/bjFyqtT.png",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_44_UI.webp",

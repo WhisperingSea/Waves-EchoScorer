@@ -11,7 +11,7 @@ export const Phoebe: WWCharacter = {
     },
     element: "Spectro",
     weapon: "Rectifier",
-    bio: ``,//TODO
+    bio: `Phoebe, Acolyte of the Order of the Deep, is a young woman of quiet devotion. With a kind heart, she fulfills her duties with unwavering diligence. Her prayers, like the light she carries, offer comfort and peace to all.`,
     images: {
         portrait: "https://i.imgur.com/pgFwwL4.png",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_45_UI.webp",
