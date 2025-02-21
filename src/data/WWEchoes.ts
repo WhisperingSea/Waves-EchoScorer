@@ -1589,7 +1589,7 @@ The Resonator with this Echo equipped in their main slot gains 12.00%<span class
     bio: "Test",
     element: 0,
     cost: 4,
-    sonataGroup: [3, 10],
+    sonataGroup: [3, 14],
     skill1: ["0"],
     skill2: ["270.00%"],
     skill3: ["315.00%"],
