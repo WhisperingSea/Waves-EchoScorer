@@ -1,5 +1,6 @@
 import { Aalto } from "./characters/Aalto";
 import { Baizhi } from "./characters/Baizhi";
+import { Brant } from "./characters/Brant";
 import { Calcharo } from "./characters/Calcharo";
 import { Camellya } from "./characters/Camellya";
 import { Carlotta } from "./characters/Carlotta";
