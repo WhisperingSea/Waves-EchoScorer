@@ -419,6 +419,18 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedSubStats: ["Energy Regen%", "Crit. Rate%", "Crit. DMG%", "Basic Attack DMG Bonus", "ATK%", "Resonance Liberation DMG Bonus"]
     },
     {
+        name: "Cantarella",
+        charaId: 1607,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [8, 12, 6],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: []
+    },
+    {
         name: "",
         charaId: 0,
         buildStats: {
