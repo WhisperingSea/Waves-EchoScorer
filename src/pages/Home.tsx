@@ -88,7 +88,7 @@ const Home: React.FC = () => {
                 <ul className="update-list">
                   <li className="update-list-item">Added Cantarella and Aero Rover!</li>
                   <li className="update-list-item">Added Whispers of Sirens and Bloodpact's Pledge!</li>
-                  <li className="update-list-item">Added 2.2 Echoes and new Gusts of Welkin!</li>
+                  <li className="update-list-item">Added 2.2 Echoes and new sonata: Gusts of Welkin!</li>
                 </ul>
               </div>
               <div>

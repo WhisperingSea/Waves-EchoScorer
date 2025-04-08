@@ -246,5 +246,22 @@ export const WWSonataData: WWSonata[] = [
       value: 15,
       stackable: 0
     },
+  },
+  {
+    name: "Gust of Welkin",
+    id: 15,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriWindError.webp",
+    twoPiece: "Aero DMG increases by 10%",
+    fivePiece: "Inflicting Aero Erosion on enemies increases Aero DMG for all Resonators in the team by 15%, and for the Resonator triggering this effect by an additional 15%, lasting for 20s.",
+    twoPieceEffect: {
+      stat: "Aero DMG Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "Aero DMG Bonus",
+      value: 15,
+      stackable: 0
+    },
   }
 ]
