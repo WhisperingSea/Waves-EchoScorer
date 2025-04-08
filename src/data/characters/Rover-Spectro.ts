@@ -4,7 +4,7 @@ const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_
 
 export const RoverSpectro: WWCharacter = {
     name: "Rover-Spectro",
-    charaId: 1406,
+    charaId: 1501,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
