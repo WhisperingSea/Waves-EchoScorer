@@ -136,4 +136,5 @@ export const WWCharacterData: WWCharacter[] = [
     Carlotta,
     Roccia,
     Phoebe,
+    Brant
 ]
