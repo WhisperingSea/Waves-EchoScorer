@@ -15,7 +15,7 @@ export const Brant: WWCharacter = {
     images: {
         portrait: "https://i.imgur.com/bjFyqtT.png",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_44_UI.webp",
-        model: "https://i.imgur.com/to4pmnE.png"
+        model: "https://i.imgur.com/AOVx05R.png"
     },
     asension: {
         charaAsension: [

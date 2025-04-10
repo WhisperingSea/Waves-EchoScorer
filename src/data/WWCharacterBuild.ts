@@ -419,6 +419,30 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedSubStats: ["Energy Regen%", "Crit. Rate%", "Crit. DMG%", "Basic Attack DMG Bonus", "ATK%", "Resonance Liberation DMG Bonus"]
     },
     {
+        name: "Cantarella",
+        charaId: 1607,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [8, 12, 6],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Basic Attack DMG Bonus%"]
+    },
+    {
+        name: "Rover-Aero",
+        charaId: 1406,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [15],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Resonance Skill DMG Bonus"]
+    },
+    {
         name: "",
         charaId: 0,
         buildStats: {
