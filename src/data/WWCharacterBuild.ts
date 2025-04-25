@@ -443,6 +443,19 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Resonance Skill DMG Bonus"]
     },
     {
+        name: "Zani",
+        charaId: 1507,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [11],
+        preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
+        preferedMainStat2: ["Spectro DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Heavy Attack DMG Bonus%", "Resonance Liberation DMG Bonus%", "Resonance Skill DMG Bonus"]
+    },
+    //TODO Ciaccona
+    {
         name: "",
         charaId: 0,
         buildStats: {

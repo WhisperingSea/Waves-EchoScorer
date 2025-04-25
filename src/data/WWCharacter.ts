@@ -3,10 +3,11 @@ import { Baizhi } from "./characters/Baizhi";
 import { Brant } from "./characters/Brant";
 import { Calcharo } from "./characters/Calcharo";
 import { Camellya } from "./characters/Camellya";
-import {Cantarella} from "./characters/Cantarella";
+import { Cantarella } from "./characters/Cantarella";
 import { Carlotta } from "./characters/Carlotta";
 import { Changli } from "./characters/Changli";
 import { Chixia } from "./characters/Chixia";
+import { Ciaccona } from "./characters/Ciaccona";
 import { Danjin } from "./characters/Danjin";
 import { Encore } from "./characters/Encore";
 import { Jianxin } from "./characters/Jianxin";
@@ -29,6 +30,7 @@ import { Yangyang } from "./characters/Yangyang";
 import { Yinlin } from "./characters/Yinlin";
 import { Youhu } from "./characters/Youhu";
 import { Yuanwu } from "./characters/Yuanwu";
+import { Zani } from "./characters/Zani";
 import { Zhezhi } from "./characters/Zhezhi";
 
 export interface WWCharacter {
@@ -140,6 +142,7 @@ export const WWCharacterData: WWCharacter[] = [
     Phoebe,
     Brant,
     RoverAero,
-    Cantarella
-
+    Cantarella,
+    Zani,
+    Ciaccona
 ]
