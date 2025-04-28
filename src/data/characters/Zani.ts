@@ -15,7 +15,7 @@ export const Zani: WWCharacter = {
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_zanni_UI.webp",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_38_UI.webp",
-        model: "https://i.imgur.com/KEHa4eP.png" //TODO temp photo
+        model: "https://i.imgur.com/trrdFgW.png"
     },
     asension: {
         charaAsension: [
