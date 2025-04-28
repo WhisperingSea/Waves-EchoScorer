@@ -1987,5 +1987,28 @@ export const WWWeaponsJSON: WWWeapons[] = [
     statSecondary: "Energy Regen",
     statSecondaryValue: 8.6,
     source: "Gacha",
+  },
+  {
+    name: "Blazing Justice",
+    id: 21040036,
+    rarity: 5,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon21040019_UI.webp",
+    effect: `Increases ATK by {0}. Casting Resonance Liberation grants the following effects: Dealing damage ignores {1} of the target's DEF and Amplifies Spectro Frazzle DMG dealt by {2} for 6s. Retriggering the effect resets its duration.`,
+    array0: ["12%", "15%", "18%", "21%", "24%"],
+    array1: ["8%", "10%", "12%", "14%", "16%"],
+    array2: ["50%", "62.5%", "75%", "87.5%", "100%"],
+    array3: [""],
+    array4: [""],
+    array5: [""],
+    array6: [""],
+    array7: [""],
+    level: 90,
+    weaponType: "Gauntlets",
+    statPrimary: "ATK",
+    statPrimaryValue: 47,
+    statSecondary: "Crit. DMG",
+    statSecondaryValue: 10.8,
+    source: "Gacha",
   }
+  //TODO Add Ciaccons' weapon
 ]

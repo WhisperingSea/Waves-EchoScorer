@@ -11,11 +11,11 @@ export const Ciaccona: WWCharacter = {
     },
     element: "Aero",
     weapon: "Pistols",
-    bio: ``,//TODO
-    images: {//TODO
-        portrait: "",
-        icon_sq: "https://i.imgur.com/DdAVVE3.png",
-        model: ""
+    bio: `A wandering bard from Rinascita, Ciaccona. She sings not only for the Divinity, but also for the common folk. She records stories along her journeys, turning them into songs that evoke laughter, emotion, and tears in both the storytellers and the audience.`,
+    images: {
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_xiakong_UI.webp",
+        icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_37_UI.webp",
+        model: "https://i.imgur.com/hV6S0Bo.png" //TODO temp photo?
     },
     asension: {
         charaAsension: [
@@ -150,14 +150,6 @@ export const Ciaccona: WWCharacter = {
                         values: [""]
                     }],
                     index: 2
-                },
-                {
-                    attributeName: "Stage 3 DMG",
-                    type: "Basic",
-                    skillDetailNum: [{
-                        values: [""]
-                    }],
-                    index: 3
                 },
                 {
                     attributeName: "Stage 4 DMG",

@@ -11,11 +11,11 @@ export const Zani: WWCharacter = {
     },
     element: "Spectro",
     weapon: "Gauntlets",
-    bio: ``,//TODO
-    images: { //TODO
-        portrait: "https://i.imgur.com/KEHa4eP.png",
-        icon_sq: "https://i.imgur.com/WpDyxCO.png",
-        model: ""
+    bio: `A member of Averardo Vault's security team and holder of "Best Employee" for longer than she cares to count. She has made plenty of plans for her free time, but for now, her biggest mission is simple: clocking out on time.`,
+    images: {
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_zanni_UI.webp",
+        icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_38_UI.webp",
+        model: "https://i.imgur.com/KEHa4eP.png" //TODO temp photo
     },
     asension: {
         charaAsension: [
