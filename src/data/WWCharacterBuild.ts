@@ -454,7 +454,18 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat3: ["ATK%"],
         preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Heavy Attack DMG Bonus%", "Resonance Liberation DMG Bonus%", "Resonance Skill DMG Bonus"]
     },
-    //TODO Ciaccona
+    {
+        name: "Ciaccona",
+        charaId: 1407,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [15],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "Energy Regen%","ATK%"]
+    },
     {
         name: "",
         charaId: 0,
