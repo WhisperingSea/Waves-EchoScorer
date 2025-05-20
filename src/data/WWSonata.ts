@@ -263,5 +263,39 @@ export const WWSonataData: WWSonata[] = [
       value: 15,
       stackable: 0
     },
+  },
+  {
+    name: "Windward Pilgrimage",
+    id: 16,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriWindErrorA.webp",
+    twoPiece: "Aero DMG increases by 10%",
+    fivePiece: "//TODO",
+    twoPieceEffect: {
+      stat: "Aero DMG Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "Aero DMG Bonus",
+      value: 15,
+      stackable: 0
+    },
+  },
+  {
+    name: "Flaming Clawprint",
+    id: 17,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriFireUltimateSkill.webp",
+    twoPiece: "",
+    fivePiece: "//TODO",
+    twoPieceEffect: {
+      stat: "Aero DMG Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "Aero DMG Bonus",
+      value: 15,
+      stackable: 0
+    },
   }
 ]
