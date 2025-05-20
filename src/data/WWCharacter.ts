@@ -5,9 +5,10 @@ import { Calcharo } from "./characters/Calcharo";
 import { Camellya } from "./characters/Camellya";
 import { Cantarella } from "./characters/Cantarella";
 import { Carlotta } from "./characters/Carlotta";
+import { Cartethiya } from "./characters/Cartethiya";
 import { Changli } from "./characters/Changli";
 import { Chixia } from "./characters/Chixia";
-//import { Ciaccona } from "./characters/Ciaccona";
+import { Ciaccona } from "./characters/Ciaccona";
 import { Danjin } from "./characters/Danjin";
 import { Encore } from "./characters/Encore";
 import { Jianxin } from "./characters/Jianxin";
@@ -15,6 +16,7 @@ import { Jinhsi } from "./characters/Jinhsi";
 import { Jiyan } from "./characters/Jiyan";
 import { Lingyang } from "./characters/Lingyang";
 import { Lumi } from "./characters/Lumi";
+import { Lupa } from "./characters/Lupa";
 import { Mortefi } from "./characters/Mortefi";
 import { Phoebe } from "./characters/Phoebe";
 import { Roccia } from "./characters/Roccia";
@@ -144,5 +146,7 @@ export const WWCharacterData: WWCharacter[] = [
     RoverAero,
     Cantarella,
     Zani,
-    //Ciaccona
+    Ciaccona,
+    Cartethiya,
+    Lupa
 ]

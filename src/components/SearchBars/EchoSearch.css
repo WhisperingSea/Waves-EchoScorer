@@ -7,7 +7,7 @@
 }
 
 .search-input {
-    grid-column: 1 / ;
+    grid-column: 1 / 2;
     grid-row: 1 / 2;
     width: 100%;
     height: auto;
