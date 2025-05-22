@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [link, setLink] = useState<string>("");
 
-  const chara = Object.values(characters).find((i) => i.charaId === 1507);
+  const chara = Object.values(characters).find((i) => i.charaId === 1407);
 
   const openFeatureModal1 = () => {
     setOpen(true);
@@ -86,8 +86,8 @@ const Home: React.FC = () => {
               <div>
                 <h2 className="heading-2">Updates :</h2>
                 <ul className="update-list">
-                  <li className="update-list-item">Added Zani!</li>
-                  <li className="update-list-item">Added Blazing Justice!</li>
+                  <li className="update-list-item">Added Ciaccona!</li>
+                  <li className="update-list-item">Added Woodland Aria!</li>
                 </ul>
               </div>
               <div>
@@ -95,7 +95,7 @@ const Home: React.FC = () => {
                 <ul className="update-list">
                   <li className="update-list-item">Echo Scorer improvements</li>
                   <li className="update-list-item">
-                    2.3 Resonators (Ciaccona), Weapons & Echoes
+                    2.4 Resonators (Carthethiya and Lupa), Weapons & Echoes
                   </li>
                   <li className="update-list-item">Minor QoL Changes</li>
                 </ul>

@@ -2009,6 +2009,28 @@ export const WWWeaponsJSON: WWWeapons[] = [
     statSecondary: "Crit. DMG",
     statSecondaryValue: 10.8,
     source: "Gacha",
+  },
+  {
+    name: "Woodland Aria",
+    id: 21030026,
+    rarity: 5,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon21030026_UI.webp",
+    effect: `ATK is increased by {0}. Inflicting Aero Erosion on the target gives {1} Aero DMG Bonus for 10s. Hitting targets with Aero Erosion reduces their Aero RES by {2} for 20s.`,
+    array0: ["12%", "15%", "18%", "21%", "24%"],
+    array1: ["24%", "30%", "36%", "42%", "48%"],
+    array2: ["10%", "11.5%", "13%", "14.5%", "16%"],
+    array3: [""],
+    array4: [""],
+    array5: [""],
+    array6: [""],
+    array7: [""],
+    level: 90,
+    weaponType: "Pistols",
+    statPrimary: "ATK",
+    statPrimaryValue: 40,
+    statSecondary: "Crit. Rate",
+    statSecondaryValue: 8,
+    source: "Gacha",
   }
-  //TODO Add Ciaccons' weapon
+  
 ]
