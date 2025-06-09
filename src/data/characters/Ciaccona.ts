@@ -15,7 +15,7 @@ export const Ciaccona: WWCharacter = {
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_xiakong_UI.webp",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_37_UI.webp",
-        model: "https://i.imgur.com/hV6S0Bo.png" //TODO temp photo?
+        model: "https://i.imgur.com/hV6S0Bo.png"
     },
     asension: {
         charaAsension: [

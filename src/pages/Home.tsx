@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [link, setLink] = useState<string>("");
 
-  const chara = Object.values(characters).find((i) => i.charaId === 1407);
+  const chara = Object.values(characters).find((i) => i.charaId === 1409);
 
   const openFeatureModal1 = () => {
     setOpen(true);
@@ -84,18 +84,19 @@ const Home: React.FC = () => {
           <section className="section">
             <div className="updates-data">
               <div>
-                <h2 className="heading-2">Updates :</h2>
+                <h2 className="heading-2">Updates:</h2>
                 <ul className="update-list">
-                  <li className="update-list-item">Added Ciaccona!</li>
-                  <li className="update-list-item">Added Woodland Aria!</li>
+                  <li className="update-list-item">Added Cartethiya!</li>
+                  <li className="update-list-item">Added Defier's Horn!</li>
+                  <li className="update-list-item">Added new Echoes and Sonata</li>
                 </ul>
               </div>
               <div>
-                <h2 className="heading-2">Upcoming Updates :</h2>
+                <h2 className="heading-2">Upcoming Updates:</h2>
                 <ul className="update-list">
                   <li className="update-list-item">Echo Scorer improvements</li>
                   <li className="update-list-item">
-                    2.4 Resonators (Carthethiya and Lupa), Weapons & Echoes
+                    Lupa and her signature weapon - Wildfier Mark!
                   </li>
                   <li className="update-list-item">Minor QoL Changes</li>
                 </ul>

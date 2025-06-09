@@ -146,5 +146,7 @@ export const WWCharacterData: WWCharacter[] = [
     RoverAero,
     Cantarella,
     Zani,
-    //Ciaccona
+    Ciaccona,
+    Cartethiya,
+    Lupa
 ]

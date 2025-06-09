@@ -440,7 +440,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Aero DMG Bonus%"],
         preferedMainStat3: ["ATK%"],
-        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Resonance Skill DMG Bonus"]
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Resonance Skill DMG Bonus", "ATK"]
     },
     {
         name: "Zani",
@@ -464,7 +464,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
-        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "Energy Regen%","ATK%"]
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "Energy Regen%","ATK%", "Resonance Liberation DMG Bonus"]
     },
     {
         name: "",
