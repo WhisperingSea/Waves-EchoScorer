@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [link, setLink] = useState<string>("");
 
-  const chara = Object.values(characters).find((i) => i.charaId === 1207);
+  const chara = Object.values(characters).find((i) => i.charaId === 1409);
 
   const openFeatureModal1 = () => {
     setOpen(true);

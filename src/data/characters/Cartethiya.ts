@@ -40,12 +40,12 @@ export const Cartethiya: WWCharacter = {
                 value: "4"
             },
             {
-                item: "//TODO",
+                item: "Unfading Glory",
                 id: 5,
                 value: "46"
             },
             {
-                item: "//TODO",
+                item: "Bamboo Iris",
                 id: 6,
                 value: "60"
             },

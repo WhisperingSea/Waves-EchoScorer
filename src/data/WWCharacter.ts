@@ -16,7 +16,7 @@ import { Jinhsi } from "./characters/Jinhsi";
 import { Jiyan } from "./characters/Jiyan";
 import { Lingyang } from "./characters/Lingyang";
 import { Lumi } from "./characters/Lumi";
-import { Lupa } from "./characters/Lupa";
+//import { Lupa } from "./characters/Lupa";
 import { Mortefi } from "./characters/Mortefi";
 import { Phoebe } from "./characters/Phoebe";
 import { Roccia } from "./characters/Roccia";
@@ -148,5 +148,5 @@ export const WWCharacterData: WWCharacter[] = [
     Zani,
     Ciaccona,
     Cartethiya,
-    Lupa
+    //Lupa
 ]

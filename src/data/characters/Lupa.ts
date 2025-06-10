@@ -11,11 +11,11 @@ export const Lupa: WWCharacter = {
     },
     element: "Fusion",
     weapon: "Broadblade",
-    bio: ``,
+    bio: `A Gladiator of Septimont, a radiant star of the arena. Fiery and straightforward, Lupa lives like a wild lone wolf. As long as she can savor the adrenaline rush of battle, she doesn't mind if that same fire ends up consuming her whole.`,
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_lupa_UI.webp",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_46_UI.webp",
-        model: ""
+        model: "//TODO"
     },
     asension: {
         charaAsension: [
@@ -40,12 +40,12 @@ export const Lupa: WWCharacter = {
                 value: "4"
             },
             {
-                item: "Topological Confinement",
+                item: "Unfading Glory",
                 id: 5,
                 value: "46"
             },
             {
-                item: "Nova",
+                item: "Bloodleaf Viburnum",
                 id: 6,
                 value: "60"
             },
@@ -97,7 +97,7 @@ export const Lupa: WWCharacter = {
                 value: "67"
             },
             {
-                item: "Sentinel's Dagger",
+                item: "The Netherworld's Stare",
                 id: 9,
                 value: "26"
             },
@@ -109,9 +109,9 @@ export const Lupa: WWCharacter = {
         ]
     },
     stats: {
-        base_hp: 680,
-        base_atk: 27,
-        base_def: 72,
+        base_hp: 953,
+        base_atk: 31,
+        base_def: 97,
         base_crit: 5,
         base_critdmg: 150,
         base_healing: 0,

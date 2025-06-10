@@ -269,7 +269,7 @@ export const WWSonataData: WWSonata[] = [
     id: 16,
     img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriWindErrorA.webp",
     twoPiece: "Aero DMG increases by 10%",
-    fivePiece: "//TODO",
+    fivePiece: "Hitting a target with Aero Erosion increases Crit. Rate by 10% and grants 30% Aero DMG Bonus, lasting for 10s.",
     twoPieceEffect: {
       stat: "Aero DMG Bonus",
       value: 10,
@@ -285,15 +285,15 @@ export const WWSonataData: WWSonata[] = [
     name: "Flaming Clawprint",
     id: 17,
     img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriFireUltimateSkill.webp",
-    twoPiece: "",
-    fivePiece: "//TODO",
+    twoPiece: "Fusion DMG increases by 10%",
+    fivePiece: "Casting Resonance Liberation grants all Resonators in the team 15% Fusion DMG Bonus and the caster 20% Resonance Liberation DMG Bonus, lasting for 35s.",
     twoPieceEffect: {
-      stat: "Aero DMG Bonus",
+      stat: "Fusion DMG Bonus",
       value: 10,
       stackable: 0
     },
     fivePieceEffect: {
-      stat: "Aero DMG Bonus",
+      stat: "Fusion DMG Bonus",
       value: 15,
       stackable: 0
     },

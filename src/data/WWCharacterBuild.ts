@@ -467,6 +467,18 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "Energy Regen%","ATK%", "Resonance Liberation DMG Bonus"]
     },
     {
+        name: "Cartethiya",
+        charaId: 1409,
+        buildStats: {
+            stat1: {stat: "HP", value: [0, 0]}
+        },
+        preferedSonata: [],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%", "HP%", "Energy Regen%"],
+        preferedMainStat3: ["HP%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "HP%", "Basic Attack DMG Bonus%", "HP"]
+    },
+    {
         name: "",
         charaId: 0,
         buildStats: {

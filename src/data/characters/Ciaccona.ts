@@ -155,7 +155,7 @@ export const Ciaccona: WWCharacter = {
                 Press Normal Attack after Mid-air Attack Stage 2 to cast Basic Attack Stage 4.
                 <div class="gap"></div>
                 <span class="Title">Dodge Counter Attack</span>
-                Follow up successful <span class="Highlight">Dodges</span> with <span class="Highlight">Basic Attack</span> to attack the target, dealing <span class="Wind">Aero DMG</span>.`,//TODO missing
+                Follow up successful <span class="Highlight">Dodges</span> with <span class="Highlight">Basic Attack</span> to attack the target, dealing <span class="Wind">Aero DMG</span>.`,
             skillDetailNum: [],
             multipliers: [
                 {
