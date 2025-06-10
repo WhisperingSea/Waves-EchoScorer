@@ -13,7 +13,7 @@ export const Lupa: WWCharacter = {
     weapon: "Broadblade",
     bio: ``,
     images: {
-        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_lupa_UI.webp&",
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_lupa_UI.webp",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_46_UI.webp",
         model: ""
     },

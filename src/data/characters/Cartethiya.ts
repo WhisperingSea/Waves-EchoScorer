@@ -11,11 +11,11 @@ export const Cartethiya: WWCharacter = {
     },
     element: "Aero",
     weapon: "Sword",
-    bio: `//TODO`,
+    bio: `Cartethyia, the wandering knight who travels across Rinascita. Formerly known as the Blessed Maiden, the vessel of Divinity, and the Queen of Gale and Tide, she went by the name Fleurdelys. Now, she is simply a free and unfettered wandering knight.`,
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_katixiya_UI.webp",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_40_UI.webp",
-        model: ""//TODO
+        model: "https://i.imgur.com/UiqwVaP.png"
     },
     asension: {
         charaAsension: [
