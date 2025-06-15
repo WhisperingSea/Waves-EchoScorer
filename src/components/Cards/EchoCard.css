@@ -80,6 +80,14 @@
     }
 
     .echo-card-bottom {
+        justify-items: center;
+    }
+
+    .echo-skill {
+        text-align: center;
+    }
+
+    .echo-card-bottom {
         margin-left: 0;
     }
 
