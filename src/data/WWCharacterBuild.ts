@@ -476,7 +476,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: [],
         preferedMainStat3: ["HP%"],
-        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "HP%", "Basic Attack DMG Bonus%", "HP"]
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "HP%", "Basic Attack DMG Bonus%", "Energy Regen%"]
     },
     {
         name: "",
