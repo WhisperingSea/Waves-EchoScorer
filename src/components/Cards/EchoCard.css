@@ -6,10 +6,10 @@
 }
 
 .echo-card {
-    padding: 25px 25px
+    padding: 25px 25px;
 }
 
-.echo-card img {
+.echo-card>.echo-card-top>img {
     width: 120px;
     height: auto;
     object-fit: contain;
@@ -21,6 +21,13 @@
     font-size: 20px;
     margin-bottom: 0;
     margin-left: 20px;
+}
+
+.echo-card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .echo-cost {
@@ -43,6 +50,23 @@
     text-align: center;
 }
 
+.sonata-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.echo-sonata-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+    max-width: 120px;
+}
+
+
 @media (max-width: 1024px) and (min-width: 320px) {
     .echo-card {
         display: flex;
@@ -51,7 +75,7 @@
         gap: 5px;
     }
 
-    .echo-card img {
+    .echo-card>.echo-card-top>img {
         width: 100px;
     }
 
@@ -71,6 +95,10 @@
         font-size: 18px;
         margin: 0;
     }
+    
+    .echo-sonata-icons {
+        max-width: none; 
+    }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
@@ -78,7 +106,8 @@
         font-size: 16px;
     }
 
-    td, th {
+    td,
+    th {
         font-size: 14px;
     }
 }

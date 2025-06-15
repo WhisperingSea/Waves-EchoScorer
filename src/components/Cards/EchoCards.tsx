@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchFilter } from "../../contexts/SearchFilterContext.tsx";
 import "./EchoCard.css";
+import { WWSonataData } from "../../data/WWSonata.ts";
 
 const EchoCard: React.FC = () => {
   const { filteredEchoes, selectedEchoRarity } = useSearchFilter();
@@ -62,6 +63,16 @@ const EchoCard: React.FC = () => {
                 <div key={item.id} className="echo-card" style={style}>
                   <div className="echo-card-top">
                     <img src={item.img} alt={`${item.name} Icon`} />
+                    <div className="echo-sonata-icons">
+                      {item.sonataGroup?.map((sonataId) => {
+                        const sonata = WWSonataData.find((s) => s.id === sonataId);
+                        return (
+                          sonata && (
+                            <img key={sonata.id} src={sonata.img} alt={sonata.name} title={sonata.name} className="sonata-icon"/>
+                          )
+                        );
+                      })}
+                    </div>
                   </div>
                   <div className="echo-card-bottom">
                     <p className="echo-name">{item.name}</p>
