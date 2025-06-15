@@ -578,7 +578,12 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                       <h3 className="process-text">Image is Processing</h3>
                     </div>
                   ) : (
-                    Object.values(echoes).map((item) => (
+                    Object.values(echoes).sort((a, b) => {
+                      if (a.cost !== b.cost) {
+                        return a.cost - b.cost;
+                      }
+                      return a.name.localeCompare(b.name);
+                    }).map((item) => (
                       <div
                         key={item.name}
                         className="echo-modal-cards-2"
@@ -587,7 +592,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                         }
                       >
                         <div className="echo-modal-card-top-2">
-                          <img src={item.img} alt={`${item.name} Icon`} />
+                          <img src={item.img} alt={`${item.name} Icon`} title={item.name}/>
                         </div>
                       </div>
                     ))
