@@ -12,6 +12,7 @@ const Home: React.FC = () => {
 
   const chara = Object.values(characters).find((i) => i.charaId === 1409);
 
+
   const openFeatureModal1 = () => {
     setOpen(true);
     setLink("/echo-scorer/");
@@ -86,6 +87,7 @@ const Home: React.FC = () => {
               <div>
                 <h2 className="heading-2">Updates:</h2>
                 <ul className="update-list">
+
                   <li className="update-list-item">Added Cartethiya!</li>
                   <li className="update-list-item">Added Defier's Horn!</li>
                   <li className="update-list-item">Added new Echoes and Sonata</li>

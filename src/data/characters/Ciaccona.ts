@@ -156,6 +156,7 @@ export const Ciaccona: WWCharacter = {
                 <div class="gap"></div>
                 <span class="Title">Dodge Counter Attack</span>
                 Follow up successful <span class="Highlight">Dodges</span> with <span class="Highlight">Basic Attack</span> to attack the target, dealing <span class="Wind">Aero DMG</span>.`,
+
             skillDetailNum: [],
             multipliers: [
                 {
