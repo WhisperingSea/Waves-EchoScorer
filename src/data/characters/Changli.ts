@@ -309,12 +309,14 @@ When in <span class="Highlight">True Sight</span>, if Changli <span class="Highl
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChangli3.webp",
                 skillName: 'Radiance of Fealty',
-                skillDescription: `Deal <span class="Fire">Fusion DMG</span> to nearby targets, obtaining 4 stacks of [Enflamement], and entering <span class="Highlight">Fiery Feather</span>.
-<span class="Title">Fiery Feather</span>
-When Changli releases Heavy Attack <span class="Highlight">Flaming Sacrifice</span> within 10s, her ATK is increased by {0}, after which <span class="Highlight">Fiery Feather</span> ends.`,
+                skillDescription: `<div class="gap-start"></div>
+                Deal <span class="Fire">Fusion DMG</span> to nearby targets, obtaining 4 stacks of [Enflamement], and entering <span class="Highlight">Fiery Feather</span>.
+                <div class="gap"></div>
+                <span class="Title">Fiery Feather</span>
+                When Changli releases Heavy Attack <span class="Highlight">Flaming Sacrifice</span> within 10s, her ATK is increased by {0}, after which <span class="Highlight">Fiery Feather</span> ends.`,
                 skillDetailNum: ["25%"],
                 multipliers: [
                     {
@@ -353,7 +355,7 @@ When Changli releases Heavy Attack <span class="Highlight">Flaming Sacrifice</sp
                 typeName: 'Intro Skill',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChangli5.webp",
                 skillName: 'Obedience of Rules',
-                skillDescription: `Changli appears in mid-air, attacks the target, and enters <span class="Highlight">True Sight</span>, lasting for 12s.`,
+                skillDescription: `<div class="gap-start"></div>Changli appears in mid-air, attacks the target, and enters <span class="Highlight">True Sight</span>, lasting for 12s.`,
                 skillDetailNum: [],
                 multipliers: [
                     {
@@ -377,7 +379,7 @@ When Changli releases Heavy Attack <span class="Highlight">Flaming Sacrifice</sp
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Strategy of Duality',
-                skillDescription: `Changli's Outro Skill increases the switched-in Resonator's Fusion DMG by {0} and their Resonance Liberation DMG by {1}, lasting for {2}s. Switching to another Resonator ends this effect.`,
+                skillDescription: `<div class="gap-start"></div>Changli's Outro Skill increases the switched-in Resonator's Fusion DMG by {0} and their Resonance Liberation DMG by {1}, lasting for {2}s. Switching to another Resonator ends this effect.`,
                 skillDetailNum: ["20%", "25%", "10"],
                 multipliers: []
             },
@@ -416,7 +418,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Secret Strategist',
-                skillDescription: `When Changli releases Basic Attack: <span class="Highlight">True Sight - Conquest</span> or Basic Attack: <span class="Highlight">True Sight - Charge</span>, for each stack of [Enflamement], Changli's Fusion DMG is increased by {0}.`,
+                skillDescription: `<div class="gap-start"></div>When Changli releases Basic Attack: <span class="Highlight">True Sight - Conquest</span> or Basic Attack: <span class="Highlight">True Sight - Charge</span>, for each stack of [Enflamement], Changli's Fusion DMG is increased by {0}.`,
                 skillDetailNum: ["5%"],
                 multipliers: []
             },
@@ -424,7 +426,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Sweeping Force',
-                skillDescription: `When Changli releases Heavy Attack <span class="Highlight">Flaming Sacrifice</span> or Resonance Liberation <span class="Highlight">Radiance of Fealty</span>, Changli's Fusion DMG Bonus is increased by {0}, and Changli ignores {1} of the target's DEF when dealing damage.`,
+                skillDescription: `<div class="gap-start"></div>When Changli releases Heavy Attack <span class="Highlight">Flaming Sacrifice</span> or Resonance Liberation <span class="Highlight">Radiance of Fealty</span>, Changli's Fusion DMG Bonus is increased by {0}, and Changli ignores {1} of the target's DEF when dealing damage.`,
                 skillDetailNum: ["20%", "15%"],
                 multipliers: []
             },

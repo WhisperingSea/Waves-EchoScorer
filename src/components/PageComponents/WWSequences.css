@@ -1,14 +1,30 @@
 .sequence-box {
-    border: 1px solid azure;
     margin: 20px 0;
-    padding: 20px 60px;
+    padding: 20px 20px;
+    color: white;
 }
 
 .center-header {
     text-align: center;
-    text-decoration: underline;
-    text-decoration-style: double;
-    text-decoration-thickness: 1px;
+    border: 3px solid;
+}
+
+.sequence-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sequence-info {
+    flex: 1;
+}
+
+.sequence-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-left: 15px;
 }
 
 .sequence-node {
@@ -43,6 +59,10 @@
 
     .sequence-desc {
         font-size: 18px;
+    }
+
+    .center-header {
+        margin: 5px 0px;
     }
 }
 

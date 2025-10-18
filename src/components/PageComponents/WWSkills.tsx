@@ -67,8 +67,12 @@ const WWSkills: React.FC = () => {
             </button>
           </div>
           <div className="tab">
-            <h2 className="skill-name">{skill?.skillName}</h2>
-            <div>
+            <div className={`skill-header ${chara?.element}`}>
+              <h2 className="skill-name">{skill?.skillName}</h2>
+              {skill?.skillImg && (
+                <img className="skill-image" src={skill.skillImg} alt={skill.skillName} />
+              )}
+            </div><div>
               {skill?.skillDescription && (
                 <div
                   className="Desc"
@@ -76,42 +80,43 @@ const WWSkills: React.FC = () => {
                 ></div>
               )}
             </div>
-            { skill != null && skill?.multipliers.length > 0 &&
-            (<div className="multiplyer">
-              <button className="multi multi-link" onClick={handleMulti}>
-                Multiplier
-              </button>
-              <div className={`multi-tab ${showMulti ? "showMulti" : ""}`}>
-                <div className="multi-grid">
-                  <input
-                    className="slider-multi-input"
-                    type="range"
-                    min={1}
-                    max={10}
-                    name="vol"
-                    defaultValue={1}
-                    onChange={handleMultiSlider}
-                    step={1}
-                  />
-                  <p className="slider-multi-value">{index}</p>
-                </div>
-                {skill &&
-                  skill.multipliers &&
-                  skill.multipliers.map((multi) => (
-                    <div key={multi.index} className="multi-flex">
-                      <p className="paragraph">{multi.attributeName}: </p>
-                      <p className="paragraph skill-detail-num">
-                        <b>
-                          {multi.skillDetailNum &&
-                            multi.skillDetailNum[0]?.values[
+            {skill != null && skill?.multipliers.length > 0 &&
+              (<div className="multiplyer">
+                <button className={`multi multi-link ${chara?.element}`} onClick={handleMulti}>
+                  Multipliers
+                  <span className={`arrow ${showMulti ? 'arrow-up' : 'arrow-down'}`}>▼</span>
+                </button>
+                <div className={`multi-tab ${showMulti ? "showMulti" : ""}`}>
+                  <div className="multi-grid">
+                    <input
+                      className="slider-multi-input"
+                      type="range"
+                      min={1}
+                      max={10}
+                      name="vol"
+                      defaultValue={1}
+                      onChange={handleMultiSlider}
+                      step={1}
+                    />
+                    <p className="slider-multi-value">{index}</p>
+                  </div>
+                  {skill &&
+                    skill.multipliers &&
+                    skill.multipliers.map((multi) => (
+                      <div key={multi.index} className={`multi-flex ${chara?.element}`}>
+                        <p className="paragraph">{multi.attributeName}: </p>
+                        <p className="paragraph skill-detail-num">
+                          <b>
+                            {multi.skillDetailNum &&
+                              multi.skillDetailNum[0]?.values[
                               parseInt(index) - 1
-                            ]}
-                        </b>
-                      </p>
-                    </div>
-                  ))}
-              </div>
-            </div>)}
+                              ]}
+                          </b>
+                        </p>
+                      </div>
+                    ))}
+                </div>
+              </div>)}
           </div>
         </div>
       </div>

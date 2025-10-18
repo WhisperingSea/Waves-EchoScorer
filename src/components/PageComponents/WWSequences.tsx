@@ -19,12 +19,19 @@ const WWSequences: React.FC = () => {
           {chara &&
             chara?.sequences &&
             chara?.sequences.map((item, index) => (
-              <div className="sequence-box" key={index}>
+              <div className={`sequence-box ${chara.element}`} key={index}>
                 <div key={index} className={`sequence-${index + 1}`}>
-                  <h2 className="sequence-node">
-                    <b>{item.node}</b>
-                  </h2>
-                  <h2 className="sequence-name">-{item.name}-</h2>
+                  <div className="sequence-header">
+                    <div className="sequence-info">
+                      <h2 className="sequence-node">
+                        <b>{item.node}</b>
+                      </h2>
+                      <h2 className="sequence-name">-{item.name}-</h2>
+                    </div>
+                    {item.itemImg && (
+                      <img className="sequence-image" src={item.itemImg} alt={item.name} />
+                    )}
+                  </div>
                   <p
                     className="paragraph sequence-desc"
                     dangerouslySetInnerHTML={{

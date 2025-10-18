@@ -100,8 +100,8 @@ const Guide: React.FC = () => {
         <div className="centerize">
           <main>
             <section className="guide-section">
-              <div className="guide-grid">
-                <div className="guide-grid-item-1 grid-item-1-flex">
+              <div className={`guide-grid ${chara?.element}`}>
+                <div className={`guide-grid-item-1 grid-item-1-flex ${chara?.element}`}>
                   <h1 className="guide-chara-name">{chara?.name}</h1>
                   <p className={`paragraph guide-paragraph ${chara?.element}`}>
                     {chara?.element}
@@ -112,7 +112,7 @@ const Guide: React.FC = () => {
                     alt={chara?.rarity.alt}
                   />
                 </div>
-                <div className="guide-grid-item-2">
+                <div className={`guide-grid-item-2 ${chara?.element}`}>
                   <div className="flexbox-range">
                     <input
                       className="slider-input"
@@ -135,16 +135,16 @@ const Guide: React.FC = () => {
                       <span className="slider round"></span>
                     </label>
                   </div>
-                  <div className="guide-grid-item-0">
+                  <div className={`guide-grid-item-0 ${chara?.element}`}>
                     <WWStats Level={level} isChecked={isSwitched} />
                   </div>
                 </div>
-                <div className="guide-grid-item-3">
+                <div className={`${chara?.element} guide-grid-item-3`}>
                   <img srcSet={chara?.images.model} alt={chara?.name} />
                 </div>
               </div>
             </section>
-            <section className="page-link-grid">
+            <section className={`page-link-grid ${chara?.element}`}>
               <a className="page-link-ref">Jump to: </a>
               <a className="page-link" onClick={() => scrollToSection("Skills")}>
                 Skills
@@ -170,7 +170,7 @@ const Guide: React.FC = () => {
             </section>
             <section className="materials">
               <div id="Ascension">
-                <h2 className="center-header">Ascension Materials</h2>
+                <h1 className={`center-header ${chara?.element}`}>Ascension Materials</h1>
                 <div className="mat-flexbox">
                   <div className="chara-mat-box">
                     <h2 className="chara-mat-type">Character Ascension Mats</h2>
