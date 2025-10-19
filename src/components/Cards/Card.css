@@ -5,9 +5,18 @@
     border: 1px solid azure;
 }
 
+.card.\34 -star,
+.card[class~="4-star"] {
+    background: linear-gradient(rgba(201, 48, 231, 0.11) 0%, rgba(151, 50, 168, 0.2) 52%, rgba(201, 48, 231, 0.4) 100%);
+}
+.card.\35 -star,
+.card[class~="5-star"] {
+    background: linear-gradient(rgba(231,198,48,0.11) 0%, rgba(168,143,50,0.2) 52%, rgba(231,198,48,0.6) 100%);
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat( 5, 1fr );
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     justify-content: center;
 }

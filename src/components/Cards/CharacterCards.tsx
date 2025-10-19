@@ -23,7 +23,7 @@ const Card: React.FC = () => {
                 )}`}
               >
                 <div
-                  className="card"
+                  className={`card ${item.rarity.alt.charAt(0)}-star`}
                   onClick={() => setSelectedCharacterId(item.charaId)}
                 >
                   <div className="top">

@@ -1,4 +1,5 @@
 import { Aalto } from "./characters/Aalto";
+import { Augusta } from "./characters/Augusta";
 import { Baizhi } from "./characters/Baizhi";
 import { Brant } from "./characters/Brant";
 import { Calcharo } from "./characters/Calcharo";
@@ -151,7 +152,7 @@ export const WWCharacterData: WWCharacter[] = [
     Cartethiya,
     Lupa,
     Phrolova,
-    //Augusta,
+    Augusta,
     //Iuno,
     //Galbrena,
     //Qiuyuan,
