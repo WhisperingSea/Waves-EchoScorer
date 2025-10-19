@@ -63,6 +63,36 @@
 .Dark {
     color: rgb(196, 40, 134);
 }
+.guide-grid.Glacio .slider-input::-webkit-slider-thumb,
+.multi-link.Glacio ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(45deg, #73c2e2, #a8d8f0);
+    box-shadow: 0 4px 12px rgba(115, 194, 226, 0.4);
+}
+.guide-grid.Fusion .slider-input::-webkit-slider-thumb,
+.multi-link.Fusion ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(45deg, #d34d4d, #ff6b6b);
+    box-shadow: 0 4px 12px rgba(211, 77, 77, 0.4);
+}
+.guide-grid.Electro .slider-input::-webkit-slider-thumb,
+.multi-link.Electro ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(45deg, #c538c5, #e065e0);
+    box-shadow: 0 4px 12px rgba(197, 56, 197, 0.4);
+}
+.guide-grid.Aero .slider-input::-webkit-slider-thumb,
+.multi-link.Aero ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(45deg, #7bcfac, #9de2c5);
+    box-shadow: 0 4px 12px rgba(123, 207, 172, 0.4);
+}
+.guide-grid.Spectro .slider-input::-webkit-slider-thumb,
+.multi-link.Spectro ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(45deg, #ceb41f, #f5d542);
+    box-shadow: 0 4px 12px rgba(206, 180, 31, 0.4);
+}
+.guide-grid.Havoc .slider-input::-webkit-slider-thumb,
+.multi-link.Havoc ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(45deg, #c42886, #e04ba0);
+    box-shadow: 0 4px 12px rgba(196, 40, 134, 0.4);
+}
 
 .chara-name.Glacio {
     border-bottom: 3px solid;
@@ -76,8 +106,8 @@
 .guide-grid.Glacio,
 .guide-grid-item-1.Glacio,
 .page-link-grid.Glacio,
-.multi-link.Glacio,
-.multi-flex.Glacio {
+.multi-link.Glacio, .multi-flex.Glacio,
+.sticky-flexbox.Glacio button {
     border-bottom: 3px solid;
     border-image: linear-gradient(90deg, transparent, #73c2e2, #a8d8f0, #73c2e2, transparent) 1;
 }
@@ -94,8 +124,8 @@
 .guide-grid.Fusion,
 .guide-grid-item-1.Fusion,
 .page-link-grid.Fusion,
-.multi-link.Fusion,
-.multi-flex.Fusion {
+.multi-link.Fusion, .multi-flex.Fusion,
+.sticky-flexbox.Fusion button {
     border-bottom: 3px solid;
     border-image: linear-gradient(90deg, transparent, #d34d4d, #ff6b6b, #d34d4d, transparent) 1;
 }
@@ -112,8 +142,8 @@
 .guide-grid.Electro,
 .guide-grid-item-1.Electro,
 .page-link-grid.Electro,
-.multi-link.Electro,
-.multi-flex.Electro {
+.multi-link.Electro, .multi-flex.Electro,
+.sticky-flexbox.Electro button {
     border-bottom: 3px solid;
     border-image: linear-gradient(90deg, transparent, #c538c5, #e065e0, #c538c5, transparent) 1;
 }
@@ -131,7 +161,8 @@
 .guide-grid-item-1.Aero,
 .page-link-grid.Aero,
 .multi-link.Aero,
-.multi-link.Aero {
+.multi-link.Aero, .multi-flex.Aero,
+.sticky-flexbox.Aero button {
     border-bottom: 3px solid;
     border-image: linear-gradient(90deg, transparent, #7bcfac, #9de2c5, #7bcfac, transparent) 1;
 }
@@ -148,8 +179,8 @@
 .guide-grid.Spectro,
 .guide-grid-item-1.Spectro,
 .page-link-grid.Spectro,
-.multi-link.Spectro,
-.multi-flex.Spectro {
+.multi-link.Spectro, .multi-flex.Spectro,
+.sticky-flexbox.Spectro button {
     border-bottom: 3px solid;
     border-image: linear-gradient(90deg, transparent, #ceb41f, #f5d542, #ceb41f, transparent) 1;
 }
@@ -166,8 +197,8 @@
 .guide-grid.Havoc,
 .guide-grid-item-1.Havoc,
 .page-link-grid.Havoc,
-.multi-link.Havoc
-.multi-flex.Havoc {
+.multi-link.Havoc, .multi-flex.Havoc,
+.sticky-flexbox.Havoc button {
     border-bottom: 3px solid;
     border-image: linear-gradient(90deg, transparent, #c42886, #e04ba0, #c42886, transparent) 1;
 }

@@ -19,6 +19,7 @@ import { Lumi } from "./characters/Lumi";
 import { Lupa } from "./characters/Lupa";
 import { Mortefi } from "./characters/Mortefi";
 import { Phoebe } from "./characters/Phoebe";
+import { Phrolova } from "./characters/Phrolova";
 import { Roccia } from "./characters/Roccia";
 import { RoverAero } from "./characters/Rover-Aero"
 import { RoverHavoc } from "./characters/Rover-Havoc";
@@ -149,7 +150,7 @@ export const WWCharacterData: WWCharacter[] = [
     Ciaccona,
     Cartethiya,
     Lupa,
-    //Phrolova,
+    Phrolova,
     //Augusta,
     //Iuno,
     //Galbrena,

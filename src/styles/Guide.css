@@ -71,6 +71,37 @@
 .slider-input {
     width: 400px;
     cursor:grab;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #2a2a2a 0%, #4a4a4a 100%);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    cursor: grab;
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.slider-input::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    cursor: grab;
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+    border: 2px solid white;
+    transition: all 0.3s ease;
 }
 
 .stats-flexbox {

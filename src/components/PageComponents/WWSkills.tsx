@@ -40,29 +40,29 @@ const WWSkills: React.FC = () => {
       <div className="WWSkills-container">
         <h1 className={`center-header ${chara?.element}`}>Skills</h1>
         <div className="tab-flexbox">
-          <div className="sticky-tabs sticky-flexbox ">
-            <button className="tab-link" value={1} onClick={handleSkillId}>
+          <div className={`sticky-tabs sticky-flexbox ${chara?.element}`}>
+            <button className={`tab-link ${skillId === "1" ? "active" : ""}`} value={1} onClick={handleSkillId}>
               Normal Attack
             </button>
-            <button className="tab-link" value={2} onClick={handleSkillId}>
+            <button className={`tab-link ${skillId === "2" ? "active" : ""}`} value={2} onClick={handleSkillId}>
               Resonance Skill
             </button>
-            <button className="tab-link" value={3} onClick={handleSkillId}>
+            <button className={`tab-link ${skillId === "3" ? "active" : ""}`} value={3} onClick={handleSkillId}>
               Resonance Liberation
             </button>
-            <button className="tab-link" value={6} onClick={handleSkillId}>
+            <button className={`tab-link ${skillId === "6" ? "active" : ""}`} value={6} onClick={handleSkillId}>
               Forte Circuit
             </button>
-            <button className="tab-link" value={4} onClick={handleSkillId}>
+            <button className={`tab-link ${skillId === "4" ? "active" : ""}`} value={4} onClick={handleSkillId}>
               Intro Skill
             </button>
-            <button className="tab-link" value={5} onClick={handleSkillId}>
+            <button className={`tab-link ${skillId === "5" ? "active" : ""}`} value={5} onClick={handleSkillId}>
               Outro Skill
             </button>
-            <button className="tab-link" value={7} onClick={handleSkillId}>
+            <button className={`tab-link ${skillId === "7" ? "active" : ""}`} value={7} onClick={handleSkillId}>
               Inherant Skills 1
             </button>
-            <button className="tab-link" value={8} onClick={handleSkillId}>
+            <button className={`tab-link ${skillId === "8" ? "active" : ""}`} value={8} onClick={handleSkillId}>
               Inherant Skills 2
             </button>
           </div>
