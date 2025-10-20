@@ -2,20 +2,21 @@ import { WWCharacter } from "../WWCharacter";
 
 const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
-export const characterName: WWCharacter = {
-    name: "",
-    charaId: 1000,
+export const Qiuyuan: WWCharacter = {
+    name: "Qiuyuan",
+    charaId: 1411,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
     },
-    element: "",
-    weapon: "",
-    bio: ``,
+    element: "Aero",
+    weapon: "Sword",
+    bio: `Former senior agent of Mingting's Internal Security Agency.
+    Though enmity filled his younger days, loyalty defined his later years. However, scapegoated for a murder, he is now but a blind swordsman wandering the world alone.`,
     images: {
-        portrait: "",
-        icon_sq: "",
-        model: ""
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_Qiuyuan_UI.webp",
+        icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_56_UI.webp",
+        model: "https://i.imgur.com/MXdCqGc.png"
     },
     asension: {
         charaAsension: [

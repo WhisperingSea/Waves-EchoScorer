@@ -12,6 +12,7 @@ import { Chixia } from "./characters/Chixia";
 import { Ciaccona } from "./characters/Ciaccona";
 import { Danjin } from "./characters/Danjin";
 import { Encore } from "./characters/Encore";
+import { Galbrena } from "./characters/Galbrena";
 import { Iuno } from "./characters/Iuno";
 import { Jianxin } from "./characters/Jianxin";
 import { Jinhsi } from "./characters/Jinhsi";
@@ -22,6 +23,7 @@ import { Lupa } from "./characters/Lupa";
 import { Mortefi } from "./characters/Mortefi";
 import { Phoebe } from "./characters/Phoebe";
 import { Phrolova } from "./characters/Phrolova";
+import { Qiuyuan } from "./characters/Qiuyuan";
 import { Roccia } from "./characters/Roccia";
 import { RoverAero } from "./characters/Rover-Aero"
 import { RoverHavoc } from "./characters/Rover-Havoc";
@@ -155,8 +157,8 @@ export const WWCharacterData: WWCharacter[] = [
     Phrolova,
     Augusta,
     Iuno,
-    //Galbrena,
-    //Qiuyuan,
+    Galbrena,
+    Qiuyuan,
     //Chisa,
     //Buling
 ]
