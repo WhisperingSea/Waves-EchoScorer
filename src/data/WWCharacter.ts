@@ -12,6 +12,7 @@ import { Chixia } from "./characters/Chixia";
 import { Ciaccona } from "./characters/Ciaccona";
 import { Danjin } from "./characters/Danjin";
 import { Encore } from "./characters/Encore";
+import { Iuno } from "./characters/Iuno";
 import { Jianxin } from "./characters/Jianxin";
 import { Jinhsi } from "./characters/Jinhsi";
 import { Jiyan } from "./characters/Jiyan";
@@ -153,7 +154,7 @@ export const WWCharacterData: WWCharacter[] = [
     Lupa,
     Phrolova,
     Augusta,
-    //Iuno,
+    Iuno,
     //Galbrena,
     //Qiuyuan,
     //Chisa,

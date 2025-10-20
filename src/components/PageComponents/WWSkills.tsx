@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDataContext } from "../../contexts/CharacterDataContext";
 import "./WWSkills.css";
 
@@ -6,6 +6,7 @@ const WWSkills: React.FC = () => {
   const [skillId, setSkillId] = useState<string>("1");
   const [showMulti, setShowMulti] = useState(false);
   const [index, setIndex] = useState<string>("1");
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   const { characters, selectedCharacterId } = useDataContext();
 
@@ -34,6 +35,21 @@ const WWSkills: React.FC = () => {
   const handleMultiSlider = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIndex(event.target.value);
   };
+
+  useEffect(() => {
+    setImgLoaded(false);
+    if (!chara?.skills) return
+    chara.skills.forEach((s) => {
+      if (s.skillImg) {
+        const img = new Image();
+        img.src = s.skillImg;
+      }
+    })
+  }, [chara?.skills]);
+
+  useEffect(() => {
+    setImgLoaded(false);
+  }, [skillId]);
 
   return (
     <>
@@ -70,9 +86,15 @@ const WWSkills: React.FC = () => {
             <div className={`skill-header ${chara?.element}`}>
               <h2 className="skill-name">{skill?.skillName}</h2>
               {skill?.skillImg && (
-                <img className="skill-image" src={skill.skillImg} alt={skill.skillName} />
+                <img
+                  className={`skill-image ${imgLoaded ? "loaded" : ""}`}
+                  src={skill.skillImg}
+                  alt={skill.skillName}
+                  loading="eager"
+                  onLoad={() => setImgLoaded(true)} />
               )}
-            </div><div>
+            </div>
+            <div>
               {skill?.skillDescription && (
                 <div
                   className="Desc"
