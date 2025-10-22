@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [link, setLink] = useState<string>("");
 
-  const chara = Object.values(characters).find((i) => i.charaId === 1208);
+  const chara = Object.values(characters).find((i) => i.charaId === 1411);
 
 
   const openFeatureModal1 = () => {
@@ -95,10 +95,9 @@ const Home: React.FC = () => {
               <div>
                 <h2 className="heading-2">Updates:</h2>
                 <ul className="update-list">
-
-                  <li className="update-list-item">Added Cartethiya!</li>
-                  <li className="update-list-item">Added Defier's Horn!</li>
-                  <li className="update-list-item">Added new Echoes and Sonata</li>
+                  <li className="update-list-item">Added characters up to Qiuyuan!</li>
+                  <li className="update-list-item">Added Weapons and echoes from Septimont!</li>
+                  <li className="update-list-item">Updated character guide page!</li>
                 </ul>
               </div>
               <div>
@@ -106,7 +105,7 @@ const Home: React.FC = () => {
                 <ul className="update-list">
                   <li className="update-list-item">Echo Scorer improvements</li>
                   <li className="update-list-item">
-                    Lupa and her signature weapon - Wildfier Mark!
+                    Chisa and Buling!
                   </li>
                   <li className="update-list-item">Minor QoL Changes</li>
                 </ul>

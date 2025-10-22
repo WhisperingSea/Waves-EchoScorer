@@ -2,10 +2,36 @@ export interface WWSonata {
     name: string;
     id: number;
     img: string;
-    twoPiece: string;
-    fivePiece: string
-    twoPieceEffect: {stat: string, value: number, stackable: number}
-    fivePieceEffect: {stat: string, value: number, stackable: number}
+    twoPiece?: string
+    fivePiece?: string
+    threePiece?: string
+    twoPieceEffect?: {stat: string, value: number, stackable: number}
+    fivePieceEffect?: {stat: string, value: number, stackable: number}
+    threePieceEffect?: {stat: string, value: number, stackable: number}
+}
+
+export const enum SonataId {
+  FreezingFrost = 1,
+  MoltenRift = 2,
+  VoidThunder = 3,
+  SierraGale = 4,
+  CelestialLight = 5,
+  SunSinkingEclipse = 6,
+  RejuvenatingGlow = 7,
+  MoonlitClouds = 8,
+  LingeringTunes = 9,
+  FrostyResolve = 10,
+  EternalRadiance = 11,
+  MidnightVeil = 12,
+  EmpyreanAnthem = 13,
+  TidebreakingCourage = 14,
+  GustOfWelkin = 15,
+  WindwardPilgrimage = 16,
+  FlamingClawprint = 17,
+  DreamOfTheLost = 18,
+  CrownOfValor = 19,
+  LawOfHarmony = 20,
+  FlamewingsShadow = 21
 }
 
 export const WWSonataData: WWSonata[] = [
@@ -297,5 +323,50 @@ export const WWSonataData: WWSonata[] = [
       value: 15,
       stackable: 0
     },
+  },
+  {
+    name: "Dream of the Lost",
+    id: 18,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriDarkVision.webp",
+    threePiece: "Holding 0 Resonance Energy increases Crit. Rate by 20% and grants 35% Echo Skill DMG Bonus.",
+    threePieceEffect: {
+      stat: "Crit Rate%",
+      value: 20,
+      stackable: 0
+    }
+  },
+  {
+    name: "Crown of Valor",
+    id: 19,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriShield.webp",
+    threePiece: "Upon gaining a Shield, increase the Resonator's ATK by 6% and Crit. DMG by 4% for 4s. This effect can be triggered once every 0.5s and stacks up to 5 times.",
+    threePieceEffect: {
+      stat: "",
+      value: 0,
+      stackable: 5
+    }
+  },
+  {
+    name: "Law of Harmony",
+    id: 20,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriSupport.webp",
+    threePiece: `Casting Echo Skill grants 30% Heavy Attack DMG Bonus to the caster for 4s.\n
+    Additionally, all Resonators in the team gain 4% Echo Skill DMG Bonus for 30s, stacking up to 4 times. Echoes of the same name can only trigger this effect once. The record of Echo triggering this effect is cleared along with this effect. At 4 stacks, casting Echo Skill again resets the duration of this effect.`,
+    threePieceEffect: {
+      stat: "",
+      value: 0,
+      stackable: 0
+    }
+  },
+  {
+    name: "Flamewing's Shadow",
+    id: 21,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriFireA.webp",
+    threePiece: "Dealing Echo Skill DMG increases Heavy Attack Crit. Rate by 20% for 6s. Dealing Heavy Attack DMG increases Echo Skill Crit. Rate by 20% for 6s. While both effects are active, gain 16% Fusion DMG Bonus.",
+    threePieceEffect: {
+      stat: "",
+      value: 0,
+      stackable: 0
+    }
   }
 ]

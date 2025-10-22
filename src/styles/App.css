@@ -65,32 +65,32 @@
 }
 .guide-grid.Glacio .slider-input::-webkit-slider-thumb,
 .multi-link.Glacio ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
-    background: linear-gradient(45deg, #73c2e2, #a8d8f0);
+    background: linear-gradient(135deg, #0f0f0f 0%, #73c2e2 40%, #a8d8f0 100%);
     box-shadow: 0 4px 12px rgba(115, 194, 226, 0.4);
 }
 .guide-grid.Fusion .slider-input::-webkit-slider-thumb,
 .multi-link.Fusion ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
-    background: linear-gradient(45deg, #d34d4d, #ff6b6b);
+    background: linear-gradient(135deg, #0f0f0f 0%, #d34d4d 40%, #ff6b6b 100%);
     box-shadow: 0 4px 12px rgba(211, 77, 77, 0.4);
 }
 .guide-grid.Electro .slider-input::-webkit-slider-thumb,
 .multi-link.Electro ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
-    background: linear-gradient(45deg, #c538c5, #e065e0);
+    background: linear-gradient(135deg, #0f0f0f 0%, #c538c5 40%, #e065e0 100%);
     box-shadow: 0 4px 12px rgba(197, 56, 197, 0.4);
 }
 .guide-grid.Aero .slider-input::-webkit-slider-thumb,
 .multi-link.Aero ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
-    background: linear-gradient(45deg, #7bcfac, #9de2c5);
+    background: linear-gradient(135deg, #0f0f0f 0%, #7bcfac 40%, #9de2c5 100%);
     box-shadow: 0 4px 12px rgba(123, 207, 172, 0.4);
 }
 .guide-grid.Spectro .slider-input::-webkit-slider-thumb,
 .multi-link.Spectro ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
-    background: linear-gradient(45deg, #ceb41f, #f5d542);
+    background: linear-gradient(135deg, #0f0f0f 0%, #ceb41f 40%, #f5d542 100%);
     box-shadow: 0 4px 12px rgba(206, 180, 31, 0.4);
 }
 .guide-grid.Havoc .slider-input::-webkit-slider-thumb,
 .multi-link.Havoc ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
-    background: linear-gradient(45deg, #c42886, #e04ba0);
+    background: linear-gradient(135deg, #0f0f0f 0%, #c42886 40%, #e04ba0 100%);
     box-shadow: 0 4px 12px rgba(196, 40, 134, 0.4);
 }
 
