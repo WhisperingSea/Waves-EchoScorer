@@ -443,4 +443,5 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: "Crit. Rate", value: 2.8 }
         ]
     },
+    //TODO
 ]
