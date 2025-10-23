@@ -1,3 +1,5 @@
+import { SonataId } from "./WWSonata";
+
 export interface WWCharaBuildTypes {
     name: string,
     charaId: number;
@@ -481,8 +483,81 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
 
     },
     {
-        name: "",
-        charaId: 0,
+        name: "Lupa",
+        charaId: 1207,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [SonataId.FlamingClawprint],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Fusion DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Energy Regen%", "Crit. Rate%", "Crit. DMG%", "ATK%", "Resonance Liberation DMG Bonus%", "ATK"]
+    },
+    {
+        name: "Phrolova",
+        charaId: 1608,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [SonataId.DreamOfTheLost, SonataId.MidnightVeil, SonataId.SunSinkingEclipse],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Resonance Skill DMG Bonus", "ATK"]
+    },
+    {
+        name: "Augusta",
+        charaId: 1306,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [SonataId.CrownOfValor, SonataId.VoidThunder],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Electro DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "Heavy Attack DMG Bonus%", "ATK%", "ATK"]
+    },
+    {
+        name: "Iuno",
+        charaId: 1410,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [SonataId.MoonlitClouds, SonataId.CrownOfValor, SonataId.SierraGale, SonataId.WindwardPilgrimage, SonataId.GustOfWelkin],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "Resonance Liberation DMG Bonus%", "ATK%"]
+    },
+    {
+        name: "Galbrena",
+        charaId: 1208,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [SonataId.FlamewingsShadow, SonataId.FlamingClawprint, SonataId.MoltenRift],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Fusion DMG Bonus%", "ATK%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "Heavy Attack DMG Bonus%", "Energy Regen%", "ATK%"]
+    },
+    {
+        name: "Qiuyuan",
+        charaId: 1411,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [SonataId.LawOfHarmony, SonataId.SierraGale, SonataId.WindwardPilgrimage, SonataId.GustOfWelkin],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Heavy Attack DMG Bonus%", "ATK"]
+    },
+    //TODO 2.8
+    {
+        name: "Phrolova",
+        charaId: 1608,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },

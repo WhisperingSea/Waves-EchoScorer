@@ -443,5 +443,117 @@ export const WWForteBonus: WWForteBonusType[] = [
             { id: 8, type: "Crit. Rate", value: 2.8 }
         ]
     },
-    //TODO
+    {
+        name: "Lupa",
+        Id: 1207,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
+        name: "Galbrena",
+        Id: 1208,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Damage", value: 2.4 },
+            { id: 6, type: "Crit. Damage", value: 2.4 },
+            { id: 7, type: "Crit. Damage", value: 5.6 },
+            { id: 8, type: "Crit. Damage", value: 5.6 }
+        ]
+    },
+    {
+        name: "Augusta",
+        Id: 1306,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
+        name: "Iuno",
+        Id: 1410,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
+        name: "Qiuyuan",
+        Id: 1411,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
+        name: "Zani",
+        Id: 1507,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
+        name: "Cantarella",
+        Id: 1607,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    },
+    {
+        name: "Phrolova",
+        Id: 1608,
+        minorForte: [
+            { id: 1, type: "ATK", value: 1.8 },
+            { id: 2, type: "ATK", value: 1.8 },
+            { id: 3, type: "ATK", value: 4.2 },
+            { id: 4, type: "ATK", value: 4.2 },
+            { id: 5, type: "Crit. Rate", value: 1.2 },
+            { id: 6, type: "Crit. Rate", value: 1.2 },
+            { id: 7, type: "Crit. Rate", value: 2.8 },
+            { id: 8, type: "Crit. Rate", value: 2.8 }
+        ]
+    }
+    //TODO 2.8
 ]
