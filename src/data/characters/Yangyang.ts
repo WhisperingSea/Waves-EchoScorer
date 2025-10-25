@@ -255,7 +255,7 @@ After enduring hardships and anguish, she has found a clear purpose: to be a bea
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYangyang3.webp",
                 skillName: 'Wind Spirals',
                 skillDescription: `Yangyang conjures a mighty Cyclone that gathers nearby enemies, dealing <span class="Wind">Aero DMG</span>.`,

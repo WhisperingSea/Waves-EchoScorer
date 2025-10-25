@@ -290,7 +290,7 @@ export const Jiyan: WWCharacter = {
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJiyan3.webp",
                 skillName: 'Emerald Storm: Prelude',
                 skillDescription: `After releasing Emerald Storm: Prelude, Jiyan enters <span class="Highlight">Qingloong Mode</span>.\n
@@ -384,6 +384,7 @@ export const Jiyan: WWCharacter = {
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Discipline',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJiyan/SP_IconJiyanT.webp",
                 skillDescription: `When the next character's (or other characters on a nearby team that activates an Outro Skill) Heavy Attack hits a target, Jiyan will summon Qingloong to launch a Coordinated Attack, dealing <span class="Wind">Aero DMG</span> equal to {0} of Jiyan's ATK. This attack lasts for {1}s, and can be triggered once every {2}s, up to 2 times.`,
                 skillDetailNum: ["313.40%", "8", "1"],
                 multipliers: []
@@ -421,6 +422,7 @@ export const Jiyan: WWCharacter = {
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Heavenly Balance',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJiyan/SP_IconJiyanD1.webp",
                 skillDescription: `After casting the Intro Skill <span class="Highlight">Tactical Strike</span>, Jiyan's ATK is increased by {0} for {1}s.`,
                 skillDetailNum: ["10%", "15"],
                 multipliers: []
@@ -429,6 +431,7 @@ export const Jiyan: WWCharacter = {
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Tempest Taming',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJiyan/SP_IconJiyanD2.webp",
                 skillDescription: `When Jiyan's attacks hit a target, Jiyan's Crit. DMG is increased by {0} for {1}s`,
                 skillDetailNum: ["12%", "8"],
                 multipliers: []
@@ -452,7 +455,7 @@ When casting Resonance Skill <span class="Highlight">Windqueller</span>, the "Re
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1404_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JiyanM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -462,7 +465,7 @@ When casting Resonance Skill <span class="Highlight">Windqueller</span>, the "Re
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [28],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1404_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JiyanM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -472,7 +475,7 @@ When casting Resonance Skill <span class="Highlight">Windqueller</span>, the "Re
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Crit. Rate", "Crit. Damage"],
             sequenceBuff: [16, 32],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1404_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JiyanM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -482,7 +485,7 @@ When casting Resonance Skill <span class="Highlight">Windqueller</span>, the "Re
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Heavy Attack Damage Bonus"],
             sequenceBuff: [25],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1404_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JiyanM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -494,7 +497,7 @@ When Jiyan's attacks hit a target, his ATK is increased by {1} for {2}s, stackin
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [3],
             stacks: 15,
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1404_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JiyanM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -506,7 +509,7 @@ Resonance Liberation <span class="Highlight">Emerald Storm: Finale</span> will c
             sequenceBuffAtrribute: ["Emerald Storm: Finale"],
             sequenceBuff: [120],
             stacks: 2,
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1404_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JiyanM6_UI.webp"
         }
     ]
 }

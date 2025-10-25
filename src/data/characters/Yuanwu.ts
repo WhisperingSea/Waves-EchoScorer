@@ -291,7 +291,7 @@ Having honed his skills in the Leihuang martial arts style, Yuanwu also earned m
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYuanwu3.webp",
                 skillName: 'Blazing Might',
                 skillDescription: `Awaken the power of thunder and provide Forte Circuit <span class="Highlight">Lightning Infused</span> status for all nearby characters for {0}s, granting them increased Anti-interruption, then perform a powerful blow that deals <span class="Thunder">Electro DMG</span>`,

@@ -272,7 +272,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJianxin3.webp",
                 skillName: 'Purification Force Field',
                 skillDescription: `Creates a strong wind field, continuously pulling targets within the wind field to the center and causing <span class="Wind">Aero DMG</span>. When the wind field disappears, it will cause <span class="Wind">Aero DMG</span> to all targets within the range again.`,
@@ -352,6 +352,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Transcendence',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJianxin/SP_IconJianxinT.webp",
                 skillDescription: `The next character (or other characters on a nearby team that activates an Outro Skill) gains {0} Resonance Liberation DMG Deepen for {1}s, or until the character is switched off field.`,
                 skillDetailNum: ["38%", "14"],
                 multipliers: []
@@ -512,6 +513,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Formless Release',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJianxin/SP_IconJianxinD1.webp",
                 skillDescription: `Damage of Resonance Liberation <span class="Highlight">Purification Force Field</span> is increased by {0}.`,
                 skillDetailNum: ["20%"],
                 multipliers: []
@@ -520,6 +522,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Reflection',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJianxin/SP_IconJianxinD2.webp",
                 skillDescription: `The Shield obtained with Heavy Attack <span class="Highlight">Primordial Chi Spiral</span> is increased by {0}.`,
                 skillDetailNum: ["20%"],
                 multipliers: []
@@ -542,7 +545,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1405_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JianxinM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -552,7 +555,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1405_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JianxinM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -562,7 +565,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1405_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JianxinM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -570,9 +573,9 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             description: `When performing Forte Circuit <span class="Highlight">Heavy Attack: Primordial Chi Spiral</span>, Jianxin's Resonance Liberation <span class="Highlight">Purification Force Field</span> damage is increased by {0} for {1}s.`,
             detailNum: ["80%", "14"],
             sequenceBuffType: "Skill Liberation Buff",
-            sequenceBuffAtrribute: ["Resonanc Liberation"],
+            sequenceBuffAtrribute: ["Resonance Liberation"],
             sequenceBuff: [80],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1405_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JianxinM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -582,7 +585,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1405_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JianxinM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -592,7 +595,7 @@ Now, she journeys into the secular world, eager to experience the bittersweetnes
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1405_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JianxinM6_UI.webp"
         }
     ]
 }

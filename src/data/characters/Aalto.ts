@@ -224,7 +224,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillAalto2.webp",
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQiushui/SP_IconQiushuiB1.webp",
                 skillName: 'Shift Trick',
                 skillDescription: `<span class="Title">Mist Avatar</span>\n
                 Casts "Mist" and {0} "Mist Avatar(s)" to taunt the surrounding targets. The avatars inherit a portion of Aalto's HP and generate {1} <span class="Highlight">Mist Bullets</span> around them, dealing <span class="Wind">Aero DMG</span>.\n
@@ -273,8 +273,8 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillAalto3.webp",
+                typeName: 'Resonance Liberation',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQiushui/SP_IconQiushuiC1.webp",
                 skillName: 'Flower in the Mist',
                 skillDescription: `Generate a "Gate of Quandary" in front, dealing <span class="Wind">Aero DMG</span>. When bullets pass through the "Gate of Quandary", ATK is increased. "Gate of Quandary" lasts for {0}s.`,
                 skillDetailNum: ["10"],
@@ -320,7 +320,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillAalto5.webp",
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQiushui/SP_IconQiushuiQTE.webp",
                 skillName: 'Feint Shot',
                 skillDescription: `Aalto shows up out of thin air to performs rapid continuous shooting, dealing <span class="Wind">Aero damage</span>.`,
                 skillDetailNum: [],
@@ -346,6 +346,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Dissolving Mist',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQiushui/SP_IconQiushuiT.webp",
                 skillDescription: `The next character (or other characters on a nearby team that activates an Outro Skill) gains {0} Aero DMG Deepen for {1}s, or until the character is switched off field.`,
                 skillDetailNum: ["23%", "14"],
                 multipliers: []
@@ -353,7 +354,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillAalto4.webp",
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQiushui/SP_IconQiushuiY.webp",
                 skillName: 'Misty Cover',
                 skillDescription: `When Aalto passes through "Mist" or "Gate of Quandary", he enters "Mistcloak Dash".\n
                 <div class="gap"></div>
@@ -387,6 +388,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Perfect Performance',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQiushui/SP_IconQiushuiD1.webp",
                 skillDescription: `Aalto's <span class="Highlight">Heavy Attack</span> will always critically hit, triggered once every {0}s.`,
                 skillDetailNum: ["30"],
                 multipliers: []
@@ -395,6 +397,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Mid-game Break',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQiushui/SP_IconQiushuiD2.webp",
                 skillDescription: `Aalto will continuously recover Stamina when he is in the Forte Circuit <span class="Highlight">Miscloak Dash</span> state.`,
                 skillDetailNum: [],
                 multipliers: []
@@ -417,7 +420,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1403_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QiushuiM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -427,7 +430,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [15],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1403_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QiushuiM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -437,7 +440,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1403_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QiushuiM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -447,7 +450,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             sequenceBuffType: "Skill Damage Buff",
             sequenceBuffAtrribute: ["Mist Bullets"],
             sequenceBuff: [30],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1403_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QiushuiM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -457,7 +460,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Aero Damage Bonus"],
             sequenceBuff: [25],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1403_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QiushuiM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -467,7 +470,7 @@ Despite his skittish demeanor, Aalto's true character shines through as a reliab
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Crit. Rate"],
             sequenceBuff: [8],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1403_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QiushuiM6_UI.webp"
         }
     ]
 }

@@ -248,7 +248,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillChixia3.webp",
                 skillName: 'Blazing Flames',
                 skillDescription: `Chixia fires up fast shots at nearby enemies, dealing <span class="Fire">Fusion DMG</span>.`,
@@ -314,6 +314,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Leaping Flames',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMaxiaofang/SP_IconMaxiaofangT.webp",
                 skillDescription: `Chixia releases a shock wave surrounding the target, dealing <span class="Fire">Fusion DMG</span> equal to {0} of Chixia's ATK to enemies within the range.`,
                 skillDetailNum: ["530.00%"],
                 multipliers: []
@@ -375,6 +376,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Scorching Magazine',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMaxiaofang/SP_IconMaxiaofangD1.webp",
                 skillDescription: `Max "Thermobaric Bullets" is increased by {0} rounds. The damage of Resonance Skill <span class="Highlight">Boom Boom</span> is increased by {1}.`,
                 skillDetailNum: ["10", "50%"],
                 multipliers: []
@@ -383,6 +385,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Numbingly Spicy!',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMaxiaofang/SP_IconMaxiaofangD2.webp",
                 skillDescription: `Each "Thermobaric Bullets" that hits a target during Resonance Skill <span class="Highlight">DAKA DAKA!</span> increases ATK by {0} for {1}s, stacking up to {2} times.`,
                 skillDetailNum: ["1%", "10", "30"],
                 multipliers: []
@@ -405,7 +408,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1202_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MaxiaofangM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -415,7 +418,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1202_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MaxiaofangM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -425,7 +428,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             sequenceBuffType: "Skill Liberation Buff",
             sequenceBuffAtrribute: ["Resonance Liberation"],
             sequenceBuff: [40],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1202_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MaxiaofangM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -435,7 +438,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1202_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MaxiaofangM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -445,7 +448,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [30],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1202_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MaxiaofangM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -455,7 +458,7 @@ As the starring hero among her community, Chixia is always ready for anyone in n
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Basic Attack Damage Bonus"],
             sequenceBuff: [25],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1202_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MaxiaofangM6_UI.webp"
         }
     ]
 }

@@ -286,7 +286,7 @@ With effortless efficiency, she balances her work and personal life, steadily mo
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillTaoqi3.webp",
                 skillName: 'Unmovable',
                 skillDescription: `Launch an attack based on Taoqi's DEF on the target, dealing <span class="Dark">Havoc DMG</span>.`,

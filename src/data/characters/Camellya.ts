@@ -465,6 +465,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Twining',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconChun/SP_IconChunT.webp",
             skillDescription: `Attack the target, dealing <span class="Dark">Havoc DMG</span> equal to {0} of Camellya's ATK.<br>
             After activating Forte Circuit's Ephemeral, the next Outro Skill Twining deals additional <span class="Dark">Havoc DMG</span> equal to {1} of Camellya's ATK.`,
             skillDetailNum: ["329%", "459%"],
@@ -523,6 +524,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'Seedbed',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconChun/SP_IconChunD1.webp",
             skillDescription: `Gain {0} <span class="Dark">Havoc DMG</span> Bonus. Heavy Attack Pruning now deals Basic Attack DMG.`,
             skillDetailNum: ["15%"],
             multipliers: []
@@ -531,6 +533,7 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Epiphyte',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconChun/SP_IconChunD2.webp",
             skillDescription: `Gain {0} <span class="Dark">Havoc DMG</span> Bonus. Basic Attack and Basic Attack Vining Waltz gain increased resistance to interruption.`,
             skillDetailNum: ["15%"],
             multipliers: []

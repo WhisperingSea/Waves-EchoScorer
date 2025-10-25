@@ -403,6 +403,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Shadowy Raid',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKakaluo/SP_IconKakaluoT.webp",
                 skillDescription: `Calcharo summons <span class="Highlight">Phantom</span> to support the on-field Resonator, clearing the targets in front with a slash. The <span class="Highlight">Phantom's</span> attack deals <span class="Thunder">Electro DMG</span> equal to {0} of Calcharo's ATK.`,
                 skillDetailNum: ["195.98%+391.96%"],
                 multipliers: []
@@ -479,6 +480,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Bloodshed Awaken',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKakaluo/SP_IconKakaluoD1.webp",
                 skillDescription: `When casting Heavy Attack <span class="Highlight">"Mercy"</span>, Calcharo's Resonance Liberation DMG Bonus is increased by {0} for {1}s.`,
                 skillDetailNum: ["10%", "15"],
                 multipliers: []
@@ -487,6 +489,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Revenant Rush',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKakaluo/SP_IconKakaluoD2.webp",
                 skillDescription: `When Heavy Attack <span class="Highlight">"Death Messenger"</span> hits the target, the damage taken by Calcharo is reduced by {0} for {1}s.`,
                 skillDetailNum: ["15%", "5"],
                 multipliers: []
@@ -509,7 +512,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KakaluoM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -519,7 +522,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Resonance Skill Damage Bonus"],
             sequenceBuff: [30   ],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KakaluoM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -529,7 +532,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Electro Damage Bonus"],
             sequenceBuff: [25],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KakaluoM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -539,7 +542,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Electro Damage Bonus"],
             sequenceBuff: [20],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KakaluoM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -549,7 +552,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             sequenceBuffType: "Skill Buff",
             sequenceBuffAtrribute: ["Necessary Means"],
             sequenceBuff: [50],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KakaluoM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -559,7 +562,7 @@ Ruthless, vengeful, unforgiving. A potential client must be mindful of the price
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1301_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_KakaluoM6_UI.webp"
         }
     ]
 }

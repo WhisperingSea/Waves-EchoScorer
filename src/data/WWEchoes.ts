@@ -2324,7 +2324,7 @@ The Resonator with this Echo equipped in their main slot gains 12.00%<span class
     img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34020_1_UI.webp",
     echoSkill: `Summon a Collapsing Horizon, dealing two instances of {0} <span class="Dark">Havoc DMG</span> to the nearby enemies and obtaining the Core of Collapse for 15s.<br><br>
     While it lasts, Core of Collapse deals, 24.57% <span class="Dark">Havoc DMG</span> when the active Resonator in the team deals damage. This effect can be triggered once every 0.5s, up to 8 times. Enemies with Havoc Bane take 100% more DMG from this effect.<br><br>
-    The Resonator with this Echo equipped in the main slot gains 12.00% <span class="Highlight">Havoc DMG</span> Bonus and 12.00% Resonance Liberation DMG Bonus.<br><br>
+    The Resonator with this Echo equipped in the main slot gains 12.00% <span class="Dark">Spectro DMG</span> Bonus and 12.00% Resonance Liberation DMG Bonus.<br><br>
     CD: <b>25s</b>.`,
     bio: "Test",
     element: 0,

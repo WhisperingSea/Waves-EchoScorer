@@ -282,7 +282,7 @@ Somehow she always ends up taking on caretaker duties in any expedition, showing
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillVerina3.webp",
                 skillName: 'Arboreal Flourish',
                 skillDescription: `Verina nourishes nearby foliage at rapid speed, dealing <span class="Light">Spectro DMG</span> while restoring HP to all Characters on teams nearby. A <span class="Highlight">Photosynthesis Mark</span> is applied to the target on hit.

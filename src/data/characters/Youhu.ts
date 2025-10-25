@@ -315,7 +315,7 @@ When dealing with treasures and antiques, this jubilant dynamo settles into calm
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYouhu3.webp",
                 skillName: `Fortune's Favor`,
                 skillDescription: `Youhu hurls her scroll at the enemy, causing a <span class="Ice">Glacio DMG</span> blast in the area.

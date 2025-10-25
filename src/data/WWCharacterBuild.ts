@@ -6,7 +6,7 @@ export interface WWCharaBuildTypes {
     buildStats?: {
         [key: string]: {stat: string, value: [number, number?]};
     };
-    preferedSonata: number[];
+    preferedSonata: SonataId[];
     preferedMainStat1: string[];
     preferedMainStat2: string[];
     preferedMainStat3: string[];
@@ -66,7 +66,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
             stat1: {stat: "ATK", value: [1700, 2000]},
             stat2: {stat: "HP", value: [15000]},
         },
-        preferedSonata: [5, 8, 11],
+        preferedSonata: [SonataId.CelestialLight, SonataId.MoonlitClouds, SonataId.EternalRadiance],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Spectro DMG Bonus%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -78,7 +78,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [6],
+        preferedSonata: [SonataId.SunSinkingEclipse],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -90,7 +90,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [7],
+        preferedSonata: [SonataId.RejuvenatingGlow],
         preferedMainStat1: ["HP%", "Healing Bonus%"],
         preferedMainStat2: ["Energy Regen%"],
         preferedMainStat3: ["HP%%"],
@@ -102,7 +102,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [1, 8],
+        preferedSonata: [SonataId.FreezingFrost, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Glacio DMG Bonus%", "Energy Regen", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -114,7 +114,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [1],
+        preferedSonata: [SonataId.FreezingFrost],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Glacio DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -126,7 +126,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [1, 7, 8],
+        preferedSonata: [SonataId.FreezingFrost, SonataId.RejuvenatingGlow, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%", "Healing Bonus%"],
         preferedMainStat2: ["ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -138,7 +138,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [1, 8],
+        preferedSonata: [SonataId.FreezingFrost, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Glacio DMG Bonus%", "ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -150,7 +150,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [2],
+        preferedSonata: [SonataId.MoltenRift],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Fusion DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -162,7 +162,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [2, 8],
+        preferedSonata: [SonataId.MoltenRift, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Fusion DMG Bonus%", "ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -174,7 +174,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [2, 8],
+        preferedSonata: [SonataId.MoltenRift, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Fusion DMG Bonus%", "ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -186,7 +186,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [2],
+        preferedSonata: [SonataId.MoltenRift],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Fusion DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -198,7 +198,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [3],
+        preferedSonata: [SonataId.VoidThunder],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Electro DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -210,7 +210,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [3, 8],
+        preferedSonata: [SonataId.VoidThunder, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Electro DMG Bonus%", "ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -222,7 +222,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [3, 8],
+        preferedSonata: [SonataId.VoidThunder, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Electro DMG Bonus%", "DEF%", "Energy Regen%"],
         preferedMainStat3: ["DEF%"],
@@ -234,7 +234,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [3],
+        preferedSonata: [SonataId.VoidThunder],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Electro DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -246,7 +246,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [4, 8],
+        preferedSonata: [SonataId.SierraGale, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -258,7 +258,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [4, 8],
+        preferedSonata: [SonataId.SierraGale, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -270,7 +270,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [4, 8],
+        preferedSonata: [SonataId.SierraGale, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -282,7 +282,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [4],
+        preferedSonata: [SonataId.SierraGale],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Aero DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -294,7 +294,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [7],
+        preferedSonata: [SonataId.RejuvenatingGlow],
         preferedMainStat1: ["ATK%", "Healing Bonus%"],
         preferedMainStat2: ["ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -306,7 +306,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [5],
+        preferedSonata: [SonataId.CelestialLight],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Spectro DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -318,7 +318,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [7],
+        preferedSonata: [SonataId.RejuvenatingGlow],
         preferedMainStat1: ["HP%", "Healing Bonus%"],
         preferedMainStat2: ["HP%", "Energy Regen%"],
         preferedMainStat3: ["HP%"],
@@ -330,7 +330,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [6, 8],
+        preferedSonata: [SonataId.SunSinkingEclipse, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Havoc DMG Bonus%", "DEF%", "Energy Regen%"],
         preferedMainStat3: ["DEF%"],
@@ -342,7 +342,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [6, 8],
+        preferedSonata: [SonataId.SunSinkingEclipse, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -354,7 +354,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [6],
+        preferedSonata: [SonataId.SunSinkingEclipse],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -366,7 +366,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [8],
+        preferedSonata: [SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
         preferedMainStat2: ["Electro DMG Bonus%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -378,7 +378,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [10],
+        preferedSonata: [SonataId.FrostyResolve],
         preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
         preferedMainStat2: ["Glacio DMG Bonus%"],
         preferedMainStat3: ["ATK%"],
@@ -390,7 +390,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [8, 12],
+        preferedSonata: [SonataId.MoonlitClouds, SonataId.MidnightVeil],
         preferedMainStat1: ["Crit. Rate%"],
         preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -402,7 +402,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [11],
+        preferedSonata: [SonataId.EternalRadiance],
         preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
         preferedMainStat2: ["Spectro DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -414,7 +414,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "Energy Regen%", value: [2500, 2800]}
         },
-        preferedSonata: [14, 8],
+        preferedSonata: [SonataId.TidebreakingCourage, SonataId.MoonlitClouds],
         preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
         preferedMainStat2: ["Energy Regen%", "Fusion DMG Bonus%"],
         preferedMainStat3: ["ATK%"],
@@ -426,7 +426,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [8, 12, 6],
+        preferedSonata: [SonataId.MoonlitClouds, SonataId.MidnightVeil, SonataId.SunSinkingEclipse],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Havoc DMG Bonus%"],
         preferedMainStat3: ["ATK%"],
@@ -438,7 +438,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [15],
+        preferedSonata: [SonataId.GustOfWelkin],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Aero DMG Bonus%"],
         preferedMainStat3: ["ATK%"],
@@ -450,7 +450,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [11],
+        preferedSonata: [SonataId.EternalRadiance],
         preferedMainStat1: ["Crit. Rate%", "Crit. DMG%"],
         preferedMainStat2: ["Spectro DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
@@ -462,7 +462,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [15],
+        preferedSonata: [SonataId.GustOfWelkin],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
         preferedMainStat3: ["ATK%"],
@@ -475,7 +475,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         buildStats: {
             stat1: {stat: "HP", value: [0, 0]}
         },
-        preferedSonata: [16],
+        preferedSonata: [SonataId.WindwardPilgrimage],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
         preferedMainStat2: [],
         preferedMainStat3: ["HP%"],

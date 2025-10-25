@@ -248,7 +248,7 @@ He is a gentle yet rational soul, embracing unique insights and commitment to th
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillXiangliYao3.webp",
                 skillName: 'Cogitation Model',
                 skillDescription: `Attack the target, dealing <span className="Thunder">Electro DMG</span>. Enter <span className="Highlight">Intuition</span>.

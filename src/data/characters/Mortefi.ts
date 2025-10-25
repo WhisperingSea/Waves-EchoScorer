@@ -254,7 +254,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi3.webp",
                 skillName: 'Violent Finale',
                 skillDescription: `Deal <span class="Fire">Fusion DMG</span>, and apply <span class="Highlight">Burning Rhapsody</span> to all characters in the team.\n

@@ -218,7 +218,7 @@ Use <span class="Highlight">Basic Attack</span> after a successful <span class="
                 skillDescription: `Dash forward and perform consecutive strikes that inflict <span class="Light">Spectro DMG</span>.
 <span class="Title">Overflowing Radiance</span>
 After Jinhsi uses <span class="Light">Basic Attack 4</span> or, while not in <span class="Highlight">Incarnation</span>, Intro Skill <span class="Highlight">Loong's Halo</span>, an alternative Resonance Skill <span class="Highlight">Overflowing Radiance</span> becomes available within {0}s.
-Resonance Skill <span class="Highlight">Overflowing Radiance</span> inflicts <span class="Highlight">Spectro DMG</span> and sends Jinhsi into <span class="Highlight"> Incarnation</span>`,
+Resonance Skill <span class="Highlight">Overflowing Radiance</span> inflicts <span class="Light">Spectro DMG</span> and sends Jinhsi into <span class="Highlight"> Incarnation</span>`,
                 skillDetailNum: ["5"],
                 multipliers: [
                     {
@@ -271,7 +271,7 @@ Resonance Skill <span class="Highlight">Overflowing Radiance</span> inflicts <sp
                 typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJinhsi3.webp",
                 skillName: 'Purge of Light',
-                skillDescription: `Unleash the power of a heart's wish to deal <span class="Highlight">Spectro DMG</span>.
+                skillDescription: `Unleash the power of a heart's wish to deal <span class="Light">Spectro DMG</span>.
                 Can be cast in mid-air.`,
                 skillDetailNum: [],
                 multipliers: [
@@ -311,7 +311,7 @@ Resonance Skill <span class="Highlight">Overflowing Radiance</span> inflicts <sp
                 typeName: 'Intro Skill',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillJinhsi5.webp",
                 skillName: `Loong's Halo`,
-                skillDescription: `Attack the target, dealing <span class="Highlight">Spectro DMG</span>.`,
+                skillDescription: `Attack the target, dealing <span class="Light">Spectro DMG</span>.`,
                 skillDetailNum: [],
                 multipliers: [
                     {
@@ -335,6 +335,7 @@ Resonance Skill <span class="Highlight">Overflowing Radiance</span> inflicts <sp
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Temporal Bender',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJinxi/SP_IconJinxiT.webp",
                 skillDescription: `With the power homologous with the Sentinel, Jinhsi reduces the Cooldown of <span class="Highlight">Eras in Unity</span> to {0}s. This lasts for {1}s.`,
                 skillDetailNum: ["1", "20"],
                 multipliers: []
@@ -495,6 +496,7 @@ When Jinhsi is on the team, all nearby characters on the team gain <span class="
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Radiant Surge',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJinxi/SP_IconJinxiD1.webp",
                 skillDescription: `Jinhsi's Spectro DMG Bonus is increased by {0}.`,
                 skillDetailNum: ["20%"],
                 multipliers: []
@@ -503,6 +505,7 @@ When Jinhsi is on the team, all nearby characters on the team gain <span class="
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Converged Flash',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJinxi/SP_IconJinxiD2.webp",
                 skillDescription: `Intro Skill <span class="Highlight">Loong's Halo</span> gains {0} additional DMG.`,
                 skillDetailNum: ["50%"],
                 multipliers: []
@@ -526,7 +529,7 @@ When Jinhsi is on the team, all nearby characters on the team gain <span class="
             sequenceBuffAtrribute: ["Illuminous Epiphany"],
             sequenceBuff: [20],
             stacks: 4,
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JinxiM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -536,7 +539,7 @@ When Jinhsi is on the team, all nearby characters on the team gain <span class="
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JinxiM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -547,7 +550,7 @@ When Jinhsi is on the team, all nearby characters on the team gain <span class="
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [25],
             stacks: 2,
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JinxiM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -557,7 +560,7 @@ When Jinhsi is on the team, all nearby characters on the team gain <span class="
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Element Damage Bonus"],
             sequenceBuff: [20],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JinxiM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -567,7 +570,7 @@ When Jinhsi is on the team, all nearby characters on the team gain <span class="
             sequenceBuffType: "Skill Buff",
             sequenceBuffAtrribute: ["Purge of Evil"],
             sequenceBuff: [120],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JinxiM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -577,7 +580,7 @@ When Jinhsi is on the team, all nearby characters on the team gain <span class="
             sequenceBuffType: "Skill Buff",
             sequenceBuffAtrribute: ["Illuminous Epiphany"],
             sequenceBuff: [45],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JinxiM6_UI.webp"
         }
     ]
 }

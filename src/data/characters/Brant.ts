@@ -448,6 +448,7 @@ export const Brant: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'The Course is Set!',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBulante/SP_IconBulanteT.webp",
             skillDescription: `Ampify the incoming Resonator's Fusion DMG by {0} and Resonance Skill DMG by {1} for 14s or until the Resonator is switched out.`,
             skillDetailNum: ["20%", "25%"],
             multipliers: []
@@ -456,7 +457,7 @@ export const Brant: WWCharacter = {
             skillId: 6,
             typeName: 'Forte Circuit',
             skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBulante/SP_IconBulanteY.webp",
-            skillName: '',
+            skillName: 'Ocean Odyssey',
             skillDescription: `<span class="Title">Theatrical Moment</span>
             Brant gains additional ATK based on his Energy Regen: For every 1% of his Energy Regen over 150%, Brant gains additional 12 points of ATK, up to 1560.
             <div class="gap"></div>
@@ -516,6 +517,7 @@ export const Brant: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'Voyager\'s Blaze',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBulante/SP_IconBulanteD1.webp",
             skillDescription: `Healing provided by <span class="Highlight">Waves of Acclaims</span> is increased by {0}.`,
             skillDetailNum: ["20%"],
             multipliers: []
@@ -524,6 +526,7 @@ export const Brant: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Trial by Fire and Tide',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBulante/SP_IconBulanteD2.webp",
             skillDescription: `Brant's resistance to interruption is increased during <span class="Highlight">Mid-air Attacks</span> and gains {0} <span class="Fire">Fusion DMG Bonus</span>.`,
             skillDetailNum: ["15%"],
             multipliers: []

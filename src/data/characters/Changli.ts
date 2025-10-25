@@ -379,6 +379,7 @@ When in <span class="Highlight">True Sight</span>, if Changli <span class="Highl
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Strategy of Duality',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconChangli/SP_IconChangliT.webp", 
                 skillDescription: `<div class="gap-start"></div>Changli's Outro Skill increases the switched-in Resonator's Fusion DMG by {0} and their Resonance Liberation DMG by {1}, lasting for {2}s. Switching to another Resonator ends this effect.`,
                 skillDetailNum: ["20%", "25%", "10"],
                 multipliers: []
@@ -418,6 +419,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Secret Strategist',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconChangli/SP_IconChangliD2.webp",
                 skillDescription: `<div class="gap-start"></div>When Changli releases Basic Attack: <span class="Highlight">True Sight - Conquest</span> or Basic Attack: <span class="Highlight">True Sight - Charge</span>, for each stack of [Enflamement], Changli's Fusion DMG is increased by {0}.`,
                 skillDetailNum: ["5%"],
                 multipliers: []
@@ -426,6 +428,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Sweeping Force',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconChangli/SP_IconChangliD1.webp",
                 skillDescription: `<div class="gap-start"></div>When Changli releases Heavy Attack <span class="Highlight">Flaming Sacrifice</span> or Resonance Liberation <span class="Highlight">Radiance of Fealty</span>, Changli's Fusion DMG Bonus is increased by {0}, and Changli ignores {1} of the target's DEF when dealing damage.`,
                 skillDetailNum: ["20%", "15%"],
                 multipliers: []
@@ -448,7 +451,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
             sequenceBuffType: "Skill Damage Buff",
             sequenceBuffAtrribute: ["Damage Increase"],
             sequenceBuff: [10],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_ChangliM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -458,7 +461,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Crit. Rate"],
             sequenceBuff: [25],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_ChangliM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -468,7 +471,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Resonance Liberation Damage Bonus"],
             sequenceBuff: [80],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_ChangliM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -478,7 +481,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [20],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_ChangliM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -488,7 +491,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
             sequenceBuffType: "Skill Damage Buff",
             sequenceBuffAtrribute: ["Damage Increase"],
             sequenceBuff: [50],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_ChangliM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -498,7 +501,7 @@ Changli obtains 4 stacks of [Enflamement] for every Resonance Liberation <span c
             sequenceBuffType: "Enemy Def Ignore",
             sequenceBuffAtrribute: ["Def Ignore"],
             sequenceBuff: [40],
-            itemImg: ""
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_ChangliM6_UI.webp"
         },
     ]
 }

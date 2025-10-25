@@ -429,6 +429,7 @@ export const Cartethiya: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Wind\'s Divine Blessing',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKatixiya/SP_IconKatixiyaT.webp",
             skillDescription: `<span class="Wind">Aero DMG</span> dealt by the active Resonator in the team other than <span class="Highlight">Cartethyia/Fleurdelys</span> to targets with Negative Statuses is Amplified by 17.5% for 20s.`,
             skillDetailNum: [""],
             multipliers: []
@@ -645,6 +646,7 @@ export const Cartethiya: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'A Heart\'s Truest Wishes',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKatixiya/SP_IconKatixiyaD1.webp",
             skillDescription: `The healing received by all Resonators other than <span class="Highlight">Cartethyia/Fleurdelys</span> in the team is increased by 20% and their resistance to interruption is enhanced. If Rover: Aero is in the team, Rover: Aero additionally restores 25 <span class="Highlight">Windstrings</span> upon casting <span class="Highlight">Omega Storm</span>.`,
             skillDetailNum: [""],
             multipliers: []
@@ -653,6 +655,7 @@ export const Cartethiya: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Wind\'s Indelible Imprint',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKatixiya/SP_IconKatixiyaD2.webp",
             skillDescription: `Targets with 1 to 3 stacks of <span class="Wind">Aero Erosion</span> take 30% more DMG from <span class="Highlight">Cartethyia</span> and <span class="Highlight">Fleurdelys</span>. Targets with more than 3 stacks of <span class="Wind">Aero Erosion</span> additionally take 10% more DMG from <span class="Highlight">Cartethyia</span> and <span class="Highlight">Fleurdelys</span> for each stack of <span class="Wind">Aero Erosion</span> they have, up to 3 stacks.`,
             skillDetailNum: [""],
             multipliers: []

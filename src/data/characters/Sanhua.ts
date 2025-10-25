@@ -253,7 +253,7 @@ This allows her to master her Forte with graceful ease and alleviates the burden
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillSanhua3.webp",
                 skillName: 'Glacial Gaze',
                 skillDescription: `Sanhua deals <span class="Ice">Glacio DMG</span> and creates {0} "Glacier".`,

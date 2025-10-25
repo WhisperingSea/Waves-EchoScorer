@@ -268,7 +268,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang3.webp",
                 skillName: `Strive: Lion's Vigor`,
                 skillDescription: `Attack the target, dealing <span class="Ice">Glacio DMG</span>, and receive the blessing of <span class="Highlight">Lion's Vigor</span>, which lasts for {0}s.
@@ -344,6 +344,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Frosty Marks',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLingyang/SP_IconLingyangT.webp",
                 skillDescription: `Lingyang releases a shock wave centered on the skill target, dealing <span class="Ice">Glacio DMG</span> equal to {0} of Lingyang's ATK to targets within the range.`,
                 skillDetailNum: ["587.94%"],
                 multipliers: []
@@ -434,6 +435,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: `Lion's Pride`,
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLingyang/SP_IconLingyangD1.webp",
                 skillDescription: `Damage of the Intro Skill <span class="Highlight">Lion Awakens</span> is increased by {0}.`,
                 skillDetailNum: ["50%"],
                 multipliers: [],
@@ -444,6 +446,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Diligent Practice',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLingyang/SP_IconLingyangD2.webp",
                 skillDescription: `Under the <span class="Highlight">Striding Lion</span> state, within {0}s after each <span class="Highlight">Basic Attack</span>, the next <span class="Highlight">Mountain Roamer</span> will deal an additional <span class="Ice">Glacio DMG</span>, equal to {1} of <span class="Highlight">Mountain Roamer</span> damage, considered as Resonance Skill damage.`,
                 skillDetailNum: ["3", "150%"],
                 multipliers: [],
@@ -468,7 +471,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "No Buff",
             sequenceBuff: [],
             sequenceBuffAtrribute: [""],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -478,7 +481,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "No Buff",
             sequenceBuff: [],
             sequenceBuffAtrribute: [""],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -488,7 +491,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Basic Attack Damage Bonus", "Resonance Skill Damage Bonus"],
             sequenceBuff: [20, 10],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -498,7 +501,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Glacio Damage Bonus"],
             sequenceBuff: [20],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -508,7 +511,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "Extra Skill Buff",
             sequenceBuffAtrribute: ["Seven Stars Shine, Stepped upon High"],
             sequenceBuff: [200],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -518,7 +521,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Basic Attack Damage Bonus"],
             sequenceBuff: [100],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM6_UI.webp"
         }
     ]
     }

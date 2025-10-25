@@ -215,7 +215,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 2,
                 typeName: 'Resonance Skill',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillBaizhi2.webp",
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBailian/SP_IconBailianB1.webp",
                 skillName: 'Emergency Plan',
                 skillDescription: `Baizhi calls You'tan to attack the target, dealing <span class="Ice">Glacio DMG</span> while restoring HP for the entire team.`,
                 skillDetailNum: [],
@@ -253,8 +253,8 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillBaizhi3.webp",
+                typeName: 'Resonance Liberation',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBailian/SP_IconBailianC1.webp",
                 skillName: 'Momentary Union',
                 skillDescription: `Baizhi summons You'tan to restore HP for the entire team, generating {0} stacks of <span class="Highlight">Remnant Entities</span>.\n
                 <div class="gap"></div>
@@ -310,7 +310,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 4,
                 typeName: 'Intro Skill',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillBaizhi5.webp",
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBailian/SP_IconBailianQTE.webp",
                 skillName: 'Overflowing Frost',
                 skillDescription: `Baizhi calls You'tan to perform 1 plunging attack, dealing <span class="Ice">Glacio DMG</span> while restoring HP to all team members nearby.`,
                 skillDetailNum: [],
@@ -343,6 +343,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Rejuvinating Flow',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBailian/SP_IconBailianT.webp",
                 skillDescription: `Baizhi restores HP equal to {1} of her max HP to the next character (or other characters on a nearby team that activates an Outro Skill) every {0}s for {2}s. Resonators gaining this healing also gain {3} all-Type DMG Deepen for {4}s.`,
                 skillDetailNum: ["3", "1.54%", "30", "15%", "6"],
                 multipliers: []
@@ -350,7 +351,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             {
                 skillId: 6,
                 typeName: 'Forte Circuit',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillBaizhi4.webp",
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBailian/SP_IconBailianY.webp",
                 skillName: 'Cycle of Life',
                 skillDescription: `<span class="Title">You'tan</span>\n
                 A Remnant Creature that answers to Baizhi’s mind and desires while sharing all her attributes. You’tan goes back to Baizhi when Baizhi dodges.\n
@@ -400,6 +401,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Harmonic Range',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBailian/SP_IconBailianD2.webp",
                 skillDescription: `When Baizhi casts Resonance Skill <span class="Highlight">Emergency Plan</span>, You'tan generates a field of <span class="Highlight">Euphonia</span> that lasts for {0}s.\n
                 <div class="gap"></div>
                 <span class="Title">Euphonia</span>\n
@@ -411,6 +413,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Stimulus Feedback',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconBailian/SP_IconBailianD1.webp",
                 skillDescription: `For every <span class="Highlight">Heavy Attack</span> on hit, Baizhi restores HP to the nearby team member with the least HP equal to {0} of Baizhi's max HP.`,
                 skillDetailNum: ["0.25%"],
                 multipliers: []
@@ -433,7 +436,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_BailianM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -443,7 +446,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_BailianM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -453,7 +456,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_BailianM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -466,7 +469,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_BailianM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -476,7 +479,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_BailianM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -486,7 +489,7 @@ She will stop at nothing until its mysteries are unraveled, even if it means ded
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1103_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_BailianM6_UI.webp"
         }
     ]
 }

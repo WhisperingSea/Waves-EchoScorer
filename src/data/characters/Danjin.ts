@@ -289,7 +289,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillDanjin3.webp",
                 skillName: 'Crimson Bloom',
                 skillDescription: `Danjin's anger intensifies as she frantically swings her dual blades, performing multiple rapid consecutive attacks, and {0} Scarlet Burst attack(s), dealing <span class="Dark">Havoc DMG</span>.`,
@@ -362,6 +362,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Duality',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMicai/SP_IconMicaiT.webp",
                 skillDescription: `The next character (or other characters on a nearby team that activates an Outro Skill) gains {0} Havoc DMG Deepen for {1}s, or until the character is switched off field.`,
                 skillDetailNum: ["23%", "14"],
                 multipliers: []
@@ -431,6 +432,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Crimson Light',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMicai/SP_IconMicaiD1.webp", 
                 skillDescription: `Damage of Resonance Skill <span class="Highlight">Crimson Erosion</span> triggered by <span class="Highlight">Dodge Counter: Ruby Shades</span> is increased by {0}. The HP cost and stacks of "Ruby Blossom" recovered are doubled.`,
                 skillDetailNum: ["20%"],
                 multipliers: []
@@ -439,6 +441,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Overflow',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMicai/SP_IconMicaiD2.webp",
                 skillDescription: `After casting the Resonance Skill <span class="Highlight">Sanguine Pulse</span>, Danjin's Heavy Attack damage is increased by {0} for {1}s.`,
                 skillDetailNum: ["30%", "5"],
                 multipliers: []
@@ -462,7 +465,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [5],
             stacks: 6,
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1602_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_micaiM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -470,9 +473,9 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
             description: `When Danjin attacks a target with Resonance Skill's <span class="Highlight">Incinerating Will</span>, her damage dealt is increased by {0}.`,
             detailNum: ["20%"],
             sequenceBuffType: "Skill Damage Buff",
-            sequenceBuffAtrribute: ["Damage Increse"],
+            sequenceBuffAtrribute: ["Damage Increase"],
             sequenceBuff: [20],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1602_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_micaiM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -482,7 +485,7 @@ Though perils lurk in every corner of her journey, she vowes to cleanse the worl
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Resonance Liberation Damage Bonus"],
             sequenceBuff: [30],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1602_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_micaiM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -493,7 +496,7 @@ This effect lasts until the end of <span class="Highlight">Heavy Attack: Scatter
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Crit. Rate"],
             sequenceBuff: [15],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1602_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_micaiM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -503,7 +506,7 @@ This effect lasts until the end of <span class="Highlight">Heavy Attack: Scatter
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Havoc Damage Bonus"],
             sequenceBuff: [15, 15],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1602_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_micaiM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -513,7 +516,7 @@ This effect lasts until the end of <span class="Highlight">Heavy Attack: Scatter
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [20],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1602_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_micaiM6_UI.webp"
         }
     ]
 }

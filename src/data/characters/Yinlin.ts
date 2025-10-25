@@ -290,7 +290,7 @@ If Resonance Skill <span class="Highlight">Lightning Execution</span> is not act
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillYinlin3.webp",
                 skillName: 'Thundering Wrath',
                 skillDescription: `Command "Zapstring" to call for thunder to fall upon a large range, dealing <span class="Thunder">Electro DMG</span>.`,

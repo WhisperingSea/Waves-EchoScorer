@@ -516,7 +516,7 @@ export const Qiuyuan: WWCharacter = {
             node: "Sequence Node 6",
             name: "Thus I Heard, Thus I Saw, Thus I Spoke",
             description: `Casting Heavy Attack <span class="Highlight">Thus Spoke the Blade: To Sacrifice</span> stagnates nearby targets for 5s or until the targets are damaged or until Qiuyuan is switched off the field. This effect is not available in the Co-op Mode.<br>
-            When Qiuyuan is the active Resonator in the team, upon exiting Inksplash of Mind, he deals <span class="Highlight">Aero DMG</span> equal to 600% of his ATK to all targets within range, considered Echo Skill DMG.<br>
+            When Qiuyuan is the active Resonator in the team, upon exiting Inksplash of Mind, he deals <span class="Wind">Spectro DMG</span> equal to 600% of his ATK to all targets within range, considered Echo Skill DMG.<br>
             Casting Resonance Skill <span class="Highlight">Straw Cape in Drizzly Rain</span> increases Qiuyuan's Crit. DMG by 100% for 6s. Switching to another Resonator ends this effect early.`,
             detailNum: [""],
             sequenceBuffType: "",

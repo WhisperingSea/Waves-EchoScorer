@@ -453,7 +453,7 @@ export const Iuno: WWCharacter = {
             <div class="gap"></div>
             <span class="Title">Heavy Attack - Absolute Fullness</span>
             When Iuno's Concerto Energy is full, her Heavy Attack is replaced with <span class="Highlight">Absolute Fullness</span>.<br>
-            Casting Absolute Fullness ends <span class="Highlight">Lunar Cycle</span>, provides healing for nearby Resonators in the team, deals <span class="Highlight">Aero DMG</span> to nearby targets (considered as Resonance Liberation DMG), and conjures a <span class="Highlight">Full Moon</span> domain at her location. This effect can be triggered once every 25s.<br>
+            Casting Absolute Fullness ends <span class="Highlight">Lunar Cycle</span>, provides healing for nearby Resonators in the team, deals <span class="Wind">Spectro DMG</span> to nearby targets (considered as Resonance Liberation DMG), and conjures a <span class="Highlight">Full Moon</span> domain at her location. This effect can be triggered once every 25s.<br>
             Can be cast in mid-air.
             <div class="gap"></div>
             <span class="Title">Full Moon Domain</span>
