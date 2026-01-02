@@ -571,6 +571,15 @@ export const Cantarella: WWCharacter = {
             skillDescription: `Casting <span class="Highlight">Echo Skill</span> gives {0} Havoc DMG Bonus for {1}s, stacking up to {2} times.`,
             skillDetailNum: ["6%", "10", "2"],
             multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
         }
     ],
     sequences: [

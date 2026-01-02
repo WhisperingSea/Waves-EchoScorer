@@ -537,6 +537,15 @@ Intrigued by the belief in fate, she wanders the lands of her own accord, follow
             skillDescription: `Gain {0} <span class="Dark">Havoc DMG</span> Bonus. Basic Attack and Basic Attack Vining Waltz gain increased resistance to interruption.`,
             skillDetailNum: ["15%"],
             multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
         }
     ],
     sequences: [

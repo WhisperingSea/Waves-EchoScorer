@@ -76,23 +76,41 @@ const WWSkills: React.FC = () => {
               Outro Skill
             </button>
             <button className={`tab-link ${skillId === "7" ? "active" : ""}`} value={7} onClick={handleSkillId}>
-              Inherant Skills 1
+              Inherent Skills 1
             </button>
             <button className={`tab-link ${skillId === "8" ? "active" : ""}`} value={8} onClick={handleSkillId}>
-              Inherant Skills 2
+              Inherent Skills 2
+            </button>
+            <button className={`tab-link ${skillId === "9" ? "active" : ""}`} value={9} onClick={handleSkillId}>
+              Tune Break
             </button>
           </div>
           <div className="tab">
             <div className={`skill-header ${chara?.element}`}>
-              <h2 className="skill-name">{skill?.skillName}</h2>
-              {skill?.skillImg && (
+                <h2 className="skill-name">{skillId === "9" ? (skill?.skillName || "Tune Break") : skill?.skillName}</h2>
+                {(skill?.skillImg || skillId === "9") && (
                 <img
                   className={`skill-image ${imgLoaded ? "loaded" : ""}`}
-                  src={skill.skillImg}
-                  alt={skill.skillName}
+                  src={skillId === "9" ? (() => {
+                  switch (chara?.weapon) {
+                  case "Sword":
+                  return "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconWeakPointBreakKnife.webp";
+                  case "Broadblade":
+                  return "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconWeakPointBreakSword.webp";
+                  case "Pistols":
+                  return "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconWeakPointBreakGun.webp";
+                  case "Gauntlets":
+                  return "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconWeakPointBreakFist.webp";
+                  case "Rectifier":
+                  return "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconWeakPointBreakMagic.webp";
+                  default:
+                  return "";
+                  }
+                  })() : skill?.skillImg || ""}
+                  alt={skill?.skillName}
                   loading="eager"
                   onLoad={() => setImgLoaded(true)} />
-              )}
+                )}
             </div>
             <div>
               {skill?.skillDescription && (

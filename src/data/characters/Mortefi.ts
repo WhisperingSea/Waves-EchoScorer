@@ -22,93 +22,93 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
     },
     asension: {
         charaAsension: [
-        {
-            item: "LF Whisperin Core",
-            id: 1,
-            value: "4"
-        },
-        {
-            item: "MF Whisperin Core",
-            id: 2,
-            value: "12"
-        },
-        {
-            item: "HF Whisperin Core",
-            id: 3,
-            value: "12"
-        },
-        {
-            item: "FF Whisperin Core",
-            id: 4,
-            value: "4"
-        },
-        {
-            item: "Rage Tacet Core",
-            id: 5,
-            value: "46"
-        },
-        {
-            item: "Coriolus",
-            id: 6,
-            value: "60"
-        },
-        {
-            item: "Shell Credits",
-            id: 7,
-            value: "170,000"
-        },
+            {
+                item: "LF Whisperin Core",
+                id: 1,
+                value: "4"
+            },
+            {
+                item: "MF Whisperin Core",
+                id: 2,
+                value: "12"
+            },
+            {
+                item: "HF Whisperin Core",
+                id: 3,
+                value: "12"
+            },
+            {
+                item: "FF Whisperin Core",
+                id: 4,
+                value: "4"
+            },
+            {
+                item: "Rage Tacet Core",
+                id: 5,
+                value: "46"
+            },
+            {
+                item: "Coriolus",
+                id: 6,
+                value: "60"
+            },
+            {
+                item: "Shell Credits",
+                id: 7,
+                value: "170,000"
+            },
         ],
         forteAsension: [
-        {
-            item: "LF Whisperin Core",
-            id: 1,
-            value: "25"
-        },
-        {
-            item: "MF Whisperin Core",
-            id: 2,
-            value: "28"
-        },
-        {
-            item: "LF Whisperin Core",
-            id: 3,
-            value: "40"
-        },
-        {
-            item: "FF Whisperin Core",
-            id: 4,
-            value: "57"
-        },
-        {
-            item: "Impure Phlogiston",
-            id: 5,
-            value: "25"
-        },
-        {
-            item: "Extracted Phlogiston",
-            id: 6,
-            value: "28"
-        },
-        {
-            item: "Refined Phlogiston",
-            id: 7,
-            value: "55"
-        },
-        {
-            item: "Flawless Phlogiston",
-            id: 8,
-            value: "67"
-        },
-        {
-            item: "Monument Bell",
-            id: 9,
-            value: "26"
-        },
-        {
-            item: "Shell Credits",
-            id: 10,
-            value: "2,030,000"
-        },
+            {
+                item: "LF Whisperin Core",
+                id: 1,
+                value: "25"
+            },
+            {
+                item: "MF Whisperin Core",
+                id: 2,
+                value: "28"
+            },
+            {
+                item: "LF Whisperin Core",
+                id: 3,
+                value: "40"
+            },
+            {
+                item: "FF Whisperin Core",
+                id: 4,
+                value: "57"
+            },
+            {
+                item: "Impure Phlogiston",
+                id: 5,
+                value: "25"
+            },
+            {
+                item: "Extracted Phlogiston",
+                id: 6,
+                value: "28"
+            },
+            {
+                item: "Refined Phlogiston",
+                id: 7,
+                value: "55"
+            },
+            {
+                item: "Flawless Phlogiston",
+                id: 8,
+                value: "67"
+            },
+            {
+                item: "Monument Bell",
+                id: 9,
+                value: "26"
+            },
+            {
+                item: "Shell Credits",
+                id: 10,
+                value: "2,030,000"
+            },
         ]
     },
     stats: {
@@ -128,12 +128,12 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
         bonus_hp: 0
     },
     skills: [
-            {
-                skillId: 1,
-                typeName: 'Normal Attack',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
-                skillName: 'Impromptu Show',
-                skillDescription: `<span class="Title">Basic Attack</span>\n
+        {
+            skillId: 1,
+            typeName: 'Normal Attack',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill3.webp",
+            skillName: 'Impromptu Show',
+            skillDescription: `<span class="Title">Basic Attack</span>\n
                 Mortefi uses his dual Pistolss and flames to perform up to 4 consecutive shots, dealing <span class="Fire">Fusion DMG</span>.\n
                 <div class="gap"></div>
                 <span class="Title">Heavy Attack</span>\n
@@ -145,119 +145,119 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
                 <div class="gap"></div>
                 <span class="Title">Dodge Counter</span>\n
                 Use <span class="Highlight">Basic Attack</span> after a successful <span class="Highlight">Dodge</span> to attack the target, dealing <span class="Fire">Fusion DMG</span>.`,
-                skillDetailNum: [],
-                multipliers: [
-                    {
-                        attributeName: "Part 1 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["24.29%", "26.29%", "28.28%", "31.07%", "33.06%", "35.35%", "38.54%", "41.72%", "44.91%", "48.30%", "52.28%", "56.26%", "60.25%", "64.23%", "68.21%", "72.20%", "76.18%", "80.16%", "84.15%", "88.13%"]
-                        }],
-                        index: 1
-                    }, {
-                        attributeName: "Part 2 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["20.51%*2", "22.20%*2", "23.88%*2", "26.23%*2", "27.92%*2", "29.85%*2", "32.54%*2", "35.23%*2", "37.92%*2", "40.78%*2", "44.14%*2", "47.51%*2", "50.87%*2", "54.24%*2", "57.60%*2", "60.96%*2", "64.33%*2", "67.69%*2", "71.05%*2", "74.42%*2"]
-                        }],
-                        index: 2
-                    }, {
-                        attributeName: "Part 3 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["53.97%", "58.40%", "62.83%", "69.02%", "73.45%", "78.54%", "85.62%", "92.70%", "99.78%", "107.30%", "116.15%", "125.00%", "133.86%", "142.71%", "151.56%", "160.41%", "169.26%", "178.11%", "186.96%", "195.81%"]
-                        }],
-                        index: 3
-                    }, {
-                        attributeName: "Part 4 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["10.57%*4+63.84%", "11.44%*4+69.08%", "12.31%*4+74.31%", "13.52%*4+81.64%", "14.39%*4+86.88%", "15.39%*4+92.90%", "16.77%*4+101.27%", "18.16%*4+109.65%", "19.55%*4+118.03%", "21.02%*4+126.93%", "22.75%*4+137.40%", "24.49%*4+147.86%", "26.22%*4+158.33%", "27.95%*4+168.80%", "29.69%*4+179.27%", "31.42%*4+189.74%", "33.15%*4+200.21%", "34.89%*4+210.68%", "36.62%*4+221.15%", "38.35%*4+231.62%"]
-                        }],
-                        index: 4
-                    }, {
-                        attributeName: "Aimed Shot Damage",
-                        type: "Heavy",
-                        skillDetailNum: [{
-                            values: ["49.14%", "53.17%", "57.20%", "62.85%", "66.87%", "71.51%", "77.96%", "84.40%", "90.85%", "97.70%", "105.76%", "113.82%", "121.88%", "129.94%", "138.00%", "146.05%", "154.11%", "162.17%", "170.23%", "178.29%"]
-                        }],
-                        index: 5
-                    }, {
-                        attributeName: "Fully Charged Aimed Shot Damage",
-                        type: "Heavy",
-                        skillDetailNum: [{
-                            values: ["84.00%", "90.89%", "97.78%", "107.42%", "114.31%", "122.23%", "133.25%", "144.27%", "155.30%", "167.01%", "180.78%", "194.56%", "208.33%", "222.11%", "235.89%", "249.66%", "263.44%", "277.21%", "290.99%", "304.77%"]
-                        }],
-                        index: 6
-                    }, {
-                        attributeName: "Mid-Air Attack Part 1 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["11.69%", "12.65%", "13.61%", "14.95%", "15.91%", "17.02%", "18.55%", "20.08%", "21.62%", "23.25%", "25.16%", "27.08%", "29.00%", "30.91%", "32.83%", "34.75%", "36.67%", "38.58%", "40.50%", "42.42%"]
-                        }],
-                        index: 7
-                    }, {
-                        attributeName: "Mid-Air Attack Part 2 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["11.69%", "12.65%", "13.61%", "14.95%", "15.91%", "17.02%", "18.55%", "20.08%", "21.62%", "23.25%", "25.16%", "27.08%", "29.00%", "30.91%", "32.83%", "34.75%", "36.67%", "38.58%", "40.50%", "42.42%"]
-                        }],
-                        index: 8
-                    }, {
-                        attributeName: "Dodge Counter Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["98.07%", "106.12%", "114.16%", "125.42%", "133.46%", "142.71%", "155.57%", "168.44%", "181.31%", "194.98%", "211.06%", "227.14%", "243.23%", "259.31%", "275.40%", "291.48%", "307.56%", "323.65%", "339.73%", "355.81%"]
-                        }],
-                        index: 9
-                    }, {
-                        attributeName: "Mid-Air Attack Stamina Cost",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
-                        }],
-                        index: 10
-                    }
-                ]
-            },
-            {
-                skillId: 2,
-                typeName: 'Resonance Skill',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi2.webp",
-                skillName: 'Passionate Variation',
-                skillDescription: `Launch a flashing lightning of flames forward, dealing <span class="Fire">Fusion DMG</span>.`,
-                skillDetailNum: [],
-                multipliers: [
-                    {
-                        attributeName: "Skill Damage",
-                        type: "Skill",
-                        skillDetailNum: [{
-                            values: ["105.00%", "113.61%", "122.22%", "134.28%", "142.89%", "152.79%", "166.57%", "180.34%", "194.12%", "208.76%", "225.98%", "243.20%", "260.42%", "277.64%", "294.86%", "312.08%", "329.30%", "346.52%", "363.74%", "380.96%"]
-                        }],
-                        index: 1
-                    }, {
-                        attributeName: "Cooldown",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14"]
-                        }],
-                        index: 2
-                    }, {
-                        attributeName: "Con. Energy Regen",
-                        type: "Skill",
-                        skillDetailNum: [{
-                            values: ["18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18"]
-                        }],
-                        index: 3
-                    }
-                ]
-            },
-            {
-                skillId: 3,
-                typeName: 'Resonance Liberation',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi3.webp",
-                skillName: 'Violent Finale',
-                skillDescription: `Deal <span class="Fire">Fusion DMG</span>, and apply <span class="Highlight">Burning Rhapsody</span> to all characters in the team.\n
+            skillDetailNum: [],
+            multipliers: [
+                {
+                    attributeName: "Part 1 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["24.29%", "26.29%", "28.28%", "31.07%", "33.06%", "35.35%", "38.54%", "41.72%", "44.91%", "48.30%", "52.28%", "56.26%", "60.25%", "64.23%", "68.21%", "72.20%", "76.18%", "80.16%", "84.15%", "88.13%"]
+                    }],
+                    index: 1
+                }, {
+                    attributeName: "Part 2 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["20.51%*2", "22.20%*2", "23.88%*2", "26.23%*2", "27.92%*2", "29.85%*2", "32.54%*2", "35.23%*2", "37.92%*2", "40.78%*2", "44.14%*2", "47.51%*2", "50.87%*2", "54.24%*2", "57.60%*2", "60.96%*2", "64.33%*2", "67.69%*2", "71.05%*2", "74.42%*2"]
+                    }],
+                    index: 2
+                }, {
+                    attributeName: "Part 3 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["53.97%", "58.40%", "62.83%", "69.02%", "73.45%", "78.54%", "85.62%", "92.70%", "99.78%", "107.30%", "116.15%", "125.00%", "133.86%", "142.71%", "151.56%", "160.41%", "169.26%", "178.11%", "186.96%", "195.81%"]
+                    }],
+                    index: 3
+                }, {
+                    attributeName: "Part 4 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["10.57%*4+63.84%", "11.44%*4+69.08%", "12.31%*4+74.31%", "13.52%*4+81.64%", "14.39%*4+86.88%", "15.39%*4+92.90%", "16.77%*4+101.27%", "18.16%*4+109.65%", "19.55%*4+118.03%", "21.02%*4+126.93%", "22.75%*4+137.40%", "24.49%*4+147.86%", "26.22%*4+158.33%", "27.95%*4+168.80%", "29.69%*4+179.27%", "31.42%*4+189.74%", "33.15%*4+200.21%", "34.89%*4+210.68%", "36.62%*4+221.15%", "38.35%*4+231.62%"]
+                    }],
+                    index: 4
+                }, {
+                    attributeName: "Aimed Shot Damage",
+                    type: "Heavy",
+                    skillDetailNum: [{
+                        values: ["49.14%", "53.17%", "57.20%", "62.85%", "66.87%", "71.51%", "77.96%", "84.40%", "90.85%", "97.70%", "105.76%", "113.82%", "121.88%", "129.94%", "138.00%", "146.05%", "154.11%", "162.17%", "170.23%", "178.29%"]
+                    }],
+                    index: 5
+                }, {
+                    attributeName: "Fully Charged Aimed Shot Damage",
+                    type: "Heavy",
+                    skillDetailNum: [{
+                        values: ["84.00%", "90.89%", "97.78%", "107.42%", "114.31%", "122.23%", "133.25%", "144.27%", "155.30%", "167.01%", "180.78%", "194.56%", "208.33%", "222.11%", "235.89%", "249.66%", "263.44%", "277.21%", "290.99%", "304.77%"]
+                    }],
+                    index: 6
+                }, {
+                    attributeName: "Mid-Air Attack Part 1 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["11.69%", "12.65%", "13.61%", "14.95%", "15.91%", "17.02%", "18.55%", "20.08%", "21.62%", "23.25%", "25.16%", "27.08%", "29.00%", "30.91%", "32.83%", "34.75%", "36.67%", "38.58%", "40.50%", "42.42%"]
+                    }],
+                    index: 7
+                }, {
+                    attributeName: "Mid-Air Attack Part 2 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["11.69%", "12.65%", "13.61%", "14.95%", "15.91%", "17.02%", "18.55%", "20.08%", "21.62%", "23.25%", "25.16%", "27.08%", "29.00%", "30.91%", "32.83%", "34.75%", "36.67%", "38.58%", "40.50%", "42.42%"]
+                    }],
+                    index: 8
+                }, {
+                    attributeName: "Dodge Counter Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["98.07%", "106.12%", "114.16%", "125.42%", "133.46%", "142.71%", "155.57%", "168.44%", "181.31%", "194.98%", "211.06%", "227.14%", "243.23%", "259.31%", "275.40%", "291.48%", "307.56%", "323.65%", "339.73%", "355.81%"]
+                    }],
+                    index: 9
+                }, {
+                    attributeName: "Mid-Air Attack Stamina Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+                    }],
+                    index: 10
+                }
+            ]
+        },
+        {
+            skillId: 2,
+            typeName: 'Resonance Skill',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi2.webp",
+            skillName: 'Passionate Variation',
+            skillDescription: `Launch a flashing lightning of flames forward, dealing <span class="Fire">Fusion DMG</span>.`,
+            skillDetailNum: [],
+            multipliers: [
+                {
+                    attributeName: "Skill Damage",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["105.00%", "113.61%", "122.22%", "134.28%", "142.89%", "152.79%", "166.57%", "180.34%", "194.12%", "208.76%", "225.98%", "243.20%", "260.42%", "277.64%", "294.86%", "312.08%", "329.30%", "346.52%", "363.74%", "380.96%"]
+                    }],
+                    index: 1
+                }, {
+                    attributeName: "Cooldown",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14"]
+                    }],
+                    index: 2
+                }, {
+                    attributeName: "Con. Energy Regen",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18"]
+                    }],
+                    index: 3
+                }
+            ]
+        },
+        {
+            skillId: 3,
+            typeName: 'Resonance Liberation',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi3.webp",
+            skillName: 'Violent Finale',
+            skillDescription: `Deal <span class="Fire">Fusion DMG</span>, and apply <span class="Highlight">Burning Rhapsody</span> to all characters in the team.\n
                 <div class="gap"></div>
                 <span class="Title">Burning Rhapsody</span>\n
                 When the on-field character's <span class="Highlight">Basic Attack</span> hits the target, Mortefi launches a Coordinated Attack, firing {0} <span class="Highlight">Marcato</span>.\n
@@ -266,92 +266,93 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
                 <div class="gap"></div>
                 <span class="Title">Marcato</span>\n
                 Deals <span class="Fire">Fusion DMG</span>.`,
-                skillDetailNum: ["1", "2", "0.35"],
-                multipliers: [
-                    {
-                        attributeName: "Violent Finale Damage",
-                        type: "Liberation",
-                        skillDetailNum: [{
-                            values: ["80.00%", "86.56%", "93.12%", "102.31%", "108.87%", "116.41%", "126.91%", "137.40%", "147.90%", "159.05%", "172.17%", "185.29%", "198.41%", "211.53%", "224.65%", "237.77%", "250.89%", "264.01%", "277.13%", "290.25%"]
-                        }],
-                        index: 1
-                    }, {
-                        attributeName: "Marcato Damage",
-                        type: "Liberation",
-                        skillDetailNum: [{
-                            values: ["16.00%", "17.32%", "18.63%", "20.47%", "21.78%", "23.29%", "25.39%", "27.48%", "29.58%", "31.81%", "34.44%", "37.06%", "39.69%", "42.31%", "44.93%", "47.56%", "50.18%", "52.81%", "55.43%", "58.05%"]
-                        }],
-                        index: 2
-                    }, {
-                        attributeName: "Duration",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
-                        }],
-                        index: 3
-                    }, {
-                        attributeName: "Cooldown",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24"]
-                        }],
-                        index: 4
-                    }, {
-                        attributeName: "Res. Energy Cost",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
-                        }],
-                        index: 5
-                    }, {
-                        attributeName: "Con. Energy Regen",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
-                        }],
-                        index: 6
-                    }
-                ]
-            },
-            {
-                skillId: 4,
-                typeName: 'Intro Skill',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi5.webp",
-                skillName: 'Dissonance',
-                skillDescription: `Attack the target, dealing <span class="Fire">Fusion DMG</span>.`,
-                skillDetailNum: [],
-                multipliers: [
-                    {
-                        attributeName: "Skill Damage",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["85.00%", "91.97%", "98.94%", "108.70%", "115.67%", "123.69%", "134.84%", "145.99%", "157.14%", "168.99%", "182.93%", "196.87%", "210.81%", "224.75%", "238.69%", "252.63%", "266.57%", "280.51%", "294.45%", "308.39%"]
-                        }],
-                        index: 1
-                    }, {
-                        attributeName: "Con. Energy Regen",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
-                        }],
-                        index: 2
-                    }
-                ]
-            },
-            {
-                skillId: 5,
-                typeName: 'Outro Skill',
-                skillName: 'Rage Transposition',
-                skillDescription: `The next character (or other characters on a nearby team that activates an Outro Skill) gains {0} Heavy Attack DMG Deepen for {1}s, or until the character is switched off field.`,
-                skillDetailNum: ["38%", "14"],
-                multipliers: []
-            },
-            {
-                skillId: 6,
-                typeName: 'Forte Circuit',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi4.webp",
-                skillName: 'Fury Fugue',
-                skillDescription: `<span class="Title">Resonance Skill: Fury Fugue</span>
+            skillDetailNum: ["1", "2", "0.35"],
+            multipliers: [
+                {
+                    attributeName: "Violent Finale Damage",
+                    type: "Liberation",
+                    skillDetailNum: [{
+                        values: ["80.00%", "86.56%", "93.12%", "102.31%", "108.87%", "116.41%", "126.91%", "137.40%", "147.90%", "159.05%", "172.17%", "185.29%", "198.41%", "211.53%", "224.65%", "237.77%", "250.89%", "264.01%", "277.13%", "290.25%"]
+                    }],
+                    index: 1
+                }, {
+                    attributeName: "Marcato Damage",
+                    type: "Liberation",
+                    skillDetailNum: [{
+                        values: ["16.00%", "17.32%", "18.63%", "20.47%", "21.78%", "23.29%", "25.39%", "27.48%", "29.58%", "31.81%", "34.44%", "37.06%", "39.69%", "42.31%", "44.93%", "47.56%", "50.18%", "52.81%", "55.43%", "58.05%"]
+                    }],
+                    index: 2
+                }, {
+                    attributeName: "Duration",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
+                    }],
+                    index: 3
+                }, {
+                    attributeName: "Cooldown",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24", "24"]
+                    }],
+                    index: 4
+                }, {
+                    attributeName: "Res. Energy Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
+                    }],
+                    index: 5
+                }, {
+                    attributeName: "Con. Energy Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
+                    }],
+                    index: 6
+                }
+            ]
+        },
+        {
+            skillId: 4,
+            typeName: 'Intro Skill',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi5.webp",
+            skillName: 'Dissonance',
+            skillDescription: `Attack the target, dealing <span class="Fire">Fusion DMG</span>.`,
+            skillDetailNum: [],
+            multipliers: [
+                {
+                    attributeName: "Skill Damage",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["85.00%", "91.97%", "98.94%", "108.70%", "115.67%", "123.69%", "134.84%", "145.99%", "157.14%", "168.99%", "182.93%", "196.87%", "210.81%", "224.75%", "238.69%", "252.63%", "266.57%", "280.51%", "294.45%", "308.39%"]
+                    }],
+                    index: 1
+                }, {
+                    attributeName: "Con. Energy Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
+                    }],
+                    index: 2
+                }
+            ]
+        },
+        {
+            skillId: 5,
+            typeName: 'Outro Skill',
+            skillName: 'Rage Transposition',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotefei/SP_IconMotefeiT.webp",
+            skillDescription: `The next character (or other characters on a nearby team that activates an Outro Skill) gains {0} Heavy Attack DMG Deepen for {1}s, or until the character is switched off field.`,
+            skillDetailNum: ["38%", "14"],
+            multipliers: []
+        },
+        {
+            skillId: 6,
+            typeName: 'Forte Circuit',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillMortefi4.webp",
+            skillName: 'Fury Fugue',
+            skillDescription: `<span class="Title">Resonance Skill: Fury Fugue</span>
                 When Mortefi's "Annoyance" reaches {0}, his <span class="Highlight">Resonance Skill</span> is replaced with <span class="Highlight">Fury Fudge</span>.
                 When casting Fury Fudge, Mortefi consumes all "Annoyance" to unleash high-speed flame lightning, dealing <span class="Fire">Fusion DMG</span>, considered as Resonance Skill damage.
                 <div class="gap"></div>
@@ -361,51 +362,54 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
                 When Intro Skill <span class="Highlight">Dissonance</span> hits the target, “Annoyance” is restored.
                 When Resonance Skill <span class="Highlight">Passionate Variation</span> hits the target, “Annoyance” is restored.
                 Within {2}s after casting <span class="Highlight">Passionate Variation</span>, Basic Attack <span class="Highlight">Impromptu</span> that hits the target additionally restores “Annoyance”.`,
-                skillDetailNum: [],
-                multipliers: [
-                    {
-                        attributeName: "Fury Fugue Damage",
-                        type: "Skill",
-                        skillDetailNum: [{
-                            values: ["164.00%", "177.45%", "190.90%", "209.73%", "223.18%", "238.64%", "260.16%", "281.67%", "303.19%", "326.05%", "352.95%", "379.85%", "406.74%", "433.64%", "460.53%", "487.43%", "514.33%", "541.22%", "568.12%", "595.01%"]
-                        }],
-                        index: 1
-                    }, {
-                        attributeName: "Con. Energy Regen",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18"]
-                        }],
-                        index: 2
-                    }
-                ]
-            },
-            {
-                skillId: 7,
-                typeName: 'Inherent Skill',
-                skillName: 'Harmonic Control',
-                skillDescription: `After casting Resonance Skill <span class="Highlight">Passionate Variation</span>, the damage of Resonance Skill <span class="Highlight">Draconic Hellfire</span> is increased by {1} for {0}s.`,
-                skillDetailNum: ["8", "25%"],
-                multipliers: []
-            },
-            {
-                skillId: 8,
-                typeName: 'Inherent Skill',
-                skillName: 'Rhythmic Vibrato',
-                skillDescription: `During Resonance Liberation <span class="Highlight">Burning Rhapsody</span>, each hit of Resonance Liberation <span class="Highlight">Marcato</span> will increase the damage of the next Resonance Liberation <span class="Highlight">Marcato</span> by {0}, which can be triggered once every {1}s, stacking up to {2} times.\n
+            skillDetailNum: [],
+            multipliers: [
+                {
+                    attributeName: "Fury Fugue Damage",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["164.00%", "177.45%", "190.90%", "209.73%", "223.18%", "238.64%", "260.16%", "281.67%", "303.19%", "326.05%", "352.95%", "379.85%", "406.74%", "433.64%", "460.53%", "487.43%", "514.33%", "541.22%", "568.12%", "595.01%"]
+                    }],
+                    index: 1
+                }, {
+                    attributeName: "Con. Energy Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18", "18"]
+                    }],
+                    index: 2
+                }
+            ]
+        },
+        {
+            skillId: 7,
+            typeName: 'Inherent Skill',
+            skillName: 'Harmonic Control',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotefei/SP_IconMotefeiD1.webp",
+            skillDescription: `After casting Resonance Skill <span class="Highlight">Passionate Variation</span>, the damage of Resonance Skill <span class="Highlight">Draconic Hellfire</span> is increased by {1} for {0}s.`,
+            skillDetailNum: ["8", "25%"],
+            multipliers: []
+        },
+        {
+            skillId: 8,
+            typeName: 'Inherent Skill',
+            skillName: 'Rhythmic Vibrato',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotefei/SP_IconMotefeiD2.webp",
+            skillDescription: `During Resonance Liberation <span class="Highlight">Burning Rhapsody</span>, each hit of Resonance Liberation <span class="Highlight">Marcato</span> will increase the damage of the next Resonance Liberation <span class="Highlight">Marcato</span> by {0}, which can be triggered once every {1}s, stacking up to {2} times.\n
                 The effect will be reset after Resonance Liberation <span class="Highlight">Burning Rhapsody</span> ends.`,
-                skillDetailNum: ["1.5%", "0.35", "50"],
-                multipliers: []
-            },
-            {
-                skillId: 9,
-                typeName: 'Inherent Skill',
-                skillName: 'Skillful Cooking',
-                skillDescription: `Has a chance to produce special dishes when cooking`,
-                skillDetailNum: [],
-                multipliers: []
-            }
-        ],
+            skillDetailNum: ["1.5%", "0.35", "50"],
+            multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
+        }
+    ],
     sequences: [
         {
             node: "Sequence Node 1",
@@ -415,7 +419,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1204_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MotefeiM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -425,7 +429,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1204_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MotefeiM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -435,7 +439,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             sequenceBuffType: "Skill Critical Damage Buff",
             sequenceBuffAtrribute: ["Marcato"],
             sequenceBuff: [30],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1204_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MotefeiM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -445,7 +449,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1204_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MotefeiM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -455,7 +459,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             sequenceBuffType: "Extra Skill Buff",
             sequenceBuffAtrribute: ["Funerary Quartet"],
             sequenceBuff: [50],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1204_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MotefeiM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -465,7 +469,7 @@ It's not hard to win Mortefi's favor: Just remember to talk nicely, and always s
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [20],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1204_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_MotefeiM6_UI.webp"
         }
     ]
 }

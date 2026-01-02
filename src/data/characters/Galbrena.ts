@@ -639,6 +639,15 @@ export const Galbrena: WWCharacter = {
             skillDescription: `Casting <span class="Highlight">Basic Attack Stage 4</span>, <span class="Highlight">Basic Attack - Seraphic Execution Stage 5</span>, <span class="Highlight">Heavy Attack - Volley of Death Stage 3</span>, and <span class="Highlight">Heavy Attack - Flamewing Verdict Stage 3</span> recovers 10 points of STA.`,
             skillDetailNum: [""],
             multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
         }
     ],
     sequences: [

@@ -465,6 +465,15 @@ export const Phrolova: WWCharacter = {
             When <span class="Highlight">Aftersound</span> reaches the max, each new stack of <span class="Highlight">Aftersound</span> increases Phrolova's Crit. DMG by 1%, up to 100%. The increased Crit. DMG is removed when <span class="Highlight">Aftersound</span> stacks are cleared.`,
             skillDetailNum: [""],
             multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
         }
     ],
     sequences: [

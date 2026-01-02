@@ -659,6 +659,15 @@ export const Cartethiya: WWCharacter = {
             skillDescription: `Targets with 1 to 3 stacks of <span class="Wind">Aero Erosion</span> take 30% more DMG from <span class="Highlight">Cartethyia</span> and <span class="Highlight">Fleurdelys</span>. Targets with more than 3 stacks of <span class="Wind">Aero Erosion</span> additionally take 10% more DMG from <span class="Highlight">Cartethyia</span> and <span class="Highlight">Fleurdelys</span> for each stack of <span class="Wind">Aero Erosion</span> they have, up to 3 stacks.`,
             skillDetailNum: [""],
             multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
         }
     ],
     sequences: [

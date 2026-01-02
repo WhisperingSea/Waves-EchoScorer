@@ -530,6 +530,15 @@ export const Brant: WWCharacter = {
             skillDescription: `Brant's resistance to interruption is increased during <span class="Highlight">Mid-air Attacks</span> and gains {0} <span class="Fire">Fusion DMG Bonus</span>.`,
             skillDetailNum: ["15%"],
             multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
         }
     ],
     sequences: [

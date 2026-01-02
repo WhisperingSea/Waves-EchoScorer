@@ -454,6 +454,15 @@ export const Qiuyuan: WWCharacter = {
             The next time Swordster's Soliloquy is obtained, the <span class="Highlight">Flowing Panacea</span> is consumed to gain 10% ATK increase for 20s.`,
             skillDetailNum: [""],
             multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
         }
     ],
     sequences: [

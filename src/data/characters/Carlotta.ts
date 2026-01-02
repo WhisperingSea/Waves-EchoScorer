@@ -520,6 +520,15 @@ To ensure her family's future, she alternates between dual roles, addressing del
             skillDescription: `Intro Skill <span class="Highlight">Wintertime Aria</span>, Resonance Skill <span class="Highlight">Chromatic Splendor</span>, Resonance Liberation <span class="Highlight">Death Knell</span>, and Heavy Attack <span class="Highlight">Imminent Oblivion</span> can inflict <span class="Highlight">Deconstruction</span>.`,
             skillDetailNum: [],
             multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
         }
     ],
     sequences: [

@@ -102,7 +102,7 @@ const Guide: React.FC = () => {
             <section className="guide-section">
               <div className={`guide-grid ${chara?.element}`}>
                 <div className={`guide-grid-item-1 grid-item-1-flex ${chara?.element}`}>
-                  <h1 className="guide-chara-name">{chara?.name}</h1>
+                  <h1 className="guide-chara-name">{chara?.name.replace("-", " ")}</h1>
                   <p className={`paragraph guide-paragraph ${chara?.element}`}>
                     {chara?.element}
                   </p>

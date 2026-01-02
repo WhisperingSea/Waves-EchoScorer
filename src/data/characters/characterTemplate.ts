@@ -205,6 +205,7 @@ export const characterName: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: '',
+            skillImg: "",
             skillDescription: ``,
             skillDetailNum: [""],
             multipliers: []
@@ -232,6 +233,7 @@ export const characterName: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: '',
+            skillImg: "",
             skillDescription: ``,
             skillDetailNum: [""],
             multipliers: []
@@ -240,7 +242,17 @@ export const characterName: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: '',
+            skillImg: "",
             skillDescription: ``,
+            skillDetailNum: [""],
+            multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
             skillDetailNum: [""],
             multipliers: []
         }

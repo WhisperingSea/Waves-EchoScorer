@@ -453,6 +453,15 @@ export const Ciaccona: WWCharacter = {
             skillDescription: `Increase <span class="Highlight">Heavy Attack - Quadruple Downbeat's</span> DMG by 30%.`,
             skillDetailNum: [""],
             multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
         }
     ],
     sequences: [

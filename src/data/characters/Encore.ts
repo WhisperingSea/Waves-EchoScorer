@@ -490,14 +490,15 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
                 skillDetailNum: ["10%", "10"],
                 multipliers: []
             },
-            {
-                skillId: 9,
-                typeName: 'Inherent Skill',
-                skillName: 'Skillful Cooking',
-                skillDescription: `Has a chance to produce special dishes when cooking.`,
-                skillDetailNum: [],
-                multipliers: []
-            }
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
+        }
         ],
     sequences: [
         {
