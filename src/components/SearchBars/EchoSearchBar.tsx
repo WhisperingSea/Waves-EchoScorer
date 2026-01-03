@@ -48,7 +48,7 @@ const EchoSearchBar: React.FC = () => {
             type="text"
             value={echoQuery}
             onChange={handleEchoSearch}
-            placeholder="Search by name..."
+            placeholder="Search by name or Echo skill description..."
           />
         </div>
         {WWSonataData.map((sonata) => (

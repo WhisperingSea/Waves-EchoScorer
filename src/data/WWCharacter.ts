@@ -2,12 +2,14 @@ import { Aalto } from "./characters/Aalto";
 import { Augusta } from "./characters/Augusta";
 import { Baizhi } from "./characters/Baizhi";
 import { Brant } from "./characters/Brant";
+import { Buling } from "./characters/Buling";
 import { Calcharo } from "./characters/Calcharo";
 import { Camellya } from "./characters/Camellya";
 import { Cantarella } from "./characters/Cantarella";
 import { Carlotta } from "./characters/Carlotta";
 import { Cartethiya } from "./characters/Cartethiya";
 import { Changli } from "./characters/Changli";
+import { Chisa } from "./characters/Chisa";
 import { Chixia } from "./characters/Chixia";
 import { Ciaccona } from "./characters/Ciaccona";
 import { Danjin } from "./characters/Danjin";
@@ -20,7 +22,9 @@ import { Jiyan } from "./characters/Jiyan";
 import { Lingyang } from "./characters/Lingyang";
 import { Lumi } from "./characters/Lumi";
 import { Lupa } from "./characters/Lupa";
+import { Lynae } from "./characters/Lynae";
 import { Mortefi } from "./characters/Mortefi";
+import { Mornye } from "./characters/Mornye";
 import { Phoebe } from "./characters/Phoebe";
 import { Phrolova } from "./characters/Phrolova";
 import { Qiuyuan } from "./characters/Qiuyuan";
@@ -159,6 +163,8 @@ export const WWCharacterData: WWCharacter[] = [
     Iuno,
     Galbrena,
     Qiuyuan,
-    //Chisa,
-    //Buling
+    Chisa,
+    Buling,
+    Lynae,
+    Mornye
 ]

@@ -1,20 +1,21 @@
+import Weapons from "../../pages/Weapon";
 import { WWCharacter } from "../WWCharacter";
 
 const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
 
-export const Chisa: WWCharacter = {
-    name: "Chisa",
-    charaId: 1508,
+export const Lynae: WWCharacter = {
+    name: "Lynae",
+    charaId: 1509,
     rarity: {
         alt: "5 Star",
         img: rarity5Star
     },
-    element: "Havoc",
-    weapon: "Broadblade",
+    element: "Spectro",
+    weapon: "Pistols",
     bio: ``,
     images: {
         portrait: "",
-        icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_57_UI.webp",
+        icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_60_UI.webp",
         model: ""
     },
     asension: {
@@ -205,6 +206,7 @@ export const Chisa: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: '',
+            skillImg: "",
             skillDescription: ``,
             skillDetailNum: [""],
             multipliers: []
@@ -232,6 +234,7 @@ export const Chisa: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: '',
+            skillImg: "",
             skillDescription: ``,
             skillDetailNum: [""],
             multipliers: []
@@ -240,6 +243,7 @@ export const Chisa: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: '',
+            skillImg: "",
             skillDescription: ``,
             skillDetailNum: [""],
             multipliers: []

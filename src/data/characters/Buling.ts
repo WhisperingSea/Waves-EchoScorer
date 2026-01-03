@@ -1,21 +1,22 @@
 import { WWCharacter } from "../WWCharacter";
 
-const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";
+const rarity4Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_4_Stars.webp";
 
-export const characterName: WWCharacter = {
-    name: "",
-    charaId: 1000,
+export const Buling: WWCharacter = {
+    name: "Buling",
+    charaId: 1307,
     rarity: {
         alt: "4 Star",
-        img: rarity5Star
+        img: rarity4Star
     },
-    element: "",
-    weapon: "",
-    bio: ``,
+    element: "Electro",
+    weapon: "Rectifier",
+    bio: `Taoist of Mengzhou, Black Shores Consultant, feng shui master, and veteran forum dweller.<br>
+    Easygoing and well-traveled, Buling will "bling" whatever you seek.`,
     images: {
-        portrait: "",
-        icon_sq: "",
-        model: ""
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_Buling_UI.webp",
+        icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_58_UI.webp",
+        model: "https://i.imgur.com/tIiW81S.png"
     },
     asension: {
         charaAsension: [
