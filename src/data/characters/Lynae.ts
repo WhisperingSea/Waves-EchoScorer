@@ -1,4 +1,3 @@
-import Weapons from "../../pages/Weapon";
 import { WWCharacter } from "../WWCharacter";
 
 const rarity5Star = "https://wuthering-waves-assets.pages.dev/icon_stars/Icon_5_Stars.webp";

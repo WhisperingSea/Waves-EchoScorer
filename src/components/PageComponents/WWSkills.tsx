@@ -87,7 +87,7 @@ const WWSkills: React.FC = () => {
           </div>
           <div className="tab">
             <div className={`skill-header ${chara?.element}`}>
-                <h2 className="skill-name">{skillId === "9" ? (skill?.skillName || "Tune Break") : skill?.skillName}</h2>
+                <h2 className="skill-name">{skillId === "9" ? (skill?.skillName || `Tune Break: ${chara?.weapon}`) : skill?.skillName}</h2>
                 {(skill?.skillImg || skillId === "9") && (
                 <img
                   className={`skill-image ${imgLoaded ? "loaded" : ""}`}
