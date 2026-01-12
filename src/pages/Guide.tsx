@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Guide.css";
 import { useDataContext } from "../contexts/CharacterDataContext";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import WWStats from "../components/PageComponents/WWStats.tsx";
 import WWSkills from "../components/PageComponents/WWSkills.tsx";
 import Footer from "../components/Common/Footer.tsx";
@@ -85,6 +85,15 @@ const Guide: React.FC = () => {
     }
   }, [chara]);
 
+  const elementImages: { [key: string]: string } = {
+    Glacio: "https://api.hakush.in/ww/UI/Static/T_IconElementIce.webp",
+    Fusion: "https://api.hakush.in/ww/UI/Static/T_IconElementFire.webp",
+    Electro: "https://api.hakush.in/ww/UI/Static/T_IconElementThunder.webp",
+    Aero: "https://api.hakush.in/ww/UI/Static/T_IconElementWind.webp",
+    Spectro: "https://api.hakush.in/ww/UI/Static/T_IconElementLight.webp",
+    Havoc: "https://api.hakush.in/ww/UI/Static/T_IconElementDark.webp",
+  };
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -103,14 +112,26 @@ const Guide: React.FC = () => {
               <div className={`guide-grid ${chara?.element}`}>
                 <div className={`guide-grid-item-1 grid-item-1-flex ${chara?.element}`}>
                   <h1 className="guide-chara-name">{chara?.name.replace("-", " ")}</h1>
-                  <p className={`paragraph guide-paragraph ${chara?.element}`}>
-                    {chara?.element}
-                  </p>
+                  {chara?.element && (
+                    <img
+                      className="element-icon"
+                      src={elementImages[chara.element]}
+                      alt={chara.element}
+                    />
+                  )}
                   <img
                     className="rarity-icon"
                     src={chara?.rarity.img}
                     alt={chara?.rarity.alt}
                   />
+                  <div className={`scorer-link ${chara?.element}`}>
+                    <Link
+                      className="scorer-link-text"
+                      to={`/echo-scorer/${chara?.name}`}
+                    >
+                      {`Scorer`}
+                    </Link>
+                  </div>
                 </div>
                 <div className={`guide-grid-item-2 ${chara?.element}`}>
                   <div className="flexbox-range">

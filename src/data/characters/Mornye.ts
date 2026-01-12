@@ -11,11 +11,12 @@ export const Mornye: WWCharacter = {
     },
     element: "Fusion",
     weapon: "Broadblade",
-    bio: ``,
+    bio: `Mornye, a Spacetrek Collective Research Institute engineer and a Department of Exostrider Engineering professor at Startorch Academy.
+    Each step on her prosthetic legs carries her toward the stars of her dreams.`,
     images: {
-        portrait: "",
+        portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_Moning_UI.webp",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_61_UI.webp",
-        model: ""
+        model: "https://i.imgur.com/VQ3tdMB.png"
     },
     asension: {
         charaAsension: [

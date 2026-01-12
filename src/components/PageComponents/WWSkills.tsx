@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDataContext } from "../../contexts/CharacterDataContext";
 import "./WWSkills.css";
+import DescriptionParser from "../Common/DescriptionParser";
 
 const WWSkills: React.FC = () => {
   const [skillId, setSkillId] = useState<string>("1");
@@ -112,12 +113,9 @@ const WWSkills: React.FC = () => {
                   onLoad={() => setImgLoaded(true)} />
                 )}
             </div>
-            <div>
+            <div className="Desc">
               {skill?.skillDescription && (
-                <div
-                  className="Desc"
-                  dangerouslySetInnerHTML={{ __html: formattedDesc }}
-                ></div>
+                <DescriptionParser description={formattedDesc as string} />
               )}
             </div>
             {skill != null && skill?.multipliers.length > 0 &&
