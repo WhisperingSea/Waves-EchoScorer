@@ -95,8 +95,8 @@ const Home: React.FC = () => {
               <div>
                 <h2 className="heading-2">Updates:</h2>
                 <ul className="update-list">
-                  <li className="update-list-item">Added characters up to Qiuyuan!</li>
-                  <li className="update-list-item">Added Weapons and echoes from Septimont!</li>
+                  <li className="update-list-item">Added characters from Lahai-Roi!</li>
+                  <li className="update-list-item">Added Weapons and echoes from Lahai-Roi!</li>
                   <li className="update-list-item">Updated character guide page!</li>
                 </ul>
               </div>
@@ -105,7 +105,7 @@ const Home: React.FC = () => {
                 <ul className="update-list">
                   <li className="update-list-item">Echo Scorer improvements</li>
                   <li className="update-list-item">
-                    Chisa and Buling!
+                    Aemeth and Luuk Herssen in 3.1!
                   </li>
                   <li className="update-list-item">Minor QoL Changes</li>
                 </ul>

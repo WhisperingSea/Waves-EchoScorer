@@ -554,18 +554,53 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
         preferedMainStat3: ["ATK%"],
         preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Heavy Attack DMG Bonus%", "ATK"]
     },
-    //TODO 2.8
     {
-        name: "Phrolova",
-        charaId: 1608,
+        name: "Chisa",
+        charaId: 1508,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },
-        preferedSonata: [],
+        preferedSonata: [SonataId.ThreadOfSeveredFate, SonataId.MidnightVeil, SonataId.SunSinkingEclipse],
         preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
-        preferedMainStat2: ["Aero DMG Bonus%", "ATK%", "Energy Regen%"],
+        preferedMainStat2: ["Havoc DMG Bonus%", "ATK%"],
         preferedMainStat3: ["ATK%"],
-        preferedSubStats: []
+        preferedSubStats: ["Crit. Rate%", "Crit. DMG%", "ATK%", "Energy Regen%", "Resonance Liberation DMG Bonus%", "ATK"]
+    },
+    {
+        name: "Buling",
+        charaId: 1307,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [SonataId.RejuvenatingGlow],
+        preferedMainStat1: ["Healing Bonus%"],
+        preferedMainStat2: ["Energy Regen%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Energy Regen%", "Crit. Rate%", "Crit. DMG%", "ATK%", "ATK"]
+    },
+    {
+        name: "Lynae",
+        charaId: 1508,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [SonataId.PactOfNeonlightLeap],
+        preferedMainStat1: ["Crit. DMG%", "Crit. Rate%"],
+        preferedMainStat2: ["Energy Regen%", "Spectro DMG Bonus%"],
+        preferedMainStat3: ["ATK%"],
+        preferedSubStats: ["Energy Regen%", "Crit. Rate%", "Crit. DMG%", "ATK%", "Basic Attack DMG Bonus%", "ATK"]
+    },
+    {
+        name: "Mornye",
+        charaId: 1508,
+        buildStats: {
+            stat1: {stat: "ATK", value: [0, 0]}
+        },
+        preferedSonata: [SonataId.RejuvenatingGlow, SonataId.HaloOfStarryRadiance],
+        preferedMainStat1: ["Healing Bonus%", "DEF%"],
+        preferedMainStat2: ["Energy Regen%", "DEF%"],
+        preferedMainStat3: ["DEF%"],
+        preferedSubStats: ["Energy Regen%", "DEF%", "DEF", "Crit. DMG%"]
     },
 ]
 
