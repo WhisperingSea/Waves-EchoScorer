@@ -17,7 +17,7 @@
   border-radius: 5px;
   z-index: 10;
   width: max-content;
-  max-width: 300px;
+  max-width: 400px;
   text-align: left;
   border: 1px solid #444;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -48,6 +48,17 @@
     font-weight: bold;
 }
 
-.hover-info-popover .Light {
-    color: #add8e6;
-}
+@media (max-width: 600px) {
+    .hover-info-popover {
+      left: 10px;
+      right: 10px;
+      transform: translateX(0);
+      width: auto;
+      max-width: calc(100vw - 20px);
+      min-width: 200px;
+    }
+  
+    .hover-info-popover::after {
+      display: none;
+    }
+  }

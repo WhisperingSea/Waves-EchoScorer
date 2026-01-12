@@ -14,6 +14,12 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sequence-header:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .sequence-info {
@@ -37,9 +43,21 @@
     margin: 0;
 }
 
+.sequence-desc-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.sequence-desc-wrapper.open {
+    max-height: 500px; /* Adjust as needed to fit content */
+    overflow: visible;
+}
+
 .sequence-desc {
     font-size: 20px;
     margin: 10px 0px;
+    padding-top: 10px;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
