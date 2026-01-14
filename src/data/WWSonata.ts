@@ -42,7 +42,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Freezing Frost",
     id: 1,
-    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Freezing_Frost.webp",
+    img: "sonata-icons/1.webp",
     twoPiece: "Glacio damage increased by 10%",
     fivePiece: "When releasing Basic Attack or Heavy Attack, Glacio damage is increased by 10%, stacking up to three times, lasting for 15 seconds",
     twoPieceEffect: {
@@ -59,7 +59,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Molten Rift",
     id: 2,
-    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Molten_Rift.webp",
+    img: "sonata-icons/2.webp",
     twoPiece: "Fusion damage is increased by 10%",
     fivePiece: "When releasing Resonance Skill, Fusion damage is increased by 30% for 15s",
     twoPieceEffect: {
@@ -76,7 +76,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Void Thunder",
     id: 3,
-    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Void_Thunder.webp",
+    img: "sonata-icons/3.webp",
     twoPiece: "Electro damage is increased by 10%",
     fivePiece: "When releasing Heavy Attack or Resonance Skill, Electro damage dealt is increased by 15%, stacking up to two times, each lasting for 15 seconds",
     twoPieceEffect: {
@@ -93,7 +93,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Sierra Gale",
     id: 4,
-    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Sierra_Gale.webp",
+    img: "sonata-icons/4.webp",
     twoPiece: "Aero DMG increased by 10%",
     fivePiece: "Aero DMG is increased by 30% for 15 seconds when Intro Skill is used",
     twoPieceEffect: {
@@ -110,7 +110,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Celestial Light",
     id: 5,
-    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Celestial_Light.webp",
+    img: "sonata-icons/5.webp",
     twoPiece: "Spectro DMG is increased by 10%",
     fivePiece: "Increases Spectro damage by 30% over 15s when releasing Intro Skill",
     twoPieceEffect: {
@@ -127,7 +127,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Sun-sinking Eclipse",
     id: 6,
-    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Sun-sinking_Eclipse.webp",
+    img: "sonata-icons/6.webp",
     twoPiece: "Havoc DMG is increased by 10%",
     fivePiece: "When releasing Basic Attack or Heavy Attack, Havoc DMG is increased by 7.5%, stacking up to four times for 15 seconds",
     twoPieceEffect: {
@@ -144,7 +144,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Rejuvenating Glow",
     id: 7,
-    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Rejuvenating_Glow.webp",
+    img: "sonata-icons/7.webp",
     twoPiece: "Healing is increased by 10%",
     fivePiece: " When healing allies, ATK for the entire team is increased by 15%, lasting 30s",
     twoPieceEffect: {
@@ -161,7 +161,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Moonlit Clouds",
     id: 8,
-    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Moonlit_Clouds.webp",
+    img: "sonata-icons/8.webp",
     twoPiece: "Energy Regen increased by 10%",
     fivePiece: "After using Outro Skill, the ATK of the next Resonator is increased by 22.5% for 15 seconds",
     twoPieceEffect: {
@@ -178,7 +178,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Lingering Tunes",
     id: 9,
-    img: "https://whisperingsea.github.io/wuthering-waves-assets/images/icon_sonata/Icon_Lingering_Tunes.webp",
+    img: "sonata-icons/9.webp",
     twoPiece: "ATK increases by 10%",
     fivePiece: "When in effect, your ATK increases by 5% every 1.5 seconds, stacking up to four times. Outro Skill DMG is increased by 60%",
     twoPieceEffect: {
@@ -195,7 +195,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Frosty Resolve",
     id: 10,
-    img: "https://wutheringlab.com/wp-content/uploads/Frosty-Resolve.webp",
+    img: "sonata-icons/10.webp",
     twoPiece: "Resonance Skill DMG increases by 12%",
     fivePiece: "Casting Resonance Skill grants 22.5% Glacio DMG Bonus for 15s and casting Resonance Liberation increases Resonance Skill DMG by 18%, lasting for 5s. This effect stacks up to 2 times.",
     twoPieceEffect: {
@@ -212,7 +212,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Eternal Radiance",
     id: 11,
-    img: "https://wutheringlab.com/wp-content/uploads/Eternal-Radiance.webp",
+    img: "sonata-icons/11.webp",
     twoPiece: "Spectro DMG Bonus increases by 10%",
     fivePiece: "Inflicting enemies with Spectro Frazzle increases Crit. Rate by 20% for 15s. Attacking enemies with 10 stacks of Spectro Frazzle grants 15% Spectro DMG Bonus for 15s.",
     twoPieceEffect: {
@@ -229,7 +229,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Midnight Veil",
     id: 12,
-    img: "https://wutheringlab.com/wp-content/uploads/Midnight-Veil.webp",
+    img: "sonata-icons/12.webp",
     twoPiece: "Havoc DMG Bonus increases by 10%",
     fivePiece: "When Outro Skill is triggered, deal additional 480% Havoc DMG to surrounding enemies, and grants the incoming Resonator 15% Havoc DMG Bonus for 15s.",
     twoPieceEffect: {
@@ -246,7 +246,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Empyrean Anthem",
     id: 13,
-    img: "https://wutheringlab.com/wp-content/uploads/Empyrean-Anthem.webp",
+    img: "sonata-icons/13.webp",
     twoPiece: "Energy Regen increases by 10%",
     fivePiece: "Increase the Resonator's Coordinated Attack DMG by 80%. Upon a critical hit of Coordinated Attack, increase the active Resonator's ATK by 20% for 4s.",
     twoPieceEffect: {
@@ -263,7 +263,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Tidebreaking Courage",
     id: 14,
-    img: "https://wutheringlab.com/wp-content/uploads/Tidebreaking-Courage.webp",
+    img: "sonata-icons/14.webp",
     twoPiece: "Energy Regen increases by 10%",
     fivePiece: "Increase the Resonator's ATK by 15%. Reaching 250% Energy Regen increases all Attribute DMG by 30% for the Resonator.",
     twoPieceEffect: {
@@ -280,7 +280,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Gust of Welkin",
     id: 15,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriWindError.webp",
+    img: "sonata-icons/15.webp",
     twoPiece: "Aero DMG increases by 10%",
     fivePiece: "Inflicting Aero Erosion on enemies increases Aero DMG for all Resonators in the team by 15%, and for the Resonator triggering this effect by an additional 15%, lasting for 20s.",
     twoPieceEffect: {
@@ -297,7 +297,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Windward Pilgrimage",
     id: 16,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriWindErrorA.webp",
+    img: "sonata-icons/16.webp",
     twoPiece: "Aero DMG increases by 10%",
     fivePiece: "Hitting a target with Aero Erosion increases Crit. Rate by 10% and grants 30% Aero DMG Bonus, lasting for 10s.",
     twoPieceEffect: {
@@ -314,7 +314,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Flaming Clawprint",
     id: 17,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriFireUltimateSkill.webp",
+    img: "sonata-icons/17.webp",
     twoPiece: "Fusion DMG increases by 10%",
     fivePiece: "Casting Resonance Liberation grants all Resonators in the team 15% Fusion DMG Bonus and the caster 20% Resonance Liberation DMG Bonus, lasting for 35s.",
     twoPieceEffect: {
@@ -331,7 +331,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Dream of the Lost",
     id: 18,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriDarkVision.webp",
+    img: "sonata-icons/18.webp",
     threePiece: "Holding 0 Resonance Energy increases Crit. Rate by 20% and grants 35% Echo Skill DMG Bonus.",
     threePieceEffect: {
       stat: "Crit Rate%",
@@ -342,7 +342,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Crown of Valor",
     id: 19,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriShield.webp",
+    img: "sonata-icons/19.webp",
     threePiece: "Upon gaining a Shield, increase the Resonator's ATK by 6% and Crit. DMG by 4% for 4s. This effect can be triggered once every 0.5s and stacks up to 5 times.",
     threePieceEffect: {
       stat: "",
@@ -353,7 +353,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Law of Harmony",
     id: 20,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriSupport.webp",
+    img: "sonata-icons/20.webp",
     threePiece: `Casting Echo Skill grants 30% Heavy Attack DMG Bonus to the caster for 4s.\n
     Additionally, all Resonators in the team gain 4% Echo Skill DMG Bonus for 30s, stacking up to 4 times. Echoes of the same name can only trigger this effect once. The record of Echo triggering this effect is cleared along with this effect. At 4 stacks, casting Echo Skill again resets the duration of this effect.`,
     threePieceEffect: {
@@ -365,7 +365,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Flamewing's Shadow",
     id: 21,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriFireA.webp",
+    img: "sonata-icons/21.webp",
     threePiece: "Dealing Echo Skill DMG increases Heavy Attack Crit. Rate by 20% for 6s. Dealing Heavy Attack DMG increases Echo Skill Crit. Rate by 20% for 6s. While both effects are active, gain 16% Fusion DMG Bonus.",
     threePieceEffect: {
       stat: "",
@@ -376,7 +376,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Thread of Severed Fate",
     id: 22,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriQianXiao.webp",
+    img: "sonata-icons/22.webp",
     threePiece: "Inflicting Havoc Bane increases the Resonator's ATK by 20% and grants 30% Resonance Liberation DMG Bonus for 5s.",
     threePieceEffect: {
       stat: "",
@@ -387,7 +387,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Pact of Neonlight Leap",
     id: 23,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriLightWeakness.webp",
+    img: "sonata-icons/23.webp",
     twoPiece: "Spectro DMG increases by 10%",
     fivePiece: "Casting Outro Skill increases the ATK of the incoming Resonator who casts Intro Skill by 15%. Each point of Tune Break Boost the incoming Resonator has additionally increases their ATK by 0.3%, up to 15%. This effect lasts for 15s, or until the Resonator is switched out.",
     twoPieceEffect: {
@@ -404,7 +404,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Halo of Starry Radiance",
     id: 24,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriCureWeakness.webp",
+    img: "sonata-icons/24.webp",
     twoPiece: "Healing Bonus increased by 10%",
     fivePiece: "When healing a Resonator in the team, every 1% of Off-Tune Buildup Rate grants a 0.2% ATK increase to all Resonators in the team for 4s, up to 25%. Effects of the same name cannot be stacked.",
     twoPieceEffect: {
@@ -421,7 +421,7 @@ export const WWSonataData: WWSonata[] = [
   {
     name: "Rite of Gilded Revelation",
     id: 25,
-    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriAttackWeakness.webp",
+    img: "sonata-icons/25.webp",
     twoPiece: "Spectro DMG increases by 10%",
     fivePiece: "Dealing Basic Attack DMG increases Spectro DMG by 10% for 5s, stacking up to 3 times. With 3 stacks, casting Resonance Liberation grants 40% Basic Attack DMG Bonus.",
     twoPieceEffect: {
