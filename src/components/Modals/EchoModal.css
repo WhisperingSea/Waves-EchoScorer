@@ -344,6 +344,26 @@ img.echo-modal-card-set {
     margin-top: 20px;
 }
 
+.echo-tab-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.echo-tab-actions .echo-modal-delete-btn {
+    width: auto;
+    min-width: 160px;
+    min-height: 2.2rem;
+    height: auto;
+    padding: 6px 14px;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+}
+
 .echo-modal-select-btn:hover {
     background-color: rgb(54, 54, 54);
 }
@@ -693,5 +713,377 @@ img.stat-Icons {
 
     .example-echo-img {
         width: 250px;
+    }
+}
+
+/* Import from Image Tab Styles */
+.calcEcho-modal-box-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80vw;
+    height: 70vh;
+    padding: 20px;
+    overflow: auto;
+    border: 1px solid azure;
+    z-index: 1001;
+    gap: 20px;
+}
+
+.calcEcho-modal-import-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+    border: 2px dashed azure;
+    border-radius: 8px;
+    min-height: 300px;
+    width: 100%;
+}
+
+.calcEcho-modal-import-results {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.import-echoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.import-echo-card {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.import-echo-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.import-echo-header h3 {
+    margin: 0;
+    color: azure;
+}
+
+.import-echo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.import-echo-selects {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.import-echo-selects label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.import-echo-selects select {
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid azure;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.import-echo-stats {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.import-echo-stats p {
+    margin: 5px 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.import-save-btn {
+    padding: 8px 16px;
+    background-color: rgba(0, 128, 128, 0.6);
+    color: white;
+    border: 1px solid azure;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.import-save-btn:hover {
+    background-color: rgba(0, 128, 128, 1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.import-bulk-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.import-save-all-btn,
+.import-reset-btn {
+    padding: 12px 24px;
+    border: 1px solid azure;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.import-save-all-btn {
+    background-color: rgba(0, 128, 128, 0.8);
+    color: white;
+}
+
+.import-save-all-btn:hover {
+    background-color: rgba(0, 128, 128, 1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+.import-reset-btn {
+    background-color: rgba(128, 0, 0, 0.6);
+    color: white;
+}
+
+.import-reset-btn:hover {
+    background-color: rgba(128, 0, 0, 0.8);
+    box-shadow: 0 0 15px rgba(255, 100, 100, 0.5);
+}
+
+.import-progress {
+    color: azure;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Echo card display (matching Test page style) */
+.echo-cards-container {
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+}
+
+.echo-cards-container h3 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.echo-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.echo-card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.echo-card-item p {
+    font-weight: bold;
+    margin: 0;
+    font-size: 14px;
+}
+
+.echo-card-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #444;
+}
+
+.echo-image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.echo-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.echo-match-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #444;
+}
+
+.echo-match-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.echo-match-full-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #111;
+    object-fit: cover;
+    display: block;
+}
+
+.sonata-icon-small-overlay {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none !important;
+    background-color: transparent !important;
+    object-fit: cover;
+    box-shadow: none !important;
+}
+
+.processing-text {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+.stats-display {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.sonata-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.dropdown-select:hover {
+    background-color: #242424;
+    border-color: #777;
+}
+
+.dropdown-select:focus {
+    outline: none;
+    border-color: #00ff00;
+    background-color: #242424;
+}
+
+.dropdown-select option {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.main-stat,
+.flat-stat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.sub-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.sub-stat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-name {
+    font-weight: 600;
+}
+
+.stat-value {
+    color: #ddd;
+}
+
+.Image-import-input {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .calcEcho-modal-box-4 {
+        width: 90vw;
+        height: auto;
+        max-height: 80vh;
+    }
+
+    .import-echoes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 481px) {
+    .calcEcho-modal-box-4 {
+        width: 95vw;
+        padding: 10px;
+    }
+
+    .import-echo-card {
+        padding: 10px;
+    }
+
+    .import-bulk-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .import-save-all-btn,
+    .import-reset-btn {
+        width: 100%;
     }
 }

@@ -592,7 +592,7 @@ export const WWCharaBuilds: WWCharaBuildTypes[] = [
     },
     {
         name: "Mornye",
-        charaId: 1508,
+        charaId: 1209,
         buildStats: {
             stat1: {stat: "ATK", value: [0, 0]}
         },

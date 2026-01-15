@@ -33,10 +33,6 @@ const TestPage: React.FC = () => {
   const [echoStats, setEchoStats] = useState<EchoStats[]>([]);
   const [ocrTexts, setOcrTexts] = useState<string[]>([]);
   const [substatImages, setSubstatImages] = useState<string[][]>([]);
-  const [echoSetImages, setEchoSetImages] = useState<string[]>([]);
-  const [echoPortraits, setEchoPortraits] = useState<string[]>([]);
-  const [matchedEchoes, setMatchedEchoes] = useState<Array<{ name: string; id: number } | null>>([]);
-  const [matchedSonatas, setMatchedSonatas] = useState<Array<{ name: string; id: number } | null>>([]);
   const [selectedEchoes, setSelectedEchoes] = useState<Array<number | null>>([]);
   const [selectedSonatas, setSelectedSonatas] = useState<Array<number | null>>([]);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -220,7 +216,7 @@ const TestPage: React.FC = () => {
 
         sourceImg.onload = async () => {
           clearTimeout(timeout);
-          let bestMatch: { name: string; id: number } | null = null;
+          let bestMatch: ({ name: string; id: number } | null) = null;
           let bestScore = -1;
 
           for (const echo of candidates) {
@@ -286,9 +282,7 @@ const TestPage: React.FC = () => {
               console.warn(`Error loading echo ${echo.name}:`, e);
             }
           }
-
           if (bestScore > 20 && bestMatch) {
-            console.log('Matched echo', bestMatch.name, 'score', bestScore.toFixed(2));
             resolve(bestMatch);
           } else {
             console.log('No echo match. Best score:', bestScore.toFixed(2));
@@ -503,7 +497,6 @@ const TestPage: React.FC = () => {
           
           // Return match if similarity > 28%
           if (bestScore > 28 && bestMatch) {
-            console.log('Matched sonata', bestMatch.name, 'score', bestScore.toFixed(2));
             resolve(bestMatch);
           } else {
             console.log('No sonata match. Best score:', bestScore.toFixed(2));
@@ -527,10 +520,6 @@ const TestPage: React.FC = () => {
     setEchoStats([]);
     setOcrTexts([]);
     setSubstatImages([]);
-    setEchoSetImages([]);
-    setEchoPortraits([]);
-    setMatchedEchoes([]);
-    setMatchedSonatas([]);
 
     const img = new Image();
     img.src = imagePath;
@@ -675,10 +664,6 @@ const TestPage: React.FC = () => {
         setOcrTexts(rawTexts);
         setEchoStats(parsedStats);
         setSubstatImages(allSubImages);
-        setEchoSetImages(allEchoSetImages);
-        setEchoPortraits(allEchoPortraits);
-        setMatchedEchoes(allMatchedEchoes);
-        setMatchedSonatas(allMatchedSonatas);
         setSelectedEchoes(allMatchedEchoes.map((echo) => echo?.id ?? null));
         setSelectedSonatas(allMatchedSonatas.map((sonata) => sonata?.id ?? null));
       } catch (error) {
@@ -687,10 +672,6 @@ const TestPage: React.FC = () => {
         setEchoStats([]);
         setOcrTexts([]);
         setSubstatImages([]);
-        setEchoSetImages([]);
-        setEchoPortraits([]);
-        setMatchedEchoes([]);
-        setMatchedSonatas([]);
         setSelectedEchoes([]);
         setSelectedSonatas([]);
       }
@@ -749,17 +730,28 @@ const TestPage: React.FC = () => {
               return (
                 <div key={index} className="echo-card-item">
                   <p>Echo {index + 1}</p>
-                  <img src={echoImage} alt={`Echo ${index + 1}`} />
+                  <div className="echo-image-wrapper">
+                    <img src={echoImage} alt={`Echo ${index + 1}`} />
+                  </div>
                   {echoStats[index] ? (
                     <div className="stats-display">
                       <div className="echo-match-header">
                         {selectedEchoImg ? (
                           <>
-                            <img
-                              src={selectedEchoImg}
-                              alt={selectedEchoData?.name}
-                              className="echo-match-full-image"
-                            />
+                            <div className="echo-match-image-wrapper">
+                              <img
+                                src={selectedEchoImg}
+                                alt={selectedEchoData?.name}
+                                className="echo-match-full-image"
+                              />
+                              {sonataIconSrc && (
+                                <img
+                                  src={sonataIconSrc}
+                                  alt={selectedSonataData?.name}
+                                  className="sonata-icon-small-overlay"
+                                />
+                              )}
+                            </div>
                             <select
                               className="dropdown-select"
                               value={currentEchoId ?? ""}
@@ -817,13 +809,6 @@ const TestPage: React.FC = () => {
                             </option>
                           ))}
                         </select>
-                        {sonataIconSrc && (
-                          <img
-                            src={sonataIconSrc}
-                            alt={selectedSonataData?.name}
-                            className="sonata-icon-small"
-                          />
-                        )}
                       </div>
                       <div className="main-stat">
                         <span className="stat-name">{echoStats[index].mainStat}</span>

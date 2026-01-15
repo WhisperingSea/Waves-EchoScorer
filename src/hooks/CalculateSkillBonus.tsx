@@ -33,7 +33,7 @@ export function BasicAttackBonus() {
     } else {
       setAdditionalBasicDamage2(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (sequence.charaId === selectedCharacterId) {
@@ -119,7 +119,7 @@ export function HeavyAttackBonus() {
     } else {
       setAdditionalHeavyDamage2(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (sequence.charaId === selectedCharacterId) {
@@ -207,7 +207,7 @@ export function RSkillBonus() {
     } else {
       setAdditionalRSkillDamage2(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (sequence.charaId === selectedCharacterId) {
@@ -299,7 +299,7 @@ export function RLiberationBonus() {
     } else {
       setAdditionalRLiberationDamage2(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (sequence.charaId === selectedCharacterId) {

@@ -82,7 +82,7 @@ export function AttackCalc() {
     });
 
     setEchoPassive(totalEchoPassive);
-  }, [echoStatsArray]);
+  }, [echoStats]);
 
   useEffect(() => {
     if (skillLevels.InherantSkill1.Buff === "ATK") {
@@ -100,7 +100,7 @@ export function AttackCalc() {
     } else {
       setAdditionalPercent2(0);
     }
-  });
+  }, [skillLevels]);
 
   const weaponAtk = weaponStats.primaryStatValue || 0;
   const weaponAtkPercent =
@@ -219,7 +219,7 @@ export function HealthCalc() {
     });
 
     setEchoPassive(totalEchoPassive);
-  }, [echoStatsArray]);
+  }, [echoStats]);
 
   const calculatedHp = Math.floor(baseHp * (hpMulti / 10000) || 0);
 
@@ -320,7 +320,7 @@ export function DefenseCalc() {
     } else {
       setAdditionalPercent(0);
     }
-  });
+  }, [skillLevels]);
 
   const echoStatsArray = Object.values(echoStats);
   const baseHp = charaStats?.stats.base_def as number;

@@ -3,12 +3,14 @@ import { useEchoes } from "../../contexts/CalcEchoContext";
 import { useEchoContext } from "../../contexts/EchoDataContext";
 import "./EchoModal.css";
 import { WWSonataData } from "../../data/WWSonata";
+import { WWEchoesJSON } from "../../data/WWEchoes";
 import { useLocalStorageContext } from "../../contexts/LocalStorageContext";
 import EchoComp from "../Cards/EchoComp";
 import { useEchoScanner } from "../../hooks/EchoScanner";
 import { Icons } from "../../data/Icons.ts";
 import StoreEchoFilter from "./StoreEchoFilter.tsx";
 import { useSearchFilter } from "../../contexts/SearchFilterContext.tsx";
+import { useEchoOCR } from "../../hooks/useEchoOCR";
 
 interface EchoFeaturesModalProps {
   onClose: () => void;
@@ -23,6 +25,19 @@ interface FilterState {
   subStats: string[];
 }
 
+interface ProcessedEchoData {
+  mainStat: string;
+  mainValue: string;
+  flatStat: string;
+  flatValue: string;
+  subStats: Array<{ stat: string; value: string }>;
+  matchedSonataId: number | null;
+  matchedEchoId: number | null;
+  selectedSonataId: number | null;
+  selectedEchoId: number | null;
+  echoImage?: string;
+}
+
 const EchoModal: React.FC<EchoFeaturesModalProps> = ({
   onClose,
   index,
@@ -30,10 +45,11 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
 }) => {
   const { echoStats, setEchoStats, sonataGroup, sonataGroup2 } = useEchoes();
   const { echoes } = useEchoContext();
-  const { storedEcho, selectedStoreEcho, setSelectedStoreEcho, removeEcho } =
+  const { storedEcho, selectedStoreEcho, setSelectedStoreEcho, removeEcho, addEcho, addEchoBatch } =
     useLocalStorageContext();
   const { filteredStoreEchoes } = useSearchFilter();
   const { processImages, processedImages, isProcessing } = useEchoScanner();
+  const { processEchoImage } = useEchoOCR();
   const [FilteredEchoes, setFilteredEchoes] = useState<any[]>([]);
   const [activeTab, setActiveTab] = useState<number>(!noSelect ? 1 : 2);
   const [newEcho, setNewEcho] = useState(true);
@@ -54,7 +70,161 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
   const [imgReset, setImgReset] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
+  const [importImageUrl, setImportImageUrl] = useState<string | null>(null);
+  const [isImporting, setIsImporting] = useState(false);
+  const [processedEchoes, setProcessedEchoes] = useState<ProcessedEchoData[]>([]);
+  const [importProgress, setImportProgress] = useState<string>("");
+  const [savedEchoes, setSavedEchoes] = useState<Record<number, boolean>>({});
   const W = window.innerWidth;
+
+  const normalizePercentValue = (stat: string, raw: string | number) => {
+    const str = String(raw).trim();
+    const num = parseFloat(str);
+    if (!Number.isFinite(num)) return 0;
+
+    // If the raw value explicitly has %, it's a percentage - just return the number
+    if (str.includes("%")) {
+      return num;
+    }
+
+    // If no % in the value, check if it should be scaled
+    // Only scale very small decimals (< 1) for percentage stats
+    const statText = stat.toLowerCase();
+    const looksLikePercentStat =
+      statText.includes("%") ||
+      statText.includes("crit") ||
+      statText.includes("bonus") ||
+      statText.includes("regen") ||
+      statText.includes("rate") ||
+      statText.includes("energy");
+
+    // Scale only true decimals (0.44 -> 44), not already-formatted values
+    if (looksLikePercentStat && num > 0 && num < 1) {
+      return num * 100;
+    }
+
+    return num;
+  };
+
+  const normalizeStatName = (stat: string, value?: string | number) => {
+    if (!stat) return "";
+    
+    const cleaned = stat
+      .trim()
+      .replace(/\s+/g, " ")
+      .replace(/^Crit\s+/, "Crit. ")
+      .replace(/Crit\.?\s+(DMG|Rate)/, (match, suffix) => `Crit. ${suffix}`)
+      .replace(/(\w)\s+(Bonus)/, "$1 $2");
+
+    // Reject obvious OCR errors
+    const lower = cleaned.toLowerCase();
+    if (lower === "trash" || lower.length === 0 || lower.includes("error")) {
+      return "";
+    }
+
+    // Exact stat names expected by Echo Scorer (from WWEchoStats and WWSubstats)
+    const validStats = [
+      "HP", "DEF", "ATK",
+      "HP%", "DEF%", "ATK%",
+      "Crit. Rate%", "Crit. DMG%",
+      "Energy Regen%",
+      "Healing Bonus%",
+      "Glacio DMG Bonus%",
+      "Fusion DMG Bonus%",
+      "Electro DMG Bonus%",
+      "Aero DMG Bonus%",
+      "Spectro DMG Bonus%",
+      "Havoc DMG Bonus%",
+      "Basic Attack DMG Bonus%", 
+      "Heavy Attack DMG Bonus%",
+      "Resonance Skill DMG Bonus%", 
+      "Resonance Liberation DMG Bonus%"
+    ];
+
+    // PRIORITY: Special handling for ATK/DEF/HP: determine if flat or percentage based on value
+    // This must be checked BEFORE exact match, so threshold logic takes precedence
+    if (value !== undefined) {
+      const valueStr = String(value).replace("%", "").trim();
+      const num = parseFloat(valueStr);
+      if (cleaned === "ATK" || cleaned.toLowerCase() === "atk") {
+        // ATK%: 6.4-11.6 | ATK flat: 30-60
+        return num < 20 ? "ATK%" : "ATK";
+      }
+      if (cleaned === "DEF" || cleaned.toLowerCase() === "def") {
+        // DEF%: 8.1-14.7 | DEF flat: 40-70
+        return num < 20 ? "DEF%" : "DEF";
+      }
+      if (cleaned === "HP" || cleaned.toLowerCase() === "hp") {
+        // HP%: 6.4-11.6 | HP flat: 320-580
+        return num < 100 ? "HP%" : "HP";
+      }
+    }
+
+    // Try exact match first (after ATK/DEF/HP check)
+    if (validStats.includes(cleaned)) {
+      return cleaned;
+    }
+
+    // Try case-insensitive match
+    const match = validStats.find(v => v.toLowerCase() === lower);
+    if (match) {
+      return match;
+    }
+
+    // Handle common patterns and add % suffix if needed
+    const withPercent = cleaned.endsWith("%") ? cleaned : cleaned + "%";
+    const matchWithPercent = validStats.find(v => v.toLowerCase() === withPercent.toLowerCase());
+    if (matchWithPercent) {
+      return matchWithPercent;
+    }
+
+    // If it looks like a bonus but doesn't have DMG, add it
+    if (cleaned.includes("Bonus") && !cleaned.includes("DMG")) {
+      const asDMGBonus = cleaned.replace("Bonus", "DMG Bonus");
+      const dmgMatch = validStats.find(v => v.toLowerCase() === (asDMGBonus + "%").toLowerCase());
+      if (dmgMatch) {
+        return dmgMatch;
+      }
+    }
+
+    // If no match and it's obviously incomplete/corrupted, return empty
+    if (cleaned.length < 2) return "";
+    
+    return cleaned;
+  };
+
+  const isPercentStat = (stat: string) => {
+    // If stat name ends with %, it's definitely a percentage
+    if (stat.endsWith("%")) return true;
+    
+    // For ATK/DEF/HP without %, they're flat values
+    const lower = stat.toLowerCase();
+    if (lower === "atk" || lower === "def" || lower === "hp") return false;
+    
+    // Everything else with these keywords is percentage
+    return (
+      lower.includes("bonus") ||
+      lower.includes("rate") ||
+      lower.includes("regen") ||
+      lower.includes("energy")
+    );
+  };
+
+  const formatStatValue = (stat: string, value: number) => {
+    if (!Number.isFinite(value)) return "";
+    if (isPercentStat(stat)) {
+      const val = value % 1 === 0 ? value : Number(value.toFixed(1));
+      return `${val}%`;
+    }
+    return value % 1 === 0 ? String(value) : value.toFixed(1);
+  };
+
+  const handleClearAllSavedEchoes = () => {
+    const confirmed = window.confirm("Clear all saved echoes?");
+    if (!confirmed) return;
+    storedEcho.forEach((e) => removeEcho(e.storeId));
+    setSavedEchoes({});
+  };
 
   const openFilter = () => {
     setOpen(true);
@@ -142,32 +312,32 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
         name,
         cost,
         set,
-        mainStat,
-        mainStatValue,
+        mainStat: normalizeStatName(mainStat, mainStatValue),
+        mainStatValue: normalizePercentValue(mainStat, mainStatValue),
         selectedSubStat1: {
           ...prevEcho[index].selectedSubStat1,
-          stat: substat1,
-          value: substat1value,
+          stat: normalizeStatName(substat1, substat1value),
+          value: normalizePercentValue(substat1, substat1value),
         },
         selectedSubStat2: {
           ...prevEcho[index].selectedSubStat2,
-          stat: substat2,
-          value: substat2value,
+          stat: normalizeStatName(substat2, substat2value),
+          value: normalizePercentValue(substat2, substat2value),
         },
         selectedSubStat3: {
           ...prevEcho[index].selectedSubStat3,
-          stat: substat3,
-          value: substat3value,
+          stat: normalizeStatName(substat3, substat3value),
+          value: normalizePercentValue(substat3, substat3value),
         },
         selectedSubStat4: {
           ...prevEcho[index].selectedSubStat4,
-          stat: substat4,
-          value: substat4value,
+          stat: normalizeStatName(substat4, substat4value),
+          value: normalizePercentValue(substat4, substat4value),
         },
         selectedSubStat5: {
           ...prevEcho[index].selectedSubStat5,
-          stat: substat5,
-          value: substat5value,
+          stat: normalizeStatName(substat5, substat5value),
+          value: normalizePercentValue(substat5, substat5value),
         },
       },
     }));
@@ -224,6 +394,209 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
     setImgReset(false);
   };
 
+  const handleImportImageFile = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImportImageUrl(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleProcessImportImage = async () => {
+    if (!importImageUrl) return;
+    setIsImporting(true);
+    setImportProgress("Processing image...");
+    try {
+      const result = await processEchoImage(importImageUrl, (progress) => {
+        setImportProgress(`Processing: ${progress}`);
+      });
+      setProcessedEchoes(
+        result.echoImages.map((img, idx) => ({
+          mainStat: result.echoStats[idx]?.mainStat || "",
+          mainValue: result.echoStats[idx]?.mainValue || "",
+          flatStat: result.echoStats[idx]?.flatStat || "",
+          flatValue: result.echoStats[idx]?.flatValue || "",
+          subStats: result.echoStats[idx]?.subStats || [],
+          matchedSonataId: result.matchedSonatas[idx]?.id || null,
+          matchedEchoId: result.matchedEchoes[idx]?.id || null,
+          selectedSonataId: result.matchedSonatas[idx]?.id || null,
+          selectedEchoId: result.matchedEchoes[idx]?.id || null,
+          echoImage: img,
+        }))
+      );
+      setSavedEchoes({});
+      setImportProgress("");
+    } catch (error) {
+      console.error("Error processing image:", error);
+      setImportProgress("Error processing image");
+    } finally {
+      setIsImporting(false);
+    }
+  };
+
+  const handleSaveAllImportedEchoes = () => {
+    // Build array of echoes to persist to local storage
+    const echoesToAdd = processedEchoes
+      .filter((echo) => echo.selectedEchoId)
+      .map((echo) => {
+        const echoData = WWEchoesJSON.find((e) => e.id === echo.selectedEchoId);
+        if (!echoData) return null;
+        
+        return {
+          name: echoData.name,
+          cost: echoData.cost,
+          id: echoData.id,
+          set: echo.selectedSonataId || 1,
+          mainStat: normalizeStatName(echo.mainStat, echo.mainValue),
+          mainStatValue: normalizePercentValue(echo.mainStat, echo.mainValue),
+          selectedSubStat1: {
+            stat: normalizeStatName(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
+          },
+          selectedSubStat2: {
+            stat: normalizeStatName(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
+          },
+          selectedSubStat3: {
+            stat: normalizeStatName(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
+          },
+          selectedSubStat4: {
+            stat: normalizeStatName(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
+          },
+          selectedSubStat5: {
+            stat: normalizeStatName(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
+          },
+        };
+      })
+      .filter((echo): echo is NonNullable<typeof echo> => echo !== null);
+
+    // Add all echoes in one batch to get unique IDs
+    if (echoesToAdd.length > 0) {
+      addEchoBatch(echoesToAdd);
+    }
+
+    // Apply directly into Echo Scorer slots 1-5 in order
+    setEchoStats((prev) => {
+      const updated = { ...prev };
+      processedEchoes.forEach((echo, idx) => {
+        const slot = idx + 1; // fill slots 1..5
+        if (slot <= 5 && echo.selectedEchoId) {
+          const echoData = WWEchoesJSON.find((e) => e.id === echo.selectedEchoId);
+          if (echoData) {
+            updated[slot] = {
+              ...updated[slot],
+              id: echoData.id,
+              name: echoData.name,
+              cost: echoData.cost,
+              set: echo.selectedSonataId || 1,
+              mainStat: normalizeStatName(echo.mainStat, echo.mainValue),
+              mainStatValue: normalizePercentValue(echo.mainStat, echo.mainValue),
+              selectedSubStat1: {
+                stat: normalizeStatName(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
+                value: normalizePercentValue(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
+              },
+              selectedSubStat2: {
+                stat: normalizeStatName(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
+                value: normalizePercentValue(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
+              },
+              selectedSubStat3: {
+                stat: normalizeStatName(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
+                value: normalizePercentValue(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
+              },
+              selectedSubStat4: {
+                stat: normalizeStatName(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
+                value: normalizePercentValue(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
+              },
+              selectedSubStat5: {
+                stat: normalizeStatName(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
+                value: normalizePercentValue(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
+              },
+            };
+          }
+        }
+      });
+      return updated;
+    });
+
+    setProcessedEchoes([]);
+    setImportImageUrl(null);
+    setSavedEchoes({});
+    closeModal();
+  };
+
+  const handleSaveIndividualEcho = (idx: number) => {
+    const echo = processedEchoes[idx];
+    if (echo.selectedEchoId) {
+      const echoData = WWEchoesJSON.find((e) => e.id === echo.selectedEchoId);
+      if (echoData) {
+        const newEcho = {
+          name: echoData.name,
+          cost: echoData.cost,
+          id: echoData.id,
+          set: echo.selectedSonataId || 1,
+          mainStat: normalizeStatName(echo.mainStat, echo.mainValue),
+          mainStatValue: normalizePercentValue(echo.mainStat, echo.mainValue),
+          selectedSubStat1: {
+            stat: normalizeStatName(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
+          },
+          selectedSubStat2: {
+            stat: normalizeStatName(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
+          },
+          selectedSubStat3: {
+            stat: normalizeStatName(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
+          },
+          selectedSubStat4: {
+            stat: normalizeStatName(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
+          },
+          selectedSubStat5: {
+            stat: normalizeStatName(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
+            value: normalizePercentValue(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
+          },
+        };
+        addEcho(newEcho);
+        setSavedEchoes((prev) => ({ ...prev, [idx]: true }));
+      }
+    }
+  };
+
+  const handleUpdateProcessedEcho = (
+    idx: number,
+    field: "selectedSonataId" | "selectedEchoId",
+    value: number
+  ) => {
+    const updated = [...processedEchoes];
+    updated[idx] = { ...updated[idx], [field]: value };
+    setProcessedEchoes(updated);
+  };
+
+  const resolveSonataIconSrc = (id: number | null) => {
+    if (!id) return "";
+    const sonata = WWSonataData.find((s) => s.id === id);
+    if (!sonata) return "";
+    if (/^https?:\/\//.test(sonata.img)) return sonata.img;
+    const base = import.meta.env.BASE_URL ?? "/";
+    return `${base}${sonata.img.replace(/^\//, "")}`;
+  };
+
+  const resolveEchoImageSrc = (id: number | null) => {
+    if (!id) return "";
+    const echo = WWEchoesJSON.find((e) => e.id === id);
+    if (!echo) return "";
+    if (/^https?:\/\//.test(echo.img)) return echo.img;
+    const base = import.meta.env.BASE_URL ?? "/";
+    return `${base}${echo.img.replace(/^\//, "")}`;
+  };
+
   const icon = Object.values(Icons);
 
   useEffect(() => {
@@ -271,8 +644,6 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
     }
   }, [icon, Icons, StoreSelectedEcho]);
 
-  console.log("is processing", isProcessing);
-
   return (
     <>
       <div className="overlay-echo-modal" onClick={handleOverlayClick}>
@@ -305,6 +676,14 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
             }}
           >
             Add Echoes
+          </button>
+          <button
+            className="CalcEcho-modal-btn"
+            onClick={() => {
+              setActiveTab(4), setIsVisible2(false);
+            }}
+          >
+            Import from Image
           </button>
           {W < 768 && activeTab === 3 ? (
             <>
@@ -349,6 +728,16 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
           )}
           {activeTab === 2 && (
             <div className="calcEcho-modal-box-2">
+              {storedEcho.length > 0 && (
+                <div className="echo-tab-actions">
+                  <button
+                    className="echo-modal-delete-btn"
+                    onClick={handleClearAllSavedEchoes}
+                  >
+                    Clear Saved Echoes
+                  </button>
+                </div>
+              )}
               <div className="calcEcho-modal-store-box">
                 {filteredStoreEchoes &&
                   filteredStoreEchoes
@@ -418,11 +807,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                           .replace("%", "")
                           .replace("DMG Bonus", "Bonus")}
                       </h3>
-                      <h3>
-                        {StoreSelectedEcho.mainStat.includes("%")
-                          ? `${StoreSelectedEcho.mainStatValue.toFixed(1)}%`
-                          : `${StoreSelectedEcho.mainStatValue}`}
-                      </h3>
+                      <h3>{formatStatValue(StoreSelectedEcho.mainStat, StoreSelectedEcho.mainStatValue)}</h3>
                     </div>
                     <h3 className="no-margin">Sub Stats -</h3>
                     <div className="echo-modal-stats-box">
@@ -433,11 +818,10 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                           .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
-                        {StoreSelectedEcho.selectedSubStat1.stat.includes("%")
-                          ? `${StoreSelectedEcho.selectedSubStat1.value.toFixed(
-                              1
-                            )}%`
-                          : `${StoreSelectedEcho.selectedSubStat1.value}`}
+                        {formatStatValue(
+                          StoreSelectedEcho.selectedSubStat1.stat,
+                          StoreSelectedEcho.selectedSubStat1.value
+                        )}
                       </h3>
                     </div>
                     <div className="echo-modal-stats-box">
@@ -448,11 +832,10 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                           .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
-                        {StoreSelectedEcho.selectedSubStat2.stat.includes("%")
-                          ? `${StoreSelectedEcho.selectedSubStat2.value.toFixed(
-                              1
-                            )}%`
-                          : `${StoreSelectedEcho.selectedSubStat2.value}`}
+                        {formatStatValue(
+                          StoreSelectedEcho.selectedSubStat2.stat,
+                          StoreSelectedEcho.selectedSubStat2.value
+                        )}
                       </h3>
                     </div>
                     <div className="echo-modal-stats-box">
@@ -463,11 +846,10 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                           .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
-                        {StoreSelectedEcho.selectedSubStat3.stat.includes("%")
-                          ? `${StoreSelectedEcho.selectedSubStat3.value.toFixed(
-                              1
-                            )}%`
-                          : `${StoreSelectedEcho.selectedSubStat3.value}`}
+                        {formatStatValue(
+                          StoreSelectedEcho.selectedSubStat3.stat,
+                          StoreSelectedEcho.selectedSubStat3.value
+                        )}
                       </h3>
                     </div>
                     <div className="echo-modal-stats-box">
@@ -478,11 +860,10 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                           .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
-                        {StoreSelectedEcho.selectedSubStat4.stat.includes("%")
-                          ? `${StoreSelectedEcho.selectedSubStat4.value.toFixed(
-                              1
-                            )}%`
-                          : `${StoreSelectedEcho.selectedSubStat4.value}`}
+                        {formatStatValue(
+                          StoreSelectedEcho.selectedSubStat4.stat,
+                          StoreSelectedEcho.selectedSubStat4.value
+                        )}
                       </h3>
                     </div>
                     <div className="echo-modal-stats-box">
@@ -493,11 +874,10 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                           .replace("DMG Bonus", "Bonus")}
                       </h3>
                       <h3>
-                        {StoreSelectedEcho.selectedSubStat5.stat.includes("%")
-                          ? `${StoreSelectedEcho.selectedSubStat5.value.toFixed(
-                              1
-                            )}%`
-                          : `${StoreSelectedEcho.selectedSubStat5.value}`}
+                        {formatStatValue(
+                          StoreSelectedEcho.selectedSubStat5.stat,
+                          StoreSelectedEcho.selectedSubStat5.value
+                        )}
                       </h3>
                     </div>
                     <div className="echo-modal-btn-box">
@@ -727,6 +1107,191 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                   </p>
                 </div>
               </div>
+            </div>
+          )}
+          {activeTab === 4 && (
+            <div className="calcEcho-modal-box-4">
+              {processedEchoes.length === 0 ? (
+                <div className="calcEcho-modal-import-box">
+                  <label htmlFor="Import-Echo-Image" className="custom-file-upload">
+                    Choose Image
+                  </label>
+                  <input
+                    className="Image-import-input"
+                    id="Import-Echo-Image"
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImportImageFile}
+                  />
+                  {importImageUrl && (
+                    <button
+                      className="image-process-btn"
+                      onClick={handleProcessImportImage}
+                      disabled={isImporting}
+                    >
+                      {isImporting ? "Processing..." : "Process Image"}
+                    </button>
+                  )}
+                  {importProgress && (
+                    <p className="import-progress">{importProgress}</p>
+                  )}
+                  {importImageUrl && (
+                    <img
+                      src={importImageUrl}
+                      alt="Import Preview"
+                      style={{
+                        maxWidth: W < 481 ? "200px" : "300px",
+                        height: "auto",
+                        marginTop: "10px",
+                      }}
+                    />
+                  )}
+                </div>
+              ) : (
+                <div className="echo-cards-container">
+                  <div className="echo-cards-grid">
+                    {processedEchoes.map((echo, index) => {
+                      const currentSonataId = echo.selectedSonataId;
+                      const currentEchoId = echo.selectedEchoId;
+                      const selectedSonataData = currentSonataId
+                        ? WWSonataData.find((s) => s.id === currentSonataId)
+                        : null;
+                      const selectedEchoData = currentEchoId
+                        ? WWEchoesJSON.find((e) => e.id === currentEchoId)
+                        : null;
+                      const echoCandidate = currentSonataId
+                        ? WWEchoesJSON.filter((e) => e.sonataGroup.includes(currentSonataId))
+                        : [];
+                      const sonataIconSrc = resolveSonataIconSrc(currentSonataId);
+                      const selectedEchoImg = resolveEchoImageSrc(currentEchoId);
+
+                      return (
+                        <div key={index} className="echo-card-item">
+                          <p>Echo {index + 1}</p>
+                          <div className="stats-display">
+                            <div className="echo-match-header">
+                              {selectedEchoImg ? (
+                                <>
+                                  <div className="echo-match-image-wrapper">
+                                    <img
+                                      src={selectedEchoImg}
+                                      alt={selectedEchoData?.name}
+                                      className="echo-match-full-image"
+                                    />
+                                    {sonataIconSrc && (
+                                      <img
+                                        src={sonataIconSrc}
+                                        alt={selectedSonataData?.name}
+                                        className="sonata-icon-small-overlay"
+                                      />
+                                    )}
+                                  </div>
+                                  <select
+                                    className="dropdown-select"
+                                    value={currentEchoId ?? ""}
+                                    onChange={(e) => {
+                                      handleUpdateProcessedEcho(
+                                        index,
+                                        "selectedEchoId",
+                                        e.target.value ? parseInt(e.target.value) : 0
+                                      );
+                                    }}
+                                  >
+                                    <option value="">-- Select Echo --</option>
+                                    {echoCandidate.map((candidate) => (
+                                      <option key={candidate.id} value={candidate.id}>
+                                        {candidate.name}
+                                      </option>
+                                    ))}
+                                  </select>
+                                </>
+                              ) : (
+                                <select
+                                  className="dropdown-select"
+                                  value={currentEchoId ?? ""}
+                                  onChange={(e) => {
+                                    handleUpdateProcessedEcho(
+                                      index,
+                                      "selectedEchoId",
+                                      e.target.value ? parseInt(e.target.value) : 0
+                                    );
+                                  }}
+                                >
+                                  <option value="">-- Select Echo --</option>
+                                  {echoCandidate.map((candidate) => (
+                                    <option key={candidate.id} value={candidate.id}>
+                                      {candidate.name}
+                                    </option>
+                                  ))}
+                                </select>
+                              )}
+                            </div>
+                            <div className="sonata-header">
+                              <select
+                                className="dropdown-select"
+                                value={currentSonataId ?? ""}
+                                onChange={(e) => {
+                                  const newSonataId = e.target.value ? parseInt(e.target.value) : 0;
+                                  handleUpdateProcessedEcho(index, "selectedSonataId", newSonataId);
+                                  handleUpdateProcessedEcho(index, "selectedEchoId", 0);
+                                }}
+                              >
+                                <option value="">-- Select Sonata --</option>
+                                {WWSonataData.map((sonata) => (
+                                  <option key={sonata.id} value={sonata.id}>
+                                    {sonata.name}
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
+                            <div className="main-stat">
+                              <span className="stat-name">{echo.mainStat}</span>
+                              <span className="stat-value">{echo.mainValue}</span>
+                            </div>
+                            <div className="flat-stat">
+                              <span className="stat-name">{echo.flatStat}</span>
+                              <span className="stat-value">{echo.flatValue}</span>
+                            </div>
+                            <div className="sub-stats">
+                              {echo.subStats.map((sub, sIdx) => (
+                                <div key={sIdx} className="sub-stat">
+                                  <span className="stat-name">{sub.stat}</span>
+                                  <span className="stat-value">{sub.value}</span>
+                                </div>
+                              ))}
+                            </div>
+                            <button
+                              className="import-save-btn"
+                              onClick={() => handleSaveIndividualEcho(index)}
+                              disabled={!!savedEchoes[index]}
+                            >
+                              {savedEchoes[index] ? "Echo saved!" : "Save This Echo"}
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="import-bulk-actions">
+                    <button
+                      className="import-save-all-btn"
+                      onClick={handleSaveAllImportedEchoes}
+                    >
+                      Save All & Apply
+                    </button>
+                    <button
+                      className="import-reset-btn"
+                      onClick={() => {
+                        setProcessedEchoes([]);
+                        setImportImageUrl(null);
+                        setSavedEchoes({});
+                      }}
+                    >
+                      Import Another Image
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

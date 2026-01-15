@@ -42,7 +42,7 @@ export function CritcalCalc() {
     } else {
       setAdditionalPercent(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (sequence.charaId === selectedCharacterId) {
@@ -162,7 +162,7 @@ export function CritcalDamageCalc() {
     } else {
       setAdditionalPercent2(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (sequence.charaId === selectedCharacterId) {

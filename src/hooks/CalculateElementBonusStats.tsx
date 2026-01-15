@@ -28,7 +28,7 @@ export function GlacioDamageCalc() {
     } else {
       setInherentBonus(0);
     }
-  });
+  }, [skillLevels]);
   useEffect(() => {
     if (sonataGroup === "Freezing Frost" || sonataGroup2 === "Freezing Frost") {
       setSonata2PieceBonus(10);
@@ -41,7 +41,7 @@ export function GlacioDamageCalc() {
     } else {
       setSonata5PieceBonus(0);
     }
-  });
+  }, [sonataGroup, sonataGroup2, sonataEffectStacks]);
 
   const forteBonus = Array.isArray(forteStat)
     ? forteStat?.reduce((total, stat) => {
@@ -100,7 +100,7 @@ export function FusionDamageCalc() {
     } else {
       setInherentBonus2(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (sonataGroup === "Molten Rift" || sonataGroup2 === "Molten Rift") {
@@ -114,7 +114,7 @@ export function FusionDamageCalc() {
     } else {
       setSonata5PieceBonus(0);
     }
-  });
+  }, [sonataGroup, sonataGroup2, sonataEffectStacks]);
 
   const forteBonus = Array.isArray(forteStat)
     ? forteStat?.reduce((total, stat) => {
@@ -165,7 +165,7 @@ export function ElectroDamageCalc() {
     } else {
       setInherentBonus(0);
     }
-  });
+  }, [skillLevels]);
   useEffect(() => {
     if (sonataGroup === "Void Thunder" || sonataGroup2 === "Void Thunder") {
       setSonata2PieceBonus(10);
@@ -178,7 +178,7 @@ export function ElectroDamageCalc() {
     } else {
       setSonata5PieceBonus(0);
     }
-  });
+  }, [sonataGroup, sonataGroup2, sonataEffectStacks]);
 
   const forteBonus = Array.isArray(forteStat)
     ? forteStat?.reduce((total, stat) => {
@@ -236,7 +236,7 @@ export function AeroDamageCalc() {
     } else {
       setInherentBonus2(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (sonataGroup === "Sierra Gale" || sonataGroup2 === "Sierra Gale") {
@@ -250,7 +250,7 @@ export function AeroDamageCalc() {
     } else {
       setSonata5PieceBonus(0);
     }
-  });
+  }, [sonataGroup, sonataGroup2, sonataEffectStacks]);
 
   const forteBonus = Array.isArray(forteStat)
     ? forteStat?.reduce((total, stat) => {
@@ -300,7 +300,7 @@ export function SpectroDamageCalc() {
     } else {
       setInherentBonus(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (
@@ -320,7 +320,7 @@ export function SpectroDamageCalc() {
     } else {
       setSonata5PieceBonus(0);
     }
-  });
+  }, [sonataGroup, sonataGroup2, sonataEffectStacks]);
 
   const forteBonus = Array.isArray(forteStat)
     ? forteStat?.reduce((total, stat) => {
@@ -370,7 +370,7 @@ export function HavocDamageCalc() {
     } else {
       setInherentBonus(0);
     }
-  });
+  }, [skillLevels]);
 
   useEffect(() => {
     if (
@@ -390,7 +390,7 @@ export function HavocDamageCalc() {
     } else {
       setSonata5PieceBonus(0);
     }
-  });
+  }, [sonataGroup, sonataGroup2, sonataEffectStacks]);
 
   const forteBonus = Array.isArray(forteStat)
     ? forteStat?.reduce((total, stat) => {

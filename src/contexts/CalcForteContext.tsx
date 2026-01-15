@@ -4,6 +4,7 @@ import React, {
   useState,
   ReactNode,
   SetStateAction,
+  useMemo,
 } from "react";
 
 interface ForteStat {
@@ -94,10 +95,14 @@ export const CalcForteProvider: React.FC<CalcForteProviderProps> = ({
       Value2: 0,
     },
   });
+
+  const value = useMemo(
+    () => ({ forteStats, setForteStats, skillLevels, setSkillLevels }),
+    [forteStats, skillLevels]
+  );
+
   return (
-    <CalcForteContext.Provider
-      value={{ forteStats, setForteStats, skillLevels, setSkillLevels }}
-    >
+    <CalcForteContext.Provider value={value}>
       {children}
     </CalcForteContext.Provider>
   );

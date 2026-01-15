@@ -1,4 +1,3 @@
-import Sidebar from "../components/Common/Sidebar";
 import { SonataId } from "./WWSonata";
 
 export interface WWEchoes {

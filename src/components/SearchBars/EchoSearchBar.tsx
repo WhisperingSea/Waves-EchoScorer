@@ -19,7 +19,6 @@ const EchoSearchBar: React.FC = () => {
   const [sonata2, setSonata2] = useState<string | undefined>("");
   const [sonata5, setSonata5] = useState<string | undefined>("");
   const [sonata3, setSonata3] = useState<string | undefined>("");
-  const [sonataName, setSonataName] = useState<string | undefined>("");
   const [activeEchoGroup, setActiveEchoGroup] = useState<number>(0);
 
   const sonataGroup = WWSonataData.find((s) => s.id === selectedEchoGroup);
@@ -34,7 +33,6 @@ const EchoSearchBar: React.FC = () => {
       setSonata2(sonataGroup?.twoPiece);
       setSonata5(sonataGroup?.fivePiece);
       setSonata3(sonataGroup?.threePiece);
-      setSonataName(sonataGroup?.name);
     }
   });
 

@@ -25,6 +25,7 @@ interface Echo {
 interface StorageEchoProps {
   storedEcho: Echo[];
   addEcho: (echo: Omit<Echo, "storeId">) => void;
+  addEchoBatch: (echoes: Omit<Echo, "storeId">[]) => void;
   removeEcho: (id: number) => void;
   updateEcho: (
     storeId: number,
@@ -89,6 +90,20 @@ export const LocalStorageContextProvider: React.FC<
     });
   };
 
+  const addEchoBatch = (echoes: Omit<Echo, "storeId">[]) => {
+    setStoredEcho((prevItems) => {
+      let currentId = nextId;
+      const newItems = echoes.map((echo) => {
+        const newItem = { ...echo, storeId: currentId };
+        currentId++;
+        return newItem;
+      });
+      const updatedItems = [...prevItems, ...newItems];
+      setNextId(currentId);
+      return updatedItems;
+    });
+  };
+
   const removeEcho = (storeId: number) => {
     setStoredEcho((prevItems) => {
       const updatedItems = prevItems.filter((item) => item.storeId !== storeId);
@@ -113,6 +128,7 @@ export const LocalStorageContextProvider: React.FC<
       value={{
         storedEcho,
         addEcho,
+        addEchoBatch,
         removeEcho,
         updateEcho,
         selectedStoreEcho,
