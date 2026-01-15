@@ -2306,6 +2306,29 @@ export const WWWeaponsJSON: WWWeapons[] = [
     source: "Gacha"
   },
   {
+    name: "Kumokiri",
+    id: 21010056,
+    rarity: 5,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon21010056_UI.webp",
+    effect: `ATK is increased by {0}. When the wielder casts Intro Skill or inflicts Negative Statuses, they gain {1} Resonance Liberation DMG Bonus, stacking up to 3 times for 15s.<br>
+    At max stacks, when Resonators in the team inflict Negative Statuses, they gain {2} All-Attribute DMG Bonus for 15s. Effects of the same name cannot be stacked.`,
+    array0: ["12%", "15%", "18%", "21%", "24%"],
+    array1: ["8%", "10%", "12%", "14%", "16%"],
+    array2: ["24%", "30%", "36%", "42%", "48%"],
+    array3: [""],
+    array4: [""],
+    array5: [""],
+    array6: [""],
+    array7: [""],
+    weaponType: WWWeaponTypes.Broadblade,
+    level: 90,
+    statPrimary: "ATK",
+    statPrimaryValue: 47,
+    statSecondary: "Crit. Rate",
+    statSecondaryValue: 8,
+    source: "Gacha"
+  },
+  {
     name: "Radiance Cleaver",
     id: 21010045,
     rarity: 5,
