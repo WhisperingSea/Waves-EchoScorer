@@ -167,7 +167,7 @@ export const SearchFilterProvider: React.FC<{ children: ReactNode }> = ({
     // Filter echoes (WWEchoesJSON)
     if (echoQuery) {
       echoes = echoes.filter((echo) =>
-        echo.name.toLowerCase().includes(echoQuery.toLowerCase())
+        echo.name.toLowerCase().includes(echoQuery.toLowerCase()) || echo.echoSkill.toLowerCase().includes(echoQuery.toLowerCase())
       );
     }
 

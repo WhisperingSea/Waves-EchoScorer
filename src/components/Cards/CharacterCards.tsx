@@ -23,7 +23,7 @@ const Card: React.FC = () => {
                 )}`}
               >
                 <div
-                  className="card"
+                  className={`card ${item.rarity.alt.charAt(0)}-star`}
                   onClick={() => setSelectedCharacterId(item.charaId)}
                 >
                   <div className="top">
@@ -33,7 +33,7 @@ const Card: React.FC = () => {
                       alt={item.name}
                     />
                   </div>
-                  <p className="bottom">{item.name}</p>
+                  <p className="bottom">{item.name.replace("-", " ")}</p>
                 </div>
               </Link>
             ))) : (

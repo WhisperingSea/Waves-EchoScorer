@@ -33,28 +33,184 @@
     text-align: center;
 }
 
-.Glacio, .Ice {
+
+.Glacio,
+.Ice {
     color: rgb(115, 194, 226);
 }
 
-.Fusion, .Fire {
+.Fusion,
+.Fire {
     color: rgb(211, 77, 77);
 }
 
-.Electro, .Thunder {
+.Electro,
+.Thunder {
     color: rgb(197, 56, 197);
 }
 
-.Aero, .Wind {
+.Aero,
+.Wind {
     color: rgb(123, 207, 172);
 }
 
-.Spectro, .Light {
+.Spectro,
+.Light {
     color: rgb(206, 180, 31);
 }
 
-.Havoc, .Dark {
+.Havoc,
+.Dark {
     color: rgb(196, 40, 134);
+}
+.guide-grid.Glacio .slider-input::-webkit-slider-thumb,
+.multi-link.Glacio ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(135deg, #0f0f0f 0%, #73c2e2 40%, #a8d8f0 100%);
+    box-shadow: 0 4px 12px rgba(115, 194, 226, 0.4);
+}
+.guide-grid.Fusion .slider-input::-webkit-slider-thumb,
+.multi-link.Fusion ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(135deg, #0f0f0f 0%, #d34d4d 40%, #ff6b6b 100%);
+    box-shadow: 0 4px 12px rgba(211, 77, 77, 0.4);
+}
+.guide-grid.Electro .slider-input::-webkit-slider-thumb,
+.multi-link.Electro ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(135deg, #0f0f0f 0%, #c538c5 40%, #e065e0 100%);
+    box-shadow: 0 4px 12px rgba(197, 56, 197, 0.4);
+}
+.guide-grid.Aero .slider-input::-webkit-slider-thumb,
+.multi-link.Aero ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(135deg, #0f0f0f 0%, #7bcfac 40%, #9de2c5 100%);
+    box-shadow: 0 4px 12px rgba(123, 207, 172, 0.4);
+}
+.guide-grid.Spectro .slider-input::-webkit-slider-thumb,
+.multi-link.Spectro ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(135deg, #0f0f0f 0%, #ceb41f 40%, #f5d542 100%);
+    box-shadow: 0 4px 12px rgba(206, 180, 31, 0.4);
+}
+.guide-grid.Havoc .slider-input::-webkit-slider-thumb,
+.multi-link.Havoc ~ .multi-tab .slider-multi-input::-webkit-slider-thumb {
+    background: linear-gradient(135deg, #0f0f0f 0%, #c42886 40%, #e04ba0 100%);
+    box-shadow: 0 4px 12px rgba(196, 40, 134, 0.4);
+}
+
+.chara-name.Glacio {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #73c2e2, #a8d8f0, transparent) 1;
+}
+
+.center-header.Glacio,
+.heading-2.Glacio,
+.skill-header.Glacio,
+.sequence-box.Glacio,
+.guide-grid.Glacio,
+.guide-grid-item-1.Glacio,
+.page-link-grid.Glacio,
+.multi-link.Glacio, .multi-flex.Glacio,
+.sticky-flexbox.Glacio button {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, transparent, #73c2e2, #a8d8f0, #73c2e2, transparent) 1;
+}
+
+.chara-name.Fusion {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #d34d4d, #ff6b6b, transparent) 1;
+}
+
+.center-header.Fusion,
+.heading-2.Fusion,
+.skill-header.Fusion,
+.sequence-box.Fusion,
+.guide-grid.Fusion,
+.guide-grid-item-1.Fusion,
+.page-link-grid.Fusion,
+.multi-link.Fusion, .multi-flex.Fusion,
+.sticky-flexbox.Fusion button {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, transparent, #d34d4d, #ff6b6b, #d34d4d, transparent) 1;
+}
+
+.chara-name.Electro {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #c538c5, #e065e0, transparent) 1;
+}
+
+.center-header.Electro,
+.heading-2.Electro,
+.skill-header.Electro,
+.sequence-box.Electro,
+.guide-grid.Electro,
+.guide-grid-item-1.Electro,
+.page-link-grid.Electro,
+.multi-link.Electro, .multi-flex.Electro,
+.sticky-flexbox.Electro button {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, transparent, #c538c5, #e065e0, #c538c5, transparent) 1;
+}
+
+.chara-name.Aero {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #7bcfac, #9de2c5, transparent) 1;
+}
+
+.center-header.Aero,
+.heading-2.Aero,
+.skill-header.Aero,
+.sequence-box.Aero,
+.guide-grid.Aero,
+.guide-grid-item-1.Aero,
+.page-link-grid.Aero,
+.multi-link.Aero,
+.multi-link.Aero, .multi-flex.Aero,
+.sticky-flexbox.Aero button {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, transparent, #7bcfac, #9de2c5, #7bcfac, transparent) 1;
+}
+
+.chara-name.Spectro {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #ceb41f, #f5d542, transparent) 1;
+}
+
+.center-header.Spectro,
+.heading-2.Spectro,
+.skill-header.Spectro,
+.sequence-box.Spectro,
+.guide-grid.Spectro,
+.guide-grid-item-1.Spectro,
+.page-link-grid.Spectro,
+.multi-link.Spectro, .multi-flex.Spectro,
+.sticky-flexbox.Spectro button {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, transparent, #ceb41f, #f5d542, #ceb41f, transparent) 1;
+}
+
+.chara-name.Havoc {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #c42886, #e04ba0, transparent) 1;
+}
+
+.center-header.Havoc,
+.heading-2.Havoc,
+.skill-header.Havoc,
+.sequence-box.Havoc,
+.guide-grid.Havoc,
+.guide-grid-item-1.Havoc,
+.page-link-grid.Havoc,
+.multi-link.Havoc, .multi-flex.Havoc,
+.sticky-flexbox.Havoc button {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, transparent, #c42886, #e04ba0, #c42886, transparent) 1;
+}
+
+.sequence-box.Glacio:last-child,
+.sequence-box.Fusion:last-child,
+.sequence-box.Electro:last-child,
+.sequence-box.Aero:last-child,
+.sequence-box.Spectro:last-child,
+.sequence-box.Havoc:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
 .Healing {
@@ -70,10 +226,11 @@
 }
 
 .Title {
-    margin: 20px 0px;
+    margin: 20px 0px 0px;
     font-size: 24px;
     display: block;
     font-weight: 700;
+    color: #a89969;
 }
 
 .Highlight {
@@ -94,7 +251,7 @@
     }
 }
 
-@media (max-width: 7670px) and (min-width: 320px) {
+@media (max-width: 767px) and (min-width: 320px) {
     .Title {
         margin: 10px 0;
         font-size: 22px;
@@ -103,6 +260,57 @@
     .heading-2 {
         font-size: 25px;
         margin: 5px 10px;
+    }
+
+    .gap-start {
+        margin-top: 10px;
+    }
+
+    .guide-grid-item-3.Glacio,
+    .guide-grid-item-3.Fusion,
+    .guide-grid-item-3.Electro,
+    .guide-grid-item-3.Aero,
+    .guide-grid-item-3.Spectro,
+    .guide-grid-item-3.Havoc {
+        border-bottom: 3px solid;
+    }
+
+    .guide-grid-item-3.Glacio {
+        border-image: linear-gradient(90deg, transparent, #73c2e2, #a8d8f0, #73c2e2, transparent) 1;
+    }
+
+    .guide-grid-item-3.Fusion {
+        border-image: linear-gradient(90deg, transparent, #d34d4d, #ff6b6b, #d34d4d, transparent) 1;
+    }
+
+    .guide-grid-item-3.Electro {
+        border-image: linear-gradient(90deg, transparent, #c538c5, #e065e0, #c538c5, transparent) 1;
+    }
+
+    .guide-grid-item-3.Aero {
+        border-image: linear-gradient(90deg, transparent, #7bcfac, #9de2c5, #7bcfac, transparent) 1;
+    }
+
+    .guide-grid-item-3.Spectro {
+        border-image: linear-gradient(90deg, transparent, #ceb41f, #f5d542, #ceb41f, transparent) 1;
+    }
+
+    .guide-grid-item-3.Havoc {
+        border-image: linear-gradient(90deg, transparent, #c42886, #e04ba0, #c42886, transparent) 1;
+    }
+
+    .guide-grid {
+        grid-template-rows: repeat(3, max-content);
+        border-bottom: none;
+    }
+
+    .guide-grid.Glacio,
+    .guide-grid.Fusion,
+    .guide-grid.Electro,
+    .guide-grid.Aero,
+    .guide-grid.Spectro,
+    .guide-grid.Havoc {
+        border-bottom: none;
     }
 }
 

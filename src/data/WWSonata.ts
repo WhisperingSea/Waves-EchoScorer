@@ -2,10 +2,40 @@ export interface WWSonata {
     name: string;
     id: number;
     img: string;
-    twoPiece: string;
-    fivePiece: string
-    twoPieceEffect: {stat: string, value: number, stackable: number}
-    fivePieceEffect: {stat: string, value: number, stackable: number}
+    twoPiece?: string
+    fivePiece?: string
+    threePiece?: string
+    twoPieceEffect?: {stat: string, value: number, stackable: number}
+    fivePieceEffect?: {stat: string, value: number, stackable: number}
+    threePieceEffect?: {stat: string, value: number, stackable: number}
+}
+
+export const enum SonataId {
+  FreezingFrost = 1,
+  MoltenRift = 2,
+  VoidThunder = 3,
+  SierraGale = 4,
+  CelestialLight = 5,
+  SunSinkingEclipse = 6,
+  RejuvenatingGlow = 7,
+  MoonlitClouds = 8,
+  LingeringTunes = 9,
+  FrostyResolve = 10,
+  EternalRadiance = 11,
+  MidnightVeil = 12,
+  EmpyreanAnthem = 13,
+  TidebreakingCourage = 14,
+  GustOfWelkin = 15,
+  WindwardPilgrimage = 16,
+  FlamingClawprint = 17,
+  DreamOfTheLost = 18,
+  CrownOfValor = 19,
+  LawOfHarmony = 20,
+  FlamewingsShadow = 21,
+  ThreadOfSeveredFate = 22,
+  PactOfNeonlightLeap = 23,
+  HaloOfStarryRadiance = 24,
+  RiteOfGildedRevelation = 25
 }
 
 export const WWSonataData: WWSonata[] = [
@@ -263,5 +293,146 @@ export const WWSonataData: WWSonata[] = [
       value: 15,
       stackable: 0
     },
+  },
+  {
+    name: "Windward Pilgrimage",
+    id: 16,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriWindErrorA.webp",
+    twoPiece: "Aero DMG increases by 10%",
+    fivePiece: "Hitting a target with Aero Erosion increases Crit. Rate by 10% and grants 30% Aero DMG Bonus, lasting for 10s.",
+    twoPieceEffect: {
+      stat: "Aero DMG Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "Aero DMG Bonus",
+      value: 15,
+      stackable: 0
+    },
+  },
+  {
+    name: "Flaming Clawprint",
+    id: 17,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriFireUltimateSkill.webp",
+    twoPiece: "Fusion DMG increases by 10%",
+    fivePiece: "Casting Resonance Liberation grants all Resonators in the team 15% Fusion DMG Bonus and the caster 20% Resonance Liberation DMG Bonus, lasting for 35s.",
+    twoPieceEffect: {
+      stat: "Fusion DMG Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "Fusion DMG Bonus",
+      value: 15,
+      stackable: 0
+    },
+  },
+  {
+    name: "Dream of the Lost",
+    id: 18,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriDarkVision.webp",
+    threePiece: "Holding 0 Resonance Energy increases Crit. Rate by 20% and grants 35% Echo Skill DMG Bonus.",
+    threePieceEffect: {
+      stat: "Crit Rate%",
+      value: 20,
+      stackable: 0
+    }
+  },
+  {
+    name: "Crown of Valor",
+    id: 19,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriShield.webp",
+    threePiece: "Upon gaining a Shield, increase the Resonator's ATK by 6% and Crit. DMG by 4% for 4s. This effect can be triggered once every 0.5s and stacks up to 5 times.",
+    threePieceEffect: {
+      stat: "",
+      value: 0,
+      stackable: 5
+    }
+  },
+  {
+    name: "Law of Harmony",
+    id: 20,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriSupport.webp",
+    threePiece: `Casting Echo Skill grants 30% Heavy Attack DMG Bonus to the caster for 4s.\n
+    Additionally, all Resonators in the team gain 4% Echo Skill DMG Bonus for 30s, stacking up to 4 times. Echoes of the same name can only trigger this effect once. The record of Echo triggering this effect is cleared along with this effect. At 4 stacks, casting Echo Skill again resets the duration of this effect.`,
+    threePieceEffect: {
+      stat: "",
+      value: 0,
+      stackable: 0
+    }
+  },
+  {
+    name: "Flamewing's Shadow",
+    id: 21,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriFireA.webp",
+    threePiece: "Dealing Echo Skill DMG increases Heavy Attack Crit. Rate by 20% for 6s. Dealing Heavy Attack DMG increases Echo Skill Crit. Rate by 20% for 6s. While both effects are active, gain 16% Fusion DMG Bonus.",
+    threePieceEffect: {
+      stat: "",
+      value: 0,
+      stackable: 0
+    }
+  },
+  {
+    name: "Thread of Severed Fate",
+    id: 22,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriQianXiao.webp",
+    threePiece: "Inflicting Havoc Bane increases the Resonator's ATK by 20% and grants 30% Resonance Liberation DMG Bonus for 5s.",
+    threePieceEffect: {
+      stat: "",
+      value: 0,
+      stackable: 0
+    }
+  },
+  {
+    name: "Pact of Neonlight Leap",
+    id: 23,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriLightWeakness.webp",
+    twoPiece: "Spectro DMG increases by 10%",
+    fivePiece: "Casting Outro Skill increases the ATK of the incoming Resonator who casts Intro Skill by 15%. Each point of Tune Break Boost the incoming Resonator has additionally increases their ATK by 0.3%, up to 15%. This effect lasts for 15s, or until the Resonator is switched out.",
+    twoPieceEffect: {
+      stat: "Spectro DMG Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "ATK",
+      value: 15,
+      stackable: 0
+    }
+  },
+  {
+    name: "Halo of Starry Radiance",
+    id: 24,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriCureWeakness.webp",
+    twoPiece: "Healing Bonus increased by 10%",
+    fivePiece: "When healing a Resonator in the team, every 1% of Off-Tune Buildup Rate grants a 0.2% ATK increase to all Resonators in the team for 4s, up to 25%. Effects of the same name cannot be stacked.",
+    twoPieceEffect: {
+      stat: "Healing Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "ATK",
+      value: 0.2,
+      stackable: 0
+    }
+  },
+  {
+    name: "Rite of Gilded Revelation",
+    id: 25,
+    img: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriAttackWeakness.webp",
+    twoPiece: "Spectro DMG increases by 10%",
+    fivePiece: "Dealing Basic Attack DMG increases Spectro DMG by 10% for 5s, stacking up to 3 times. With 3 stacks, casting Resonance Liberation grants 40% Basic Attack DMG Bonus.",
+    twoPieceEffect: {
+      stat: "Spectro DMG Bonus",
+      value: 10,
+      stackable: 0
+    },
+    fivePieceEffect: {
+      stat: "",
+      value: 0,
+      stackable: 0
+    }
   }
 ]

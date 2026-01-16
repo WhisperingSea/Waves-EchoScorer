@@ -361,6 +361,7 @@ export const Lumi: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Escorting',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengT.webp",
             skillDescription: `The incoming Resonator has their Resonance Skill DMG Amplified by {0} for 10s or until they are switched out.`,
             skillDetailNum: ["38%"],
             multipliers: []
@@ -477,6 +478,7 @@ export const Lumi: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'Pathfinding',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengD1.webp",
             skillDescription: `Gain {0} Electro DMG Bonus when in Red Light Mode.`,
             skillDetailNum: ["10%"],
             multipliers: []
@@ -485,8 +487,18 @@ export const Lumi: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Expediting',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDengdeng/SP_IconDengdengD2.webp",
             skillDescription: `Casting <span class="Highlight">Energized Pounce</span> or <span class="Highlight">Energized Rebound</span> increases ATK by {0} for 5s.`,
             skillDetailNum: ["10%"],
+            multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
             multipliers: []
         }
     ],

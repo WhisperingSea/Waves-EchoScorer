@@ -10,7 +10,8 @@ const Home: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [link, setLink] = useState<string>("");
 
-  const chara = Object.values(characters).find((i) => i.charaId === 1407);
+  const chara = Object.values(characters).find((i) => i.charaId === 1209);
+
 
   const openFeatureModal1 = () => {
     setOpen(true);
@@ -70,6 +71,14 @@ const Home: React.FC = () => {
                       Click here to go to Scorer
                     </Link>
                   </div>
+                  <div className="guide-link">
+                    <Link
+                      className="guide-link-text"
+                      to={`/characters/${chara?.name}`}
+                    >
+                      Click here to go to Character Page
+                    </Link>
+                  </div>
                 </div>
                 <div className="card-guide-image-box">
                   <img
@@ -84,18 +93,19 @@ const Home: React.FC = () => {
           <section className="section">
             <div className="updates-data">
               <div>
-                <h2 className="heading-2">Updates :</h2>
+                <h2 className="heading-2">Updates:</h2>
                 <ul className="update-list">
-                  <li className="update-list-item">Added Ciaccona!</li>
-                  <li className="update-list-item">Added Woodland Aria!</li>
+                  <li className="update-list-item">Added characters from Lahai-Roi!</li>
+                  <li className="update-list-item">Added Weapons and echoes from Lahai-Roi!</li>
+                  <li className="update-list-item">Updated character guide page!</li>
                 </ul>
               </div>
               <div>
-                <h2 className="heading-2">Upcoming Updates :</h2>
+                <h2 className="heading-2">Upcoming Updates:</h2>
                 <ul className="update-list">
                   <li className="update-list-item">Echo Scorer improvements</li>
                   <li className="update-list-item">
-                    2.4 Resonators (Carthethiya and Lupa), Weapons & Echoes
+                    Aemeth and Luuk Herssen in 3.1!
                   </li>
                   <li className="update-list-item">Minor QoL Changes</li>
                 </ul>
@@ -136,7 +146,7 @@ const Home: React.FC = () => {
         <footer>
           <Footer />
         </footer>
-      </div>
+      </div >
     </>
   );
 };

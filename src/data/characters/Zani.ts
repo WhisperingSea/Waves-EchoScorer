@@ -439,6 +439,7 @@ export const Zani: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Beacon For the Future',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconZanni/SP_IconZanniT.webp",
             skillDescription: `Attack the target, dealing <span class="Light">Spectro DMG</span> equal to {0} of Zani's ATK and removing all stacks of Heliacal Ember inflicted upon the target. Each stack increases the DMG dealt by {1}. This DMG is considered <span class="Highlight">Spectro Frazzle DMG</span>. The Spectro DMG dealt by other Resonators in the team to the target marked by <span class="Highlight">Heliacal Ember</span> is Amplified by {2} for {3}s.`,
             skillDetailNum: ["150%", "10%", "20%", "20"],
             multipliers: []
@@ -541,6 +542,7 @@ export const Zani: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'Quick Response',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconZanni/SP_IconZanniD1.webp",
             skillDescription: `Casting Intro Skill <span class="Highlight">Immediate Execution</span> gives {0} Spectro DMG Bonus for {1}s.`,
             skillDetailNum: ["12%", "14"],
             multipliers: []
@@ -549,8 +551,18 @@ export const Zani: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Fear No Pain',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconZanni/SP_IconZanniD2.webp",
             skillDescription: `When in <span class="Highlight">Ready Stance</span>, all DMG taken is reduced by {0}.`,
             skillDetailNum: ["40%"],
+            multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
             multipliers: []
         }
     ],

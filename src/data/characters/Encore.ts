@@ -273,7 +273,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             },
             {
                 skillId: 3,
-                typeName: 'Resonance Liveration',
+                typeName: 'Resonance Liberation',
                 skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillEncore3.webp",
                 skillName: 'Cosmos Rave',
                 skillDescription: `As Encore loses control, Cosmos breaks free and wreaks havoc on its surroundings.\n
@@ -414,6 +414,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
                 skillId: 5,
                 typeName: 'Outro Skill',
                 skillName: 'Thermal Field',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconAnke/SP_IconAnkeT.webp",
                 skillDescription: `Encore generates a Flame Zone centered around skill target, with a radius of {0}m. Targets inside the Flame Zone are continuously burned, suffering <span class="Fire">Fusion DMG</span> equal to {2} of Encore's ATK every {1}s for {3}s.`,
                 skillDetailNum: ["3", "1.5", "176.76%", "6"],
                 multipliers: []
@@ -475,6 +476,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
                 skillId: 7,
                 typeName: 'Inherent Skill',
                 skillName: 'Angry Cosmos',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconAnke/SP_IconAnkeD1.webp",
                 skillDescription: `During the Resonance Liberation <span class="Highlight">Cosmos Rave</span>, when Encore's HP is above {0}, DMG dealt is increased by {1}.`,
                 skillDetailNum: ["70%", "10%"],
                 multipliers: []
@@ -483,18 +485,20 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
                 skillId: 8,
                 typeName: 'Inherent Skill',
                 skillName: 'Woolies Cheer Dance',
+                skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconAnke/SP_IconAnkeD2.webp",
                 skillDescription: `When Resonance Skill <span class="Highlight">Flaming Woolies</span> or Resonance Skill <span class="Highlight">Cosmos: Rampage</span> is cast, Encore's Fusion DMG Bonus is increased by {0} for {1}s.`,
                 skillDetailNum: ["10%", "10"],
                 multipliers: []
             },
-            {
-                skillId: 9,
-                typeName: 'Inherent Skill',
-                skillName: 'Skillful Cooking',
-                skillDescription: `Has a chance to produce special dishes when cooking.`,
-                skillDetailNum: [],
-                multipliers: []
-            }
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
+        }
         ],
     sequences: [
         {
@@ -506,7 +510,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             sequenceBuffAtrribute: ["Fusion Damage Bonus"],
             sequenceBuff: [3],
             stacks: 4,
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1203_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_AnkeM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -516,7 +520,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             sequenceBuffType: "No Buff",
             sequenceBuffAtrribute: [""],
             sequenceBuff: [],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1203_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_AnkeM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -526,7 +530,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             sequenceBuffType: "Skill Forte Buff",
             sequenceBuffAtrribute: ["Forte Circuit"],
             sequenceBuff: [40],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1203_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_AnkeM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -536,7 +540,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Fusion Damage Bonus"],
             sequenceBuff: [20],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1203_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_AnkeM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -546,7 +550,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             sequenceBuffType: "Character Buff",
             sequenceBuffAtrribute: ["Resonance Skill Damage Bonus"],
             sequenceBuff: [35],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1203_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_AnkeM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -557,7 +561,7 @@ With Cosmos and Cloudy, Encore travels all over the world!`,
             sequenceBuffAtrribute: ["ATK"],
             sequenceBuff: [5],
             stacks: 5,
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1203_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_AnkeM6_UI.webp"
         }
     ]
 }

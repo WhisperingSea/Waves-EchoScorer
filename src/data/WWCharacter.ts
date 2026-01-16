@@ -1,22 +1,33 @@
 import { Aalto } from "./characters/Aalto";
+import { Augusta } from "./characters/Augusta";
 import { Baizhi } from "./characters/Baizhi";
 import { Brant } from "./characters/Brant";
+import { Buling } from "./characters/Buling";
 import { Calcharo } from "./characters/Calcharo";
 import { Camellya } from "./characters/Camellya";
 import { Cantarella } from "./characters/Cantarella";
 import { Carlotta } from "./characters/Carlotta";
+import { Cartethiya } from "./characters/Cartethiya";
 import { Changli } from "./characters/Changli";
+import { Chisa } from "./characters/Chisa";
 import { Chixia } from "./characters/Chixia";
 import { Ciaccona } from "./characters/Ciaccona";
 import { Danjin } from "./characters/Danjin";
 import { Encore } from "./characters/Encore";
+import { Galbrena } from "./characters/Galbrena";
+import { Iuno } from "./characters/Iuno";
 import { Jianxin } from "./characters/Jianxin";
 import { Jinhsi } from "./characters/Jinhsi";
 import { Jiyan } from "./characters/Jiyan";
 import { Lingyang } from "./characters/Lingyang";
 import { Lumi } from "./characters/Lumi";
+import { Lupa } from "./characters/Lupa";
+import { Lynae } from "./characters/Lynae";
 import { Mortefi } from "./characters/Mortefi";
+import { Mornye } from "./characters/Mornye";
 import { Phoebe } from "./characters/Phoebe";
+import { Phrolova } from "./characters/Phrolova";
+import { Qiuyuan } from "./characters/Qiuyuan";
 import { Roccia } from "./characters/Roccia";
 import { RoverAero } from "./characters/Rover-Aero"
 import { RoverHavoc } from "./characters/Rover-Havoc";
@@ -144,5 +155,16 @@ export const WWCharacterData: WWCharacter[] = [
     RoverAero,
     Cantarella,
     Zani,
-    Ciaccona
+    Ciaccona,
+    Cartethiya,
+    Lupa,
+    Phrolova,
+    Augusta,
+    Iuno,
+    Galbrena,
+    Qiuyuan,
+    Chisa,
+    Buling,
+    Lynae,
+    Mornye
 ]
