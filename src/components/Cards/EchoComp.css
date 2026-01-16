@@ -129,13 +129,21 @@
 }
 
 .calcEcho-stat-reset {
-    height: 1.8rem;
+    height: 2rem; /* match select/input height */
     background-color: transparent;
     border: 1px solid azure;
     color: white;
-    padding: 0 20px;
+    padding: 0 16px;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 0;
+    width: 100%;
+    min-width: 0; /* enable ellipsis inside grid/flex */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .calcEcho-stat-reset:hover {
@@ -278,13 +286,17 @@
 }
 
 .calcEcho-box-8 {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* match two-column layout */
+    gap: 10px;
     grid-column: 3 / 9;
     grid-row: 7 / 8;
 }
 
 .calcEcho-box-8-add {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     grid-column: 1 / 9;
     align-items: center;
     grid-row: 8 / 9;
@@ -340,8 +352,9 @@
     }
 
     .calcEcho-box-8-add {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
-        flex-wrap: nowrap;
     }
 
     .calcEcho-stat-reset {

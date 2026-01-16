@@ -70,11 +70,16 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
   const [imgReset, setImgReset] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
+  const [addActiveTab, setAddActiveTab] = useState<"manual" | "game" | "discord">("manual");
   const [importImageUrl, setImportImageUrl] = useState<string | null>(null);
   const [isImporting, setIsImporting] = useState(false);
   const [processedEchoes, setProcessedEchoes] = useState<ProcessedEchoData[]>([]);
   const [importProgress, setImportProgress] = useState<string>("");
   const [savedEchoes, setSavedEchoes] = useState<Record<number, boolean>>({});
+  // Manual add search/filter state
+  const [manualSearch, setManualSearch] = useState<string>("");
+  const [manualSet, setManualSet] = useState<number>(0); // 0 = All sets
+  const [manualCost, setManualCost] = useState<number>(0); // 0 = All costs
   const W = window.innerWidth;
 
   const normalizePercentValue = (stat: string, raw: string | number) => {
@@ -363,10 +368,18 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
   }, [StoreSelectedEcho, W]);
 
   const handleStoreAddEcho = (name: string, cost: number, id: number) => {
-    setEchoStats((prev) => ({
-      ...prev,
-      6: { ...prev[index], name: name, cost: cost, id: id },
-    }));
+    setEchoStats((prev) => {
+      const targetEcho = Object.values(echoes).find((e) => e.id === id);
+      const defaultSet = targetEcho?.sonataGroup?.[0] ?? prev[index].set ?? 1;
+      const computedSet =
+        manualSet !== 0 && targetEcho?.sonataGroup?.includes(manualSet)
+          ? manualSet
+          : defaultSet;
+      return {
+        ...prev,
+        6: { ...prev[index], name, cost, id, set: computedSet },
+      };
+    });
   };
 
   useEffect(() => {
@@ -644,6 +657,23 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
     }
   }, [icon, Icons, StoreSelectedEcho]);
 
+  // Derived: filtered echoes for manual add tab (by name, set, cost)
+  const manualFilteredEchoes = Object.values(echoes)
+    .filter((e) => {
+      const matchesName = manualSearch.trim().length === 0
+        ? true
+        : e.name.toLowerCase().includes(manualSearch.trim().toLowerCase());
+      const matchesSet = manualSet === 0 ? true : e.sonataGroup.includes(manualSet);
+      const matchesCost = manualCost === 0 ? true : e.cost === manualCost;
+      return matchesName && matchesSet && matchesCost;
+    })
+    .sort((a, b) => {
+      if (a.cost !== b.cost) return a.cost - b.cost;
+      return a.name.localeCompare(b.name);
+    });
+
+  const manualEchoCosts = Array.from(new Set(Object.values(echoes).map((e) => e.cost))).sort((a, b) => a - b);
+
   return (
     <>
       <div className="overlay-echo-modal" onClick={handleOverlayClick}>
@@ -654,49 +684,36 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
         />
         <div className="CalcEcho-Modal-Container">
           {!noSelect && (
-            <button
-              className="CalcEcho-modal-btn"
-              onClick={() => setActiveTab(1)}
-            >
-              Echoes
-            </button>
-          )}
-          <button
-            className="CalcEcho-modal-btn"
-            onClick={() => {
-              setActiveTab(2), setIsVisible2(false);
-            }}
-          >
-            My Echoes
-          </button>
-          <button
-            className="CalcEcho-modal-btn"
-            onClick={() => {
-              setActiveTab(3), setIsVisible2(false);
-            }}
-          >
-            Add Echoes
-          </button>
-          <button
-            className="CalcEcho-modal-btn"
-            onClick={() => {
-              setActiveTab(4), setIsVisible2(false);
-            }}
-          >
-            Import from Image
-          </button>
-          {W < 768 && activeTab === 3 ? (
-            <>
+            <div className="echo-modal-tabs-full">
               <button
-                className="CalcEcho-modal-btn"
-                onClick={() => setIsVisible2(true)}
+                className={`echo-tab-full ${activeTab === 1 ? "active" : ""}`}
+                onClick={() => setActiveTab(1)}
               >
-                Image Proc
+                Echoes
               </button>
-            </>
-          ) : (
-            ""
+            </div>
           )}
+          <div className="echo-modal-tabs-split">
+            <button
+              className={`echo-tab-half ${activeTab === 2 ? "active" : ""}`}
+              onClick={() => {
+                setActiveTab(2);
+                setIsVisible2(false);
+              }}
+            >
+              My Echoes
+            </button>
+            <button
+              className={`echo-tab-half ${activeTab === 3 ? "active" : ""}`}
+              onClick={() => {
+                setActiveTab(3);
+                setIsVisible2(false);
+              }}
+            >
+              Add Echoes
+            </button>
+          </div>
+          
           {activeTab === 1 && !noSelect && (
             <div className="calcEcho-modal-box">
               {activeTab === 1 &&
@@ -728,207 +745,198 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
           )}
           {activeTab === 2 && (
             <div className="calcEcho-modal-box-2">
-              {storedEcho.length > 0 && (
-                <div className="echo-tab-actions">
+              <div className="echo-actions-row">
+                {/* TODO: Fix filter functionality and re-enable */}
+                {/* <div className="echo-filter-btn-wrapper" onClick={openFilter}>
+                  <img
+                    className="echo-filter-icon"
+                    src="https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ui2/Filter.png"
+                    alt="Filter"
+                  />
+                </div> */}
+                {storedEcho.length > 0 && (
                   <button
                     className="echo-modal-delete-btn"
                     onClick={handleClearAllSavedEchoes}
                   >
                     Clear Saved Echoes
                   </button>
-                </div>
-              )}
-              <div className="calcEcho-modal-store-box">
-                {filteredStoreEchoes &&
-                  filteredStoreEchoes
-                    .sort((a, b) => {
-                      if (b.cost === a.cost) {
-                        return a.name.localeCompare(b.name);
-                      }
-                      return b.cost - a.cost;
-                    })
-                    .map((item) => (
-                      <div className="relative-box" key={item.storeId}>
-                        <div
-                          className="echo-modal-cards-store"
-                          onClick={() => handleStoreEchoSelect(item.storeId)}
-                        >
-                          <div className="echo-modal-card-top">
-                            <img
-                              src={
-                                Object.values(echoes).find(
-                                  (i) => i.name === item.name
-                                )?.img
-                              }
-                              alt={`${item.name} Icon`}
-                            />
-                          </div>
-                          <h3 className="echo-modal-card-cost">{item.cost}</h3>
-                          <img
-                            className="echo-modal-card-stat"
-                            src={
-                              icon.find(
-                                (i) => i.name === item.mainStat.replace("%", "")
-                              )?.icon
-                            }
-                          />
-                          <img
-                            className="echo-modal-card-set"
-                            src={
-                              WWSonataData.find((I) => I.id === item.set)?.img
-                            }
-                          />
-                        </div>
-                      </div>
-                    ))}
-              </div>
-              <div
-                className={`${
-                  isVisible ? "echo-modal-stats-sidebar" : "echo-modal-stats"
-                }`}
-              >
-                {StoreSelectedEcho ? (
-                  <>
-                    {W < 768 && isVisible && (
-                      <img
-                        className="echo-modal-menu"
-                        src="https://whisperingsea.github.io/wuthering-waves-assets/images/CloseButton.png"
-                        onClick={() => setIsVisible(false)}
-                      />
-                    )}
-                    <h3 className="no-margin echo-stat-box-name">
-                      <b>{StoreSelectedEcho.name}</b>
-                    </h3>
-                    <h3 className="no-margin">Main Stat -</h3>
-                    <div className="echo-modal-stats-box">
-                      <img className="stat-Icons" src={Icon} />
-                      <h3 className="margin-box-text">
-                        {StoreSelectedEcho.mainStat
-                          .replace("%", "")
-                          .replace("DMG Bonus", "Bonus")}
-                      </h3>
-                      <h3>{formatStatValue(StoreSelectedEcho.mainStat, StoreSelectedEcho.mainStatValue)}</h3>
-                    </div>
-                    <h3 className="no-margin">Sub Stats -</h3>
-                    <div className="echo-modal-stats-box">
-                      <img className="stat-Icons" src={Icon3} />
-                      <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat1.stat
-                          .replace("%", "")
-                          .replace("DMG Bonus", "Bonus")}
-                      </h3>
-                      <h3>
-                        {formatStatValue(
-                          StoreSelectedEcho.selectedSubStat1.stat,
-                          StoreSelectedEcho.selectedSubStat1.value
-                        )}
-                      </h3>
-                    </div>
-                    <div className="echo-modal-stats-box">
-                      <img className="stat-Icons" src={Icon4} />
-                      <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat2.stat
-                          .replace("%", "")
-                          .replace("DMG Bonus", "Bonus")}
-                      </h3>
-                      <h3>
-                        {formatStatValue(
-                          StoreSelectedEcho.selectedSubStat2.stat,
-                          StoreSelectedEcho.selectedSubStat2.value
-                        )}
-                      </h3>
-                    </div>
-                    <div className="echo-modal-stats-box">
-                      <img className="stat-Icons" src={Icon5} />
-                      <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat3.stat
-                          .replace("%", "")
-                          .replace("DMG Bonus", "Bonus")}
-                      </h3>
-                      <h3>
-                        {formatStatValue(
-                          StoreSelectedEcho.selectedSubStat3.stat,
-                          StoreSelectedEcho.selectedSubStat3.value
-                        )}
-                      </h3>
-                    </div>
-                    <div className="echo-modal-stats-box">
-                      <img className="stat-Icons" src={Icon6} />
-                      <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat4.stat
-                          .replace("%", "")
-                          .replace("DMG Bonus", "Bonus")}
-                      </h3>
-                      <h3>
-                        {formatStatValue(
-                          StoreSelectedEcho.selectedSubStat4.stat,
-                          StoreSelectedEcho.selectedSubStat4.value
-                        )}
-                      </h3>
-                    </div>
-                    <div className="echo-modal-stats-box">
-                      <img className="stat-Icons" src={Icon7} />
-                      <h3 className="margin-box-text">
-                        {StoreSelectedEcho.selectedSubStat5.stat
-                          .replace("%", "")
-                          .replace("DMG Bonus", "Bonus")}
-                      </h3>
-                      <h3>
-                        {formatStatValue(
-                          StoreSelectedEcho.selectedSubStat5.stat,
-                          StoreSelectedEcho.selectedSubStat5.value
-                        )}
-                      </h3>
-                    </div>
-                    <div className="echo-modal-btn-box">
-                      <button
-                        className="echo-modal-select-btn"
-                        onClick={() =>
-                          handleEchoStoreSelect(
-                            StoreSelectedEcho.storeId,
-                            StoreSelectedEcho.name,
-                            StoreSelectedEcho.cost,
-                            StoreSelectedEcho.set,
-                            StoreSelectedEcho.mainStat,
-                            StoreSelectedEcho.mainStatValue,
-                            StoreSelectedEcho.selectedSubStat1.stat,
-                            StoreSelectedEcho.selectedSubStat1.value,
-                            StoreSelectedEcho.selectedSubStat2.stat,
-                            StoreSelectedEcho.selectedSubStat2.value,
-                            StoreSelectedEcho.selectedSubStat3.stat,
-                            StoreSelectedEcho.selectedSubStat3.value,
-                            StoreSelectedEcho.selectedSubStat4.stat,
-                            StoreSelectedEcho.selectedSubStat4.value,
-                            StoreSelectedEcho.selectedSubStat5.stat,
-                            StoreSelectedEcho.selectedSubStat5.value
-                          )
-                        }
-                      >
-                        Select Echo
-                      </button>
-                      <button
-                        className="echo-modal-delete-btn"
-                        onClick={handleRemoveEcho}
-                      >
-                        Delete Echo
-                      </button>
-                    </div>
-                  </>
-                ) : storedEcho.length === 0 ? (
-                  <h3>No Echoes in storage</h3>
-                ) : (
-                  <h3 className="echo-select-text">
-                    Select Echoes to view it's stats
-                  </h3>
                 )}
               </div>
-              <div className="calcEcho-modal-store-filter" onClick={openFilter}>
-                <img
-                  className="echo-filter-btn"
-                  src={
-                    "https://whisperingsea.github.io/wuthering-waves-assets/images/icons_ui2/Filter.png"
-                  }
-                />
+              <div className="echo-content-split">
+                <div className="echo-list-panel">
+                  {filteredStoreEchoes &&
+                    filteredStoreEchoes
+                      .sort((a, b) => {
+                        if (b.cost === a.cost) {
+                          return a.name.localeCompare(b.name);
+                        }
+                        return b.cost - a.cost;
+                      })
+                      .map((item) => (
+                        <div className="relative-box" key={item.storeId}>
+                          <div
+                            className="echo-modal-cards-store"
+                            onClick={() => handleStoreEchoSelect(item.storeId)}
+                          >
+                            <div className="echo-modal-card-top">
+                              <img
+                                src={
+                                  Object.values(echoes).find(
+                                    (i) => i.name === item.name
+                                  )?.img
+                                }
+                                alt={`${item.name} Icon`}
+                              />
+                            </div>
+                            <h3 className="echo-modal-card-cost">{item.cost}</h3>
+                            <img
+                              className="echo-modal-card-stat"
+                              src={
+                                icon.find(
+                                  (i) => i.name === item.mainStat.replace("%", "")
+                                )?.icon
+                              }
+                            />
+                            <img
+                              className="echo-modal-card-set"
+                              src={
+                                WWSonataData.find((I) => I.id === item.set)?.img
+                              }
+                            />
+                          </div>
+                        </div>
+                      ))}
+                </div>
+                <div className="echo-stats-panel">
+                  {StoreSelectedEcho ? (
+                    <>
+                      <h3 className="no-margin echo-stat-box-name">
+                        <b>{StoreSelectedEcho.name}</b>
+                      </h3>
+                      <h3 className="no-margin">Main Stat -</h3>
+                      <div className="echo-modal-stats-box">
+                        <img className="stat-Icons" src={Icon} />
+                        <h3 className="margin-box-text">
+                          {StoreSelectedEcho.mainStat
+                            .replace("%", "")
+                            .replace("DMG Bonus", "Bonus")}
+                        </h3>
+                        <h3>{formatStatValue(StoreSelectedEcho.mainStat, StoreSelectedEcho.mainStatValue)}</h3>
+                      </div>
+                      <h3 className="no-margin">Sub Stats -</h3>
+                      <div className="echo-modal-stats-box">
+                        <img className="stat-Icons" src={Icon3} />
+                        <h3 className="margin-box-text">
+                          {StoreSelectedEcho.selectedSubStat1.stat
+                            .replace("%", "")
+                            .replace("DMG Bonus", "Bonus")}
+                        </h3>
+                        <h3>
+                          {formatStatValue(
+                            StoreSelectedEcho.selectedSubStat1.stat,
+                            StoreSelectedEcho.selectedSubStat1.value
+                          )}
+                        </h3>
+                      </div>
+                      <div className="echo-modal-stats-box">
+                        <img className="stat-Icons" src={Icon4} />
+                        <h3 className="margin-box-text">
+                          {StoreSelectedEcho.selectedSubStat2.stat
+                            .replace("%", "")
+                            .replace("DMG Bonus", "Bonus")}
+                        </h3>
+                        <h3>
+                          {formatStatValue(
+                            StoreSelectedEcho.selectedSubStat2.stat,
+                            StoreSelectedEcho.selectedSubStat2.value
+                          )}
+                        </h3>
+                      </div>
+                      <div className="echo-modal-stats-box">
+                        <img className="stat-Icons" src={Icon5} />
+                        <h3 className="margin-box-text">
+                          {StoreSelectedEcho.selectedSubStat3.stat
+                            .replace("%", "")
+                            .replace("DMG Bonus", "Bonus")}
+                        </h3>
+                        <h3>
+                          {formatStatValue(
+                            StoreSelectedEcho.selectedSubStat3.stat,
+                            StoreSelectedEcho.selectedSubStat3.value
+                          )}
+                        </h3>
+                      </div>
+                      <div className="echo-modal-stats-box">
+                        <img className="stat-Icons" src={Icon6} />
+                        <h3 className="margin-box-text">
+                          {StoreSelectedEcho.selectedSubStat4.stat
+                            .replace("%", "")
+                            .replace("DMG Bonus", "Bonus")}
+                        </h3>
+                        <h3>
+                          {formatStatValue(
+                            StoreSelectedEcho.selectedSubStat4.stat,
+                            StoreSelectedEcho.selectedSubStat4.value
+                          )}
+                        </h3>
+                      </div>
+                      <div className="echo-modal-stats-box">
+                        <img className="stat-Icons" src={Icon7} />
+                        <h3 className="margin-box-text">
+                          {StoreSelectedEcho.selectedSubStat5.stat
+                            .replace("%", "")
+                            .replace("DMG Bonus", "Bonus")}
+                        </h3>
+                        <h3>
+                          {formatStatValue(
+                            StoreSelectedEcho.selectedSubStat5.stat,
+                            StoreSelectedEcho.selectedSubStat5.value
+                          )}
+                        </h3>
+                      </div>
+                      <div className="echo-modal-btn-box">
+                        <button
+                          className="echo-modal-select-btn"
+                          onClick={() =>
+                            handleEchoStoreSelect(
+                              StoreSelectedEcho.storeId,
+                              StoreSelectedEcho.name,
+                              StoreSelectedEcho.cost,
+                              StoreSelectedEcho.set,
+                              StoreSelectedEcho.mainStat,
+                              StoreSelectedEcho.mainStatValue,
+                              StoreSelectedEcho.selectedSubStat1.stat,
+                              StoreSelectedEcho.selectedSubStat1.value,
+                              StoreSelectedEcho.selectedSubStat2.stat,
+                              StoreSelectedEcho.selectedSubStat2.value,
+                              StoreSelectedEcho.selectedSubStat3.stat,
+                              StoreSelectedEcho.selectedSubStat3.value,
+                              StoreSelectedEcho.selectedSubStat4.stat,
+                              StoreSelectedEcho.selectedSubStat4.value,
+                              StoreSelectedEcho.selectedSubStat5.stat,
+                              StoreSelectedEcho.selectedSubStat5.value
+                            )
+                          }
+                        >
+                          Select Echo
+                        </button>
+                        <button
+                          className="echo-modal-delete-btn"
+                          onClick={handleRemoveEcho}
+                        >
+                          Delete Echo
+                        </button>
+                      </div>
+                    </>
+                  ) : storedEcho.length === 0 ? (
+                    <h3>No Echoes in storage</h3>
+                  ) : (
+                    <h3 className="echo-select-text">
+                      Select Echoes to view it's stats
+                    </h3>
+                  )}
+                </div>
               </div>
               {open && (
                 <StoreEchoFilter
@@ -944,354 +952,269 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
           )}
           {activeTab === 3 && (
             <div className="calcEcho-modal-box-3">
-              <div
-                className={
-                  newEcho
-                    ? "calcEcho-modal-add-box"
-                    : "calcEcho-modal-add-box-select"
-                }
-              >
-                {newEcho ? (
-                  isProcessing ? (
-                    <div className="processing-screen">
-                      <div className="spinner"></div>
-                      <h3 className="process-text">Image is Processing</h3>
-                    </div>
-                  ) : (
-                    Object.values(echoes).sort((a, b) => {
-                      if (a.cost !== b.cost) {
-                        return a.cost - b.cost;
-                      }
-                      return a.name.localeCompare(b.name);
-                    }).map((item) => (
-                      <div
-                        key={item.name}
-                        className="echo-modal-cards-2"
-                        onClick={() =>
-                          handleStoreAddEcho(item.name, item.cost, item.id)
-                        }
-                      >
-                        <div className="echo-modal-card-top-2">
-                          <img src={item.img} alt={`${item.name} Icon`} title={item.name}/>
-                        </div>
-                      </div>
-                    ))
-                  )
-                ) : (
-                  <>
-                    {isProcessing ? (
-                      <div className="processing-screen">
-                        <div className="spinner"></div>
-                        <h3 className="process-text">Image is Processing</h3>
-                      </div>
-                    ) : (
-                      <EchoComp index={6} />
-                    )}
-                  </>
-                )}
+              <div className="add-subtabs-bar">
+                <button
+                  className={`add-subtab-btn ${addActiveTab === "manual" ? "active" : ""}`}
+                  onClick={() => setAddActiveTab("manual")}
+                >
+                  Add manually
+                </button>
+                <button
+                  className={`add-subtab-btn ${addActiveTab === "game" ? "active" : ""}`}
+                  onClick={() => setAddActiveTab("game")}
+                >
+                  Import from game
+                </button>
+                <button
+                  className={`add-subtab-btn ${addActiveTab === "discord" ? "active" : ""}`}
+                  onClick={() => {
+                    setAddActiveTab("discord");
+                    setImportImageUrl(null);
+                    setSavedEchoes({});
+                  }}
+                >
+                  Import from Discord
+                </button>
               </div>
-              <div
-                className={
-                  isVisible2
-                    ? "calcEcho-modal-add-box-2-sidebar"
-                    : "calcEcho-modal-add-box-2"
-                }
-              >
-                <div className="calcEcho-modal-add-flex-box">
-                  <label
-                    htmlFor="Echo-Image-Select"
-                    className="custom-file-upload"
-                  >
-                    Choose File
-                  </label>
-                  <input
-                    className="Image-addEcho-input"
-                    id="Echo-Image-Select"
-                    type="file"
-                    onChange={handleFileChange}
-                  />
-
-                  {imgReset ? (
-                    <button
-                      className="image-process-btn"
-                      onClick={handleImageReset}
-                    >
-                      Reset
-                    </button>
-                  ) : (
-                    <button
-                      className="image-process-btn"
-                      onClick={handleImageProcess}
-                    >
-                      Process
-                    </button>
-                  )}
-                </div>
-                {fileSelected.map((imageSrc, index) => (
-                  <div key={index}>
-                    <p style={{ margin: 0 }}>{imageSrc.name}</p>
-                  </div>
-                ))}
-                <div>
-                  {processedImages.map((imageSrc, index) => (
-                    <div key={index}>
-                      <img
-                        src={imageSrc}
-                        alt={`Processed ${index}`}
-                        style={
-                          imgReset
-                            ? {
-                                display: "block",
-                                height: "auto",
-                                width: W < 481 ? "200px" : "300px",
-                              }
-                            : { display: "none" }
-                        }
+              <div className="add-content-area">
+              {addActiveTab === "manual" && (
+                <div className="add-manual-layout">
+                  <div className="manual-left-panel">
+                    <div className="manual-searchbar">
+                      <input
+                        type="text"
+                        className="search-input"
+                        placeholder="Search by name..."
+                        value={manualSearch}
+                        onChange={(e) => setManualSearch(e.target.value)}
                       />
+                      <select
+                        className="dropdown-select"
+                        value={manualSet}
+                        onChange={(e) => setManualSet(parseInt(e.target.value))}
+                        aria-label="Filter by set"
+                      >
+                        <option value={0}>All Sets</option>
+                        {WWSonataData.map((s) => (
+                          <option key={s.id} value={s.id}>{s.name}</option>
+                        ))}
+                      </select>
+                      <select
+                        className="dropdown-select"
+                        value={manualCost}
+                        onChange={(e) => setManualCost(parseInt(e.target.value))}
+                        aria-label="Filter by cost"
+                      >
+                        <option value={0}>All Costs</option>
+                        {manualEchoCosts.map((c) => (
+                          <option key={c} value={c}>{c}</option>
+                        ))}
+                      </select>
                     </div>
-                  ))}
-                </div>
-                <div>
-                  <p className="process-img-intsruction">
-                    How to use Image Processor
-                  </p>
-                  <p>
-                    <b style={{ color: "red" }}>
-                      Important: Please use the same kind of image as shown
-                      below. No editing or cropping is needed. Only one image
-                      can be processed at a time
-                    </b>
-                  </p>
-                  <img
-                    className="example-echo-img"
-                    src="https://whisperingsea.github.io/wuthering-waves-assets/images/DreamlessEcho.png"
-                  />
-                  <p>
-                    <b>
-                      • It may take up to 5-10 seconds to process the image.
-                    </b>
-                    <br />
-                  </p>
-                  <p>
-                    <b>
-                      • After the processing is done, the stats will be shown on
-                      left box and an cropped up image on right box for
-                      comparision. The Image processingg may not be 100% correct
-                      all the time so please make changes manually if required.
-                    </b>
-                  </p>
-                  <p>
-                    <b>
-                      • Make sure to wait until the screen looks like below
-                      image.
-                    </b>
-                  </p>
-                  <img
-                    className="example-echo-img"
-                    src="https://whisperingsea.github.io/wuthering-waves-assets/images/ImageProcessor2.png"
-                  />
-                  <p>
-                    <b>
-                      • Please make sure to change the Sonata Set manually as
-                      the image processor does not support it.
-                    </b>
-                  </p>
-                  <div>
-                    <img src="https://whisperingsea.github.io/wuthering-waves-assets/images/ImageProcessor.png" />
-                  </div>
-                  <p>
-                    <b>
-                      • Once done, scroll down on left box and hit the Save Echo
-                      button and it'll be added into My Echoes tab.
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-          {activeTab === 4 && (
-            <div className="calcEcho-modal-box-4">
-              {processedEchoes.length === 0 ? (
-                <div className="calcEcho-modal-import-box">
-                  <label htmlFor="Import-Echo-Image" className="custom-file-upload">
-                    Choose Image
-                  </label>
-                  <input
-                    className="Image-import-input"
-                    id="Import-Echo-Image"
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImportImageFile}
-                  />
-                  {importImageUrl && (
-                    <button
-                      className="image-process-btn"
-                      onClick={handleProcessImportImage}
-                      disabled={isImporting}
-                    >
-                      {isImporting ? "Processing..." : "Process Image"}
-                    </button>
-                  )}
-                  {importProgress && (
-                    <p className="import-progress">{importProgress}</p>
-                  )}
-                  {importImageUrl && (
-                    <img
-                      src={importImageUrl}
-                      alt="Import Preview"
-                      style={{
-                        maxWidth: W < 481 ? "200px" : "300px",
-                        height: "auto",
-                        marginTop: "10px",
-                      }}
-                    />
-                  )}
-                </div>
-              ) : (
-                <div className="echo-cards-container">
-                  <div className="echo-cards-grid">
-                    {processedEchoes.map((echo, index) => {
-                      const currentSonataId = echo.selectedSonataId;
-                      const currentEchoId = echo.selectedEchoId;
-                      const selectedSonataData = currentSonataId
-                        ? WWSonataData.find((s) => s.id === currentSonataId)
-                        : null;
-                      const selectedEchoData = currentEchoId
-                        ? WWEchoesJSON.find((e) => e.id === currentEchoId)
-                        : null;
-                      const echoCandidate = currentSonataId
-                        ? WWEchoesJSON.filter((e) => e.sonataGroup.includes(currentSonataId))
-                        : [];
-                      const sonataIconSrc = resolveSonataIconSrc(currentSonataId);
-                      const selectedEchoImg = resolveEchoImageSrc(currentEchoId);
-
-                      return (
-                        <div key={index} className="echo-card-item">
-                          <p>Echo {index + 1}</p>
-                          <div className="stats-display">
-                            <div className="echo-match-header">
-                              {selectedEchoImg ? (
-                                <>
-                                  <div className="echo-match-image-wrapper">
-                                    <img
-                                      src={selectedEchoImg}
-                                      alt={selectedEchoData?.name}
-                                      className="echo-match-full-image"
-                                    />
-                                    {sonataIconSrc && (
-                                      <img
-                                        src={sonataIconSrc}
-                                        alt={selectedSonataData?.name}
-                                        className="sonata-icon-small-overlay"
-                                      />
-                                    )}
-                                  </div>
-                                  <select
-                                    className="dropdown-select"
-                                    value={currentEchoId ?? ""}
-                                    onChange={(e) => {
-                                      handleUpdateProcessedEcho(
-                                        index,
-                                        "selectedEchoId",
-                                        e.target.value ? parseInt(e.target.value) : 0
-                                      );
-                                    }}
-                                  >
-                                    <option value="">-- Select Echo --</option>
-                                    {echoCandidate.map((candidate) => (
-                                      <option key={candidate.id} value={candidate.id}>
-                                        {candidate.name}
-                                      </option>
-                                    ))}
-                                  </select>
-                                </>
-                              ) : (
-                                <select
-                                  className="dropdown-select"
-                                  value={currentEchoId ?? ""}
-                                  onChange={(e) => {
-                                    handleUpdateProcessedEcho(
-                                      index,
-                                      "selectedEchoId",
-                                      e.target.value ? parseInt(e.target.value) : 0
-                                    );
-                                  }}
-                                >
-                                  <option value="">-- Select Echo --</option>
-                                  {echoCandidate.map((candidate) => (
-                                    <option key={candidate.id} value={candidate.id}>
-                                      {candidate.name}
-                                    </option>
-                                  ))}
-                                </select>
-                              )}
-                            </div>
-                            <div className="sonata-header">
-                              <select
-                                className="dropdown-select"
-                                value={currentSonataId ?? ""}
-                                onChange={(e) => {
-                                  const newSonataId = e.target.value ? parseInt(e.target.value) : 0;
-                                  handleUpdateProcessedEcho(index, "selectedSonataId", newSonataId);
-                                  handleUpdateProcessedEcho(index, "selectedEchoId", 0);
-                                }}
-                              >
-                                <option value="">-- Select Sonata --</option>
-                                {WWSonataData.map((sonata) => (
-                                  <option key={sonata.id} value={sonata.id}>
-                                    {sonata.name}
-                                  </option>
-                                ))}
-                              </select>
-                            </div>
-                            <div className="main-stat">
-                              <span className="stat-name">{echo.mainStat}</span>
-                              <span className="stat-value">{echo.mainValue}</span>
-                            </div>
-                            <div className="flat-stat">
-                              <span className="stat-name">{echo.flatStat}</span>
-                              <span className="stat-value">{echo.flatValue}</span>
-                            </div>
-                            <div className="sub-stats">
-                              {echo.subStats.map((sub, sIdx) => (
-                                <div key={sIdx} className="sub-stat">
-                                  <span className="stat-name">{sub.stat}</span>
-                                  <span className="stat-value">{sub.value}</span>
-                                </div>
-                              ))}
-                            </div>
-                            <button
-                              className="import-save-btn"
-                              onClick={() => handleSaveIndividualEcho(index)}
-                              disabled={!!savedEchoes[index]}
-                            >
-                              {savedEchoes[index] ? "Echo saved!" : "Save This Echo"}
-                            </button>
+                    <div className="calcEcho-modal-add-box">
+                      {manualFilteredEchoes.map((item) => (
+                        <div
+                          key={item.name}
+                          className="echo-modal-cards-2"
+                          onClick={() => handleStoreAddEcho(item.name, item.cost, item.id)}
+                        >
+                          <div className="echo-modal-card-top-2">
+                            <img src={item.img} alt={`${item.name} Icon`} title={item.name} />
                           </div>
                         </div>
-                      );
-                    })}
+                      ))}
+                    </div>
                   </div>
-                  <div className="import-bulk-actions">
-                    <button
-                      className="import-save-all-btn"
-                      onClick={handleSaveAllImportedEchoes}
-                    >
-                      Save All & Apply
-                    </button>
-                    <button
-                      className="import-reset-btn"
-                      onClick={() => {
-                        setProcessedEchoes([]);
-                        setImportImageUrl(null);
-                        setSavedEchoes({});
-                      }}
-                    >
-                      Import Another Image
-                    </button>
+                  <div className="calcEcho-modal-add-box-2">
+                    {newEcho ? (
+                      <p className="processing-text">Select an echo from the left to edit.</p>
+                    ) : (
+                      <>
+                        <h3 className="no-margin echo-stat-box-name">
+                          <b>{echoStats[6].name}</b>
+                        </h3>
+                        <EchoComp index={6} />
+                      </>
+                    )}
                   </div>
                 </div>
               )}
+
+              {addActiveTab === "game" && (
+                <div className="calcEcho-modal-box-4">
+                  {isProcessing ? (
+                    <div className="processing-screen">
+                      <div className="spinner"></div>
+                      <span>Processing...</span>
+                    </div>
+                  ) : (
+                  <>
+                  <div className="import-buttons-row">
+                    <label htmlFor="Echo-Image-Select" className="custom-file-upload">Choose Image</label>
+                    <input
+                      className="Image-import-input"
+                      id="Echo-Image-Select"
+                      type="file"
+                      accept="image/*"
+                      onChange={handleFileChange}
+                    />
+                    {imgReset ? (
+                      <button className="image-process-btn" onClick={handleImageReset}>Reset</button>
+                    ) : (
+                      fileSelected.length > 0 && (
+                        <button className="image-process-btn" onClick={handleImageProcess}>Process Image</button>
+                      )
+                    )}
+                  </div>
+                  {fileSelected.length > 0 && (
+                    <div className="selected-file-list">
+                      {fileSelected.map((f, idx) => (
+                        <p style={{ margin: 0 }} key={idx}>{f.name}</p>
+                      ))}
+                    </div>
+                  )}
+                  {imgReset && processedImages.length > 0 && (
+                    <div className="processed-images-row">
+                      {processedImages.map((imageSrc, index) => (
+                        <img
+                          className="processed-image"
+                          key={index}
+                          src={imageSrc}
+                          alt={`Processed ${index}`}
+                        />
+                      ))}
+                    </div>
+                  )}
+                  <div className="tutorial-box">
+                    <p className="process-img-intsruction">How to use Image Processor</p>
+                    <ol>
+                      <li>Upload a game screenshot that shows the full echo card. No cropping needed.</li>
+                      <li>Process one image at a time; it can take 5-10 seconds.</li>
+                      <li>Review the detected stats on the left and the cropped preview on the right; edit manually if needed.</li>
+                      <li>Change the Sonata Set manually if required, then save the echo.</li>
+                    </ol>
+                    <p className="tutorial-note">Use a clear, unedited screenshot for best results.</p>
+                    <div className="tutorial-images-row">
+                      <img className="example-echo-img" src="https://whisperingsea.github.io/wuthering-waves-assets/images/DreamlessEcho.png" alt="Example of accepted in-game echo screenshot" />
+                      <img className="example-echo-img" src="https://whisperingsea.github.io/wuthering-waves-assets/images/ImageProcessor2.png" alt="Example of processed echo layout" />
+                    </div>
+                  </div>
+                  </>
+                  )}
+                </div>
+              )}
+
+              {addActiveTab === "discord" && (
+                <div className="calcEcho-modal-box-4">
+                  {processedEchoes.length === 0 ? (
+                    <div className="calcEcho-modal-import-box">
+                      <div className="import-buttons-row">
+                        <label htmlFor="Import-Echo-Image" className="custom-file-upload">Choose Image</label>
+                        <input
+                          className="Image-import-input"
+                          id="Import-Echo-Image"
+                          type="file"
+                          accept="image/*"
+                          onChange={handleImportImageFile}
+                        />
+                        {importImageUrl && (
+                          <button className="image-process-btn" onClick={handleProcessImportImage} disabled={isImporting}>
+                            {isImporting ? "Processing..." : "Process Image"}
+                          </button>
+                        )}
+                      </div>
+                      {importProgress && <p className="import-progress">{importProgress}</p>}
+                      {importImageUrl && (
+                        <img
+                          src={importImageUrl}
+                          alt="Import Preview"
+                          style={{ maxWidth: W < 481 ? "200px" : "300px", height: "auto" }}
+                        />
+                      )}
+                      <div className="tutorial-box">
+                        <p className="process-img-intsruction">How to import from Discord</p>
+                        <ol>
+                          <li>Join the official Wuthering Waves Discord and open the <b>wuwa-bot-command</b> channel.</li>
+                          <li>Use the bot to generate the selected character image; note that un-leveled echoes may reduce accuracy.</li>
+                          <li>Download the generated image directly (no cropping or edits) and upload it here.</li>
+                          <li>Process the image, review the detected echo and sonata, adjust if needed, then save.</li>
+                        </ol>
+                        <p className="tutorial-note">Keep all echoes fully visible and leveled where possible for best detection.</p>
+                        <img className="example-echo-img" src="https://i.imgur.com/ZglZiIS.jpeg" alt="Example Discord-generated echo image" />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="echo-cards-container">
+                      <div className="echo-cards-grid">
+                        {processedEchoes.map((echo, index) => {
+                          const currentSonataId = echo.selectedSonataId;
+                          const currentEchoId = echo.selectedEchoId;
+                          const selectedSonataData = currentSonataId ? WWSonataData.find((s) => s.id === currentSonataId) : null;
+                          const selectedEchoData = currentEchoId ? WWEchoesJSON.find((e) => e.id === currentEchoId) : null;
+                          const echoCandidate = currentSonataId ? WWEchoesJSON.filter((e) => e.sonataGroup.includes(currentSonataId)) : [];
+                          const sonataIconSrc = resolveSonataIconSrc(currentSonataId);
+                          const selectedEchoImg = resolveEchoImageSrc(currentEchoId);
+                          return (
+                            <div key={index} className="echo-card-item">
+                              <p>Echo {index + 1}</p>
+                              <div className="stats-display">
+                                <div className="echo-match-header">
+                                  {selectedEchoImg ? (
+                                    <>
+                                      <div className="echo-match-image-wrapper">
+                                        <img src={selectedEchoImg} alt={selectedEchoData?.name} className="echo-match-full-image" />
+                                        {sonataIconSrc && <img src={sonataIconSrc} alt={selectedSonataData?.name} className="sonata-icon-small-overlay" />}
+                                      </div>
+                                      <select className="dropdown-select" value={currentEchoId ?? ""} onChange={(e) => handleUpdateProcessedEcho(index, "selectedEchoId", e.target.value ? parseInt(e.target.value) : 0)}>
+                                        <option value="">-- Select Echo --</option>
+                                        {echoCandidate.map((candidate) => (
+                                          <option key={candidate.id} value={candidate.id}>{candidate.name}</option>
+                                        ))}
+                                      </select>
+                                    </>
+                                  ) : (
+                                    <select className="dropdown-select" value={currentEchoId ?? ""} onChange={(e) => handleUpdateProcessedEcho(index, "selectedEchoId", e.target.value ? parseInt(e.target.value) : 0)}>
+                                      <option value="">-- Select Echo --</option>
+                                      {echoCandidate.map((candidate) => (
+                                        <option key={candidate.id} value={candidate.id}>{candidate.name}</option>
+                                      ))}
+                                    </select>
+                                  )}
+                                </div>
+                                <div className="sonata-header">
+                                  <select className="dropdown-select" value={currentSonataId ?? ""} onChange={(e) => {
+                                    const newSonataId = e.target.value ? parseInt(e.target.value) : 0;
+                                    handleUpdateProcessedEcho(index, "selectedSonataId", newSonataId);
+                                    handleUpdateProcessedEcho(index, "selectedEchoId", 0);
+                                  }}>
+                                    <option value="">-- Select Sonata --</option>
+                                    {WWSonataData.map((sonata) => (
+                                      <option key={sonata.id} value={sonata.id}>{sonata.name}</option>
+                                    ))}
+                                  </select>
+                                </div>
+                                <div className="main-stat"><span className="stat-name">{echo.mainStat}</span><span className="stat-value">{echo.mainValue}</span></div>
+                                <div className="flat-stat"><span className="stat-name">{echo.flatStat}</span><span className="stat-value">{echo.flatValue}</span></div>
+                                <div className="sub-stats">
+                                  {echo.subStats.map((sub, sIdx) => (
+                                    <div key={sIdx} className="sub-stat"><span className="stat-name">{sub.stat}</span><span className="stat-value">{sub.value}</span></div>
+                                  ))}
+                                </div>
+                                <button className="import-save-btn" onClick={() => handleSaveIndividualEcho(index)} disabled={!!savedEchoes[index]}>{savedEchoes[index] ? "Echo saved!" : "Save This Echo"}</button>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <div className="import-bulk-actions">
+                        <button className="import-save-all-btn" onClick={handleSaveAllImportedEchoes}>Save All & Apply</button>
+                        <button className="import-reset-btn" onClick={() => { setProcessedEchoes([]); setImportImageUrl(null); setSavedEchoes({}); }}>Import Another Image</button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+              </div>
             </div>
           )}
         </div>
