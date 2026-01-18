@@ -20,93 +20,93 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
     },
     asension: {
         charaAsension: [
-        {
-            item: "LF Whisperin Core",
-            id: 1,
-            value: "4"
-        },
-        {
-            item: "MF Whisperin Core",
-            id: 2,
-            value: "12"
-        },
-        {
-            item: "HF Whisperin Core",
-            id: 3,
-            value: "12"
-        },
-        {
-            item: "FF Whisperin Core",
-            id: 4,
-            value: "4"
-        },
-        {
-            item: "Sound-Keeping Tacet Core",
-            id: 5,
-            value: "46"
-        },
-        {
-            item: "Coriolus",
-            id: 6,
-            value: "60"
-        },
-        {
-            item: "Shell Credits",
-            id: 7,
-            value: "170,000"
-        },
+            {
+                item: "LF Whisperin Core",
+                id: 1,
+                value: "4"
+            },
+            {
+                item: "MF Whisperin Core",
+                id: 2,
+                value: "12"
+            },
+            {
+                item: "HF Whisperin Core",
+                id: 3,
+                value: "12"
+            },
+            {
+                item: "FF Whisperin Core",
+                id: 4,
+                value: "4"
+            },
+            {
+                item: "Sound-Keeping Tacet Core",
+                id: 5,
+                value: "46"
+            },
+            {
+                item: "Coriolus",
+                id: 6,
+                value: "60"
+            },
+            {
+                item: "Shell Credits",
+                id: 7,
+                value: "170,000"
+            },
         ],
         forteAsension: [
-        {
-            item: "LF Whisperin Core",
-            id: 1,
-            value: "25"
-        },
-        {
-            item: "MF Whisperin Core",
-            id: 2,
-            value: "28"
-        },
-        {
-            item: "HF Whisperin Core",
-            id: 3,
-            value: "40"
-        },
-        {
-            item: "FF Whisperin Core",
-            id: 4,
-            value: "57"
-        },
-        {
-            item: "Cadence Seed",
-            id: 5,
-            value: "25"
-        },
-        {
-            item: "Cadence Bud",
-            id: 6,
-            value: "28"
-        },
-        {
-            item: "Cadence Leaf",
-            id: 7,
-            value: "55"
-        },
-        {
-            item: "Cadence Blossom",
-            id: 8,
-            value: "67"
-        },
-        {
-            item: "Unending Destruction",
-            id: 9,
-            value: "26"
-        },
-        {
-            item: "Shell Credits",
-            id: 10,
-            value: "2,030,000"
-        },
+            {
+                item: "LF Whisperin Core",
+                id: 1,
+                value: "25"
+            },
+            {
+                item: "MF Whisperin Core",
+                id: 2,
+                value: "28"
+            },
+            {
+                item: "HF Whisperin Core",
+                id: 3,
+                value: "40"
+            },
+            {
+                item: "FF Whisperin Core",
+                id: 4,
+                value: "57"
+            },
+            {
+                item: "Cadence Seed",
+                id: 5,
+                value: "25"
+            },
+            {
+                item: "Cadence Bud",
+                id: 6,
+                value: "28"
+            },
+            {
+                item: "Cadence Leaf",
+                id: 7,
+                value: "55"
+            },
+            {
+                item: "Cadence Blossom",
+                id: 8,
+                value: "67"
+            },
+            {
+                item: "Unending Destruction",
+                id: 9,
+                value: "26"
+            },
+            {
+                item: "Shell Credits",
+                id: 10,
+                value: "2,030,000"
+            },
         ]
     },
     stats: {
@@ -126,12 +126,12 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
         bonus_hp: 0
     },
     skills: [
-            {
-                skillId: 1,
-                typeName: 'Normal Attack',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
-                skillName: 'Majestic Fists',
-                skillDescription: `<span class="Title">Basic Attack</span>\n
+        {
+            skillId: 1,
+            typeName: 'Normal Attack',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/BasicSkill4.webp",
+            skillName: 'Majestic Fists',
+            skillDescription: `<span class="Title">Basic Attack</span>\n
                 Lingyang performs up to 5 consecutive attacks, dealing <span class="Ice">Glacio DMG</span>.\n
                 <div class="gap"></div>
                 <span class="Title">Basic Attack: Feral Roars</span>\n
@@ -145,94 +145,94 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
                 <div class="gap"></div>
                 <span class="Title">Dodge Counter</span>\n
                 Use <span class="Highlight">Basic Attack</span> after a successful <span class="Highlight">Dodge</span> to attack the target, dealing <span class="Ice">Glacio DMG</span>.`,
-                skillDetailNum: [],
-                multipliers: [
-                    {
-                        attributeName: "Part 1 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["30.00%", "32.46%", "34.92%", "38.37%", "40.83%", "43.66%", "47.59%", "51.53%", "55.47%", "59.65%", "64.57%", "69.49%", "74.41%", "79.33%", "84.25%", "89.17%", "94.09%", "99.01%", "103.93%", "108.85%"]
-                        }],
-                        index: 1
-                    }, {
-                        attributeName: "Part 2 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["40.00%", "43.28%", "46.56%", "51.16%", "54.44%", "58.21%", "63.46%", "68.70%", "73.95%", "79.53%", "86.09%", "92.65%", "99.21%", "105.77%", "112.33%", "118.89%", "125.45%", "132.01%", "138.57%", "145.13%"]
-                        }],
-                        index: 2
-                    }, {
-                        attributeName: "Part 3 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["36.65%*2", "39.66%*2", "42.67%*2", "46.87%*2", "49.88%*2", "53.33%*2", "58.14%*2", "62.95%*2", "67.76%*2", "72.87%*2", "78.88%*2", "84.89%*2", "90.90%*2", "96.91%*2", "102.92%*2", "108.93%*2", "114.94%*2", "120.95%*2", "126.96%*2", "132.97%*2"]
-                        }],
-                        index: 3
-                    }, {
-                        attributeName: "Part 4 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["10.27%*5+21.99%", "11.11%*5+23.80%", "11.95%*5+25.60%", "13.13%*5+28.13%", "13.97%*5+29.93%", "14.94%*5+32.00%", "16.28%*5+34.89%", "17.63%*5+37.77%", "18.98%*5+40.66%", "20.41%*5+43.72%", "22.09%*5+47.33%", "23.77%*5+50.94%", "25.46%*5+54.54%", "27.14%*5+58.15%", "28.82%*5+61.76%", "30.50%*5+65.36%", "32.19%*5+68.97%", "33.87%*5+72.57%", "35.55%*5+76.18%", "37.24%*5+79.79%"]
-                        }],
-                        index: 4
-                    }, {
-                        attributeName: "Part 5 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["76.70%", "82.99%", "89.28%", "98.09%", "104.38%", "111.61%", "121.67%", "131.74%", "141.80%", "152.49%", "165.07%", "177.65%", "190.23%", "202.81%", "215.39%", "227.97%", "240.54%", "253.12%", "265.70%", "278.28%"]
-                        }],
-                        index: 5
-                    }, {
-                        attributeName: "Feral Roars Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["40.00%*2", "43.28%*2", "46.56%*2", "51.16%*2", "54.44%*2", "58.21%*2", "63.46%*2", "68.70%*2", "73.95%*2", "79.53%*2", "86.09%*2", "92.65%*2", "99.21%*2", "105.77%*2", "112.33%*2", "118.89%*2", "125.45%*2", "132.01%*2", "138.57%*2", "145.13%*2"]
-                        }],
-                        index: 6
-                    }, {
-                        attributeName: "Heavy Attack Damage",
-                        type: "Heavy",
-                        skillDetailNum: [{
-                            values: ["73.30%", "79.32%", "85.33%", "93.74%", "99.75%", "106.66%", "116.28%", "125.90%", "135.51%", "145.73%", "157.75%", "169.78%", "181.80%", "193.82%", "205.84%", "217.86%", "229.88%", "241.90%", "253.92%", "265.94%"]
-                        }],
-                        index: 7
-                    }, {
-                        attributeName: "Mid-Air Attack Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["62.00%", "67.09%", "72.17%", "79.29%", "84.37%", "90.22%", "98.36%", "106.49%", "114.62%", "123.27%", "133.44%", "143.60%", "153.77%", "163.94%", "174.11%", "184.28%", "194.44%", "204.61%", "214.78%", "224.95%"]
-                        }],
-                        index: 8
-                    }, {
-                        attributeName: "Dodge Counter Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["63.40%*2", "68.60%*2", "73.80%*2", "81.08%*2", "86.28%*2", "92.26%*2", "100.58%*2", "108.89%*2", "117.21%*2", "126.05%*2", "136.45%*2", "146.85%*2", "157.24%*2", "167.64%*2", "178.04%*2", "188.44%*2", "198.83%*2", "209.23%*2", "219.63%*2", "230.03%*2"]
-                        }],
-                        index: 9
-                    }, {
-                        attributeName: "Heavy Attack Stamina Consumption",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25"]
-                        }],
-                        index: 10
-                    }, {
-                        attributeName: "Mid-Air Attack Stamina Consumption",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
-                        }],
-                        index: 11
-                    }
-                ]
-            },
-            {
-                skillId: 2,
-                typeName: 'Resonance Skill',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang2.webp",
-                skillName: 'Ancient Arts',
-                skillDescription: `<span class="Title">Ancient Arts</span>\n
+            skillDetailNum: [],
+            multipliers: [
+                {
+                    attributeName: "Part 1 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["30.00%", "32.46%", "34.92%", "38.37%", "40.83%", "43.66%", "47.59%", "51.53%", "55.47%", "59.65%", "64.57%", "69.49%", "74.41%", "79.33%", "84.25%", "89.17%", "94.09%", "99.01%", "103.93%", "108.85%"]
+                    }],
+                    index: 1
+                }, {
+                    attributeName: "Part 2 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["40.00%", "43.28%", "46.56%", "51.16%", "54.44%", "58.21%", "63.46%", "68.70%", "73.95%", "79.53%", "86.09%", "92.65%", "99.21%", "105.77%", "112.33%", "118.89%", "125.45%", "132.01%", "138.57%", "145.13%"]
+                    }],
+                    index: 2
+                }, {
+                    attributeName: "Part 3 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["36.65%*2", "39.66%*2", "42.67%*2", "46.87%*2", "49.88%*2", "53.33%*2", "58.14%*2", "62.95%*2", "67.76%*2", "72.87%*2", "78.88%*2", "84.89%*2", "90.90%*2", "96.91%*2", "102.92%*2", "108.93%*2", "114.94%*2", "120.95%*2", "126.96%*2", "132.97%*2"]
+                    }],
+                    index: 3
+                }, {
+                    attributeName: "Part 4 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["10.27%*5+21.99%", "11.11%*5+23.80%", "11.95%*5+25.60%", "13.13%*5+28.13%", "13.97%*5+29.93%", "14.94%*5+32.00%", "16.28%*5+34.89%", "17.63%*5+37.77%", "18.98%*5+40.66%", "20.41%*5+43.72%", "22.09%*5+47.33%", "23.77%*5+50.94%", "25.46%*5+54.54%", "27.14%*5+58.15%", "28.82%*5+61.76%", "30.50%*5+65.36%", "32.19%*5+68.97%", "33.87%*5+72.57%", "35.55%*5+76.18%", "37.24%*5+79.79%"]
+                    }],
+                    index: 4
+                }, {
+                    attributeName: "Part 5 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["76.70%", "82.99%", "89.28%", "98.09%", "104.38%", "111.61%", "121.67%", "131.74%", "141.80%", "152.49%", "165.07%", "177.65%", "190.23%", "202.81%", "215.39%", "227.97%", "240.54%", "253.12%", "265.70%", "278.28%"]
+                    }],
+                    index: 5
+                }, {
+                    attributeName: "Feral Roars Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["40.00%*2", "43.28%*2", "46.56%*2", "51.16%*2", "54.44%*2", "58.21%*2", "63.46%*2", "68.70%*2", "73.95%*2", "79.53%*2", "86.09%*2", "92.65%*2", "99.21%*2", "105.77%*2", "112.33%*2", "118.89%*2", "125.45%*2", "132.01%*2", "138.57%*2", "145.13%*2"]
+                    }],
+                    index: 6
+                }, {
+                    attributeName: "Heavy Attack Damage",
+                    type: "Heavy",
+                    skillDetailNum: [{
+                        values: ["73.30%", "79.32%", "85.33%", "93.74%", "99.75%", "106.66%", "116.28%", "125.90%", "135.51%", "145.73%", "157.75%", "169.78%", "181.80%", "193.82%", "205.84%", "217.86%", "229.88%", "241.90%", "253.92%", "265.94%"]
+                    }],
+                    index: 7
+                }, {
+                    attributeName: "Mid-Air Attack Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["62.00%", "67.09%", "72.17%", "79.29%", "84.37%", "90.22%", "98.36%", "106.49%", "114.62%", "123.27%", "133.44%", "143.60%", "153.77%", "163.94%", "174.11%", "184.28%", "194.44%", "204.61%", "214.78%", "224.95%"]
+                    }],
+                    index: 8
+                }, {
+                    attributeName: "Dodge Counter Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["63.40%*2", "68.60%*2", "73.80%*2", "81.08%*2", "86.28%*2", "92.26%*2", "100.58%*2", "108.89%*2", "117.21%*2", "126.05%*2", "136.45%*2", "146.85%*2", "157.24%*2", "167.64%*2", "178.04%*2", "188.44%*2", "198.83%*2", "209.23%*2", "219.63%*2", "230.03%*2"]
+                    }],
+                    index: 9
+                }, {
+                    attributeName: "Heavy Attack Stamina Consumption",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25", "25"]
+                    }],
+                    index: 10
+                }, {
+                    attributeName: "Mid-Air Attack Stamina Consumption",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
+                    }],
+                    index: 11
+                }
+            ]
+        },
+        {
+            skillId: 2,
+            typeName: 'Resonance Skill',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang2.webp",
+            skillName: 'Ancient Arts',
+            skillDescription: `<span class="Title">Ancient Arts</span>\n
                 Attack the target, dealing <span class="Ice">Glacio DMG</span>.\n
                 <div class="gap"></div>
                 <span class="Title">Furious Punches</span>\n
@@ -240,120 +240,121 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
                 If Lingyang uses <span class="Highlight">Basic Attack</span> after casting Basic Attack <span class="Highlight">Feral Roars</span> and Resonance Skill <span class="Highlight">Swift Punches</span>, he will start from <span class="Highlight">Basic Attack 3</span>.\n
                 <div class="gap"></div>
                 Lingyang's Resonance Skill will not reset his Basic Attack stage.`,
-                skillDetailNum: [],
-                multipliers: [
-                    {
-                        attributeName: "Ancient Arts Damage",
-                        type: "Skill",
-                        skillDetailNum: [{
-                            values: ["66.70%", "72.17%", "77.64%", "85.30%", "90.77%", "97.06%", "105.81%", "114.56%", "123.31%", "132.61%", "143.55%", "154.49%", "165.43%", "176.37%", "187.31%", "198.24%", "209.18%", "220.12%", "231.06%", "242.00%"]
-                        }],
-                        index: 1
-                    }, {
-                        attributeName: "Furious Punches Damage",
-                        type: "Skill",
-                        skillDetailNum: [{
-                            values: ["38.35%*2", "41.50%*2", "44.64%*2", "49.05%*2", "52.19%*2", "55.81%*2", "60.84%*2", "65.87%*2", "70.90%*2", "76.25%*2", "82.54%*2", "88.83%*2", "95.12%*2", "101.41%*2", "107.70%*2", "113.99%*2", "120.27%*2", "126.56%*2", "132.85%*2", "139.14%*2"]
-                        }],
-                        index: 2
-                    }, {
-                        attributeName: "Cooldown",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
-                        }],
-                        index: 3
-                    }
-                ]
-            },
-            {
-                skillId: 3,
-                typeName: 'Resonance Liveration',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang3.webp",
-                skillName: `Strive: Lion's Vigor`,
-                skillDescription: `Attack the target, dealing <span class="Ice">Glacio DMG</span>, and receive the blessing of <span class="Highlight">Lion's Vigor</span>, which lasts for {0}s.
+            skillDetailNum: [],
+            multipliers: [
+                {
+                    attributeName: "Ancient Arts Damage",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["66.70%", "72.17%", "77.64%", "85.30%", "90.77%", "97.06%", "105.81%", "114.56%", "123.31%", "132.61%", "143.55%", "154.49%", "165.43%", "176.37%", "187.31%", "198.24%", "209.18%", "220.12%", "231.06%", "242.00%"]
+                    }],
+                    index: 1
+                }, {
+                    attributeName: "Furious Punches Damage",
+                    type: "Skill",
+                    skillDetailNum: [{
+                        values: ["38.35%*2", "41.50%*2", "44.64%*2", "49.05%*2", "52.19%*2", "55.81%*2", "60.84%*2", "65.87%*2", "70.90%*2", "76.25%*2", "82.54%*2", "88.83%*2", "95.12%*2", "101.41%*2", "107.70%*2", "113.99%*2", "120.27%*2", "126.56%*2", "132.85%*2", "139.14%*2"]
+                    }],
+                    index: 2
+                }, {
+                    attributeName: "Cooldown",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+                    }],
+                    index: 3
+                }
+            ]
+        },
+        {
+            skillId: 3,
+            typeName: 'Resonance Liberation',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang3.webp",
+            skillName: `Strive: Lion's Vigor`,
+            skillDescription: `Attack the target, dealing <span class="Ice">Glacio DMG</span>, and receive the blessing of <span class="Highlight">Lion's Vigor</span>, which lasts for {0}s.
                 <div class="gap"></div>
                 <span class="Title">Lion's Vigor</span>
                 Lingyang's <span class="Ice">Glacio DMG Bonus</span> is increased by {0};`,
-                skillDetailNum: ["50%"],
-                multipliers: [
-                    {
-                        attributeName: "Skill Damage",
-                        type: "Liberation",
-                        skillDetailNum: [{
-                            values: ["200.00%", "216.40%", "232.80%", "255.76%", "272.16%", "291.02%", "317.26%", "343.50%", "369.74%", "397.62%", "430.42%", "463.22%", "496.02%", "528.82%", "561.62%", "594.42%", "627.22%", "660.02%", "692.82%", "725.62%"]
-                        }],
-                        index: 1
-                    }, {
-                        attributeName: "Lion's Vigor Duration",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14"]
-                        }],
-                        index: 2
-                    }, {
-                        attributeName: "Cooldown",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
-                        }],
-                        index: 3
-                    }, {
-                        attributeName: "Res. Energy Cost",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
-                        }],
-                        index: 4
-                    }, {
-                        attributeName: "Con. Energy Regen",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
-                        }],
-                        index: 5
-                    }
-                ]
-            },
-            {
-                skillId: 4,
-                typeName: 'Intro Skill',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang5.webp",
-                skillName: 'Lion Awakens',
-                skillDescription: `Lingyang enters the battlefield, dealing <span class="Ice">Glacio DMG</span>.`,
-                skillDetailNum: [],
-                multipliers: [
-                    {
-                        attributeName: "Skill Damage",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["50.00%*2", "54.10%*2", "58.20%*2", "63.94%*2", "68.04%*2", "72.76%*2", "79.32%*2", "85.88%*2", "92.44%*2", "99.41%*2", "107.61%*2", "115.81%*2", "124.01%*2", "132.21%*2", "140.41%*2", "148.61%*2", "156.81%*2", "165.01%*2", "173.21%*2", "181.41%*2"]
-                        }],
-                        index: 1
-                    }, {
-                        attributeName: "Con. Energy Regen",
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
-                        }],
-                        index: 2
-                    }
-                ]
-            },
-            {
-                skillId: 5,
-                typeName: 'Outro Skill',
-                skillName: 'Frosty Marks',
-                skillDescription: `Lingyang releases a shock wave centered on the skill target, dealing <span class="Ice">Glacio DMG</span> equal to {0} of Lingyang's ATK to targets within the range.`,
-                skillDetailNum: ["587.94%"],
-                multipliers: []
-            },
-            {
-                skillId: 6,
-                typeName: 'Forte Circuit',
-                skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang4.webp",
-                skillName: 'Unification of Spirits',
-                skillDescription: `<span class="Title">Heavy Attack: Glorious Plunge</span>\n
+            skillDetailNum: ["50%"],
+            multipliers: [
+                {
+                    attributeName: "Skill Damage",
+                    type: "Liberation",
+                    skillDetailNum: [{
+                        values: ["200.00%", "216.40%", "232.80%", "255.76%", "272.16%", "291.02%", "317.26%", "343.50%", "369.74%", "397.62%", "430.42%", "463.22%", "496.02%", "528.82%", "561.62%", "594.42%", "627.22%", "660.02%", "692.82%", "725.62%"]
+                    }],
+                    index: 1
+                }, {
+                    attributeName: "Lion's Vigor Duration",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14", "14"]
+                    }],
+                    index: 2
+                }, {
+                    attributeName: "Cooldown",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
+                    }],
+                    index: 3
+                }, {
+                    attributeName: "Res. Energy Cost",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125", "125"]
+                    }],
+                    index: 4
+                }, {
+                    attributeName: "Con. Energy Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
+                    }],
+                    index: 5
+                }
+            ]
+        },
+        {
+            skillId: 4,
+            typeName: 'Intro Skill',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang5.webp",
+            skillName: 'Lion Awakens',
+            skillDescription: `Lingyang enters the battlefield, dealing <span class="Ice">Glacio DMG</span>.`,
+            skillDetailNum: [],
+            multipliers: [
+                {
+                    attributeName: "Skill Damage",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["50.00%*2", "54.10%*2", "58.20%*2", "63.94%*2", "68.04%*2", "72.76%*2", "79.32%*2", "85.88%*2", "92.44%*2", "99.41%*2", "107.61%*2", "115.81%*2", "124.01%*2", "132.21%*2", "140.41%*2", "148.61%*2", "156.81%*2", "165.01%*2", "173.21%*2", "181.41%*2"]
+                    }],
+                    index: 1
+                }, {
+                    attributeName: "Con. Energy Regen",
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
+                    }],
+                    index: 2
+                }
+            ]
+        },
+        {
+            skillId: 5,
+            typeName: 'Outro Skill',
+            skillName: 'Frosty Marks',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLingyang/SP_IconLingyangT.webp",
+            skillDescription: `Lingyang releases a shock wave centered on the skill target, dealing <span class="Ice">Glacio DMG</span> equal to {0} of Lingyang's ATK to targets within the range.`,
+            skillDetailNum: ["587.94%"],
+            multipliers: []
+        },
+        {
+            skillId: 6,
+            typeName: 'Forte Circuit',
+            skillImg: "https://wuthering-waves-assets.pages.dev/Skills/SkillLingyang4.webp",
+            skillName: 'Unification of Spirits',
+            skillDescription: `<span class="Title">Heavy Attack: Glorious Plunge</span>\n
                 When Lion's Spirit is full, use <span class="Highlight">Heavy Attack</span> to perform <span class="Highlight">Glorious Plunge</span>, dealing <span class="Ice">Glacio DMG</span>.\n
                 <div class="gap"></div>
                 <span class="Title">Mid-air Attack: Tail Strike</span>\n
@@ -376,89 +377,92 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
                 When casting Resonance Skill <span class="Highlight">Furious Punches</span>, Lion's Spirit is restored.\n
                 When casting Intro Skill <span class="Highlight">Lion Awakens</span>, Lion's Spirit is restored.\n
                 When casting Resonance Liberation <span class="Highlight">Strive: Lion's Vigor</span>, Lion's Spirit is restored.`,
-                skillDetailNum: ["5", "50%", "10", "10", "100"],
-                multipliers: [
-                    {
-                        attributeName: "Glorious Plunge Damage",
-                        type: "Heavy",
-                        skillDetailNum: [{
-                            values: ["86.70%", "93.81%", "100.92%", "110.88%", "117.99%", "126.16%", "137.54%", "148.91%", "160.29%", "172.37%", "186.59%", "200.81%", "215.03%", "229.25%", "243.47%", "257.69%", "271.90%", "286.12%", "300.34%", "314.56%"]
-                        }],
-                        index: 2
-                    }, {
-                        attributeName: "Feral Gyrate Part 1 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["43.80%*2+58.40%", "47.40%*2+63.19%", "50.99%*2+67.98%", "56.02%*2+74.69%", "59.61%*2+79.48%", "63.74%*2+84.98%", "69.48%*2+92.64%", "75.23%*2+100.31%", "80.98%*2+107.97%", "87.08%*2+116.11%", "94.27%*2+125.69%", "101.45%*2+135.27%", "108.63%*2+144.84%", "115.82%*2+154.42%", "123.00%*2+164.00%", "130.18%*2+173.58%", "137.37%*2+183.15%", "144.55%*2+192.73%", "151.73%*2+202.31%", "158.92%*2+211.89%"]
-                        }],
-                        index: 3
-                    }, {
-                        attributeName: "Feral Gyrate Part 2 Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["15.98%*6", "17.29%*6", "18.60%*6", "20.44%*6", "21.75%*6", "23.26%*6", "25.35%*6", "27.45%*6", "29.55%*6", "31.77%*6", "34.39%*6", "37.01%*6", "39.63%*6", "42.26%*6", "44.88%*6", "47.50%*6", "50.12%*6", "52.74%*6", "55.36%*6", "57.98%*6"]
-                        }],
-                        index: 4
-                    }, {
-                        attributeName: "Mountain Roamer Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["41.69%*2", "45.11%*2", "48.53%*2", "53.31%*2", "56.73%*2", "60.66%*2", "66.13%*2", "71.60%*2", "77.07%*2", "82.88%*2", "89.72%*2", "96.56%*2", "103.39%*2", "110.23%*2", "117.07%*2", "123.90%*2", "130.74%*2", "137.58%*2", "144.41%*2", "151.25%*2"]
-                        }],
-                        index: 5
-                    }, {
-                        attributeName: "Stormy Kicks Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["18.13%*8+96.65%", "19.61%*8+104.58%", "21.10%*8+112.51%", "23.18%*8+123.60%", "24.67%*8+131.53%", "26.37%*8+140.64%", "28.75%*8+153.32%", "31.13%*8+166.00%", "33.51%*8+178.68%", "36.03%*8+192.15%", "39.01%*8+208.01%", "41.98%*8+223.86%", "44.95%*8+239.71%", "47.92%*8+255.56%", "50.89%*8+271.41%", "53.87%*8+287.26%", "56.84%*8+303.11%", "59.81%*8+318.96%", "62.78%*8+334.81%", "65.75%*8+350.66%"]
-                        }],
-                        index: 7
-                    }, {
-                        attributeName: "Tail Strike Damage",
-                        type: "Basic",
-                        skillDetailNum: [{
-                            values: ["88.00%*2", "95.22%*2", "102.44%*2", "112.54%*2", "119.76%*2", "128.05%*2", "139.60%*2", "151.14%*2", "162.69%*2", "174.96%*2", "189.39%*2", "203.82%*2", "218.25%*2", "232.69%*2", "247.12%*2", "261.55%*2", "275.98%*2", "290.41%*2", "304.85%*2", "319.28%*2"]
-                        }],
-                        index: 8
-                    }, {
-                        attributeName: `"Lion's Spirit" Con. Energy Regen`,
-                        type: "",
-                        skillDetailNum: [{
-                            values: ["35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35"]
-                        }],
-                        index: 9
-                    }
-                ]
-            },
-            {
-                skillId: 7,
-                typeName: 'Inherent Skill',
-                skillName: `Lion's Pride`,
-                skillDescription: `Damage of the Intro Skill <span class="Highlight">Lion Awakens</span> is increased by {0}.`,
-                skillDetailNum: ["50%"],
-                multipliers: [],
-                skillBuffAtrribute: ["Intro Skill"],
-                skillBuff: [50],
-            },
-            {
-                skillId: 8,
-                typeName: 'Inherent Skill',
-                skillName: 'Diligent Practice',
-                skillDescription: `Under the <span class="Highlight">Striding Lion</span> state, within {0}s after each <span class="Highlight">Basic Attack</span>, the next <span class="Highlight">Mountain Roamer</span> will deal an additional <span class="Ice">Glacio DMG</span>, equal to {1} of <span class="Highlight">Mountain Roamer</span> damage, considered as Resonance Skill damage.`,
-                skillDetailNum: ["3", "150%"],
-                multipliers: [],
-                skillBuffAtrribute: ["Intro Skill"],
-                skillBuff: [50]
-            },
-            {
-                skillId: 9,
-                typeName: 'Inherent Skill',
-                skillName: 'Skillful Cooking',
-                skillDescription: `Has a chance to produce special dishes when cooking.`,
-                skillDetailNum: [],
-                multipliers: []
-            }
-        ],
+            skillDetailNum: ["5", "50%", "10", "10", "100"],
+            multipliers: [
+                {
+                    attributeName: "Glorious Plunge Damage",
+                    type: "Heavy",
+                    skillDetailNum: [{
+                        values: ["86.70%", "93.81%", "100.92%", "110.88%", "117.99%", "126.16%", "137.54%", "148.91%", "160.29%", "172.37%", "186.59%", "200.81%", "215.03%", "229.25%", "243.47%", "257.69%", "271.90%", "286.12%", "300.34%", "314.56%"]
+                    }],
+                    index: 2
+                }, {
+                    attributeName: "Feral Gyrate Part 1 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["43.80%*2+58.40%", "47.40%*2+63.19%", "50.99%*2+67.98%", "56.02%*2+74.69%", "59.61%*2+79.48%", "63.74%*2+84.98%", "69.48%*2+92.64%", "75.23%*2+100.31%", "80.98%*2+107.97%", "87.08%*2+116.11%", "94.27%*2+125.69%", "101.45%*2+135.27%", "108.63%*2+144.84%", "115.82%*2+154.42%", "123.00%*2+164.00%", "130.18%*2+173.58%", "137.37%*2+183.15%", "144.55%*2+192.73%", "151.73%*2+202.31%", "158.92%*2+211.89%"]
+                    }],
+                    index: 3
+                }, {
+                    attributeName: "Feral Gyrate Part 2 Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["15.98%*6", "17.29%*6", "18.60%*6", "20.44%*6", "21.75%*6", "23.26%*6", "25.35%*6", "27.45%*6", "29.55%*6", "31.77%*6", "34.39%*6", "37.01%*6", "39.63%*6", "42.26%*6", "44.88%*6", "47.50%*6", "50.12%*6", "52.74%*6", "55.36%*6", "57.98%*6"]
+                    }],
+                    index: 4
+                }, {
+                    attributeName: "Mountain Roamer Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["41.69%*2", "45.11%*2", "48.53%*2", "53.31%*2", "56.73%*2", "60.66%*2", "66.13%*2", "71.60%*2", "77.07%*2", "82.88%*2", "89.72%*2", "96.56%*2", "103.39%*2", "110.23%*2", "117.07%*2", "123.90%*2", "130.74%*2", "137.58%*2", "144.41%*2", "151.25%*2"]
+                    }],
+                    index: 5
+                }, {
+                    attributeName: "Stormy Kicks Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["18.13%*8+96.65%", "19.61%*8+104.58%", "21.10%*8+112.51%", "23.18%*8+123.60%", "24.67%*8+131.53%", "26.37%*8+140.64%", "28.75%*8+153.32%", "31.13%*8+166.00%", "33.51%*8+178.68%", "36.03%*8+192.15%", "39.01%*8+208.01%", "41.98%*8+223.86%", "44.95%*8+239.71%", "47.92%*8+255.56%", "50.89%*8+271.41%", "53.87%*8+287.26%", "56.84%*8+303.11%", "59.81%*8+318.96%", "62.78%*8+334.81%", "65.75%*8+350.66%"]
+                    }],
+                    index: 7
+                }, {
+                    attributeName: "Tail Strike Damage",
+                    type: "Basic",
+                    skillDetailNum: [{
+                        values: ["88.00%*2", "95.22%*2", "102.44%*2", "112.54%*2", "119.76%*2", "128.05%*2", "139.60%*2", "151.14%*2", "162.69%*2", "174.96%*2", "189.39%*2", "203.82%*2", "218.25%*2", "232.69%*2", "247.12%*2", "261.55%*2", "275.98%*2", "290.41%*2", "304.85%*2", "319.28%*2"]
+                    }],
+                    index: 8
+                }, {
+                    attributeName: `"Lion's Spirit" Con. Energy Regen`,
+                    type: "",
+                    skillDetailNum: [{
+                        values: ["35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35", "35"]
+                    }],
+                    index: 9
+                }
+            ]
+        },
+        {
+            skillId: 7,
+            typeName: 'Inherent Skill',
+            skillName: `Lion's Pride`,
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLingyang/SP_IconLingyangD1.webp",
+            skillDescription: `Damage of the Intro Skill <span class="Highlight">Lion Awakens</span> is increased by {0}.`,
+            skillDetailNum: ["50%"],
+            multipliers: [],
+            skillBuffAtrribute: ["Intro Skill"],
+            skillBuff: [50],
+        },
+        {
+            skillId: 8,
+            typeName: 'Inherent Skill',
+            skillName: 'Diligent Practice',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLingyang/SP_IconLingyangD2.webp",
+            skillDescription: `Under the <span class="Highlight">Striding Lion</span> state, within {0}s after each <span class="Highlight">Basic Attack</span>, the next <span class="Highlight">Mountain Roamer</span> will deal an additional <span class="Ice">Glacio DMG</span>, equal to {1} of <span class="Highlight">Mountain Roamer</span> damage, considered as Resonance Skill damage.`,
+            skillDetailNum: ["3", "150%"],
+            multipliers: [],
+            skillBuffAtrribute: ["Intro Skill"],
+            skillBuff: [50]
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
+        }
+    ],
     sequences: [
         {
             node: "Sequence Node 1",
@@ -468,7 +472,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "No Buff",
             sequenceBuff: [],
             sequenceBuffAtrribute: [""],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM1_UI.webp"
         },
         {
             node: "Sequence Node 2",
@@ -478,7 +482,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "No Buff",
             sequenceBuff: [],
             sequenceBuffAtrribute: [""],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM2_UI.webp"
         },
         {
             node: "Sequence Node 3",
@@ -488,7 +492,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Basic Attack Damage Bonus", "Resonance Skill Damage Bonus"],
             sequenceBuff: [20, 10],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM3_UI.webp"
         },
         {
             node: "Sequence Node 4",
@@ -498,7 +502,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Glacio Damage Bonus"],
             sequenceBuff: [20],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM4_UI.webp"
         },
         {
             node: "Sequence Node 5",
@@ -508,7 +512,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "Extra Skill Buff",
             sequenceBuffAtrribute: ["Seven Stars Shine, Stepped upon High"],
             sequenceBuff: [200],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM5_UI.webp"
         },
         {
             node: "Sequence Node 6",
@@ -518,7 +522,7 @@ He joined the Liondance Troupe in Jinzhou by chance, aspiring to dispel fear and
             sequenceBuffType: "Character Skill Buff",
             sequenceBuffAtrribute: ["Basic Attack Damage Bonus"],
             sequenceBuff: [100],
-            itemImg: "https://cdn.wanderer.moe/wuthering-waves/other/T_IconRup_Part_1104_UI.png"
+            itemImg: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LingyangM6_UI.webp"
         }
     ]
-    }
+}

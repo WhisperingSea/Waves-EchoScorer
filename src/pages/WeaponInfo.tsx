@@ -146,7 +146,7 @@ const WeaponInfo: React.FC = () => {
                 <div className="weapon-info-flex-2">
                   <h3>Level:</h3>
                   <input
-                    className="weapon-input"
+                    className="weapon-range"
                     id="weapon-level"
                     type="range"
                     min={1}
@@ -160,7 +160,7 @@ const WeaponInfo: React.FC = () => {
                 <div className="weapon-info-flex-2">
                   <h3>Rank</h3>
                   <input
-                    className="weapon-input"
+                    className="weapon-range"
                     id="weapon-reine"
                     type="range"
                     min={1}

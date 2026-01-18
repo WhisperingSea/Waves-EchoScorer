@@ -17,18 +17,19 @@
 }
 
 .guide-grid {
+    border-top: 3px solid;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat( 12, 1fr);
-    grid-template-rows: repeat( 4, 100px ) 50px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 100px) 50px;
     gap: 10px;
 }
 
 .stats-grid {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat( 2, 1fr);
-    grid-template-rows: repeat( 4, 60px );
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 60px);
     gap: 10px;
     align-items: center;
 }
@@ -41,7 +42,7 @@
     grid-column: 1 / 9;
     grid-row: 1 / 2;
     padding: 10px 30px;
-    border: 1px solid azure;
+    color: white;
 }
 
 .grid-item-1-flex {
@@ -52,6 +53,10 @@
 
 .guide-paragraph {
     font-size: 24px;
+}
+
+.element-icon {
+    height: 42px;
 }
 
 .rarity-icon {
@@ -69,7 +74,38 @@
 
 .slider-input {
     width: 400px;
-    cursor:grab;
+    cursor: grab;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #2a2a2a 0%, #4a4a4a 100%);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    cursor: grab;
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.slider-input::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    cursor: grab;
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+    border: 2px solid white;
+    transition: all 0.3s ease;
 }
 
 .stats-flexbox {
@@ -83,20 +119,20 @@
 
 .guide-grid-item-0 {
     font-size: 20px;
+    color: white;
 }
 
 .guide-grid-item-2 {
     grid-column: 1 / 9;
     grid-row: 2 / 6;
     padding: 10px 30px;
-    border: 1px solid azure;
+    color: white;
 }
 
 .guide-grid-item-3 {
     grid-column: 9 / 13;
     grid-row: 1 / 6;
     padding: 5px;
-    border: 1px solid azure;
     font-size: 0;
 }
 
@@ -166,12 +202,13 @@ input:checked+.slider:before {
 }
 
 .page-link-grid {
-    margin: 80px;
+    margin: 60px 65px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
-    border-bottom: 1px solid azure;
-    border-top: 1px solid azure;
+    justify-items: center;
+    border-bottom: 3px solid;
+    border-top: 3px solid;
 }
 
 .page-link-ref {
@@ -205,6 +242,83 @@ input:checked+.slider:before {
 
 .mat-item {
     font-size: 20px;
+}
+
+.scorer-link-text {
+    display: inline-block;
+    padding: 2px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.Glacio .scorer-link-text {
+    background-color: transparent;
+    border-color: rgb(115, 194, 226);
+    color: rgb(115, 194, 226);
+}
+
+.Glacio .scorer-link-text:hover {
+    background-color: rgb(115, 194, 226);
+    color: #000;
+}
+
+.Fusion .scorer-link-text {
+    background-color: transparent;
+    border-color: rgb(211, 77, 77);
+    color: rgb(211, 77, 77);
+}
+
+.Fusion .scorer-link-text:hover {
+    background-color: rgb(211, 77, 77);
+    color: #fff;
+}
+
+.Electro .scorer-link-text {
+    background-color: transparent;
+    border-color: rgb(197, 56, 197);
+    color: rgb(197, 56, 197);
+}
+
+.Electro .scorer-link-text:hover {
+    background-color: rgb(197, 56, 197);
+    color: #fff;
+}
+
+.Aero .scorer-link-text {
+    background-color: transparent;
+    border-color: rgb(123, 207, 172);
+    color: rgb(123, 207, 172);
+}
+
+.Aero .scorer-link-text:hover {
+    background-color: rgb(123, 207, 172);
+    color: #000;
+}
+
+.Spectro .scorer-link-text {
+    background-color: transparent;
+    border-color: rgb(206, 180, 31);
+    color: rgb(206, 180, 31);
+}
+
+.Spectro .scorer-link-text:hover {
+    background-color: rgb(206, 180, 31);
+    color: #000;
+}
+
+.Havoc .scorer-link-text {
+    background-color: transparent;
+    border-color: rgb(196, 40, 133);
+    color: rgb(196, 40, 133);
+}
+
+.Havoc .scorer-link-text:hover {
+    background-color: rgb(196, 40, 133);
+    color: #fff;
 }
 
 @media (max-width: 1024px) and (min-width: 320px) {
@@ -255,7 +369,7 @@ input:checked+.slider:before {
     .guide-container {
         padding-top: 30px;
     }
-    
+
     .page-link-grid {
         display: none;
     }
@@ -263,12 +377,17 @@ input:checked+.slider:before {
 
 @media (max-width: 767px) and (min-width: 320px) {
     .guide-grid {
-        grid-template-rows: repeat(3, max-content)
+        grid-template-rows: repeat(3, max-content);
+    }
+
+    .scorer-link {
+        margin: 10px 0 5px;
     }
 
     .guide-grid-item-1 {
         grid-column: 1 / 13;
         grid-row: 2 / 3;
+        padding-top: 0px;
     }
 
     .grid-item-1-flex {
@@ -322,7 +441,7 @@ input:checked+.slider:before {
         width: 40px;
     }
 
-    
+
     input:checked+.slider:before {
         -webkit-transform: translateX(20px);
         -ms-transform: translateX(20px);
@@ -379,7 +498,7 @@ input:checked+.slider:before {
         margin: 10px 0;
         font-size: 22px;
     }
-    
+
     .chara-mat-type {
         font-size: 22px;
     }
@@ -390,5 +509,10 @@ input:checked+.slider:before {
 
     .chara-ascension-list {
         margin: 10px;
+    }
+
+    .scorer-link {
+        margin-left: 0;
+        margin-top: 10px;
     }
 }

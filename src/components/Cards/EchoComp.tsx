@@ -325,10 +325,14 @@ const EchoComp: React.FC<EchoCompType> = ({ index }) => {
 
   useEffect(() => {
     if (selectedEcho) {
-      const newSet = selectedEcho.sonataGroup[0];
+      const available = selectedEcho.sonataGroup;
+      const preferred = echoStats[index].set;
+      const newSet = preferred && available.includes(preferred)
+        ? preferred
+        : available[0];
       setSelectedVal(newSet);
     }
-  }, [selectedEcho, setSelectedVal]);
+  }, [selectedEcho, echoStats, index]);
 
   return (
     <>

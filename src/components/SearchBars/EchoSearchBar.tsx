@@ -18,7 +18,7 @@ const EchoSearchBar: React.FC = () => {
   } = useSearchFilter();
   const [sonata2, setSonata2] = useState<string | undefined>("");
   const [sonata5, setSonata5] = useState<string | undefined>("");
-  const [sonataName, setSonataName] = useState<string | undefined>("");
+  const [sonata3, setSonata3] = useState<string | undefined>("");
   const [activeEchoGroup, setActiveEchoGroup] = useState<number>(0);
 
   const sonataGroup = WWSonataData.find((s) => s.id === selectedEchoGroup);
@@ -32,7 +32,7 @@ const EchoSearchBar: React.FC = () => {
     if (selectedEchoGroup) {
       setSonata2(sonataGroup?.twoPiece);
       setSonata5(sonataGroup?.fivePiece);
-      setSonataName(sonataGroup?.name);
+      setSonata3(sonataGroup?.threePiece);
     }
   });
 
@@ -46,7 +46,7 @@ const EchoSearchBar: React.FC = () => {
             type="text"
             value={echoQuery}
             onChange={handleEchoSearch}
-            placeholder="Search by name..."
+            placeholder="Search by name or Echo skill description..."
           />
         </div>
         {WWSonataData.map((sonata) => (
@@ -61,9 +61,14 @@ const EchoSearchBar: React.FC = () => {
         ))}
         {selectedEchoGroup !== 0 && (
           <div className="sonata-effect">
-            <h3 className="sonata-effect-name">{sonataName}</h3>
-            <h3 className="sonata-effect-text">2-Piece: {sonata2}</h3>
-            <h3 className="sonata-effect-text">5-Piece: {sonata5}</h3>
+            {sonata3 ? (
+              <h3 className="sonata-effect-text">3-Piece: {sonata3}</h3>
+            ) : (
+              <>
+                <h3 className="sonata-effect-text">2-Piece: {sonata2}</h3>
+                <h3 className="sonata-effect-text">5-Piece: {sonata5}</h3>
+              </>
+            )}
           </div>
         )}
         <div className="dropdown">

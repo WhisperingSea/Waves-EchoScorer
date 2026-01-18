@@ -15,7 +15,7 @@ export const Ciaccona: WWCharacter = {
     images: {
         portrait: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRolePile/T_IconRole_Pile_xiakong_UI.webp",
         icon_sq: "https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_37_UI.webp",
-        model: "https://i.imgur.com/hV6S0Bo.png" //TODO temp photo?
+        model: "https://i.imgur.com/hV6S0Bo.png"
     },
     asension: {
         charaAsension: [
@@ -155,7 +155,8 @@ export const Ciaccona: WWCharacter = {
                 Press Normal Attack after Mid-air Attack Stage 2 to cast Basic Attack Stage 4.
                 <div class="gap"></div>
                 <span class="Title">Dodge Counter Attack</span>
-                Follow up successful <span class="Highlight">Dodges</span> with <span class="Highlight">Basic Attack</span> to attack the target, dealing <span class="Wind">Aero DMG</span>.`,//TODO missing
+                Follow up successful <span class="Highlight">Dodges</span> with <span class="Highlight">Basic Attack</span> to attack the target, dealing <span class="Wind">Aero DMG</span>.`,
+
             skillDetailNum: [],
             multipliers: [
                 {
@@ -397,6 +398,7 @@ export const Ciaccona: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Windcalling Tune',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconXiakong/SP_IconXiakongT.webp",
             skillDescription: `<span class="Highlight">Aero Erosion</span> DMG dealt to targets near the active Resonator is Amplified by 100% for 30s.`,
             skillDetailNum: [""],
             multipliers: []
@@ -438,6 +440,7 @@ export const Ciaccona: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'Interlude Tune',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconXiakong/SP_IconXiakongD1.webp",
             skillDescription: `Casting Resonance Liberation <span class="Highlight">Singer's Triple Cadenza</span> grants Ciaccona a Shield equal to 100% of her Max HP for 4s. Switching out Ciaccona removes the Shield.`,
             skillDetailNum: [""],
             multipliers: []
@@ -446,7 +449,17 @@ export const Ciaccona: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Winds of Rinascita',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconXiakong/SP_IconXiakongD2.webp",
             skillDescription: `Increase <span class="Highlight">Heavy Attack - Quadruple Downbeat's</span> DMG by 30%.`,
+            skillDetailNum: [""],
+            multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
             skillDetailNum: [""],
             multipliers: []
         }

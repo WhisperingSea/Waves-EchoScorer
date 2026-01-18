@@ -53,7 +53,7 @@ export function EchoScorerFunction(index: number) {
         return 0;
       }
 
-      const supports = [1101, 1106, 1501, 1503];
+      const supports = [1101, 1106, 1209, 1501, 1503];
       const dps = !supports.includes(selectedCharacterId || 0);
 
       let dpsBonus = 0;
@@ -87,16 +87,15 @@ export function EchoScorerFunction(index: number) {
             ? 5
             : 0;
           flatBonus = ["ATK", "DEF"].includes(prefStatName) ? 2 : 0;
-        } else if (selectedCharacterId === 1105) {
-          supportBonus = ["Energy Regen%", "ATK%"].includes(prefStatName)
+        } else if (selectedCharacterId === 1209) {
+          // Mornye support profile: favors Energy Regen and DEF
+          supportBonus = ["Energy Regen%", "DEF%"].includes(prefStatName)
             ? 5
             : 0;
-          supportSubBonus = ["Crit. Rate%", "Crit. DMG%", "ATK"].includes(
-            prefStatName
-          )
+          supportSubBonus = ["DEF", "Crit. DMG%"].includes(prefStatName)
             ? 3
             : 0;
-          flatBonus = ["HP", "DEF"].includes(prefStatName) ? 2 : 0;
+          flatBonus = ["DEF"].includes(prefStatName) ? 2 : 0;
         } else if (selectedCharacterId === 1101) {
           supportBonus = ["HP%", "Energy Regen%"].includes(prefStatName)
             ? 5
@@ -114,7 +113,7 @@ export function EchoScorerFunction(index: number) {
 
       const statScore = (index + 1) * 0.5;
       const prefStatScore = prefStat ? 2 : 0;
-      const score =
+      const baseScore =
         (prefStatScore +
           statScore +
           prefMainCost1 +
@@ -125,11 +124,16 @@ export function EchoScorerFunction(index: number) {
           supportBonus +
           supportSubBonus +
           flatBonus) *
-        (set ? 1 : 0.5);
+        (set ? 1 : 0.8);
 
-      return score;
+      const weightItem = Object.values(ScorerWeight).find(
+        (w) => w.stat === statName
+      );
+      const weightValue = weightItem?.value ?? 1;
+
+      return baseScore * weightValue;
     },
-    [WWSubstats, subStats, selectedCharacterId, set]
+    [WWSubstats, subStats, selectedCharacterId, set, ScorerWeight]
   );
 
   const weights = useMemo(() => Object.values(ScorerWeight), [ScorerWeight]);
@@ -176,23 +180,23 @@ export function EchoScorerFunction(index: number) {
   }, [calculateScoreMisc]);
 
   const Score = useMemo(() => {
-    if (scoreVal >= 45) return "OP";
-    if (scoreVal >= 43.5) return "SSS+";
-    if (scoreVal >= 40) return "SSS";
-    if (scoreVal >= 37.5) return "SS+";
-    if (scoreVal >= 35) return "SS";
-    if (scoreVal >= 32.5) return "S+";
-    if (scoreVal >= 30) return "S";
-    if (scoreVal >= 27.5) return "A+";
-    if (scoreVal >= 25) return "A";
-    if (scoreVal >= 22.5) return "B+";
-    if (scoreVal >= 20) return "B";
-    if (scoreVal >= 17.5) return "C+";
-    if (scoreVal >= 15) return "C";
-    if (scoreVal >= 12.5) return "D+";
-    if (scoreVal >= 10) return "D";
-    if (scoreVal >= 5) return "D-";
-    if (scoreVal < 5) return "Trash";
+    if (scoreVal >= 43.5) return "OP";
+    if (scoreVal >= 42.0) return "SSS+";
+    if (scoreVal >= 38.5) return "SSS";
+    if (scoreVal >= 36.0) return "SS+";
+    if (scoreVal >= 33.5) return "SS";
+    if (scoreVal >= 31.0) return "S+";
+    if (scoreVal >= 28.5) return "S";
+    if (scoreVal >= 26.0) return "A+";
+    if (scoreVal >= 23.5) return "A";
+    if (scoreVal >= 21.0) return "B+";
+    if (scoreVal >= 18.5) return "B";
+    if (scoreVal >= 16.0) return "C+";
+    if (scoreVal >= 13.5) return "C";
+    if (scoreVal >= 11.0) return "D+";
+    if (scoreVal >= 8.5) return "D";
+    if (scoreVal >= 4.0) return "D-";
+    if (scoreVal < 4.0) return "Trash";
     return "";
   }, [scoreVal]);
 

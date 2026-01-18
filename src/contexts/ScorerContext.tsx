@@ -46,7 +46,7 @@ export const ScorerContextProvider: React.FC<ScorerContextProviderProps> = ({
     CritRate: { stat: "Crit. Rate%", value: 1 },
     CritDMG: { stat: "Crit. DMG%", value: 1 },
     EnergyRegen: { stat: "Energy Regen%", value: 1 },
-    HealingBonus: { stat: "Heaing Bonus%", value: 0 },
+    HealingBonus: { stat: "Healing Bonus%", value: 0 },
     BasicBonus: { stat: "Basic Attack DMG Bonus%", value: 0.75 },
     HeavyBonus: { stat: "Heavy Attack DMG Bonus%", value: 0.75 },
     SkillBonus: { stat: "Resonance Skill DMG Bonus%", value: 0.75 },

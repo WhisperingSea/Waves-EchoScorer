@@ -352,6 +352,7 @@ export const Phoebe: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Attentive Heart',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFeibi/SP_IconFeibiT.webp",
             skillDescription: `Deal <span class="Light">Spectro DMG</span> equal to {0} of Phoebe's ATK to nearby targets.<br>
             - <span class="Highlight">Absolution</span> Enhancement: Increase DMG Multiplier by {1}.<br>
             - <span class="Highlight">Confession</span> Enhancement: Grant <span class="Highlight">Silent Prayer</span> to the Resonator on the field, reducing the Spectro RES of nearby targets by {2} and granting {3} <span class="Highlight">Spectro Frazzle</span> DMG Amplification. When <span class="Highlight">Spectro Frazzle</span> inflicts DMG, extend <span class="Highlight">Spectro Frazzle</span>'s damage interval by {4}. This effect lasts 30s or until Phoebe switches to <span class="Highlight">Absolution</span> status.`,
@@ -434,6 +435,7 @@ export const Phoebe: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'Presence',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFeibi/SP_IconFeibiD1.webp",
             skillDescription: `Mid-air Heavy Attack can be cast 1 more time.`,
             skillDetailNum: [""],
             multipliers: []
@@ -442,8 +444,18 @@ export const Phoebe: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Revelation',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFeibi/SP_IconFeibiD2.webp",
             skillDescription: `When in the <span class="Highlight">Absolution</span> status and <span class="Highlight">Confession</span> status, Spectro DMG Bonus is increased by {0}.`,
             skillDetailNum: ["12%"],
+            multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
             multipliers: []
         }
     ],

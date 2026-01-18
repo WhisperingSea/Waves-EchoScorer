@@ -4,11 +4,79 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
-    padding: 20px;
+    padding: 0;
     box-shadow: 0px 4px 8px rgba(238, 238, 238, 0.692);
     z-index: 1001;
     border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    max-width: 1400px;
+    min-width: 1024px;
+}
+
+.echo-modal-tabs-full {
+    width: 100%;
+    display: flex;
+    padding: 12px;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.echo-modal-tabs-split {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+}
+
+.echo-tab-full {
+    flex: 1;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    height: 40px;
+    padding: 0 18px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.echo-tab-full:hover {
+    background-color: #444;
+}
+
+.echo-tab-full.active {
+    background-color: #666;
+    border-color: rgba(255,255,255,0.45);
+}
+
+.echo-tab-half {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 24px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    font-size: 16px;
+}
+
+.echo-tab-half:hover {
+    background-color: #444;
+}
+
+.echo-tab-half.active {
+    background-color: #666;
+    border-color: rgba(255,255,255,0.45);
 }
 
 .overlay-echo-modal {
@@ -39,44 +107,109 @@
     grid-auto-rows: minmax(min-content, auto);
     gap: 20px;
     justify-content: center;
-    width: 80vw;
-    height: 70vh;
-    padding: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
     overflow: auto;
-    border: 1px solid azure;
+    border: none;
     z-index: 1001;
 }
 
 .calcEcho-modal-box-2 {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-auto-rows: minmax(min-content, auto);
-    gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    width: 1000px;
-    height: 70vh;
-    padding: 20px;
-    overflow: auto;
-    border: 1px solid azure;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(80vh - 50px);
+    padding: 0;
+    overflow: hidden;
+    border: none;
     z-index: 1001;
 }
 
-.calcEcho-modal-box-3 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-auto-rows: minmax(min-content, auto);
-    gap: 20px;
+.echo-actions-row {
+    display: flex;
+    gap: 12px;
+    padding: 12px 20px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    flex-shrink: 0;
+}
+
+.echo-filter-btn-wrapper {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 1000px;
-    height: 70vh;
-    padding: 20px;
+    height: 38px;
+    min-width: 38px;
+    background-color: rgba(159, 217, 255, 0.25);
+    border: 1px solid #9fd9ff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.echo-filter-btn-wrapper:hover {
+    background-color: rgba(159, 217, 255, 0.35);
+    border-color: #1ae0ff;
+}
+
+.echo-filter-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(1.2);
+}
+
+.echo-content-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    flex: 1;
     overflow: hidden;
-    border: 1px solid azure;
+}
+
+.echo-list-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+    overflow-y: auto;
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.echo-stats-panel {
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.calcEcho-modal-box-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(80vh - 50px);
+    padding: 0;
+    overflow: hidden;
+    border: none;
     z-index: 1001;
+}
+
+.add-subtabs-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.add-content-area {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
 }
 
 .calcEcho-modal-store-box {
@@ -315,41 +448,73 @@ img.echo-modal-card-set {
 }
 
 .echo-modal-btn-box {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50/50 split */
     gap: 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    align-items: stretch;
 }
 
 .echo-modal-select-btn {
-    height: 1.8rem;
-    background-color: transparent;
+    width: 100%;
+    min-width: 0; /* allow text ellipsis inside grid */
+    height: 38px;
+    background-color: rgba(240, 248, 255, 0.2);
     border: 1px solid azure;
     color: white;
-    padding: 0 20px;
-    width: 100%;
+    padding: 0 16px;
     cursor: pointer;
-    margin-right: 20px;
-    margin-top: 20px;
-}
-
-.echo-modal-delete-btn {
-    height: 1.8rem;
-    background-color: transparent;
-    border: 1px solid rgb(255, 11, 11);
-    color: rgb(255, 14, 14);
-    padding: 0 20px;
-    width: 100%;
-    cursor: pointer;
-    margin-right: 20px;
-    margin-top: 20px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .echo-modal-select-btn:hover {
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(240, 248, 255, 0.28);
+}
+
+.echo-modal-delete-btn {
+    width: 100%;
+    min-width: 0; /* allow text ellipsis inside grid */
+    height: 38px;
+    background-color: rgba(255, 11, 11, 0.2);
+    border: 1px solid rgb(255, 11, 11);
+    color: rgb(255, 14, 14);
+    padding: 0 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .echo-modal-delete-btn:hover {
-    background-color: rgb(54, 0, 0);
+    background-color: rgba(255, 11, 11, 0.28);
+}
+
+.echo-tab-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.echo-tab-actions .echo-modal-delete-btn {
+    width: auto;
+    min-width: 160px;
+    padding: 6px 14px;
+    margin: 0;
 }
 
 .CalcEcho-modal-btn {
@@ -374,10 +539,13 @@ img.echo-modal-card-set {
     overflow: auto;
     gap: 5px;
     padding: 5px;
+    width: 50%;
 }
 
 .calcEcho-modal-add-box-2 {
+    width: 50%;
     overflow: auto;
+    padding: 12px;
 }
 
 .calcEcho-modal-add-box-select {
@@ -388,7 +556,7 @@ img.echo-modal-card-set {
 }
 
 .calcEcho-modal-add-box-2 {
-    grid-column: 4 / 6;
+    grid-column: 4 / 7;
     overflow: auto;
 }
 
@@ -446,8 +614,23 @@ img.stat-Icons {
     color: white;
     border: 1px solid azure;
     border-radius: 8px;
-    padding: 2px 8px;
+    padding: 8px 16px;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 130px;
+    height: 36px;
+    line-height: 1;
+    text-align: center;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-decoration: none;
+    margin: 0;
 }
 
 .image-process-btn {
@@ -455,8 +638,24 @@ img.stat-Icons {
     color: white;
     border: 1px solid azure;
     border-radius: 8px;
-    padding: 4px 8px;
+    padding: 8px 16px;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
+    min-width: 130px;
+    height: 36px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-align: center;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin: 0;
 }
 
 .processing-screen {
@@ -478,6 +677,71 @@ img.stat-Icons {
     animation: spin 1s linear infinite;
 }
 
+/* Ensure identical styles for both import buttons within the Echo modal,
+   overriding any global styles (e.g., Test.css) */
+.calcEcho-modal-import-box .custom-file-upload,
+.calcEcho-modal-import-box .image-process-btn {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid azure;
+    border-radius: 8px;
+    padding: 8px 16px;
+    min-width: 130px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    line-height: 1;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+.calcEcho-modal-import-box .custom-file-upload:hover,
+.calcEcho-modal-import-box .image-process-btn:hover {
+    background-color: #1f1f1f;
+    border-color: #1ae0ff;
+}
+
+/* Apply same normalized styles to Import from game tab */
+.calcEcho-modal-box-4 .custom-file-upload,
+.calcEcho-modal-box-4 .image-process-btn {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid azure;
+    border-radius: 8px;
+    padding: 8px 16px;
+    min-width: 130px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    line-height: 1;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+.calcEcho-modal-box-4 .custom-file-upload:hover,
+.calcEcho-modal-box-4 .image-process-btn:hover {
+    background-color: #1f1f1f;
+    border-color: #1ae0ff;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -490,8 +754,102 @@ img.stat-Icons {
 
 .calcEcho-modal-add-flex-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.import-toggle {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.import-toggle-btn {
+    background-color: black;
+    color: white;
+    border: 1px solid azure;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.import-toggle-btn.active {
+    background-color: #1f1f1f;
+    border-color: #1ae0ff;
+}
+
+.discord-import-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.discord-import-tutorial {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.tutorial-box {
+    width: 95%;
+    padding: 10px 12px;
+}
+
+.tutorial-box ol,
+.tutorial-box ul {
+    margin: 8px 0 0 18px;
+    padding: 0;
+}
+
+.tutorial-box li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.tutorial-note {
+    margin: 8px 0;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tutorial-images-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.tutorial-images-row .example-echo-img {
+    margin: 0;
+}
+
+/* Side-by-side processed images (Import from game) */
+.processed-images-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.processed-image {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #111;
+}
+
+@media (max-width: 481px) {
+    .processed-image {
+        width: 200px;
+    }
 }
 
 .process-img-intsruction {
@@ -503,6 +861,16 @@ img.stat-Icons {
 
 .example-echo-img {
     width: 350px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Center any images inside the import box (preview + tutorial examples) */
+.calcEcho-modal-import-box img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 @media (max-width: 1100px) and (min-width: 1024px) {
@@ -521,6 +889,12 @@ img.stat-Icons {
     .CalcEcho-modal-btn {
         padding: 4px 8px;
         font-size: 1.1rem;
+    }
+
+    /* Ensure modal fits smaller viewports */
+    .CalcEcho-Modal-Container {
+        min-width: 0;
+        width: 85vw;
     }
 
     .calcEcho-modal-store-box {
@@ -548,7 +922,8 @@ img.stat-Icons {
     }
 
     .echo-modal-btn-box {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr; /* stack on small screens */
     }
 
     .echo-modal-delete-btn {
@@ -573,6 +948,8 @@ img.stat-Icons {
 @media (max-width: 767px) and (min-width: 320px) {
     .CalcEcho-Modal-Container {
         padding: 10px;
+        min-width: 0;
+        width: 90vw;
     }
     
     .calcEcho-modal-store-box {
@@ -683,6 +1060,11 @@ img.stat-Icons {
     .calcEcho-modal-add-box {
         grid-template-columns: repeat(3, 1fr);
     }
+    
+    .CalcEcho-Modal-Container {
+        min-width: 0;
+        width: 96vw;
+    }
 
     .CalcEcho-modal-btn {
         padding: 4px 8px;
@@ -693,5 +1075,493 @@ img.stat-Icons {
 
     .example-echo-img {
         width: 250px;
+    }
+}
+
+/* Import from Image Tab Styles */
+.calcEcho-modal-box-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    overflow: auto;
+    border: none;
+    z-index: 1001;
+    gap: 20px;
+}
+.add-subtabs {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.add-subtab-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    font-size: 15px;
+    width: 100%;
+}
+
+.add-subtab-btn:hover {
+    background-color: #444;
+}
+
+.add-subtab-btn.active {
+    background-color: #666;
+    border-color: rgba(255,255,255,0.45);
+}
+
+.add-manual-layout {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 75% / 25% split */
+    gap: 16px;
+    align-items: start;
+}
+
+.manual-left-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.manual-searchbar {
+    display: grid;
+    grid-template-columns: 1fr 220px 120px;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid azure;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Ensure boxes respect 75/25 split inside manual layout */
+.add-manual-layout .calcEcho-modal-add-box {
+    grid-column: 1 / 2;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    padding: 8px;
+}
+
+.add-manual-layout .calcEcho-modal-add-box-2 {
+    grid-column: 2 / 3;
+    width: auto;
+    overflow: auto;
+    padding: 12px;
+}
+
+.calcEcho-modal-import-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 24px;
+    min-height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.import-buttons-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 12px 0 16px;
+}
+
+.selected-file-list {
+    margin: 8px 0 12px;
+}
+
+/* Normalize inner content width across both import tabs */
+.calcEcho-modal-box-4 .selected-file-list,
+.calcEcho-modal-box-4 .processed-images-row,
+.calcEcho-modal-box-4 .tutorial-box,
+.calcEcho-modal-import-box .selected-file-list,
+.calcEcho-modal-import-box .processed-images-row,
+.calcEcho-modal-import-box .tutorial-box {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calcEcho-modal-box-4 .tutorial-box,
+.calcEcho-modal-import-box .tutorial-box {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.calcEcho-modal-import-results {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.import-echoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.import-echo-card {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.import-echo-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.import-echo-header h3 {
+    margin: 0;
+    color: azure;
+}
+
+.import-echo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.import-echo-selects {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.import-echo-selects label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.import-echo-selects select {
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid azure;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.import-echo-stats {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.import-echo-stats p {
+    margin: 5px 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.import-save-btn {
+    padding: 8px 16px;
+    background-color: rgba(0, 128, 128, 0.6);
+    color: white;
+    border: 1px solid azure;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: block;
+    margin: auto auto 0; /* push to bottom inside flex column */
+}
+
+.import-save-btn:hover {
+    background-color: rgba(0, 128, 128, 1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.import-bulk-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.import-save-all-btn,
+.import-reset-btn {
+    padding: 12px 24px;
+    border: 1px solid azure;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.import-save-all-btn {
+    background-color: rgba(0, 128, 128, 0.8);
+    color: white;
+}
+
+.import-save-all-btn:hover {
+    background-color: rgba(0, 128, 128, 1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+.import-reset-btn {
+    background-color: rgba(128, 0, 0, 0.6);
+    color: white;
+}
+
+.import-reset-btn:hover {
+    background-color: rgba(128, 0, 0, 0.8);
+    box-shadow: 0 0 15px rgba(255, 100, 100, 0.5);
+}
+
+.import-progress {
+    color: azure;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Echo card display (matching Test page style) */
+.echo-cards-container {
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+}
+
+.echo-cards-container h3 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.echo-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    width: 100%;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+
+.echo-card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.echo-card-item p {
+    font-weight: bold;
+    margin: 0;
+    font-size: 14px;
+}
+
+.echo-card-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #444;
+}
+
+.echo-image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.echo-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.echo-match-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #444;
+}
+
+.echo-match-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.echo-match-full-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #111;
+    object-fit: cover;
+    display: block;
+}
+
+.sonata-icon-small-overlay {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none !important;
+    background-color: transparent !important;
+    object-fit: cover;
+    box-shadow: none !important;
+}
+
+.processing-text {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+.stats-display {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.sonata-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.dropdown-select:hover {
+    background-color: #242424;
+    border-color: #777;
+}
+
+.dropdown-select:focus {
+    outline: none;
+    border-color: #00ff00;
+    background-color: #242424;
+}
+
+.dropdown-select option {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.main-stat,
+.flat-stat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.sub-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.sub-stat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-name {
+    font-weight: 600;
+}
+
+.stat-value {
+    color: #ddd;
+}
+
+.Image-import-input {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .calcEcho-modal-box-4 {
+        width: 90vw;
+        height: auto;
+        max-height: 80vh;
+    }
+
+    .import-echoes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 481px) {
+    .calcEcho-modal-box-4 {
+        width: 95vw;
+        padding: 10px;
+    }
+
+    .import-echo-card {
+        padding: 10px;
+    }
+
+    .import-bulk-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .import-save-all-btn,
+    .import-reset-btn {
+        width: 100%;
     }
 }

@@ -119,7 +119,7 @@ const WeaponModal: React.FC<WeaponFeaturesModalProps> = ({
         rank: 1,
       }));
     }
-  }, [selectedWeapon, weaponStats]);
+  }, [selectedWeapon, weaponStats.id]);
 
   const rarityBG: RarityType = {
     1: {

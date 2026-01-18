@@ -403,6 +403,7 @@ export const Cantarella: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Gentle Tentacles',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKanteleila/SP_IconKanteleilaT.webp",
             skillDescription: `Amplify the incoming Resonator's Havoc DMG by {0} and Resonance Skill DMG by {1} for {2}s. Switching Resonators ends this effect.`,
             skillDetailNum: ["20", "25%", "14"],
             multipliers: []
@@ -557,6 +558,7 @@ export const Cantarella: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: '"Cure"',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKanteleila/SP_IconKanteleilaD1.webp",
             skillDescription: `Increase Healing Bonus by {0}.`,
             skillDetailNum: ["20%"],
             multipliers: []
@@ -565,8 +567,18 @@ export const Cantarella: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: '"Poison"',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKanteleila/SP_IconKanteleilaD2.webp",
             skillDescription: `Casting <span class="Highlight">Echo Skill</span> gives {0} Havoc DMG Bonus for {1}s, stacking up to {2} times.`,
             skillDetailNum: ["6%", "10", "2"],
+            multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
             multipliers: []
         }
     ],

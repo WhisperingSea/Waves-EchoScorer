@@ -433,6 +433,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Closing Remark',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaT.webp",
             skillDescription: `Attack the target, dealing <span class="Ice">Glacio DMG</span> equal to {0} of Carlotta's ATK.`,
             skillDetailNum: ["794.2%"],
             multipliers: []
@@ -505,6 +506,7 @@ To ensure her family's future, she alternates between dual roles, addressing del
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'Flawless Purity',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaD1.webp",
             skillDescription: `After casting Resonance Skill <span class="Highlight">Chromatic Splendor</span>, Carlotta can perform <span class="Highlight">Mid-air Attacks</span> while being immune to any DMG or interruptions before the Mid-air Attack deals DMG.<br>
             When Carlotta is on the team, the active Resonator's Flight STA cost is reduced by {0}.`,
             skillDetailNum: ["20%"],
@@ -514,8 +516,18 @@ To ensure her family's future, she alternates between dual roles, addressing del
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Ars Gratia Artis',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKelaita/SP_IconKelaitaD2.webp",
             skillDescription: `Intro Skill <span class="Highlight">Wintertime Aria</span>, Resonance Skill <span class="Highlight">Chromatic Splendor</span>, Resonance Liberation <span class="Highlight">Death Knell</span>, and Heavy Attack <span class="Highlight">Imminent Oblivion</span> can inflict <span class="Highlight">Deconstruction</span>.`,
             skillDetailNum: [],
+            multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
             multipliers: []
         }
     ],

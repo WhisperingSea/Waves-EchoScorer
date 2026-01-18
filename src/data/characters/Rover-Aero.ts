@@ -382,6 +382,7 @@ export const RoverAero: WWCharacter = {
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Storm\'s Echo',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFengzhu/SP_IconFengzhuT.webp",
             skillDescription: `Grant <span class="Highlight">Aeolian Realm</span> to all nearby Resonators in the team for {0}s. Aeolian Realm effect:<br>
             - Upon hitting a target, increase the maximum stack of Aero Erosion the target can receive by {1} for {2}s. This effect is not stackable.`,
             skillDetailNum: ["30", "3", "10"],
@@ -464,6 +465,7 @@ export const RoverAero: WWCharacter = {
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'Sand in the Storm',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFengzhu/SP_IconFengzhuD1.webp",
             skillDescription: `Casting Intro Skill <span class="Highlight">Relentless Squall</span> increases ATK by {0} for 10s.`,
             skillDetailNum: ["20%"],
             multipliers: []
@@ -472,8 +474,18 @@ export const RoverAero: WWCharacter = {
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Boundless Winds',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFengzhu/SP_IconFengzhuD2.webp",
             skillDescription: `Increase Healing from Resonance Liberation <span class="Highlight">Omega Storm</span> by {0}.`,
             skillDetailNum: ["20%"],
+            multipliers: []
+        },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
             multipliers: []
         }
     ],

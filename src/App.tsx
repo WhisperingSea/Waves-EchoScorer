@@ -12,6 +12,7 @@ import Features from "./pages/Features.tsx";
 import { WeaponContextProvider } from "./contexts/WeaponDataContext.tsx";
 import Weapons from "./pages/Weapon.tsx";
 import WeaponInfo from "./pages/WeaponInfo.tsx";
+import TestPage from "./pages/Test.tsx";
 import { CalcEchoProvider } from "./contexts/CalcEchoContext.tsx";
 import { CalcWeaponProvider } from "./contexts/CalcWeaponContext.tsx";
 import { CalcForteProvider } from "./contexts/CalcForteContext.tsx";
@@ -65,6 +66,7 @@ const App = () => {
                                   path="/features"
                                   element={<Features />}
                                 />
+                                <Route path="/test" element={<TestPage />} />
                                 <Route path="*" element={<NotFound />} />
                               </Routes>
                             </ScorerContextProvider>

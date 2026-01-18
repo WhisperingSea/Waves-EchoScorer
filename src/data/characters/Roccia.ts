@@ -214,7 +214,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
                         values: ["30", "30", "30", "30", "30", "30", "30", "30", "30", "30"]
                     }],
                     index: 10
-                }, 
+                },
             ]
         },
         {
@@ -239,7 +239,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
                         values: ["20s", "20s", "20s", "20s", "20s", "20s", "20s", "20s", "20s", "20s"]
                     }],
                     index: 2
-                },{
+                }, {
                     attributeName: "Concerto Regen",
                     type: "",
                     skillDetailNum: [{
@@ -285,7 +285,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
                         values: ["20", "20", "20", "20", "20", "20", "20", "20", "20", "20"]
                     }],
                     index: 4
-                }, 
+                },
             ]
         },
         {
@@ -317,6 +317,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
             skillId: 5,
             typeName: 'Outro Skill',
             skillName: 'Applause, Please!',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLuokeke/SP_IconLuokekeT.webp",
             skillDescription: `The incoming Resonator has their Havoc DMG Amplified by {0} and Basic Attack DMG Amplified by {1} for 14s or until the Resonator is switched out.`,
             skillDetailNum: ["20%", "25%"],
             multipliers: []
@@ -355,28 +356,28 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
                         values: ["171.00%", "185.03%", "199.05%", "218.68%", "232.70%", "248.83%", "271.26%", "293.70%", "316.13%", "339.97%"]
                     }],
                     index: 2
-                },{
+                }, {
                     attributeName: "Stage 3 DMG",
                     type: "Heavy",
                     skillDetailNum: [{
                         values: ["180.00%", "194.76%", "209.52%", "230.19%", "244.95%", "261.92%", "285.54%", "309.15%", "332.77%", "357.86%"]
                     }],
                     index: 3
-                },{
+                }, {
                     attributeName: "Stage 1 Concerto Regen",
                     type: "",
                     skillDetailNum: [{
                         values: ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10"]
                     }],
                     index: 4
-                },{
+                }, {
                     attributeName: "Stage 2 Concerto Regen",
                     type: "",
                     skillDetailNum: [{
                         values: ["16", "16", "16", "16", "16", "16", "16", "16", "16", "16"]
                     }],
                     index: 5
-                },{
+                }, {
                     attributeName: "Stage 3 Concerto Regen",
                     type: "",
                     skillDetailNum: [{
@@ -390,6 +391,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
             skillId: 7,
             typeName: 'Inherent Skill',
             skillName: 'Immersive Performance',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLuokeke/SP_IconLuokekeD2.webp",
             skillDescription: `Casting Resonance Skill or Heavy Attack increases Roccia's ATK by {0} for 12s.`,
             skillDetailNum: ["20%"],
             multipliers: []
@@ -398,6 +400,7 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
             skillId: 8,
             typeName: 'Inherent Skill',
             skillName: 'Super Attractive Magic Box',
+            skillImg: "https://api.hakush.in/ww/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLuokeke/SP_IconLuokekeD1.webp",
             skillDescription: `After casting Outro Skill, the Utility of the incoming Resonator is replaced with Magic Box.
             <span class="Title">Magic Box</span>
             - Upon use, pull nearby targets toward the Magic Box, dealing 100 points of <span class="Dark">Havoc DMG</span>. This skill is considered Echo Skill that deals Utility DMG.
@@ -405,6 +408,15 @@ With a tranquil, composed disposition, she navigates the ship's quarters, perche
             skillDetailNum: [""],
             multipliers: []
         },
+        {
+            skillId: 9,
+            typeName: "Tune Break",
+            skillName: '',
+            skillImg: "",
+            skillDescription: `When the target\'s <span class="Highlight">Off-Tune Level</span> is full, the Resonator may cast <span class="Highlight">Tune Break</span> on the target.`,
+            skillDetailNum: [""],
+            multipliers: []
+        }
     ],
     sequences: [
         {

@@ -40,7 +40,7 @@ export function EnergyCalc() {
     } else {
       setSonata2PieceBonus(0);
     }
-  });
+  }, [sonataGroup, sonataGroup2]);
 
   const echoStatsArray = Object.values(echoStats);
   const baseEnergy = 100;
@@ -121,7 +121,7 @@ export function HealCalc() {
     } else {
       setSonata2PieceBonus(0);
     }
-  });
+  }, [sonataGroup, sonataGroup2]);
 
   const echoStatsArray = Object.values(echoStats);
   const baseHeal = charaStats?.stats.base_healing as number;

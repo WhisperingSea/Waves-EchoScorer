@@ -13,7 +13,7 @@ export function EnemyResistaneCalc() {
     const BaseRes = EnemyEleRes + ResPen;
 
     setTotalRes(BaseRes);
-  });
+  }, [EnemyEleRes]);
 
   useEffect(() => {
     const BaseDef = 8 * EnemyLevel + 792;
@@ -28,7 +28,7 @@ export function EnemyResistaneCalc() {
       BaseAttacker / ((BaseAttacker + BaseDef) * (1 - DefIgnore));
 
     setTotalDef(DefMulti);
-  });
+  }, [EnemyLevel, level, EnemyDefIgnore]);
 
   const finalValue = TotalDef * (1 - TotalRes);
   return finalValue;
