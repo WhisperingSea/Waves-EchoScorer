@@ -76,6 +76,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
   const [processedEchoes, setProcessedEchoes] = useState<ProcessedEchoData[]>([]);
   const [importProgress, setImportProgress] = useState<string>("");
   const [savedEchoes, setSavedEchoes] = useState<Record<number, boolean>>({});
+  const [duplicateMap, setDuplicateMap] = useState<Record<number, boolean>>({});
   // Manual add search/filter state
   const [manualSearch, setManualSearch] = useState<string>("");
   const [manualSet, setManualSet] = useState<number>(0); // 0 = All sets
@@ -450,44 +451,91 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
     }
   };
 
+  // Build a storage echo object (without storeId) from a processed echo
+  const toStorageEcho = (echo: ProcessedEchoData) => {
+    if (!echo.selectedEchoId) return null;
+    const echoData = WWEchoesJSON.find((e) => e.id === echo.selectedEchoId);
+    if (!echoData) return null;
+    return {
+      name: echoData.name,
+      cost: echoData.cost,
+      id: echoData.id,
+      set: echo.selectedSonataId || 1,
+      mainStat: normalizeStatName(echo.mainStat, echo.mainValue),
+      mainStatValue: normalizePercentValue(echo.mainStat, echo.mainValue),
+      selectedSubStat1: {
+        stat: normalizeStatName(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
+        value: normalizePercentValue(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
+      },
+      selectedSubStat2: {
+        stat: normalizeStatName(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
+        value: normalizePercentValue(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
+      },
+      selectedSubStat3: {
+        stat: normalizeStatName(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
+        value: normalizePercentValue(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
+      },
+      selectedSubStat4: {
+        stat: normalizeStatName(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
+        value: normalizePercentValue(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
+      },
+      selectedSubStat5: {
+        stat: normalizeStatName(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
+        value: normalizePercentValue(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
+      },
+    } as const;
+  };
+
+  const isSameEcho = (a: any, b: any) => {
+    return (
+      a && b &&
+      a.id === b.id &&
+      a.name === b.name &&
+      a.set === b.set &&
+      a.cost === b.cost &&
+      a.mainStat === b.mainStat &&
+      a.mainStatValue === b.mainStatValue &&
+      a.selectedSubStat1.stat === b.selectedSubStat1.stat &&
+      a.selectedSubStat1.value === b.selectedSubStat1.value &&
+      a.selectedSubStat2.stat === b.selectedSubStat2.stat &&
+      a.selectedSubStat2.value === b.selectedSubStat2.value &&
+      a.selectedSubStat3.stat === b.selectedSubStat3.stat &&
+      a.selectedSubStat3.value === b.selectedSubStat3.value &&
+      a.selectedSubStat4.stat === b.selectedSubStat4.stat &&
+      a.selectedSubStat4.value === b.selectedSubStat4.value &&
+      a.selectedSubStat5.stat === b.selectedSubStat5.stat &&
+      a.selectedSubStat5.value === b.selectedSubStat5.value
+    );
+  };
+
+  // Recompute duplicate map when processed echoes or storage change
+  useEffect(() => {
+    const map: Record<number, boolean> = {};
+    processedEchoes.forEach((pe, idx) => {
+      const candidate = toStorageEcho(pe);
+      if (!candidate) {
+        map[idx] = false;
+      } else {
+        map[idx] = storedEcho.some((se) => isSameEcho(se, candidate));
+      }
+    });
+    setDuplicateMap(map);
+  }, [processedEchoes, storedEcho]);
+
   const handleSaveAllImportedEchoes = () => {
     // Build array of echoes to persist to local storage
-    const echoesToAdd = processedEchoes
+    const echoesToAddAll = processedEchoes
       .filter((echo) => echo.selectedEchoId)
       .map((echo) => {
-        const echoData = WWEchoesJSON.find((e) => e.id === echo.selectedEchoId);
-        if (!echoData) return null;
-        
-        return {
-          name: echoData.name,
-          cost: echoData.cost,
-          id: echoData.id,
-          set: echo.selectedSonataId || 1,
-          mainStat: normalizeStatName(echo.mainStat, echo.mainValue),
-          mainStatValue: normalizePercentValue(echo.mainStat, echo.mainValue),
-          selectedSubStat1: {
-            stat: normalizeStatName(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
-          },
-          selectedSubStat2: {
-            stat: normalizeStatName(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
-          },
-          selectedSubStat3: {
-            stat: normalizeStatName(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
-          },
-          selectedSubStat4: {
-            stat: normalizeStatName(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
-          },
-          selectedSubStat5: {
-            stat: normalizeStatName(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
-          },
-        };
+        const candidate = toStorageEcho(echo);
+        return candidate;
       })
       .filter((echo): echo is NonNullable<typeof echo> => echo !== null);
+
+    // Exclude duplicates already in storage
+    const echoesToAdd = echoesToAddAll.filter(
+      (cand) => !storedEcho.some((se) => isSameEcho(se, cand))
+    );
 
     // Add all echoes in one batch to get unique IDs
     if (echoesToAdd.length > 0) {
@@ -546,39 +594,13 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
   const handleSaveIndividualEcho = (idx: number) => {
     const echo = processedEchoes[idx];
     if (echo.selectedEchoId) {
-      const echoData = WWEchoesJSON.find((e) => e.id === echo.selectedEchoId);
-      if (echoData) {
-        const newEcho = {
-          name: echoData.name,
-          cost: echoData.cost,
-          id: echoData.id,
-          set: echo.selectedSonataId || 1,
-          mainStat: normalizeStatName(echo.mainStat, echo.mainValue),
-          mainStatValue: normalizePercentValue(echo.mainStat, echo.mainValue),
-          selectedSubStat1: {
-            stat: normalizeStatName(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[0]?.stat || "", echo.subStats[0]?.value ?? 0),
-          },
-          selectedSubStat2: {
-            stat: normalizeStatName(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[1]?.stat || "", echo.subStats[1]?.value ?? 0),
-          },
-          selectedSubStat3: {
-            stat: normalizeStatName(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[2]?.stat || "", echo.subStats[2]?.value ?? 0),
-          },
-          selectedSubStat4: {
-            stat: normalizeStatName(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[3]?.stat || "", echo.subStats[3]?.value ?? 0),
-          },
-          selectedSubStat5: {
-            stat: normalizeStatName(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
-            value: normalizePercentValue(echo.subStats[4]?.stat || "", echo.subStats[4]?.value ?? 0),
-          },
-        };
-        addEcho(newEcho);
-        setSavedEchoes((prev) => ({ ...prev, [idx]: true }));
-      }
+      const candidate = toStorageEcho(echo);
+      if (!candidate) return;
+      // Skip if duplicate
+      const isDup = storedEcho.some((se) => isSameEcho(se, candidate));
+      if (isDup) return;
+      addEcho(candidate);
+      setSavedEchoes((prev) => ({ ...prev, [idx]: true }));
     }
   };
 
@@ -814,7 +836,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                       <h3 className="no-margin echo-stat-box-name">
                         <b>{StoreSelectedEcho.name}</b>
                       </h3>
-                      <h3 className="no-margin">Main Stat -</h3>
+                      <h3 className="no-margin">Main Stat:</h3>
                       <div className="echo-modal-stats-box">
                         <img className="stat-Icons" src={Icon} />
                         <h3 className="margin-box-text">
@@ -824,7 +846,7 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                         </h3>
                         <h3>{formatStatValue(StoreSelectedEcho.mainStat, StoreSelectedEcho.mainStatValue)}</h3>
                       </div>
-                      <h3 className="no-margin">Sub Stats -</h3>
+                      <h3 className="no-margin">Sub Stats:</h3>
                       <div className="echo-modal-stats-box">
                         <img className="stat-Icons" src={Icon3} />
                         <h3 className="margin-box-text">
@@ -1200,14 +1222,28 @@ const EchoModal: React.FC<EchoFeaturesModalProps> = ({
                                     <div key={sIdx} className="sub-stat"><span className="stat-name">{sub.stat}</span><span className="stat-value">{sub.value}</span></div>
                                   ))}
                                 </div>
-                                <button className="import-save-btn" onClick={() => handleSaveIndividualEcho(index)} disabled={!!savedEchoes[index]}>{savedEchoes[index] ? "Echo saved!" : "Save This Echo"}</button>
+                                <button
+                                  className="import-save-btn"
+                                  onClick={() => handleSaveIndividualEcho(index)}
+                                  disabled={!!savedEchoes[index] || !!duplicateMap[index]}
+                                >
+                                  {savedEchoes[index]
+                                    ? "Echo saved!"
+                                    : duplicateMap[index]
+                                    ? "Already added"
+                                    : "Save This Echo"}
+                                </button>
                               </div>
                             </div>
                           );
                         })}
                       </div>
                       <div className="import-bulk-actions">
-                        <button className="import-save-all-btn" onClick={handleSaveAllImportedEchoes}>Save All & Apply</button>
+                        <button className="import-save-all-btn" onClick={handleSaveAllImportedEchoes}>
+                          {Object.values(duplicateMap).length > 0 && Object.values(duplicateMap).every(Boolean)
+                            ? "Apply"
+                            : "Save All & Apply"}
+                        </button>
                         <button className="import-reset-btn" onClick={() => { setProcessedEchoes([]); setImportImageUrl(null); setSavedEchoes({}); }}>Import Another Image</button>
                       </div>
                     </div>

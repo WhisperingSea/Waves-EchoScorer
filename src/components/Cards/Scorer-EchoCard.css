@@ -19,6 +19,37 @@
     position: relative;
 }
 
+.echo-clear-btn {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.7);
+    background: rgba(20, 20, 20, 0.75);
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.scorer-echoCard-grid:hover .echo-clear-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.echo-clear-btn:hover {
+    background: rgba(40, 40, 40, 0.9);
+}
+
 .add-echo-btn {
     display: flex;
     justify-content: center;
@@ -66,6 +97,15 @@
     justify-content: space-between;
 }
 
+.preferred-sub {
+    background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.18) 0%, rgba(255, 215, 0, 0.10) 42%, rgba(255, 215, 0, 0.0) 100%);
+    border-radius: 6px;
+}
+
+.preferred-sub .scorer-echo-stat {
+    color: #ffd700;
+}
+
 .scorer-echo-stat-icon {
     width: 20px;
     height: 20px;
@@ -89,11 +129,76 @@
     text-align: center;
     margin: 5px;
     font-size: 18px;
-    color: white;
-    text-shadow: 0 0 2px #fff,
-        0 0 4px #ffd900d0,
-        0 0 6px #ffd900ce,
-        0 0 8px #ffae00c2;
+}
+
+/* Grade colors */
+.grade-op {
+    color: #00E5FF; /* neon cyan */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #00E5FF, 0 0 10px #00B8D4;
+}
+.grade-sss-plus {
+    color: #18FFFF; /* aqua */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #18FFFF, 0 0 10px #00E5FF;
+}
+.grade-sss {
+    color: #7C4DFF; /* indigo */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #7C4DFF, 0 0 10px #536DFE;
+}
+.grade-ss-plus {
+    color: #536DFE; /* blue */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #536DFE, 0 0 10px #2979FF;
+}
+.grade-ss {
+    color: #448AFF; /* soft blue */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #448AFF, 0 0 10px #2979FF;
+}
+.grade-s-plus {
+    color: #1DE9B6; /* teal */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #1DE9B6, 0 0 10px #00BFA5;
+}
+.grade-s {
+    color: #64FFDA; /* mint */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #64FFDA, 0 0 10px #1DE9B6;
+}
+.grade-a-plus {
+    color: #A7FFEB; /* pale mint */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #A7FFEB, 0 0 10px #64FFDA;
+}
+.grade-a {
+    color: #84FFFF; /* light cyan */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #84FFFF, 0 0 10px #18FFFF;
+}
+.grade-b-plus {
+    color: #B388FF; /* lavender */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #B388FF, 0 0 10px #7C4DFF;
+}
+.grade-b {
+    color: #9FA8DA; /* periwinkle */
+    text-shadow: 0 0 2px #ffffff, 0 0 6px #9FA8DA, 0 0 10px #7986CB;
+}
+.grade-c-plus {
+    color: #B0BEC5; /* blue-gray */
+    text-shadow: 0 0 2px #ffffff20, 0 0 4px #B0BEC580;
+}
+.grade-c {
+    color: #90A4AE; /* blue-gray darker */
+    text-shadow: 0 0 2px #ffffff20, 0 0 4px #90A4AE80;
+}
+.grade-d-plus {
+    color: #78909C; /* gray */
+    text-shadow: 0 0 2px #ffffff20, 0 0 4px #78909C80;
+}
+.grade-d {
+    color: #607D8B; /* blue-gray deep */
+    text-shadow: 0 0 2px #ffffff20, 0 0 4px #607D8B80;
+}
+.grade-d-minus {
+    color: #546E7A; /* dark gray */
+    text-shadow: 0 0 2px #ffffff10, 0 0 4px #546E7A60;
+}
+.grade-trash {
+    color: #6E6E6E; /* neutral gray */
+    text-shadow: none;
 }
 
 .no-echo {
